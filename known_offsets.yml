@@ -11993,11 +11993,13 @@
   size: 7
   type: assembly
 0xC2AB14:
+  name: BOSS_BATTLE_CHECK
+  description: Checks if a boss is currently in the battle
   labels:
-    43816: UNKNOWN0
-    43864: UNKNOWN1
-    43879: UNKNOWN2
-    43887: UNKNOWN3
+    43816: NEXT_ENEMY
+    43864: NOT_BOSS
+    43879: BEGIN_LOOP
+    43887: RETURN
   size: 93
   type: assembly
 0xC2AB71:
