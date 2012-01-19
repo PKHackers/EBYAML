@@ -10759,8 +10759,8 @@
   description: Generate Success/Fail (Luck/80 chance)
   name: SUCCESS_LUCK80
   labels:
-    31915: UNKNOWN0
-    31918: UNKNOWN1
+    31915: SUCCESS
+    31918: RETURN
   size: 25
   type: assembly
 0xC27CAF:
@@ -11943,27 +11943,39 @@
   size: 33
   type: assembly
 0xC2A9BD:
+  name: INSECT_SPRAY_GENERAL
+  description: Insect Spray (General)
   labels:
-    43516: UNKNOWN0
-    43530: UNKNOWN1
+    43516: FAILURE
+    43530: RETURN
   size: 79
   type: assembly
 0xC2AA0C:
+  name: INSECT_SPRAY_100
+  description: Insect Spray (100 Damage)
   size: 9
   type: assembly
 0xC2AA15:
+  name: INSECT_SPRAY_200
+  description: Insect Spray (200 Damage)
   size: 9
   type: assembly
 0xC2AA1E:
+  name: RUST_SPRAY_GENERAL
+  description: Rust Spray (General)
   labels:
     43613: UNKNOWN0
     43627: UNKNOWN1
   size: 79
   type: assembly
 0xC2AA6D:
+  name: RUST_SPRAY_200
+  description: Rust Spray (200 Damage)
   size: 9
   type: assembly
 0xC2AA76:
+  name: RUST_SPRAY_400
+  description: Rust Spray (400 Damage)
   size: 9
   type: assembly
 0xC2AA7F:
