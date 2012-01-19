@@ -13417,10 +13417,10 @@
   size: 94
   type: assembly
   labels:
-    8223: UNKNOWN0
-    8226: UNKNOWN1
-    8242: UNKNOWN2
-    8245: UNKNOWN3
+    8223: FLAG_UNSET
+    8226: POST_FLAG
+    8242: FLAG2_UNSET
+    8245: POST_FLAG2
     8256: UNKNOWN4
     8260: UNKNOWN5
     8276: UNKNOWN6
@@ -16104,7 +16104,7 @@
   size: 463
   type: assembly
   labels:
-    62113: UNKNOWN0
+    62113: PREPARE_PHOTO_DISPLAY
     62140: UNKNOWN1
     62149: UNKNOWN2
     62225: UNKNOWN3
@@ -16114,15 +16114,17 @@
     62363: UNKNOWN7
     62491: UNKNOWN8
     62493: UNKNOWN9
-    62505: UNKNOWN10
-    62510: UNKNOWN11
+    62505: EXIT_LOOP
+    62510: RETURN
 0xC4F433:
+  description: Counts unset event flags for wandering photographer photos
+  name: COUNT_PHOTO_FLAGS
   size: 60
   type: assembly
   labels:
-    62533: UNKNOWN0
-    62560: UNKNOWN1
-    62565: UNKNOWN2
+    62533: LOOP_BEGIN
+    62560: EVENT_FLAG_UNSET
+    62565: LOOP_ENTRY
 0xC4F46F:
   size: 229
   type: assembly
@@ -16186,12 +16188,14 @@
     64782: UNKNOWN6
     64790: UNKNOWN7
 0xC4FD18:
+  description: Load stereo/mono data?
   size: 45
   type: assembly
   labels:
-    64817: UNKNOWN0
-    64827: UNKNOWN1
+    64817: MONO
+    64827: LOAD
 0xC4FD45:
+  name: SET_BOUNDARY_BEHAVIOR
   description: A -> $B549 (Sector Boundary Behavior)
   size: 6
   type: assembly
@@ -17573,13 +17577,19 @@
   name: PHOTOGRAPHER_CFG_TABLE
   size: 1984
   entries:
+  - name: Event Flag
+    size: 2
+    type: hexint
   - name: ???
-    size: 5
+    size: 3
     type: bytearray
   - name: ????
     size: 2
   - name: ?????
-    size: 55
+    size: 1
+    type: hexint
+  - name: ??????
+    size: 54
     type: bytearray
 0xE1374A:
   type: data
@@ -17591,6 +17601,10 @@
   size: 3241
   description: Staff Credits Sequence Text
   name: STAFF_TEXT
+  entries:
+  - name: Text
+    terminator: 0
+    type: stafftext
 0xE14DE8:
   size: 217
   type: assembly
