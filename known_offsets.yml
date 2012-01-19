@@ -4374,6 +4374,8 @@
     56634: UNKNOWN0
     56655: UNKNOWN1
 0xC0DD53:
+  final processor state:
+    accum: 16
   size: 38
   type: assembly
 0xC0DD79:
@@ -12003,12 +12005,14 @@
   size: 93
   type: assembly
 0xC2AB71:
+  name: BTLACT_TELEPORT_BOX
+  description: "Battle Action: Teleport Box"
   labels:
     43915: UNKNOWN0
     43983: UNKNOWN1
-    44042: UNKNOWN2
-    44058: UNKNOWN3
-    44072: UNKNOWN4
+    44042: TELEPORT_BOX_FAILURE
+    44058: TELEPORT_BOX_UNUSABLE
+    44072: RETURN
   size: 185
   type: assembly
 0xC2AC2A:
