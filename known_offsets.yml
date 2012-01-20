@@ -3,6 +3,7 @@
   size: 6
   type: assembly
   name: RESET_VECTOR
+  description: Execution Entry Point
 0x300000:
   description: SRAM
   name: SRAM
@@ -10659,6 +10660,7 @@
   type: assembly
 0xC27294:
   description: HP Recovery?
+  name: HP_RECOVERY
   labels:
     29418: UNKNOWN0
     29448: UNKNOWN1
@@ -10666,6 +10668,8 @@
   size: 132
   type: assembly
 0xC27318:
+  description: PP Recovery?
+  name: PP_RECOVERY
   labels:
     29537: UNKNOWN0
     29539: UNKNOWN1
@@ -10691,6 +10695,8 @@
   size: 441
   type: assembly
 0xC27550:
+  description: KO Character
+  name: KO_CHARACTER
   labels:
     30060: UNKNOWN0
     30076: UNKNOWN1
@@ -10820,6 +10826,8 @@
   size: 87
   type: assembly
 0xC27E8A:
+  description: Swap the current Attacker and Target
+  name: SWAP_ATTACKER_WITH_TARGET
   size: 37
   type: assembly
 0xC27EAF:
@@ -11503,24 +11511,32 @@
   size: 61
   type: assembly
 0xC298DE:
+  name: FLASH_INFLICT_FEELING_STRANGE
+  description: 'PSI Flash: Inflicts Feeling Strange status'
   labels:
     39175: UNKNOWN0
     39189: UNKNOWN1
   size: 57
   type: assembly
 0xC29917:
+  name: FLASH_INFLICT_PARALYSIS
+  description: 'PSI Flash: Inflicts Paralysis status'
   labels:
     39232: UNKNOWN0
     39246: UNKNOWN1
   size: 57
   type: assembly
 0xC29950:
+  name: FLASH_INFLICT_CRYING
+  description: 'PSI Flash: Inflicts Crying status'
   labels:
     39287: UNKNOWN0
     39301: UNKNOWN1
   size: 55
   type: assembly
 0xC29987:
+  description: "Battle action: PSI Flash \u03B1"
+  name: BTLACT_PSIFLASHA
   labels:
     39335: UNKNOWN0
     39338: UNKNOWN1
@@ -11528,6 +11544,8 @@
   size: 39
   type: assembly
 0xC299AE:
+  description: "Battle action: PSI Flash \u03B2"
+  name: BTLACT_PSIFLASHB
   labels:
     39381: UNKNOWN0
     39390: UNKNOWN1
@@ -11538,6 +11556,8 @@
   size: 65
   type: assembly
 0xC299EF:
+  description: "Battle action: PSI Flash \u0263"
+  name: BTLACT_PSIFLASHG
   labels:
     39451: UNKNOWN0
     39460: UNKNOWN1
@@ -11548,6 +11568,8 @@
   size: 70
   type: assembly
 0xC29A35:
+  description: "Battle action: PSI Flash \u03A9"
+  name: BTLACT_PSIFLASHO
   labels:
     39526: UNKNOWN0
     39535: UNKNOWN1
@@ -11953,12 +11975,12 @@
   size: 79
   type: assembly
 0xC2AA0C:
-  name: INSECT_SPRAY_100
+  name: BTLACT_INSECT_SPRAY_100
   description: Insect Spray (100 Damage)
   size: 9
   type: assembly
 0xC2AA15:
-  name: INSECT_SPRAY_200
+  name: BTLACT_INSECT_SPRAY_200
   description: Insect Spray (200 Damage)
   size: 9
   type: assembly
@@ -11971,27 +11993,33 @@
   size: 79
   type: assembly
 0xC2AA6D:
-  name: RUST_SPRAY_200
+  name: BTLACT_RUST_SPRAY_200
   description: Rust Spray (200 Damage)
   size: 9
   type: assembly
 0xC2AA76:
-  name: RUST_SPRAY_400
+  name: BTLACT_RUST_SPRAY_400
   description: Rust Spray (400 Damage)
   size: 9
   type: assembly
 0xC2AA7F:
+  name: BTLACT_GUTSUP
+  description: 'Battle action: Guts up'
   labels:
     43678: UNKNOWN0
     43716: UNKNOWN1
   size: 71
   type: assembly
 0xC2AAC6:
+  description: 'Battle action: Defense spray'
+  name: BTLACT_DEFENSESPRAY
   labels:
     43787: UNKNOWN0
   size: 71
   type: assembly
 0xC2AB0D:
+  description: 'Redirect: C2/AAC6'
+  name: REDIRECT_TO_C2AAC6
   size: 7
   type: assembly
 0xC2AB14:
