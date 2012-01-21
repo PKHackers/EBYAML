@@ -2603,6 +2603,8 @@
   size: 64
   type: assembly
 0xC08E5C:
+  description: Set BG4 VRAM Location
+  name: SET_BG4_VRAM_LOCATION
   size: 62
   type: assembly
 0xC08E9A:
@@ -5820,7 +5822,7 @@
     16525: UNKNOWN1
     16539: UNKNOWN2
 0xC140B0:
-  description: 'Text CC: [1C 01 XX]'
+  description: "Text control code: [1C 01 XX]"
   name: CC_1C_01
   size: 31
   type: assembly
@@ -5828,7 +5830,7 @@
     16578: UNKNOWN0
     16583: UNKNOWN1
 0xC140CF:
-  description: 'Text CC: [1C 11 XX]'
+  description: "Text control code: [1C 11 XX]"
   name: CC_1C_11
   size: 32
   type: assembly
@@ -5836,17 +5838,17 @@
     16609: UNKNOWN0
     16614: UNKNOWN1
 0xC140EF:
-  description: 'Text CC: [1C 09 XX]'
+  description: "Text control code: [1C 09 XX]"
   name: CC_1C_09
   size: 10
   type: assembly
 0xC140F9:
-  description: 'Text CC: [1C 00 XX]'
+  description: "Text control code: [1C 00 XX]"
   name: CC_1C_00
   size: 10
   type: assembly
 0xC14103:
-  description: 'Text CC: [0A XX XX XX 00]'
+  description: "Text control code: [0A XX XX XX 00]"
   name: CC_0A
   size: 205
   type: assembly
@@ -5856,7 +5858,7 @@
     16691: UNKNOWN2
     16846: UNKNOWN3
 0xC141D0:
-  description: 'Text CC: [09 XX (YY YY YY 00)]'
+  description: "Text control code: [09 XX (YY YY YY 00)]"
   name: CC_09
   size: 149
   type: assembly
@@ -5865,7 +5867,7 @@
     16958: UNKNOWN1
     16995: UNKNOWN2
 0xC14265:
-  description: 'Text CC: [04 XX XX]'
+  description: "Text control code: [04 XX XX]"
   name: CC_04
   size: 72
   type: assembly
@@ -5873,7 +5875,7 @@
     17035: UNKNOWN0
     17067: UNKNOWN1
 0xC142AD:
-  description: 'Text CC: [05 XX XX]'
+  description: "Text control code: [05 XX XX]"
   name: CC_05
   size: 72
   type: assembly
@@ -5881,7 +5883,7 @@
     17107: UNKNOWN0
     17139: UNKNOWN1
 0xC142F5:
-  description: 'Text CC: [06 XX XX YY YY YY 00]'
+  description: "Text control code: [06 XX XX YY YY YY 00]"
   name: CC_06
   size: 106
   type: assembly
@@ -5890,7 +5892,7 @@
     17214: UNKNOWN1
     17245: UNKNOWN2
 0xC1435F:
-  description: 'Text CC: [07 XX XX]'
+  description: "Text control code: [07 XX XX]"
   name: CC_07
   size: 89
   type: assembly
@@ -5899,22 +5901,22 @@
     17320: UNKNOWN1
     17334: UNKNOWN2
 0xC143B8:
-  description: 'Text CC: [1C 08 XX]'
+  description: "Text control code: [1C 08 XX]"
   name: CC_07
   size: 10
   type: assembly
 0xC143C2:
-  description: 'Text CC: [18 01 XX]'
+  description: "Text control code: [18 01 XX]"
   name: CC_18_01
   size: 10
   type: assembly
 0xC143CC:
-  description: 'Text CC: [18 03 XX]'
+  description: "Text control code: [18 03 XX]"
   name: CC_18_03
   size: 10
   type: assembly
 0xC143D6:
-  description: 'Text CC: [08 XX XX XX 00]'
+  description: "Text control code: [08 XX XX XX 00]"
   name: CC_08
   size: 205
   type: assembly
@@ -5924,7 +5926,7 @@
     17415: UNKNOWN2
     17569: UNKNOWN3
 0xC144A3:
-  description: 'Text CC: [1F 52 XX]'
+  description: "Text control code: [1F 52 XX]"
   name: CC_1F_52
   size: 102
   type: assembly
@@ -5933,7 +5935,7 @@
     17657: UNKNOWN1
     17668: UNKNOWN2
 0xC14509:
-  description: 'Text CC: [18 05 XX YY]'
+  description: "Text control code: [18 05 XX YY]"
   name: CC_18_05
   size: 79
   type: assembly
@@ -5945,7 +5947,7 @@
     17747: UNKNOWN4
     17750: UNKNOWN5
 0xC14558:
-  description: 'Text CC: [0B XX]'
+  description: "Text control code: [0B XX]"
   name: CC_0B
   size: 57
   type: assembly
@@ -5953,7 +5955,7 @@
     17783: UNKNOWN0
     17793: UNKNOWN1
 0xC14591:
-  description: 'Text CC: [0C XX]'
+  description: "Text control code: [0C XX]"
   name: CC_0C
   size: 57
   type: assembly
@@ -5961,7 +5963,7 @@
     17840: UNKNOWN0
     17850: UNKNOWN1
 0xC145CA:
-  description: 'Text CC: [1C 07 XX]'
+  description: "Text control code: [1C 07 XX]"
   name: CC_1C_07
   size: 37
   type: assembly
@@ -5969,7 +5971,7 @@
     17884: UNKNOWN0
     17889: UNKNOWN1
 0xC145EF:
-  description: 'Text CC: [0D XX]'
+  description: "Text control code: [0D XX]"
   name: CC_0D
   size: 43
   type: assembly
@@ -5977,14 +5979,14 @@
     17927: UNKNOWN0
     17930: UNKNOWN1
 0xC1461A:
-  description: 'Text CC: [0E XX]'
+  description: "Text control code: [0E XX]"
   name: CC_0E
   size: 33
   type: assembly
   labels:
     17970: UNKNOWN0
 0xC1463B:
-  description: 'Text CC: [1A 00 WW WW WW WW XX XX XX XX YY YY YY YY ZZ ZZ ZZ ZZ]'
+  description: "Text control code: [1A 00 WW WW WW WW XX XX XX XX YY YY YY YY ZZ ZZ ZZ ZZ]"
   name: CC_1A_00
   size: 66
   type: assembly
@@ -5992,7 +5994,7 @@
     18016: UNKNOWN0
     18043: UNKNOWN1
 0xC1467D:
-  description: 'Text CC: [1A 01 WW WW WW WW XX XX XX XX YY YY YY YY ZZ ZZ ZZ ZZ]'
+  description: "Text control code: [1A 01 WW WW WW WW XX XX XX XX YY YY YY YY ZZ ZZ ZZ ZZ]"
   name: CC_1A_01
   size: 66
   type: assembly
@@ -6000,7 +6002,7 @@
     18082: UNKNOWN0
     18109: UNKNOWN1
 0xC146BF:
-  description: 'Text CC: [1C 05 XX]'
+  description: "Text control code: [1C 05 XX]"
   name: CC_1C_05
   size: 31
   type: assembly
@@ -6008,7 +6010,7 @@
     18129: UNKNOWN0
     18134: UNKNOWN1
 0xC146DE:
-  description: 'Text CC: [1C 06 XX]'
+  description: "Text control code: [1C 06 XX]"
   name: CC_1C_06
   size: 69
   type: assembly
@@ -6016,7 +6018,7 @@
     18162: UNKNOWN0
     18169: UNKNOWN1
 0xC14723:
-  description: 'Text CC: [19 10 XX]'
+  description: "Text control code: [19 10 XX]"
   name: CC_19_10
   size: 46
   type: assembly
@@ -6024,7 +6026,7 @@
     18229: UNKNOWN0
     18234: UNKNOWN1
 0xC14751:
-  description: 'Text CC: [1F 00 XX YY]'
+  description: "Text control code: [1F 00 XX YY]"
   name: CC_1F_00
   size: 79
   type: assembly
@@ -6036,12 +6038,12 @@
     18318: UNKNOWN4
     18334: UNKNOWN5
 0xC147A0:
-  description: 'Text CC: [1F 01 XX]'
+  description: "Text control code: [1F 01 XX]"
   name: CC_1F_01
   size: 11
   type: assembly
 0xC147AB:
-  description: 'Text CC: [1F 02 XX]'
+  description: "Text control code: [1F 02 XX]"
   name: CC_1F_02
   size: 33
   type: assembly
@@ -6049,7 +6051,7 @@
     18366: UNKNOWN0
     18369: UNKNOWN1
 0xC147CC:
-  description: 'Text CC: [19 11 XX]'
+  description: "Text control code: [19 11 XX]"
   name: CC_19_11
   size: 77
   type: assembly
@@ -6057,7 +6059,7 @@
     18398: UNKNOWN0
     18403: UNKNOWN1
 0xC14819:
-  description: 'Text CC: [19 28 XX]'
+  description: "Text control code: [19 28 XX]"
   name: CC_19_28
   size: 116
   type: assembly
@@ -6066,7 +6068,7 @@
     18549: UNKNOWN1
     18557: UNKNOWN2
 0xC1488D:
-  description: 'Text CC: [1C 03 XX]'
+  description: "Text control code: [1C 03 XX]"
   name: CC_1C_03
   size: 31
   type: assembly
@@ -6074,7 +6076,7 @@
     18591: UNKNOWN0
     18596: UNKNOWN1
 0xC148AC:
-  description: 'Text CC: [1D 02 XX]'
+  description: "Text control code: [1D 02 XX]"
   name: CC_1D_02
   size: 61
   type: assembly
@@ -6082,7 +6084,7 @@
     18638: UNKNOWN0
     18649: UNKNOWN1
 0xC148E9:
-  description: 'Text CC: [1D 08 XX XX]'
+  description: "Text control code: [1D 08 XX XX]"
   name: CC_1D_08
   size: 97
   type: assembly
@@ -6092,7 +6094,7 @@
     18734: UNKNOWN2
     18760: UNKNOWN3
 0xC1494A:
-  description: 'Text CC: [1D 09 XX XX]'
+  description: "Text control code: [1D 09 XX XX]"
   name: CC_1D_09
   size: 108
   type: assembly
@@ -6103,7 +6105,7 @@
     18854: UNKNOWN3
     18868: UNKNOWN4
 0xC149B6:
-  description: 'Text CC: [1E 00 XX YY]'
+  description: "Text control code: [1E 00 XX YY]"
   name: CC_1E_00
   size: 77
   type: assembly
@@ -6115,7 +6117,7 @@
     18934: UNKNOWN4
     18945: UNKNOWN5
 0xC14A03:
-  description: 'Text CC: [1E 01 XX YY]'
+  description: "Text control code: [1E 01 XX YY]"
   name: CC_1E_01
   size: 77
   type: assembly
@@ -6127,7 +6129,7 @@
     19011: UNKNOWN4
     19022: UNKNOWN5
 0xC14A50:
-  description: 'Text CC: [1E 02 XX YY]'
+  description: "Text control code: [1E 02 XX YY]"
   name: CC_1E_02
   size: 77
   type: assembly
@@ -6139,7 +6141,7 @@
     19088: UNKNOWN4
     19099: UNKNOWN5
 0xC14A9D:
-  description: 'Text CC: [1E 03 XX YY]'
+  description: "Text control code: [1E 03 XX YY]"
   name: CC_1E_03
   size: 77
   type: assembly
@@ -6151,7 +6153,7 @@
     19165: UNKNOWN4
     19176: UNKNOWN5
 0xC14AEA:
-  description: 'Text CC: [1E 04 XX YY]'
+  description: "Text control code: [1E 04 XX YY]"
   name: CC_1E_04
   size: 77
   type: assembly
@@ -6163,7 +6165,7 @@
     19242: UNKNOWN4
     19253: UNKNOWN5
 0xC14B37:
-  description: 'Text CC: [1E 05 XX YY]'
+  description: "Text control code: [1E 05 XX YY]"
   name: CC_1E_05
   size: 77
   type: assembly
@@ -6175,7 +6177,7 @@
     19319: UNKNOWN4
     19330: UNKNOWN5
 0xC14B84:
-  description: 'Text CC: [1E 06 XX YY]'
+  description: "Text control code: [1E 06 XX YY]"
   name: CC_1E_06
   size: 77
   type: assembly
@@ -6187,7 +6189,7 @@
     19396: UNKNOWN4
     19407: UNKNOWN5
 0xC14BD1:
-  description: 'Text CC: [1E 07 XX YY]'
+  description: "Text control code: [1E 07 XX YY]"
   name: CC_1E_07
   size: 77
   type: assembly
@@ -6199,7 +6201,7 @@
     19473: UNKNOWN4
     19484: UNKNOWN5
 0xC14C1E:
-  description: 'Text CC: [1D 00 XX YY]'
+  description: "Text control code: [1D 00 XX YY]"
   name: CC_1D_00
   size: 104
   type: assembly
@@ -6212,7 +6214,7 @@
     19564: UNKNOWN5
     19588: UNKNOWN6
 0xC14C86:
-  description: 'Text CC: [1D 01 XX YY]'
+  description: "Text control code: [1D 01 XX YY]"
   name: CC_1D_01
   size: 104
   type: assembly
@@ -6225,7 +6227,7 @@
     19668: UNKNOWN5
     19692: UNKNOWN6
 0xC14CEE:
-  description: 'Text CC: [1D 03 XX]'
+  description: "Text control code: [1D 03 XX]"
   name: CC_1D_03
   size: 54
   type: assembly
@@ -6234,7 +6236,7 @@
     19717: UNKNOWN1
     19732: UNKNOWN2
 0xC14D24:
-  description: 'Text CC: [1D 04 XX YY]'
+  description: "Text control code: [1D 04 XX YY]"
   name: CC_1D_04
   size: 111
   type: assembly
@@ -6248,7 +6250,7 @@
     19843: UNKNOWN6
     19857: UNKNOWN7
 0xC14D93:
-  description: 'Text CC: [1D 05 XX YY]'
+  description: "Text control code: [1D 05 XX YY]"
   name: CC_1D_05
   size: 104
   type: assembly
@@ -6261,7 +6263,7 @@
     19937: UNKNOWN5
     19961: UNKNOWN6
 0xC14DFB:
-  description: 'Text CC: [1F 20 XX YY]'
+  description: "Text control code: [1F 20 XX YY]"
   name: CC_1F_20
   size: 145
   type: assembly
@@ -6275,7 +6277,7 @@
     20081: UNKNOWN6
     20106: UNKNOWN7
 0xC14E8C:
-  description: 'Text CC: [1F 21 XX]'
+  description: "Text control code: [1F 21 XX]"
   name: CC_1F_21
   size: 31
   type: assembly
@@ -6283,12 +6285,12 @@
     20126: UNKNOWN0
     20131: UNKNOWN1
 0xC14EAB:
-  description: 'Text CC: [10 XX]'
+  description: "Text control code: [10 XX]"
   name: CC_10
   size: 10
   type: assembly
 0xC14EB5:
-  description: 'Text CC: [1A 06 XX]'
+  description: "Text control code: [1A 06 XX]"
   name: CC_1A_06
   size: 67
   type: assembly
@@ -6296,7 +6298,7 @@
     20182: UNKNOWN0
     20187: UNKNOWN1
 0xC14EF8:
-  description: 'Text CC: [1D 0A XX]'
+  description: "Text control code: [1D 0A XX]"
   name: CC_1D_0A
   size: 59
   type: assembly
@@ -6304,7 +6306,7 @@
     20234: UNKNOWN0
     20239: UNKNOWN1
 0xC14F33:
-  description: 'Text CC: [1D 0B XX]'
+  description: "Text control code: [1D 0B XX]"
   name: CC_1D_0B
   size: 60
   type: assembly
@@ -6312,7 +6314,7 @@
     20293: UNKNOWN0
     20298: UNKNOWN1
 0xC14F6F:
-  description: 'Text CC: [1F 81 XX YY]'
+  description: "Text control code: [1F 81 XX YY]"
   name: CC_1F_81
   size: 104
   type: assembly
@@ -6325,7 +6327,7 @@
     20413: UNKNOWN5
     20437: UNKNOWN6
 0xC14FD7:
-  description: 'Text CC: [1C 02 XX]'
+  description: "Text control code: [1C 02 XX]"
   name: CC_1C_02
   size: 48
   type: assembly
@@ -6335,7 +6337,7 @@
     20479: UNKNOWN2
     20482: UNKNOWN3
 0xC15007:
-  description: 'Text CC: [19 16 XX YY]'
+  description: "Text control code: [19 16 XX YY]"
   name: CC_19_16
   size: 104
   type: assembly
@@ -6348,7 +6350,7 @@
     20565: UNKNOWN5
     20589: UNKNOWN6
 0xC1506F:
-  description: 'Text CC: [19 05 XX YY YY]'
+  description: "Text control code: [19 05 XX YY YY]"
   name: CC_19_05
   size: 117
   type: assembly
@@ -6362,7 +6364,7 @@
     20680: UNKNOWN6
     20706: UNKNOWN7
 0xC150E4:
-  description: 'Text CC: [1D 0D XX YY YY]'
+  description: "Text control code: [1D 0D XX YY YY]"
   name: CC_1D_0D
   size: 135
   type: assembly
@@ -6377,7 +6379,7 @@
     20827: UNKNOWN7
     20841: UNKNOWN8
 0xC1516B:
-  description: 'Text CC: [1C 14 XX]'
+  description: "Text control code: [1C 14 XX]"
   name: CC_1C_14
   size: 145
   type: assembly
@@ -6391,7 +6393,7 @@
     20965: UNKNOWN6
     20968: UNKNOWN7
 0xC151FC:
-  description: 'Text CC: [1C 15 XX]'
+  description: "Text control code: [1C 15 XX]"
   name: CC_1C_15
   size: 145
   type: assembly
@@ -6405,7 +6407,7 @@
     21110: UNKNOWN6
     21113: UNKNOWN7
 0xC1528D:
-  description: 'Text CC: [18 07 XX XX XX XX YY]'
+  description: "Text control code: [18 07 XX XX XX XX YY]"
   name: CC_18_07
   size: 247
   type: assembly
@@ -6422,7 +6424,7 @@
     21364: UNKNOWN9
     21378: UNKNOWN10
 0xC15384:
-  description: 'Text CC: [19 18 XX]'
+  description: "Text control code: [19 18 XX]"
   name: CC_19_18
   size: 43
   type: assembly
@@ -6430,7 +6432,7 @@
     21398: UNKNOWN0
     21403: UNKNOWN1
 0xC153AF:
-  description: 'Text CC: [1C 0A XX XX XX XX]'
+  description: "Text control code: [1C 0A XX XX XX XX]"
   name: CC_1C_0A
   size: 229
   type: assembly
@@ -6442,12 +6444,12 @@
     21636: UNKNOWN4
     21650: UNKNOWN5
 0xC15494:
-  description: 'Text CC: [1F 60 XX]'
+  description: "Text control code: [1F 60 XX]"
   name: CC_1F_60
   size: 10
   type: assembly
 0xC1549E:
-  description: 'Text CC: [1A 05 XX YY]'
+  description: "Text control code: [1A 05 XX YY]"
   name: CC_1A_05
   size: 139
   type: assembly
@@ -6460,17 +6462,17 @@
     21791: UNKNOWN5
     21799: UNKNOWN6
 0xC15529:
-  description: 'Text CC: [18 08 XX]'
+  description: "Text control code: [18 08 XX]"
   name: CC_18_08
   size: 37
   type: assembly
 0xC1554E:
-  description: 'Text CC: [18 09 XX]'
+  description: "Text control code: [18 09 XX]"
   name: CC_18_09
   size: 37
   type: assembly
 0xC15573:
-  description: 'Text CC: [1C 0B XX XX XX XX]'
+  description: "Text control code: [1C 0B XX XX XX XX]"
   name: CC_1C_0B
   size: 230
   type: assembly
@@ -6482,7 +6484,7 @@
     22088: UNKNOWN4
     22103: UNKNOWN5
 0xC15659:
-  description: 'Text CC: [1D 0E XX YY]'
+  description: "Text control code: [1D 0E XX YY]"
   name: CC_1D_0E
   size: 130
   type: assembly
@@ -6495,7 +6497,7 @@
     22183: UNKNOWN5
     22233: UNKNOWN6
 0xC156DB:
-  description: 'Text CC: [1D 0F XX XX]'
+  description: "Text control code: [1D 0F XX XX]"
   name: CC_1D_0F
   size: 130
   type: assembly
@@ -6509,7 +6511,7 @@
     22312: UNKNOWN6
     22363: UNKNOWN7
 0xC1575D:
-  description: 'Text CC: [1D 10 XX XX]'
+  description: "Text control code: [1D 10 XX XX]"
   name: CC_1D_10
   size: 112
   type: assembly
@@ -6524,7 +6526,7 @@
     22461: UNKNOWN7
     22475: UNKNOWN8
 0xC157CD:
-  description: 'Text CC: [1D 11 XX XX]'
+  description: "Text control code: [1D 11 XX XX]"
   name: CC_1D_11
   size: 112
   type: assembly
@@ -6538,7 +6540,7 @@
     22555: UNKNOWN6
     22587: UNKNOWN7
 0xC1583D:
-  description: 'Text CC: [1F 83 XX YY]'
+  description: "Text control code: [1F 83 XX YY]"
   name: CC_1F_83
   size: 104
   type: assembly
@@ -6552,7 +6554,7 @@
     22667: UNKNOWN6
     22691: UNKNOWN7
 0xC158A5:
-  description: 'Text CC: [1D 12 XX XX]'
+  description: "Text control code: [1D 12 XX XX]"
   name: CC_1D_12
   size: 89
   type: assembly
@@ -6566,7 +6568,7 @@
     22771: UNKNOWN6
     22780: UNKNOWN7
 0xC158FE:
-  description: 'Text CC: [1D 13 XX XX]'
+  description: "Text control code: [1D 13 XX XX]"
   name: CC_1D_13
   size: 129
   type: assembly
@@ -6579,7 +6581,7 @@
     22860: UNKNOWN5
     22909: UNKNOWN6
 0xC1597F:
-  description: 'Text CC: [19 19 XX YY]'
+  description: "Text control code: [19 19 XX YY]"
   name: CC_19_19
   size: 122
   type: assembly
@@ -6593,7 +6595,7 @@
     22989: UNKNOWN6
     23031: UNKNOWN7
 0xC159F9:
-  description: 'Text CC: [1D 14 XX XX XX XX]'
+  description: "Text control code: [1D 14 XX XX XX XX]"
   name: CC_1D_14
   size: 277
   type: assembly
@@ -6607,7 +6609,7 @@
     23294: UNKNOWN6
     23308: UNKNOWN7
 0xC15B0E:
-  description: 'Text CC: [19 1A XX]'
+  description: "Text control code: [19 1A XX]"
   name: CC_19_1A
   size: 56
   type: assembly
@@ -6615,7 +6617,7 @@
     23328: UNKNOWN0
     23333: UNKNOWN1
 0xC15B46:
-  description: 'Text CC: [18 0D XX YY]'
+  description: "Text control code: [18 0D XX YY]"
   name: CC_18_0D
   size: 97
   type: assembly
@@ -6630,7 +6632,7 @@
     23458: UNKNOWN7
     23461: UNKNOWN8
 0xC15BA7:
-  description: 'Text CC: [1C 0C XX]'
+  description: "Text control code: [1C 0C XX]"
   name: CC_1C_0C
   size: 35
   type: assembly
@@ -6638,7 +6640,7 @@
     23481: UNKNOWN0
     23486: UNKNOWN1
 0xC15BCA:
-  description: 'Text CC: [1D 15 XX XX]'
+  description: "Text control code: [1D 15 XX XX]"
   name: CC_1D_15
   size: 108
   type: assembly
@@ -6647,12 +6649,12 @@
     23571: UNKNOWN1
     23604: UNKNOWN2
 0xC15C36:
-  description: 'Text CC: [19 1B XX]'
+  description: "Text control code: [19 1B XX]"
   name: CC_19_1B
   size: 34
   type: assembly
 0xC15C58:
-  description: 'Text CC: [1F 71 XX YY]'
+  description: "Text control code: [1F 71 XX YY]"
   name: CC_1F_71
   size: 45
   type: assembly
@@ -6662,7 +6664,7 @@
     23676: UNKNOWN2
     23684: UNKNOWN3
 0xC15C85:
-  description: 'Text CC: [1D 06 XX XX XX XX]'
+  description: "Text control code: [1D 06 XX XX XX XX]"
   name: CC_1D_06
   size: 230
   type: assembly
@@ -6674,7 +6676,7 @@
     23898: UNKNOWN4
     23913: UNKNOWN5
 0xC15D6B:
-  description: 'Text CC: [1D 07 XX XX XX XX]'
+  description: "Text control code: [1D 07 XX XX XX XX]"
   name: CC_1D_07
   size: 241
   type: assembly
@@ -6686,7 +6688,7 @@
     24128: UNKNOWN4
     24154: UNKNOWN5
 0xC15E5C:
-  description: 'Text CC: [1D 17 XX XX XX XX]'
+  description: "Text control code: [1D 17 XX XX XX XX]"
   name: CC_1D_17
   size: 277
   type: assembly
@@ -6700,7 +6702,7 @@
     24417: UNKNOWN6
     24431: UNKNOWN7
 0xC15F71:
-  description: 'Text CC: [1F 11 XX]'
+  description: "Text control code: [1F 11 XX]"
   name: CC_1F_11
   size: 32
   type: assembly
@@ -6708,7 +6710,7 @@
     24451: UNKNOWN0
     24456: UNKNOWN1
 0xC15F91:
-  description: 'Text CC: [1F 12 XX]'
+  description: "Text control code: [1F 12 XX]"
   name: CC_1F_12
   size: 32
   type: assembly
@@ -6724,7 +6726,7 @@
     24558: UNKNOWN2
     24563: UNKNOWN3
 0xC15FF7:
-  description: 'Text CC: [19 1C XX YY]'
+  description: "Text control code: [19 1C XX YY]"
   name: CC_19_1C
   size: 137
   type: assembly
@@ -6740,7 +6742,7 @@
     24692: UNKNOWN8
     24702: UNKNOWN9
 0xC16080:
-  description: 'Text CC: [19 1D XX YY]'
+  description: "Text control code: [19 1D XX YY]"
   name: CC_19_1D
   size: 164
   type: assembly
@@ -6753,7 +6755,7 @@
     24861: UNKNOWN5
     24866: UNKNOWN6
 0xC16124:
-  description: 'Text CC: [1D 18 XX]'
+  description: "Text control code: [1D 18 XX]"
   name: CC_1D_18
   size: 31
   type: assembly
@@ -6761,7 +6763,7 @@
     24886: UNKNOWN0
     24891: UNKNOWN1
 0xC16143:
-  description: 'Text CC: [19 21 XX]'
+  description: "Text control code: [19 21 XX]"
   name: CC_19_21
   size: 47
   type: assembly
@@ -6769,7 +6771,7 @@
     24917: UNKNOWN0
     24922: UNKNOWN1
 0xC16172:
-  description: 'Text CC: [1D 19 XX]'
+  description: "Text control code: [1D 19 XX]"
   name: CC_1D_19
   size: 95
   type: assembly
@@ -6779,7 +6781,7 @@
     25014: UNKNOWN2
     25025: UNKNOWN3
 0xC161D1:
-  description: 'Text CC: [1C 12 XX]'
+  description: "Text control code: [1C 12 XX]"
   name: CC_1C_12
   size: 31
   type: assembly
@@ -6787,7 +6789,7 @@
     25059: UNKNOWN0
     25064: UNKNOWN1
 0xC161F0:
-  description: 'Text CC: [1D 21 XX]'
+  description: "Text control code: [1D 21 XX]"
   name: CC_1D_21
   size: 47
   type: assembly
@@ -6803,7 +6805,7 @@
     25166: UNKNOWN2
     25350: UNKNOWN3
 0xC16308:
-  description: 'Text CC: [1F C0 XX YY YY YY 00]'
+  description: "Text control code: [1F C0 XX YY YY YY 00]"
   name: CC_1F_C0
   size: 159
   type: assembly
@@ -6812,7 +6814,7 @@
     25476: UNKNOWN1
     25509: UNKNOWN2
 0xC163A7:
-  description: 'Text CC: [1F D0 XX]'
+  description: "Text control code: [1F D0 XX]"
   name: CC_1F_D0
   size: 86
   type: assembly
@@ -6822,7 +6824,7 @@
     25553: UNKNOWN2
     25563: UNKNOWN3
 0xC163FD:
-  description: 'Text CC: [1F 13 XX YY]'
+  description: "Text control code: [1F 13 XX YY]"
   name: CC_1F_13
   size: 113
   type: assembly
@@ -6836,7 +6838,7 @@
     25692: UNKNOWN6
     25708: UNKNOWN7
 0xC1646E:
-  description: 'Text CC: [1F 14 XX]'
+  description: "Text control code: [1F 14 XX]"
   name: CC_1F_14
   size: 34
   type: assembly
@@ -6844,7 +6846,7 @@
     25729: UNKNOWN0
     25732: UNKNOWN1
 0xC16490:
-  description: 'Text CC: [1F 16 XX XX YY]'
+  description: "Text control code: [1F 16 XX XX YY]"
   name: CC_1F_16
   size: 121
   type: assembly
@@ -6858,7 +6860,7 @@
     25850: UNKNOWN6
     25863: UNKNOWN7
 0xC16509:
-  description: 'Text CC: [1F 17 XX XX YY YY ZZ]'
+  description: "Text control code: [1F 17 XX XX YY YY ZZ]"
   name: CC_1F_17
   size: 121
   type: assembly
@@ -6868,7 +6870,7 @@
     25912: UNKNOWN2
     25984: UNKNOWN3
 0xC16582:
-  description: 'Text CC: [1F 18 XX XX XX XX XX XX XX]'
+  description: "Text control code: [1F 18 XX XX XX XX XX XX XX]"
   name: CC_1F_18
   size: 40
   type: assembly
@@ -6878,7 +6880,7 @@
     26022: UNKNOWN2
     26025: UNKNOWN3
 0xC165AA:
-  description: 'Text CC: [1F 19 XX XX XX XX XX XX XX]'
+  description: "Text control code: [1F 19 XX XX XX XX XX XX XX]"
   name: CC_1F_19
   size: 40
   type: assembly
@@ -6888,7 +6890,7 @@
     26062: UNKNOWN2
     26065: UNKNOWN3
 0xC165D2:
-  description: 'Text CC: [1F 1A XX XX YY]'
+  description: "Text control code: [1F 1A XX XX YY]"
   name: CC_1F_1A
   size: 88
   type: assembly
@@ -6898,7 +6900,7 @@
     26112: UNKNOWN2
     26152: UNKNOWN3
 0xC1662A:
-  description: 'Text CC: [1F 1B XX XX]'
+  description: "Text control code: [1F 1B XX XX]"
   name: CC_1F_1B
   size: 67
   type: assembly
@@ -6906,7 +6908,7 @@
     26192: UNKNOWN0
     26219: UNKNOWN1
 0xC1666D:
-  description: 'Text CC: [1F 1C XX YY]'
+  description: "Text control code: [1F 1C XX YY]"
   name: CC_1F_1C
   size: 112
   type: assembly
@@ -6920,7 +6922,7 @@
     26316: UNKNOWN6
     26331: UNKNOWN7
 0xC166DD:
-  description: 'Text CC: [1F 1D XX]'
+  description: "Text control code: [1F 1D XX]"
   name: CC_1F_1D
   size: 33
   type: assembly
@@ -6928,7 +6930,7 @@
     26352: UNKNOWN0
     26355: UNKNOWN1
 0xC166FE:
-  description: 'Text CC: [1F E1 XX YY ZZ]'
+  description: "Text control code: [1F E1 XX YY ZZ]"
   name: CC_1F_E1
   size: 70
   type: assembly
@@ -6938,7 +6940,7 @@
     26410: UNKNOWN2
     26434: UNKNOWN3
 0xC16744:
-  description: 'Text CC: [1F 15 XX XX YY YY ZZ]'
+  description: "Text control code: [1F 15 XX XX YY YY ZZ]"
   name: CC_1F_15
   size: 146
   type: assembly
@@ -6950,7 +6952,7 @@
     26577: UNKNOWN4
     26580: UNKNOWN5
 0xC167D6:
-  description: 'Text CC: [1F 1E XX XX YY]'
+  description: "Text control code: [1F 1E XX XX YY]"
   name: CC_1F_1E
   size: 101
   type: assembly
@@ -6960,7 +6962,7 @@
     26629: UNKNOWN2
     26681: UNKNOWN3
 0xC1683B:
-  description: 'Text CC: [1F 1F XX XX YY]'
+  description: "Text control code: [1F 1F XX XX YY]"
   name: CC_1F_1F
   size: 101
   type: assembly
@@ -6970,7 +6972,7 @@
     26730: UNKNOWN2
     26782: UNKNOWN3
 0xC168A0:
-  description: 'Text CC: [19 22 XX XX YY YY]'
+  description: "Text control code: [19 22 XX XX YY YY]"
   name: CC_19_22
   size: 167
   type: assembly
@@ -6984,7 +6986,7 @@
     26909: UNKNOWN6
     26949: UNKNOWN7
 0xC16947:
-  description: 'Text CC: [19 23 XX XX YY YY ZZ]'
+  description: "Text control code: [19 23 XX XX YY YY ZZ]"
   name: CC_19_23
   size: 176
   type: assembly
@@ -6998,12 +7000,12 @@
     27088: UNKNOWN6
     27125: UNKNOWN7
 0xC169F7:
-  description: 'Text CC: [1F 62 XX]'
+  description: "Text control code: [1F 62 XX]"
   name: CC_1F_62
   size: 10
   type: assembly
 0xC16A01:
-  description: 'Text CC: [1E 08 XX YY]'
+  description: "Text control code: [1E 08 XX YY]"
   name: CC_1E_08
   size: 122
   type: assembly
@@ -7018,7 +7020,7 @@
     27241: UNKNOWN7
     27257: UNKNOWN8
 0xC16A7B:
-  description: 'Text CC: [19 24 XX XX YY YY ZZ]'
+  description: "Text control code: [19 24 XX XX YY YY ZZ]"
   name: CC_19_24
   size: 176
   type: assembly
@@ -7032,7 +7034,7 @@
     27396: UNKNOWN6
     27433: UNKNOWN7
 0xC16B2B:
-  description: 'Text CC: [1F E4 XX XX YY]'
+  description: "Text control code: [1F E4 XX XX YY]"
   name: CC_1F_E4
   size: 121
   type: assembly
@@ -7046,12 +7048,12 @@
     27541: UNKNOWN6
     27554: UNKNOWN7
 0xC16BA4:
-  description: 'Text CC: [1F E5 XX]'
+  description: "Text control code: [1F E5 XX]"
   name: CC_1F_E5
   size: 11
   type: assembly
 0xC16BAF:
-  description: 'Text CC: [1F E6 XX XX]'
+  description: "Text control code: [1F E6 XX XX]"
   name: CC_1F_E6
   size: 67
   type: assembly
@@ -7059,7 +7061,7 @@
     27605: UNKNOWN0
     27632: UNKNOWN1
 0xC16BF2:
-  description: 'Text CC: [1F E7 XX XX]'
+  description: "Text control code: [1F E7 XX XX]"
   name: CC_1F_E7
   size: 67
   type: assembly
@@ -7067,12 +7069,12 @@
     27672: UNKNOWN0
     27699: UNKNOWN1
 0xC16C35:
-  description: 'Text CC: [1F E8 XX]'
+  description: "Text control code: [1F E8 XX]"
   name: CC_1F_E8
   size: 11
   type: assembly
 0xC16C40:
-  description: 'Text CC: [1F E9 XX XX]'
+  description: "Text control code: [1F E9 XX XX]"
   name: CC_1F_E9
   size: 67
   type: assembly
@@ -7080,7 +7082,7 @@
     27750: UNKNOWN0
     27777: UNKNOWN1
 0xC16C83:
-  description: 'Text CC: [1F EA XX XX]'
+  description: "Text control code: [1F EA XX XX]"
   name: CC_1F_EA
   size: 67
   type: assembly
@@ -7088,7 +7090,7 @@
     27817: UNKNOWN0
     27844: UNKNOWN1
 0xC16CC6:
-  description: 'Text CC: [1F EB XX YY]'
+  description: "Text control code: [1F EB XX YY]"
   name: CC_1F_EB
   size: 78
   type: assembly
@@ -7098,7 +7100,7 @@
     27892: UNKNOWN2
     27922: UNKNOWN3
 0xC16D14:
-  description: 'Text CC: [1F EC XX YY]'
+  description: "Text control code: [1F EC XX YY]"
   name: CC_1F_EC
   size: 78
   type: assembly
@@ -7108,7 +7110,7 @@
     27970: UNKNOWN2
     28000: UNKNOWN3
 0xC16D62:
-  description: 'Text CC: [1F EE XX XX]'
+  description: "Text control code: [1F EE XX XX]"
   name: CC_1F_EE
   size: 67
   type: assembly
@@ -7116,7 +7118,7 @@
     28040: UNKNOWN0
     28067: UNKNOWN1
 0xC16DA5:
-  description: 'Text CC: [1F EF XX XX]'
+  description: "Text control code: [1F EF XX XX]"
   name: CC_1F_EF
   size: 67
   type: assembly
@@ -7124,7 +7126,7 @@
     28107: UNKNOWN0
     28134: UNKNOWN1
 0xC16DE8:
-  description: 'Text CC: [1F 63 XX XX XX 00]'
+  description: "Text control code: [1F 63 XX XX XX 00]"
   name: CC_1F_63
   size: 215
   type: assembly
@@ -7134,7 +7136,7 @@
     28185: UNKNOWN2
     28349: UNKNOWN3
 0xC16EBF:
-  description: 'Text CC: [1F F1 XX XX YY YY]'
+  description: "Text control code: [1F F1 XX XX YY YY]"
   name: CC_1F_F1
   size: 112
   type: assembly
@@ -7144,7 +7146,7 @@
     28399: UNKNOWN2
     28461: UNKNOWN3
 0xC16F2F:
-  description: 'Text CC: [1F F2 XX XX YY YY]'
+  description: "Text control code: [1F F2 XX XX YY YY]"
   name: CC_1F_F2
   size: 112
   type: assembly
@@ -7154,7 +7156,7 @@
     28511: UNKNOWN2
     28573: UNKNOWN3
 0xC16F9F:
-  description: 'Text CC: [19 25 XX]'
+  description: "Text control code: [19 25 XX]"
   name: CC_19_25
   size: 50
   type: assembly
@@ -7162,7 +7164,7 @@
     28594: UNKNOWN0
     28597: UNKNOWN1
 0xC16FD1:
-  description: 'Text CC: [1F 23 XX XX]'
+  description: "Text control code: [1F 23 XX XX]"
   name: CC_1F_23
   size: 102
   type: assembly
@@ -7173,7 +7175,7 @@
     28711: UNKNOWN3
     28725: UNKNOWN4
 0xC17037:
-  description: 'Text CC: [19 26 XX]'
+  description: "Text control code: [19 26 XX]"
   name: CC_19_26
   size: 33
   type: assembly
@@ -7181,7 +7183,7 @@
     28746: UNKNOWN0
     28749: UNKNOWN1
 0xC17058:
-  description: 'Text CC: [1D 0C XX XX]'
+  description: "Text control code: [1D 0C XX XX]"
   name: CC_1D_0C
   size: 196
   type: assembly
@@ -7200,7 +7202,7 @@
     28940: UNKNOWN11
     28954: UNKNOWN12
 0xC1711C:
-  description: 'Text CC: [1F 66 XX YY ZZ ZZ ZZ 00]'
+  description: "Text control code: [1F 66 XX YY ZZ ZZ ZZ 00]"
   name: CC_1F_66
   size: 279
   type: assembly
@@ -7214,7 +7216,7 @@
     29057: UNKNOWN6
     29233: UNKNOWN7
 0xC17233:
-  description: 'Text CC: [1F 67 XX]'
+  description: "Text control code: [1F 67 XX]"
   name: CC_1F_67
   size: 33
   type: assembly
@@ -7222,7 +7224,7 @@
     29254: UNKNOWN0
     29257: UNKNOWN1
 0xC17254:
-  description: 'Text CC: [1F 04 XX]'
+  description: "Text control code: [1F 04 XX]"
   name: CC_1F_04
   size: 32
   type: assembly
@@ -7230,14 +7232,14 @@
     29287: UNKNOWN0
     29290: UNKNOWN1
 0xC17274:
-  description: 'Text CC: [1D 24 XX]'
+  description: "Text control code: [1D 24 XX]"
   name: CC_1D_24
   size: 72
   type: assembly
   labels:
     29367: UNKNOWN0
 0xC172BC:
-  description: 'Text CC: [1F 40 XX]'
+  description: "Text control code: [1F 40 XX]"
   name: CC_1F_40
   size: 30
   type: assembly
@@ -7245,14 +7247,14 @@
     29398: UNKNOWN0
     29401: UNKNOWN1
 0xC172DA:
-  description: 'Text CC: [1F 41 XX]'
+  description: "Text control code: [1F 41 XX]"
   name: CC_1F_41
   size: 42
   type: assembly
   labels:
     29428: UNKNOWN0
 0xC17304:
-  description: 'Text CC: [1F D2 XX]'
+  description: "Text control code: [1F D2 XX]"
   name: CC_1F_D2
   size: 33
   type: assembly
@@ -7260,7 +7262,7 @@
     29463: UNKNOWN0
     29466: UNKNOWN1
 0xC17325:
-  description: 'Text CC: [1F F3 XX XX YY]'
+  description: "Text control code: [1F F3 XX XX YY]"
   name: CC_1F_F3
   size: 88
   type: assembly
@@ -7270,7 +7272,7 @@
     29523: UNKNOWN2
     29563: UNKNOWN3
 0xC1737D:
-  description: 'Text CC: [1F F4 XX]'
+  description: "Text control code: [1F F4 XX]"
   name: CC_1F_F4
   size: 67
   type: assembly
@@ -7278,7 +7280,7 @@
     29603: UNKNOWN0
     29630: UNKNOWN1
 0xC173C0:
-  description: 'Text CC: [1C 13 XX YY]'
+  description: "Text control code: [1C 13 XX YY]"
   name: CC_1C_13
   size: 95
   type: assembly
@@ -7290,7 +7292,7 @@
     29722: UNKNOWN4
     29725: UNKNOWN5
 0xC1741F:
-  description: 'Text CC: [1F 07 XX]'
+  description: "Text control code: [1F 07 XX]"
   name: CC_1F_07
   size: 33
   type: assembly
@@ -7298,12 +7300,12 @@
     29746: UNKNOWN0
     29749: UNKNOWN1
 0xC17440:
-  description: 'Text CC: [1F D3 XX]'
+  description: "Text control code: [1F D3 XX]"
   name: CC_1F_D3
   size: 11
   type: assembly
 0xC1744B:
-  description: 'Text CC: [1E 09 XX YY YY YY]'
+  description: "Text control code: [1E 09 XX YY YY YY]"
   name: CC_1E_09
   size: 216
   type: assembly
@@ -7313,7 +7315,7 @@
     29820: UNKNOWN2
     29985: UNKNOWN3
 0xC17523:
-  description: 'Text CC: [1E 0A XX YY]'
+  description: "Text control code: [1E 0A XX YY]"
   name: CC_1E_0A
   size: 97
   type: assembly
@@ -7323,7 +7325,7 @@
     30035: UNKNOWN2
     30082: UNKNOWN3
 0xC17584:
-  description: 'Text CC: [1E 0B XX YY]'
+  description: "Text control code: [1E 0B XX YY]"
   name: CC_1E_0B
   size: 97
   type: assembly
@@ -7333,7 +7335,7 @@
     30132: UNKNOWN2
     30179: UNKNOWN3
 0xC175E5:
-  description: 'Text CC: [1E 0C XX YY]'
+  description: "Text control code: [1E 0C XX YY]"
   name: CC_1E_0C
   size: 97
   type: assembly
@@ -7343,7 +7345,7 @@
     30229: UNKNOWN2
     30276: UNKNOWN3
 0xC17646:
-  description: 'Text CC: [1E 0D XX YY]'
+  description: "Text control code: [1E 0D XX YY]"
   name: CC_1E_0D
   size: 97
   type: assembly
@@ -7353,7 +7355,7 @@
     30326: UNKNOWN2
     30373: UNKNOWN3
 0xC176A7:
-  description: 'Text CC: [1E 0E XX YY]'
+  description: "Text control code: [1E 0E XX YY]"
   name: CC_1E_0E
   size: 97
   type: assembly
@@ -7363,7 +7365,7 @@
     30423: UNKNOWN2
     30470: UNKNOWN3
 0xC17708:
-  description: 'Text CC: [1D 23 XX]'
+  description: "Text control code: [1D 23 XX]"
   name: CC_1D_23
   size: 98
   type: assembly
@@ -7375,7 +7377,7 @@
     30547: UNKNOWN4
     30550: UNKNOWN5
 0xC1776A:
-  description: 'Text CC: [19 27 XX]'
+  description: "Text control code: [19 27 XX]"
   name: CC_19_27
   size: 44
   type: assembly
@@ -7399,11 +7401,13 @@
     30949: UNKNOWN2
     30965: UNKNOWN3
 0xC178F7:
-  description: 'Text CC: [19 02]'
+  description: "Text control code: [19 02]"
   name: CC_19_02
   size: 20
   type: assembly
 0xC1790B:
+  description: "Text system: [18] comparison tree"
+  name: CC_18_TREE
   size: 159
   type: assembly
   labels:
@@ -7422,6 +7426,8 @@
     31141: UNKNOWN12
     31144: UNKNOWN13
 0xC179AA:
+  description: "Text system: [19] comparison tree"
+  name: CC_19_TREE
   size: 428
   type: assembly
   labels:
@@ -7476,6 +7482,8 @@
     31569: UNKNOWN48
     31572: UNKNOWN49
 0xC17B56:
+  description: "Text system: [1A] comparison tree"
+  name: CC_1A_TREE
   size: 224
   type: assembly
   labels:
@@ -7494,6 +7502,8 @@
     31793: UNKNOWN12
     31796: UNKNOWN13
 0xC17C36:
+  description: "Text system: [1B] comparison tree"
+  name: CC_1B_TREE
   size: 350
   type: assembly
   labels:
@@ -7514,6 +7524,8 @@
     32141: UNKNOWN14
     32146: UNKNOWN15
 0xC17D94:
+  description: "Text system: [1C] comparison tree"
+  name: CC_1C_TREE
   size: 381
   type: assembly
   labels:
@@ -7562,6 +7574,8 @@
     32524: UNKNOWN42
     32527: UNKNOWN43
 0xC17F11:
+  description: "Text system: [1D] comparison tree"
+  name: CC_1D_TREE
   size: 526
   type: assembly
   labels:
@@ -7632,6 +7646,8 @@
     33050: UNKNOWN64
     33053: UNKNOWN65
 0xC1811F:
+  description: "Text system: [1E] comparison tree"
+  name: CC_1E_TREE
   size: 156
   type: assembly
   labels:
@@ -7653,6 +7669,8 @@
     33207: UNKNOWN15
     33210: UNKNOWN16
 0xC181BB:
+  description: "Text system: [1F] comparison tree"
+  name: CC_1F_TREE
   size: 1202
   type: assembly
   labels:
@@ -7945,8 +7963,8 @@
     36401: UNKNOWN11
     36438: UNKNOWN12
 0xC18E5B:
-  description: Take item from character
-  name: TAKE_ITEM_FROM_CHARACTER
+  description: Take item from character (one)
+  name: TAKE_ITEM_FROM_SPECIFIC_CHARACTER
   size: 82
   type: assembly
   labels:
@@ -7957,6 +7975,8 @@
     36520: UNKNOWN4
     36523: UNKNOWN5
 0xC18EAD:
+  description: Take item from character (one/any)
+  name: TAKE_ITEM_FROM_CHARACTER
   size: 97
   type: assembly
   labels:
@@ -9714,6 +9734,8 @@
   size: 380
   type: assembly
 0xC21857:
+  description: Recalculate one character's postmath Offense
+  name: RECALC_CHARACTER_POSTMATH_OFFENSE
   labels:
     6293: UNKNOWN0
     6369: UNKNOWN1
@@ -9727,6 +9749,8 @@
   size: 212
   type: assembly
 0xC2192B:
+  description: Recalculate one character's postmath Defense
+  name: RECALC_CHARACTER_POSTMATH_DEFENSE
   labels:
     6504: UNKNOWN0
     6583: UNKNOWN1
@@ -9744,6 +9768,8 @@
   size: 448
   type: assembly
 0xC21AEB:
+  description: Recalculate one character's postmath Speed
+  name: RECALC_CHARACTER_POSTMATH_SPEED
   labels:
     6993: UNKNOWN0
     7035: UNKNOWN1
@@ -9753,6 +9779,8 @@
   size: 185
   type: assembly
 0xC21BA4:
+  description: Recalculate one character's postmath Guts
+  name: RECALC_CHARACTER_POSTMATH_GUTS
   labels:
     7178: UNKNOWN0
     7220: UNKNOWN1
@@ -9762,6 +9790,8 @@
   size: 185
   type: assembly
 0xC21C5D:
+  description: Recalculate one character's postmath Luck
+  name: RECALC_CHARACTER_POSTMATH_LUCK
   labels:
     7363: UNKNOWN0
     7442: UNKNOWN1
@@ -9772,12 +9802,18 @@
   size: 264
   type: assembly
 0xC21D65:
+  description: Recalculate one character's postmath Vitality
+  name: RECALC_CHARACTER_POSTMATH_VITALITY
   size: 24
   type: assembly
 0xC21D7D:
+  description: Recalculate one character's postmath IQ
+  name: RECALC_CHARACTER_POSTMATH_IQ
   size: 24
   type: assembly
 0xC21D95:
+  description: Recalculate one character's miss rate
+  name: RECALC_CHARACTER_MISS_RATE
   labels:
     7654: UNKNOWN0
     7657: UNKNOWN1
@@ -9818,6 +9854,8 @@
   size: 1041
   type: assembly
 0xC22214:
+  description: Increase wallet balance
+  name: INCREASE_WALLET_BALANCE
   labels:
     8788: UNKNOWN0
     8790: UNKNOWN1
@@ -9825,6 +9863,8 @@
   size: 94
   type: assembly
 0xC22272:
+  description: Decrease wallet balance
+  name: DECREASE_WALLET_BALANCE
   labels:
     8893: UNKNOWN0
     8895: UNKNOWN1
@@ -9881,8 +9921,8 @@
   size: 109
   type: assembly
 0xC224E1:
-  name: GET_ITEM_SUBTYPE
   description: Returns item subtype
+  name: GET_ITEM_SUBTYPE
   arguments:
     A: Item Number
   labels:
@@ -9895,8 +9935,8 @@
   size: 67
   type: assembly
 0xC22524:
-  name: GET_ITEM_SUBTYPE_2
   description: Returns item subtype (2)
+  name: GET_ITEM_SUBTYPE_2
   labels:
     9551: UNKNOWN0
     9556: UNKNOWN1
@@ -10945,13 +10985,15 @@
   size: 95
   type: assembly
 0xC271F0:
+  description: HP reduction
+  name: REDUCE_HP
   labels:
     29201: UNKNOWN0
     29206: UNKNOWN1
   size: 45
   type: assembly
 0xC2721D:
-  description: PP Reduction
+  description: PP reduction
   name: REDUCE_PP
   labels:
     29246: UNKNOWN0
@@ -10959,7 +11001,7 @@
   size: 45
   type: assembly
 0xC2724A:
-  description: Inflict Status Y from group X on target
+  description: Inflict status Y from group X on target
   name: INFLICT_STATUS
   labels:
     29286: UNKNOWN0
@@ -10969,8 +11011,8 @@
   size: 74
   type: assembly
 0xC27294:
-  description: HP Recovery?
-  name: HP_RECOVERY
+  description: HP recovery
+  name: RECOVER_HP
   labels:
     29418: UNKNOWN0
     29448: UNKNOWN1
@@ -10978,8 +11020,8 @@
   size: 132
   type: assembly
 0xC27318:
-  description: PP Recovery?
-  name: PP_RECOVERY
+  description: PP recovery
+  name: RECOVER_PP
   labels:
     29537: UNKNOWN0
     29539: UNKNOWN1
@@ -10987,8 +11029,8 @@
   size: 127
   type: assembly
 0xC27397:
-  description: Revive Character
-  name: REVIVE_CHARACTER
+  description: Revive target
+  name: REVIVE_TARGET
   labels:
     29756: UNKNOWN0
     29772: UNKNOWN1
@@ -11005,8 +11047,8 @@
   size: 441
   type: assembly
 0xC27550:
-  description: KO Character
-  name: KO_CHARACTER
+  description: KO target
+  name: KO_TARGET
   labels:
     30060: UNKNOWN0
     30076: UNKNOWN1
@@ -11463,7 +11505,7 @@
   size: 97
   type: assembly
 0xC28DBB:
-  description: 'Battle Action: Inflict strange feeling'
+  description: 'Battle Action: Inflict feeling strange'
   name: BTLACT_FEELSTRANGE
   labels:
     36332: UNKNOWN0
@@ -11484,7 +11526,7 @@
   size: 7
   type: assembly
 0xC28E42:
-  description: 'Battle action: Reduce target''s PP by (1/16 max PP +- 50%)'
+  description: "Battle action: Reduce target's PP by (1/16 max PP \u00B1 50%)"
   name: BTLACT_REDUCEPP
   labels:
     36450: UNKNOWN0
@@ -11494,7 +11536,7 @@
   size: 108
   type: assembly
 0xC28EAE:
-  description: 'Battle action: Reduce target''s Guts by ?'
+  description: "Battle action: Reduce target's Guts by ?"
   name: BTLACT_CUTGUTS
   labels:
     36605: UNKNOWN0
@@ -11502,14 +11544,14 @@
   size: 115
   type: assembly
 0xC28F21:
-  description: 'Battle Action: Reduce target''s offense and defense'
+  description: "Battle action: Reduce target's Offense and Defense"
   name: BTLACT_REDUCEOFFDEF
   labels:
     36757: UNKNOWN0
   size: 118
   type: assembly
 0xC28F97:
-  description: 'Battle Action: Level 2 Attack, Inflict Poison'
+  description: "Battle action: Level 2 attack, inflict poison"
   name: BTLACT_LEVEL_2_ATK_POISON
   labels:
     36841: UNKNOWN0
@@ -11517,7 +11559,7 @@
   size: 98
   type: assembly
 0xC28FF9:
-  description: 'Battle Action: Double Level 2 Attack'
+  description: "Battle Action: Two consecutive level 2 attacks"
   name: BTLACT_DOUBLE_BASH
   size: 11
   type: assembly
@@ -11527,8 +11569,8 @@
   size: 7
   type: assembly
 0xC2900B:
-  description: 'Battle action: 350 +- 25% fire damage'
-  name: BTLACT_350FIREDAMAGE
+  description: "Battle action: 350 \u00B1 25% fire damage"
+  name: BTLACT_350_FIRE_DAMAGE
   size: 33
   type: assembly
 0xC2902C:
@@ -11601,7 +11643,7 @@
   size: 168
   type: assembly
 0xC2916E:
-  description: 'Battle Action: Level 2 Attack with Diamondization'
+  description: "Battle action: Level 2 attack, inflict diamondization"
   name: BTLACT_LVL_2_ATK_DIAMONDIZE
   labels:
     37249: UNKNOWN0
@@ -11615,14 +11657,14 @@
   size: 230
   type: assembly
 0xC29254:
-  description: 'Battle Action: Reduce Offense'
+  description: "Battle action: Reduce target's Offense"
   name: BTLACT_REDUCEOFF
   labels:
     37526: UNKNOWN0
   size: 68
   type: assembly
 0xC29298:
-  description: 'Battle Action: Clumsy Robot''s Defeat'
+  description: "Battle action: Clumsy Robot death"
   name: BTLACT_CLUMSYDEATH
   labels:
     37577: UNKNOWN0
@@ -11630,12 +11672,12 @@
   size: 83
   type: assembly
 0xC292EB:
-  description: 'Battle Action: Enemy Extender'
+  description: "Battle action: Enemy extender"
   name: BTLACT_ENEMYEXTEND
   size: 3
   type: assembly
 0xC292EE:
-  description: 'Battle Action: Master Barf Defeat'
+  description: "Battle action: Master Barf death"
   name: BTLACT_MASTERBARFDEATH
   labels:
     37652: UNKNOWN0
@@ -11680,7 +11722,7 @@
   size: 72
   type: assembly
 0xC29516:
-  description: PSI Rockin' General
+  description: "PSI Rockin (common code)"
   name: PSI_ROCKIN_COMMON
   labels:
     38217: UNKNOWN0
@@ -11689,54 +11731,54 @@
   size: 64
   type: assembly
 0xC29556:
-  description: "Battle action: PSI Rockin' \u03B1'"
-  name: BTLACT_PSIROCKINA
+  description: "Battle action: PSI Rockin \u03B1 (80 \u00B1 50% damage)"
+  name: BTLACT_PSI_ROCKIN_A
   size: 9
   type: assembly
 0xC2955F:
-  description: "Battle action: PSI Rockin' \u03B2'"
-  name: BTLACT_PSIROCKINB
+  description: "Battle action: PSI Rockin \u03B2 (180 \u00B1 50% damage)"
+  name: BTLACT_PSI_ROCKIN_B
   size: 9
   type: assembly
 0xC29568:
-  description: "Battle action: PSI Rockin' \u0263'"
-  name: BTLACT_PSIROCKING
+  description: "Battle action: PSI Rockin \u03B3 (320 \u00B1 50% damage)"
+  name: BTLACT_PSI_ROCKIN_G
   size: 9
   type: assembly
 0xC29571:
-  description: "Battle action: PSI Rockin' \u03A9'"
-  name: BTLACT_PSIROCKINO
+  description: "Battle action: PSI Rockin \u03A9 (640 \u00B1 50% damage)"
+  name: BTLACT_PSI_ROCKIN_O
   size: 9
   type: assembly
 0xC2957A:
-  description: PSI Fire General
+  description: "PSI Fire (common code)"
   name: PSI_FIRE_COMMON
   labels:
     38313: UNKNOWN0
   size: 49
   type: assembly
 0xC295AB:
-  description: "Battle action: PSI Fire \u03B1"
-  name: BTLACT_PSIFIREA
+  description: "Battle action: PSI Fire \u03B1 (80 \u00B1 25% fire damage)"
+  name: BTLACT_PSI_FIRE_A
   size: 9
   type: assembly
 0xC295B4:
-  description: "Battle action: PSI Fire \u03B2"
-  name: BTLACT_PSIFIREB
+  description: "Battle action: PSI Fire \u03B2 (160 \u00B1 25% fire damage)"
+  name: BTLACT_PSI_FIRE_B
   size: 9
   type: assembly
 0xC295BD:
-  description: "Battle action: PSI Fire \u0263"
-  name: BTLACT_PSIFIREG
+  description: "Battle action: PSI Fire \u03B3 (240 \u00B1 25% fire damage)"
+  name: BTLACT_PSI_FIRE_G
   size: 9
   type: assembly
 0xC295C6:
-  description: "Battle action: PSI Fire \u03A9"
-  name: BTLACT_PSIFIREO
+  description: "Battle action: PSI Fire \u03A9 (320 \u00B1 25% fire damage)"
+  name: BTLACT_PSI_FIRE_O
   size: 9
   type: assembly
 0xC295CF:
-  description: PSI Freeze General
+  description: "PSI Freeze (common code)"
   name: PSI_FREEZE_COMMON
   labels:
     38466: UNKNOWN0
@@ -11744,27 +11786,27 @@
   size: 120
   type: assembly
 0xC29647:
-  description: "Battle action: PSI Freeze \u03B1"
-  name: BTLACT_PSIFREEZEA
+  description: "Battle action: PSI Freeze \u03B1 (180 \u00B1 25% freeze damage)"
+  name: BTLACT_PSI_FREEZE_A
   size: 9
   type: assembly
 0xC29650:
-  description: "Battle action: PSI Freeze \u03B2"
-  name: BTLACT_PSIFREEZEB
+  description: "Battle action: PSI Freeze \u03B2 (360 \u00B1 25% freeze damage)"
+  name: BTLACT_PSI_FREEZE_B
   size: 9
   type: assembly
 0xC29659:
-  description: "Battle action: PSI Freeze \u0263"
-  name: BTLACT_PSIFREEZEG
+  description: "Battle action: PSI Freeze \u03B3 (540 \u00B1 25% freeze damage)"
+  name: BTLACT_PSI_FREEZE_G
   size: 9
   type: assembly
 0xC29662:
-  description: "Battle action: PSI Freeze \u03A9"
-  name: BTLACT_PSIFREEZEO
+  description: "Battle action: PSI Freeze \u03A9 (720 \u00B1 25% freeze damage)"
+  name: BTLACT_PSI_FREEZE_O
   size: 9
   type: assembly
 0xC2966B:
-  description: PSI Thunder General (X = number of strikes, A = Base damage)
+  description: "PSI Thunder (common code) (A = Base damage, X = Number of strikes)"
   name: PSI_THUNDER_COMMON
   labels:
     38531: UNKNOWN0
@@ -11792,27 +11834,27 @@
   size: 518
   type: assembly
 0xC29871:
-  description: "Battle action: PSI Thunder \u03B1"
-  name: BTLACT_PSITHUNDERA
+  description: "Battle action: PSI Thunder \u03B1 (120 \u00B1 50% damage per strike, 0-1 strikes)"
+  name: BTLACT_PSI_THUNDER_A
   size: 12
   type: assembly
 0xC2987D:
-  description: "Battle action: PSI Thunder \u03B2"
-  name: BTLACT_PSITHUNDERB
+  description: "Battle action: PSI Thunder \u03B2 (120 \u00B1 50% damage per strike, 0-2 strikes)"
+  name: BTLACT_PSI_THUNDER_B
   size: 12
   type: assembly
 0xC29889:
-  description: "Battle action: PSI Thunder \u0263"
-  name: BTLACT_PSITHUNDERG
+  description: "Battle action: PSI Thunder \u03B3 (200 \u00B1 50% damage per strike, 0-3 strikes)"
+  name: BTLACT_PSI_THUNDER_G
   size: 12
   type: assembly
 0xC29895:
-  description: "Battle action: PSI Thunder \u03A9"
-  name: BTLACT_PSITHUNDERO
+  description: "Battle action: PSI Thunder \u03A9 (200 \u00B1 50% damage per strike, 0-4 strikes)"
+  name: BTLACT_PSI_THUNDER_O
   size: 12
   type: assembly
 0xC298A1:
-  description: PSI Flash Immunity Test
+  description: "PSI Flash immunity test"
   name: FLASH_IMMUNITY_TEST
   labels:
     39094: UNKNOWN0
@@ -11821,24 +11863,24 @@
   size: 61
   type: assembly
 0xC298DE:
+  description: "PSI Flash: Inflict feeling strange"
   name: FLASH_INFLICT_FEELING_STRANGE
-  description: 'PSI Flash: Inflicts Feeling Strange status'
   labels:
     39175: UNKNOWN0
     39189: UNKNOWN1
   size: 57
   type: assembly
 0xC29917:
+  description: "PSI Flash: Inflict paralysis"
   name: FLASH_INFLICT_PARALYSIS
-  description: 'PSI Flash: Inflicts Paralysis status'
   labels:
     39232: UNKNOWN0
     39246: UNKNOWN1
   size: 57
   type: assembly
 0xC29950:
+  description: "PSI Flash: Inflict crying"
   name: FLASH_INFLICT_CRYING
-  description: 'PSI Flash: Inflicts Crying status'
   labels:
     39287: UNKNOWN0
     39301: UNKNOWN1
@@ -11846,7 +11888,7 @@
   type: assembly
 0xC29987:
   description: "Battle action: PSI Flash \u03B1"
-  name: BTLACT_PSIFLASHA
+  name: BTLACT_PSI_FLASH_A
   labels:
     39335: UNKNOWN0
     39338: UNKNOWN1
@@ -11855,7 +11897,7 @@
   type: assembly
 0xC299AE:
   description: "Battle action: PSI Flash \u03B2"
-  name: BTLACT_PSIFLASHB
+  name: BTLACT_PSI_FLASH_B
   labels:
     39381: UNKNOWN0
     39390: UNKNOWN1
@@ -11866,8 +11908,8 @@
   size: 65
   type: assembly
 0xC299EF:
-  description: "Battle action: PSI Flash \u0263"
-  name: BTLACT_PSIFLASHG
+  description: "Battle action: PSI Flash \u03B3"
+  name: BTLACT_PSI_FLASH_G
   labels:
     39451: UNKNOWN0
     39460: UNKNOWN1
@@ -11879,7 +11921,7 @@
   type: assembly
 0xC29A35:
   description: "Battle action: PSI Flash \u03A9"
-  name: BTLACT_PSIFLASHO
+  name: BTLACT_PSI_FLASH_O
   labels:
     39526: UNKNOWN0
     39535: UNKNOWN1
@@ -11890,38 +11932,50 @@
   size: 75
   type: assembly
 0xC29A80:
-  description: PSI Starstorm General
+  description: "PSI Starstorm (common code)"
   name: PSI_STARSTORM_COMMON
   labels:
     39588: UNKNOWN0
   size: 38
   type: assembly
 0xC29AA6:
-  description: "Battle action: PSI Starstorm \u03B1"
-  name: BTLACT_PSISTARSTORMA
+  description: "Battle action: PSI Starstorm \u03B1 (360 \u00B1 25% damage)"
+  name: BTLACT_PSI_STARSTORM_A
   size: 9
   type: assembly
 0xC29AAF:
-  description: "Battle action: PSI Starstorm \u03A9"
-  name: BTLACT_PSISTARSTORMO
+  description: "Battle action: PSI Starstorm \u03A9 (720 \u00B1 25% damage)"
+  name: BTLACT_PSI_STARSTORM_O
   size: 9
   type: assembly
 0xC29AB8:
+  description: "Lifeup (common code)"
+  name: LIFEUP_COMMON
   size: 14
   type: assembly
 0xC29AC6:
+  description: "Battle action: Lifeup \u03B1 (Restore 100 \u00B1 25% HP)"
+  name: BTLACT_LIFEUP_A
   size: 9
   type: assembly
 0xC29ACF:
+  description: "Battle action: Lifeup \u03B2 (Restore 300 \u00B1 25% HP)"
+  name: BTLACT_LIFEUP_B
   size: 9
   type: assembly
 0xC29AD8:
+  description: "Battle action: Lifeup \u03B3 (Restore 10000 HP)"
+  name: BTLACT_LIFEUP_G
   size: 9
   type: assembly
 0xC29AE1:
+  description: "Battle action: Lifeup \u03A9 (Restore 400 \u00B1 25% HP)"
+  name: BTLACT_LIFEUP_O
   size: 9
   type: assembly
 0xC29AEA:
+  description: "Battle action: Healing \u03B1"
+  name: BTLACT_HEALING_A
   labels:
     39692: UNKNOWN0
     39717: UNKNOWN1
@@ -11931,6 +11985,8 @@
   size: 144
   type: assembly
 0xC29B7A:
+  description: "Battle action: Healing \u03B2"
+  name: BTLACT_HEALING_B
   labels:
     39836: UNKNOWN0
     39861: UNKNOWN1
@@ -11941,6 +11997,8 @@
   size: 178
   type: assembly
 0xC29C2C:
+  description: "Battle action: Healing \u03B3"
+  name: BTLACT_HEALING_G
   labels:
     40019: UNKNOWN0
     40044: UNKNOWN1
@@ -11951,12 +12009,16 @@
   size: 140
   type: assembly
 0xC29CB8:
+  description: "Battle action: Healing \u03A9"
+  name: BTLACT_HEALING_O
   labels:
     40151: UNKNOWN0
     40155: UNKNOWN1
   size: 36
   type: assembly
 0xC29CDC:
+  description: "Shield and PSI Shield (common code)"
+  name: SHIELDS_COMMON
   labels:
     40219: UNKNOWN0
     40221: UNKNOWN1
@@ -11966,50 +12028,72 @@
   size: 104
   type: assembly
 0xC29D44:
+  description: "Battle action: Shield \u03B1"
+  name: BTLACT_SHIELD_A
   labels:
     40298: UNKNOWN0
     40312: UNKNOWN1
   size: 54
   type: assembly
 0xC29D7A:
+  description: Redirect to C29D44
+  name: REDIRECT_C29D44
   size: 7
   type: assembly
 0xC29D81:
+  description: "Battle action: Shield \u03B2"
+  name: BTLACT_SHIELD_B
   labels:
     40359: UNKNOWN0
     40373: UNKNOWN1
   size: 54
   type: assembly
 0xC29DB7:
+  description: Redirect to C29D81
+  name: REDIRECT_C29D81
   size: 7
   type: assembly
 0xC29DBE:
+  description: "Battle action: PSI Shield \u03B1"
+  name: BTLACT_PSI_SHIELD_A
   labels:
     40420: UNKNOWN0
     40434: UNKNOWN1
   size: 54
   type: assembly
 0xC29DF4:
+  description: Redirect to C29DBE
+  name: REDIRECT_C29DBE
   size: 7
   type: assembly
 0xC29DFB:
+  description: "Battle action: PSI Shield \u03B2"
+  name: BTLACT_PSI_SHIELD_B
   labels:
     40481: UNKNOWN0
     40495: UNKNOWN1
   size: 54
   type: assembly
 0xC29E31:
+  description: Redirect to C29DFB
+  name: REDIRECT_C29DFB
   size: 7
   type: assembly
 0xC29E38:
+  description: "Battle action: Offense Up \u03B1"
+  name: BTLACT_OFFENSE_UP_A
   labels:
     40573: UNKNOWN0
   size: 71
   type: assembly
 0xC29E7F:
+  description: Redirect to C29E38
+  name: REDIRECT_C29E38
   size: 7
   type: assembly
 0xC29E86:
+  description: "Battle action: Defense Down \u03B1"
+  name: BTLACT_DEFENSE_DOWN_A
   labels:
     40646: UNKNOWN0
     40648: UNKNOWN1
@@ -12020,20 +12104,26 @@
   size: 121
   type: assembly
 0xC29EFF:
+  description: Redirect to C29E86
+  name: REDIRECT_C29E86
   size: 7
   type: assembly
 0xC29F06:
-  description: 'Battle Action: Inflict Sleep'
-  name: BTLACT_SLEEP
+  description: "Battle action: Hypnosis \u03B1 (Inflict sleep)"
+  name: BTLACT_HYPNOSIS_A
   labels:
     40775: UNKNOWN0
     40789: UNKNOWN1
   size: 81
   type: assembly
 0xC29F57:
+  description: Redirect to C29F06
+  name: REDIRECT_C29F06
   size: 7
   type: assembly
 0xC29F5E:
+  description: "Battle action: Magnet \u03B1 (Steal 2d4 PP)"
+  name: BTLACT_MAGNET_A
   labels:
     40830: UNKNOWN0
     40871: UNKNOWN1
@@ -12042,29 +12132,37 @@
   size: 131
   type: assembly
 0xC29FE1:
+  description: "Battle action: Magnet \u03A9 (Steal 2d4 PP)"
+  name: BTLACT_MAGNET_O
   labels:
     40953: UNKNOWN0
     40957: UNKNOWN1
   size: 29
   type: assembly
 0xC29FFE:
+  description: "Battle action: Paralysis \u03B1 (Inflict paralysis)"
+  name: BTLACT_PARALYSIS_A
   labels:
     41023: UNKNOWN0
     41037: UNKNOWN1
   size: 81
   type: assembly
 0xC2A04F:
+  description: Redirect to C29FFE
+  name: REDIRECT_C29FFE
   size: 7
   type: assembly
 0xC2A056:
-  description: Inflict Feeling Strange
-  name: INFLICT_FEELING_STRANGE
+  description: "Battle action: Brainshock \u03B1 (Inflict feeling strange)"
+  name: BTLACT_BRAINSHOCK_A
   labels:
     41111: UNKNOWN0
     41125: UNKNOWN1
   size: 81
   type: assembly
 0xC2A0A7:
+  description: Redirect to C2A056
+  name: REDIRECT_C2A056
   size: 7
   type: assembly
 0xC2A0AE:
@@ -12179,7 +12277,7 @@
   size: 108
   type: assembly
 0xC2A57A:
-  description: Bottle Rockets General
+  description: "Bottle rocket (common code)"
   name: BOTTLE_ROCKET_COMMON
   labels:
     42384: UNKNOWN0
@@ -12190,18 +12288,18 @@
   size: 87
   type: assembly
 0xC2A5D1:
-  description: 'Battle Action: Bottle Rocket'
-  name: BTLACT_BOTTLEROCKET
+  description: "Battle action: Bottle rocket"
+  name: BTLACT_BOTTLE_ROCKET
   size: 9
   type: assembly
 0xC2A5DA:
-  description: 'Battle Action: Big Bottle Rocket'
-  name: BTLACT_BIGBOTTLEROCKET
+  description: "Battle action: Big bottle rocket"
+  name: BTLACT_BIG_BOTTLE_ROCKET
   size: 9
   type: assembly
 0xC2A5E3:
-  description: 'Battle Action: Multi Bottle Rocket'
-  name: BTLACT_MULTIBOTTLEROCKET
+  description: "Battle action: Multi bottle rocket"
+  name: BTLACT_MULTI_BOTTLE_ROCKET
   size: 9
   type: assembly
 0xC2A5EC:
@@ -12213,6 +12311,8 @@
   size: 108
   type: assembly
 0xC2A658:
+  description: "Bomb (common code)"
+  name: BOMB_COMMON
   labels:
     42632: UNKNOWN0
     42655: UNKNOWN1
@@ -12238,9 +12338,13 @@
   size: 448
   type: assembly
 0xC2A818:
+  description: "Battle action: Bomb"
+  name: BTLACT_BOMB
   size: 9
   type: assembly
 0xC2A821:
+  description: "Battle action: Super bomb"
+  name: BTLACT_SUPER_BOMB
   size: 9
   type: assembly
 0xC2A82A:
@@ -12274,67 +12378,69 @@
   size: 73
   type: assembly
 0xC2A99C:
+  description: "Battle action: 800 \u00B1 25% fire damage"
+  name: BTLACT_800_FIRE_DAMAGE
   size: 33
   type: assembly
 0xC2A9BD:
-  name: INSECT_SPRAY_GENERAL
-  description: Insect Spray (General)
+  description: "Insect spray (common code)"
+  name: INSECT_SPRAY_COMMON
   labels:
     43516: FAILURE
     43530: RETURN
   size: 79
   type: assembly
 0xC2AA0C:
+  description: "Battle action: 100 \u00B1 50% damage to insect-type enemies"
   name: BTLACT_INSECT_SPRAY_100
-  description: Insect Spray (100 Damage)
   size: 9
   type: assembly
 0xC2AA15:
+  description: "Battle action: 200 \u00B1 50% damage to insect-type enemies"
   name: BTLACT_INSECT_SPRAY_200
-  description: Insect Spray (200 Damage)
   size: 9
   type: assembly
 0xC2AA1E:
-  name: RUST_SPRAY_GENERAL
-  description: Rust Spray (General)
+  description: "Rust spray (common code)"
+  name: RUST_SPRAY_COMMON
   labels:
-    43613: UNKNOWN0
-    43627: UNKNOWN1
+    43613: FAILURE
+    43627: RETURN
   size: 79
   type: assembly
 0xC2AA6D:
+  description: "Battle action: 200 \u00B1 50% damage to metal-type enemies"
   name: BTLACT_RUST_SPRAY_200
-  description: Rust Spray (200 Damage)
   size: 9
   type: assembly
 0xC2AA76:
+  description: "Battle action: 400 \u00B1 50% damage to metal-type enemies"
   name: BTLACT_RUST_SPRAY_400
-  description: Rust Spray (400 Damage)
   size: 9
   type: assembly
 0xC2AA7F:
-  name: BTLACT_GUTSUP
-  description: 'Battle action: Guts up'
+  description: "Battle action: Double current Guts"
+  name: BTLACT_DOUBLE_GUTS
   labels:
     43678: UNKNOWN0
     43716: UNKNOWN1
   size: 71
   type: assembly
 0xC2AAC6:
-  description: 'Battle action: Defense spray'
-  name: BTLACT_DEFENSESPRAY
+  description: "Battle action: Defense spray"
+  name: BTLACT_DEFENSE_SPRAY
   labels:
     43787: UNKNOWN0
   size: 71
   type: assembly
 0xC2AB0D:
-  description: 'Redirect: C2/AAC6'
-  name: REDIRECT_TO_C2AAC6
+  description: Redirect to C2AAC6
+  name: REDIRECT_C2AAC6
   size: 7
   type: assembly
 0xC2AB14:
-  name: BOSS_BATTLE_CHECK
   description: Checks if a boss is currently in the battle
+  name: BOSS_BATTLE_CHECK
   labels:
     43816: NEXT_ENEMY
     43864: NOT_BOSS
@@ -12343,8 +12449,8 @@
   size: 93
   type: assembly
 0xC2AB71:
+  description: "Battle action: Teleport Box"
   name: BTLACT_TELEPORT_BOX
-  description: "Battle Action: Teleport Box"
   labels:
     43915: UNKNOWN0
     43983: UNKNOWN1
@@ -12413,7 +12519,7 @@
 0xC2B0A1:
   type: assembly
   size: 209
-  description: 'Battle Action: Mirror'
+  description: "Battle action: Mirror"
   name: BTLACT_MIRROR
   labels:
     45248: UNKNOWN0
@@ -12570,6 +12676,8 @@
     48454: UNKNOWN1
     48469: UNKNOWN2
 0xC2BD5E:
+  description: "Call for help (common code)"
+  name: CALL_FOR_HELP_COMMON
   size: 990
   type: assembly
   labels:
@@ -12608,12 +12716,18 @@
     49452: UNKNOWN32
     49466: UNKNOWN33
 0xC2C13C:
+  description: "Battle action: Sow seeds"
+  name: BTLACT_SOW_SEEDS
   size: 9
   type: assembly
 0xC2C145:
+  description: "Battle action: Call for help"
+  name: BTLACT_CALL_FOR_HELP
   size: 9
   type: assembly
 0xC2C14E:
+  description: "Battle action: Rainbow of colours"
+  name: BTLACT_RAINBOW_OF_COLOURS
   size: 111
   type: assembly
 0xC2C1BD:
@@ -12654,8 +12768,8 @@
   size: 161
   type: assembly
 0xC2C4C0:
+  description: "Pokey's 'All-Mighty Idiot' speech transition"
   name: GIYGAS_ALL-MIGHTY_IDIOT_SPEECH
-  description: Pokey's "All-Mighty Idiot" speech transition
   size: 83
   type: assembly
 0xC2C513:
@@ -12665,30 +12779,48 @@
   size: 92
   type: assembly
 0xC2C572:
+  description: "Battle action: Giygas prayer #1"
+  name: GIYGAS_PRAYER_1
   size: 95
   type: assembly
 0xC2C5D1:
+  description: "Battle action: Giygas prayer #2"
+  name: GIYGAS_PRAYER_2
   size: 41
   type: assembly
 0xC2C5FA:
+  description: "Battle action: Giygas prayer #3"
+  name: GIYGAS_PRAYER_3
   size: 41
   type: assembly
 0xC2C623:
+  description: "Battle action: Giygas prayer #4"
+  name: GIYGAS_PRAYER_4
   size: 41
   type: assembly
 0xC2C64C:
+  description: "Battle action: Giygas prayer #5"
+  name: GIYGAS_PRAYER_5
   size: 41
   type: assembly
 0xC2C675:
+  description: "Battle action: Giygas prayer #6"
+  name: GIYGAS_PRAYER_6
   size: 41
   type: assembly
 0xC2C69E:
+  description: "Battle action: Giygas prayer #7"
+  name: GIYGAS_PRAYER_7
   size: 50
   type: assembly
 0xC2C6D0:
+  description: "Battle action: Giygas prayer #8"
+  name: GIYGAS_PRAYER_8
   size: 32
   type: assembly
 0xC2C6F0:
+  description: "Battle action: Giygas prayer #9"
+  name: GIYGAS_PRAYER_9
   size: 472
   type: assembly
   labels:
@@ -16694,32 +16826,32 @@
   type: data
   size: 6091
   name: ANIMATIONDATA_CARPAINTER_LIGHTNING_REFLECT
-  description: 'Animation Data: Carpainter''s Lightning - Reflected'
+  description: "Animation Data: Carpainter's Lightning - Reflected"
 0xCC17CB:
   type: data
   size: 1937
   name: ANIMATIONDATA_CARPAINTER_LIGHTNING_STRIKE
-  description: 'Animation Data: Carpainter''s Lightning - Strike'
+  description: "Animation Data: Carpainter's Lightning - Strike"
 0xCC1F5C:
   type: data
   size: 892
   name: ANIMATIONDATA_STARMAN_JR_TELEPORT
-  description: 'Animation Data: Starman Junior''s Teleport'
+  description: "Animation Data: Starman Junior's Teleport"
 0xCC22D8:
   type: data
   size: 2481
   name: ANIMATIONDATA_BOOM
-  description: 'Animation Data: "BOOM!"'
+  description: "Animation Data: 'BOOM!'"
 0xCC2C89:
   type: data
   size: 88
   name: ANIMATIONDATA_ZOMBIES
-  description: 'Animation Data: Zombie Attack'
+  description: "Animation Data: Zombie Attack"
 0xCC2CE1:
   type: data
   size: 256
   name: ANIMATIONDATA_THE_END
-  description: 'Animation Data: "The End?"'
+  description: "Animation Data: 'The End?'"
 0xCC2DE1:
   type: data
   size: 56
