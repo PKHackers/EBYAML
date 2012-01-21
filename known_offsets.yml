@@ -5820,24 +5820,34 @@
     16525: UNKNOWN1
     16539: UNKNOWN2
 0xC140B0:
+  description: 'Text CC: [1C 01 XX]'
+  name: CC_1C_01
   size: 31
   type: assembly
   labels:
     16578: UNKNOWN0
     16583: UNKNOWN1
 0xC140CF:
+  description: 'Text CC: [1C 11 XX]'
+  name: CC_1C_11
   size: 32
   type: assembly
   labels:
     16609: UNKNOWN0
     16614: UNKNOWN1
 0xC140EF:
+  description: 'Text CC: [1C 09 XX]'
+  name: CC_1C_09
   size: 10
   type: assembly
 0xC140F9:
+  description: 'Text CC: [1C 00 XX]'
+  name: CC_1C_00
   size: 10
   type: assembly
 0xC14103:
+  description: 'Text CC: [0A XX XX XX 00]'
+  name: CC_0A
   size: 205
   type: assembly
   labels:
@@ -5846,6 +5856,8 @@
     16691: UNKNOWN2
     16846: UNKNOWN3
 0xC141D0:
+  description: 'Text CC: [09 XX (YY YY YY 00)]'
+  name: CC_09
   size: 149
   type: assembly
   labels:
@@ -5853,18 +5865,24 @@
     16958: UNKNOWN1
     16995: UNKNOWN2
 0xC14265:
+  description: 'Text CC: [04 XX XX]'
+  name: CC_04
   size: 72
   type: assembly
   labels:
     17035: UNKNOWN0
     17067: UNKNOWN1
 0xC142AD:
+  description: 'Text CC: [05 XX XX]'
+  name: CC_05
   size: 72
   type: assembly
   labels:
     17107: UNKNOWN0
     17139: UNKNOWN1
 0xC142F5:
+  description: 'Text CC: [06 XX XX YY YY YY 00]'
+  name: CC_06
   size: 106
   type: assembly
   labels:
@@ -5872,6 +5890,8 @@
     17214: UNKNOWN1
     17245: UNKNOWN2
 0xC1435F:
+  description: 'Text CC: [07 XX XX]'
+  name: CC_07
   size: 89
   type: assembly
   labels:
@@ -5879,15 +5899,23 @@
     17320: UNKNOWN1
     17334: UNKNOWN2
 0xC143B8:
+  description: 'Text CC: [1C 08 XX]'
+  name: CC_07
   size: 10
   type: assembly
 0xC143C2:
+  description: 'Text CC: [18 01 XX]'
+  name: CC_18_01
   size: 10
   type: assembly
 0xC143CC:
+  description: 'Text CC: [18 03 XX]'
+  name: CC_18_03
   size: 10
   type: assembly
 0xC143D6:
+  description: 'Text CC: [08 XX XX XX 00]'
+  name: CC_08
   size: 205
   type: assembly
   labels:
@@ -5896,6 +5924,8 @@
     17415: UNKNOWN2
     17569: UNKNOWN3
 0xC144A3:
+  description: 'Text CC: [1F 52 XX]'
+  name: CC_1F_52
   size: 102
   type: assembly
   labels:
@@ -5903,6 +5933,8 @@
     17657: UNKNOWN1
     17668: UNKNOWN2
 0xC14509:
+  description: 'Text CC: [18 05 XX YY]'
+  name: CC_18_05
   size: 79
   type: assembly
   labels:
@@ -5913,65 +5945,87 @@
     17747: UNKNOWN4
     17750: UNKNOWN5
 0xC14558:
+  description: 'Text CC: [0B XX]'
+  name: CC_0B
   size: 57
   type: assembly
   labels:
     17783: UNKNOWN0
     17793: UNKNOWN1
 0xC14591:
+  description: 'Text CC: [0C XX]'
+  name: CC_0C
   size: 57
   type: assembly
   labels:
     17840: UNKNOWN0
     17850: UNKNOWN1
 0xC145CA:
+  description: 'Text CC: [1C 07 XX]'
+  name: CC_1C_07
   size: 37
   type: assembly
   labels:
     17884: UNKNOWN0
     17889: UNKNOWN1
 0xC145EF:
+  description: 'Text CC: [0D XX]'
+  name: CC_0D
   size: 43
   type: assembly
   labels:
     17927: UNKNOWN0
     17930: UNKNOWN1
 0xC1461A:
+  description: 'Text CC: [0E XX]'
+  name: CC_0E
   size: 33
   type: assembly
   labels:
     17970: UNKNOWN0
 0xC1463B:
+  description: 'Text CC: [1A 00 WW WW WW WW XX XX XX XX YY YY YY YY ZZ ZZ ZZ ZZ]'
+  name: CC_1A_00
   size: 66
   type: assembly
   labels:
     18016: UNKNOWN0
     18043: UNKNOWN1
 0xC1467D:
+  description: 'Text CC: [1A 01 WW WW WW WW XX XX XX XX YY YY YY YY ZZ ZZ ZZ ZZ]'
+  name: CC_1A_01
   size: 66
   type: assembly
   labels:
     18082: UNKNOWN0
     18109: UNKNOWN1
 0xC146BF:
+  description: 'Text CC: [1C 05 XX]'
+  name: CC_1C_05
   size: 31
   type: assembly
   labels:
     18129: UNKNOWN0
     18134: UNKNOWN1
 0xC146DE:
+  description: 'Text CC: [1C 06 XX]'
+  name: CC_1C_06
   size: 69
   type: assembly
   labels:
     18162: UNKNOWN0
     18169: UNKNOWN1
 0xC14723:
+  description: 'Text CC: [19 10 XX]'
+  name: CC_19_10
   size: 46
   type: assembly
   labels:
     18229: UNKNOWN0
     18234: UNKNOWN1
 0xC14751:
+  description: 'Text CC: [1F 00 XX YY]'
+  name: CC_1F_00
   size: 79
   type: assembly
   labels:
@@ -5982,21 +6036,29 @@
     18318: UNKNOWN4
     18334: UNKNOWN5
 0xC147A0:
+  description: 'Text CC: [1F 01 XX]'
+  name: CC_1F_01
   size: 11
   type: assembly
 0xC147AB:
+  description: 'Text CC: [1F 02 XX]'
+  name: CC_1F_02
   size: 33
   type: assembly
   labels:
     18366: UNKNOWN0
     18369: UNKNOWN1
 0xC147CC:
+  description: 'Text CC: [19 11 XX]'
+  name: CC_19_11
   size: 77
   type: assembly
   labels:
     18398: UNKNOWN0
     18403: UNKNOWN1
 0xC14819:
+  description: 'Text CC: [19 28 XX]'
+  name: CC_19_28
   size: 116
   type: assembly
   labels:
@@ -6004,18 +6066,24 @@
     18549: UNKNOWN1
     18557: UNKNOWN2
 0xC1488D:
+  description: 'Text CC: [1C 03 XX]'
+  name: CC_1C_03
   size: 31
   type: assembly
   labels:
     18591: UNKNOWN0
     18596: UNKNOWN1
 0xC148AC:
+  description: 'Text CC: [1D 02 XX]'
+  name: CC_1D_02
   size: 61
   type: assembly
   labels:
     18638: UNKNOWN0
     18649: UNKNOWN1
 0xC148E9:
+  description: 'Text CC: [1D 08 XX XX]'
+  name: CC_1D_08
   size: 97
   type: assembly
   labels:
@@ -6024,6 +6092,8 @@
     18734: UNKNOWN2
     18760: UNKNOWN3
 0xC1494A:
+  description: 'Text CC: [1D 09 XX XX]'
+  name: CC_1D_09
   size: 108
   type: assembly
   labels:
@@ -6033,6 +6103,8 @@
     18854: UNKNOWN3
     18868: UNKNOWN4
 0xC149B6:
+  description: 'Text CC: [1E 00 XX YY]'
+  name: CC_1E_00
   size: 77
   type: assembly
   labels:
@@ -6043,6 +6115,8 @@
     18934: UNKNOWN4
     18945: UNKNOWN5
 0xC14A03:
+  description: 'Text CC: [1E 01 XX YY]'
+  name: CC_1E_01
   size: 77
   type: assembly
   labels:
@@ -6053,6 +6127,8 @@
     19011: UNKNOWN4
     19022: UNKNOWN5
 0xC14A50:
+  description: 'Text CC: [1E 02 XX YY]'
+  name: CC_1E_02
   size: 77
   type: assembly
   labels:
@@ -6063,6 +6139,8 @@
     19088: UNKNOWN4
     19099: UNKNOWN5
 0xC14A9D:
+  description: 'Text CC: [1E 03 XX YY]'
+  name: CC_1E_03
   size: 77
   type: assembly
   labels:
@@ -6073,6 +6151,8 @@
     19165: UNKNOWN4
     19176: UNKNOWN5
 0xC14AEA:
+  description: 'Text CC: [1E 04 XX YY]'
+  name: CC_1E_04
   size: 77
   type: assembly
   labels:
@@ -6083,6 +6163,8 @@
     19242: UNKNOWN4
     19253: UNKNOWN5
 0xC14B37:
+  description: 'Text CC: [1E 05 XX YY]'
+  name: CC_1E_05
   size: 77
   type: assembly
   labels:
@@ -6093,6 +6175,8 @@
     19319: UNKNOWN4
     19330: UNKNOWN5
 0xC14B84:
+  description: 'Text CC: [1E 06 XX YY]'
+  name: CC_1E_06
   size: 77
   type: assembly
   labels:
@@ -6103,6 +6187,8 @@
     19396: UNKNOWN4
     19407: UNKNOWN5
 0xC14BD1:
+  description: 'Text CC: [1E 07 XX YY]'
+  name: CC_1E_07
   size: 77
   type: assembly
   labels:
@@ -6113,6 +6199,8 @@
     19473: UNKNOWN4
     19484: UNKNOWN5
 0xC14C1E:
+  description: 'Text CC: [1D 00 XX YY]'
+  name: CC_1D_00
   size: 104
   type: assembly
   labels:
@@ -6124,6 +6212,8 @@
     19564: UNKNOWN5
     19588: UNKNOWN6
 0xC14C86:
+  description: 'Text CC: [1D 01 XX YY]'
+  name: CC_1D_01
   size: 104
   type: assembly
   labels:
@@ -6135,6 +6225,8 @@
     19668: UNKNOWN5
     19692: UNKNOWN6
 0xC14CEE:
+  description: 'Text CC: [1D 03 XX]'
+  name: CC_1D_03
   size: 54
   type: assembly
   labels:
@@ -6142,6 +6234,8 @@
     19717: UNKNOWN1
     19732: UNKNOWN2
 0xC14D24:
+  description: 'Text CC: [1D 04 XX YY]'
+  name: CC_1D_04
   size: 111
   type: assembly
   labels:
@@ -6154,6 +6248,8 @@
     19843: UNKNOWN6
     19857: UNKNOWN7
 0xC14D93:
+  description: 'Text CC: [1D 05 XX YY]'
+  name: CC_1D_05
   size: 104
   type: assembly
   labels:
@@ -6165,6 +6261,8 @@
     19937: UNKNOWN5
     19961: UNKNOWN6
 0xC14DFB:
+  description: 'Text CC: [1F 20 XX YY]'
+  name: CC_1F_20
   size: 145
   type: assembly
   labels:
@@ -6177,33 +6275,45 @@
     20081: UNKNOWN6
     20106: UNKNOWN7
 0xC14E8C:
+  description: 'Text CC: [1F 21 XX]'
+  name: CC_1F_21
   size: 31
   type: assembly
   labels:
     20126: UNKNOWN0
     20131: UNKNOWN1
 0xC14EAB:
+  description: 'Text CC: [10 XX]'
+  name: CC_10
   size: 10
   type: assembly
 0xC14EB5:
+  description: 'Text CC: [1A 06 XX]'
+  name: CC_1A_06
   size: 67
   type: assembly
   labels:
     20182: UNKNOWN0
     20187: UNKNOWN1
 0xC14EF8:
+  description: 'Text CC: [1D 0A XX]'
+  name: CC_1D_0A
   size: 59
   type: assembly
   labels:
     20234: UNKNOWN0
     20239: UNKNOWN1
 0xC14F33:
+  description: 'Text CC: [1D 0B XX]'
+  name: CC_1D_0B
   size: 60
   type: assembly
   labels:
     20293: UNKNOWN0
     20298: UNKNOWN1
 0xC14F6F:
+  description: 'Text CC: [1F 81 XX YY]'
+  name: CC_1F_81
   size: 104
   type: assembly
   labels:
@@ -6215,6 +6325,8 @@
     20413: UNKNOWN5
     20437: UNKNOWN6
 0xC14FD7:
+  description: 'Text CC: [1C 02 XX]'
+  name: CC_1C_02
   size: 48
   type: assembly
   labels:
@@ -6223,6 +6335,8 @@
     20479: UNKNOWN2
     20482: UNKNOWN3
 0xC15007:
+  description: 'Text CC: [19 16 XX YY]'
+  name: CC_19_16
   size: 104
   type: assembly
   labels:
@@ -6234,6 +6348,8 @@
     20565: UNKNOWN5
     20589: UNKNOWN6
 0xC1506F:
+  description: 'Text CC: [19 05 XX YY YY]'
+  name: CC_19_05
   size: 117
   type: assembly
   labels:
@@ -6246,6 +6362,8 @@
     20680: UNKNOWN6
     20706: UNKNOWN7
 0xC150E4:
+  description: 'Text CC: [1D 0D XX YY YY]'
+  name: CC_1D_0D
   size: 135
   type: assembly
   labels:
@@ -6259,6 +6377,8 @@
     20827: UNKNOWN7
     20841: UNKNOWN8
 0xC1516B:
+  description: 'Text CC: [1C 14 XX]'
+  name: CC_1C_14
   size: 145
   type: assembly
   labels:
@@ -6271,6 +6391,8 @@
     20965: UNKNOWN6
     20968: UNKNOWN7
 0xC151FC:
+  description: 'Text CC: [1C 15 XX]'
+  name: CC_1C_15
   size: 145
   type: assembly
   labels:
@@ -6283,6 +6405,8 @@
     21110: UNKNOWN6
     21113: UNKNOWN7
 0xC1528D:
+  description: 'Text CC: [18 07 XX XX XX XX YY]'
+  name: CC_18_07
   size: 247
   type: assembly
   labels:
@@ -6298,12 +6422,16 @@
     21364: UNKNOWN9
     21378: UNKNOWN10
 0xC15384:
+  description: 'Text CC: [19 18 XX]'
+  name: CC_19_18
   size: 43
   type: assembly
   labels:
     21398: UNKNOWN0
     21403: UNKNOWN1
 0xC153AF:
+  description: 'Text CC: [1C 0A XX XX XX XX]'
+  name: CC_1C_0A
   size: 229
   type: assembly
   labels:
@@ -6314,9 +6442,13 @@
     21636: UNKNOWN4
     21650: UNKNOWN5
 0xC15494:
+  description: 'Text CC: [1F 60 XX]'
+  name: CC_1F_60
   size: 10
   type: assembly
 0xC1549E:
+  description: 'Text CC: [1A 05 XX YY]'
+  name: CC_1A_05
   size: 139
   type: assembly
   labels:
@@ -6328,12 +6460,18 @@
     21791: UNKNOWN5
     21799: UNKNOWN6
 0xC15529:
+  description: 'Text CC: [18 08 XX]'
+  name: CC_18_08
   size: 37
   type: assembly
 0xC1554E:
+  description: 'Text CC: [18 09 XX]'
+  name: CC_18_09
   size: 37
   type: assembly
 0xC15573:
+  description: 'Text CC: [1C 0B XX XX XX XX]'
+  name: CC_1C_0B
   size: 230
   type: assembly
   labels:
@@ -6344,6 +6482,8 @@
     22088: UNKNOWN4
     22103: UNKNOWN5
 0xC15659:
+  description: 'Text CC: [1D 0E XX YY]'
+  name: CC_1D_0E
   size: 130
   type: assembly
   labels:
@@ -6355,6 +6495,8 @@
     22183: UNKNOWN5
     22233: UNKNOWN6
 0xC156DB:
+  description: 'Text CC: [1D 0F XX XX]'
+  name: CC_1D_0F
   size: 130
   type: assembly
   labels:
@@ -6367,6 +6509,8 @@
     22312: UNKNOWN6
     22363: UNKNOWN7
 0xC1575D:
+  description: 'Text CC: [1D 10 XX XX]'
+  name: CC_1D_10
   size: 112
   type: assembly
   labels:
@@ -6380,6 +6524,8 @@
     22461: UNKNOWN7
     22475: UNKNOWN8
 0xC157CD:
+  description: 'Text CC: [1D 11 XX XX]'
+  name: CC_1D_11
   size: 112
   type: assembly
   labels:
@@ -6392,6 +6538,8 @@
     22555: UNKNOWN6
     22587: UNKNOWN7
 0xC1583D:
+  description: 'Text CC: [1F 83 XX YY]'
+  name: CC_1F_83
   size: 104
   type: assembly
   labels:
@@ -6404,6 +6552,8 @@
     22667: UNKNOWN6
     22691: UNKNOWN7
 0xC158A5:
+  description: 'Text CC: [1D 12 XX XX]'
+  name: CC_1D_12
   size: 89
   type: assembly
   labels:
@@ -6416,6 +6566,8 @@
     22771: UNKNOWN6
     22780: UNKNOWN7
 0xC158FE:
+  description: 'Text CC: [1D 13 XX XX]'
+  name: CC_1D_13
   size: 129
   type: assembly
   labels:
@@ -6427,6 +6579,8 @@
     22860: UNKNOWN5
     22909: UNKNOWN6
 0xC1597F:
+  description: 'Text CC: [19 19 XX YY]'
+  name: CC_19_19
   size: 122
   type: assembly
   labels:
@@ -6439,6 +6593,8 @@
     22989: UNKNOWN6
     23031: UNKNOWN7
 0xC159F9:
+  description: 'Text CC: [1D 14 XX XX XX XX]'
+  name: CC_1D_14
   size: 277
   type: assembly
   labels:
@@ -6451,12 +6607,16 @@
     23294: UNKNOWN6
     23308: UNKNOWN7
 0xC15B0E:
+  description: 'Text CC: [19 1A XX]'
+  name: CC_19_1A
   size: 56
   type: assembly
   labels:
     23328: UNKNOWN0
     23333: UNKNOWN1
 0xC15B46:
+  description: 'Text CC: [18 0D XX YY]'
+  name: CC_18_0D
   size: 97
   type: assembly
   labels:
@@ -6470,12 +6630,16 @@
     23458: UNKNOWN7
     23461: UNKNOWN8
 0xC15BA7:
+  description: 'Text CC: [1C 0C XX]'
+  name: CC_1C_0C
   size: 35
   type: assembly
   labels:
     23481: UNKNOWN0
     23486: UNKNOWN1
 0xC15BCA:
+  description: 'Text CC: [1D 15 XX XX]'
+  name: CC_1D_15
   size: 108
   type: assembly
   labels:
@@ -6483,9 +6647,13 @@
     23571: UNKNOWN1
     23604: UNKNOWN2
 0xC15C36:
+  description: 'Text CC: [19 1B XX]'
+  name: CC_19_1B
   size: 34
   type: assembly
 0xC15C58:
+  description: 'Text CC: [1F 71 XX YY]'
+  name: CC_1F_71
   size: 45
   type: assembly
   labels:
@@ -6494,6 +6662,8 @@
     23676: UNKNOWN2
     23684: UNKNOWN3
 0xC15C85:
+  description: 'Text CC: [1D 06 XX XX XX XX]'
+  name: CC_1D_06
   size: 230
   type: assembly
   labels:
@@ -6504,6 +6674,8 @@
     23898: UNKNOWN4
     23913: UNKNOWN5
 0xC15D6B:
+  description: 'Text CC: [1D 07 XX XX XX XX]'
+  name: CC_1D_07
   size: 241
   type: assembly
   labels:
@@ -6514,6 +6686,8 @@
     24128: UNKNOWN4
     24154: UNKNOWN5
 0xC15E5C:
+  description: 'Text CC: [1D 17 XX XX XX XX]'
+  name: CC_1D_17
   size: 277
   type: assembly
   labels:
@@ -6526,12 +6700,16 @@
     24417: UNKNOWN6
     24431: UNKNOWN7
 0xC15F71:
+  description: 'Text CC: [1F 11 XX]'
+  name: CC_1F_11
   size: 32
   type: assembly
   labels:
     24451: UNKNOWN0
     24456: UNKNOWN1
 0xC15F91:
+  description: 'Text CC: [1F 12 XX]'
+  name: CC_1F_12
   size: 32
   type: assembly
   labels:
@@ -6546,6 +6724,8 @@
     24558: UNKNOWN2
     24563: UNKNOWN3
 0xC15FF7:
+  description: 'Text CC: [19 1C XX YY]'
+  name: CC_19_1C
   size: 137
   type: assembly
   labels:
@@ -6560,6 +6740,8 @@
     24692: UNKNOWN8
     24702: UNKNOWN9
 0xC16080:
+  description: 'Text CC: [19 1D XX YY]'
+  name: CC_19_1D
   size: 164
   type: assembly
   labels:
@@ -6571,18 +6753,24 @@
     24861: UNKNOWN5
     24866: UNKNOWN6
 0xC16124:
+  description: 'Text CC: [1D 18 XX]'
+  name: CC_1D_18
   size: 31
   type: assembly
   labels:
     24886: UNKNOWN0
     24891: UNKNOWN1
 0xC16143:
+  description: 'Text CC: [19 21 XX]'
+  name: CC_19_21
   size: 47
   type: assembly
   labels:
     24917: UNKNOWN0
     24922: UNKNOWN1
 0xC16172:
+  description: 'Text CC: [1D 19 XX]'
+  name: CC_1D_19
   size: 95
   type: assembly
   labels:
@@ -6591,12 +6779,16 @@
     25014: UNKNOWN2
     25025: UNKNOWN3
 0xC161D1:
+  description: 'Text CC: [1C 12 XX]'
+  name: CC_1C_12
   size: 31
   type: assembly
   labels:
     25059: UNKNOWN0
     25064: UNKNOWN1
 0xC161F0:
+  description: 'Text CC: [1D 21 XX]'
+  name: CC_1D_21
   size: 47
   type: assembly
   labels:
@@ -6611,6 +6803,8 @@
     25166: UNKNOWN2
     25350: UNKNOWN3
 0xC16308:
+  description: 'Text CC: [1F C0 XX YY YY YY 00]'
+  name: CC_1F_C0
   size: 159
   type: assembly
   labels:
@@ -6618,6 +6812,8 @@
     25476: UNKNOWN1
     25509: UNKNOWN2
 0xC163A7:
+  description: 'Text CC: [1F D0 XX]'
+  name: CC_1F_D0
   size: 86
   type: assembly
   labels:
@@ -6626,6 +6822,8 @@
     25553: UNKNOWN2
     25563: UNKNOWN3
 0xC163FD:
+  description: 'Text CC: [1F 13 XX YY]'
+  name: CC_1F_13
   size: 113
   type: assembly
   labels:
@@ -6638,12 +6836,16 @@
     25692: UNKNOWN6
     25708: UNKNOWN7
 0xC1646E:
+  description: 'Text CC: [1F 14 XX]'
+  name: CC_1F_14
   size: 34
   type: assembly
   labels:
     25729: UNKNOWN0
     25732: UNKNOWN1
 0xC16490:
+  description: 'Text CC: [1F 16 XX XX YY]'
+  name: CC_1F_16
   size: 121
   type: assembly
   labels:
@@ -6656,6 +6858,8 @@
     25850: UNKNOWN6
     25863: UNKNOWN7
 0xC16509:
+  description: 'Text CC: [1F 17 XX XX YY YY ZZ]'
+  name: CC_1F_17
   size: 121
   type: assembly
   labels:
@@ -6664,6 +6868,8 @@
     25912: UNKNOWN2
     25984: UNKNOWN3
 0xC16582:
+  description: 'Text CC: [1F 18 XX XX XX XX XX XX XX]'
+  name: CC_1F_18
   size: 40
   type: assembly
   labels:
@@ -6672,6 +6878,8 @@
     26022: UNKNOWN2
     26025: UNKNOWN3
 0xC165AA:
+  description: 'Text CC: [1F 19 XX XX XX XX XX XX XX]'
+  name: CC_1F_19
   size: 40
   type: assembly
   labels:
@@ -6680,6 +6888,8 @@
     26062: UNKNOWN2
     26065: UNKNOWN3
 0xC165D2:
+  description: 'Text CC: [1F 1A XX XX YY]'
+  name: CC_1F_1A
   size: 88
   type: assembly
   labels:
@@ -6688,12 +6898,16 @@
     26112: UNKNOWN2
     26152: UNKNOWN3
 0xC1662A:
+  description: 'Text CC: [1F 1B XX XX]'
+  name: CC_1F_1B
   size: 67
   type: assembly
   labels:
     26192: UNKNOWN0
     26219: UNKNOWN1
 0xC1666D:
+  description: 'Text CC: [1F 1C XX YY]'
+  name: CC_1F_1C
   size: 112
   type: assembly
   labels:
@@ -6706,12 +6920,16 @@
     26316: UNKNOWN6
     26331: UNKNOWN7
 0xC166DD:
+  description: 'Text CC: [1F 1D XX]'
+  name: CC_1F_1D
   size: 33
   type: assembly
   labels:
     26352: UNKNOWN0
     26355: UNKNOWN1
 0xC166FE:
+  description: 'Text CC: [1F E1 XX YY ZZ]'
+  name: CC_1F_E1
   size: 70
   type: assembly
   labels:
@@ -6720,6 +6938,8 @@
     26410: UNKNOWN2
     26434: UNKNOWN3
 0xC16744:
+  description: 'Text CC: [1F 15 XX XX YY YY ZZ]'
+  name: CC_1F_15
   size: 146
   type: assembly
   labels:
@@ -6730,6 +6950,8 @@
     26577: UNKNOWN4
     26580: UNKNOWN5
 0xC167D6:
+  description: 'Text CC: [1F 1E XX XX YY]'
+  name: CC_1F_1E
   size: 101
   type: assembly
   labels:
@@ -6738,6 +6960,8 @@
     26629: UNKNOWN2
     26681: UNKNOWN3
 0xC1683B:
+  description: 'Text CC: [1F 1F XX XX YY]'
+  name: CC_1F_1F
   size: 101
   type: assembly
   labels:
@@ -6746,6 +6970,8 @@
     26730: UNKNOWN2
     26782: UNKNOWN3
 0xC168A0:
+  description: 'Text CC: [19 22 XX XX YY YY]'
+  name: CC_19_22
   size: 167
   type: assembly
   labels:
@@ -6758,6 +6984,8 @@
     26909: UNKNOWN6
     26949: UNKNOWN7
 0xC16947:
+  description: 'Text CC: [19 23 XX XX YY YY ZZ]'
+  name: CC_19_23
   size: 176
   type: assembly
   labels:
@@ -6770,9 +6998,13 @@
     27088: UNKNOWN6
     27125: UNKNOWN7
 0xC169F7:
+  description: 'Text CC: [1F 62 XX]'
+  name: CC_1F_62
   size: 10
   type: assembly
 0xC16A01:
+  description: 'Text CC: [1E 08 XX YY]'
+  name: CC_1E_08
   size: 122
   type: assembly
   labels:
@@ -6786,6 +7018,8 @@
     27241: UNKNOWN7
     27257: UNKNOWN8
 0xC16A7B:
+  description: 'Text CC: [19 24 XX XX YY YY ZZ]'
+  name: CC_19_24
   size: 176
   type: assembly
   labels:
@@ -6798,6 +7032,8 @@
     27396: UNKNOWN6
     27433: UNKNOWN7
 0xC16B2B:
+  description: 'Text CC: [1F E4 XX XX YY]'
+  name: CC_1F_E4
   size: 121
   type: assembly
   labels:
@@ -6810,36 +7046,50 @@
     27541: UNKNOWN6
     27554: UNKNOWN7
 0xC16BA4:
+  description: 'Text CC: [1F E5 XX]'
+  name: CC_1F_E5
   size: 11
   type: assembly
 0xC16BAF:
+  description: 'Text CC: [1F E6 XX XX]'
+  name: CC_1F_E6
   size: 67
   type: assembly
   labels:
     27605: UNKNOWN0
     27632: UNKNOWN1
 0xC16BF2:
+  description: 'Text CC: [1F E7 XX XX]'
+  name: CC_1F_E7
   size: 67
   type: assembly
   labels:
     27672: UNKNOWN0
     27699: UNKNOWN1
 0xC16C35:
+  description: 'Text CC: [1F E8 XX]'
+  name: CC_1F_E8
   size: 11
   type: assembly
 0xC16C40:
+  description: 'Text CC: [1F E9 XX XX]'
+  name: CC_1F_E9
   size: 67
   type: assembly
   labels:
     27750: UNKNOWN0
     27777: UNKNOWN1
 0xC16C83:
+  description: 'Text CC: [1F EA XX XX]'
+  name: CC_1F_EA
   size: 67
   type: assembly
   labels:
     27817: UNKNOWN0
     27844: UNKNOWN1
 0xC16CC6:
+  description: 'Text CC: [1F EB XX YY]'
+  name: CC_1F_EB
   size: 78
   type: assembly
   labels:
@@ -6848,6 +7098,8 @@
     27892: UNKNOWN2
     27922: UNKNOWN3
 0xC16D14:
+  description: 'Text CC: [1F EC XX YY]'
+  name: CC_1F_EC
   size: 78
   type: assembly
   labels:
@@ -6856,18 +7108,24 @@
     27970: UNKNOWN2
     28000: UNKNOWN3
 0xC16D62:
+  description: 'Text CC: [1F EE XX XX]'
+  name: CC_1F_EE
   size: 67
   type: assembly
   labels:
     28040: UNKNOWN0
     28067: UNKNOWN1
 0xC16DA5:
+  description: 'Text CC: [1F EF XX XX]'
+  name: CC_1F_EF
   size: 67
   type: assembly
   labels:
     28107: UNKNOWN0
     28134: UNKNOWN1
 0xC16DE8:
+  description: 'Text CC: [1F 63 XX XX XX 00]'
+  name: CC_1F_63
   size: 215
   type: assembly
   labels:
@@ -6876,6 +7134,8 @@
     28185: UNKNOWN2
     28349: UNKNOWN3
 0xC16EBF:
+  description: 'Text CC: [1F F1 XX XX YY YY]'
+  name: CC_1F_F1
   size: 112
   type: assembly
   labels:
@@ -6884,6 +7144,8 @@
     28399: UNKNOWN2
     28461: UNKNOWN3
 0xC16F2F:
+  description: 'Text CC: [1F F2 XX XX YY YY]'
+  name: CC_1F_F2
   size: 112
   type: assembly
   labels:
@@ -6892,12 +7154,16 @@
     28511: UNKNOWN2
     28573: UNKNOWN3
 0xC16F9F:
+  description: 'Text CC: [19 25 XX]'
+  name: CC_19_25
   size: 50
   type: assembly
   labels:
     28594: UNKNOWN0
     28597: UNKNOWN1
 0xC16FD1:
+  description: 'Text CC: [1F 23 XX XX]'
+  name: CC_1F_23
   size: 102
   type: assembly
   labels:
@@ -6907,12 +7173,16 @@
     28711: UNKNOWN3
     28725: UNKNOWN4
 0xC17037:
+  description: 'Text CC: [19 26 XX]'
+  name: CC_19_26
   size: 33
   type: assembly
   labels:
     28746: UNKNOWN0
     28749: UNKNOWN1
 0xC17058:
+  description: 'Text CC: [1D 0C XX XX]'
+  name: CC_1D_0C
   size: 196
   type: assembly
   labels:
@@ -6930,6 +7200,8 @@
     28940: UNKNOWN11
     28954: UNKNOWN12
 0xC1711C:
+  description: 'Text CC: [1F 66 XX YY ZZ ZZ ZZ 00]'
+  name: CC_1F_66
   size: 279
   type: assembly
   labels:
@@ -6942,40 +7214,54 @@
     29057: UNKNOWN6
     29233: UNKNOWN7
 0xC17233:
+  description: 'Text CC: [1F 67 XX]'
+  name: CC_1F_67
   size: 33
   type: assembly
   labels:
     29254: UNKNOWN0
     29257: UNKNOWN1
 0xC17254:
+  description: 'Text CC: [1F 04 XX]'
+  name: CC_1F_04
   size: 32
   type: assembly
   labels:
     29287: UNKNOWN0
     29290: UNKNOWN1
 0xC17274:
+  description: 'Text CC: [1D 24 XX]'
+  name: CC_1D_24
   size: 72
   type: assembly
   labels:
     29367: UNKNOWN0
 0xC172BC:
+  description: 'Text CC: [1F 40 XX]'
+  name: CC_1F_40
   size: 30
   type: assembly
   labels:
     29398: UNKNOWN0
     29401: UNKNOWN1
 0xC172DA:
+  description: 'Text CC: [1F 41 XX]'
+  name: CC_1F_41
   size: 42
   type: assembly
   labels:
     29428: UNKNOWN0
 0xC17304:
+  description: 'Text CC: [1F D2 XX]'
+  name: CC_1F_D2
   size: 33
   type: assembly
   labels:
     29463: UNKNOWN0
     29466: UNKNOWN1
 0xC17325:
+  description: 'Text CC: [1F F3 XX XX YY]'
+  name: CC_1F_F3
   size: 88
   type: assembly
   labels:
@@ -6984,12 +7270,16 @@
     29523: UNKNOWN2
     29563: UNKNOWN3
 0xC1737D:
+  description: 'Text CC: [1F F4 XX]'
+  name: CC_1F_F4
   size: 67
   type: assembly
   labels:
     29603: UNKNOWN0
     29630: UNKNOWN1
 0xC173C0:
+  description: 'Text CC: [1C 13 XX YY]'
+  name: CC_1C_13
   size: 95
   type: assembly
   labels:
@@ -7000,17 +7290,21 @@
     29722: UNKNOWN4
     29725: UNKNOWN5
 0xC1741F:
+  description: 'Text CC: [1F 07 XX]'
+  name: CC_1F_07
   size: 33
   type: assembly
   labels:
     29746: UNKNOWN0
     29749: UNKNOWN1
 0xC17440:
-  description: '[1F D3 XX]'
+  description: 'Text CC: [1F D3 XX]'
   name: CC_1F_D3
   size: 11
   type: assembly
 0xC1744B:
+  description: 'Text CC: [1E 09 XX YY YY YY]'
+  name: CC_1E_09
   size: 216
   type: assembly
   labels:
@@ -7019,6 +7313,8 @@
     29820: UNKNOWN2
     29985: UNKNOWN3
 0xC17523:
+  description: 'Text CC: [1E 0A XX YY]'
+  name: CC_1E_0A
   size: 97
   type: assembly
   labels:
@@ -7027,6 +7323,8 @@
     30035: UNKNOWN2
     30082: UNKNOWN3
 0xC17584:
+  description: 'Text CC: [1E 0B XX YY]'
+  name: CC_1E_0B
   size: 97
   type: assembly
   labels:
@@ -7035,6 +7333,8 @@
     30132: UNKNOWN2
     30179: UNKNOWN3
 0xC175E5:
+  description: 'Text CC: [1E 0C XX YY]'
+  name: CC_1E_0C
   size: 97
   type: assembly
   labels:
@@ -7043,6 +7343,8 @@
     30229: UNKNOWN2
     30276: UNKNOWN3
 0xC17646:
+  description: 'Text CC: [1E 0D XX YY]'
+  name: CC_1E_0D
   size: 97
   type: assembly
   labels:
@@ -7051,6 +7353,8 @@
     30326: UNKNOWN2
     30373: UNKNOWN3
 0xC176A7:
+  description: 'Text CC: [1E 0E XX YY]'
+  name: CC_1E_0E
   size: 97
   type: assembly
   labels:
@@ -7059,6 +7363,8 @@
     30423: UNKNOWN2
     30470: UNKNOWN3
 0xC17708:
+  description: 'Text CC: [1D 23 XX]'
+  name: CC_1D_23
   size: 98
   type: assembly
   labels:
@@ -7069,6 +7375,8 @@
     30547: UNKNOWN4
     30550: UNKNOWN5
 0xC1776A:
+  description: 'Text CC: [19 27 XX]'
+  name: CC_19_27
   size: 44
   type: assembly
   labels:
@@ -7091,6 +7399,8 @@
     30949: UNKNOWN2
     30965: UNKNOWN3
 0xC178F7:
+  description: 'Text CC: [19 02]'
+  name: CC_19_02
   size: 20
   type: assembly
 0xC1790B:
