@@ -7995,7 +7995,7 @@
   arguments:
     A: Character
     X: Amount/Percentage
-    1: |
+    "Y": |
       if 0, enable percentage mode. if 1, enable amount mode.
   size: 86
   type: assembly
@@ -8010,7 +8010,7 @@
   arguments:
     A: Character
     X: Amount/Percentage
-    1: |
+    "Y": |
       if 0, enable percentage mode. if 1, enable amount mode.
   size: 86
   type: assembly
@@ -8025,7 +8025,7 @@
   arguments:
     A: Character
     X: Amount/Percentage
-    1: |
+    "Y": |
       if 0, enable percentage mode. if 1, enable amount mode.
   size: 86
   type: assembly
@@ -8040,7 +8040,7 @@
   arguments:
     A: Character
     X: Amount/Percentage
-    1: |
+    "Y": |
       if 0, enable percentage mode. if 1, enable amount mode.
   size: 86
   type: assembly
