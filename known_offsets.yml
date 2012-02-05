@@ -9179,17 +9179,21 @@
   size: 11
   type: assembly
 0xC1ECDC:
+  name: CORRUPTION_CHECK
+  description: Checks save file signatures
   size: 127
   type: assembly
   labels:
-    60672: UNKNOWN0
-    60698: UNKNOWN1
-    60723: UNKNOWN2
-    60728: UNKNOWN3
-    60742: UNKNOWN4
-    60744: UNKNOWN5
-    60761: UNKNOWN6
+    60672: LOOP_BEGIN
+    60698: SIGNATURE_DOES_NOT_MATCH
+    60723: SIGNATURE_MATCH
+    60728: LOOP_ENTRY
+    60742: LOOP_BEGIN_BMI
+    60744: BREAK
+    60761: RETURN
 0xC1ED5B:
+  name: FILE_SELECT_MENU
+  description: Select a file!
   size: 803
   type: assembly
   labels:
@@ -9251,6 +9255,8 @@
   labels:
     62391: UNKNOWN0
 0xC1F3C2:
+  name: OPEN_CONFIG_MENU
+  description: Opens the sound, text speed, and text flavour configuration menu
   size: 213
   type: assembly
   labels:
@@ -9291,27 +9297,29 @@
     63470: UNKNOWN3
     63475: UNKNOWN4
 0xC1F805:
+  name: FILE_MENU_LOOP
+  description: Big Loop for file select menu
   size: 1831
   type: assembly
   labels:
     63501: UNKNOWN0
-    63524: UNKNOWN1
-    63554: UNKNOWN2
-    63559: UNKNOWN3
-    63582: UNKNOWN4
-    63592: UNKNOWN5
-    63602: UNKNOWN6
+    63524: VALID_FILE_SELECTED
+    63554: MENU_B_PRESSED
+    63559: MENU_STARTGAME_SELECTED
+    63582: MENU_COPY_SELECTED
+    63592: MENU_DELETE_SELECTED
+    63602: MENU_SETUP_SELECTED
     63606: UNKNOWN7
     63627: UNKNOWN8
     63630: UNKNOWN9
     63650: UNKNOWN10
-    63667: UNKNOWN11
-    63673: UNKNOWN12
+    63667: MENU_OTHER_SELECTED
+    63673: EMPTY_FILE_SELECTED
     63677: UNKNOWN13
     63699: UNKNOWN14
     63702: UNKNOWN15
     63722: UNKNOWN16
-    63739: UNKNOWN17
+    63739: CHANGE_TO_NAMING_SCREEN_MUSIC
     63746: UNKNOWN18
     63759: UNKNOWN19
     63797: UNKNOWN20
@@ -9338,7 +9346,7 @@
     64514: UNKNOWN41
     64536: UNKNOWN42
     64539: UNKNOWN43
-    64730: UNKNOWN44
+    64730: EVERYTHING_OKAY
     64748: UNKNOWN45
     64757: UNKNOWN46
     64771: UNKNOWN47
@@ -16029,8 +16037,14 @@
     49237: UNKNOWN5
     49242: UNKNOWN6
 0xC4C05E:
+  name: FILE_SELECT_TEXT
+  description: File select screen text data
   size: 640
   type: data
+  entries:
+  - name: Text
+    size: 64
+    type: standardtext
 0xC4C2DE:
   size: 385
   type: assembly
