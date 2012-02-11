@@ -3813,8 +3813,8 @@
     47208: UNKNOWN4
     47222: UNKNOWN5
     47250: UNKNOWN6
-    47278: UNKNOWN7
-    47290: UNKNOWN8
+    47278: DEBUG_PAD2_B_HELD
+    47290: DEBUG_PAD2_A_HELD
     47302: NO_DEBUG
     47310: UNKNOWN10
     47318: UNKNOWN11
@@ -16510,6 +16510,8 @@
 0xC4E366:
   size: 3
   type: assembly
+  description: Do Nothing
+  name: DO_NOTHING_C4E366
 0xC4E369:
   size: 369
   type: assembly
