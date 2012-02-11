@@ -28,6 +28,12 @@
 0x7E006F:
   description: Controller 2 button press
   name: PAD_2_PRESS
+0x7E00A7:
+  description: In-game Timer (Low half)
+  name: TIMER_LOW
+0x7E00A9:
+  description: In-game Timer (High half)
+  name: TIMER_HIGH
 0x7E0200:
   description: Current Text Palette
   name: CUR_TEXT_PAL
@@ -386,6 +392,12 @@
 0x7E98B7:
   description: Sound Setting (1 = stereo, 0 = mono)
   name: SOUND_SETTING
+0x7E99C9:
+  description: Temporary storage for In-game Timer Low (1/60ths of a second)
+  name: TIMER_TEMP_LOW
+0x7E99CB:
+  description: Temporary storage for In-game Timer High (1/60ths of a second)
+  name: TIMER_TEMP_HIGH
 0x7E99CD:
   description: Current Text Flavour
 0x7E99CE:
@@ -3804,9 +3816,9 @@
     47302: NO_DEBUG
     47310: UNKNOWN10
     47318: UNKNOWN11
-    47342: UNKNOWN12
-    47364: UNKNOWN13
-    47378: UNKNOWN14
+    47342: NO_OPEN_MENU
+    47364: NO_OPEN_HPPP_DISPLAY
+    47378: NO_OPEN_TOWN_MAP
     47392: UNKNOWN15
     47395: UNKNOWN16
     47404: UNKNOWN17
@@ -7981,6 +7993,9 @@
 0xC18EAD:
   description: Take item from character (one/any)
   name: TAKE_ITEM_FROM_CHARACTER
+  arguments:
+    A: Character (or -1 for all)
+    X: Item to take
   size: 97
   type: assembly
   labels:
@@ -13454,7 +13469,7 @@
   name: WINDOW_POSITION_TABLE
   description: Window sizes and positions
   type: data
-  size: 512
+  size: 424
   entries:
   - name: X Offset
     size: 2
@@ -13464,6 +13479,9 @@
     size: 2
   - name: Height
     size: 2
+0xC3E3F8:
+  type: data
+  size: 0x58
 0xC3E450:
   labels:
     58505: UNKNOWN0
@@ -15452,6 +15470,7 @@
   labels:
     36800: UNKNOWN0
 0xC48FC4:
+  description: Related to timed item transformation?
   size: 298
   type: assembly
   labels:
@@ -18483,6 +18502,8 @@
     2080: UNKNOWN1
     2083: UNKNOWN2
 0xEF0825:
+  name: CHECK_SAVE_CORRUPTION
+  description: Checks if SRAM is corrupt
   size: 106
   type: assembly
   labels:
