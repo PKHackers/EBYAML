@@ -3603,8 +3603,10 @@
   labels:
     43984: UNKNOWN0
 0xC0ABE0:
-  description: Play Sound Effect A
+  description: Play Sound Effect
   name: PLAY_SOUND
+  arguments:
+    A: Sound Effect ID
   size: 44
   type: assembly
   labels:
@@ -4914,6 +4916,8 @@
 0xC104EE:
   description: Create Window
   name: CREATE_WINDOW
+  arguments:
+    A: Window template to spawn
   size: 671
   type: assembly
   labels:
@@ -5099,6 +5103,8 @@
     3831: UNKNOWN1
     3835: UNKNOWN2
 0xC10EFC:
+  description: Displays window title for config menus
+  name: DISPLAY_CONFIG_MENU_TITLE
   size: 68
   type: assembly
   labels:
@@ -9270,8 +9276,8 @@
   labels:
     62391: UNKNOWN0
 0xC1F3C2:
-  name: OPEN_CONFIG_MENU
-  description: Opens the sound, text speed, and text flavour configuration menu
+  name: OPEN_TEXT_SPEED_MENU
+  description: Opens the text speed configuration menu
   size: 213
   type: assembly
   labels:
@@ -9287,6 +9293,8 @@
     62786: UNKNOWN3
     62819: UNKNOWN4
 0xC1F568:
+  name: OPEN_SOUND_MENU
+  description: Opens the sound configuration menu
   size: 174
   type: assembly
   labels:
@@ -9303,6 +9311,8 @@
     63185: UNKNOWN4
     63198: UNKNOWN5
 0xC1F6E3:
+  name: OPEN_FLAVOUR_MENU
+  description: Opens the text flavour configuration menu
   size: 290
   type: assembly
   labels:
@@ -9325,9 +9335,9 @@
     63592: MENU_DELETE_SELECTED
     63602: MENU_SETUP_SELECTED
     63606: UNKNOWN7
-    63627: UNKNOWN8
+    63627: MENU_SETUP_SELECTED2
     63630: UNKNOWN9
-    63650: UNKNOWN10
+    63650: MENU_SETUP_SELECTED3
     63667: MENU_OTHER_SELECTED
     63673: EMPTY_FILE_SELECTED
     63677: UNKNOWN13
@@ -16073,7 +16083,7 @@
   type: data
   entries:
   - name: Text
-    size: 64
+    size: 67
     type: standardtext
 0xC4C2DE:
   size: 385
