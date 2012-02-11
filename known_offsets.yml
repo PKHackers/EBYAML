@@ -8246,8 +8246,10 @@
     40601: UNKNOWN3
     40613: UNKNOWN4
 0xC19EE6:
-  description: Return Item A's main type + 1
+  description: Return the type of an item
   name: GET_ITEM_TYPE
+  argument:
+    A: Item ID
   size: 67
   type: assembly
   labels:
@@ -8826,9 +8828,11 @@
     53464: UNKNOWN2
     53511: UNKNOWN3
 0xC1D109:
-  description: |
-    Level up Character A-1 (silent if X is 0)
+  description: Level up Character
   name: LEVEL_UP_CHAR
+  arguments:
+    X: Silent Mode
+    A: Character to level-up
   size: 1991
   type: assembly
   labels:
@@ -8901,8 +8905,10 @@
     55495: UNKNOWN66
     55502: UNKNOWN67
 0xC1D8D0:
-  description: Sets character A-1 level to 1
-  name: SET_CHAR_LEVEL_ONE
+  description: Resets character level to 1
+  name: RESET_CHAR_LEVEL_ONE
+  arguments:
+    A: Character to reset
   size: 281
   type: assembly
   labels:
@@ -8935,8 +8941,10 @@
   size: 97
   type: assembly
 0xC1DC1C:
-  description: Display In-Battle Text at ($0E+10)
+  description: Display In-Battle Text
   name: DISPLAY_IN_BATTLE_TEXT
+  arguments:
+    $0E: Text Pointer
   size: 74
   type: assembly
   labels:
