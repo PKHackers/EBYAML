@@ -13451,8 +13451,19 @@
   type: data
   size: 16
 0xC3E250:
+  name: WINDOW_POSITION_TABLE
+  description: Window sizes and positions
   type: data
   size: 512
+  entries:
+  - name: X Offset
+    size: 2
+  - name: Y Offset
+    size: 2
+  - name: Width
+    size: 2
+  - name: Height
+    size: 2
 0xC3E450:
   labels:
     58505: UNKNOWN0
