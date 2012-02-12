@@ -18405,6 +18405,8 @@
 0xEF0000:
   size: 82
   type: assembly
+  description: Turn Off Enemy Flashing
+  name: ENEMY_FLASHING_OFF
   labels:
     39: UNKNOWN0
     61: UNKNOWN1
@@ -18412,6 +18414,8 @@
 0xEF0052:
   size: 105
   type: assembly
+  description: Turn On Enemy Flashing
+  name: ENEMY_FLASHING_ON
   labels:
     108: UNKNOWN0
     146: UNKNOWN1
