@@ -13581,7 +13581,8 @@
 0xC3E874:
   type: data
   size: 259
-  description: Debug Mode Commands
+  description: Debug Mode Text
+  name: DEBUG_MODE_TEXT
 0xC3E977:
   description: Inventory Something
   size: 41
@@ -13696,9 +13697,12 @@
 0xC3EF26:
   type: data
   size: 394
+  description: Has PSI category text in it...
 0xC3F0B0:
   type: data
   size: 316
+  description: PSI Target Text
+  name: PSI_TARGET_TEXT
 0xC3F1EC:
   labels:
     61962: UNKNOWN0
@@ -13799,6 +13803,7 @@
 0xC3FB1F:
   type: data
   size: 670
+  description: Has Name Registration text at the start...
 0xC3FDBD:
   type: data
   size: 8
@@ -14172,6 +14177,8 @@
 0xC43550:
   size: 24
   type: data
+  description: Item Use menu
+  name: ITEM_USE_MENU
 0xC43568:
   size: 11
   type: assembly
@@ -14621,6 +14628,8 @@
 0xC45963:
   size: 55
   type: data
+  description: Misc. Target Text
+  name: MISC_TARGET_TEXT
 0xC4599A:
   size: 141
   type: assembly
@@ -14630,6 +14639,8 @@
 0xC45A27:
   size: 617
   type: data
+  description: Status/Equip window text
+  name: STATUS_EQUIP_WINDOW_TEXT
 0xC45C90:
   size: 333
   type: assembly
@@ -15300,6 +15311,8 @@
 0xC48037:
   size: 215
   type: data
+  description: Lumine Hall text
+  name: LUMINE_HALL_TEXT
 0xC4810E:
   size: 365
   type: assembly
@@ -15718,6 +15731,8 @@
 0xC49FE1:
   size: 172
   type: data
+  description: Battle Menu Text
+  name: BATTLE_MENU_TEXT
 0xC4A08D:
   type: data
   size: 66
@@ -16549,6 +16564,8 @@
 0xC4E796:
   type: data
   size: 24
+  description: Character guardian text
+  name: CHARACTER_GUARDIAN_TEXT
 0xC4E7AE:
   size: 750
   type: assembly
@@ -17315,6 +17332,7 @@
 0xD57A2E:
   type: data
   size: 128
+  description: Unused Teleport Destination Text?
 0xD57AAE:
   type: data
   size: 186
@@ -18716,6 +18734,8 @@
 0xEF4A40:
   type: data
   size: 22842
+  description: Text Data
+  name: TEXT_DATA_EF4A40
 0xEFA37A:
   type: data
   description: Commands Window Text Strings
