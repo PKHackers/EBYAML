@@ -14425,11 +14425,11 @@
     18783: UNKNOWN5
 0xC44963:
   labels:
-    18815: UNKNOWN0
+    18815: JUMP_TO_RETURN
     18818: UNKNOWN1
     18842: UNKNOWN2
     18989: UNKNOWN3
-    19157: UNKNOWN4
+    19157: RETURN
   size: 372
   type: assembly
 0xC44AD7:
@@ -15308,6 +15308,8 @@
 0xC4800B:
   size: 44
   type: assembly
+  description: Undraws the Flyover text.
+  name: UNDRAW_FLYOVER_TEXT
 0xC48037:
   size: 215
   type: data
