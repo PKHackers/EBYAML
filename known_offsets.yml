@@ -10166,8 +10166,23 @@
   size: 22
   type: assembly
 0xC23109:
+  name: CONSOLATION_ITEM_TABLE
+  description: Table for enemies that offer consolation prizes
   type: data
-  size: 21
+  size: 18
+  entries:
+  - name: Enemy ID
+    size: 1
+  - name: Item IDs
+    type: bytearray
+    size: 7
+  - name: Null
+    size: 1
+0xC2311B:
+  name: MYSTERY_POINTER
+  description: Unknown Pointer
+  type: data
+  size: 3
 0xC2311E:
   labels:
     12636: UNKNOWN0
