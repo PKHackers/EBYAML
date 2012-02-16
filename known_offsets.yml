@@ -10176,7 +10176,7 @@
   - name: Item IDs
     type: bytearray
     size: 7
-  - name: Null
+  - name: "Null"
     size: 1
 0xC2311B:
   name: MYSTERY_POINTER
