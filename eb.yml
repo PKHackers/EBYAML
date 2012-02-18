@@ -9638,6 +9638,8 @@ texttables:
     0x9138: UNKNOWN7
     0x913B: UNKNOWN8
 0xC1913D:
+  name: ESCARGO_EXPRESS_STORE
+  description: Store item in Escargo Express
   size: 70
   type: assembly
   labels:
@@ -9648,6 +9650,8 @@ texttables:
     0x917E: UNKNOWN4
     0x9181: UNKNOWN5
 0xC19183:
+  name: ESCARGO_EXPRESS_MOVE
+  description: Move item to Escargo Express
   size: 45
   type: assembly
   labels:
