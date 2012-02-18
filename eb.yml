@@ -9643,20 +9643,20 @@ texttables:
   size: 70
   type: assembly
   labels:
-    0x914F: UNKNOWN0
-    0x9169: UNKNOWN1
-    0x916E: UNKNOWN2
-    0x917C: UNKNOWN3
-    0x917E: UNKNOWN4
-    0x9181: UNKNOWN5
+    0x914F: LOOP_BEGIN
+    0x9169: ENTRY_FILLED
+    0x916E: LOOP_ENTRY
+    0x917C: CHECKMINUS
+    0x917E: RETURN_ZERO
+    0x9181: RETURN
 0xC19183:
   name: ESCARGO_EXPRESS_MOVE
   description: Move item to Escargo Express
   size: 45
   type: assembly
   labels:
-    0x91AB: UNKNOWN0
-    0x91AE: UNKNOWN1
+    0x91AB: RETURN_ZERO
+    0x91AE: RETURN
 0xC191B0:
   size: 72
   type: assembly
