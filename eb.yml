@@ -1059,684 +1059,512 @@ texttables:
   type: assembly
   name: RESET_VECTOR
   description: Execution Entry Point
-  labels: ~
 0x300000:
   description: SRAM
   name: SRAM
-  labels: ~
 0x306000:
   description: ???
   name: UNKNOWN_SRAM
-  labels: ~
 0x7E0065:
   description: Controller 1 state
   name: PAD_1_STATE
-  labels: ~
 0x7E0067:
   description: Controller 2 state
   name: PAD_2_STATE
-  labels: ~
 0x7E0069:
   description: Controller 1 unknown
   name: PAD_1_UNKNOWN
-  labels: ~
 0x7E006B:
   description: Controller 2 unknown
   name: PAD_2_UNKNOWN
-  labels: ~
 0x7E006D:
   description: Controller 1 button press
   name: PAD_1_PRESS
-  labels: ~
 0x7E006F:
   description: Controller 2 button press
   name: PAD_2_PRESS
-  labels: ~
 0x7E00A7:
   description: In-game Timer (Low half)
   name: TIMER_LOW
-  labels: ~
 0x7E00A9:
   description: In-game Timer (High half)
   name: TIMER_HIGH
-  labels: ~
 0x7E0200:
   description: Current Text Palette
   name: CUR_TEXT_PAL
-  labels: ~
 0x7E0240:
   description: Current Map Palette
   name: CUR_MAP_PAL
-  labels: ~
 0x7E03A0:
   description: Current Party Palette
   name: CUR_PARTY_PAL
-  labels: ~
 0x7E0A62:
   description: Loaded Sprite Movement Codes Table (Are we sure?)
   name: LOADED_SPRITE_MOVEMENT_CODES_TABLE
-  labels: ~
 0x7E0A9E:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_1
-  labels: ~
 0x7E0ADA:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_2
-  labels: ~
 0x7E0B16:
   description: 30x2 table - X position in screen pixel coordinates
   name: SPRITE_SCREEN_X_TABLE
-  labels: ~
 0x7E0B52:
   description: 30x2 table - Y position in screen pixel coordinates
   name: SPRITE_SCREEN_Y_TABLE
-  labels: ~
 0x7E0B8E:
   description: 30x2 table - X position in absolute pixel coordinates
   name: SPRITE_ABS_X_TABLE
-  labels: ~
 0x7E0BCA:
   description: 30x2 table - Y position in absolute pixel coordinates
   name: SPRITE_ABS_Y_TABLE
-  labels: ~
 0x7E0C06:
   description: 30x2 table - Z position in absolute pixel coordinates
   name: SPRITE_ABS_Z_TABLE
-  labels: ~
 0x7E0C42:
   description: 30x2 table - X position fractional component
   name: SPRITE_ABS_X_FRACTION_TABLE
-  labels: ~
 0x7E0C7E:
   description: 30x2 table - Y position fractional component
   name: SPRITE_ABS_Y_FRACTION_TABLE
-  labels: ~
 0x7E0CBA:
   description: 30x2 table - Z position fractional component
   name: SPRITE_ABS_Z_FRACTION_TABLE
-  labels: ~
 0x7E0CF6:
   description: 30x2 table - X delta in pixels
   name: SPRITE_DELTA_X_TABLE
-  labels: ~
 0x7E0D32:
   description: 30x2 table - Y delta in pixels
   name: SPRITE_DELTA_Y_TABLE
-  labels: ~
 0x7E0D6E:
   description: 30x2 table - Z delta in pixels
   name: SPRITE_DELTA_Z_TABLE
-  labels: ~
 0x7E0DAA:
   description: 30x2 table - X delta fractional component
   name: SPRITE_DELTA_X_FRACTION_TABLE
-  labels: ~
 0x7E0DE6:
   description: 30x2 table - Y delta fractional component
   name: SPRITE_DELTA_Y_FRACTION_TABLE
-  labels: ~
 0x7E0E22:
   description: 30x2 table - Z delta fractional component
   name: SPRITE_DELTA_Z_FRACTION_TABLE
-  labels: ~
 0x7E0E5E:
   description: '*** UNKNOWN - 30x2 table - C09AF9 entry 0 - Used by timed events like
     Escargo Express? ***'
   name: UNKNOWN_30x2_TABLE_3
-  labels: ~
 0x7E0E9A:
   description: '*** UNKNOWN - 30x2 table - C09AF9 entry 1 ***'
   name: UNKNOWN_30x2_TABLE_4
-  labels: ~
 0x7E0ED6:
   description: '*** UNKNOWN - 30x2 table - C09AF9 entry 2 ***'
   name: UNKNOWN_30x2_TABLE_5
-  labels: ~
 0x7E0F12:
   description: '*** UNKNOWN - 30x2 table - C09AF9 entry 3 ***'
   name: UNKNOWN_30x2_TABLE_6
-  labels: ~
 0x7E0F4E:
   description: '*** UNKNOWN - 30x2 table - C09AF9 entry 4 ***'
   name: UNKNOWN_30x2_TABLE_7
-  labels: ~
 0x7E0F8A:
   description: '*** UNKNOWN - 30x2 table - C09AF9 entry 5 ***'
   name: UNKNOWN_30x2_TABLE_8
-  labels: ~
 0x7E0FC6:
   description: 30x2 table - C09AF9 entry 6 - X destination in absolute pixel coordinates
   name: UNKNOWN_30x2_TABLE_9
-  labels: ~
 0x7E1002:
   description: 30x2 table - C09AF9 entry 6 - Y destination in absolute pixel coordinates
   name: UNKNOWN_30x2_TABLE_10
-  labels: ~
 0x7E103E:
   description: '*** UNKNOWN - 30x2 table - Sprite-drawing priority, lower numbers
     first? ***'
   name: UNKNOWN_30x2_TABLE_11
-  labels: ~
 0x7E107A:
   description: '*** UNKNOWN - 30x2 table - Low part of a long pointer? ***'
   name: UNKNOWN_30x2_TABLE_12
-  labels: ~
 0x7E10B6:
   description: '*** UNKNOWN - 30x2 table - High part of a long pointer? ***'
   name: UNKNOWN_30x2_TABLE_13
-  labels: ~
 0x7E10F2:
   description: '*** UNKNOWN - 30x2 table - Adjusted by movement codes: [26], [3C],
     [3D], [3E] ***'
   name: UNKNOWN_30x2_TABLE_14
-  labels: ~
 0x7E112E:
   description: '*** UNKNOWN - 30x2 table - Low part of a long pointer ***'
   name: UNKNOWN_30x2_TABLE_15
-  labels: ~
 0x7E116A:
   description: '*** UNKNOWN - 30x2 table - High part of a long pointer ***'
   name: UNKNOWN_30x2_TABLE_16
-  labels: ~
 0x7E11A6:
   description: '*** UNKNOWN - 30x2 table - Short assembly pointer (set by [23] - callback:
     recalc screen coords?) ***'
   name: UNKNOWN_30x2_TABLE_17
-  labels: ~
 0x7E11E2:
   description: '*** UNKNOWN - 30x2 table - Short assembly pointer (set by [22] - see
     C0/A0F6?) ***'
   name: UNKNOWN_30x2_TABLE_18
-  labels: ~
 0x7E121E:
   description: '*** UNKNOWN - 30x2 table - Short assembly pointer (set by [25] - callback:
     atomic motion?) ***'
   name: UNKNOWN_30x2_TABLE_19
-  labels: ~
 0x7E1372:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_20
-  labels: ~
 0x7E13FE:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_21
-  labels: ~
 0x7E148A:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_22
-  labels: ~
 0x7E1516:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_23
-  labels: ~
 0x7E280C:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_23
-  labels: ~
 0x7E289E:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_24
-  labels: ~
 0x7E28DA:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_25
-  labels: ~
 0x7E2916:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_26
-  labels: ~
 0x7E2952:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_27
-  labels: ~
 0x7E298E:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_28
-  labels: ~
 0x7E29CA:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_29
-  labels: ~
 0x7E2A06:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_30
-  labels: ~
 0x7E2A42:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_31
-  labels: ~
 0x7E2A7E:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_32
-  labels: ~
 0x7E2ABA:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_33
-  labels: ~
 0x7E2AF6:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_34
-  labels: ~
 0x7E2B32:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_35
-  labels: ~
 0x7E2B6E:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_36
-  labels: ~
 0x7E2BAA:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_37
-  labels: ~
 0x7E2BCC:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_39
-  labels: ~
 0x7E2BE6:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_38
-  labels: ~
 0x7E2C22:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_40
-  labels: ~
 0x7E2C5E:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_41
-  labels: ~
 0x7E2C9A:
   description: 30x2 table - TPT entry (has another meaning for generated enemies)
     <-- LOOK INTO
   name: LOADED_TPT_ENTRIES
-  labels: ~
 0x7E2CD6:
   description: 30x2 table - Sprite (uses standard out-of-battle sprite listing)
   name: LOADED_TPT_ENTRIES_SPRITES
-  labels: ~
 0x7E2D12:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_42
-  labels: ~
 0x7E2D4E:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_43
-  labels: ~
 0x7E2D8A:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_44
-  labels: ~
 0x7E2DC6:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_45
-  labels: ~
 0x7E2E02:
   description: Unknown 30x2 table.
   name: UNKNOWN_30x2_TABLE_46
-  labels: ~
 0x7E436C:
   description: Debug Flag
   name: DEBUG
-  labels: ~
 0x7E438E:
   description: Current Sector Attributes
   name: CURRENT_SECTOR_ATTRIBUTES
-  labels: ~
 0x7E467E:
   description: Table with 5-byte entries, related to drawing of onscreen sprites?
   name: SPRITE_TABLE_7E467E
-  labels: ~
 0x7E4A00:
   type: data
   size: 88
-  labels: ~
 0x7E4A58:
   description: Unknown, Prevents TPT entries from loading when zero
-  labels: ~
 0x7E4A5C:
-  labels: ~
 0x7E4A60:
   description: Magic Butterfly Flag
   name: MAGIC_BUTTERFLY
-  labels: ~
 0x7E4A66:
   description: People-type TPT appearance Flag
   name: SHOW_NPC_FLAG
-  labels: ~
 0x7E4A68:
-  labels: ~
 0x7E4A8C:
   description: Current battle group (see [1F 23] for listing)
   name: CURRENT_BATTLE_GROUP
-  labels: ~
 0x7E4DC2:
   description: Battle Debug Flag?
   name: BATTLE_DEBUG
-  labels: ~
 0x7E4DC8:
   description: Chosen Four Pointers
   name: CHOSEN_FOUR_PTRS
-  labels: ~
 0x7E5D56:
   description: Miscellaneous Debug Flags
   name: MISC_DEBUG_FLAGS
-  labels: ~
 0x7E5D60:
   description: Battle Swirl Countdown
   name: BATTLE_SWIRL_COUNTDOWN
-  labels: ~
 0x7E5D62:
   description: Current TPT entry
   name: CURRENT_TPT_ENTRY
-  labels: ~
 0x7E5D74:
   description: Related to timers?
-  labels: ~
 0x7E5DA0:
   description: Mushroomized Walking
   name: MUSHROOMIZED_WALKING_FLAG
-  labels: ~
 0x7E5DEA:
   description: '*** UNKNOWN - Door-related table, four entries, six bytes each, last
     four are a long pointer ***'
-  labels: ~
 0x7E5E02:
   description: '*** UNKNOWN - Door-related ***'
-  labels: ~
 0x7E5E04:
   description: '*** UNKNOWN - Door-related ***'
-  labels: ~
 0x7E8650:
   description: Window Statistics Table
   name: WINDOW_STATS_TABLE
-  labels: ~
 0x7E88E0:
-  labels: ~
 0x7E88E4:
   description: Window Existence Table
   name: WINDOW_EXISTENCE_TABLE
-  labels: ~
 0x7E8958:
   description: Current window with focus
   name: CURRENT_FOCUS_WINDOW
-  labels: ~
 0x7E89CA:
   description: Main menu PSI window character number (Ness = 0x00, Poo = 0x03)
   name: PSI_WINDOW_CHARACTER
-  labels: ~
 0x7E89D4:
   description: Text slots for 70 strings of 45 bytes each?
-  labels: ~
 0x7E9643:
   description: Battle Mode Flag
   name: BATTLE_MODE_FLAG
   values:
   - out of battle
   - in battle
-  labels: ~
 0x7E9645:
   description: Input Lock Flag
   name: INPUT_LOCK_FLAG
-  labels: ~
 0x7E964D:
   description: Blinking Prompt Flag
   name: BLINKING_TRIANGLE_FLAG
-  labels: ~
 0x7E96AA:
   description: Table involved with text subroutines (08 code) somehow. Ten entries
     of 0x1B (27) bytes each, so it runs up to 7E97B7? Text system stack frames?
-  labels: ~
 0x7E97B8:
   description: Which entry in the 96AA table to use?
-  labels: ~
 0x7E97BA:
   description: CC argument storage
   name: CC_ARGUMENT_STORAGE
-  labels: ~
 0x7E97CA:
   description: CC argument-gathering loop counter
   name: CC_ARGUMENT_GATHERING_LOOP_COUNTER
-  labels: ~
 0x7E97DA:
   description: Storage for strings loaded with [19]? (How much space?)
-  labels: ~
 0x7E97F5:
   description: First 12 letters of player name with spaces (0x50) replaced with K
     (0x7B). Leftover from Mother 2.
   name: MOTHER2_PLAYERS_NAME
-  labels: ~
 0x7E9801:
   description: Player's Name
   name: PLAYER_NAME
-  labels: ~
 0x7E9818:
   description: Pet's Name
   name: PET_NAME
-  labels: ~
 0x7E9831:
   description: Money carried
   name: CARRIED_MONEY
-  labels: ~
 0x7E9835:
   description: Money in ATM
   name: ATM_MONEY
-  labels: ~
 0x7E9839:
   description: Learned PSI
   name: PSI_LEARNED
-  labels: ~
 0x7E9840:
   description: Status
   name: STATUS
-  labels: ~
 0x7E9877:
   description: Party Leader X Coordinate
   name: LEADER_X_COORD
-  labels: ~
 0x7E987B:
   description: Party Leader Y Coordinate
   name: LEADER_Y_COORD
-  labels: ~
 0x7E9883:
   description: Current Walking Style
   name: WALKING_STYLE
-  labels: ~
 0x7E988B:
   description: Current Party Members
   name: CURRENT_PARTY_MEMBERS
-  labels: ~
 0x7E9891:
   description: Player-Controlled Party Members
   name: PLAYER_CONTROLLED_PARTY_MEMBERS
-  labels: ~
 0x7E9897:
-  labels: ~
 0x7E98A3:
   description: Number of party members
   name: PARTY_MEMBER_COUNT
-  labels: ~
 0x7E98A4:
   description: |
     Number of player-controlled party members
   name: PC_PARTY_MEMBER_COUNT
-  labels: ~
 0x7E98B1:
   description: Auto Fight Flag
   name: AUTO_FIGHT_ENABLE
-  labels: ~
 0x7E98B2:
   description: Exit Mouse Coordinates
   name: EXIT_MOUSE_COORDS
-  labels: ~
 0x7E98B6:
   description: |
     Text Speed (1 = fast, 2 = medium, 3 = slow)
   name: TEXT_SPEED
-  labels: ~
 0x7E98B7:
   description: Sound Setting (1 = stereo, 0 = mono)
   name: SOUND_SETTING
-  labels: ~
 0x7E99C9:
   description: Temporary storage for In-game Timer Low (1/60ths of a second)
   name: TIMER_TEMP_LOW
-  labels: ~
 0x7E99CB:
   description: Temporary storage for In-game Timer High (1/60ths of a second)
   name: TIMER_TEMP_HIGH
-  labels: ~
 0x7E99CD:
   description: Current Text Flavour
-  labels: ~
 0x7E99CE:
   description: Name
   name: NAME
-  labels: ~
 0x7E99D8:
   description: Max HP
   name: MAX_HP
-  labels: ~
 0x7E99DA:
   description: Max PP
   name: MAX_PP
-  labels: ~
 0x7E99DC:
   description: Status
-  labels: ~
 0x7E9A0B:
-  labels: ~
 0x7E9A15:
   description: Rolling HP Target
-  labels: ~
 0x7E9A1B:
   description: Rolling PP Target
-  labels: ~
 0x7E9C08:
   description: Event Flags
   name: EVENT_FLAG
-  labels: ~
 0x7E9E2B:
   description: Indicates if a DMA transfer is in progress
   name: DMA_TRANSFER_FLAG
-  labels: ~
 0x7E9E54:
   description: Dad Phone Timer
   name: DAD_PHONE_TIMER
-  labels: ~
 0x7E9F71:
   description: Non-zero if Ness is in Pajamas
   name: PAJAMA_FLAG
-  labels: ~
 0x7E9F8A:
   description: Number of Enemies in Battle
   name: ENEMIES_IN_BATTLE
-  labels: ~
 0x7E9FAC:
   description: Battlers table (see 7E9FAC_0x4E_byte_structure.txt)
   name: BATTLERS_TABLE
-  labels: ~
 0x7EA96C:
   description: Battler bit flags
   name: BATTLER_BIT_FLAGS
-  labels: ~
 0x7EA970:
   description: Current attacker (Pointer to a 7E9FAC battler entry)
   name: CURRENT_ATTACKER
-  labels: ~
 0x7EA972:
   description: Current target (Pointer to a 7E9FAC battler entry)
   name: CURRENT_TARGET
-  labels: ~
 0x7EA974:
   description: Scratch space for battle-end experience calculations
   name: BATTLE_EXP_SCRATCH
-  labels: ~
 0x7EA978:
   description: Scratch space for battle-end money calculations
   name: BATTLE_MONEY_SCRATCH
-  labels: ~
 0x7EA97A:
   description: Giygas Phase
   name: GIYGAS_PHASE
-  labels: ~
 0x7EA983:
   description: C2/3BCF scratch space for attacker name adjustments (eg. 0xAC --> "Ness"
     for the Nightmare)
   name: ATTACKER_NAME_ADJUST_SCRATCH
-  labels: ~
 0x7EA99E:
   description: C2/3D05 scratch space for target name adjustments (eg. 0xAC --> "Ness"
     for the Nightmare)
   name: TARGET_NAME_ADJUST_SCRATCH
-  labels: ~
 0x7EAA10:
   description: Item to receive at end of battle
   name: ITEM_DROPPED
-  labels: ~
 0x7EAA12:
   description: Enemy being mirrored by Poo
   name: MIRROR_ENEMY
-  labels: ~
 0x7EAA62:
   description: Poo mirror turn timer
   name: MIRROR_TURN_TIMER
-  labels: ~
 0x7EB4A1:
   description: Current Save Slot
   name: CURRENT_SAVE_SLOT
-  labels: ~
 0x7EB4EF:
   description: Photo display flag?
-  labels: ~
 0x7EB4F1:
   description: Current Photo Displayed
   name: CUR_PHOTO_DISPLAY
-  labels: ~
 0x7EB539:
   description: |
     Non-zero if SRAM size-checking routine is modified
-  labels: ~
 0x7EB53B:
   description: Current Music Track
   name: CURRENT_MUSIC_TRACK
-  labels: ~
 0x7EB549:
   description: Sector Boundary Behavior
   name: SECTOR_BOUNDARY_BEHAVIOUR_FLAG
-  labels: ~
 0x7EB555:
   description: Cursor position in debug menu
   name: DEBUG_MENU_CURSOR_POSITION
-  labels: ~
 0x7EB559:
   description: Option selected in debug menu
   name: DEBUG_MODE_NUMBER
-  labels: ~
 0x7F0000:
-  labels: ~
 0x7F8000:
-  labels: ~
 0x7FF800:
   description: Tile Collision Data
   name: TILE_COLLISION
   size: 960
-  labels: ~
 0xC00000:
   description: Clear Unknown_30x2_Table23
   name: CLEAR_UNKNOWN_30X2_TABLE23
   size: 19
   type: assembly
-  labels: ~
 0xC00013:
   description: Set VRAM Locations?
   size: 56
   type: assembly
-  labels: ~
 0xC0004B:
   size: 58
   type: assembly
-  labels: ~
 0xC00085:
   size: 237
   type: assembly
@@ -1775,7 +1603,6 @@ texttables:
 0xC0035B:
   size: 54
   type: assembly
-  labels: ~
 0xC00391:
   size: 163
   type: assembly
@@ -1807,7 +1634,6 @@ texttables:
 0xC005E7:
   size: 67
   type: assembly
-  labels: ~
 0xC0062A:
   description: Load Tile Collision Data
   name: LOAD_TILE_COLLISION
@@ -1866,7 +1692,6 @@ texttables:
 0xC00AA1:
   size: 36
   type: assembly
-  labels: ~
 0xC00AC5:
   size: 279
   type: assembly
@@ -1938,7 +1763,6 @@ texttables:
 0xC01181:
   size: 169
   type: assembly
-  labels: ~
 0xC0122A:
   size: 195
   type: assembly
@@ -2032,7 +1856,6 @@ texttables:
 0xC019B2:
   size: 48
   type: assembly
-  labels: ~
 0xC019E2:
   size: 129
   type: assembly
@@ -2046,7 +1869,6 @@ texttables:
 0xC01A63:
   size: 6
   type: assembly
-  labels: ~
   name: ""
   description: ""
 0xC01A69:
@@ -2128,7 +1950,6 @@ texttables:
 0xC01DED:
   size: 92
   type: assembly
-  labels: ~
 0xC01E49:
   size: 680
   type: assembly
@@ -2317,7 +2138,6 @@ texttables:
   name: RESET_MUSHROOMIZED_WALKING
   size: 6
   type: assembly
-  labels: ~
 0xC02C89:
   description: Mushroomized Walking?
   size: 160
@@ -2483,7 +2303,6 @@ texttables:
 0xC03C4B:
   size: 19
   type: assembly
-  labels: ~
 0xC03C5E:
   description: Get on your bicycle if possible
   name: GET_ON_BICYCLE
@@ -2551,16 +2370,13 @@ texttables:
 0xC0400E:
   size: 29
   type: assembly
-  labels: ~
 0xC0402B:
   size: 30
   type: assembly
-  labels: ~
 0xC04049:
   description: Unsets ??? ($0081)
   size: 6
   type: assembly
-  labels: ~
 0xC0404F:
   description: Movement Related?
   size: 199
@@ -2608,7 +2424,6 @@ texttables:
 0xC042C2:
   size: 45
   type: assembly
-  labels: ~
 0xC042EF:
   size: 205
   type: assembly
@@ -2707,11 +2522,9 @@ texttables:
 0xC04A7B:
   size: 13
   type: assembly
-  labels: ~
 0xC04A88:
   size: 37
   type: assembly
-  labels: ~
 0xC04AAD:
   size: 166
   type: assembly
@@ -2773,11 +2586,9 @@ texttables:
 0xC04EF0:
   size: 87
   type: assembly
-  labels: ~
 0xC04F47:
   size: 25
   type: assembly
-  labels: ~
 0xC04F60:
   size: 63
   type: assembly
@@ -2840,7 +2651,6 @@ texttables:
 0xC052AA:
   size: 42
   type: assembly
-  labels: ~
 0xC052D4:
   size: 407
   type: assembly
@@ -3003,7 +2813,6 @@ texttables:
 0xC05D8B:
   size: 92
   type: assembly
-  labels: ~
 0xC05DE7:
   size: 84
   type: assembly
@@ -3023,7 +2832,6 @@ texttables:
 0xC05E76:
   size: 12
   type: assembly
-  labels: ~
 0xC05E82:
   size: 76
   type: assembly
@@ -3041,15 +2849,12 @@ texttables:
 0xC05F33:
   size: 79
   type: assembly
-  labels: ~
 0xC05F82:
   size: 79
   type: assembly
-  labels: ~
 0xC05FD1:
   size: 37
   type: assembly
-  labels: ~
 0xC05FF6:
   description: NPC Collision Detection
   name: NPC_COLLISION_CHECK
@@ -3135,7 +2940,6 @@ texttables:
 0xC064D4:
   size: 15
   type: assembly
-  labels: ~
 0xC064E3:
   size: 84
   type: assembly
@@ -3144,15 +2948,12 @@ texttables:
 0xC06537:
   size: 23
   type: assembly
-  labels: ~
 0xC0654E:
   size: 42
   type: assembly
-  labels: ~
 0xC06578:
   size: 43
   type: assembly
-  labels: ~
 0xC065A3:
   size: 31
   type: assembly
@@ -3219,15 +3020,12 @@ texttables:
   name: CHANGE_MUSIC_5DD6
   size: 10
   type: assembly
-  labels: ~
 0xC069F7:
   size: 16
   type: assembly
-  labels: ~
 0xC06A07:
   size: 20
   type: assembly
-  labels: ~
 0xC06A1B:
   size: 112
   type: assembly
@@ -3238,12 +3036,10 @@ texttables:
   description: Do Nothing
   size: 3
   type: assembly
-  labels: ~
 0xC06A8E:
   description: Do Nothing
   size: 3
   type: assembly
-  labels: ~
 0xC06A91:
   size: 57
   type: assembly
@@ -3261,7 +3057,6 @@ texttables:
   name: SPAWN_BUZZ-BUZZ
   size: 28
   type: assembly
-  labels: ~
 0xC06B3D:
   size: 194
   type: assembly
@@ -3298,19 +3093,15 @@ texttables:
 0xC06E02:
   type: data
   size: 24
-  labels: ~
 0xC06E1A:
   size: 18
   type: assembly
-  labels: ~
 0xC06E2C:
   size: 30
   type: assembly
-  labels: ~
 0xC06E4A:
   size: 36
   type: assembly
-  labels: ~
 0xC06E6E:
   size: 276
   type: assembly
@@ -3368,7 +3159,6 @@ texttables:
 0xC071E5:
   size: 46
   type: assembly
-  labels: ~
 0xC07213:
   size: 188
   type: assembly
@@ -3449,7 +3239,6 @@ texttables:
 0xC0777A:
   size: 16
   type: assembly
-  labels: ~
 0xC0778A:
   size: 133
   type: assembly
@@ -3539,7 +3328,6 @@ texttables:
 0xC07D1C:
   type: nullspace
   size: 740
-  labels: ~
 0xC08000:
   description: SNES Initialization
   name: RESET
@@ -3547,22 +3335,18 @@ texttables:
   accumsize: 8
   size: 321
   type: assembly
-  labels: ~
 0xC08141:
   size: 6
   type: assembly
   name: RESET_VECTOR
-  labels: ~
 0xC08147:
   size: 4
   type: assembly
   name: NMI_VECTOR
-  labels: ~
 0xC0814B:
   size: 4
   name: IRQ_VECTOR
   type: assembly
-  labels: ~
 0xC0814F:
   description: IRQ Handler
   name: IRQ
@@ -3613,11 +3397,9 @@ texttables:
 0xC083B8:
   size: 9
   type: assembly
-  labels: ~
 0xC083C1:
   size: 34
   type: assembly
-  labels: ~
 0xC083E3:
   size: 56
   type: assembly
@@ -3658,16 +3440,13 @@ texttables:
 0xC08518:
   size: 4
   type: assembly
-  labels: ~
 0xC0851C:
   description: A -> $0020
   size: 6
   type: assembly
-  labels: ~
 0xC08522:
   size: 7
   type: assembly
-  labels: ~
 0xC08529:
   size: 66
   type: assembly
@@ -3677,7 +3456,6 @@ texttables:
 0xC0856B:
   size: 8
   type: assembly
-  labels: ~
 0xC08573:
   size: 68
   type: assembly
@@ -3707,7 +3485,6 @@ texttables:
   name: REDIRECT_C0865F
   size: 4
   type: assembly
-  labels: ~
 0xC0865F:
   description: Decompress to VRAM
   name: DECOMP_VRAM
@@ -3731,7 +3508,6 @@ texttables:
   name: ENABLE_NMI_JOYPAD
   size: 17
   type: assembly
-  labels: ~
 0xC08726:
   size: 30
   type: assembly
@@ -3762,22 +3538,18 @@ texttables:
   name: REDIRECT_C0879D
   size: 4
   type: assembly
-  labels: ~
 0xC0879D:
   description: $000D = A & 0x8F (Set Screen Display Register?)
   size: 10
   type: assembly
-  labels: ~
 0xC087A7:
   description: Redirect to C087AB
   name: REDIRECT_C087AB
   size: 4
   type: assembly
-  labels: ~
 0xC087AB:
   size: 35
   type: assembly
-  labels: ~
 0xC087CE:
   size: 70
   type: assembly
@@ -3797,11 +3569,9 @@ texttables:
   description: $0028 = A, $0029 = X, $002A = X
   size: 14
   type: assembly
-  labels: ~
 0xC0887A:
   size: 17
   type: assembly
-  labels: ~
 0xC0888B:
   size: 26
   type: assembly
@@ -3811,7 +3581,6 @@ texttables:
 0xC088A5:
   size: 12
   type: assembly
-  labels: ~
 0xC088B1:
   size: 616
   type: assembly
@@ -3846,29 +3615,23 @@ texttables:
   description: Do nothing
   size: 1
   type: assembly
-  labels: ~
 0xC08C54:
   description: Redirect to C08C58
   name: REDIRECT_C08C58
   size: 4
   type: assembly
-  labels: ~
 0xC08C58:
   size: 47
   type: assembly
-  labels: ~
 0xC08C87:
   size: 26
   type: assembly
-  labels: ~
 0xC08CA1:
   size: 26
   type: assembly
-  labels: ~
 0xC08CBB:
   size: 26
   type: assembly
-  labels: ~
 0xC08CD5:
   size: 164
   type: assembly
@@ -3887,36 +3650,30 @@ texttables:
 0xC08D79:
   size: 25
   type: assembly
-  labels: ~
 0xC08D92:
   description: Set OAM Size Register
   size: 12
   type: assembly
-  labels: ~
 0xC08D9E:
   description: Set BG1 VRAM Location
   name: SET_BG1_VRAM_LOCATION
   size: 64
   type: assembly
-  labels: ~
 0xC08DDE:
   description: Set BG2 VRAM Location
   name: SET_BG2_VRAM_LOCATION
   size: 62
   type: assembly
-  labels: ~
 0xC08E1C:
   description: Set BG3 VRAM Location
   name: SET_BG3_VRAM_LOCATION
   size: 64
   type: assembly
-  labels: ~
 0xC08E5C:
   description: Set BG4 VRAM Location
   name: SET_BG4_VRAM_LOCATION
   size: 62
   type: assembly
-  labels: ~
 0xC08E9A:
   description: Generate pseudorandom number in A
   name: RAND
@@ -3986,11 +3743,9 @@ texttables:
 0xC08F42:
   size: 38
   type: assembly
-  labels: ~
 0xC08F68:
   size: 35
   type: assembly
-  labels: ~
 0xC08F8B:
   size: 13
   type: assembly
@@ -3999,13 +3754,11 @@ texttables:
 0xC08F98:
   type: data
   size: 80
-  labels: ~
 0xC08FE8:
   description: Multiply Low byte of A by High byte of A
   name: EIGHT_BIT_MULT_AxA
   size: 15
   type: assembly
-  labels: ~
 0xC08FF7:
   description: Multiply low byte of Y by A
   name: EIGHT_BIT_MULT_YxA
@@ -4021,12 +3774,10 @@ texttables:
   name: MULT_YxA
   size: 84
   type: assembly
-  labels: ~
 0xC09086:
   description: 32-bit Multiply, $06+08 *= $0A+$0C
   size: 72
   type: assembly
-  labels: ~
 0xC090CE:
   size: 24
   type: assembly
@@ -4084,11 +3835,9 @@ texttables:
 0xC0922B:
   size: 6
   type: assembly
-  labels: ~
 0xC09231:
   size: 6
   type: assembly
-  labels: ~
 0xC09237:
   size: 11
   type: assembly
@@ -4123,7 +3872,6 @@ texttables:
 0xC09279:
   type: data
   size: 3
-  labels: ~
 0xC0927C:
   size: 121
   type: assembly
@@ -4187,15 +3935,12 @@ texttables:
   - name: Pointer
     size: 2
     type: pointer
-  labels: ~
 0xC095F2:
   size: 17
   type: assembly
-  labels: ~
 0xC09603:
   size: 29
   type: assembly
-  labels: ~
 0xC09620:
   size: 41
   type: assembly
@@ -4205,15 +3950,12 @@ texttables:
 0xC09649:
   size: 4
   type: assembly
-  labels: ~
 0xC0964D:
   size: 11
   type: assembly
-  labels: ~
 0xC09658:
   size: 23
   type: assembly
-  labels: ~
 0xC0966F:
   size: 878
   type: assembly
@@ -4251,19 +3993,15 @@ texttables:
 0xC09A1A:
   size: 20
   type: assembly
-  labels: ~
 0xC09A2E:
   size: 10
   type: assembly
-  labels: ~
 0xC09A38:
   size: 6
   type: assembly
-  labels: ~
 0xC09A3E:
   size: 6
   type: assembly
-  labels: ~
 0xC09A44:
   size: 24
   type: assembly
@@ -4272,7 +4010,6 @@ texttables:
 0xC09A5C:
   size: 43
   type: assembly
-  labels: ~
 0xC09A87:
   size: 69
   type: assembly
@@ -4282,19 +4019,15 @@ texttables:
 0xC09ACC:
   size: 7
   type: assembly
-  labels: ~
 0xC09AD3:
   size: 8
   type: assembly
-  labels: ~
 0xC09ADB:
   size: 7
   type: assembly
-  labels: ~
 0xC09AE2:
   size: 23
   type: assembly
-  labels: ~
 0xC09AF9:
   size: 22
   type: assembly
@@ -4303,11 +4036,9 @@ texttables:
 0xC09B0F:
   size: 16
   type: assembly
-  labels: ~
 0xC09B1F:
   size: 13
   type: assembly
-  labels: ~
 0xC09B2C:
   size: 24
   type: assembly
@@ -4322,19 +4053,15 @@ texttables:
 0xC09B61:
   size: 10
   type: assembly
-  labels: ~
 0xC09B6B:
   size: 14
   type: assembly
-  labels: ~
 0xC09B79:
   size: 24
   type: assembly
-  labels: ~
 0xC09B91:
   size: 24
   type: assembly
-  labels: ~
 0xC09BA9:
   size: 11
   type: assembly
@@ -4343,23 +4070,18 @@ texttables:
 0xC09BB4:
   size: 24
   type: assembly
-  labels: ~
 0xC09BCC:
   size: 24
   type: assembly
-  labels: ~
 0xC09BE4:
   size: 10
   type: assembly
-  labels: ~
 0xC09BEE:
   size: 10
   type: assembly
-  labels: ~
 0xC09BF8:
   size: 10
   type: assembly
-  labels: ~
 0xC09C02:
   size: 51
   type: assembly
@@ -4372,7 +4094,6 @@ texttables:
 0xC09C35:
   size: 6
   type: assembly
-  labels: ~
 0xC09C3B:
   size: 28
   type: assembly
@@ -4394,7 +4115,6 @@ texttables:
 0xC09C8F:
   size: 10
   type: assembly
-  labels: ~
 0xC09C99:
   size: 28
   type: assembly
@@ -4423,7 +4143,6 @@ texttables:
 0xC09D12:
   size: 13
   type: assembly
-  labels: ~
 0xC09D1F:
   size: 31
   type: assembly
@@ -4452,23 +4171,18 @@ texttables:
 0xC09D86:
   size: 7
   type: assembly
-  labels: ~
 0xC09D8D:
   size: 7
   type: assembly
-  labels: ~
 0xC09D94:
   size: 5
   type: assembly
-  labels: ~
 0xC09D99:
   size: 5
   type: assembly
-  labels: ~
 0xC09D9E:
   size: 16
   type: assembly
-  labels: ~
 0xC09DAE:
   size: 234
   type: assembly
@@ -4519,51 +4233,39 @@ texttables:
 0xC09F82:
   size: 38
   type: assembly
-  labels: ~
 0xC09FA8:
   size: 6
   type: assembly
-  labels: ~
 0xC09FAE:
   size: 67
   type: assembly
-  labels: ~
 0xC09FF1:
   size: 27
   type: assembly
-  labels: ~
 0xC0A00C:
   size: 23
   type: assembly
-  labels: ~
 0xC0A023:
   size: 23
   type: assembly
-  labels: ~
 0xC0A03A:
   size: 27
   type: assembly
-  labels: ~
 0xC0A055:
   size: 23
   type: assembly
-  labels: ~
 0xC0A06C:
   size: 29
   type: assembly
-  labels: ~
 0xC0A089:
   size: 23
   type: assembly
-  labels: ~
 0xC0A0A0:
   size: 27
   type: assembly
-  labels: ~
 0xC0A0BB:
   size: 15
   type: assembly
-  labels: ~
 0xC0A0CA:
   size: 25
   type: assembly
@@ -4591,7 +4293,6 @@ texttables:
   name: REDIRECT_C0A156
   size: 4
   type: assembly
-  labels: ~
 0xC0A156:
   size: 88
   type: assembly
@@ -4602,19 +4303,15 @@ texttables:
 0xC0A1AE:
   size: 32
   type: data
-  labels: ~
 0xC0A1CE:
   size: 36
   type: assembly
-  labels: ~
 0xC0A1F2:
   size: 26
   type: assembly
-  labels: ~
 0xC0A20C:
   size: 16
   type: data
-  labels: ~
 0xC0A21C:
   size: 20
   type: assembly
@@ -4625,11 +4322,9 @@ texttables:
 0xC0A230:
   size: 36
   type: assembly
-  labels: ~
 0xC0A254:
   size: 23
   type: assembly
-  labels: ~
 0xC0A26B:
   size: 64
   type: assembly
@@ -4639,7 +4334,6 @@ texttables:
 0xC0A2AB:
   type: data
   size: 12
-  labels: ~
 0xC0A2B7:
   size: 42
   type: assembly
@@ -4657,7 +4351,6 @@ texttables:
 0xC0A30B:
   type: data
   size: 12
-  labels: ~
 0xC0A317:
   size: 57
   type: assembly
@@ -4669,7 +4362,6 @@ texttables:
 0xC0A350:
   size: 16
   type: data
-  labels: ~
 0xC0A360:
   size: 36
   type: assembly
@@ -4717,19 +4409,15 @@ texttables:
 0xC0A60B:
   size: 48
   type: data
-  labels: ~
 0xC0A63B:
   size: 8
   type: assembly
-  labels: ~
 0xC0A643:
   size: 14
   type: assembly
-  labels: ~
 0xC0A651:
   size: 14
   type: assembly
-  labels: ~
 0xC0A65F:
   size: 14
   type: assembly
@@ -4738,35 +4426,27 @@ texttables:
 0xC0A66D:
   size: 6
   type: assembly
-  labels: ~
 0xC0A673:
   size: 6
   type: assembly
-  labels: ~
 0xC0A679:
   size: 12
   type: assembly
-  labels: ~
 0xC0A685:
   size: 12
   type: assembly
-  labels: ~
 0xC0A691:
   size: 6
   type: assembly
-  labels: ~
 0xC0A697:
   size: 11
   type: assembly
-  labels: ~
 0xC0A6A2:
   size: 11
   type: assembly
-  labels: ~
 0xC0A6AD:
   size: 11
   type: assembly
-  labels: ~
 0xC0A6B8:
   size: 13
   type: assembly
@@ -4775,19 +4455,15 @@ texttables:
 0xC0A6C5:
   size: 6
   type: assembly
-  labels: ~
 0xC0A6CB:
   size: 6
   type: assembly
-  labels: ~
 0xC0A6D1:
   size: 9
   type: assembly
-  labels: ~
 0xC0A6DA:
   size: 9
   type: assembly
-  labels: ~
 0xC0A6E3:
   size: 157
   type: assembly
@@ -4806,7 +4482,6 @@ texttables:
 0xC0A780:
   size: 20
   type: assembly
-  labels: ~
 0xC0A794:
   size: 155
   type: assembly
@@ -4817,139 +4492,105 @@ texttables:
 0xC0A82F:
   size: 9
   type: assembly
-  labels: ~
 0xC0A838:
   size: 9
   type: assembly
-  labels: ~
 0xC0A841:
   size: 11
   type: assembly
-  labels: ~
 0xC0A84C:
   size: 11
   type: assembly
-  labels: ~
 0xC0A857:
   size: 13
   type: assembly
-  labels: ~
 0xC0A864:
   size: 11
   type: assembly
-  labels: ~
 0xC0A86F:
   size: 11
   type: assembly
-  labels: ~
 0xC0A87A:
   size: 19
   type: assembly
-  labels: ~
 0xC0A88D:
   size: 19
   type: assembly
-  labels: ~
 0xC0A8A0:
   size: 19
   type: assembly
-  labels: ~
 0xC0A8B3:
   size: 19
   type: assembly
-  labels: ~
 0xC0A8C6:
   size: 11
   type: assembly
-  labels: ~
 0xC0A8D1:
   size: 11
   type: assembly
-  labels: ~
 0xC0A8DC:
   size: 11
   type: assembly
-  labels: ~
 0xC0A8E7:
   size: 8
   type: assembly
-  labels: ~
 0xC0A8EF:
   size: 8
   type: assembly
-  labels: ~
 0xC0A8F7:
   size: 8
   type: assembly
-  labels: ~
 0xC0A8FF:
   size: 8
   type: assembly
-  labels: ~
 0xC0A907:
   size: 11
   type: assembly
-  labels: ~
 0xC0A912:
   size: 27
   type: assembly
-  labels: ~
 0xC0A92D:
   size: 11
   type: assembly
-  labels: ~
 0xC0A938:
   size: 11
   type: assembly
-  labels: ~
 0xC0A943:
   size: 11
   type: assembly
-  labels: ~
 0xC0A94E:
   size: 11
   type: assembly
-  labels: ~
 0xC0A959:
   size: 11
   type: assembly
-  labels: ~
 0xC0A964:
   size: 19
   type: assembly
-  labels: ~
 0xC0A977:
   size: 20
   type: assembly
-  labels: ~
 0xC0A98B:
   size: 20
   type: assembly
-  labels: ~
 0xC0A99F:
   size: 20
   type: assembly
-  labels: ~
 0xC0A9B3:
   size: 28
   type: assembly
-  labels: ~
 0xC0A9CF:
   size: 28
   type: assembly
-  labels: ~
 0xC0A9EB:
   size: 28
   type: assembly
-  labels: ~
 0xC0AA07:
   size: 28
   type: assembly
-  labels: ~
 0xC0AA23:
   size: 28
   type: assembly
-  labels: ~
 0xC0AA3F:
   size: 47
   type: assembly
@@ -4963,19 +4604,15 @@ texttables:
 0xC0AAAC:
   size: 9
   type: assembly
-  labels: ~
 0xC0AAB5:
   size: 24
   type: assembly
-  labels: ~
 0xC0AACD:
   size: 4
   type: assembly
-  labels: ~
 0xC0AAD1:
   size: 4
   type: assembly
-  labels: ~
 0xC0AAD5:
   size: 40
   type: assembly
@@ -4985,7 +4622,6 @@ texttables:
 0xC0AAFD:
   size: 9
   type: assembly
-  labels: ~
 0xC0AB06:
   description: Send Music Data to SPC-700
   name: LOAD_SPC700_DATA
@@ -5014,7 +4650,6 @@ texttables:
 0xC0ABBD:
   size: 9
   type: assembly
-  labels: ~
 0xC0ABC6:
   description: Stop Music?
   name: STOP_MUSIC
@@ -5034,22 +4669,18 @@ texttables:
 0xC0AC0C:
   size: 20
   type: assembly
-  labels: ~
 0xC0AC20:
   description: Get Data from SPC-700 I/O Register 0
   size: 12
   type: assembly
-  labels: ~
 0xC0AC2C:
   type: data
   description: Stereo/Mono Data?
   name: STEREO_MONO_DATA
   size: 14
-  labels: ~
 0xC0AC3A:
   size: 9
   type: assembly
-  labels: ~
 0xC0AC43:
   size: 275
   type: assembly
@@ -5075,11 +4706,9 @@ texttables:
 0xC0AD8A:
   size: 21
   type: data
-  labels: ~
 0xC0AD9F:
   size: 19
   type: assembly
-  labels: ~
 0xC0ADB2:
   size: 100
   type: assembly
@@ -5091,16 +4720,13 @@ texttables:
 0xC0AE16:
   type: data
   size: 30
-  labels: ~
 0xC0AE34:
   description: $1F & $C0AE44 + A
   size: 16
   type: assembly
-  labels: ~
 0xC0AE44:
   size: 22
   type: data
-  labels: ~
 0xC0AE5A:
   size: 371
   type: assembly
@@ -5121,23 +4747,19 @@ texttables:
 0xC0AFCD:
   size: 36
   type: assembly
-  labels: ~
 0xC0AFF1:
   type: data
   size: 41
-  labels: ~
 0xC0B01A:
   description: Set Battle Swirl Colour
   name: SET_BATTLE_SWIRL_COLOUR
   size: 31
   type: assembly
-  labels: ~
 0xC0B039:
   description: Set colour addition/subtraction mode
   name: SET_COLOUR_ADDSUB_MODE
   size: 14
   type: assembly
-  labels: ~
 0xC0B047:
   description: Set window mask settings
   name: SET_WINDOW_MASK
@@ -5151,15 +4773,12 @@ texttables:
 0xC0B0A6:
   type: data
   size: 4
-  labels: ~
 0xC0B0AA:
   size: 14
   type: assembly
-  labels: ~
 0xC0B0B8:
   size: 55
   type: assembly
-  labels: ~
 0xC0B0EF:
   size: 90
   type: assembly
@@ -5203,15 +4822,12 @@ texttables:
 0xC0B2FF:
   size: 257
   type: data
-  labels: ~
 0xC0B400:
   size: 37
   type: assembly
-  labels: ~
 0xC0B425:
   size: 256
   type: data
-  labels: ~
 0xC0B525:
   description: File Select Screen Initialization
   name: FILE_SELECT_INIT
@@ -5223,11 +4839,9 @@ texttables:
 0xC0B65F:
   size: 32
   type: assembly
-  labels: ~
 0xC0B67F:
   size: 178
   type: assembly
-  labels: ~
 0xC0B731:
   description: Battle Initialization
   name: BATTLE_INIT
@@ -5279,7 +4893,6 @@ texttables:
   name: GAME_INIT
   size: 34
   type: assembly
-  labels: ~
 0xC0B9BC:
   size: 121
   type: assembly
@@ -5316,7 +4929,6 @@ texttables:
 0xC0BC74:
   size: 290
   type: assembly
-  labels: ~
 0xC0BD96:
   size: 476
   type: assembly
@@ -5326,7 +4938,6 @@ texttables:
 0xC0BF72:
   size: 322
   type: assembly
-  labels: ~
 0xC0C0B4:
   size: 231
   type: assembly
@@ -5368,11 +4979,9 @@ texttables:
 0xC0C353:
   size: 10
   type: assembly
-  labels: ~
 0xC0C35D:
   size: 6
   type: assembly
-  labels: ~
 0xC0C363:
   size: 150
   type: assembly
@@ -5434,11 +5043,9 @@ texttables:
 0xC0C4CF:
   size: 40
   type: data
-  labels: ~
 0xC0C4F7:
   size: 45
   type: assembly
-  labels: ~
 0xC0C524:
   size: 228
   type: assembly
@@ -5451,7 +5058,6 @@ texttables:
 0xC0C608:
   size: 13
   type: assembly
-  labels: ~
 0xC0C615:
   size: 22
   type: assembly
@@ -5466,7 +5072,6 @@ texttables:
 0xC0C682:
   size: 28
   type: assembly
-  labels: ~
 0xC0C69E:
   size: 24
   type: assembly
@@ -5502,11 +5107,9 @@ texttables:
 0xC0C7DB:
   size: 45
   type: assembly
-  labels: ~
 0xC0C808:
   size: 51
   type: assembly
-  labels: ~
 0xC0C83B:
   size: 531
   type: assembly
@@ -5555,7 +5158,6 @@ texttables:
 0xC0CBD3:
   size: 62
   type: assembly
-  labels: ~
 0xC0CC11:
   size: 187
   type: assembly
@@ -5604,7 +5206,6 @@ texttables:
 0xC0CF58:
   type: data
   size: 63
-  labels: ~
 0xC0CF97:
   size: 322
   type: assembly
@@ -5623,7 +5224,6 @@ texttables:
 0xC0D0D9:
   size: 13
   type: assembly
-  labels: ~
 0xC0D0E6:
   size: 118
   type: assembly
@@ -5644,7 +5244,6 @@ texttables:
 0xC0D195:
   size: 6
   type: assembly
-  labels: ~
 0xC0D19B:
   size: 835
   type: assembly
@@ -5744,11 +5343,9 @@ texttables:
 0xC0D7B3:
   size: 20
   type: assembly
-  labels: ~
 0xC0D7C7:
   size: 25
   type: assembly
-  labels: ~
 0xC0D7E0:
   size: 23
   type: assembly
@@ -5824,7 +5421,6 @@ texttables:
 0xC0DC38:
   size: 22
   type: assembly
-  labels: ~
 0xC0DC4E:
   size: 120
   type: assembly
@@ -5856,7 +5452,6 @@ texttables:
     accum: 16
   size: 38
   type: assembly
-  labels: ~
 0xC0DD79:
   size: 157
   type: assembly
@@ -5922,7 +5517,6 @@ texttables:
 0xC0E196:
   size: 126
   type: assembly
-  labels: ~
 0xC0E214:
   size: 64
   type: assembly
@@ -5952,7 +5546,6 @@ texttables:
 0xC0E3C1:
   size: 140
   type: assembly
-  labels: ~
 0xC0E44D:
   size: 61
   type: assembly
@@ -5992,15 +5585,12 @@ texttables:
 0xC0E674:
   size: 138
   type: assembly
-  labels: ~
 0xC0E6FE:
   size: 120
   type: assembly
-  labels: ~
 0xC0E776:
   size: 159
   type: assembly
-  labels: ~
 0xC0E815:
   size: 130
   type: assembly
@@ -6023,11 +5613,9 @@ texttables:
 0xC0E979:
   size: 3
   type: assembly
-  labels: ~
 0xC0E97C:
   size: 62
   type: assembly
-  labels: ~
 0xC0E9BA:
   size: 132
   type: assembly
@@ -6066,7 +5654,6 @@ texttables:
 0xC0EBE0:
   size: 151
   type: assembly
-  labels: ~
 0xC0EC77:
   size: 64
   type: assembly
@@ -6076,23 +5663,18 @@ texttables:
 0xC0ECB7:
   size: 93
   type: assembly
-  labels: ~
 0xC0ED14:
   size: 37
   type: assembly
-  labels: ~
 0xC0ED39:
   size: 35
   type: assembly
-  labels: ~
 0xC0ED5C:
   size: 117
   type: assembly
-  labels: ~
 0xC0EDD1:
   size: 9
   type: assembly
-  labels: ~
 0xC0EDDA:
   size: 109
   type: assembly
@@ -6101,11 +5683,9 @@ texttables:
 0xC0EE47:
   size: 12
   type: assembly
-  labels: ~
 0xC0EE53:
   size: 21
   type: assembly
-  labels: ~
 0xC0EE68:
   description: Loads and displays the logo screen specified by A
   name: LOGO_SCREEN_LOAD
@@ -6144,11 +5724,9 @@ texttables:
   name: GAS_STATION_LOAD
   size: 256
   type: assembly
-  labels: ~
 0xC0F1D2:
   size: 76
   type: assembly
-  labels: ~
 0xC0F21E:
   size: 286
   type: assembly
@@ -6177,11 +5755,9 @@ texttables:
 0xC0F3B2:
   size: 54
   type: assembly
-  labels: ~
 0xC0F3E8:
   size: 54
   type: assembly
-  labels: ~
 0xC0F41E:
   size: 1164
   type: assembly
@@ -6233,18 +5809,15 @@ texttables:
 0xC0F8C2:
   type: nullspace
   size: 1774
-  labels: ~
 0xC0FFB0:
   type: data
   size: 80
   description: Internal SNES Header
   name: INTERNAL_HEADER
-  labels: ~
 0xC10000:
   description: Redirect to Hide HP/PP Windows
   size: 4
   type: assembly
-  labels: ~
 0xC10004:
   size: 50
   type: assembly
@@ -6255,22 +5828,18 @@ texttables:
   name: ENABLE_BLINKING_TRIANGLE
   size: 6
   type: assembly
-  labels: ~
 0xC1003C:
   description: Clear blinking triangle prompt
   size: 6
   type: assembly
-  labels: ~
 0xC10042:
   description: Get blinking triangle prompt
   size: 6
   type: assembly
-  labels: ~
 0xC10048:
   description: Get $7E964F
   size: 6
   type: assembly
-  labels: ~
 0xC1004E:
   size: 42
   type: assembly
@@ -6283,17 +5852,14 @@ texttables:
   name: GET_WINDOW_FOCUS
   size: 6
   type: assembly
-  labels: ~
 0xC1007E:
   description: Set Window Focus
   name: SET_WINDOW_FOCUS
   size: 6
   type: assembly
-  labels: ~
 0xC10084:
   size: 10
   type: assembly
-  labels: ~
 0xC1008E:
   size: 57
   type: assembly
@@ -6305,13 +5871,11 @@ texttables:
   name: LOCK_INPUT
   size: 9
   type: assembly
-  labels: ~
 0xC100D0:
   description: Unlocks input
   name: UNLOCK_INPUT
   size: 6
   type: assembly
-  labels: ~
 0xC100D6:
   size: 40
   type: assembly
@@ -6370,40 +5934,31 @@ texttables:
 0xC10324:
   size: 92
   type: assembly
-  labels: ~
 0xC10380:
   size: 92
   type: assembly
-  labels: ~
 0xC103DC:
   size: 36
   type: assembly
-  labels: ~
 0xC10400:
   size: 10
   type: assembly
-  labels: ~
 0xC1040A:
   size: 36
   type: assembly
-  labels: ~
 0xC1042E:
   size: 21
   type: assembly
-  labels: ~
 0xC10443:
   size: 26
   type: assembly
-  labels: ~
 0xC1045D:
   description: Store $0E+10 in working memory
   size: 44
   type: assembly
-  labels: ~
 0xC10489:
   size: 44
   type: assembly
-  labels: ~
 0xC104B5:
   size: 35
   type: assembly
@@ -6413,7 +5968,6 @@ texttables:
 0xC104D8:
   size: 22
   type: assembly
-  labels: ~
 0xC104EE:
   description: Create Window
   name: CREATE_WINDOW
@@ -6439,7 +5993,6 @@ texttables:
 0xC1078D:
   size: 34
   type: assembly
-  labels: ~
 0xC107AF:
   size: 597
   type: assembly
@@ -6477,7 +6030,6 @@ texttables:
   name: SHOW_HPPP_WINDOWS
   size: 25
   type: assembly
-  labels: ~
 0xC10A1D:
   description: Hide HP/PP Windows
   name: HIDE_HPPP_WINDOWS
@@ -6510,67 +6062,55 @@ texttables:
 0xC10BD3:
   size: 37
   type: assembly
-  labels: ~
 0xC10BF8:
   size: 6
   type: assembly
   description: Redirect to C1008E
   name: REDIRECT_C1008E
-  labels: ~
 0xC10BFE:
   size: 75
   type: assembly
-  labels: ~
 0xC10C49:
   description: Redirect to C1138D
   name: REDIRECT_C1138D
   size: 6
   type: assembly
-  labels: ~
 0xC10C4F:
   description: Redirect to C117E2
   name: REDIRECT_C117E2
   size: 6
   type: assembly
-  labels: ~
 0xC10C55:
   size: 29
   type: assembly
-  labels: ~
 0xC10C72:
   size: 7
   type: assembly
   description: Redirect to C438A5
   name: REDIRECT_C438A5
-  labels: ~
 0xC10C79:
   description: Redirect to C438B1
   name: REDIRECT_C438B1
   size: 7
   type: assembly
-  labels: ~
 0xC10C80:
   description: Redirect to C10BA1
   name: REDIRECT_C10BA1
   size: 6
   type: assembly
-  labels: ~
 0xC10C86:
   description: Redirect to C10CB6
   name: REDIRECT_C10CB6
   size: 6
   type: assembly
-  labels: ~
 0xC10C8C:
   size: 35
   type: assembly
-  labels: ~
 0xC10CAF:
   description: Redirect to C437B8
   name: REDIRECT_C437B8
   size: 7
   type: assembly
-  labels: ~
 0xC10CB6:
   size: 170
   type: assembly
@@ -6637,7 +6177,6 @@ texttables:
 0xC10FA3:
   size: 9
   type: assembly
-  labels: ~
 0xC10FAC:
   size: 62
   type: assembly
@@ -6682,7 +6221,6 @@ texttables:
 0xC1134B:
   size: 9
   type: assembly
-  labels: ~
 0xC11354:
   size: 47
   type: assembly
@@ -6694,7 +6232,6 @@ texttables:
 0xC11383:
   size: 10
   type: assembly
-  labels: ~
 0xC1138D:
   size: 68
   type: assembly
@@ -6721,15 +6258,12 @@ texttables:
 0xC1153B:
   size: 91
   type: assembly
-  labels: ~
 0xC11596:
   size: 94
   type: assembly
-  labels: ~
 0xC115F4:
   size: 72
   type: assembly
-  labels: ~
 0xC1163C:
   size: 422
   type: assembly
@@ -6758,7 +6292,6 @@ texttables:
 0xC1180D:
   size: 14
   type: assembly
-  labels: ~
 0xC1181B:
   size: 108
   type: assembly
@@ -6829,11 +6362,9 @@ texttables:
 0xC11F5A:
   size: 48
   type: assembly
-  labels: ~
 0xC11F8A:
   size: 50
   type: assembly
-  labels: ~
 0xC11FBC:
   size: 24
   type: assembly
@@ -7166,11 +6697,9 @@ texttables:
 0xC1339E:
   size: 9
   type: assembly
-  labels: ~
 0xC133A7:
   size: 9
   type: assembly
-  labels: ~
 0xC133B0:
   size: 247
   type: assembly
@@ -7385,13 +6914,11 @@ texttables:
   name: CC_1C_09
   size: 10
   type: assembly
-  labels: ~
 0xC140F9:
   description: 'Text control code: [1C 00 XX]'
   name: CC_1C_00
   size: 10
   type: assembly
-  labels: ~
 0xC14103:
   description: 'Text control code: [0A XX XX XX 00]'
   name: CC_0A
@@ -7450,19 +6977,16 @@ texttables:
   name: CC_07
   size: 10
   type: assembly
-  labels: ~
 0xC143C2:
   description: 'Text control code: [18 01 XX]'
   name: CC_18_01
   size: 10
   type: assembly
-  labels: ~
 0xC143CC:
   description: 'Text control code: [18 03 XX]'
   name: CC_18_03
   size: 10
   type: assembly
-  labels: ~
 0xC143D6:
   description: 'Text control code: [08 XX XX XX 00]'
   name: CC_08
@@ -7592,7 +7116,6 @@ texttables:
   name: CC_1F_01
   size: 11
   type: assembly
-  labels: ~
 0xC147AB:
   description: 'Text control code: [1F 02 XX]'
   name: CC_1F_02
@@ -7840,7 +7363,6 @@ texttables:
   name: CC_10
   size: 10
   type: assembly
-  labels: ~
 0xC14EB5:
   description: 'Text control code: [1A 06 XX]'
   name: CC_1A_06
@@ -8000,7 +7522,6 @@ texttables:
   name: CC_1F_60
   size: 10
   type: assembly
-  labels: ~
 0xC1549E:
   description: 'Text control code: [1A 05 XX YY]'
   name: CC_1A_05
@@ -8019,13 +7540,11 @@ texttables:
   name: CC_18_08
   size: 37
   type: assembly
-  labels: ~
 0xC1554E:
   description: 'Text control code: [18 09 XX]'
   name: CC_18_09
   size: 37
   type: assembly
-  labels: ~
 0xC15573:
   description: 'Text control code: [1C 0B XX XX XX XX]'
   name: CC_1C_0B
@@ -8208,7 +7727,6 @@ texttables:
   name: CC_19_1B
   size: 34
   type: assembly
-  labels: ~
 0xC15C58:
   description: 'Text control code: [1F 71 XX YY]'
   name: CC_1F_71
@@ -8560,7 +8078,6 @@ texttables:
   name: CC_1F_62
   size: 10
   type: assembly
-  labels: ~
 0xC16A01:
   description: 'Text control code: [1E 08 XX YY]'
   name: CC_1E_08
@@ -8609,7 +8126,6 @@ texttables:
   name: CC_1F_E5
   size: 11
   type: assembly
-  labels: ~
 0xC16BAF:
   description: 'Text control code: [1F E6 XX XX]'
   name: CC_1F_E6
@@ -8631,7 +8147,6 @@ texttables:
   name: CC_1F_E8
   size: 11
   type: assembly
-  labels: ~
 0xC16C40:
   description: 'Text control code: [1F E9 XX XX]'
   name: CC_1F_E9
@@ -8863,7 +8378,6 @@ texttables:
   name: CC_1F_D3
   size: 11
   type: assembly
-  labels: ~
 0xC1744B:
   description: 'Text control code: [1E 09 XX YY YY YY]'
   name: CC_1E_09
@@ -8965,7 +8479,6 @@ texttables:
   name: CC_19_02
   size: 20
   type: assembly
-  labels: ~
 0xC1790B:
   description: 'Text system: [18] comparison tree'
   name: CC_18_TREE
@@ -9624,7 +9137,6 @@ texttables:
 0xC190E6:
   size: 11
   type: assembly
-  labels: ~
 0xC190F1:
   size: 76
   type: assembly
@@ -9668,11 +9180,9 @@ texttables:
 0xC191F8:
   size: 30
   type: assembly
-  labels: ~
 0xC19216:
   size: 51
   type: assembly
-  labels: ~
 0xC19249:
   size: 210
   type: assembly
@@ -9694,11 +9204,9 @@ texttables:
 0xC193E7:
   size: 80
   type: assembly
-  labels: ~
 0xC19437:
   size: 10
   type: assembly
-  labels: ~
 0xC19441:
   size: 238
   type: assembly
@@ -9740,7 +9248,6 @@ texttables:
 0xC19A11:
   size: 50
   type: assembly
-  labels: ~
 0xC19A43:
   size: 267
   type: assembly
@@ -9890,7 +9397,6 @@ texttables:
 0xC1A778:
   size: 29
   type: assembly
-  labels: ~
 0xC1A795:
   size: 643
   type: assembly
@@ -9922,7 +9428,6 @@ texttables:
 0xC1AA18:
   size: 69
   type: assembly
-  labels: ~
 0xC1AA5D:
   size: 157
   type: assembly
@@ -9949,39 +9454,31 @@ texttables:
 0xC1AC4A:
   size: 81
   type: assembly
-  labels: ~
 0xC1AC9B:
   size: 6
   type: assembly
-  labels: ~
 0xC1ACA1:
   size: 81
   type: assembly
-  labels: ~
 0xC1ACF2:
   size: 6
   type: assembly
-  labels: ~
 0xC1ACF8:
   description: A -> $9D11
   size: 10
   type: assembly
-  labels: ~
 0xC1AD02:
   size: 8
   type: assembly
-  labels: ~
 0xC1AD0A:
   final processor state:
     accum: 16
     index: 16
   size: 28
   type: assembly
-  labels: ~
 0xC1AD26:
   size: 28
   type: assembly
-  labels: ~
 0xC1AD42:
   size: 59
   type: assembly
@@ -10155,7 +9652,6 @@ texttables:
   name: GET_OFF_BICYCLE
   size: 54
   type: assembly
-  labels: ~
 0xC1BEFC:
   size: 330
   type: assembly
@@ -10246,7 +9742,6 @@ texttables:
 0xC1C367:
   size: 12
   type: assembly
-  labels: ~
 0xC1C373:
   size: 67
   type: assembly
@@ -10313,11 +9808,9 @@ texttables:
 0xC1CA06:
   size: 108
   type: assembly
-  labels: ~
 0xC1CA72:
   size: 131
   type: assembly
-  labels: ~
 0xC1CAF5:
   size: 138
   type: assembly
@@ -10503,7 +9996,6 @@ texttables:
 0xC1DBBB:
   size: 97
   type: assembly
-  labels: ~
 0xC1DC1C:
   description: Display In-Battle Text
   name: DISPLAY_IN_BATTLE_TEXT
@@ -10533,31 +10025,26 @@ texttables:
   name: REDIRECT_C10A04
   size: 6
   type: assembly
-  labels: ~
 0xC1DD41:
   description: Redirect to C10A1D
   name: REDIRECT_C10A1D
   size: 6
   type: assembly
-  labels: ~
 0xC1DD47:
   description: Redirect to C104EE (CREATE_WINDOW)
   name: REDIRECT_C104EE
   size: 6
   type: assembly
-  labels: ~
 0xC1DD4D:
   description: Redirect to C1007E (SET_WINDOW_FOCUS)
   name: REDIRECT_C1007E
   size: 6
   type: assembly
-  labels: ~
 0xC1DD53:
   description: Redirect to C10FA3
   name: REDIRECT_C10FA3
   size: 6
   type: assembly
-  labels: ~
 0xC1DD59:
   description: Redirect to C10084
   name: REDIRECT_C10084
@@ -10566,21 +10053,17 @@ texttables:
     index: 16
   size: 6
   type: assembly
-  labels: ~
 0xC1DD5F:
   size: 17
   type: assembly
-  labels: ~
 0xC1DD70:
   description: Redirect to C1AC4A
   name: REDIRECT_C1AC4A
   size: 6
   type: assembly
-  labels: ~
 0xC1DD76:
   size: 6
   type: assembly
-  labels: ~
 0xC1DD7C:
   description: Redirect to C1ACF8
   name: REDIRECT_C1ACF8
@@ -10589,67 +10072,55 @@ texttables:
     index: 16
   size: 6
   type: assembly
-  labels: ~
 0xC1DD82:
   size: 29
   type: assembly
-  labels: ~
 0xC1DD9F:
   size: 39
   type: assembly
-  labels: ~
 0xC1DDC6:
   size: 6
   type: assembly
   description: Redirect to C1DDC6 (REMOVE_ITEM_FROM_INVENTORY)
   name: REDIRECT_C1DDC6
-  labels: ~
 0xC1DDCC:
   description: Redirect to C43573
   name: REDIRECT_C43573
   size: 7
   type: assembly
-  labels: ~
 0xC1DDD3:
   size: 7
   type: assembly
   description: Redirect to C3E6F8
   name: REDIRECT_C3E6F8
-  labels: ~
 0xC1DDDA:
   size: 75
   type: assembly
-  labels: ~
 0xC1DE25:
   size: 6
   type: assembly
   description: Redirect to C1163C
   name: REDIRECT_C1163C
-  labels: ~
 0xC1DE2B:
   size: 6
   type: assembly
   description: Redirect to C1196A
   name: REDIRECT_C1196A
-  labels: ~
 0xC1DE31:
   size: 6
   type: assembly
   description: Redirect to C1CFC6
   name: REDIRECT_C1CFC6
-  labels: ~
 0xC1DE37:
   size: 6
   type: assembly
   description: Redirect to C1242E
   name: REDIRECT_C1242E
-  labels: ~
 0xC1DE3D:
   size: 6
   type: assembly
   description: Redirect to C1CBCD
   name: REDIRECT_C1CBCD
-  labels: ~
 0xC1DE43:
   size: 460
   type: assembly
@@ -10670,7 +10141,6 @@ texttables:
   description: Do nothing
   size: 3
   type: assembly
-  labels: ~
 0xC1E1A5:
   description: Enemy Select Mode (Debug)
   name: ENEMY_SELECT_MODE
@@ -10712,7 +10182,6 @@ texttables:
 0xC1E48D:
   size: 49
   type: assembly
-  labels: ~
 0xC1E4BE:
   size: 193
   type: assembly
@@ -10791,11 +10260,9 @@ texttables:
 0xC1EC8F:
   size: 66
   type: assembly
-  labels: ~
 0xC1ECD1:
   size: 11
   type: assembly
-  labels: ~
 0xC1ECDC:
   name: CORRUPTION_CHECK
   description: Checks save file signatures
@@ -10996,11 +10463,9 @@ texttables:
 0xC1FF6B:
   size: 46
   type: assembly
-  labels: ~
 0xC1FF99:
   size: 58
   type: assembly
-  labels: ~
 0xC1FFD3:
   size: 28
   type: assembly
@@ -11010,11 +10475,9 @@ texttables:
   size: 2
   type: data
   description: SRAM Size-checking routine checksum
-  labels: ~
 0xC1FFF1:
   size: 15
   type: nullspace
-  labels: ~
 0xC20000:
   labels:
     0x0010: UNKNOWN0
@@ -11033,7 +10496,6 @@ texttables:
 0xC200B9:
   type: data
   size: 32
-  labels: ~
 0xC200D9:
   labels:
     0x011E: UNKNOWN0
@@ -11083,7 +10545,6 @@ texttables:
 0xC2038B:
   size: 56
   type: assembly
-  labels: ~
 0xC203C3:
   labels:
     0x042D: UNKNOWN0
@@ -11126,7 +10587,6 @@ texttables:
 0xC207B6:
   size: 43
   type: assembly
-  labels: ~
 0xC207E1:
   labels:
     0x0814: UNKNOWN0
@@ -11153,7 +10613,6 @@ texttables:
 0xC20912:
   type: data
   size: 142
-  labels: ~
 0xC209A0:
   labels:
     0x09D5: UNKNOWN0
@@ -11213,7 +10672,6 @@ texttables:
 0xC20D3F:
   size: 74
   type: assembly
-  labels: ~
 0xC20D89:
   labels:
     0x0DA7: UNKNOWN0
@@ -11237,7 +10695,6 @@ texttables:
 0xC20F08:
   size: 30
   type: assembly
-  labels: ~
 0xC20F26:
   labels:
     0x0F47: UNKNOWN0
@@ -11353,15 +10810,12 @@ texttables:
 0xC216AD:
   size: 28
   type: assembly
-  labels: ~
 0xC216C9:
   size: 7
   type: assembly
-  labels: ~
 0xC216D0:
   size: 11
   type: assembly
-  labels: ~
 0xC216DB:
   labels:
     0x169B: UNKNOWN0
@@ -11453,13 +10907,11 @@ texttables:
   name: RECALC_CHARACTER_POSTMATH_VITALITY
   size: 24
   type: assembly
-  labels: ~
 0xC21D7D:
   description: Recalculate one character's postmath IQ
   name: RECALC_CHARACTER_POSTMATH_IQ
   size: 24
   type: assembly
-  labels: ~
 0xC21D95:
   description: Recalculate one character's miss rate
   name: RECALC_CHARACTER_MISS_RATE
@@ -11619,11 +11071,9 @@ texttables:
 0xC226C5:
   size: 33
   type: assembly
-  labels: ~
 0xC226E6:
   size: 10
   type: assembly
-  labels: ~
 0xC226F0:
   labels:
     0x26FF: UNKNOWN0
@@ -11705,7 +11155,6 @@ texttables:
 0xC22A2C:
   size: 14
   type: assembly
-  labels: ~
 0xC22A3A:
   labels:
     0x2A73: UNKNOWN0
@@ -11764,7 +11213,6 @@ texttables:
 0xC23008:
   size: 115
   type: assembly
-  labels: ~
 0xC2307B:
   labels:
     0x30DD: UNKNOWN0
@@ -11773,7 +11221,6 @@ texttables:
 0xC230F3:
   size: 22
   type: assembly
-  labels: ~
 0xC23109:
   name: CONSOLATION_ITEM_TABLE
   description: Table for enemies that offer consolation prizes
@@ -11787,13 +11234,11 @@ texttables:
     size: 7
   - name: "Null"
     size: 1
-  labels: ~
 0xC2311B:
   name: MYSTERY_POINTER
   description: Unknown Pointer
   type: data
   size: 3
-  labels: ~
 0xC2311E:
   labels:
     0x315C: UNKNOWN0
@@ -12476,7 +11921,6 @@ texttables:
     A: Battle action id to retrieve
   size: 29
   type: assembly
-  labels: ~
 0xC269A8:
   description: Get enemy type
   name: GET_ENEMY_TYPE
@@ -12484,7 +11928,6 @@ texttables:
     A: Enemy ID
   size: 22
   type: assembly
-  labels: ~
 0xC269BE:
   labels:
     0x69CD: UNKNOWN0
@@ -12502,17 +11945,14 @@ texttables:
     accum: 8
   size: 9
   type: assembly
-  labels: ~
 0xC269F8:
   size: 53
   type: assembly
-  labels: ~
 0xC26A2D:
   description: Random value between 0 and (A-1)
   name: RAND_0TOA-1
   size: 23
   type: assembly
-  labels: ~
 0xC26A44:
   description: Multiply A by rand(0.5, 1.5)
   name: MULT_A_X_RAND_0.5_1.5
@@ -12628,7 +12068,6 @@ texttables:
 0xC26FDC:
   size: 77
   type: assembly
-  labels: ~
 0xC27029:
   labels:
     0x7081: UNKNOWN0
@@ -12638,7 +12077,6 @@ texttables:
 0xC27089:
   size: 91
   type: assembly
-  labels: ~
 0xC270E4:
   labels:
     0x70F3: UNKNOWN0
@@ -12860,7 +12298,6 @@ texttables:
   name: SWAP_ATTACKER_WITH_TARGET
   size: 37
   type: assembly
-  labels: ~
 0xC27EAF:
   description: Calculate Damage (A = user pointer, X = amount)
   name: CALC_DAMAGE
@@ -13058,7 +12495,6 @@ texttables:
   name: BTLACT_NULL
   size: 3
   type: assembly
-  labels: ~
 0xC2889E:
   description: 'Battle Action: Steal From Enemy'
   name: BTLACT_STEAL
@@ -13168,7 +12604,6 @@ texttables:
   name: REDIRECT_C2A056
   size: 7
   type: assembly
-  labels: ~
 0xC28D41:
   description: Generate Success/Fail (Luck/40 chance)
   name: SUCCESS_LUCK40
@@ -13206,7 +12641,6 @@ texttables:
   name: REDIRECT_C29F06
   size: 7
   type: assembly
-  labels: ~
 0xC28E42:
   description: "Battle action: Reduce target's PP by (1/16 max PP \xB1 50%)"
   name: BTLACT_REDUCEPP
@@ -13245,91 +12679,76 @@ texttables:
   name: BTLACT_DOUBLE_BASH
   size: 11
   type: assembly
-  labels: ~
 0xC29004:
   description: Redirect to C2889B
   name: REDIRECT_C2889B
   size: 7
   type: assembly
-  labels: ~
 0xC2900B:
   description: "Battle action: 350 \xB1 25% fire damage"
   name: BTLACT_350_FIRE_DAMAGE
   size: 33
   type: assembly
-  labels: ~
 0xC2902C:
   description: Redirect to C28651
   name: REDIRECT_C28651
   size: 7
   type: assembly
-  labels: ~
 0xC29033:
   description: 'Battle Action: Nothing'
   name: BTLACT_NULL2
   size: 3
   type: assembly
-  labels: ~
 0xC29036:
   description: 'Battle Action: Nothing'
   name: BTLACT_NULL3
   size: 3
   type: assembly
-  labels: ~
 0xC29039:
   description: 'Battle Action: Nothing'
   name: BTLACT_NULL4
   size: 3
   type: assembly
-  labels: ~
 0xC2903C:
   description: 'Battle Action: Nothing'
   name: BTLACT_NULL5
   size: 3
   type: assembly
-  labels: ~
 0xC2903F:
   description: 'Battle Action: Nothing'
   name: BTLACT_NULL6
   size: 3
   type: assembly
-  labels: ~
 0xC29042:
   description: 'Battle Action: Nothing'
   name: BTLACT_NULL7
   size: 3
   type: assembly
-  labels: ~
 0xC29045:
   description: 'Battle Action: Nothing'
   name: BTLACT_NULL8
   size: 3
   type: assembly
-  labels: ~
 0xC29048:
   description: 'Battle Action: Nothing'
   name: BTLACT_NULL9
   size: 3
   type: assembly
-  labels: ~
 0xC2904B:
   description: 'Battle Action: Nothing'
   name: BTLACT_NULL10
   size: 3
   type: assembly
-  labels: ~
 0xC2904E:
   description: 'Battle Action: Nothing'
   name: BTLACT_NULL11
   size: 3
   type: assembly
-  labels: ~
 0xC29051:
   description: 'Battle Action: Neutralizer'
   name: BTLACT_NEUTRALIZE
   size: 117
   type: assembly
-  labels: ~
 0xC290C6:
   description: Mirror Related?
   labels:
@@ -13373,7 +12792,6 @@ texttables:
   name: BTLACT_ENEMYEXTEND
   size: 3
   type: assembly
-  labels: ~
 0xC292EE:
   description: 'Battle action: Master Barf death'
   name: BTLACT_MASTERBARFDEATH
@@ -13433,25 +12851,21 @@ texttables:
   name: BTLACT_PSI_ROCKIN_A
   size: 9
   type: assembly
-  labels: ~
 0xC2955F:
   description: "Battle action: PSI Rockin \u03B2 (180 \xB1 50% damage)"
   name: BTLACT_PSI_ROCKIN_B
   size: 9
   type: assembly
-  labels: ~
 0xC29568:
   description: "Battle action: PSI Rockin \u03B3 (320 \xB1 50% damage)"
   name: BTLACT_PSI_ROCKIN_G
   size: 9
   type: assembly
-  labels: ~
 0xC29571:
   description: "Battle action: PSI Rockin \u03A9 (640 \xB1 50% damage)"
   name: BTLACT_PSI_ROCKIN_O
   size: 9
   type: assembly
-  labels: ~
 0xC2957A:
   description: PSI Fire (common code)
   name: PSI_FIRE_COMMON
@@ -13464,25 +12878,21 @@ texttables:
   name: BTLACT_PSI_FIRE_A
   size: 9
   type: assembly
-  labels: ~
 0xC295B4:
   description: "Battle action: PSI Fire \u03B2 (160 \xB1 25% fire damage)"
   name: BTLACT_PSI_FIRE_B
   size: 9
   type: assembly
-  labels: ~
 0xC295BD:
   description: "Battle action: PSI Fire \u03B3 (240 \xB1 25% fire damage)"
   name: BTLACT_PSI_FIRE_G
   size: 9
   type: assembly
-  labels: ~
 0xC295C6:
   description: "Battle action: PSI Fire \u03A9 (320 \xB1 25% fire damage)"
   name: BTLACT_PSI_FIRE_O
   size: 9
   type: assembly
-  labels: ~
 0xC295CF:
   description: PSI Freeze (common code)
   name: PSI_FREEZE_COMMON
@@ -13496,25 +12906,21 @@ texttables:
   name: BTLACT_PSI_FREEZE_A
   size: 9
   type: assembly
-  labels: ~
 0xC29650:
   description: "Battle action: PSI Freeze \u03B2 (360 \xB1 25% freeze damage)"
   name: BTLACT_PSI_FREEZE_B
   size: 9
   type: assembly
-  labels: ~
 0xC29659:
   description: "Battle action: PSI Freeze \u03B3 (540 \xB1 25% freeze damage)"
   name: BTLACT_PSI_FREEZE_G
   size: 9
   type: assembly
-  labels: ~
 0xC29662:
   description: "Battle action: PSI Freeze \u03A9 (720 \xB1 25% freeze damage)"
   name: BTLACT_PSI_FREEZE_O
   size: 9
   type: assembly
-  labels: ~
 0xC2966B:
   description: PSI Thunder (common code) (A = Base damage, X = Number of strikes)
   name: PSI_THUNDER_COMMON
@@ -13549,28 +12955,24 @@ texttables:
   name: BTLACT_PSI_THUNDER_A
   size: 12
   type: assembly
-  labels: ~
 0xC2987D:
   description: "Battle action: PSI Thunder \u03B2 (120 \xB1 50% damage per strike,
     0-2 strikes)"
   name: BTLACT_PSI_THUNDER_B
   size: 12
   type: assembly
-  labels: ~
 0xC29889:
   description: "Battle action: PSI Thunder \u03B3 (200 \xB1 50% damage per strike,
     0-3 strikes)"
   name: BTLACT_PSI_THUNDER_G
   size: 12
   type: assembly
-  labels: ~
 0xC29895:
   description: "Battle action: PSI Thunder \u03A9 (200 \xB1 50% damage per strike,
     0-4 strikes)"
   name: BTLACT_PSI_THUNDER_O
   size: 12
   type: assembly
-  labels: ~
 0xC298A1:
   description: PSI Flash immunity test
   name: FLASH_IMMUNITY_TEST
@@ -13661,43 +13063,36 @@ texttables:
   name: BTLACT_PSI_STARSTORM_A
   size: 9
   type: assembly
-  labels: ~
 0xC29AAF:
   description: "Battle action: PSI Starstorm \u03A9 (720 \xB1 25% damage)"
   name: BTLACT_PSI_STARSTORM_O
   size: 9
   type: assembly
-  labels: ~
 0xC29AB8:
   description: Lifeup (common code)
   name: LIFEUP_COMMON
   size: 14
   type: assembly
-  labels: ~
 0xC29AC6:
   description: "Battle action: Lifeup \u03B1 (Restore 100 \xB1 25% HP)"
   name: BTLACT_LIFEUP_A
   size: 9
   type: assembly
-  labels: ~
 0xC29ACF:
   description: "Battle action: Lifeup \u03B2 (Restore 300 \xB1 25% HP)"
   name: BTLACT_LIFEUP_B
   size: 9
   type: assembly
-  labels: ~
 0xC29AD8:
   description: "Battle action: Lifeup \u03B3 (Restore 10000 HP)"
   name: BTLACT_LIFEUP_G
   size: 9
   type: assembly
-  labels: ~
 0xC29AE1:
   description: "Battle action: Lifeup \u03A9 (Restore 400 \xB1 25% HP)"
   name: BTLACT_LIFEUP_O
   size: 9
   type: assembly
-  labels: ~
 0xC29AEA:
   description: "Battle action: Healing \u03B1"
   name: BTLACT_HEALING_A
@@ -13765,7 +13160,6 @@ texttables:
   name: REDIRECT_C29D44
   size: 7
   type: assembly
-  labels: ~
 0xC29D81:
   description: "Battle action: Shield \u03B2"
   name: BTLACT_SHIELD_B
@@ -13779,7 +13173,6 @@ texttables:
   name: REDIRECT_C29D81
   size: 7
   type: assembly
-  labels: ~
 0xC29DBE:
   description: "Battle action: PSI Shield \u03B1"
   name: BTLACT_PSI_SHIELD_A
@@ -13793,7 +13186,6 @@ texttables:
   name: REDIRECT_C29DBE
   size: 7
   type: assembly
-  labels: ~
 0xC29DFB:
   description: "Battle action: PSI Shield \u03B2"
   name: BTLACT_PSI_SHIELD_B
@@ -13807,7 +13199,6 @@ texttables:
   name: REDIRECT_C29DFB
   size: 7
   type: assembly
-  labels: ~
 0xC29E38:
   description: "Battle action: Offense Up \u03B1"
   name: BTLACT_OFFENSE_UP_A
@@ -13820,7 +13211,6 @@ texttables:
   name: REDIRECT_C29E38
   size: 7
   type: assembly
-  labels: ~
 0xC29E86:
   description: "Battle action: Defense Down \u03B1"
   name: BTLACT_DEFENSE_DOWN_A
@@ -13838,7 +13228,6 @@ texttables:
   name: REDIRECT_C29E86
   size: 7
   type: assembly
-  labels: ~
 0xC29F06:
   description: "Battle action: Hypnosis \u03B1 (Inflict sleep)"
   name: BTLACT_HYPNOSIS_A
@@ -13852,7 +13241,6 @@ texttables:
   name: REDIRECT_C29F06
   size: 7
   type: assembly
-  labels: ~
 0xC29F5E:
   description: "Battle action: Magnet \u03B1 (Steal 2d4 PP)"
   name: BTLACT_MAGNET_A
@@ -13884,7 +13272,6 @@ texttables:
   name: REDIRECT_C29FFE
   size: 7
   type: assembly
-  labels: ~
 0xC2A056:
   description: "Battle action: Brainshock \u03B1 (Inflict feeling strange)"
   name: BTLACT_BRAINSHOCK_A
@@ -13898,27 +13285,21 @@ texttables:
   name: REDIRECT_C2A056
   size: 7
   type: assembly
-  labels: ~
 0xC2A0AE:
   size: 17
   type: assembly
-  labels: ~
 0xC2A0BF:
   size: 16
   type: assembly
-  labels: ~
 0xC2A0CF:
   size: 16
   type: assembly
-  labels: ~
 0xC2A0DF:
   size: 16
   type: assembly
-  labels: ~
 0xC2A0EF:
   size: 16
   type: assembly
-  labels: ~
 0xC2A0FF:
   labels:
     0xA13D: UNKNOWN0
@@ -13947,7 +13328,6 @@ texttables:
 0xC2A26F:
   size: 16
   type: assembly
-  labels: ~
 0xC2A27F:
   labels:
     0xA29F: UNKNOWN0
@@ -13970,11 +13350,9 @@ texttables:
 0xC2A360:
   size: 16
   type: assembly
-  labels: ~
 0xC2A370:
   size: 16
   type: assembly
-  labels: ~
 0xC2A380:
   labels:
     0xA398: UNKNOWN0
@@ -14010,7 +13388,6 @@ texttables:
 0xC2A507:
   size: 7
   type: assembly
-  labels: ~
 0xC2A50E:
   labels:
     0xA53F: UNKNOWN0
@@ -14035,19 +13412,16 @@ texttables:
   name: BTLACT_BOTTLE_ROCKET
   size: 9
   type: assembly
-  labels: ~
 0xC2A5DA:
   description: 'Battle action: Big bottle rocket'
   name: BTLACT_BIG_BOTTLE_ROCKET
   size: 9
   type: assembly
-  labels: ~
 0xC2A5E3:
   description: 'Battle action: Multi bottle rocket'
   name: BTLACT_MULTI_BOTTLE_ROCKET
   size: 9
   type: assembly
-  labels: ~
 0xC2A5EC:
   labels:
     0xA61D: UNKNOWN0
@@ -14088,13 +13462,11 @@ texttables:
   name: BTLACT_BOMB
   size: 9
   type: assembly
-  labels: ~
 0xC2A821:
   description: 'Battle action: Super bomb'
   name: BTLACT_SUPER_BOMB
   size: 9
   type: assembly
-  labels: ~
 0xC2A82A:
   labels:
     0xA85B: UNKNOWN0
@@ -14130,7 +13502,6 @@ texttables:
   name: BTLACT_800_FIRE_DAMAGE
   size: 33
   type: assembly
-  labels: ~
 0xC2A9BD:
   description: Insect spray (common code)
   name: INSECT_SPRAY_COMMON
@@ -14144,13 +13515,11 @@ texttables:
   name: BTLACT_INSECT_SPRAY_100
   size: 9
   type: assembly
-  labels: ~
 0xC2AA15:
   description: "Battle action: 200 \xB1 50% damage to insect-type enemies"
   name: BTLACT_INSECT_SPRAY_200
   size: 9
   type: assembly
-  labels: ~
 0xC2AA1E:
   description: Rust spray (common code)
   name: RUST_SPRAY_COMMON
@@ -14164,13 +13533,11 @@ texttables:
   name: BTLACT_RUST_SPRAY_200
   size: 9
   type: assembly
-  labels: ~
 0xC2AA76:
   description: "Battle action: 400 \xB1 50% damage to metal-type enemies"
   name: BTLACT_RUST_SPRAY_400
   size: 9
   type: assembly
-  labels: ~
 0xC2AA7F:
   description: 'Battle action: Double current Guts'
   name: BTLACT_DOUBLE_GUTS
@@ -14191,7 +13558,6 @@ texttables:
   name: REDIRECT_C2AAC6
   size: 7
   type: assembly
-  labels: ~
 0xC2AB14:
   description: Checks if a boss is currently in the battle
   name: BOSS_BATTLE_CHECK
@@ -14216,15 +13582,12 @@ texttables:
 0xC2AC2A:
   size: 20
   type: assembly
-  labels: ~
 0xC2AC3E:
   size: 19
   type: assembly
-  labels: ~
 0xC2AC51:
   size: 23
   type: assembly
-  labels: ~
 0xC2AC68:
   labels:
     0xAC74: UNKNOWN0
@@ -14273,7 +13636,6 @@ texttables:
 0xC2AF1F:
   size: 386
   type: assembly
-  labels: ~
 0xC2B0A1:
   type: assembly
   size: 209
@@ -14385,7 +13747,6 @@ texttables:
 0xC2B930:
   size: 405
   type: assembly
-  labels: ~
 0xC2BAC5:
   size: 83
   type: assembly
@@ -14479,19 +13840,16 @@ texttables:
   name: BTLACT_SOW_SEEDS
   size: 9
   type: assembly
-  labels: ~
 0xC2C145:
   description: 'Battle action: Call for help'
   name: BTLACT_CALL_FOR_HELP
   size: 9
   type: assembly
-  labels: ~
 0xC2C14E:
   description: 'Battle action: Rainbow of colours'
   name: BTLACT_RAINBOW_OF_COLOURS
   size: 111
   type: assembly
-  labels: ~
 0xC2C1BD:
   size: 98
   type: assembly
@@ -14520,81 +13878,66 @@ texttables:
 0xC2C32C:
   size: 78
   type: assembly
-  labels: ~
 0xC2C37A:
   size: 104
   type: assembly
-  labels: ~
 0xC2C3E2:
   size: 61
   type: assembly
-  labels: ~
 0xC2C41F:
   size: 161
   type: assembly
-  labels: ~
 0xC2C4C0:
   description: Pokey's 'All-Mighty Idiot' speech transition
   name: GIYGAS_ALL-MIGHTY_IDIOT_SPEECH
   size: 83
   type: assembly
-  labels: ~
 0xC2C513:
   size: 3
   type: assembly
-  labels: ~
 0xC2C516:
   size: 92
   type: assembly
-  labels: ~
 0xC2C572:
   description: 'Battle action: Giygas prayer #1'
   name: GIYGAS_PRAYER_1
   size: 95
   type: assembly
-  labels: ~
 0xC2C5D1:
   description: 'Battle action: Giygas prayer #2'
   name: GIYGAS_PRAYER_2
   size: 41
   type: assembly
-  labels: ~
 0xC2C5FA:
   description: 'Battle action: Giygas prayer #3'
   name: GIYGAS_PRAYER_3
   size: 41
   type: assembly
-  labels: ~
 0xC2C623:
   description: 'Battle action: Giygas prayer #4'
   name: GIYGAS_PRAYER_4
   size: 41
   type: assembly
-  labels: ~
 0xC2C64C:
   description: 'Battle action: Giygas prayer #5'
   name: GIYGAS_PRAYER_5
   size: 41
   type: assembly
-  labels: ~
 0xC2C675:
   description: 'Battle action: Giygas prayer #6'
   name: GIYGAS_PRAYER_6
   size: 41
   type: assembly
-  labels: ~
 0xC2C69E:
   description: 'Battle action: Giygas prayer #7'
   name: GIYGAS_PRAYER_7
   size: 50
   type: assembly
-  labels: ~
 0xC2C6D0:
   description: 'Battle action: Giygas prayer #8'
   name: GIYGAS_PRAYER_8
   size: 32
   type: assembly
-  labels: ~
 0xC2C6F0:
   description: 'Battle action: Giygas prayer #9'
   name: GIYGAS_PRAYER_9
@@ -14617,7 +13960,6 @@ texttables:
   name: LOAD_ENEMY_BATTLE_SPRITES
   size: 101
   type: assembly
-  labels: ~
 0xC2C92D:
   size: 1720
   type: assembly
@@ -14669,7 +14011,6 @@ texttables:
 0xC2CFE5:
   size: 199
   type: assembly
-  labels: ~
 0xC2D0AC:
   final processor state:
     accum: 16
@@ -14718,11 +14059,9 @@ texttables:
 0xC2DAE3:
   size: 49
   type: assembly
-  labels: ~
 0xC2DB14:
   size: 43
   type: assembly
-  labels: ~
 0xC2DB3F:
   final processor state:
     accum: 16
@@ -14866,7 +14205,6 @@ texttables:
 0xC2E8C4:
   size: 28
   type: assembly
-  labels: ~
 0xC2E8E0:
   description: Set Battle Swirl Parameters
   size: 232
@@ -14892,7 +14230,6 @@ texttables:
 0xC2E9ED:
   size: 40
   type: assembly
-  labels: ~
 0xC2EA15:
   size: 95
   type: assembly
@@ -14910,7 +14247,6 @@ texttables:
 0xC2EAAA:
   size: 37
   type: assembly
-  labels: ~
 0xC2EACF:
   size: 27
   type: assembly
@@ -15070,7 +14406,6 @@ texttables:
 0xC2F8F9:
   size: 30
   type: assembly
-  labels: ~
 0xC2F917:
   labels:
     0xF92C: UNKNOWN0
@@ -15096,12 +14431,10 @@ texttables:
 0xC2FAD2:
   size: 6
   type: assembly
-  labels: ~
 0xC2FAD8:
   description: Store A To $B37C
   size: 6
   type: assembly
-  labels: ~
 0xC2FADE:
   labels:
     0xFAFD: UNKNOWN0
@@ -15169,72 +14502,58 @@ texttables:
 0xC2FFB7:
   type: data
   size: 73
-  labels: ~
 0xC30000:
   type: data
   size: 256
-  labels: ~
 0xC30100:
   description: Display Anti-Piracy screen
   name: DISPLAY_ANTI-PIRACY_SCREEN
   size: 66
   type: assembly
-  labels: ~
 0xC30142:
   description: Display Faulty Game Pak screen
   name: DISPLAY_FAULTY_GAMEPAK_SCREEN
   size: 66
   type: assembly
-  labels: ~
 0xC30184:
   type: data
   size: 2
-  labels: ~
 0xC30186:
   description: Ness's Pajama Flag
   size: 2
   type: data
-  labels: ~
 0xC30188:
   type: data
   size: 57252
   description: Mostly movement data
-  labels: ~
 0xC3E12C:
   type: data
   size: 28
   description: Unknown Table
-  labels: ~
 0xC3E148:
   type: data
   size: 16
   description: Unknown Table
-  labels: ~
 0xC3E158:
   type: data
   size: 16
   description: Unknown Table
-  labels: ~
 0xC3E168:
   type: data
   size: 16
   description: Unknown Table
-  labels: ~
 0xC3E178:
   type: data
   size: 184
   description: Unknown
-  labels: ~
 0xC3E230:
   type: data
   size: 16
   description: Unknown Table
-  labels: ~
 0xC3E240:
   description: Unknown Table
   type: data
   size: 16
-  labels: ~
 0xC3E250:
   name: WINDOW_POSITION_TABLE
   description: Window sizes and positions
@@ -15249,11 +14568,9 @@ texttables:
     size: 2
   - name: Height
     size: 2
-  labels: ~
 0xC3E3F8:
   type: data
   size: 88
-  labels: ~
 0xC3E450:
   labels:
     0xE489: UNKNOWN0
@@ -15265,19 +14582,16 @@ texttables:
   name: CLEAR_9622
   size: 10
   type: assembly
-  labels: ~
 0xC3E4D4:
   description: Set $9622 to 1
   name: SET_9622_ONE
   size: 12
   type: assembly
-  labels: ~
 0xC3E4E0:
   description: Call C12DD5 with $9622 cleared, then set $9622
   name: CALL_C12DD5_WITH_ZERO_9622
   size: 15
   type: assembly
-  labels: ~
 0xC3E4EF:
   labels:
     0xE4FE: UNKNOWN0
@@ -15335,18 +14649,15 @@ texttables:
 0xC3E84E:
   type: data
   size: 38
-  labels: ~
 0xC3E874:
   type: data
   size: 259
   description: Debug Mode Text
   name: DEBUG_MODE_TEXT
-  labels: ~
 0xC3E977:
   description: Inventory Something
   size: 41
   type: assembly
-  labels: ~
 0xC3E9A0:
   labels:
     0xE9C5: UNKNOWN0
@@ -15454,12 +14765,10 @@ texttables:
     index: 16
   size: 3
   type: assembly
-  labels: ~
 0xC3EF26:
   type: data
   size: 0x12E
   description: Has PSI category text in it...
-  labels: ~
 0xC3F054:
   type: data
   size: 0x3C
@@ -15486,7 +14795,6 @@ texttables:
   size: 316
   description: PSI Target Text
   name: PSI_TARGET_TEXT
-  labels: ~
 0xC3F1EC:
   labels:
     0xF20A: UNKNOWN0
@@ -15501,7 +14809,6 @@ texttables:
 0xC3F2B1:
   type: data
   size: 278
-  labels: ~
 0xC3F3C7:
   labels:
     0xF3E2: UNKNOWN0
@@ -15556,11 +14863,9 @@ texttables:
 0xC3F7FB:
   size: 30
   type: assembly
-  labels: ~
 0xC3F819:
   size: 362
   type: data
-  labels: ~
 0xC3F983:
   size: 326
   type: assembly
@@ -15591,7 +14896,6 @@ texttables:
   type: data
   size: 670
   description: Has Name Registration text at the start...
-  labels: ~
 0xC3FDBD:
   type: data
   size: 8
@@ -15600,7 +14904,6 @@ texttables:
   entries:
   - name: Sprite
     size: 2
-  labels: ~
 0xC3FDC5:
   description: |
     Doom routine (wipes SRAM if anti-piracy is triggered)
@@ -15615,33 +14918,26 @@ texttables:
   type: data
   size: 2
   description: SRAM Size-checking routine checksum 2
-  labels: ~
 0xC3FDF4:
   type: nullspace
   size: 524
-  labels: ~
 0xC40000:
   description: A->Screen Display Register
   size: 9
   type: assembly
-  labels: ~
 0xC40009:
   description: $0E->Screen Display Register
   size: 12
   type: assembly
-  labels: ~
 0xC40015:
   size: 14
   type: assembly
-  labels: ~
 0xC40023:
   size: 12
   type: assembly
-  labels: ~
 0xC4002F:
   size: 86
   type: assembly
-  labels: ~
 0xC40085:
   size: 79
   type: assembly
@@ -15653,11 +14949,9 @@ texttables:
 0xC400D4:
   size: 2685
   type: data
-  labels: ~
 0xC40B51:
   size: 36
   type: assembly
-  labels: ~
 0xC40B75:
   size: 95
   type: assembly
@@ -15666,11 +14960,9 @@ texttables:
 0xC40BD4:
   type: data
   size: 543
-  labels: ~
 0xC40DF3:
   size: 3243
   type: data
-  labels: ~
 0xC41A9E:
   description: Decompress data
   name: DECOMP
@@ -15724,7 +15016,6 @@ texttables:
 0xC41EB9:
   size: 70
   type: data
-  labels: ~
 0xC41EFF:
   size: 198
   type: assembly
@@ -15749,11 +15040,9 @@ texttables:
 0xC41FC5:
   size: 2
   type: assembly
-  labels: ~
 0xC41FC7:
   size: 56
   type: data
-  labels: ~
 0xC41FFF:
   size: 94
   type: assembly
@@ -15768,83 +15057,63 @@ texttables:
 0xC4205D:
   size: 231
   type: data
-  labels: ~
 0xC42144:
   size: 46
   type: assembly
-  labels: ~
 0xC42172:
   size: 618
   type: data
-  labels: ~
 0xC423DC:
   size: 46
   type: assembly
-  labels: ~
 0xC4240A:
   size: 47
   type: assembly
-  labels: ~
 0xC42439:
   size: 36
   type: assembly
-  labels: ~
 0xC4245D:
   size: 45
   type: assembly
-  labels: ~
 0xC4248A:
   size: 16
   type: assembly
-  labels: ~
 0xC4249A:
   size: 55
   type: assembly
-  labels: ~
 0xC424D1:
   size: 56
   type: assembly
-  labels: ~
 0xC42509:
   size: 57
   type: assembly
-  labels: ~
 0xC42542:
   size: 39
   type: assembly
-  labels: ~
 0xC42569:
   size: 11
   type: assembly
-  labels: ~
 0xC42574:
   size: 11
   type: assembly
-  labels: ~
 0xC4257F:
   size: 13
   type: assembly
-  labels: ~
 0xC4258C:
   size: 64
   type: assembly
-  labels: ~
 0xC425CC:
   size: 39
   type: assembly
-  labels: ~
 0xC425F3:
   size: 10
   type: assembly
-  labels: ~
 0xC425FD:
   size: 39
   type: assembly
-  labels: ~
 0xC42624:
   size: 13
   type: assembly
-  labels: ~
 0xC42631:
   size: 89
   type: assembly
@@ -15854,7 +15123,6 @@ texttables:
 0xC4268A:
   size: 61
   type: assembly
-  labels: ~
 0xC426C7:
   size: 38
   type: assembly
@@ -15877,7 +15145,6 @@ texttables:
 0xC4279F:
   size: 160
   type: data
-  labels: ~
 0xC4283F:
   size: 69
   type: assembly
@@ -15904,11 +15171,9 @@ texttables:
 0xC42955:
   size: 16
   type: data
-  labels: ~
 0xC42965:
   size: 73
   type: assembly
-  labels: ~
 0xC429AE:
   size: 58
   type: assembly
@@ -15918,19 +15183,15 @@ texttables:
 0xC429E8:
   size: 55
   type: assembly
-  labels: ~
 0xC42A1F:
   type: data
   size: 34
-  labels: ~
 0xC42A41:
   type: data
   size: 170
-  labels: ~
 0xC42AEB:
   type: data
   size: 34
-  labels: ~
 0xC42B0D:
   type: data
   size: 68
@@ -15938,11 +15199,9 @@ texttables:
   - name: Pointer
     size: 4
     type: pointer
-  labels: ~
 0xC42B51:
   type: data
   size: 1012
-  labels: ~
 0xC42F45:
   description: Copies pointers to memory?
   size: 31
@@ -15952,11 +15211,9 @@ texttables:
 0xC42F64:
   size: 40
   type: data
-  labels: ~
 0xC42F8C:
   type: data
   size: 352
-  labels: ~
 0xC430EC:
   size: 453
   type: assembly
@@ -15983,7 +15240,6 @@ texttables:
 0xC43344:
   size: 6
   type: assembly
-  labels: ~
 0xC4334A:
   size: 244
   type: assembly
@@ -16015,11 +15271,9 @@ texttables:
   type: data
   description: Item Use menu
   name: ITEM_USE_MENU
-  labels: ~
 0xC43568:
   size: 11
   type: assembly
-  labels: ~
 0xC43573:
   size: 113
   type: assembly
@@ -16072,11 +15326,9 @@ texttables:
 0xC43874:
   size: 49
   type: assembly
-  labels: ~
 0xC438A5:
   size: 12
   type: assembly
-  labels: ~
 0xC438B1:
   size: 100
   type: assembly
@@ -16088,7 +15340,6 @@ texttables:
 0xC43915:
   size: 512
   type: data
-  labels: ~
 0xC43B15:
   size: 164
   type: assembly
@@ -16128,11 +15379,9 @@ texttables:
 0xC43D75:
   size: 32
   type: assembly
-  labels: ~
 0xC43D95:
   size: 70
   type: assembly
-  labels: ~
 0xC43DDB:
   size: 86
   type: assembly
@@ -16150,7 +15399,6 @@ texttables:
 0xC43EF8:
   size: 91
   type: assembly
-  labels: ~
 0xC43F53:
   size: 36
   type: assembly
@@ -16174,7 +15422,6 @@ texttables:
 0xC4406A:
   size: 75
   type: assembly
-  labels: ~
 0xC440B5:
   size: 258
   type: assembly
@@ -16280,7 +15527,6 @@ texttables:
 0xC44AD7:
   size: 32
   type: data
-  labels: ~
 0xC44AF7:
   size: 67
   type: assembly
@@ -16301,7 +15547,6 @@ texttables:
 0xC44C6C:
   size: 32
   type: data
-  labels: ~
 0xC44C8C:
   size: 318
   type: assembly
@@ -16334,7 +15579,6 @@ texttables:
 0xC44E44:
   size: 9
   type: assembly
-  labels: ~
 0xC44E4D:
   description: Jump to $C44AF7 if A != 0 & A != 0x40
   size: 20
@@ -16403,7 +15647,6 @@ texttables:
 0xC454F2:
   size: 325
   type: data
-  labels: ~
 0xC45637:
   size: 76
   type: assembly
@@ -16447,23 +15690,18 @@ texttables:
   description: Change equipped weapon
   size: 77
   type: assembly
-  labels: ~
 0xC457CA:
   size: 75
   type: assembly
-  labels: ~
 0xC45815:
   size: 75
   type: assembly
-  labels: ~
 0xC45860:
   size: 75
   type: assembly
-  labels: ~
 0xC458AB:
   size: 4
   type: data
-  labels: ~
 0xC458AF:
   size: 79
   type: assembly
@@ -16484,7 +15722,6 @@ texttables:
   type: data
   description: Misc. Target Text
   name: MISC_TARGET_TEXT
-  labels: ~
 0xC4599A:
   size: 141
   type: assembly
@@ -16496,7 +15733,6 @@ texttables:
   type: data
   description: Status/Equip window text
   name: STATUS_EQUIP_WINDOW_TEXT
-  labels: ~
 0xC45C90:
   size: 333
   type: assembly
@@ -16539,11 +15775,9 @@ texttables:
 0xC45F7B:
   size: 27
   type: assembly
-  labels: ~
 0xC45F96:
   size: 18
   type: data
-  labels: ~
 0xC45FA8:
   size: 128
   type: assembly
@@ -16618,19 +15852,15 @@ texttables:
 0xC46257:
   size: 87
   type: assembly
-  labels: ~
 0xC462AE:
   size: 27
   type: assembly
-  labels: ~
 0xC462C9:
   size: 27
   type: assembly
-  labels: ~
 0xC462E4:
   size: 27
   type: assembly
-  labels: ~
 0xC462FF:
   size: 50
   type: assembly
@@ -16676,15 +15906,12 @@ texttables:
 0xC464B5:
   size: 82
   type: assembly
-  labels: ~
 0xC46507:
   size: 45
   type: assembly
-  labels: ~
 0xC46534:
   size: 42
   type: assembly
-  labels: ~
 0xC4655E:
   size: 27
   type: assembly
@@ -16728,23 +15955,18 @@ texttables:
 0xC46698:
   size: 16
   type: assembly
-  labels: ~
 0xC466A8:
   size: 16
   type: assembly
-  labels: ~
 0xC466B8:
   size: 9
   type: assembly
-  labels: ~
 0xC466C1:
   size: 47
   type: assembly
-  labels: ~
 0xC466F0:
   size: 34
   type: assembly
-  labels: ~
 0xC46712:
   size: 74
   type: assembly
@@ -16761,11 +15983,9 @@ texttables:
 0xC467B4:
   size: 14
   type: assembly
-  labels: ~
 0xC467C2:
   size: 36
   type: assembly
-  labels: ~
 0xC467E6:
   size: 52
   type: assembly
@@ -16782,15 +16002,12 @@ texttables:
 0xC46881:
   size: 40
   type: assembly
-  labels: ~
 0xC468A9:
   size: 6
   type: assembly
-  labels: ~
 0xC468AF:
   size: 6
   type: assembly
-  labels: ~
 0xC468B5:
   size: 39
   type: assembly
@@ -16830,67 +16047,51 @@ texttables:
 0xC46A5E:
   size: 16
   type: data
-  labels: ~
 0xC46A6E:
   size: 12
   type: assembly
-  labels: ~
 0xC46A7A:
   size: 32
   type: data
-  labels: ~
 0xC46A9A:
   size: 9
   type: assembly
-  labels: ~
 0xC46AA3:
   size: 9
   type: assembly
-  labels: ~
 0xC46AAC:
   size: 47
   type: assembly
-  labels: ~
 0xC46ADB:
   size: 47
   type: assembly
-  labels: ~
 0xC46B0A:
   size: 35
   type: assembly
-  labels: ~
 0xC46B2D:
   size: 10
   type: assembly
-  labels: ~
 0xC46B37:
   size: 10
   type: assembly
-  labels: ~
 0xC46B41:
   size: 16
   type: data
-  labels: ~
 0xC46B51:
   size: 20
   type: assembly
-  labels: ~
 0xC46B65:
   size: 20
   type: assembly
-  labels: ~
 0xC46B79:
   size: 20
   type: assembly
-  labels: ~
 0xC46B8D:
   size: 46
   type: assembly
-  labels: ~
 0xC46BBB:
   size: 46
   type: assembly
-  labels: ~
 0xC46BE9:
   size: 92
   type: assembly
@@ -16900,35 +16101,27 @@ texttables:
 0xC46C45:
   size: 25
   type: assembly
-  labels: ~
 0xC46C5E:
   size: 41
   type: assembly
-  labels: ~
 0xC46C87:
   size: 20
   type: assembly
-  labels: ~
 0xC46C9B:
   size: 44
   type: assembly
-  labels: ~
 0xC46CC7:
   size: 46
   type: assembly
-  labels: ~
 0xC46CF5:
   size: 46
   type: assembly
-  labels: ~
 0xC46D23:
   size: 40
   type: assembly
-  labels: ~
 0xC46D4B:
   size: 98
   type: assembly
-  labels: ~
 0xC46DAD:
   size: 56
   type: assembly
@@ -16939,19 +16132,15 @@ texttables:
 0xC46DE5:
   size: 82
   type: assembly
-  labels: ~
 0xC46E37:
   size: 15
   type: assembly
-  labels: ~
 0xC46E46:
   size: 9
   type: assembly
-  labels: ~
 0xC46E4F:
   size: 37
   type: assembly
-  labels: ~
 0xC46E74:
   size: 132
   type: assembly
@@ -17024,7 +16213,6 @@ texttables:
 0xC47225:
   size: 68
   type: assembly
-  labels: ~
 0xC47269:
   size: 63
   type: assembly
@@ -17043,29 +16231,23 @@ texttables:
 0xC4730E:
   size: 37
   type: assembly
-  labels: ~
 0xC47333:
   size: 9
   type: assembly
-  labels: ~
 0xC4733C:
   size: 16
   type: assembly
-  labels: ~
 0xC4734C:
   size: 29
   type: assembly
-  labels: ~
 0xC47369:
   size: 7
   type: assembly
-  labels: ~
 0xC47370:
   name: LOAD_FILESCREEN_BG
   description: Loads background for the file select screen
   size: 66
   type: assembly
-  labels: ~
 0xC473B2:
   size: 30
   type: assembly
@@ -17088,7 +16270,6 @@ texttables:
 0xC47499:
   size: 15
   type: assembly
-  labels: ~
 0xC474A8:
   size: 78
   type: assembly
@@ -17104,7 +16285,6 @@ texttables:
 0xC474F6:
   size: 11
   type: data
-  labels: ~
 0xC47501:
   size: 420
   type: assembly
@@ -17168,19 +16348,15 @@ texttables:
 0xC479E9:
   size: 62
   type: assembly
-  labels: ~
 0xC47A27:
   size: 68
   type: assembly
-  labels: ~
 0xC47A6B:
   size: 51
   type: assembly
-  labels: ~
 0xC47A9E:
   size: 217
   type: assembly
-  labels: ~
 0xC47B77:
   size: 200
   type: assembly
@@ -17226,13 +16402,11 @@ texttables:
   type: assembly
   description: Undraws the Flyover text.
   name: UNDRAW_FLYOVER_TEXT
-  labels: ~
 0xC48037:
   size: 215
   type: data
   description: Lumine Hall text
   name: LUMINE_HALL_TEXT
-  labels: ~
 0xC4810E:
   size: 365
   type: assembly
@@ -17330,7 +16504,6 @@ texttables:
 0xC48B2C:
   size: 15
   type: assembly
-  labels: ~
 0xC48B3B:
   size: 159
   type: assembly
@@ -17345,27 +16518,21 @@ texttables:
 0xC48BDA:
   size: 7
   type: assembly
-  labels: ~
 0xC48BE1:
   size: 33
   type: assembly
-  labels: ~
 0xC48C02:
   size: 41
   type: assembly
-  labels: ~
 0xC48C2B:
   size: 19
   type: assembly
-  labels: ~
 0xC48C3E:
   size: 27
   type: assembly
-  labels: ~
 0xC48C59:
   size: 16
   type: data
-  labels: ~
 0xC48C69:
   size: 46
   type: assembly
@@ -17384,7 +16551,6 @@ texttables:
 0xC48D38:
   size: 32
   type: data
-  labels: ~
 0xC48D58:
   size: 275
   type: assembly
@@ -17412,7 +16578,6 @@ texttables:
 0xC48E95:
   size: 57
   type: assembly
-  labels: ~
 0xC48ECE:
   size: 29
   type: assembly
@@ -17466,7 +16631,6 @@ texttables:
 0xC491EE:
   size: 26
   type: assembly
-  labels: ~
 0xC49208:
   size: 202
   type: assembly
@@ -17520,23 +16684,18 @@ texttables:
 0xC496E7:
   size: 9
   type: assembly
-  labels: ~
 0xC496F0:
   size: 9
   type: assembly
-  labels: ~
 0xC496F9:
   size: 71
   type: assembly
-  labels: ~
 0xC49740:
   size: 78
   type: assembly
-  labels: ~
 0xC4978E:
   size: 50
   type: assembly
-  labels: ~
 0xC497C0:
   size: 95
   type: assembly
@@ -17547,11 +16706,9 @@ texttables:
 0xC4981F:
   size: 34
   type: assembly
-  labels: ~
 0xC49841:
   size: 10
   type: assembly
-  labels: ~
 0xC4984B:
   size: 42
   type: assembly
@@ -17584,7 +16741,6 @@ texttables:
 0xC49A4B:
   size: 11
   type: assembly
-  labels: ~
 0xC49A56:
   size: 280
   type: assembly
@@ -17610,7 +16766,6 @@ texttables:
 0xC49CA8:
   size: 27
   type: assembly
-  labels: ~
 0xC49CC3:
   size: 83
   type: assembly
@@ -17622,7 +16777,6 @@ texttables:
 0xC49D16:
   size: 8
   type: assembly
-  labels: ~
 0xC49D1E:
   size: 76
   type: assembly
@@ -17653,7 +16807,6 @@ texttables:
 0xC49EA4:
   size: 32
   type: data
-  labels: ~
 0xC49EC4:
   size: 285
   type: assembly
@@ -17674,11 +16827,9 @@ texttables:
   type: data
   description: Battle Menu Text
   name: BATTLE_MENU_TEXT
-  labels: ~
 0xC4A08D:
   type: data
   size: 66
-  labels: ~
 0xC4A0CF:
   size: 142
   type: assembly
@@ -17700,7 +16851,6 @@ texttables:
 0xC4A1F2:
   size: 3
   type: data
-  labels: ~
 0xC4A1F5:
   size: 51
   type: assembly
@@ -17721,7 +16871,6 @@ texttables:
 0xC4A279:
   size: 254
   type: data
-  labels: ~
 0xC4A377:
   size: 538
   type: assembly
@@ -17731,7 +16880,6 @@ texttables:
 0xC4A591:
   size: 237
   type: data
-  labels: ~
 0xC4A67E:
   size: 306
   type: assembly
@@ -17789,11 +16937,9 @@ texttables:
 0xC4AC57:
   size: 1
   type: assembly
-  labels: ~
 0xC4AC58:
   size: 118
   type: data
-  labels: ~
 0xC4ACCE:
   description: Sound Stone Screen
   name: USE_SOUND_STONE
@@ -17881,43 +17027,33 @@ texttables:
 0xC4B4FE:
   size: 27
   type: assembly
-  labels: ~
 0xC4B519:
   size: 11
   type: assembly
-  labels: ~
 0xC4B524:
   size: 27
   type: assembly
-  labels: ~
 0xC4B53F:
   size: 11
   type: assembly
-  labels: ~
 0xC4B54A:
   size: 27
   type: assembly
-  labels: ~
 0xC4B565:
   size: 11
   type: assembly
-  labels: ~
 0xC4B570:
   size: 13
   type: assembly
-  labels: ~
 0xC4B57D:
   size: 10
   type: assembly
-  labels: ~
 0xC4B587:
   size: 14
   type: assembly
-  labels: ~
 0xC4B595:
   size: 10
   type: assembly
-  labels: ~
 0xC4B59F:
   size: 518
   type: assembly
@@ -18066,7 +17202,6 @@ texttables:
   - name: Text
     size: 67
     type: standardtext
-  labels: ~
 0xC4C2DE:
   size: 385
   type: assembly
@@ -18078,7 +17213,6 @@ texttables:
 0xC4C45F:
   size: 186
   type: assembly
-  labels: ~
 0xC4C519:
   size: 78
   type: assembly
@@ -18138,11 +17272,9 @@ texttables:
 0xC4C8A4:
   size: 55
   type: assembly
-  labels: ~
 0xC4C8DB:
   size: 14
   type: assembly
-  labels: ~
 0xC4C8E9:
   size: 49
   type: assembly
@@ -18192,7 +17324,6 @@ texttables:
 0xC4CC2C:
   size: 3
   type: assembly
-  labels: ~
 0xC4CC2F:
   size: 277
   type: assembly
@@ -18288,7 +17419,6 @@ texttables:
 0xC4D274:
   size: 52
   type: assembly
-  labels: ~
 0xC4D2A8:
   size: 72
   type: assembly
@@ -18434,15 +17564,12 @@ texttables:
 0xC4DD28:
   size: 168
   type: assembly
-  labels: ~
 0xC4DDD0:
   size: 168
   type: assembly
-  labels: ~
 0xC4DE78:
   type: data
   size: 34
-  labels: ~
 0xC4DE9A:
   size: 54
   type: assembly
@@ -18452,11 +17579,9 @@ texttables:
 0xC4DED0:
   size: 25
   type: assembly
-  labels: ~
 0xC4DEE9:
   size: 148
   type: assembly
-  labels: ~
 0xC4DF7D:
   size: 271
   type: assembly
@@ -18481,7 +17606,6 @@ texttables:
 0xC4E13E:
   size: 323
   type: assembly
-  labels: ~
 0xC4E281:
   size: 86
   type: assembly
@@ -18497,7 +17621,6 @@ texttables:
   type: assembly
   description: Do Nothing
   name: DO_NOTHING_C4E366
-  labels: ~
 0xC4E369:
   size: 369
   type: assembly
@@ -18509,7 +17632,6 @@ texttables:
 0xC4E4DA:
   size: 31
   type: assembly
-  labels: ~
 0xC4E4F9:
   size: 37
   type: assembly
@@ -18538,7 +17660,6 @@ texttables:
   size: 24
   description: Character guardian text
   name: CHARACTER_GUARDIAN_TEXT
-  labels: ~
 0xC4E7AE:
   size: 750
   type: assembly
@@ -18560,7 +17681,6 @@ texttables:
 0xC4EBAD:
   size: 88
   type: assembly
-  labels: ~
 0xC4EC05:
   size: 77
   type: assembly
@@ -18570,15 +17690,12 @@ texttables:
 0xC4EC52:
   size: 28
   type: assembly
-  labels: ~
 0xC4EC6E:
   size: 63
   type: assembly
-  labels: ~
 0xC4ECAD:
   size: 58
   type: assembly
-  labels: ~
 0xC4ECE7:
   size: 39
   type: assembly
@@ -18627,7 +17744,6 @@ texttables:
 0xC4EFC4:
   size: 89
   type: assembly
-  labels: ~
 0xC4F01D:
   size: 96
   type: assembly
@@ -18699,23 +17815,19 @@ texttables:
   size: 573
   description: Music Pointer Table
   name: MUSIC_PTR_TABLE
-  labels: ~
 0xC4F947:
   type: data
   size: 507
   description: Music Pack Pointer Table
   name: MUSIC_PACK_POINTER_TABLE
-  labels: ~
 0xC4FB42:
   size: 22
   type: assembly
-  labels: ~
 0xC4FB58:
   description: Initialize SPC-700
   name: INITIALIZE_SPC700
   size: 101
   type: assembly
-  labels: ~
 0xC4FBBD:
   description: Change music to A
   name: CHANGE_MUSIC
@@ -18742,17 +17854,14 @@ texttables:
   description: A -> $B549 (Sector Boundary Behavior)
   size: 6
   type: assembly
-  labels: ~
 0xC4FD4B:
   type: nullspace
   size: 693
-  labels: ~
 0xC50000:
   type: data
   size: 6930
   description: Conditional Pointers for S=re Dialogue
   name: SRE_POINTER_TABLE
-  labels: ~
 0xC51B12:
   type: data
   description: Text Data
@@ -18762,7 +17871,6 @@ texttables:
   - name: Text
     terminator: 2
     type: standardtext
-  labels: ~
 0xC8BC2D:
   type: data
   description: Data for compressed text control codes 0x15, 0x16, 0x17
@@ -18772,7 +17880,6 @@ texttables:
   - name: Text
     terminator: 0
     type: standardtext
-  labels: ~
 0xC8CDED:
   type: data
   description: Compressed Text Pointer Table
@@ -18782,7 +17889,6 @@ texttables:
   - name: Pointer
     size: 4
     type: hexint
-  labels: ~
 0xC8D9ED:
   type: data
   description: Text Data, Block 2
@@ -18792,17 +17898,14 @@ texttables:
   - name: Text
     terminator: 2
     type: standardtext
-  labels: ~
 0xC9FF2F:
   type: nullspace
   size: 209
-  labels: ~
 0xCA0000:
   type: data
   size: 55201
   description: 'Battle BGs: Primary Data Group'
   name: BATTLEBG_PRIMARY_DATA_GROUP
-  labels: ~
 0xCAD7A1:
   type: data
   description: 'Battle BGs: Graphics Pointer Table'
@@ -18812,7 +17915,6 @@ texttables:
   - name: Pointer
     size: 4
     type: pointer
-  labels: ~
 0xCAD93D:
   type: data
   description: 'Battle BGs: Arrangement Pointer Table'
@@ -18822,7 +17924,6 @@ texttables:
   - name: Pointer
     size: 4
     type: pointer
-  labels: ~
 0xCADAD9:
   type: data
   size: 456
@@ -18832,7 +17933,6 @@ texttables:
   - name: Pointer
     size: 4
     type: pointer
-  labels: ~
 0xCADCA1:
   type: data
   description: 'Battle BGs: Rendering Data'
@@ -18873,13 +17973,11 @@ texttables:
     size: 1
   - name: Distortion 4
     size: 1
-  labels: ~
 0xCAF258:
   type: data
   description: Battle Background Scrolling Movement Table
   name: BG_SCROLLING_TABLE
   size: 1200
-  labels: ~
 0xCAF708:
   type: data
   description: Battle Background Distortion Table
@@ -18889,13 +17987,11 @@ texttables:
   - name: something
     size: 7
     type: bytearray
-  labels: ~
 0xCB0000:
   type: data
   size: 55450
   description: Battle Background Secondary Data Group
   name: BATTLEBGS_SECONDARY_DATA
-  labels: ~
 0xCBD89A:
   type: data
   description: Battle Group BG Association Table
@@ -18906,121 +18002,101 @@ texttables:
     size: 2
   - name: Unknown2
     size: 2
-  labels: ~
 0xCBE02A:
   type: data
   size: 8150
   description: Audio Block
   name: AUDIO_BLOCK_CBE02A
-  labels: ~
 0xCC0000:
   type: data
   size: 6091
   name: ANIMATIONDATA_CARPAINTER_LIGHTNING_REFLECT
   description: 'Animation Data: Carpainter''s Lightning - Reflected'
-  labels: ~
 0xCC17CB:
   type: data
   size: 1937
   name: ANIMATIONDATA_CARPAINTER_LIGHTNING_STRIKE
   description: 'Animation Data: Carpainter''s Lightning - Strike'
-  labels: ~
 0xCC1F5C:
   type: data
   size: 892
   name: ANIMATIONDATA_STARMAN_JR_TELEPORT
   description: 'Animation Data: Starman Junior''s Teleport'
-  labels: ~
 0xCC22D8:
   type: data
   size: 2481
   name: ANIMATIONDATA_BOOM
   description: 'Animation Data: ''BOOM!'''
-  labels: ~
 0xCC2C89:
   type: data
   size: 88
   name: ANIMATIONDATA_ZOMBIES
   description: 'Animation Data: Zombie Attack'
-  labels: ~
 0xCC2CE1:
   type: data
   size: 256
   name: ANIMATIONDATA_THE_END
   description: 'Animation Data: ''The End?'''
-  labels: ~
 0xCC2DE1:
   type: data
   size: 56
   description: Animation Sequence Data Pointers
   name: ANIMATION_SEQUENCE_POINTERS
-  labels: ~
 0xCC2E19:
   type: data
   description: PSI Animation Arrangement - First Block
   name: PSI_ANIM_ARR_BLOCK1
   size: 32268
-  labels: ~
 0xCCAC25:
   type: data
   description: PSI Animation Graphics - First Block
   name: PSI_ANIM_GFX_BLOCK1
   size: 778
-  labels: ~
 0xCCAF2F:
   type: data
   size: 1764
   description: PSI Animation Arrangement - Second Block
   name: PSI_ANIM_ARR_BLOCK2
-  labels: ~
 0xCCB613:
   type: data
   size: 1204
   description: PSI Animation Graphics - Second Block
   name: PSI_ANIM_GFX_BLOCK2
-  labels: ~
 0xCCBAC7:
   type: data
   size: 8288
   description: PSI Animation Arrangement - Third Block
   name: PSI_ANIM_ARR_BLOCK3
-  labels: ~
 0xCCDB27:
   type: data
   size: 722
   description: PSI Animation Graphics - Third Block
   name: PSI_ANIM_GFX_BLOCK3
-  labels: ~
 0xCCDDF9:
   type: data
   size: 1316
   description: PSI Animation Arrangement - Fourth Block
   name: PSI_ANIM_ARR_BLOCK4
-  labels: ~
 0xCCE31D:
   type: data
   size: 592
   description: PSI Animation Graphics - Fourth Block
   name: PSI_ANIM_GFX_BLOCK4
-  labels: ~
 0xCCE56D:
   type: data
   size: 2784
   description: PSI Animation Arrangement - Fifth Block
   name: PSI_ANIM_ARR_BLOCK5
-  labels: ~
 0xCCF04D:
   type: data
   size: 408
   description: PSI Animation Configuration Data
   name: PSI_ANIM_CFG
-  labels: ~
 0xCCF1E5:
   type: data
   size: 666
   description: PSI Animation Arrangement - Sixth Block
   name: PSI_ANIM_ARR_BLOCK6
-  labels: ~
 0xCCF47F:
   type: data
   size: 272
@@ -19030,7 +18106,6 @@ texttables:
   - name: Palette
     size: 16
     type: palette
-  labels: ~
 0xCCF58F:
   type: data
   size: 136
@@ -19040,19 +18115,16 @@ texttables:
   - name: Pointer
     type: pointer
     size: 4
-  labels: ~
 0xCCF617:
   type: data
   size: 2537
   description: Audio Block
   name: AUDIO_BLOCK_CCF617
-  labels: ~
 0xCD0000:
   type: data
   description: Enemy Battle Sprites
   name: BATTLE_SPRITES
   size: 90862
-  labels: ~
 0xCE62EE:
   type: data
   description: Battle Sprites Pointer Table
@@ -19065,7 +18137,6 @@ texttables:
   - name: Unknown
     size: 2
     type: bytearray
-  labels: ~
 0xCE6514:
   type: data
   description: Battle Sprites Palettes
@@ -19075,13 +18146,11 @@ texttables:
   - name: Palette
     size: 32
     type: palette
-  labels: ~
 0xCE6914:
   type: data
   size: 29489
   description: Swirl Animation Data
   name: SWIRL_DATA
-  labels: ~
 0xCEDC45:
   type: data
   size: 252
@@ -19091,19 +18160,16 @@ texttables:
   - name: Pointer
     size: 2
     type: pointer
-  labels: ~
 0xCEDD41:
   type: data
   size: 28
   description: Swirl Animation Primary Table
   name: SWIRL_PRIMARY_TABLE
-  labels: ~
 0xCEDD5D:
   type: data
   size: 6825
   description: Sound stone graphics
   name: SOUND_STONE_GFX
-  labels: ~
 0xCEF806:
   type: data
   size: 192
@@ -19113,25 +18179,21 @@ texttables:
   - name: Palette
     size: 32
     type: palette
-  labels: ~
 0xCEF8C6:
   type: data
   size: 1850
   description: Audio Block
   name: AUDIO_BLOCK_38531846341864636
-  labels: ~
 0xCF0000:
   type: data
   size: 9807
   description: Door Destinations Table
   name: DOOR_DEST_TABLE
-  labels: ~
 0xCF264F:
   type: data
   size: 12960
   description: Door Configuration Table
   name: DOOR_CONFIG_TABLE
-  labels: ~
 0xCF58EF:
   type: data
   description: Overworld Event Music Pointer Table
@@ -19141,25 +18203,21 @@ texttables:
   - name: Pointer
     size: 2
     type: pointer
-  labels: ~
 0xCF5A39:
   type: data
   size: 1966
   description: Overworld Event Music Table
   name: OVERWORLD_EVENT_MUSIC_TABLE
-  labels: ~
 0xCF61E7:
   type: data
   size: 2560
   description: Sprite Placement Pointer Table
   name: SPRITE_PLACEMENT_PTR_TABLE
-  labels: ~
 0xCF6BE7:
   type: data
   size: 7582
   description: Sprite Placement Entries
   name: SPRITE_PLACEMENT_TABLE
-  labels: ~
 0xCF8985:
   type: data
   description: Text Pointer Table
@@ -19203,13 +18261,11 @@ texttables:
   - name: Check Pointer
     size: 4
     type: pointer
-  labels: ~
 0xCFF2B5:
   type: data
   name: AUDIO_BLOCK_CFF2B5
   description: Audio Block
   size: 3403
-  labels: ~
 0xD00000:
   type: data
   description: Door Pointer Table
@@ -19219,13 +18275,11 @@ texttables:
   - name: Door Pointer
     size: 4
     type: pointer
-  labels: ~
 0xD01400:
   type: data
   description: Screen Transition Configuration Table
   name: SCREEN_TRANSITION_CONFIG_TABLE
   size: 408
-  labels: ~
 0xD01598:
   type: data
   size: 40
@@ -19235,13 +18289,11 @@ texttables:
   - name: Pointer
     size: 2
     type: pointer
-  labels: ~
 0xD015C0:
   type: data
   description: 'Map Tiles: Event Control Table'
   name: MAP_TILE_EVENT_CONTROL_TABLE
   size: 704
-  labels: ~
 0xD01880:
   type: data
   description: Enemy Placement Data
@@ -19250,7 +18302,6 @@ texttables:
   entries:
   - name: Enemy Group
     size: 2
-  labels: ~
 0xD0B880:
   type: data
   description: Enemy Placement groups pointer table
@@ -19260,13 +18311,11 @@ texttables:
   - name: Pointer
     size: 4
     type: pointer
-  labels: ~
 0xD0BBAC:
   type: data
   description: Enemy Placement groups data
   name: ENEMY_PLACEMENT_GROUPS_TABLE
   size: 2657
-  labels: ~
 0xD0C60D:
   type: data
   description: Battle Entry Pointer Table
@@ -19286,23 +18335,19 @@ texttables:
     - Run away if flag is set
   - name: Battle Letterboxing?
     size: 1
-  labels: ~
 0xD0D52D:
   type: data
   description: Enemy Battle Groups Table
   name: ENEMY_BATTLE_GROUPS_TABLE
   size: 2695
-  labels: ~
 0xD0DFB4:
   type: data
   description: Audio Block
   name: AUDIO_BLOCK_D0DFB4
   size: 8180
-  labels: ~
 0xD0FFA8:
   type: nullspace
   size: 88
-  labels: ~
 0xD10000:
   type: data
   description: Overworld Sprites
@@ -19313,11 +18358,9 @@ texttables:
     size: 16
     type: tile
     bpp: 4
-  labels: ~
 0xD545C0:
   type: nullspace
   size: 2624
-  labels: ~
 0xD55000:
   type: data
   description: Item Data
@@ -19350,7 +18393,6 @@ texttables:
   - name: Help Text Pointer
     size: 4
     type: pointer
-  labels: ~
 0xD576B2:
   type: data
   description: Store Data
@@ -19371,24 +18413,20 @@ texttables:
     size: 1
   - name: Item 7
     size: 1
-  labels: ~
 0xD57880:
   type: data
   size: 428
   description: PSI Teleport Destination Table
   name: PSI_TELEPORT_DEST_TABLE
-  labels: ~
 0xD57A2C:
   type: data
   description: Clumsy Robot Event Flag
   name: CLUMSYROBOT_EVENT
   size: 2
-  labels: ~
 0xD57A2E:
   type: data
   size: 128
   description: Unused Teleport Destination Text?
-  labels: ~
 0xD57AAE:
   type: data
   size: 186
@@ -19404,7 +18442,6 @@ texttables:
   - name: Text Pointer
     size: 4
     type: pointer
-  labels: ~
 0xD57B68:
   type: data
   description: Battle Action Table
@@ -19441,7 +18478,6 @@ texttables:
   - name: Code Address
     size: 4
     type: pointer
-  labels: ~
 0xD58A50:
   type: data
   description: PSI Ability Table
@@ -19489,7 +18525,6 @@ texttables:
   - name: Text Address
     size: 4
     type: pointer
-  labels: ~
 0xD58D7A:
   type: data
   description: PSI Name Table
@@ -19499,13 +18534,11 @@ texttables:
   - name: Name
     size: 25
     type: standardtext
-  labels: ~
 0xD58F23:
   type: data
   description: NPC AI Table
   name: NPC_AI_TABLE
   size: 38
-  labels: ~
 0xD58F49:
   type: data
   description: Level-up EXP Table
@@ -19514,7 +18547,6 @@ texttables:
   entries:
   - name: XP_REQUIRED
     size: 4
-  labels: ~
 0xD59589:
   type: data
   description: Enemy Configuration Table
@@ -19666,13 +18698,11 @@ texttables:
     size: 1
   - name: Mirror Success Rate
     size: 1
-  labels: ~
 0xD5EA5B:
   type: data
   size: 28
   description: Statistic Growth Variables
   name: STATS_GROWTH_VARS
-  labels: ~
 0xD5EA77:
   type: data
   description: Condiment Data
@@ -19704,7 +18734,6 @@ texttables:
     size: 1
   - name: run time
     size: 1
-  labels: ~
 0xD5EBAB:
   type: data
   size: 1864
@@ -19714,7 +18743,6 @@ texttables:
   - name: unknown
     type: hexint
     size: 8
-  labels: ~
 0xD5F2F3:
   type: data
   size: 456
@@ -19729,7 +18757,6 @@ texttables:
     size: 2
   - name: Y2
     size: 2
-  labels: ~
 0xD5F4BB:
   type: data
   size: 20
@@ -19746,7 +18773,6 @@ texttables:
     size: 1
   - name: Delay
     size: 1
-  labels: ~
 0xD5F4CF:
   type: data
   size: 294
@@ -19756,7 +18782,6 @@ texttables:
   - name: Name
     type: standardtext
     size: 6
-  labels: ~
 0xD5F5F5:
   type: data
   size: 20
@@ -19766,7 +18791,6 @@ texttables:
   - name: unknown
     size: 20
     type: bytearray
-  labels: ~
 0xD5F609:
   type: data
   size: 20
@@ -19776,7 +18800,6 @@ texttables:
   - name: unknown
     size: 20
     type: bytearray
-  labels: ~
 0xD5F61D:
   type: data
   size: 20
@@ -19786,7 +18809,6 @@ texttables:
   - name: unknown
     size: 20
     type: bytearray
-  labels: ~
 0xD5F631:
   type: data
   size: 20
@@ -19796,7 +18818,6 @@ texttables:
   - name: unknown
     size: 20
     type: bytearray
-  labels: ~
 0xD5F645:
   type: data
   description: Timed Delivery Events Table
@@ -19822,11 +18843,9 @@ texttables:
   - name: Unknown2
     size: 4
     type: bytearray
-  labels: ~
 0xD5F70D:
   size: 2291
   type: nullspace
-  labels: ~
 0xD60000:
   type: data
   size: 86016
@@ -19844,7 +18863,6 @@ texttables:
   size: 22528
   description: 'Map Data: Local Tileset Table'
   name: MAP_DATA_LOCAL_TILESET_TABLE
-  labels: ~
 0xD7A800:
   type: data
   description: Global map tileset/palette data
@@ -19853,47 +18871,39 @@ texttables:
   entries:
   - name: Value
     size: 1
-  labels: ~
 0xD7B200:
   type: data
   size: 5120
   description: 'Map Data: Per-Sector Attributes Table'
   name: MAP_DATA_PER-SECTOR_ATTRIBUTES_TABLE
-  labels: ~
 0xD7C600:
   type: data
   size: 13800
   description: 'Map Data: Tile Arrangement Block 1'
   name: MAP_DATA_TILE_ARRANGEMENT_BLOCK_1
-  labels: ~
 0xD7FBE8:
   size: 1048
   type: nullspace
-  labels: ~
 0xD80000:
   type: data
   size: 36688
   description: 'Map Data: Tile Collision Arrangement Table'
   name: MAP_DATA_TILE_COLLISION_ARRANGEMENT_TABLE
-  labels: ~
 0xD88F50:
   type: data
   size: 24846
   description: 'Map Data: Tile Collision Arrangement Pointer Table'
   name: MAP_DATA_TILE_COLLISION_ARRANGEMENT_POINTER_TABLE
-  labels: ~
 0xD8F05E:
   type: data
   size: 431
   description: Anti-Piracy Notice Screen Arrangement
   name: ANTI-PIRACY_NOTICE_ARRANGEMENT
-  labels: ~
 0xD8F20D:
   type: data
   size: 433
   description: Anti-Piracy Notice Screen Graphics
   name: ANTI-PIRACY_NOTICE_GRAPHICS
-  labels: ~
 0xD8F3BE:
   type: data
   size: 8
@@ -19903,7 +18913,6 @@ texttables:
   - name: Palette
     size: 8
     type: palette
-  labels: ~
 0xD8F3C6:
   type: data
   size: 510
@@ -19914,43 +18923,36 @@ texttables:
     size: 1
   - name: Misc
     size: 1
-  labels: ~
 0xD8F5C4:
   type: data
   size: 243
   description: Faulty Game Pak Notice Screen Graphics
   name: FAULTY_GAME_PAK_GRAPHICS
-  labels: ~
 0xD8F6B7:
   type: data
   size: 2377
   description: Audio Block
   name: AUDIO_BLOCK_D8F6B7
-  labels: ~
 0xD90000:
   type: data
   size: 52818
   description: 'Map Data: Tile Arrangement Block 2'
   name: MAP_DATA_TILE_ARRANGEMENT_BLOCK_2
-  labels: ~
 0xD9CE52:
   type: data
   size: 11718
   description: 'Map Data: Tile Graphics Block 1'
   name: MAP_DATA_TILE_GRAPHICS_BLOCK_1
-  labels: ~
 0xD9FC18:
   type: data
   size: 1000
   description: Audio Block
   name: AUDIO_BLOCK_D9FC18
-  labels: ~
 0xDA0000:
   type: data
   size: 31911
   description: 'Map Data: Tile Arrangement Block 3'
   name: MAP_DATA_TILE_ARRANGEMENT_BLOCK_3
-  labels: ~
 0xDA7CA7:
   type: data
   description: 'Map data: Palettes'
@@ -19960,7 +18962,6 @@ texttables:
   - name: Palette
     size: 32
     type: palette
-  labels: ~
 0xDAFAA7:
   type: data
   size: 96
@@ -19970,157 +18971,131 @@ texttables:
   - name: Pointer
     size: 3
     type: pointer
-  labels: ~
 0xDAFB07:
   type: data
   size: 1273
   description: Audio Block
   name: AUDIO_BLOCK_DAFB07
-  labels: ~
 0xDB0000:
   type: data
   name: MAP_DATA_TILE_ARRANGEMENT_BLOCK_4
   description: 'Map Data: Tile Arrangement Block 4'
   size: 62187
-  labels: ~
 0xDBF2EB:
   type: data
   size: 3349
   description: Audio Block
   name: AUDIO_BLOCK_DBF2EB
-  labels: ~
 0xDC0000:
   type: data
   size: 45091
   description: 'Map Data: Tile Arrangement Block 5'
   name: MAP_DATA_TILE_ARRANGEMENT_BLOCK_5
-  labels: ~
 0xDCB023:
   type: data
   size: 9748
   description: 'Map Data: Tile Graphics Block 2'
   name: MAP_DATA_TILE_GRAPHICS_BLOCK_2
-  labels: ~
 0xDCD637:
   type: data
   size: 2560
   description: 'Map Data: Per-Sector Music Assignments'
   name: MAP_DATA_PER-SECTOR_MUSIC
-  labels: ~
 0xDCE037:
   type: data
   size: 8137
   description: Audio Block
   name: AUDIO_BLOCK_DCE037
-  labels: ~
 0xDD0000:
   type: data
   size: 65230
   description: 'Map Data: Tile Graphics Block 3'
   name: MAP_DATA_TILE_GRAPHICS_BLOCK_3
-  labels: ~
 0xDDFECE:
   type: data
   size: 306
   description: Audio Block
   name: AUDIO_BLOCK_DDFECE
-  labels: ~
 0xDE0000:
   type: data
   size: 61671
   description: 'Map Data: Tile Graphics Block 4'
   name: MAP_DATA_TILE_GRAPHICS_BLOCK_4
-  labels: ~
 0xDEF0E7:
   type: data
   size: 3062
   description: 'Map Data: Graphics for Animated Tiles Block 1'
   name: MAP_DATA_ANIMATED_TILE_GFX_BLOCK_1
-  labels: ~
 0xDEFCDD:
   type: data
   size: 803
   description: Audio Block
   name: AUDIO_BLOCK_DEFCDD
-  labels: ~
 0xDF0000:
   type: data
   size: 49731
   description: 'Map Data: Tile Graphics Block 5'
   name: MAP_DATA_TILE_GRAPHICS_BLOCK_5
-  labels: ~
 0xDFC243:
   type: data
   size: 8862
   description: 'Map Data: Graphics for Animated Tiles Block 2'
   name: MAP_DATA_ANIMATED_TILE_GFX_BLOCK_2
-  labels: ~
 0xDFE4E1:
   type: data
   size: 124
   description: 'Map Data: Palette Animation Pointer Table'
   name: MAP_DATA_PALETTE_ANIM_POINTER_TABLE
-  labels: ~
 0xDFE55D:
   type: data
   size: 190
   description: 'Map Data: Palette Animation Secondary Pointer/Data Table'
   name: MAP_DATA_PALETTE_ANIM_SECONDARY_TABLE
-  labels: ~
 0xDFE61B:
   type: data
   size: 1579
   description: 'Map Data: Palette Animation Table'
   name: MAP_DATA_PALETTE_ANIM_TABLE
-  labels: ~
 0xDFEC46:
   type: data
   size: 5050
   description: Audio Block
   name: AUDIO_BLOCK_DFEC46
-  labels: ~
 0xE00000:
   type: data
   size: 1876
   description: Text Window Graphics
   name: TEXT_WINDOW_GFX
-  labels: ~
 0xE00754:
   type: data
   size: 76
   description: Flavored Text Window Graphics
   name: FLAVOURED_TEXT_GFX
-  labels: ~
 0xE007A0:
   type: data
   size: 532
   description: 8x16 (Large) Romaji Font Graphics from MOTHER 2
   name: MOTHER2_ROMAJI_FONT
-  labels: ~
 0xE009B4:
   type: data
   size: 2469
   description: Compressed SRAM Data
   name: COMPRESSED_SRAM
-  labels: ~
 0xE01359:
   type: data
   size: 96
   description: Mr. Saturn Font Character Data
   name: MRSATURN_FONT_DATA
-  labels: ~
 0xE013B9:
   type: data
   size: 3072
   description: Mr. Saturn Font Graphics
   name: MRSATURN_FONT_GFX
-  labels: ~
 0xE01FB9:
   type: data
   description: Text window properties table
   name: TEXT_WINDOW_PROPERTIES
   size: 15
-  labels: ~
 0xE01FC8:
   type: data
   description: Text window flavor palettes
@@ -20151,7 +19126,6 @@ texttables:
   - name: Non-battle text Palette
     size: 8
     type: palette
-  labels: ~
 0xE02188:
   type: data
   size: 8
@@ -20161,127 +19135,106 @@ texttables:
   - name: Palette
     size: 8
     type: palette
-  labels: ~
 0xE02190:
   type: data
   size: 24
   description: Town Map Graphics Pointer Table
   name: TOWN_MAP_GFX_POINTER_TABLE
-  labels: ~
 0xE021A8:
   type: data
   size: 10104
   description: Onett Town Map Data
   name: TOWN_MAP_ONETT
-  labels: ~
 0xE04920:
   type: data
   size: 7682
   description: Twoson Town Map Data
   name: TOWN_MAP_TWOSON
-  labels: ~
 0xE06722:
   type: data
   size: 7255
   description: Threed Town Map Data
   name: TOWN_MAP_THREED
-  labels: ~
 0xE08379:
   type: data
   size: 10811
   description: Fourside Town Map Data
   name: TOWN_MAP_FOURSIDE
-  labels: ~
 0xE0ADB4:
   type: data
   size: 6717
   description: Scaraba Town Map Data
   name: TOWN_MAP_SCARABA
-  labels: ~
 0xE0C7F1:
   type: data
   size: 9490
   description: Summers Town Map Data
   name: TOWN_MAP_SUMMERS
-  labels: ~
 0xE0ED03:
   type: data
   size: 4861
   description: Audio Block
   name: AUDIO_BLOCK_E0ED03
-  labels: ~
 0xE10000:
   type: data
   size: 1618
   description: Coffee Sequence Text
   name: COFFEE_SEQUENCE_TEXT
-  labels: ~
 0xE10652:
   type: data
   size: 1332
   description: Tea Sequence Text
   name: TEA_SEQUENCE_TEXT
-  labels: ~
 0xE10B86:
   type: data
   size: 244
   description: Movement-Referenced Text Strings
   name: MOVEMENT_TEXT_STRINGS
-  labels: ~
 0xE10C7A:
   type: data
   size: 96
   description: Main Font Character Data
   name: MAIN_FONT_DATA
-  labels: ~
 0xE10CDA:
   type: data
   size: 3072
   description: Main Font Graphics
   name: MAIN_FONT_GFX
-  labels: ~
 0xE118DA:
   type: data
   size: 96
   description: 8x16 (Battle) Font Character Data
   name: BATTLE_FONT_DATA
-  labels: ~
 0xE1193A:
   type: data
   size: 1536
   description: 8x16 (Battle) Font Graphics
   name: BATTLE_FONT_GFX
-  labels: ~
 0xE11F3A:
   type: data
   size: 96
   description: 8x8 (Tiny) Font Character Data
   name: TINY_FONT_DATA
-  labels: ~
 0xE11F9A:
   type: data
   size: 768
   description: 8x8 (Tiny) Font Graphics
   name: TINY_FONT_GFX
-  labels: ~
 0xE1229A:
   type: data
   size: 96
   description: Large Font Character Data
   name: LARGE_FONT_DATA
-  labels: ~
 0xE122FA:
   type: data
   size: 3072
   description: Large Font Graphics
   name: LARGE_FONT_GFX
-  labels: ~
 0xE12EFA:
   type: data
   size: 144
   description: Formatting For Cast Sequence Text
   name: CAST_SEQUENCE_FORMATTING
-  labels: ~
 0xE12F8A:
   type: data
   description: Wandering Photographer Configuration Table
@@ -20302,13 +19255,11 @@ texttables:
   - name: ??????
     size: 54
     type: bytearray
-  labels: ~
 0xE1374A:
   type: data
   size: 2549
   description: Compressed Palette Data - Indeterminate Use
   name: COMPRESSED_PALETTE_UNKNOWN
-  labels: ~
 0xE1413F:
   type: data
   size: 3241
@@ -20318,7 +19269,6 @@ texttables:
   - name: Text
     terminator: 0
     type: stafftext
-  labels: ~
 0xE14DE8:
   size: 217
   type: assembly
@@ -20344,239 +19294,125 @@ texttables:
 0xE14EC1:
   type: data
   size: 105
-  description: ~
-  name: ~
-  labels: ~
 0xE14F2A:
   type: data
   size: 518
-  description: ~
-  name: ~
-  labels: ~
 0xE15130:
   type: data
   size: 68
-  description: ~
-  name: ~
-  labels: ~
 0xE15174:
   type: data
   size: 116
-  description: ~
-  name: ~
-  labels: ~
 0xE151E8:
   type: data
   size: 464
-  description: ~
-  name: ~
-  labels: ~
 0xE153B8:
   type: data
   size: 157
-  description: ~
-  name: ~
-  labels: ~
 0xE15455:
   type: data
   size: 73
-  description: ~
-  name: ~
-  labels: ~
 0xE1549E:
   type: data
   size: 241
-  description: ~
-  name: ~
-  labels: ~
 0xE1558F:
   type: data
   size: 68
-  description: ~
-  name: ~
-  labels: ~
 0xE155D3:
   type: data
   size: 1376
-  description: ~
-  name: ~
-  labels: ~
 0xE15B33:
   type: data
   size: 20100
-  description: ~
-  name: ~
-  labels: ~
 0xE1A9B7:
   type: data
   size: 166
-  description: ~
-  name: ~
-  labels: ~
 0xE1AA5D:
   type: data
   size: 130
-  description: ~
-  name: ~
-  labels: ~
 0xE1AADF:
   type: data
   size: 108
-  description: ~
-  name: ~
-  labels: ~
 0xE1AB4B:
   type: data
   size: 438
-  description: ~
-  name: ~
-  labels: ~
 0xE1AD01:
   type: data
   size: 77
-  description: ~
-  name: ~
-  labels: ~
 0xE1AD4E:
   type: data
   size: 289
-  description: ~
-  name: ~
-  labels: ~
 0xE1AE6F:
   type: data
   size: 13
-  description: ~
-  name: ~
-  labels: ~
 0xE1AE7C:
   type: data
   size: 7
-  description: ~
-  name: ~
-  labels: ~
 0xE1AE83:
   type: data
   size: 122
-  description: ~
-  name: ~
-  labels: ~
 0xE1AEFD:
   type: data
   size: 128
-  description: ~
-  name: ~
-  labels: ~
 0xE1AF7D:
   type: data
   size: 660
-  description: ~
-  name: ~
-  labels: ~
 0xE1B211:
   type: data
   size: 5332
-  description: ~
-  name: ~
-  labels: ~
 0xE1C6E5:
   type: data
   size: 1788
-  description: ~
-  name: ~
-  labels: ~
 0xE1CDE1:
   type: data
   size: 39
-  description: ~
-  name: ~
-  labels: ~
 0xE1CE08:
   type: data
   size: 423
-  description: ~
-  name: ~
-  labels: ~
 0xE1CFAF:
   type: data
   size: 1349
-  description: ~
-  name: ~
-  labels: ~
 0xE1D4F4:
   type: data
   size: 244
-  description: ~
-  name: ~
-  labels: ~
 0xE1D5E8:
   type: data
   size: 249
-  description: ~
-  name: ~
-  labels: ~
 0xE1D6E1:
   type: data
   size: 308
-  description: ~
-  name: ~
-  labels: ~
 0xE1D815:
   type: data
   size: 32
-  description: ~
-  name: ~
-  labels: ~
 0xE1D835:
   type: data
   size: 3250
-  description: ~
-  name: ~
-  labels: ~
 0xE1E4E7:
   type: data
   size: 65
-  description: ~
-  name: ~
-  labels: ~
 0xE1E528:
   type: data
   size: 1004
-  description: ~
-  name: ~
-  labels: ~
 0xE1E914:
   type: data
   size: 16
-  description: ~
-  name: ~
-  labels: ~
 0xE1E924:
   size: 38
   type: data
-  labels: ~
 0xE1E94A:
   type: data
   size: 262
-  description: ~
-  name: ~
-  labels: ~
 0xE1EA50:
   type: data
   size: 1907
-  description: ~
-  name: ~
-  labels: ~
 0xE1F1C3:
   size: 958
   type: data
-  labels: ~
 0xE1F581:
   type: data
   size: 275467
   name: AUDIO_DATA_BLOCK_3469321
   description: Audio Data Block
-  labels: ~
 0xE6298C:
   type: data
   size: 382
@@ -20586,17 +19422,14 @@ texttables:
   - name: Pointer
     type: pointer
     size: 2
-  labels: ~
 0xE62B0A:
   type: data
   size: 550647
   name: AUDIO_DATA_BLOCK_952692
   description: Audio Data Block
-  labels: ~
 0xEE9201:
   type: nullspace
   size: 28159
-  labels: ~
 0xEF0000:
   size: 82
   type: assembly
@@ -20618,11 +19451,9 @@ texttables:
 0xEF00BB:
   size: 43
   type: assembly
-  labels: ~
 0xEF00E6:
   size: 47
   type: assembly
-  labels: ~
 0xEF0115:
   size: 90
   type: assembly
@@ -20633,7 +19464,6 @@ texttables:
 0xEF016F:
   size: 99
   type: assembly
-  labels: ~
 0xEF01D2:
   size: 132
   type: assembly
@@ -20644,21 +19474,17 @@ texttables:
   name: PAUSE_MUSIC
   size: 12
   type: assembly
-  labels: ~
 0xEF0262:
   size: 12
   type: assembly
-  labels: ~
 0xEF026E:
   description: Resumes Music?
   name: RESUME_MUSIC
   size: 15
   type: assembly
-  labels: ~
 0xEF027D:
   size: 71
   type: assembly
-  labels: ~
 0xEF02C4:
   size: 90
   type: assembly
@@ -20702,17 +19528,14 @@ texttables:
 0xEF0591:
   size: 21
   type: data
-  labels: ~
 0xEF05A6:
   size: 3
   type: data
-  labels: ~
 0xEF05A9:
   name: ERASE_SAVE
   description: Erases a savefile
   type: assembly
   size: 135
-  labels: ~
 0xEF0630:
   size: 83
   type: assembly
@@ -20728,7 +19551,6 @@ texttables:
 0xEF06A2:
   size: 146
   type: assembly
-  labels: ~
 0xEF0734:
   size: 71
   type: assembly
@@ -20767,11 +19589,9 @@ texttables:
 0xEF0A4D:
   size: 27
   type: assembly
-  labels: ~
 0xEF0A68:
   size: 310
   type: assembly
-  labels: ~
 0xEF0B9E:
   description: SRAM Integrity Check
   name: CHECK_SRAM_INTEGRITY
@@ -20784,23 +19604,18 @@ texttables:
 0xEF0BFA:
   size: 27
   type: assembly
-  labels: ~
 0xEF0C15:
   size: 40
   type: assembly
-  labels: ~
 0xEF0C3D:
   size: 74
   type: assembly
-  labels: ~
 0xEF0C87:
   size: 16
   type: assembly
-  labels: ~
 0xEF0C97:
   size: 16
   type: assembly
-  labels: ~
 0xEF0CA7:
   size: 124
   type: assembly
@@ -20811,11 +19626,9 @@ texttables:
 0xEF0D23:
   size: 35
   type: assembly
-  labels: ~
 0xEF0D46:
   size: 45
   type: assembly
-  labels: ~
 0xEF0D73:
   size: 26
   type: assembly
@@ -20824,19 +19637,15 @@ texttables:
 0xEF0D8D:
   size: 109
   type: assembly
-  labels: ~
 0xEF0DFA:
   size: 109
   type: assembly
-  labels: ~
 0xEF0E67:
   size: 35
   type: assembly
-  labels: ~
 0xEF0E8A:
   size: 35
   type: assembly
-  labels: ~
 0xEF0EAD:
   description: Get Delivery Sprite and (PLACEHOLDER)
   name: GET_DELIVERY_SPRITE_AND_PLACEHOLDER
@@ -20869,7 +19678,6 @@ texttables:
 0xEF0FDB:
   size: 27
   type: assembly
-  labels: ~
 0xEF0FF6:
   size: 37
   type: assembly
@@ -20885,7 +19693,6 @@ texttables:
   - name: Tileset
     size: 2
     type: hexint
-  labels: ~
 0xEF105B:
   type: data
   description: 'Map Data: Tileset Pointer Table'
@@ -20895,7 +19702,6 @@ texttables:
   - name: Pointer
     size: 4
     type: pointer
-  labels: ~
 0xEF10AB:
   type: data
   description: 'Map Data: Tile Arrangement Pointer Table'
@@ -20905,7 +19711,6 @@ texttables:
   - name: Pointer
     size: 4
     type: pointer
-  labels: ~
 0xEF10FB:
   type: data
   description: 'Map Data: Palette Pointer Table'
@@ -20915,7 +19720,6 @@ texttables:
   - name: Pointer
     size: 4
     type: pointer
-  labels: ~
 0xEF117B:
   type: data
   description: 'Map Data: Tile Collision Pointer Table'
@@ -20925,7 +19729,6 @@ texttables:
   - name: Pointer
     size: 4
     type: pointer
-  labels: ~
 0xEF11CB:
   type: data
   description: 'Map Data: Tile Animation Pointer Table'
@@ -20935,7 +19738,6 @@ texttables:
   - name: Pointer
     size: 4
     type: pointer
-  labels: ~
 0xEF121B:
   type: data
   description: 'Map Data: Freakish Tile Animation Pointer Table'
@@ -20945,31 +19747,26 @@ texttables:
   - name: Pointer
     size: 4
     type: pointer
-  labels: ~
 0xEF126B:
   type: data
   description: 'Map Data: Freakish Tile Animation Table'
   name: MAP_DATA_WEIRD_TILE_ANIMATION_TABLE
   size: 212
-  labels: ~
 0xEF133F:
   type: data
   description: Sprite Grouping Pointer Table
   name: SPRITE_GROUPING_PTR_TABLE
   size: 1856
-  labels: ~
 0xEF1A7F:
   type: data
   description: Sprite Grouping Table
   name: SPRITE_GROUPING_DATA
   size: 12225
-  labels: ~
 0xEF4A40:
   type: data
   size: 22842
   description: Text Data
   name: TEXT_DATA_EF4A40
-  labels: ~
 0xEFA37A:
   type: data
   description: Commands Window Text Strings
@@ -20979,30 +19776,25 @@ texttables:
   - name: Text
     size: 10
     type: standardtext
-  labels: ~
 0xEFA3B6:
   type: data
   description: Status Window Text
   name: STATUS_WINDOW_TEXT
   size: 170
-  labels: ~
 0xEFA460:
   type: data
   description: Name Input Window Selection Layout
   name: NAME_INPUT_WINDOW_SELECTION_LAYOUT
   size: 652
-  labels: ~
 0xEFA6EC:
   type: data
   size: 11823
-  labels: ~
 0xEFD51B:
   description: Programmers' Sound Mode Menu Text
   name: DEBUG_SOUND_MODE_MENU_TEXT
   size: 84
   type: data
   width: 14
-  labels: ~
 0xEFD56F:
   size: 106
   type: assembly
@@ -21012,7 +19804,6 @@ texttables:
 0xEFD5D9:
   size: 251
   type: assembly
-  labels: ~
 0xEFD6D4:
   size: 481
   type: assembly
@@ -21052,7 +19843,6 @@ texttables:
   description: Programmers' Debug Mode Menu Text
   name: DEBUG_MENU_TEXT
   size: 169
-  labels: ~
 0xEFD95E:
   size: 149
   type: assembly
@@ -21069,7 +19859,6 @@ texttables:
 0xEFDA05:
   size: 184
   type: assembly
-  labels: ~
 0xEFDABD:
   size: 100
   type: assembly
@@ -21111,7 +19900,6 @@ texttables:
 0xEFDCBC:
   size: 350
   type: assembly
-  labels: ~
 0xEFDE1A:
   size: 241
   type: assembly
@@ -21202,7 +19990,6 @@ texttables:
 0xEFE556:
   size: 34
   type: assembly
-  labels: ~
 0xEFE578:
   description: Handle Debug Menu Cursor Movement
   name: DEBUG_HANDLE_CURSOR_MOVEMENT
@@ -21301,7 +20088,6 @@ texttables:
 0xEFEA9E:
   size: 6
   type: assembly
-  labels: ~
 0xEFEAA4:
   size: 36
   type: assembly
@@ -21310,23 +20096,18 @@ texttables:
 0xEFEAC8:
   size: 85
   type: assembly
-  labels: ~
 0xEFEB1D:
   size: 13
   type: data
-  labels: ~
 0xEFEB2A:
   size: 19
   type: assembly
-  labels: ~
 0xEFEB3D:
   size: 34
   type: data
-  labels: ~
 0xEFEB5F:
   size: 17
   type: data
-  labels: ~
 0xEFEB70:
   type: data
   description: Programmers' Debug Mode Font Graphics
@@ -21337,11 +20118,9 @@ texttables:
     size: 16
     type: tile
     bpp: 2
-  labels: ~
 0xEFEF70:
   type: data
   size: 71
-  labels: ~
 0xEFEFB7:
   type: data
   description: Kirby Sprite
@@ -21352,40 +20131,31 @@ texttables:
     size: 32
     type: tile
     bpp: 4
-  labels: ~
 0xEFF0D7:
   type: nullspace
   size: 228
-  labels: ~
 0xEFF1BB:
   size: 512
   type: data
-  labels: ~
 0xEFF3BB:
   description: Version String
   name: UNKNOWN_VERSION_STRING
   size: 32
   type: data
   width: 32
-  labels: ~
 0xEFF3DB:
   size: 310
   type: data
-  labels: ~
 0xEFF511:
   size: 42
   type: data
-  labels: ~
 0xEFF53B:
   type: nullspace
   size: 128
-  labels: ~
 0xEFF5BB:
   type: data
   size: 48
-  labels: ~
 0xEFF5EB:
   type: nullspace
   size: 2581
-  labels: ~
 ...
