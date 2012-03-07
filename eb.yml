@@ -2,6 +2,7 @@
 processor: 65816
 platform: snes
 title: Earthbound (USA)
+defaulttext: standardtext
 texttables:
   stafftext:
     lengths:
@@ -3642,7 +3643,7 @@ texttables:
   size: 107
   type: assembly
   labels:
-    0x8498: UNKNOWN0
+    0x8498: WAIT_UNTIL_READY
     0x84A9: UNKNOWN1
     0x84CC: UNKNOWN2
     0x84D6: UNKNOWN3
@@ -15456,9 +15457,30 @@ texttables:
   labels: ~
 0xC3EF26:
   type: data
-  size: 394
+  size: 0x12E
   description: Has PSI category text in it...
   labels: ~
+0xC3F054:
+  type: data
+  size: 0x3C
+  description: Font Pointer Table
+  name: FONT_PTR_TABLE
+  entries:
+  - name: VWF Pointer
+    type: pointer
+    size: 4
+  - name: GFX Pointer
+    type: pointer
+    size: 4
+  - name: Height?
+    type: int
+    size: 2
+  - name: Width?
+    type: int
+    size: 2
+0xC3F090:
+  type: data
+  size: 0x20
 0xC3F0B0:
   type: data
   size: 316
@@ -19428,6 +19450,7 @@ texttables:
   entries:
   - name: PSI Name
     size: 1
+    substtable: PSI_NAME_TABLE
   - name: Strength
     size: 1
     values:
@@ -19807,9 +19830,15 @@ texttables:
 0xD60000:
   type: data
   size: 86016
-  description: 'Map Data: Primary Table'
-  name: MAP_DATA_PRIMARY_TABLE
-  labels: ~
+  description: 'Map Data: Tile Table'
+  name: MAP_DATA_TILE_TABLE
+  interlacing:
+    modulus: 8
+    multiplier: 40
+  entries:
+  - name: Line
+    type: bytearray
+    size: 256
 0xD75000:
   type: data
   size: 22528
