@@ -17888,7 +17888,7 @@ texttables:
   entries:
   - name: Pointer
     size: 4
-    type: hexint
+    type: pointer
 0xC8D9ED:
   type: data
   description: Text Data, Block 2
