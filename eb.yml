@@ -66,141 +66,147 @@ texttables:
       0x00AD: .
   standardtext:
     lengths:
-      0x0004: 3
-      0x0005: 3
-      0x0006: 7
-      0x0007: 3
-      0x0008: 5
-      0x0009: 6
-      0x000A: 5
-      0x000B: 2
-      0x000C: 2
-      0x000D: 2
-      0x000E: 2
-      0x0010: 2
-      0x0015: 2
-      0x0016: 2
-      0x0017: 2
-      0x0018: 2
-      0x1801: 3
-      0x1803: 3
-      0x1805: 4
-      0x1807: 7
-      0x180D: 4
-      0x0019: 2
-      0x1905: 5
-      0x1910: 3
-      0x1911: 3
-      0x1916: 4
-      0x1918: 3
-      0x1919: 4
-      0x191A: 3
-      0x191B: 3
-      0x191C: 4
-      0x191D: 4
-      0x1921: 3
-      0x1922: 7
-      0x1923: 7
-      0x1924: 7
-      0x1925: 3
-      0x1926: 3
-      0x1927: 3
-      0x1928: 3
-      0x001A: 2
-      0x1A06: 3
-      0x001B: 2
-      0x1B02: 6
-      0x1B03: 6
-      0x001C: 3
-      0x1C04: 2
-      0x1C0A: 6
-      0x1C0B: 6
-      0x1C0D: 2
-      0x1C0E: 2
-      0x1C0F: 2
-      0x1C13: 4
-      0x001D: 2
-      0x1D00: 4
-      0x1D01: 4
-      0x1D02: 3
-      0x1D03: 3
-      0x1D04: 4
-      0x1D05: 4
-      0x1D06: 6
-      0x1D07: 6
-      0x1D08: 4
-      0x1D09: 4
-      0x1D0E: 4
-      0x1D0F: 4
-      0x1D10: 4
-      0x1D11: 4
-      0x1D12: 4
-      0x1D13: 4
-      0x1D14: 6
-      0x1D15: 4
-      0x1D17: 6
-      0x1D18: 3
-      0x1D19: 3
-      0x1D21: 3
-      0x1D23: 3
-      0x1D24: 3
-      0x001E: 4
-      0x1E09: 6
-      0x001F: 3
-      0x1F00: 4
-      0x1F03: 2
-      0x1F05: 2
-      0x1F06: 2
-      0x1F13: 4
-      0x1F15: 7
-      0x1F16: 5
-      0x1F17: 7
-      0x1F18: 9
-      0x1F19: 9
-      0x1F1A: 5
-      0x1F1C: 4
-      0x1F1E: 5
-      0x1F1F: 5
-      0x1F20: 4
-      0x1F30: 2
-      0x1F31: 2
-      0x1F40: 4
-      0x1F50: 2
-      0x1F51: 2
-      0x1F61: 2
-      0x1F63: 6
-      0x1F64: 2
-      0x1F65: 2
-      0x1F66: 8
-      0x1F68: 2
-      0x1F69: 2
-      0x1F71: 4
-      0x1F81: 4
-      0x1F83: 4
-      0x1F90: 2
-      0x1FA0: 2
-      0x1FA1: 2
-      0x1FA2: 2
-      0x1FB0: 2
-      0x1FC0: 7
-      0x1FD1: 2
-      0x1FE1: 5
-      0x1FE4: 5
-      0x1FE6: 4
-      0x1FE7: 4
-      0x1FE9: 4
-      0x1FEA: 4
-      0x1FEB: 4
-      0x1FEC: 4
-      0x1FED: 2
-      0x1FEE: 4
-      0x1FEF: 4
-      0x1FF1: 6
-      0x1FF2: 6
-      0x1FF3: 5
+      0x04: 3
+      0x05: 3
+      0x06: 7
+      0x07: 3
+      0x08: 5
+      0x09: 6
+      0x0A: 5
+      0x0B: 2
+      0x0C: 2
+      0x0D: 2
+      0x0E: 2
+      0x10: 2
+      0x15: 2
+      0x16: 2
+      0x17: 2
+      0x18:
+        default: 2
+        0x01: 3
+        0x03: 3
+        0x05: 4
+        0x07: 7
+        0x0D: 4
+      0x19:
+        default: 2
+        0x05: 5
+        0x10: 3
+        0x11: 3
+        0x16: 4
+        0x18: 3
+        0x19: 4
+        0x1A: 3
+        0x1B: 3
+        0x1C: 4
+        0x1D: 4
+        0x21: 3
+        0x22: 7
+        0x23: 7
+        0x24: 7
+        0x25: 3
+        0x26: 3
+        0x27: 3
+        0x28: 3
+      0x1A:
+        default: 2
+        0x06: 3
+      0x1B: 
+        default: 2
+        0x02: 6
+        0x03: 6
+      0x1C:
+        default: 3
+        0x04: 2
+        0x0A: 6
+        0x0B: 6
+        0x0D: 2
+        0x0E: 2
+        0x0F: 2
+        0x13: 4
+      0x001D:
+        default: 2
+        0x00: 4
+        0x01: 4
+        0x02: 3
+        0x03: 3
+        0x04: 4
+        0x05: 4
+        0x06: 6
+        0x07: 6
+        0x08: 4
+        0x09: 4
+        0x0E: 4
+        0x0F: 4
+        0x10: 4
+        0x11: 4
+        0x12: 4
+        0x13: 4
+        0x14: 6
+        0x15: 4
+        0x17: 6
+        0x18: 3
+        0x19: 3
+        0x21: 3
+        0x23: 3
+        0x24: 3
+      0x1E:
+        default: 4
+        0x09: 6
+      0x1F:
+        default: 3
+        0x00: 4
+        0x03: 2
+        0x05: 2
+        0x06: 2
+        0x13: 4
+        0x15: 7
+        0x16: 5
+        0x17: 7
+        0x18: 9
+        0x19: 9
+        0x1A: 5
+        0x1C: 4
+        0x1E: 5
+        0x1F: 5
+        0x20: 4
+        0x30: 2
+        0x31: 2
+        0x40: 4
+        0x50: 2
+        0x51: 2
+        0x61: 2
+        0x63: 6
+        0x64: 2
+        0x65: 2
+        0x66: 8
+        0x68: 2
+        0x69: 2
+        0x71: 4
+        0x81: 4
+        0x83: 4
+        0x90: 2
+        0xA0: 2
+        0xA1: 2
+        0xA2: 2
+        0xB0: 2
+        0xC0: 7
+        0xD1: 2
+        0xE1: 5
+        0xE4: 5
+        0xE6: 4
+        0xE7: 4
+        0xE9: 4
+        0xEA: 4
+        0xEB: 4
+        0xEC: 4
+        0xED: 2
+        0xEE: 4
+        0xEF: 4
+        0xF1: 6
+        0xF2: 6
+        0xF3: 5
     replacements:
-      0x0000: ""
-      0x0002: ""
       0x0003: |2+
 
       0x0050: ' '
@@ -18186,9 +18192,530 @@ texttables:
   name: AUDIO_BLOCK_38531846341864636
 0xCF0000:
   type: data
-  size: 9807
-  description: Door Destinations Table
-  name: DOOR_DEST_TABLE
+  size: 0x580
+  description: Door Destinations Table (1)
+  name: DOOR_DEST_TABLE_1
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  - name: Event Flag
+    size: 2
+    type: hexint
+  - name: "Y"
+    size: 2
+  - name: X
+    size: 2
+  - name: Style
+    size: 1
+0xCF0580:
+  type: data
+  size: 0x2C
+  description: Sign Pointers (1)
+  name: SIGN_POINTERS_1
+  entries:
+  - name: Pointer
+    type: pointer
+    size: 4
+0xCF05AC:
+  type: data
+  size: 0x2C
+  description: Door Destinations Table (2)
+  name: DOOR_DEST_TABLE_2
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  - name: Event Flag
+    size: 2
+    type: hexint
+  - name: "Y"
+    size: 2
+  - name: X
+    size: 2
+  - name: Style
+    size: 1
+0xCF05D8:
+  type: data
+  size: 0x20
+  description: Sign Pointers (2)
+  name: SIGN_POINTERS_2
+  entries:
+  - name: Pointer
+    type: pointer
+    size: 4
+0xCF05F8:
+  type: data
+  size: 0x2C
+  description: Door Destinations Table (3)
+  name: DOOR_DEST_TABLE_3
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  - name: Event Flag
+    size: 2
+    type: hexint
+  - name: "Y"
+    size: 2
+  - name: X
+    size: 2
+  - name: Style
+    size: 1
+0xCF0624:
+  type: data
+  size: 0x24
+  description: Unknown Pointers (1)
+  name: UNKNOWN_DPOINTERS_1
+  entries:
+  - name: Pointer
+    type: pointer
+    size: 4
+0xCF0648:
+  type: data
+  size: 0x34F
+  description: Door Destinations Table (4)
+  name: DOOR_DEST_TABLE_4
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  - name: Event Flag
+    size: 2
+    type: hexint
+  - name: "Y"
+    size: 2
+  - name: X
+    size: 2
+  - name: Style
+    size: 1
+0xCF0997:
+  type: data
+  size: 0x20
+  description: Unknown Pointers (2)
+  name: UNKNOWN_DPOINTERS_2
+  entries:
+  - name: Pointer
+    type: pointer
+    size: 4
+0xCF09B7:
+  type: data
+  size: 0x113
+  description: Door Destinations Table (5)
+  name: DOOR_DEST_TABLE_5
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  - name: Event Flag
+    size: 2
+    type: hexint
+  - name: "Y"
+    size: 2
+  - name: X
+    size: 2
+  - name: Style
+    size: 1
+0xCF0ACA:
+  type: data
+  size: 0x08
+  description: Unknown Pointers (3)
+  name: UNKNOWN_DPOINTERS_3
+  entries:
+  - name: Pointer
+    type: pointer
+    size: 4
+0xCF0AD2:
+  type: data
+  size: 0x30D
+  description: Door Destinations Table (6)
+  name: DOOR_DEST_TABLE_6
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  - name: Event Flag
+    size: 2
+    type: hexint
+  - name: "Y"
+    size: 2
+  - name: X
+    size: 2
+  - name: Style
+    size: 1
+0xCF0DDF:
+  type: data
+  size: 0x08
+  description: Unknown Pointers (4)
+  name: UNKNOWN_DPOINTERS_4
+  entries:
+  - name: Pointer
+    type: pointer
+    size: 4
+0xCF0DE7:
+  type: data
+  size: 0x4D
+  description: Door Destinations Table (7)
+  name: DOOR_DEST_TABLE_7
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  - name: Event Flag
+    size: 2
+    type: hexint
+  - name: "Y"
+    size: 2
+  - name: X
+    size: 2
+  - name: Style
+    size: 1
+0xCF0E34:
+  type: data
+  size: 0x24
+  description: Unknown Pointers (5)
+  name: UNKNOWN_DPOINTERS_5
+  entries:
+  - name: Pointer
+    type: pointer
+    size: 4
+0xCF0E58:
+  type: data
+  size: 0x9A
+  description: Door Destinations Table (8)
+  name: DOOR_DEST_TABLE_8
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  - name: Event Flag
+    size: 2
+    type: hexint
+  - name: "Y"
+    size: 2
+  - name: X
+    size: 2
+  - name: Style
+    size: 1
+0xCF0EF2:
+  type: data
+  size: 0x04
+  description: Unknown Pointers (6)
+  name: UNKNOWN_DPOINTERS_6
+  entries:
+  - name: Pointer
+    type: pointer
+    size: 4
+0xCF0EF6:
+  type: data
+  size: 0x386
+  description: Door Destinations Table (9)
+  name: DOOR_DEST_TABLE_9
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  - name: Event Flag
+    size: 2
+    type: hexint
+  - name: "Y"
+    size: 2
+  - name: X
+    size: 2
+  - name: Style
+    size: 1
+0xCF127C:
+  type: data
+  size: 0x04
+  description: Unknown Pointers (7)
+  name: UNKNOWN_DPOINTERS_7
+  entries:
+  - name: Pointer
+    type: pointer
+    size: 4
+0xCF1280:
+  type: data
+  size: 0x129
+  description: Door Destinations Table (10)
+  name: DOOR_DEST_TABLE_10
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  - name: Event Flag
+    size: 2
+    type: hexint
+  - name: "Y"
+    size: 2
+  - name: X
+    size: 2
+  - name: Style
+    size: 1
+0xCF13A9:
+  type: data
+  size: 0x04
+  description: Unknown Pointers (8)
+  name: UNKNOWN_DPOINTERS_8
+  entries:
+  - name: Pointer
+    type: pointer
+    size: 4
+0xCF13AD:
+  type: data
+  size: 0x7C7
+  description: Door Destinations Table (11)
+  name: DOOR_DEST_TABLE_11
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  - name: Event Flag
+    size: 2
+    type: hexint
+  - name: "Y"
+    size: 2
+  - name: X
+    size: 2
+  - name: Style
+    size: 1
+0xCF1B74:
+  type: data
+  size: 0x0C
+  description: Unknown Pointers (9)
+  name: UNKNOWN_DPOINTERS_9
+  entries:
+  - name: Pointer
+    type: pointer
+    size: 4
+0xCF1B80:
+  type: data
+  size: 0xB
+  description: Door Destinations Table (12)
+  name: DOOR_DEST_TABLE_12
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  - name: Event Flag
+    size: 2
+    type: hexint
+  - name: "Y"
+    size: 2
+  - name: X
+    size: 2
+  - name: Style
+    size: 1
+0xCF1B8B:
+  type: data
+  size: 0x18
+  description: Unknown Pointers (10)
+  name: UNKNOWN_DPOINTERS_10
+  entries:
+  - name: Pointer
+    type: pointer
+    size: 4
+0xCF1BA3:
+  type: data
+  size: 0x210
+  description: Door Destinations Table (13)
+  name: DOOR_DEST_TABLE_13
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  - name: Event Flag
+    size: 2
+    type: hexint
+  - name: "Y"
+    size: 2
+  - name: X
+    size: 2
+  - name: Style
+    size: 1
+0xCF1DB3:
+  type: data
+  size: 0x20
+  description: Unknown Pointers (11)
+  name: UNKNOWN_DPOINTERS_11
+  entries:
+  - name: Pointer
+    type: pointer
+    size: 4
+0xCF1DD3:
+  type: data
+  size: 0x16
+  description: Door Destinations Table (14)
+  name: DOOR_DEST_TABLE_14
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  - name: Event Flag
+    size: 2
+    type: hexint
+  - name: "Y"
+    size: 2
+  - name: X
+    size: 2
+  - name: Style
+    size: 1
+0xCF1DE9:
+  type: data
+  size: 0x0C
+  description: Unknown Pointers (12)
+  name: UNKNOWN_DPOINTERS_12
+  entries:
+  - name: Pointer
+    type: pointer
+    size: 4
+0xCF1DF5:
+  type: data
+  size: 0x155
+  description: Door Destinations Table (15)
+  name: DOOR_DEST_TABLE_15
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  - name: Event Flag
+    size: 2
+    type: hexint
+  - name: "Y"
+    size: 2
+  - name: X
+    size: 2
+  - name: Style
+    size: 1
+0xCF1F4A:
+  type: data
+  size: 0x22
+  description: Unknown Pointers (13)
+  name: UNKNOWN_DPOINTERS_13
+0xCF1F6C:
+  type: data
+  size: 0x176
+  description: Door Destinations Table (16)
+  name: DOOR_DEST_TABLE_16
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  - name: Event Flag
+    size: 2
+    type: hexint
+  - name: "Y"
+    size: 2
+  - name: X
+    size: 2
+  - name: Style
+    size: 1
+0xCF20E2:
+  type: data
+  size: 0x15
+  description: Unknown Pointers (14)
+  name: UNKNOWN_DPOINTERS_14
+0xCF20F7:
+  type: data
+  size: 0xF2
+  description: Door Destinations Table (17)
+  name: DOOR_DEST_TABLE_17
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  - name: Event Flag
+    size: 2
+    type: hexint
+  - name: "Y"
+    size: 2
+  - name: X
+    size: 2
+  - name: Style
+    size: 1
+0xCF21E9:
+  type: data
+  size: 0xB0
+  description: Dungeon Man Sign Pointers
+  name: DUNGEON_MAN_SIGN_POINTERS
+  entries:
+  - name: Pointer
+    type: pointer
+    size: 4
+0xCF2299:
+  type: data
+  size: 0x11E
+  description: Door Destinations Table (18)
+  name: DOOR_DEST_TABLE_18
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  - name: Event Flag
+    size: 2
+    type: hexint
+  - name: "Y"
+    size: 2
+  - name: X
+    size: 2
+  - name: Style
+    size: 1
+0xCF23B7:
+  type: data
+  size: 0x0C
+  description: Unknown Pointers (15)
+  name: UNKNOWN_DPOINTERS_15
+  entries:
+  - name: Pointer
+    type: pointer
+    size: 4
+0xCF23C3:
+  type: data
+  size: 0x1E4
+  description: Door Destinations Table (19)
+  name: DOOR_DEST_TABLE_19
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  - name: Event Flag
+    size: 2
+    type: hexint
+  - name: "Y"
+    size: 2
+  - name: X
+    size: 2
+  - name: Style
+    size: 1
+0xCF25A7:
+  type: data
+  size: 0x18
+  description: Unknown Pointers (16)
+  name: UNKNOWN_DPOINTERS_16
+  entries:
+  - name: Pointer
+    type: pointer
+    size: 4
+0xCF25BF:
+  type: data
+  size: 0x8F
+  description: Door Destinations Table (20)
+  name: DOOR_DEST_TABLE_20
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  - name: Event Flag
+    size: 2
+    type: hexint
+  - name: "Y"
+    size: 2
+  - name: X
+    size: 2
+  - name: Style
+    size: 1
+0xCF264E:
+  type: data
+  size: 1
 0xCF264F:
   type: data
   size: 12960
