@@ -6,64 +6,64 @@ defaulttext: standardtext
 texttables:
   stafftext:
     lengths:
-      0x0003: 2
+      0x03: 2
     replacements:
-      0x0000: ""
-      0x0040: ' '
-      0x0042: a
-      0x0044: c
-      0x0045: e
-      0x0046: g
-      0x0047: ''''
-      0x0048: i
-      0x0049: k
-      0x004A: m
-      0x004B: o
-      0x004E: .
-      0x0052: b
-      0x0054: d
-      0x0055: f
-      0x0056: h
-      0x0059: l
-      0x005A: "n"
-      0x005B: p
-      0x006B: s
-      0x006C: u
-      0x006D: w
-      0x006E: "y"
-      0x006F: '?'
-      0x007A: r
-      0x007B: t
-      0x007C: v
-      0x007D: x
-      0x0080: '-'
-      0x0081: A
-      0x0082: B
-      0x0083: C
-      0x0084: D
-      0x0085: E
-      0x0086: F
-      0x0087: G
-      0x0088: H
-      0x0089: I
-      0x008A: J
-      0x008B: K
-      0x008C: L
-      0x008D: M
-      0x008E: "N"
-      0x008F: O
-      0x00A0: P
-      0x00A1: Q
-      0x00A2: R
-      0x00A3: S
-      0x00A4: T
-      0x00A5: U
-      0x00A6: V
-      0x00A7: W
-      0x00A8: X
-      0x00A9: "Y"
-      0x00AA: Z
-      0x00AD: .
+      0x00: ""
+      0x40: ' '
+      0x42: a
+      0x44: c
+      0x45: e
+      0x46: g
+      0x47: ''''
+      0x48: i
+      0x49: k
+      0x4A: m
+      0x4B: o
+      0x4E: .
+      0x52: b
+      0x54: d
+      0x55: f
+      0x56: h
+      0x59: l
+      0x5A: "n"
+      0x5B: p
+      0x6B: s
+      0x6C: u
+      0x6D: w
+      0x6E: "y"
+      0x6F: '?'
+      0x7A: r
+      0x7B: t
+      0x7C: v
+      0x7D: x
+      0x80: '-'
+      0x81: A
+      0x82: B
+      0x83: C
+      0x84: D
+      0x85: E
+      0x86: F
+      0x87: G
+      0x88: H
+      0x89: I
+      0x8A: J
+      0x8B: K
+      0x8C: L
+      0x8D: M
+      0x8E: "N"
+      0x8F: O
+      0xA0: P
+      0xA1: Q
+      0xA2: R
+      0xA3: S
+      0xA4: T
+      0xA5: U
+      0xA6: V
+      0xA7: W
+      0xA8: X
+      0xA9: "Y"
+      0xAA: Z
+      0xAD: .
   standardtext:
     lengths:
       0x04: 3
@@ -1054,10 +1054,6 @@ texttables:
       0x17FD: '@Ky'
       0x17FE: '@Ye'
       0x17FF: spi
-      0x1C0201: Ness
-      0x1C0202: Paula
-      0x1C0203: Jeff
-      0x1C0204: Poo
 ...
 ---
 0x008141:
@@ -17984,15 +17980,60 @@ texttables:
   description: Battle Background Scrolling Movement Table
   name: BG_SCROLLING_TABLE
   size: 1200
+  entries:
+  - name: Duration
+    size: 2
+  - name: Horizontal Movement
+    size: 2
+    signed: y
+  - name: Vertical Movement
+    size: 2
+    signed: y
+  - name: Horizontal Acceleration
+    size: 2
+    signed: y
+  - name: Vertical Acceleration
+    size: 2
+    signed: y
 0xCAF708:
   type: data
   description: Battle Background Distortion Table
   name: BG_DISTORTION_TABLE
   size: 2296
   entries:
-  - name: something
-    size: 7
-    type: bytearray
+  - name: Unknown A
+    size: 1
+  - name: Unknown B
+    size: 1
+  - name: Type
+    size: 1
+    values:
+    - ~
+    - Horizontal, Smooth
+    - Horizontal, Interlaced
+    - Vertical, Smooth
+  - name: Ripple Frequency
+    size: 2
+  - name: Ripple Amplitude
+    size: 2
+  - name: Unknown C
+    size: 1
+  - name: Unknown D
+    size: 1
+  - name: Unknown E
+    size: 1
+  - name: Ripple Frequency Acceleration
+    size: 2
+    signed: y
+  - name: Ripple Amplitude Acceleration
+    size: 2
+    signed: y
+  - name: Speed
+    size: 1
+  - name: Unknown F
+    size: 1
+  - name: Unknown G
+    size: 1
 0xCB0000:
   type: data
   size: 55450
@@ -18004,9 +18045,9 @@ texttables:
   name: GROUP_BATTLEBG_TABLE
   size: 1936
   entries:
-  - name: Unknown
+  - name: BG 1 ID
     size: 2
-  - name: Unknown2
+  - name: BG 2 ID
     size: 2
 0xCBE02A:
   type: data
