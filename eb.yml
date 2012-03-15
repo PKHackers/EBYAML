@@ -2,6 +2,7 @@
 processor: 65816
 platform: snes
 title: Earthbound (USA)
+localvars: directpage
 defaulttext: standardtext
 texttables:
   stafftext:
@@ -207,853 +208,856 @@ texttables:
         0xF2: 6
         0xF3: 5
     replacements:
-      0x0003: |2+
-
-      0x0050: ' '
-      0x0051: '!'
-      0x0054: $
-      0x0057: ''''
-      0x0058: (
-      0x0059: )
-      0x005A: '*'
-      0x005C: ','
-      0x005D: '-'
-      0x005E: .
-      0x0060: 0
-      0x0061: 1
-      0x0062: 2
-      0x0063: 3
-      0x0064: 4
-      0x0065: 5
-      0x0066: 6
-      0x0067: 7
-      0x0068: 8
-      0x0069: 9
-      0x006C: '&lt;'
-      0x006E: '&gt;'
-      0x006F: '?'
-      0x0070: '@'
-      0x0071: A
-      0x0072: B
-      0x0073: C
-      0x0074: D
-      0x0075: E
-      0x0076: F
-      0x0077: G
-      0x0078: H
-      0x0079: I
-      0x007A: J
-      0x007B: K
-      0x007C: L
-      0x007D: M
-      0x007E: "N"
-      0x007F: O
-      0x0080: P
-      0x0081: Q
-      0x0082: R
-      0x0083: S
-      0x0084: T
-      0x0085: U
-      0x0086: V
-      0x0087: W
-      0x0088: X
-      0x0089: "Y"
-      0x008A: Z
-      0x0091: a
-      0x0092: b
-      0x0093: c
-      0x0094: d
-      0x0095: e
-      0x0096: f
-      0x0097: g
-      0x0098: h
-      0x0099: i
-      0x009A: j
-      0x009B: k
-      0x009C: l
-      0x009D: m
-      0x009E: "n"
-      0x009F: o
-      0x00A0: p
-      0x00A1: q
-      0x00A2: r
-      0x00A3: s
-      0x00A4: t
-      0x00A5: u
-      0x00A6: v
-      0x00A7: w
-      0x00A8: x
-      0x00A9: "y"
-      0x00AA: z
-      0x00AC: '[CHAR1]'
-      0x1500: '                '
-      0x1501: ' in the '
-      0x1502: ' that '
-      0x1503: '...'
-      0x1504: ' and '
-      0x1505: ' this '
-      0x1506: ' to the '
-      0x1507: ' about '
-      0x1508: ' just '
-      0x1509: ' of the '
-      0x150A: ' something '
-      0x150B: ' going to '
-      0x150C: ' to '
-      0x150D: ' you have '
-      0x150E: ' your '
-      0x150F: ' for '
-      0x1510: ' you''re '
-      0x1511: '@You '
-      0x1512: ' really '
-      0x1513: ' don''t '
-      0x1514: '@The '
-      0x1515: 'e the '
-      0x1516: 'e you '
-      0x1517: '... '
-      0x1518: ' the '
-      0x1519: ' will '
-      0x151A: '   ...Brick Road'
-      0x151B: 'ing '
-      0x151C: ' some '
-      0x151D: '              '
-      0x151E: '@Do you want to '
-      0x151F: ' like '
-      0x1520: 'ou don''t have '
-      0x1521: ' is '
-      0x1522: ' you '
-      0x1523: ' you'
-      0x1524: ' anything else'
-      0x1525: ' the'
-      0x1526: ' you want to '
-      0x1527: ' for the '
-      0x1528: ' friend'
-      0x1529: ' at the '
-      0x152A: 'ould you like '
-      0x152B: ' from '
-      0x152C: ' would '
-      0x152D: he Runaway Five
-      0x152E: ' with '
-      0x152F: ' want to '
-      0x1530: '@If you '
-      0x1531: ' you don''t '
-      0x1532: 's the '
-      0x1533: 'ed to '
-      0x1534: e...
-      0x1535: ' something'
-      0x1536: 't the '
-      0x1537: '@...'
-      0x1538: '@Please '
-      0x1539: '''s '
-      0x153A: ' of your '
-      0x153B: '@It''s '
-      0x153C: '@Thank you '
-      0x153D: '@I '
-      0x153E: ' here.'
-      0x153F: ' in '
-      0x1540: '@Do you '
-      0x1541: ' I''ll '
-      0x1542: ' have '
-      0x1543: 'e of '
-      0x1544: 'd you '
-      0x1545: '@I''m '
-      0x1546: 'me to '
-      0x1547: '@I don''t '
-      0x1548: '@Well, '
-      0x1549: '@This is '
-      0x154A: 'ed the '
-      0x154B: '@You''re '
-      0x154C: ' for a '
-      0x154D: ' anything'
-      0x154E: ing
-      0x154F: ' of '
-      0x1550: ' you should '
-      0x1551: ' I '
-      0x1552: ' from the '
-      0x1553: s...
-      0x1554: ' it''s '
-      0x1555: ' time'
-      0x1556: 'e to '
-      0x1557: 'ed '
-      0x1558: 'e of the '
-      0x1559: ' to you'
-      0x155A: 'n''t you '
-      0x155B: ' again'
-      0x155C: ' for you.'
-      0x155D: 'other '
-      0x155E: ation
-      0x155F: ' little '
-      0x1560: 'ing to '
-      0x1561: ' can''t '
-      0x1562: ' much'
-      0x1563: ' someone '
-      0x1564: ' on the '
-      0x1565: ' looks like'
-      0x1566: ' don''t you '
-      0x1567: ' very '
-      0x1568: 'the '
-      0x1569: ' can '
-      0x156A: you
-      0x156B: ' that you '
-      0x156C: ' it'
-      0x156D: ' you want'
-      0x156E: 'ou can''t '
-      0x156F: ' able to '
-      0x1570: ' already '
-      0x1571: ' give you '
-      0x1572: understand
-      0x1573: '       '
-      0x1574: ' my '
-      0x1575: ' you can '
-      0x1576: ' that'
-      0x1577: ' what '
-      0x1578: 'here''s '
-      0x1579: ' there '
-      0x157A: 'n the '
-      0x157B: '@What '
-      0x157C: Thank you
-      0x157D: ' I can''t '
-      0x157E: one
-      0x157F: '@The'
-      0x1580: ' thought'
-      0x1581: ' not '
-      0x1582: You should
-      0x1583: ou know
-      0x1584: ' has '
-      0x1585: ' back'
-      0x1586: ' of'
-      0x1587: 've been '
-      0x1588: ' I''m '
-      0x1589: ' there'
-      0x158A: ' with you'
-      0x158B: '@I heard '
-      0x158C: ' in'
-      0x158D: ' here '
-      0x158E: ' Fourside'
-      0x158F: 'I wonder '
-      0x1590: ' to'
-      0x1591: ' could '
-      0x1592: ' think '
-      0x1593: ' out'
-      0x1594: ' good '
-      0x1595: '  the '
-      0x1596: '  You '
-      0x1597: ' too much'
-      0x1598: ome back
-      0x1599: t...
-      0x159A: ' here'
-      0x159B: thing
-      0x159C: 'come '
-      0x159D: 'ly '
-      0x159E: ent
-      0x159F: ' strong'
-      0x15A0: ' money.'
-      0x15A1: '@I''ll '
-      0x15A2: 'an '
-      0x15A3: 'ou must '
-      0x15A4: ' are you '
-      0x15A5: ' with the'
-      0x15A6: ' on your '
-      0x15A7: 'too many '
-      0x15A8: ' you.'
-      0x15A9: know
-      0x15AA: ' to be '
-      0x15AB: ' around '
-      0x15AC: ' if you '
-      0x15AD: '@Are you '
-      0x15AE: ome again
-      0x15AF: 'e and '
-      0x15B0: ' more '
-      0x15B1: think
-      0x15B2: 'e your '
-      0x15B3: '@Don''t '
-      0x15B4: 'nd the '
-      0x15B5: 't to '
-      0x15B6: rea
-      0x15B7: ' he'
-      0x15B8: ' me'
-      0x15B9: ' strange'
-      0x15BA: ' for you'
-      0x15BB: ight
-      0x15BC: ' a '
-      0x15BD: ' be'
-      0x15BE: ther
-      0x15BF: 'all '
-      0x15C0: ' cannot '
-      0x15C1: 'here is '
-      0x15C2: You have
-      0x15C3: Monotoli
-      0x15C4: ' was '
-      0x15C5: 'll you '
-      0x15C6: 'hat '
-      0x15C7: ', but '
-      0x15C8: ' stuff'
-      0x15C9: eep
-      0x15CA: ' it '
-      0x15CB: ' didn''t '
-      0x15CC: ' like th'
-      0x15CD: ll right
-      0x15CE: ' should'
-      0x15CF: ' over'
-      0x15D0: '@Oh, '
-      0x15D1: ' hear'
-      0x15D2: ' every'
-      0x15D3: 'I''m not '
-      0x15D4: ' about t'
-      0x15D5: ' zombies'
-      0x15D6: ' damage'
-      0x15D7: 'his is '
-      0x15D8: all
-      0x15D9: ' some'
-      0x15DA: '@It '
-      0x15DB: ' attack'
-      0x15DC: ' right '
-      0x15DD: 'ally '
-      0x15DE: orry
-      0x15DF: ess
-      0x15E0: 'er '
-      0x15E1: '@That''s '
-      0x15E2: carry it
-      0x15E3: ake
-      0x15E4: 't was '
-      0x15E5: ', the '
-      0x15E6: 'n you '
-      0x15E7: 'sn''t '
-      0x15E8: ' help'
-      0x15E9: 'king '
-      0x15EA: ear
-      0x15EB: ing the
-      0x15EC: '  It''s '
-      0x15ED: very
-      0x15EE: ' talking'
-      0x15EF: 'ou''ve '
-      0x15F0: 'that''s '
-      0x15F1: ' to me'
-      0x15F2: '@Hello'
-      0x15F3: ' enemy'
-      0x15F4: ' you are'
-      0x15F5: ' by '
-      0x15F6: ' IBNT'
-      0x15F7: 'ight '
-      0x15F8: 'on''t '
-      0x15F9: est
-      0x15FA: ick
-      0x15FB: ' power '
-      0x15FC: 's that '
-      0x15FD: 's are '
-      0x15FE: ' call'
-      0x15FF: 't is '
-      0x1600: ' is'
-      0x1601: age
-      0x1602: ', and '
-      0x1603: ' great '
-      0x1604: '@Thanks'
-      0x1605: ' people'
-      0x1606: ter
-      0x1607: not
-      0x1608: ill
-      0x1609: ness
-      0x160A: '@This '
-      0x160B: ' into '
-      0x160C: ' ha'
-      0x160D: ' I can '
-      0x160E: 't your '
-      0x160F: ' before'
-      0x1610: ' things'
-      0x1611: tion
-      0x1612: ' for'
-      0x1613: 'be '
-      0x1614: ' this'
-      0x1615: Happy
-      0x1616: '  You'
-      0x1617: out
-      0x1618: enough
-      0x1619: '  I''m '
-      0x161A: '@You'
-      0x161B: ' go'
-      0x161C: for
-      0x161D: ' all th'
-      0x161E: ' though'
-      0x161F: ing you
-      0x1620: e you
-      0x1621: 'ring '
-      0x1622: 'one '
-      0x1623: get
-      0x1624: 't you '
-      0x1625: '@I''m s'
-      0x1626: ' the s'
-      0x1627: 'e''s '
-      0x1628: port
-      0x1629: d...
-      0x162A: ' out '
-      0x162B: '@What'
-      0x162C: ' get '
-      0x162D: 'I have '
-      0x162E: looking
-      0x162F: 'n this '
-      0x1630: ' of my '
-      0x1631: ' have a'
-      0x1632: 'ent '
-      0x1633: ' do'
-      0x1634: 'd of '
-      0x1635: ting
-      0x1636: ncrease
-      0x1637: ' Twoson'
-      0x1638: through
-      0x1639: 's your '
-      0x163A: 'ou''ll '
-      0x163B: ' place'
-      0x163C: ' right'
-      0x163D: ' Onett'
-      0x163E: '     '
-      0x163F: ' our '
-      0x1640: ' too'
-      0x1641: ater
-      0x1642: ' be '
-      0x1643: ain
-      0x1644: ing.
-      0x1645: 'take '
-      0x1646: 'e is '
-      0x1647: the
-      0x1648: ' please'
-      0x1649: ' do you'
-      0x164A: need
-      0x164B: use
-      0x164C: ' now.'
-      0x164D: ' got '
-      0x164E: '   '
-      0x164F: 'and '
-      0x1650: ning
-      0x1651: ' sta'
-      0x1652: ' the t'
-      0x1653: 'I was '
-      0x1654: 'y the '
-      0x1655: his
-      0x1656: appe
-      0x1657: con
-      0x1658: ' ho'
-      0x1659: 'hat''s '
-      0x165A: Threed
-      0x165B: 'get '
-      0x165C: 's of '
-      0x165D: inter
-      0x165E: talk
-      0x165F: ' man'
-      0x1660: day
-      0x1661: ove
-      0x1662: ' ha ha'
-      0x1663: inally
-      0x1664: monkey
-      0x1665: 's and '
-      0x1666: ate
-      0x1667: see
-      0x1668: town
-      0x1669: side
-      0x166A: 'y to '
-      0x166B: 'ever '
-      0x166C: equip
-      0x166D: ' than'
-      0x166E: ' who'
-      0x166F: long
-      0x1670: care
-      0x1671: room
-      0x1672: 'e are '
-      0x1673: ard
-      0x1674: end
-      0x1675: ', you '
-      0x1676: ' the b'
-      0x1677: I know
-      0x1678: 'think '
-      0x1679: 's you '
-      0x167A: time
-      0x167B: ment
-      0x167C: ' so'
-      0x167D: '!  '
-      0x167E: 'I''ve '
-      0x167F: ell
-      0x1680: ' wa'
-      0x1681: ious
-      0x1682: reat
-      0x1683: live
-      0x1684: ange
-      0x1685: ' we'
-      0x1686: ble
-      0x1687: '@.....'
-      0x1688: ecover
-      0x1689: ' only '
-      0x168A: 'thing '
-      0x168B: er...
-      0x168C: 'Mr. '
-      0x168D: ough
-      0x168E: ' now'
-      0x168F: '  I'
-      0x1690: wor
-      0x1691: 'to '
-      0x1692: ed.
-      0x1693: '  I '
-      0x1694: '''re '
-      0x1695: ' give '
-      0x1696: 'ing a '
-      0x1697: return
-      0x1698: better
-      0x1699: 'ince '
-      0x169A: ' well'
-      0x169B: ' one '
-      0x169C: still
-      0x169D: 'ying '
-      0x169E: me...
-      0x169F: sta
-      0x16A0: 'ust '
-      0x16A1: per
-      0x16A2: lease
-      0x16A3: 'ling '
-      0x16A4: point
-      0x16A5: ect
-      0x16A6: ast
-      0x16A7: pretty
-      0x16A8: Giygas
-      0x16A9: ecause
-      0x16AA: member
-      0x16AB: 'carry '
-      0x16AC: ' used '
-      0x16AD: elieve
-      0x16AE: ' money'
-      0x16AF: pres
-      0x16B0: way
-      0x16B1: ' di'
-      0x16B2: ' even'
-      0x16B3: 'ound '
-      0x16B4: 's to '
-      0x16B5: 'ting '
-      0x16B6: 'ted '
-      0x16B7: oing
-      0x16B8: ' and'
-      0x16B9: ine
-      0x16BA: '  T'
-      0x16BB: sure
-      0x16BC: ' on '
-      0x16BD: '@...I'
-      0x16BE: while
-      0x16BF: '@but '
-      0x16C0: '@We'
-      0x16C1: ice
-      0x16C2: 'se '
-      0x16C3: 'ive '
-      0x16C4: ' rea'
-      0x16C5: ' com'
-      0x16C6: 'est '
-      0x16C7: have
-      0x16C8: ' but'
-      0x16C9: away
-      0x16CA: here
-      0x16CB: ' must'
-      0x16CC: ' but '
-      0x16CD: ' want'
-      0x16CE: ready
-      0x16CF: I'm
-      0x16D0: carr
-      0x16D1: 'my '
-      0x16D2: ay...
-      0x16D3: ' are '
-      0x16D4: '@Hey,'
-      0x16D5: world
-      0x16D6: ing a
-      0x16D7: ' happ'
-      0x16D8: ' seem'
-      0x16D9: ' his '
-      0x16DA: nder
-      0x16DB: ' se'
-      0x16DC: ant
-      0x16DD: item
-      0x16DE: '@But'
-      0x16DF: ' sho'
-      0x16E0: 'in a '
-      0x16E1: 'made '
-      0x16E2: night
-      0x16E3: 'et''s '
-      0x16E4: ' like'
-      0x16E5: '  The'
-      0x16E6: che
-      0x16E7: ' de'
-      0x16E8: ful
-      0x16E9: hat
-      0x16EA: and
-      0x16EB: self
-      0x16EC: ould
-      0x16ED: '@No'
-      0x16EE: car
-      0x16EF: ' tr'
-      0x16F0: ' good'
-      0x16F1: ' stor'
-      0x16F2: ombie
-      0x16F3: '@Oh'
-      0x16F4: '@It'
-      0x16F5: 's a '
-      0x16F6: vent
-      0x16F7: 'ant '
-      0x16F8: ' so '
-      0x16F9: olla
-      0x16FA: ree
-      0x16FB: 'Your '
-      0x16FC: 'make '
-      0x16FD: ' work'
-      0x16FE: power
-      0x16FF: ' home'
-      0x1700: also
-      0x1701: ance
-      0x1702: '@How'
-      0x1703: h...
-      0x1704: '@If'
-      0x1705: ple
-      0x1706: buy
-      0x1707: 'e, '
-      0x1708: n't
-      0x1709: oke
-      0x170A: 'n''t '
-      0x170B: more
-      0x170C: Good
-      0x170D: 't a '
-      0x170E: ' all'
-      0x170F: take
-      0x1710: round
-      0x1711: ' when'
-      0x1712: ' name'
-      0x1713: being
-      0x1714: attle
-      0x1715: ite
-      0x1716: ack
-      0x1717: y...
-      0x1718: '@Whe'
-      0x1719: with
-      0x171A: 'al '
-      0x171B: 'have '
-      0x171C: ' look'
-      0x171D: 't of '
-      0x171E: aster
-      0x171F: ' a lo'
-      0x1720: ' feel'
-      0x1721: 'here '
-      0x1722: count
-      0x1723: monst
-      0x1724: now
-      0x1725: ark
-      0x1726: ous
-      0x1727: '''ll'
-      0x1728: ' bus'
-      0x1729: head
-      0x172A: ' any '
-      0x172B: t you
-      0x172C: erson
-      0x172D: after
-      0x172E: ummer
-      0x172F: ' hard'
-      0x1730: 'ful '
-      0x1731: ever
-      0x1732: ' kid'
-      0x1733: ' a b'
-      0x1734: kay
-      0x1735: tra
-      0x1736: pla
-      0x1737: ook
-      0x1738: ome
-      0x1739: eat
-      0x173A: '@Wel'
-      0x173B: ' off'
-      0x173C: turn
-      0x173D: I am
-      0x173E: oney
-      0x173F: ' any'
-      0x1740: ave
-      0x1741: 'any '
-      0x1742: enem
-      0x1743: ' con'
-      0x1744: ' me '
-      0x1745: red
-      0x1746: 'en '
-      0x1747: ' bo'
-      0x1748: ' re'
-      0x1749: 'ell '
-      0x174A: sell
-      0x174B: what
-      0x174C: next
-      0x174D: ure
-      0x174E: ' bu'
-      0x174F: pro
-      0x1750: ' on'
-      0x1751: res
-      0x1752: 'es '
-      0x1753: ' lo'
-      0x1754: our
-      0x1755: 'use '
-      0x1756: iste
-      0x1757: ood
-      0x1758: ' no'
-      0x1759: ope
-      0x175A: ock
-      0x175B: row
-      0x175C: '@He'
-      0x175D: how
-      0x175E: ' may'
-      0x175F: ' as '
-      0x1760: stor
-      0x1761: ' are'
-      0x1762: 'ost '
-      0x1763: mean
-      0x1764: '  We'
-      0x1765: '  He'
-      0x1766: '@An'
-      0x1767: 'it '
-      0x1768: 'in '
-      0x1769: ound
-      0x176A: one.
-      0x176B: come
-      0x176C: blue
-      0x176D: way,
-      0x176E: ' or '
-      0x176F: ' mo'
-      0x1770: '.  '
-      0x1771: each
-      0x1772: some
-      0x1773: '@(Th'
-      0x1774: otel
-      0x1775: hand
-      0x1776: came
-      0x1777: ' ca'
-      0x1778: ame
-      0x1779: '@Hey'
-      0x177A: 'een '
-      0x177B: spec
-      0x177C: 'red '
-      0x177D: ing!
-      0x177E: ' ...'
-      0x177F: hose
-      0x1780: 'ind '
-      0x1781: 'ice '
-      0x1782: ver
-      0x1783: '  W'
-      0x1784: min
-      0x1785: 'et '
-      0x1786: 'on '
-      0x1787: ace
-      0x1788: er.
-      0x1789: 'are '
-      0x178A: nter
-      0x178B: o...
-      0x178C: were
-      0x178D: help
-      0x178E: 'old '
-      0x178F: ' it.'
-      0x1790: hear
-      0x1791: stop
-      0x1792: look
-      0x1793: com
-      0x1794: '@Do'
-      0x1795: ' her'
-      0x1796: ' pro'
-      0x1797: chin
-      0x1798: 'ble '
-      0x1799: 'e a '
-      0x179A: girl
-      0x179B: luck
-      0x179C: '  B'
-      0x179D: act
-      0x179E: ike
-      0x179F: down
-      0x17A0: part
-      0x17A1: ' see'
-      0x17A2: ' use'
-      0x17A3: 'uch '
-      0x17A4: from
-      0x17A5: just
-      0x17A6: llow
-      0x17A7: '@Her'
-      0x17A8: ' at '
-      0x17A9: '@So,'
-      0x17AA: ' ye'
-      0x17AB: ser
-      0x17AC: ying
-      0x17AD: ring
-      0x17AE: eave
-      0x17AF: 'big '
-      0x17B0: ried
-      0x17B1: ' was'
-      0x17B2: ' say'
-      0x17B3: ' su'
-      0x17B4: her
-      0x17B5: it.
-      0x17B6: Man
-      0x17B7: kin
-      0x17B8: ' up'
-      0x17B9: ers
-      0x17BA: '@Why'
-      0x17BB: p...
-      0x17BC: cour
-      0x17BD: ' him'
-      0x17BE: agic
-      0x17BF: any
-      0x17C0: fin
-      0x17C1: eal
-      0x17C2: 'he '
-      0x17C3: ide
-      0x17C4: oor
-      0x17C5: ity
-      0x17C6: got
-      0x17C7: ens
-      0x17C8: ish
-      0x17C9: ive
-      0x17CA: ' sa'
-      0x17CB: oon
-      0x17CC: fee
-      0x17CD: s a
-      0x17CE: nce
-      0x17CF: '  D'
-      0x17D0: uck
-      0x17D1: ass
-      0x17D2: man
-      0x17D3: a p
-      0x17D4: '@(I'
-      0x17D5: '@Wh'
-      0x17D6: ' gu'
-      0x17D7: '  ('
-      0x17D8: bus
-      0x17D9: los
-      0x17DA: 'ts '
-      0x17DB: ' ba'
-      0x17DC: '  S'
-      0x17DD: ' if'
-      0x17DE: '@Ha'
-      0x17DF: ' ma'
-      0x17E0: unn
-      0x17E1: 'ay '
-      0x17E2: ner
-      0x17E3: '@A '
-      0x17E4: 'or '
-      0x17E5: stu
-      0x17E6: ust
-      0x17E7: kya
-      0x17E8: shi
-      0x17E9: pos
-      0x17EA: '  A'
-      0x17EB: int
-      0x17EC: ' le'
-      0x17ED: ary
-      0x17EE: ven
-      0x17EF: ' ch'
-      0x17F0: own
-      0x17F1: ' hu'
-      0x17F2: '@My'
-      0x17F3: '@So'
-      0x17F4: ' sp'
-      0x17F5: ' sh'
-      0x17F6: wan
-      0x17F7: ool
-      0x17F8: '  Y'
-      0x17F9: old
-      0x17FA: eas
-      0x17FB: ', I'
-      0x17FC: iki
-      0x17FD: '@Ky'
-      0x17FE: '@Ye'
-      0x17FF: spi
+      0x00: "\n"
+      0x03: "\n"
+      0x50: ' '
+      0x51: '!'
+      0x54: $
+      0x57: ''''
+      0x58: (
+      0x59: )
+      0x5A: '*'
+      0x5C: ','
+      0x5D: '-'
+      0x5E: .
+      0x60: 0
+      0x61: 1
+      0x62: 2
+      0x63: 3
+      0x64: 4
+      0x65: 5
+      0x66: 6
+      0x67: 7
+      0x68: 8
+      0x69: 9
+      0x6C: '&lt;'
+      0x6E: '&gt;'
+      0x6F: '?'
+      0x70: '@'
+      0x71: A
+      0x72: B
+      0x73: C
+      0x74: D
+      0x75: E
+      0x76: F
+      0x77: G
+      0x78: H
+      0x79: I
+      0x7A: J
+      0x7B: K
+      0x7C: L
+      0x7D: M
+      0x7E: "N"
+      0x7F: O
+      0x80: P
+      0x81: Q
+      0x82: R
+      0x83: S
+      0x84: T
+      0x85: U
+      0x86: V
+      0x87: W
+      0x88: X
+      0x89: "Y"
+      0x8A: Z
+      0x91: a
+      0x92: b
+      0x93: c
+      0x94: d
+      0x95: e
+      0x96: f
+      0x97: g
+      0x98: h
+      0x99: i
+      0x9A: j
+      0x9B: k
+      0x9C: l
+      0x9D: m
+      0x9E: "n"
+      0x9F: o
+      0xA0: p
+      0xA1: q
+      0xA2: r
+      0xA3: s
+      0xA4: t
+      0xA5: u
+      0xA6: v
+      0xA7: w
+      0xA8: x
+      0xA9: "y"
+      0xAA: z
+      0xAC: '[CHAR1]'
+      0x15:
+        00: '                '
+        0x01: ' in the '
+        0x02: ' that '
+        0x03: '...'
+        0x04: ' and '
+        0x05: ' this '
+        0x06: ' to the '
+        0x07: ' about '
+        0x08: ' just '
+        0x09: ' of the '
+        0x0A: ' something '
+        0x0B: ' going to '
+        0x0C: ' to '
+        0x0D: ' you have '
+        0x0E: ' your '
+        0x0F: ' for '
+        0x10: ' you''re '
+        0x11: '@You '
+        0x12: ' really '
+        0x13: ' don''t '
+        0x14: '@The '
+        0x15: 'e the '
+        0x16: 'e you '
+        0x17: '... '
+        0x18: ' the '
+        0x19: ' will '
+        0x1A: '   ...Brick Road'
+        0x1B: 'ing '
+        0x1C: ' some '
+        0x1D: '              '
+        0x1E: '@Do you want to '
+        0x1F: ' like '
+        0x20: 'ou don''t have '
+        0x21: ' is '
+        0x22: ' you '
+        0x23: ' you'
+        0x24: ' anything else'
+        0x25: ' the'
+        0x26: ' you want to '
+        0x27: ' for the '
+        0x28: ' friend'
+        0x29: ' at the '
+        0x2A: 'ould you like '
+        0x2B: ' from '
+        0x2C: ' would '
+        0x2D: he Runaway Five
+        0x2E: ' with '
+        0x2F: ' want to '
+        0x30: '@If you '
+        0x31: ' you don''t '
+        0x32: 's the '
+        0x33: 'ed to '
+        0x34: e...
+        0x35: ' something'
+        0x36: 't the '
+        0x37: '@...'
+        0x38: '@Please '
+        0x39: '''s '
+        0x3A: ' of your '
+        0x3B: '@It''s '
+        0x3C: '@Thank you '
+        0x3D: '@I '
+        0x3E: ' here.'
+        0x3F: ' in '
+        0x40: '@Do you '
+        0x41: ' I''ll '
+        0x42: ' have '
+        0x43: 'e of '
+        0x44: 'd you '
+        0x45: '@I''m '
+        0x46: 'me to '
+        0x47: '@I don''t '
+        0x48: '@Well, '
+        0x49: '@This is '
+        0x4A: 'ed the '
+        0x4B: '@You''re '
+        0x4C: ' for a '
+        0x4D: ' anything'
+        0x4E: ing
+        0x4F: ' of '
+        0x50: ' you should '
+        0x51: ' I '
+        0x52: ' from the '
+        0x53: s...
+        0x54: ' it''s '
+        0x55: ' time'
+        0x56: 'e to '
+        0x57: 'ed '
+        0x58: 'e of the '
+        0x59: ' to you'
+        0x5A: 'n''t you '
+        0x5B: ' again'
+        0x5C: ' for you.'
+        0x5D: 'other '
+        0x5E: ation
+        0x5F: ' little '
+        0x60: 'ing to '
+        0x61: ' can''t '
+        0x62: ' much'
+        0x63: ' someone '
+        0x64: ' on the '
+        0x65: ' looks like'
+        0x66: ' don''t you '
+        0x67: ' very '
+        0x68: 'the '
+        0x69: ' can '
+        0x6A: you
+        0x6B: ' that you '
+        0x6C: ' it'
+        0x6D: ' you want'
+        0x6E: 'ou can''t '
+        0x6F: ' able to '
+        0x70: ' already '
+        0x71: ' give you '
+        0x72: understand
+        0x73: '       '
+        0x74: ' my '
+        0x75: ' you can '
+        0x76: ' that'
+        0x77: ' what '
+        0x78: 'here''s '
+        0x79: ' there '
+        0x7A: 'n the '
+        0x7B: '@What '
+        0x7C: Thank you
+        0x7D: ' I can''t '
+        0x7E: one
+        0x7F: '@The'
+        0x80: ' thought'
+        0x81: ' not '
+        0x82: You should
+        0x83: ou know
+        0x84: ' has '
+        0x85: ' back'
+        0x86: ' of'
+        0x87: 've been '
+        0x88: ' I''m '
+        0x89: ' there'
+        0x8A: ' with you'
+        0x8B: '@I heard '
+        0x8C: ' in'
+        0x8D: ' here '
+        0x8E: ' Fourside'
+        0x8F: 'I wonder '
+        0x90: ' to'
+        0x91: ' could '
+        0x92: ' think '
+        0x93: ' out'
+        0x94: ' good '
+        0x95: '  the '
+        0x96: '  You '
+        0x97: ' too much'
+        0x98: ome back
+        0x99: t...
+        0x9A: ' here'
+        0x9B: thing
+        0x9C: 'come '
+        0x9D: 'ly '
+        0x9E: ent
+        0x9F: ' strong'
+        0xA0: ' money.'
+        0xA1: '@I''ll '
+        0xA2: 'an '
+        0xA3: 'ou must '
+        0xA4: ' are you '
+        0xA5: ' with the'
+        0xA6: ' on your '
+        0xA7: 'too many '
+        0xA8: ' you.'
+        0xA9: know
+        0xAA: ' to be '
+        0xAB: ' around '
+        0xAC: ' if you '
+        0xAD: '@Are you '
+        0xAE: ome again
+        0xAF: 'e and '
+        0xB0: ' more '
+        0xB1: think
+        0xB2: 'e your '
+        0xB3: '@Don''t '
+        0xB4: 'nd the '
+        0xB5: 't to '
+        0xB6: rea
+        0xB7: ' he'
+        0xB8: ' me'
+        0xB9: ' strange'
+        0xBA: ' for you'
+        0xBB: ight
+        0xBC: ' a '
+        0xBD: ' be'
+        0xBE: ther
+        0xBF: 'all '
+        0xC0: ' cannot '
+        0xC1: 'here is '
+        0xC2: You have
+        0xC3: Monotoli
+        0xC4: ' was '
+        0xC5: 'll you '
+        0xC6: 'hat '
+        0xC7: ', but '
+        0xC8: ' stuff'
+        0xC9: eep
+        0xCA: ' it '
+        0xCB: ' didn''t '
+        0xCC: ' like th'
+        0xCD: ll right
+        0xCE: ' should'
+        0xCF: ' over'
+        0xD0: '@Oh, '
+        0xD1: ' hear'
+        0xD2: ' every'
+        0xD3: 'I''m not '
+        0xD4: ' about t'
+        0xD5: ' zombies'
+        0xD6: ' damage'
+        0xD7: 'his is '
+        0xD8: all
+        0xD9: ' some'
+        0xDA: '@It '
+        0xDB: ' attack'
+        0xDC: ' right '
+        0xDD: 'ally '
+        0xDE: orry
+        0xDF: ess
+        0xE0: 'er '
+        0xE1: '@That''s '
+        0xE2: carry it
+        0xE3: ake
+        0xE4: 't was '
+        0xE5: ', the '
+        0xE6: 'n you '
+        0xE7: 'sn''t '
+        0xE8: ' help'
+        0xE9: 'king '
+        0xEA: ear
+        0xEB: ing the
+        0xEC: '  It''s '
+        0xED: very
+        0xEE: ' talking'
+        0xEF: 'ou''ve '
+        0xF0: 'that''s '
+        0xF1: ' to me'
+        0xF2: '@Hello'
+        0xF3: ' enemy'
+        0xF4: ' you are'
+        0xF5: ' by '
+        0xF6: ' IBNT'
+        0xF7: 'ight '
+        0xF8: 'on''t '
+        0xF9: est
+        0xFA: ick
+        0xFB: ' power '
+        0xFC: 's that '
+        0xFD: 's are '
+        0xFE: ' call'
+        0xFF: 't is '
+      0x16:
+        0x00: ' is'
+        0x01: age
+        0x02: ', and '
+        0x03: ' great '
+        0x04: '@Thanks'
+        0x05: ' people'
+        0x06: ter
+        0x07: not
+        0x08: ill
+        0x09: ness
+        0x0A: '@This '
+        0x0B: ' into '
+        0x0C: ' ha'
+        0x0D: ' I can '
+        0x0E: 't your '
+        0x0F: ' before'
+        0x10: ' things'
+        0x11: tion
+        0x12: ' for'
+        0x13: 'be '
+        0x14: ' this'
+        0x15: Happy
+        0x16: '  You'
+        0x17: out
+        0x18: enough
+        0x19: '  I''m '
+        0x1A: '@You'
+        0x1B: ' go'
+        0x1C: for
+        0x1D: ' all th'
+        0x1E: ' though'
+        0x1F: ing you
+        0x20: e you
+        0x21: 'ring '
+        0x22: 'one '
+        0x23: get
+        0x24: 't you '
+        0x25: '@I''m s'
+        0x26: ' the s'
+        0x27: 'e''s '
+        0x28: port
+        0x29: d...
+        0x2A: ' out '
+        0x2B: '@What'
+        0x2C: ' get '
+        0x2D: 'I have '
+        0x2E: looking
+        0x2F: 'n this '
+        0x30: ' of my '
+        0x31: ' have a'
+        0x32: 'ent '
+        0x33: ' do'
+        0x34: 'd of '
+        0x35: ting
+        0x36: ncrease
+        0x37: ' Twoson'
+        0x38: through
+        0x39: 's your '
+        0x3A: 'ou''ll '
+        0x3B: ' place'
+        0x3C: ' right'
+        0x3D: ' Onett'
+        0x3E: '     '
+        0x3F: ' our '
+        0x40: ' too'
+        0x41: ater
+        0x42: ' be '
+        0x43: ain
+        0x44: ing.
+        0x45: 'take '
+        0x46: 'e is '
+        0x47: the
+        0x48: ' please'
+        0x49: ' do you'
+        0x4A: need
+        0x4B: use
+        0x4C: ' now.'
+        0x4D: ' got '
+        0x4E: '   '
+        0x4F: 'and '
+        0x50: ning
+        0x51: ' sta'
+        0x52: ' the t'
+        0x53: 'I was '
+        0x54: 'y the '
+        0x55: his
+        0x56: appe
+        0x57: con
+        0x58: ' ho'
+        0x59: 'hat''s '
+        0x5A: Threed
+        0x5B: 'get '
+        0x5C: 's of '
+        0x5D: inter
+        0x5E: talk
+        0x5F: ' man'
+        0x60: day
+        0x61: ove
+        0x62: ' ha ha'
+        0x63: inally
+        0x64: monkey
+        0x65: 's and '
+        0x66: ate
+        0x67: see
+        0x68: town
+        0x69: side
+        0x6A: 'y to '
+        0x6B: 'ever '
+        0x6C: equip
+        0x6D: ' than'
+        0x6E: ' who'
+        0x6F: long
+        0x70: care
+        0x71: room
+        0x72: 'e are '
+        0x73: ard
+        0x74: end
+        0x75: ', you '
+        0x76: ' the b'
+        0x77: I know
+        0x78: 'think '
+        0x79: 's you '
+        0x7A: time
+        0x7B: ment
+        0x7C: ' so'
+        0x7D: '!  '
+        0x7E: 'I''ve '
+        0x7F: ell
+        0x80: ' wa'
+        0x81: ious
+        0x82: reat
+        0x83: live
+        0x84: ange
+        0x85: ' we'
+        0x86: ble
+        0x87: '@.....'
+        0x88: ecover
+        0x89: ' only '
+        0x8A: 'thing '
+        0x8B: er...
+        0x8C: 'Mr. '
+        0x8D: ough
+        0x8E: ' now'
+        0x8F: '  I'
+        0x90: wor
+        0x91: 'to '
+        0x92: ed.
+        0x93: '  I '
+        0x94: '''re '
+        0x95: ' give '
+        0x96: 'ing a '
+        0x97: return
+        0x98: better
+        0x99: 'ince '
+        0x9A: ' well'
+        0x9B: ' one '
+        0x9C: still
+        0x9D: 'ying '
+        0x9E: me...
+        0x9F: sta
+        0xA0: 'ust '
+        0xA1: per
+        0xA2: lease
+        0xA3: 'ling '
+        0xA4: point
+        0xA5: ect
+        0xA6: ast
+        0xA7: pretty
+        0xA8: Giygas
+        0xA9: ecause
+        0xAA: member
+        0xAB: 'carry '
+        0xAC: ' used '
+        0xAD: elieve
+        0xAE: ' money'
+        0xAF: pres
+        0xB0: way
+        0xB1: ' di'
+        0xB2: ' even'
+        0xB3: 'ound '
+        0xB4: 's to '
+        0xB5: 'ting '
+        0xB6: 'ted '
+        0xB7: oing
+        0xB8: ' and'
+        0xB9: ine
+        0xBA: '  T'
+        0xBB: sure
+        0xBC: ' on '
+        0xBD: '@...I'
+        0xBE: while
+        0xBF: '@but '
+        0xC0: '@We'
+        0xC1: ice
+        0xC2: 'se '
+        0xC3: 'ive '
+        0xC4: ' rea'
+        0xC5: ' com'
+        0xC6: 'est '
+        0xC7: have
+        0xC8: ' but'
+        0xC9: away
+        0xCA: here
+        0xCB: ' must'
+        0xCC: ' but '
+        0xCD: ' want'
+        0xCE: ready
+        0xCF: I'm
+        0xD0: carr
+        0xD1: 'my '
+        0xD2: ay...
+        0xD3: ' are '
+        0xD4: '@Hey,'
+        0xD5: world
+        0xD6: ing a
+        0xD7: ' happ'
+        0xD8: ' seem'
+        0xD9: ' his '
+        0xDA: nder
+        0xDB: ' se'
+        0xDC: ant
+        0xDD: item
+        0xDE: '@But'
+        0xDF: ' sho'
+        0xE0: 'in a '
+        0xE1: 'made '
+        0xE2: night
+        0xE3: 'et''s '
+        0xE4: ' like'
+        0xE5: '  The'
+        0xE6: che
+        0xE7: ' de'
+        0xE8: ful
+        0xE9: hat
+        0xEA: and
+        0xEB: self
+        0xEC: ould
+        0xED: '@No'
+        0xEE: car
+        0xEF: ' tr'
+        0xF0: ' good'
+        0xF1: ' stor'
+        0xF2: ombie
+        0xF3: '@Oh'
+        0xF4: '@It'
+        0xF5: 's a '
+        0xF6: vent
+        0xF7: 'ant '
+        0xF8: ' so '
+        0xF9: olla
+        0xFA: ree
+        0xFB: 'Your '
+        0xFC: 'make '
+        0xFD: ' work'
+        0xFE: power
+        0xFF: ' home'
+      0x17:
+        0x00: also
+        0x01: ance
+        0x02: '@How'
+        0x03: h...
+        0x04: '@If'
+        0x05: ple
+        0x06: buy
+        0x07: 'e, '
+        0x08: n't
+        0x09: oke
+        0x0A: 'n''t '
+        0x0B: more
+        0x0C: Good
+        0x0D: 't a '
+        0x0E: ' all'
+        0x0F: take
+        0x10: round
+        0x11: ' when'
+        0x12: ' name'
+        0x13: being
+        0x14: attle
+        0x15: ite
+        0x16: ack
+        0x17: y...
+        0x18: '@Whe'
+        0x19: with
+        0x1A: 'al '
+        0x1B: 'have '
+        0x1C: ' look'
+        0x1D: 't of '
+        0x1E: aster
+        0x1F: ' a lo'
+        0x20: ' feel'
+        0x21: 'here '
+        0x22: count
+        0x23: monst
+        0x24: now
+        0x25: ark
+        0x26: ous
+        0x27: '''ll'
+        0x28: ' bus'
+        0x29: head
+        0x2A: ' any '
+        0x2B: t you
+        0x2C: erson
+        0x2D: after
+        0x2E: ummer
+        0x2F: ' hard'
+        0x30: 'ful '
+        0x31: ever
+        0x32: ' kid'
+        0x33: ' a b'
+        0x34: kay
+        0x35: tra
+        0x36: pla
+        0x37: ook
+        0x38: ome
+        0x39: eat
+        0x3A: '@Wel'
+        0x3B: ' off'
+        0x3C: turn
+        0x3D: I am
+        0x3E: oney
+        0x3F: ' any'
+        0x40: ave
+        0x41: 'any '
+        0x42: enem
+        0x43: ' con'
+        0x44: ' me '
+        0x45: red
+        0x46: 'en '
+        0x47: ' bo'
+        0x48: ' re'
+        0x49: 'ell '
+        0x4A: sell
+        0x4B: what
+        0x4C: next
+        0x4D: ure
+        0x4E: ' bu'
+        0x4F: pro
+        0x50: ' on'
+        0x51: res
+        0x52: 'es '
+        0x53: ' lo'
+        0x54: our
+        0x55: 'use '
+        0x56: iste
+        0x57: ood
+        0x58: ' no'
+        0x59: ope
+        0x5A: ock
+        0x5B: row
+        0x5C: '@He'
+        0x5D: how
+        0x5E: ' may'
+        0x5F: ' as '
+        0x60: stor
+        0x61: ' are'
+        0x62: 'ost '
+        0x63: mean
+        0x64: '  We'
+        0x65: '  He'
+        0x66: '@An'
+        0x67: 'it '
+        0x68: 'in '
+        0x69: ound
+        0x6A: one.
+        0x6B: come
+        0x6C: blue
+        0x6D: way,
+        0x6E: ' or '
+        0x6F: ' mo'
+        0x70: '.  '
+        0x71: each
+        0x72: some
+        0x73: '@(Th'
+        0x74: otel
+        0x75: hand
+        0x76: came
+        0x77: ' ca'
+        0x78: ame
+        0x79: '@Hey'
+        0x7A: 'een '
+        0x7B: spec
+        0x7C: 'red '
+        0x7D: ing!
+        0x7E: ' ...'
+        0x7F: hose
+        0x80: 'ind '
+        0x81: 'ice '
+        0x82: ver
+        0x83: '  W'
+        0x84: min
+        0x85: 'et '
+        0x86: 'on '
+        0x87: ace
+        0x88: er.
+        0x89: 'are '
+        0x8A: nter
+        0x8B: o...
+        0x8C: were
+        0x8D: help
+        0x8E: 'old '
+        0x8F: ' it.'
+        0x90: hear
+        0x91: stop
+        0x92: look
+        0x93: com
+        0x94: '@Do'
+        0x95: ' her'
+        0x96: ' pro'
+        0x97: chin
+        0x98: 'ble '
+        0x99: 'e a '
+        0x9A: girl
+        0x9B: luck
+        0x9C: '  B'
+        0x9D: act
+        0x9E: ike
+        0x9F: down
+        0xA0: part
+        0xA1: ' see'
+        0xA2: ' use'
+        0xA3: 'uch '
+        0xA4: from
+        0xA5: just
+        0xA6: llow
+        0xA7: '@Her'
+        0xA8: ' at '
+        0xA9: '@So,'
+        0xAA: ' ye'
+        0xAB: ser
+        0xAC: ying
+        0xAD: ring
+        0xAE: eave
+        0xAF: 'big '
+        0xB0: ried
+        0xB1: ' was'
+        0xB2: ' say'
+        0xB3: ' su'
+        0xB4: her
+        0xB5: it.
+        0xB6: Man
+        0xB7: kin
+        0xB8: ' up'
+        0xB9: ers
+        0xBA: '@Why'
+        0xBB: p...
+        0xBC: cour
+        0xBD: ' him'
+        0xBE: agic
+        0xBF: any
+        0xC0: fin
+        0xC1: eal
+        0xC2: 'he '
+        0xC3: ide
+        0xC4: oor
+        0xC5: ity
+        0xC6: got
+        0xC7: ens
+        0xC8: ish
+        0xC9: ive
+        0xCA: ' sa'
+        0xCB: oon
+        0xCC: fee
+        0xCD: s a
+        0xCE: nce
+        0xCF: '  D'
+        0xD0: uck
+        0xD1: ass
+        0xD2: man
+        0xD3: a p
+        0xD4: '@(I'
+        0xD5: '@Wh'
+        0xD6: ' gu'
+        0xD7: '  ('
+        0xD8: bus
+        0xD9: los
+        0xDA: 'ts '
+        0xDB: ' ba'
+        0xDC: '  S'
+        0xDD: ' if'
+        0xDE: '@Ha'
+        0xDF: ' ma'
+        0xE0: unn
+        0xE1: 'ay '
+        0xE2: ner
+        0xE3: '@A '
+        0xE4: 'or '
+        0xE5: stu
+        0xE6: ust
+        0xE7: kya
+        0xE8: shi
+        0xE9: pos
+        0xEA: '  A'
+        0xEB: int
+        0xEC: ' le'
+        0xED: ary
+        0xEE: ven
+        0xEF: ' ch'
+        0xF0: own
+        0xF1: ' hu'
+        0xF2: '@My'
+        0xF3: '@So'
+        0xF4: ' sp'
+        0xF5: ' sh'
+        0xF6: wan
+        0xF7: ool
+        0xF8: '  Y'
+        0xF9: old
+        0xFA: eas
+        0xFB: ', I'
+        0xFC: iki
+        0xFD: '@Ky'
+        0xFE: '@Ye'
+        0xFF: spi
 ...
 ---
 0x008141:
@@ -1672,6 +1676,8 @@ texttables:
   name: LOAD_MAP_PAL
   size: 269
   type: assembly
+  localvars:
+    0x06: MAPPAL
   labels:
     0x07FE: UNKNOWN0
     0x0822: UNKNOWN1
@@ -5832,10 +5838,12 @@ texttables:
   type: assembly
 0xC1003C:
   description: Clear blinking triangle prompt
+  name: CLEAR_BLINKING_PROMPT
   size: 6
   type: assembly
 0xC10042:
   description: Get blinking triangle prompt
+  name: GET_BLINKING_PROMPT
   size: 6
   type: assembly
 0xC10048:
@@ -10003,11 +10011,18 @@ texttables:
   name: DISPLAY_IN_BATTLE_TEXT
   arguments:
     $0E: Text Pointer
+  localvars:
+    0x06: TMPTXTPTRLOW
+    0x08: TMPTXTPTRLOW
+    0x0E: DISPTXTPTRLOW
+    0x10: DISPTXTPTRHIGH
+    0x20: TXTPTRLOW
+    0x22: TXTPTRHIGH
   size: 74
   type: assembly
   labels:
     0xDC4A: UNKNOWN0
-    0xDC55: UNKNOWN1
+    0xDC55: NO_PROMPT
 0xC1DC66:
   name: DISPLAY_TEXT_WAIT
   description: Display text and wait
@@ -10526,6 +10541,9 @@ texttables:
   labels:
     0x029D: UNKNOWN0
     0x02A6: UNKNOWN1
+  final processor state:
+    accum: 16
+    index: 16
   size: 25
   type: assembly
 0xC202AC:
@@ -11948,6 +11966,8 @@ texttables:
   size: 9
   type: assembly
 0xC269F8:
+  final processor state:
+    index: 8
   size: 53
   type: assembly
 0xC26A2D:
@@ -12301,7 +12321,10 @@ texttables:
   size: 37
   type: assembly
 0xC27EAF:
-  description: Calculate Damage (A = user pointer, X = amount)
+  description: Calculate Damage
+  arguments:
+    A: Attacker pointer
+    X: Amount of damage
   name: CALC_DAMAGE
   labels:
     0x7ED8: UNKNOWN0
@@ -12330,8 +12353,11 @@ texttables:
   size: 630
   type: assembly
 0xC28125:
-  description: Calculate Post-resist Damage (A = base damage, X = effectiveness)
+  description: Calculate Post-resist Damage
   name: CALC_RESIST_DAMAGE
+  arguments:
+    A: Base Damage
+    X: Effectiveness (255 for physical damage?)
   labels:
     0x813E: UNKNOWN0
     0x8140: UNKNOWN1
@@ -12820,6 +12846,7 @@ texttables:
     accum: 16
   description: PSI Shield Handler
   name: PSI_SHIELD_NULLIFY
+  returns: ""
   labels:
     0x93F6: UNKNOWN0
     0x940F: UNKNOWN1
@@ -12828,7 +12855,7 @@ texttables:
     0x9486: UNKNOWN4
     0x94C4: UNKNOWN5
     0x94C9: UNKNOWN6
-    0x94CC: UNKNOWN7
+    0x94CC: RETURN
   size: 177
   type: assembly
 0xC294CE:
@@ -12898,9 +12925,16 @@ texttables:
 0xC295CF:
   description: PSI Freeze (common code)
   name: PSI_FREEZE_COMMON
+  arguments:
+    A: Base Damage
+  localvars:
+    0x0E: TEXTPTR_LOW
+    0x10: TEXTPTR_HIGH
+    0x12: TMPDAMAGE
+    0x14: DAMAGEDONE
   labels:
-    0x9642: UNKNOWN0
-    0x9645: UNKNOWN1
+    0x9642: WEAKEN_SHIELD
+    0x9645: RETURN
   size: 120
   type: assembly
 0xC29647:
@@ -12924,7 +12958,10 @@ texttables:
   size: 9
   type: assembly
 0xC2966B:
-  description: PSI Thunder (common code) (A = Base damage, X = Number of strikes)
+  description: PSI Thunder (common code)
+  arguments:
+    A: Base Damage
+    X: Number of Strikes
   name: PSI_THUNDER_COMMON
   labels:
     0x9683: UNKNOWN0
@@ -12949,29 +12986,27 @@ texttables:
     0x983D: UNKNOWN19
     0x985A: UNKNOWN20
     0x9863: UNKNOWN21
+  localvars:
+    0x04: UNKNOWN
   size: 518
   type: assembly
 0xC29871:
-  description: "Battle action: PSI Thunder \u03B1 (120 \xB1 50% damage per strike,
-    0-1 strikes)"
+  description: "Battle action: PSI Thunder \u03B1"
   name: BTLACT_PSI_THUNDER_A
   size: 12
   type: assembly
 0xC2987D:
-  description: "Battle action: PSI Thunder \u03B2 (120 \xB1 50% damage per strike,
-    0-2 strikes)"
+  description: "Battle action: PSI Thunder \u03B2"
   name: BTLACT_PSI_THUNDER_B
   size: 12
   type: assembly
 0xC29889:
-  description: "Battle action: PSI Thunder \u03B3 (200 \xB1 50% damage per strike,
-    0-3 strikes)"
+  description: "Battle action: PSI Thunder \u03B3"
   name: BTLACT_PSI_THUNDER_G
   size: 12
   type: assembly
 0xC29895:
-  description: "Battle action: PSI Thunder \u03A9 (200 \xB1 50% damage per strike,
-    0-4 strikes)"
+  description: "Battle action: PSI Thunder \u03A9"
   name: BTLACT_PSI_THUNDER_O
   size: 12
   type: assembly
@@ -18002,9 +18037,7 @@ texttables:
   size: 2296
   entries:
   - name: Unknown A
-    size: 1
-  - name: Unknown B
-    size: 1
+    size: 2
   - name: Type
     size: 1
     values:
@@ -18016,12 +18049,10 @@ texttables:
     size: 2
   - name: Ripple Amplitude
     size: 2
+  - name: Unknown B
+    size: 1
   - name: Unknown C
-    size: 1
-  - name: Unknown D
-    size: 1
-  - name: Unknown E
-    size: 1
+    size: 2
   - name: Ripple Frequency Acceleration
     size: 2
     signed: y
@@ -18030,10 +18061,8 @@ texttables:
     signed: y
   - name: Speed
     size: 1
-  - name: Unknown F
-    size: 1
-  - name: Unknown G
-    size: 1
+  - name: Unknown D
+    size: 2
 0xCB0000:
   type: data
   size: 55450
@@ -19419,9 +19448,6 @@ texttables:
   size: 86016
   description: 'Map Data: Tile Table'
   name: MAP_DATA_TILE_TABLE
-  interlacing:
-    modulus: 8
-    multiplier: 40
   entries:
   - name: Line
     type: bytearray
@@ -19434,7 +19460,7 @@ texttables:
 0xD7A800:
   type: data
   description: Global map tileset/palette data
-  name: GLOBAL_MAP_TILESETPALETTE_DATA
+  name: GLOBAL_MAP_ETPALETTE_DATA
   size: 2560
   entries:
   - name: Value
