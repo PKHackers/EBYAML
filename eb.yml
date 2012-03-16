@@ -5695,7 +5695,9 @@ texttables:
   size: 21
   type: assembly
 0xC0EE68:
-  description: Loads and displays the logo screen specified by A
+  description: Loads a logo screen into VRAM
+  arguments:
+    A: Logo screen to load
   name: LOGO_SCREEN_LOAD
   size: 377
   type: assembly
@@ -15037,8 +15039,8 @@ texttables:
     0x1D3C: UNKNOWN30
     0x1D79: UNKNOWN31
   arguments:
-    $0E-0x00000A: Source
-    $12-0x00000E: Destination
+    $0E: "[ptr] Source"
+    $12: "[ptr] Destination"
   size: 792
   type: assembly
 0xC41DB6:
