@@ -3334,7 +3334,7 @@ texttables:
     0x7CBC: UNKNOWN0
     0x7CC6: UNKNOWN1
 0xC07D1C:
-  type: nullspace
+  type: empty
   size: 740
 0xC08000:
   description: SNES Initialization
@@ -5817,7 +5817,7 @@ texttables:
   labels:
     0xF8B0: UNKNOWN0
 0xC0F8C2:
-  type: nullspace
+  type: empty
   size: 1774
 0xC0FFB0:
   type: data
@@ -10496,7 +10496,7 @@ texttables:
   description: SRAM Size-checking routine checksum
 0xC1FFF1:
   size: 15
-  type: nullspace
+  type: empty
 0xC20000:
   labels:
     0x0010: UNKNOWN0
@@ -14958,7 +14958,7 @@ texttables:
   size: 2
   description: SRAM Size-checking routine checksum 2
 0xC3FDF4:
-  type: nullspace
+  type: empty
   size: 524
 0xC40000:
   description: A->Screen Display Register
@@ -17894,7 +17894,7 @@ texttables:
   size: 6
   type: assembly
 0xC4FD4B:
-  type: nullspace
+  type: empty
   size: 693
 0xC50000:
   type: data
@@ -17938,7 +17938,7 @@ texttables:
     terminator: 2
     type: standardtext
 0xC9FF2F:
-  type: nullspace
+  type: empty
   size: 209
 0xCA0000:
   type: data
@@ -18945,7 +18945,7 @@ texttables:
   name: AUDIO_BLOCK_D0DFB4
   size: 8180
 0xD0FFA8:
-  type: nullspace
+  type: empty
   size: 88
 0xD10000:
   type: data
@@ -18958,7 +18958,7 @@ texttables:
     type: tile
     bpp: 4
 0xD545C0:
-  type: nullspace
+  type: empty
   size: 2624
 0xD55000:
   type: data
@@ -18975,6 +18975,7 @@ texttables:
     size: 2
   - name: Misc Flags
     size: 1
+    type: bitfield
     bitvalues:
     - Ness can use
     - Paula can use
@@ -19444,7 +19445,7 @@ texttables:
     type: bytearray
 0xD5F70D:
   size: 2291
-  type: nullspace
+  type: empty
 0xD60000:
   type: data
   size: 86016
@@ -19479,7 +19480,7 @@ texttables:
   name: MAP_DATA_TILE_ARRANGEMENT_BLOCK_1
 0xD7FBE8:
   size: 1048
-  type: nullspace
+  type: empty
 0xD80000:
   type: data
   size: 36688
@@ -19642,6 +19643,10 @@ texttables:
   size: 124
   description: 'Map Data: Palette Animation Pointer Table'
   name: MAP_DATA_PALETTE_ANIM_POINTER_TABLE
+  entries:
+  - name: Pointer
+    type: pointer
+    size: 4
 0xDFE55D:
   type: data
   size: 190
@@ -19736,6 +19741,10 @@ texttables:
   size: 24
   description: Town Map Graphics Pointer Table
   name: TOWN_MAP_GFX_POINTER_TABLE
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
 0xE021A8:
   type: data
   size: 10104
@@ -19743,12 +19752,12 @@ texttables:
   name: TOWN_MAP_ONETT
 0xE04920:
   type: data
-  size: 7682
+  size: 7681
   description: Twoson Town Map Data
   name: TOWN_MAP_TWOSON
-0xE06722:
+0xE06721:
   type: data
-  size: 7255
+  size: 7256
   description: Threed Town Map Data
   name: TOWN_MAP_THREED
 0xE08379:
@@ -20024,7 +20033,7 @@ texttables:
   name: AUDIO_DATA_BLOCK_952692
   description: Audio Data Block
 0xEE9201:
-  type: nullspace
+  type: empty
   size: 28159
 0xEF0000:
   size: 82
@@ -20727,12 +20736,17 @@ texttables:
     size: 32
     type: tile
     bpp: 4
+    palette: 0xEFF2BB
 0xEFF0D7:
-  type: nullspace
+  type: empty
   size: 228
 0xEFF1BB:
   size: 512
   type: data
+  entries:
+  - name: Palette
+    size: 32
+    type: palette
 0xEFF3BB:
   description: Version String
   name: UNKNOWN_VERSION_STRING
@@ -20746,12 +20760,12 @@ texttables:
   size: 42
   type: data
 0xEFF53B:
-  type: nullspace
+  type: empty
   size: 128
 0xEFF5BB:
   type: data
   size: 48
 0xEFF5EB:
-  type: nullspace
+  type: empty
   size: 2581
 ...
