@@ -1417,6 +1417,22 @@ texttables:
 0x7E9840:
   description: Status
   name: STATUS
+0x7E9841:
+  description: Party NPC #1 backup
+  name: PARTY_NPC_1_BACKUP
+0x7E9842:
+  description: Party NPC #2 backup
+  name: PARTY_NPC_2_BACKUP
+0x7E9843:
+  description: Party NPC #1 backup Current HP
+  name: PARTY_NPC_1_BACKUP_HP
+0x7E9844:
+  description: Party NPC #2 backup Current HP
+  name: PARTY_NPC_2_BACKUP_HP
+0x7E9847:
+  description: Wallet Balance Backup
+  name: WALLET_BACKUP
+  size: 4
 0x7E9877:
   description: Party Leader X Coordinate
   name: LEADER_X_COORD
@@ -1544,6 +1560,19 @@ texttables:
 0x7EB53B:
   description: Current Music Track
   name: CURRENT_MUSIC_TRACK
+  size: 2
+0x7EB53D:
+  description: Current Primary Sample Bank
+  name: CURRENT_PRIMARY_SAMPLE_PACK
+  size: 2
+0x7EB53F:
+  description: Current Secondary Sample Bank
+  name: CURRENT_SECONDARY_SAMPLE_PACK
+  size: 2
+0x7EB541:
+  description: Current Sequence Pack
+  name: CURRENT_SEQUENCE_PACK
+  size: 2
 0x7EB549:
   description: Sector Boundary Behavior
   name: SECTOR_BOUNDARY_BEHAVIOUR_FLAG
@@ -3707,7 +3736,7 @@ texttables:
   arguments:
     A: Size
     $0E: Destination Pointer
-    $0x00000C: Source Pointer
+    $0C: Source Pointer
   size: 15
   type: assembly
   labels:
@@ -3878,7 +3907,7 @@ texttables:
     0x9270: UNKNOWN4
     0x9275: UNKNOWN5
 0xC09279:
-  type: data
+  type: assembly
   size: 3
 0xC0927C:
   size: 121
@@ -10558,6 +10587,11 @@ texttables:
   size: 127
   type: assembly
 0xC2032B:
+  name: READ_NAME
+  description: Reads character names
+  arguments:
+    X: Length of name
+    $06: Address
   labels:
     0x0356: UNKNOWN0
     0x0362: UNKNOWN1
@@ -10597,6 +10631,9 @@ texttables:
     0x074C: UNKNOWN25
     0x0764: UNKNOWN26
     0x0770: UNKNOWN27
+  localvars:
+    0x16: TILEARRPTR
+    0x24: NAMEOFFSET
   size: 954
   type: assembly
 0xC2077D:
@@ -11140,6 +11177,8 @@ texttables:
   size: 65
   type: assembly
 0xC228F8:
+  name: ADD_CHAR_TO_PARTY
+  description: Add character to the party
   labels:
     0x290E: UNKNOWN0
     0x2925: UNKNOWN1
@@ -11161,6 +11200,8 @@ texttables:
   size: 195
   type: assembly
 0xC229BB:
+  name: REMOVE_CHAR_FROM_PARTY
+  description: Remove character from party
   labels:
     0x29CD: UNKNOWN0
     0x29DB: UNKNOWN1
@@ -14933,8 +14974,20 @@ texttables:
   type: assembly
 0xC3FB1F:
   type: data
-  size: 670
+  size: 622
   description: Has Name Registration text at the start...
+0xC3FD8D:
+  type: data
+  size: 0x28
+  description: Attract mode text
+  name: ATTRACT_MODE_TXT
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+0xC3FDB5:
+  type: data
+  size: 8
 0xC3FDBD:
   type: data
   size: 8
@@ -16922,6 +16975,8 @@ texttables:
 0xC4A67E:
   size: 306
   type: assembly
+  localvars:
+    0x02: OPTIONS
   labels:
     0xA69C: UNKNOWN0
     0xA6A1: UNKNOWN1
@@ -17852,13 +17907,30 @@ texttables:
 0xC4F70A:
   type: data
   size: 573
-  description: Music Pointer Table
-  name: MUSIC_PTR_TABLE
+  description: Music Dataset Table
+  name: MUSIC_DATASET_TABLE
+  entries:
+  - name: Sample Set 1
+    type: int
+    signed: y
+    size: 1
+  - name: Sample Set 2
+    type: int
+    signed: y
+    size: 1
+  - name: Sequence Set
+    type: int
+    signed: y
+    size: 1
 0xC4F947:
   type: data
   size: 507
   description: Music Pack Pointer Table
   name: MUSIC_PACK_POINTER_TABLE
+  entries:
+  - name: Unknown
+    type: bytearray
+    size: 3
 0xC4FB42:
   size: 22
   type: assembly
@@ -17868,19 +17940,25 @@ texttables:
   size: 101
   type: assembly
 0xC4FBBD:
-  description: Change music to A
+  description: Change music
   name: CHANGE_MUSIC
+  arguments:
+    A: Track ID
+  localvars:
+    0x06: CURPACKPTRLO
+    0x08: CURPACKPTRHI
+    0x0E: CURPACK
   size: 347
   type: assembly
   labels:
-    0xFBD2: UNKNOWN0
+    0xFBD2: BEGIN_MUSIC_CHANGE
     0xFBDB: UNKNOWN1
     0xFBE9: UNKNOWN2
     0xFBF4: UNKNOWN3
-    0xFC54: UNKNOWN4
-    0xFCB3: UNKNOWN5
-    0xFD0E: UNKNOWN6
-    0xFD16: UNKNOWN7
+    0xFC54: SKIP_DATA_LOAD_1
+    0xFCB3: SKIP_DATA_LOAD_2
+    0xFD0E: SKIP_DATA_LOAD_3
+    0xFD16: RETURN
 0xC4FD18:
   description: Load stereo/mono data?
   size: 45
@@ -18195,9 +18273,27 @@ texttables:
     size: 4
 0xCCF617:
   type: data
-  size: 2537
+  size: 2494
   description: Audio Block
   name: AUDIO_BLOCK_CCF617
+  entries:
+  - name: Size
+    type: int
+    size: 3
+  - name: Data
+    type: bytearray
+    size: Size
+0xCCFFD5:
+  type: data
+  size: 3
+  name: UNKNOWN_PTR_CCFFD5
+  entries:
+  - name: Pointer
+    size: 3
+    type: pointer
+0xCCFFD8:
+  type: empty
+  size: 0x28
 0xCD0000:
   type: data
   description: Enemy Battle Sprites
@@ -19491,6 +19587,10 @@ texttables:
   size: 24846
   description: 'Map Data: Tile Collision Arrangement Pointer Table'
   name: MAP_DATA_TILE_COLLISION_ARRANGEMENT_POINTER_TABLE
+  entries:
+  - name: Pointer
+    size: 2
+    type: pointer
 0xD8F05E:
   type: data
   size: 431
@@ -20015,22 +20115,8 @@ texttables:
   type: data
 0xE1F581:
   type: data
-  size: 275467
-  name: AUDIO_DATA_BLOCK_3469321
-  description: Audio Data Block
-0xE6298C:
-  type: data
-  size: 382
-  description: Music Pointer Table
-  name: MUSIC_POINTER_TABLE
-  entries:
-  - name: Pointer
-    type: pointer
-    size: 2
-0xE62B0A:
-  type: data
-  size: 550647
-  name: AUDIO_DATA_BLOCK_952692
+  size: 826496
+  name: AUDIO_DATA_BLOCK_E1F581
   description: Audio Data Block
 0xEE9201:
   type: empty
