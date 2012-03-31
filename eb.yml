@@ -1061,6 +1061,7 @@ texttables:
 ...
 ---
 0x008141:
+  ignore: y
   size: 6
   type: assembly
   name: RESET_VECTOR
@@ -18062,15 +18063,20 @@ texttables:
     size: 1
   - name: Colour depth
     size: 1
-  - name: unknown
+  - name: Palette Cycle
     size: 1
-  - name: Palette Cycle 1
+    values: 
+      - None
+      - 1
+      - 1 + 2
+      - 1 (Reverse)
+  - name: Palette Cycle 1 Begin
     size: 1
-  - name: Palette Cycle 2
+  - name: Palette Cycle 1 End
     size: 1
-  - name: Palette Cycle 3
+  - name: Palette Cycle 2 Begin
     size: 1
-  - name: Palette Cycle 4
+  - name: Palette Cycle 2 End
     size: 1
   - name: Palette-changing speed
     size: 1
@@ -18114,17 +18120,18 @@ texttables:
   type: data
   description: Battle Background Distortion Table
   name: BG_DISTORTION_TABLE
-  size: 2296
+  size: 2295
   entries:
   - name: Unknown A
     size: 2
   - name: Type
     size: 1
     values:
-    - ~
+    - Unknown Type 0
     - Horizontal, Smooth
     - Horizontal, Interlaced
     - Vertical, Smooth
+    - Unknown Type 4
   - name: Ripple Frequency
     size: 2
   - name: Ripple Amplitude
@@ -18143,6 +18150,9 @@ texttables:
     size: 1
   - name: Unknown D
     size: 2
+0xCAFFFF:
+  type: empty
+  size: 1
 0xCB0000:
   type: data
   size: 55450
@@ -18306,11 +18316,18 @@ texttables:
   size: 550
   entries:
   - name: Pointer
-    size: 3
+    size: 4
     type: pointer
-  - name: Unknown
-    size: 2
-    type: bytearray
+  - name: Sprite Size
+    size: 1
+    values:
+    - 0x0
+    - 32x32
+    - 64x32
+    - 32x64
+    - 64x64
+    - 128x64
+    - 128x128
 0xCE6514:
   type: data
   description: Battle Sprites Palettes
@@ -19433,12 +19450,19 @@ texttables:
 0xD5EBAB:
   type: data
   size: 1864
-  description: Preset Teleport Destination Table
+  description: Scripted Teleport Destination Table
   name: TELEPORT_DESTINATION_TABLE
   entries:
-  - name: unknown
-    type: hexint
-    size: 8
+  - name: X
+    size: 2
+  - name: 'Y'
+    size: 2
+  - name: Direction
+    size: 1
+  - name: Warp Style
+    size: 1
+  - name: Unknown
+    size: 2
 0xD5F2F3:
   type: data
   size: 456
