@@ -14586,6 +14586,15 @@ texttables:
 0xC30000:
   type: data
   size: 256
+0xC30000:
+  description: Sprite Group Palettes Table
+  name: SPRITE_GROUP_PALETTES
+  size: 256
+  type: data
+  entries:
+  - name: Palette
+    size: 32
+    type: palette
 0xC30100:
   description: Display Anti-Piracy screen
   name: DISPLAY_ANTI-PIRACY_SCREEN
@@ -14887,9 +14896,29 @@ texttables:
     0xF2AF: UNKNOWN6
   size: 197
   type: assembly
-0xC3F2B1:
+0xC3F2B5:
+  name: PLAYABLE_CHARACTER_GRAPHICS_TABLE
+  description: Playable Character Graphics Control Table
   type: data
   size: 278
+  entries:
+  - name: Default Sprite Group
+    size: 2
+  - name: Dead Sprite Group
+    size: 2
+  - name: Ladder Sprite Group
+    size: 2
+  - name: Rope Sprite Group
+    size: 2
+  - name: Tiny Sprite Group
+    size: 2
+  - name: Tiny Dead Sprite Group
+    size: 2
+  - name: Robot Sprite Group
+    size: 2
+  - name: Unknown
+    size: 2
+:
 0xC3F3C7:
   labels:
     0xF3E2: UNKNOWN0
@@ -18165,9 +18194,9 @@ texttables:
   name: GROUP_BATTLEBG_TABLE
   size: 1936
   entries:
-  - name: BG 1 ID
+  - name: Background 1
     size: 2
-  - name: BG 2 ID
+  - name: Background 2
     size: 2
 0xCBE02A:
   type: data
@@ -18973,10 +19002,10 @@ texttables:
     - Always
     - When event flag unset
     - When event flag set
-  - name: Talk to Pointer
+  - name: Text Pointer 1
     size: 4
     type: pointer
-  - name: Check Pointer
+  - name: Text Pointer 2
     size: 4
     type: pointer
 0xCFF2B5:
@@ -19056,7 +19085,7 @@ texttables:
     values:
     - Run away if flag is unset
     - Run away if flag is set
-  - name: Battle Letterboxing?
+  - name: Letterbox Size
     size: 1
 0xD0D52D:
   type: data
@@ -19139,9 +19168,20 @@ texttables:
     size: 1
 0xD57880:
   type: data
-  size: 428
+  size: 496
   description: PSI Teleport Destination Table
   name: PSI_TELEPORT_DEST_TABLE
+  entries:
+  - name: Name
+    type: standardtext
+    size: 25
+  - name: Event Flag
+    type: hexint
+    size: 2
+  - name: X
+    size: 2
+  - name: Y
+    size: 2
 0xD57A2C:
   type: data
   description: Clumsy Robot Event Flag
@@ -19211,15 +19251,15 @@ texttables:
   - name: PSI Name
     size: 1
     substtable: PSI_NAME_TABLE
-  - name: Strength
+  - name: Greek Letter
     size: 1
     values:
-    - "": ~
-    - "\u03B1"
-    - "\u03B2"
-    - "\u03B3"
-    - "\u03A3"
-    - "\u03A9"
+    - 0
+    - alpha
+    - beta
+    - gamma
+    - sigma
+    - omega
   - name: Type
     size: 1
     bitvalues:
@@ -19269,8 +19309,207 @@ texttables:
   name: EXP_TABLE
   size: 1600
   entries:
-  - name: XP_REQUIRED
+  - name: Level 00 EXP
     size: 4
+  - name: Level 01 EXP
+    size: 4
+  - name: Level 02 EXP
+    size: 4
+  - name: Level 03 EXP
+    size: 4
+  - name: Level 04 EXP
+    size: 4
+  - name: Level 05 EXP
+    size: 4
+  - name: Level 06 EXP
+    size: 4
+  - name: Level 07 EXP
+    size: 4
+  - name: Level 08 EXP
+    size: 4
+  - name: Level 09 EXP
+    size: 4
+  - name: Level 10 EXP
+    size: 4
+  - name: Level 11 EXP
+    size: 4
+  - name: Level 12 EXP
+    size: 4
+  - name: Level 13 EXP
+    size: 4
+  - name: Level 14 EXP
+    size: 4
+  - name: Level 15 EXP
+    size: 4
+  - name: Level 16 EXP
+    size: 4
+  - name: Level 17 EXP
+    size: 4
+  - name: Level 18 EXP
+    size: 4
+  - name: Level 19 EXP
+    size: 4
+  - name: Level 20 EXP
+    size: 4
+  - name: Level 21 EXP
+    size: 4
+  - name: Level 22 EXP
+    size: 4
+  - name: Level 23 EXP
+    size: 4
+  - name: Level 24 EXP
+    size: 4
+  - name: Level 25 EXP
+    size: 4
+  - name: Level 26 EXP
+    size: 4
+  - name: Level 27 EXP
+    size: 4
+  - name: Level 28 EXP
+    size: 4
+  - name: Level 29 EXP
+    size: 4
+  - name: Level 30 EXP
+    size: 4
+  - name: Level 31 EXP
+    size: 4
+  - name: Level 32 EXP
+    size: 4
+  - name: Level 33 EXP
+    size: 4
+  - name: Level 34 EXP
+    size: 4
+  - name: Level 35 EXP
+    size: 4
+  - name: Level 36 EXP
+    size: 4
+  - name: Level 37 EXP
+    size: 4
+  - name: Level 38 EXP
+    size: 4
+  - name: Level 39 EXP
+    size: 4
+  - name: Level 40 EXP
+    size: 4
+  - name: Level 41 EXP
+    size: 4
+  - name: Level 42 EXP
+    size: 4
+  - name: Level 43 EXP
+    size: 4
+  - name: Level 44 EXP
+    size: 4
+  - name: Level 45 EXP
+    size: 4
+  - name: Level 46 EXP
+    size: 4
+  - name: Level 47 EXP
+    size: 4
+  - name: Level 48 EXP
+    size: 4
+  - name: Level 49 EXP
+    size: 4
+  - name: Level 50 EXP
+    size: 4
+  - name: Level 51 EXP
+    size: 4
+  - name: Level 52 EXP
+    size: 4
+  - name: Level 53 EXP
+    size: 4
+  - name: Level 54 EXP
+    size: 4
+  - name: Level 55 EXP
+    size: 4
+  - name: Level 56 EXP
+    size: 4
+  - name: Level 57 EXP
+    size: 4
+  - name: Level 58 EXP
+    size: 4
+  - name: Level 59 EXP
+    size: 4
+  - name: Level 60 EXP
+    size: 4
+  - name: Level 61 EXP
+    size: 4
+  - name: Level 62 EXP
+    size: 4
+  - name: Level 63 EXP
+    size: 4
+  - name: Level 64 EXP
+    size: 4
+  - name: Level 65 EXP
+    size: 4
+  - name: Level 66 EXP
+    size: 4
+  - name: Level 67 EXP
+    size: 4
+  - name: Level 68 EXP
+    size: 4
+  - name: Level 69 EXP
+    size: 4
+  - name: Level 70 EXP
+    size: 4
+  - name: Level 71 EXP
+    size: 4
+  - name: Level 72 EXP
+    size: 4
+  - name: Level 73 EXP
+    size: 4
+  - name: Level 74 EXP
+    size: 4
+  - name: Level 75 EXP
+    size: 4
+  - name: Level 76 EXP
+    size: 4
+  - name: Level 77 EXP
+    size: 4
+  - name: Level 78 EXP
+    size: 4
+  - name: Level 79 EXP
+    size: 4
+  - name: Level 80 EXP
+    size: 4
+  - name: Level 81 EXP
+    size: 4
+  - name: Level 82 EXP
+    size: 4
+  - name: Level 83 EXP
+    size: 4
+  - name: Level 84 EXP
+    size: 4
+  - name: Level 85 EXP
+    size: 4
+  - name: Level 86 EXP
+    size: 4
+  - name: Level 87 EXP
+    size: 4
+  - name: Level 88 EXP
+    size: 4
+  - name: Level 89 EXP
+    size: 4
+  - name: Level 90 EXP
+    size: 4
+  - name: Level 91 EXP
+    size: 4
+  - name: Level 92 EXP
+    size: 4
+  - name: Level 93 EXP
+    size: 4
+  - name: Level 94 EXP
+    size: 4
+  - name: Level 95 EXP
+    size: 4
+  - name: Level 96 EXP
+    size: 4
+  - name: Level 97 EXP
+    size: 4
+  - name: Level 98 EXP
+    size: 4
+  - name: Level 99 EXP
+    size: 4
+
 0xD59589:
   type: data
   description: Enemy Configuration Table
@@ -19427,6 +19666,21 @@ texttables:
   size: 28
   description: Statistic Growth Variables
   name: STATS_GROWTH_VARS
+  entries:
+  - name: Offense
+    size: 1
+  - name: Defense
+    size: 1
+  - name: Speed
+    size: 1
+  - name: Guts
+    size: 1
+  - name: Vitality
+    size: 1
+  - name: IQ
+    size: 1
+  - name: Luck
+    size: 1
 0xD5EA77:
   type: data
   description: Condiment Data
@@ -19510,44 +19764,44 @@ texttables:
   description: Don't Care Preset Character Names
   name: DONT_CARE_DEFAULT_NAMES
   entries:
-  - name: Name
+  - name: Name 1
+    type: standardtext
+    size: 6
+  - name: Name 2
+    type: standardtext
+    size: 6
+  - name: Name 3
+    type: standardtext
+    size: 6
+  - name: Name 4
+    type: standardtext
+    size: 6
+  - name: Name 5
+    type: standardtext
+    size: 6
+  - name: Name 6
+    type: standardtext
+    size: 6
+  - name: Name 7
     type: standardtext
     size: 6
 0xD5F5F5:
   type: data
   size: 20
-  description: 'Starting Statistics: Ness'
-  name: INITIAL_STATS_NESS
+  description: 'Starting Statistics'
+  name: INITIAL_STATS
   entries:
-  - name: unknown
-    size: 20
+  - name: Unknown
+    size: 4
     type: bytearray
-0xD5F609:
-  type: data
-  size: 20
-  description: 'Starting Statistics: Paula'
-  name: INITIAL_STATS_PAULA
-  entries:
-  - name: unknown
-    size: 20
-    type: bytearray
-0xD5F61D:
-  type: data
-  size: 20
-  description: 'Starting Statistics: Jeff'
-  name: INITIAL_STATS_JEFF
-  entries:
-  - name: unknown
-    size: 20
-    type: bytearray
-0xD5F631:
-  type: data
-  size: 20
-  description: 'Starting Statistics: Poo'
-  name: INITIAL_STATS_POO
-  entries:
-  - name: unknown
-    size: 20
+  - name: Money
+    size: 2
+  - name: Level
+    size: 2
+  - name: Experience Points
+    size: 2
+  - name: Items Possessed
+    size: 10
     type: bytearray
 0xD5F645:
   type: data
@@ -19733,6 +19987,9 @@ texttables:
   size: 2560
   description: 'Map Data: Per-Sector Music Assignments'
   name: MAP_DATA_PER-SECTOR_MUSIC
+  entries:
+  - name: Music
+    size: 1
 0xDCE037:
   type: data
   size: 0x1888
@@ -21243,6 +21500,10 @@ texttables:
   description: Sprite Grouping Pointer Table
   name: SPRITE_GROUPING_PTR_TABLE
   size: 1856
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
 0xEF1A7F:
   type: data
   description: Sprite Grouping Table
