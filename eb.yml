@@ -17930,7 +17930,8 @@ texttables:
   name: MUSIC_PACK_POINTER_TABLE
   entries:
   - name: Unknown
-    type: bytearray
+    type: pointer
+    reverseendian: y
     size: 3
 0xC4FB42:
   size: 22
@@ -18170,9 +18171,14 @@ texttables:
     size: 2
 0xCBE02A:
   type: data
-  size: 8150
+  size: 0x1EB8
   description: Audio Block
-  name: AUDIO_BLOCK_CBE02A
+  name: AUDIO_PACK_66
+0xCBFEE2:
+  type: data
+  size: 0x11E
+  description: Audio Pack
+  name: AUDIO_PACK_59
 0xCC0000:
   type: data
   size: 6091
@@ -18285,7 +18291,7 @@ texttables:
   type: data
   size: 2494
   description: Audio Block
-  name: AUDIO_BLOCK_CCF617
+  name: AUDIO_PACK_71
   entries:
   - name: Size
     type: int
@@ -18374,7 +18380,7 @@ texttables:
   type: data
   size: 1850
   description: Audio Block
-  name: AUDIO_BLOCK_38531846341864636
+  name: AUDIO_PACK_102
 0xCF0000:
   type: data
   size: 0x580
@@ -18975,9 +18981,14 @@ texttables:
     type: pointer
 0xCFF2B5:
   type: data
-  name: AUDIO_BLOCK_CFF2B5
+  name: AUDIO_PACK_94
   description: Audio Block
-  size: 3403
+  size: 0xC83
+0xCFFF38:
+  type: data
+  size: 0xC8
+  name: AUDIO_PACK_96
+  description: Audio Block
 0xD00000:
   type: data
   description: Door Pointer Table
@@ -19055,7 +19066,7 @@ texttables:
 0xD0DFB4:
   type: data
   description: Audio Block
-  name: AUDIO_BLOCK_D0DFB4
+  name: AUDIO_PACK_139
   size: 8180
 0xD0FFA8:
   type: empty
@@ -19653,7 +19664,7 @@ texttables:
   type: data
   size: 2377
   description: Audio Block
-  name: AUDIO_BLOCK_D8F6B7
+  name: AUDIO_PACK_61
 0xD90000:
   type: data
   size: 52818
@@ -19668,7 +19679,7 @@ texttables:
   type: data
   size: 1000
   description: Audio Block
-  name: AUDIO_BLOCK_D9FC18
+  name: AUDIO_PACK_45
 0xDA0000:
   type: data
   size: 31911
@@ -19696,7 +19707,7 @@ texttables:
   type: data
   size: 1273
   description: Audio Block
-  name: AUDIO_BLOCK_DAFB07
+  name: AUDIO_PACK_111
 0xDB0000:
   type: data
   name: MAP_DATA_TILE_ARRANGEMENT_BLOCK_4
@@ -19706,7 +19717,7 @@ texttables:
   type: data
   size: 3349
   description: Audio Block
-  name: AUDIO_BLOCK_DBF2EB
+  name: AUDIO_PACK_65
 0xDC0000:
   type: data
   size: 45091
@@ -19724,9 +19735,14 @@ texttables:
   name: MAP_DATA_PER-SECTOR_MUSIC
 0xDCE037:
   type: data
-  size: 8137
+  size: 0x1888
   description: Audio Block
-  name: AUDIO_BLOCK_DCE037
+  name: AUDIO_PACK_156
+0xDCF8BF:
+  type: data
+  size: 0x741
+  description: Audio Block
+  name: AUDIO_PACK_79
 0xDD0000:
   type: data
   size: 65230
@@ -19736,7 +19752,7 @@ texttables:
   type: data
   size: 306
   description: Audio Block
-  name: AUDIO_BLOCK_DDFECE
+  name: AUDIO_PACK_75
 0xDE0000:
   type: data
   size: 61671
@@ -19751,7 +19767,7 @@ texttables:
   type: data
   size: 803
   description: Audio Block
-  name: AUDIO_BLOCK_DEFCDD
+  name: AUDIO_PACK_143
 0xDF0000:
   type: data
   size: 49731
@@ -19784,8 +19800,8 @@ texttables:
 0xDFEC46:
   type: data
   size: 5050
-  description: Audio Block
-  name: AUDIO_BLOCK_DFEC46
+  description: 'Audio Data: contains sequence pack 4'
+  name: AUDIO_PACK_4
 0xE00000:
   type: data
   size: 1876
@@ -19901,9 +19917,14 @@ texttables:
   name: TOWN_MAP_SUMMERS
 0xE0ED03:
   type: data
-  size: 4861
+  size: 4062
   description: Audio Block
-  name: AUDIO_BLOCK_E0ED03
+  name: AUDIO_PACK_110
+0xE0FCE1:
+  type: data
+  size: 0x31F
+  description: Audio Block
+  name: AUDIO_PACK_6
 0xE10000:
   type: data
   size: 1618
@@ -20139,9 +20160,759 @@ texttables:
   type: data
 0xE1F581:
   type: data
-  size: 826496
-  name: AUDIO_DATA_BLOCK_E1F581
-  description: Audio Data Block
+  size: 0xA7F
+  name: AUDIO_PACK_123
+  description: Audio Block
+0xE20000:
+  type: data
+  size: 0x77F0
+  name: AUDIO_PACK_108
+  description: Audio Block
+0xE277F0:
+  type: data
+  size: 0x753C
+  name: AUDIO_PACK_0
+  description: Audio Block
+0xE2ED2C:
+  type: data
+  size: 0xF5C
+  name: AUDIO_PACK_36
+  description: Audio Block
+0xE2FC88:
+  type: data
+  size: 0x378
+  name: AUDIO_PACK_18
+  description: Audio Block
+0xE30000:
+  type: data
+  size: 0x5F64
+  name: AUDIO_PACK_3
+  description: Audio Block
+0xE35F64:
+  type: data
+  size: 0x5196
+  name: AUDIO_PACK_70
+  description: Audio Block
+0xE3B0FA:
+  type: data
+  size: 0x4CD2
+  name: AUDIO_PACK_37
+  description: Audio Block
+0xE3FDCC:
+  type: data
+  size: 0x234
+  name: AUDIO_PACK_32
+  description: Audio Block
+0xE40000:
+  type: data
+  size: 0x514A
+  name: AUDIO_PACK_64
+  description: Audio Block
+0xE4514A:
+  type: data
+  size: 0x50E8
+  name: AUDIO_PACK_42
+  description: Audio Block
+0xE4A232:
+  type: data
+  size: 0x4C9E
+  name: AUDIO_PACK_126
+  description: Audio Block
+0xE4EED0:
+  type: data
+  size: 0xEC2
+  name: AUDIO_PACK_125
+  description: Audio Block
+0xE4FD92:
+  type: data
+  size: 0x26E
+  name: AUDIO_PACK_155
+  description: Audio Block
+0xE50000:
+  type: data
+  size: 0x4C4A
+  name: AUDIO_PACK_50
+  description: Audio Block
+0xE54C4A:
+  type: data
+  size: 0x4904
+  name: AUDIO_PACK_92
+  description: Audio Block
+0xE5954E:
+  type: data
+  size: 0x47E4
+  name: AUDIO_PACK_56
+  description: Audio Block
+0xE5DD32:
+  type: data
+  size: 0x2206
+  name: AUDIO_PACK_122
+  description: Audio Block
+0xE5FF38:
+  type: data
+  size: 0xC8
+  name: AUDIO_PACK_166
+  description: Audio Block
+0xE60000:
+  type: data
+  size: 0x45D8
+  name: AUDIO_PACK_1
+  description: Audio Block
+0xE645D8:
+  type: data
+  size: 0x45C2
+  name: AUDIO_PACK_74
+  description: Audio Block
+0xE68B9A:
+  type: data
+  size: 0x436E
+  name: AUDIO_PACK_76
+  description: Audio Block
+0xE6CF08:
+  type: data
+  size: 0x3010
+  name: AUDIO_PACK_47
+  description: Audio Block
+0xE6FF18:
+  type: data
+  size: 0xE8
+  name: AUDIO_PACK_73
+  description: Audio Block
+0xE70000:
+  type: data
+  size: 0x4314
+  name: AUDIO_PACK_78
+  description: Audio Block
+0xE74314:
+  type: data
+  size: 0x4188
+  name: AUDIO_PACK_82
+  description: Audio Block
+0xE7849C:
+  type: data
+  size: 0x412C
+  name: AUDIO_PACK_8
+  description: Audio Block
+0xE7C5C8:
+  type: data
+  size: 0x3A38
+  name: AUDIO_PACK_24
+  description: Audio Block
+0xE80000:
+  type: data
+  size: 0x4066
+  name: AUDIO_PACK_84
+  description: Audio Block
+0xE84066:
+  type: data
+  size: 0x3E40
+  name: AUDIO_PACK_60
+  description: Audio Block
+0xE87EA6:
+  type: data
+  size: 0x3DE2
+  name: AUDIO_PACK_153
+  description: Audio Block
+0xE8BC88:
+  type: data
+  size: 0x3BEA
+  name: AUDIO_PACK_124
+  description: Audio Block
+0xE8F872:
+  type: data
+  size: 0x6A9
+  name: AUDIO_PACK_46
+  description: Audio Block
+0xE8FF1B:
+  type: data
+  size: 0xE5
+  name: AUDIO_PACK_7
+  description: Audio Block
+0xE90000:
+  type: data
+  size: 0x3A74
+  name: AUDIO_PACK_27
+  description: Audio Block
+0xE93A74:
+  type: data
+  size: 0x38E2
+  name: AUDIO_PACK_80
+  description: Audio Block
+0xE97356:
+  type: data
+  size: 0x38D0
+  name: AUDIO_PACK_118
+  description: Audio Block
+0xE9AC26:
+  type: data
+  size: 0x345E
+  name: AUDIO_PACK_131
+  description: Audio Block
+0xE9E084:
+  type: data
+  size: 0x1844
+  name: AUDIO_PACK_2
+  description: Audio Block
+0xE9F8C8:
+  type: data
+  size: 0x738
+  name: AUDIO_PACK_149
+  description: Audio Block
+0xEA0000:
+  type: data
+  size: 0x337A
+  name: AUDIO_PACK_54
+  description: Audio Block
+0xEA337A:
+  type: data
+  size: 0x321A
+  name: AUDIO_PACK_52
+  description: Audio Block
+0xEA6594:
+  type: data
+  size: 0x3162
+  name: AUDIO_PACK_72
+  description: Audio Block
+0xEA96F6:
+  type: data
+  size: 0x2E9A
+  name: AUDIO_PACK_89
+  description: Audio Block
+0xEAC590:
+  type: data
+  size: 0x2B94
+  name: AUDIO_PACK_35
+  description: Audio Block
+0xEAF124:
+  type: data
+  size: 0xD67
+  name: AUDIO_PACK_140
+  description: Audio Block
+0xEAFE8B:
+  type: data
+  size: 0x175
+  name: AUDIO_PACK_145
+  description: Audio Block
+0xEB0000:
+  type: data
+  size: 0x29E8
+  name: AUDIO_PACK_44
+  description: Audio Block
+0xEB29E8:
+  type: data
+  size: 0x2824
+  name: AUDIO_PACK_21
+  description: Audio Block
+0xEB520C:
+  type: data
+  size: 0x26CA
+  name: AUDIO_PACK_5
+  description: Audio Block
+0xEB78D6:
+  type: data
+  size: 0x26B8
+  name: AUDIO_PACK_40
+  description: Audio Block
+0xEB9F8E:
+  type: data
+  size: 0x255A
+  name: AUDIO_PACK_33
+  description: Audio Block
+0xEBC4E8:
+  type: data
+  size: 0x24FC
+  name: AUDIO_PACK_105
+  description: Audio Block
+0xEBE9E4:
+  type: data
+  size: 0x143E
+  name: AUDIO_PACK_154
+  description: Audio Block
+0xEBFE22:
+  type: data
+  size: 0x1DE
+  name: AUDIO_PACK_13
+  description: Audio Block
+0xEC0000:
+  type: data
+  size: 0x23EC
+  name: AUDIO_PACK_114
+  description: Audio Block
+0xEC23EC:
+  type: data
+  size: 0x21A6
+  name: AUDIO_PACK_109
+  description: Audio Block
+0xEC4592:
+  type: data
+  size: 0x216E
+  name: AUDIO_PACK_107
+  description: Audio Block
+0xEC6700:
+  type: data
+  size: 0x2164
+  name: AUDIO_PACK_98
+  description: Audio Block
+0xEC8864:
+  type: data
+  size: 0x1312
+  name: AUDIO_PACK_165
+  description: Audio Block
+0xEC9B76:
+  type: data
+  size: 0xC62
+  name: AUDIO_PACK_62
+  description: Audio Block
+0xECA7D8:
+  type: data
+  size: 0xBB2
+  name: AUDIO_PACK_58
+  description: Audio Block
+0xECB38A:
+  type: data
+  size: 0xB9E
+  name: AUDIO_PACK_133
+  description: Audio Block
+0xECBF28:
+  type: data
+  size: 0xB79
+  name: AUDIO_PACK_97
+  description: Audio Block
+0xECCAA1:
+  type: data
+  size: 0xB37
+  name: AUDIO_PACK_55
+  description: Audio Block
+0xECD5D8:
+  type: data
+  size: 0xB29
+  name: AUDIO_PACK_106
+  description: Audio Block
+0xECE101:
+  type: data
+  size: 0xA50
+  name: AUDIO_PACK_25
+  description: Audio Block
+0xECEB51:
+  type: data
+  size: 0xA27
+  name: AUDIO_PACK_15
+  description: Audio Block
+0xECF578:
+  type: data
+  size: 0xA88
+  name: AUDIO_PACK_157
+  description: Audio Block
+0xED0000:
+  type: data
+  size: 0xA07
+  name: AUDIO_PACK_121
+  description: Audio Block
+0xED0A07:
+  type: data
+  size: 0x9FF
+  name: AUDIO_PACK_87
+  description: Audio Block
+0xED1406:
+  type: data
+  size: 0x9F9
+  name: AUDIO_PACK_132
+  description: Audio Block
+0xED1DFF:
+  type: data
+  size: 0x9F8
+  name: AUDIO_PACK_116
+  description: Audio Block
+0xED27F7:
+  type: data
+  size: 0x99E
+  name: AUDIO_PACK_34
+  description: Audio Block
+0xED3195:
+  type: data
+  size: 0x907
+  name: AUDIO_PACK_119
+  description: Audio Block
+0xED3A9C:
+  type: data
+  size: 0x8CF
+  name: AUDIO_PACK_141
+  description: Audio Block
+0xED436B:
+  type: data
+  size: 0x83C
+  name: AUDIO_PACK_48
+  description: Audio Block
+0xED4BA7:
+  type: data
+  size: 0x838
+  name: AUDIO_PACK_39
+  description: Audio Block
+0xED53DF:
+  type: data
+  size: 0x822
+  name: AUDIO_PACK_150
+  description: Audio Block
+0xED5C01:
+  type: data
+  size: 0x808
+  name: AUDIO_PACK_120
+  description: Audio Block
+0xED6409:
+  type: data
+  size: 0x7FD
+  name: AUDIO_PACK_38
+  description: Audio Block
+0xED6C06:
+  type: data
+  size: 0x7DC
+  name: AUDIO_PACK_161
+  description: Audio Block
+0xED73E2:
+  type: data
+  size: 0x7D4
+  name: AUDIO_PACK_68
+  description: Audio Block
+0xED7BB6:
+  type: data
+  size: 0x7D3
+  name: AUDIO_PACK_104
+  description: Audio Block
+0xED8389:
+  type: data
+  size: 0x798
+  name: AUDIO_PACK_90
+  description: Audio Block
+0xED8B21:
+  type: data
+  size: 0x68E
+  name: AUDIO_PACK_86
+  description: Audio Block
+0xED91AF:
+  type: data
+  size: 0x675
+  name: AUDIO_PACK_100
+  description: Audio Block
+0xED9824:
+  type: data
+  size: 0x66F
+  name: AUDIO_PACK_26
+  description: Audio Block
+0xED9E93:
+  type: data
+  size: 0x644
+  name: AUDIO_PACK_43
+  description: Audio Block
+0xEDA4D7:
+  type: data
+  size: 0x63B
+  name: AUDIO_PACK_162
+  description: Audio Block
+0xEDAB12:
+  type: data
+  size: 0x624
+  name: AUDIO_PACK_85
+  description: Audio Block
+0xEDB136:
+  type: data
+  size: 0x61D
+  name: AUDIO_PACK_99
+  description: Audio Block
+0xEDB753:
+  type: data
+  size: 0x60D
+  name: AUDIO_PACK_28
+  description: Audio Block
+0xEDBD60:
+  type: data
+  size: 0x60C
+  name: AUDIO_PACK_10
+  description: Audio Block
+0xEDC36C:
+  type: data
+  size: 0x602
+  name: AUDIO_PACK_117
+  description: Audio Block
+0xEDC96E:
+  type: data
+  size: 0x5E7
+  name: AUDIO_PACK_77
+  description: Audio Block
+0xEDCF55:
+  type: data
+  size: 0x5E4
+  name: AUDIO_PACK_19
+  description: Audio Block
+0xEDD539:
+  type: data
+  size: 0x5C4
+  name: AUDIO_PACK_57
+  description: Audio Block
+0xEDDAFD:
+  type: data
+  size: 0x5B1
+  name: AUDIO_PACK_14
+  description: Audio Block
+0xEDE0AE:
+  type: data
+  size: 0x5AE
+  name: AUDIO_PACK_158
+  description: Audio Block
+0xEDE65C:
+  type: data
+  size: 0x598
+  name: AUDIO_PACK_30
+  description: Audio Block
+0xEDEBF4:
+  type: data
+  size: 0x58F
+  name: AUDIO_PACK_134
+  description: Audio Block
+0xEDF183:
+  type: data
+  size: 0x58D
+  name: AUDIO_PACK_113
+  description: Audio Block
+0xEDF710:
+  type: data
+  size: 0x58C
+  name: AUDIO_PACK_146
+  description: Audio Block
+0xEDFC9C:
+  type: data
+  size: 0x364
+  name: AUDIO_PACK_29
+  description: Audio Block
+0xEE0000:
+  type: data
+  size: 0x554
+  name: AUDIO_PACK_136
+  description: Audio Block
+0xEE0554:
+  type: data
+  size: 0x537
+  name: AUDIO_PACK_112
+  description: Audio Block
+0xEE0A8B:
+  type: data
+  size: 0x527
+  name: AUDIO_PACK_163
+  description: Audio Block
+0xEE0FB2:
+  type: data
+  size: 0x522
+  name: AUDIO_PACK_115
+  description: Audio Block
+0xEE14D4:
+  type: data
+  size: 0x51A
+  name: AUDIO_PACK_53
+  description: Audio Block
+0xEE19EE:
+  type: data
+  size: 0x510
+  name: AUDIO_PACK_67
+  description: Audio Block
+0xEE1EFE:
+  type: data
+  size: 0x503
+  name: AUDIO_PACK_20
+  description: Audio Block
+0xEE2401:
+  type: data
+  size: 0x4FD
+  name: AUDIO_PACK_144
+  description: Audio Block
+0xEE28FE:
+  type: data
+  size: 0x4CF
+  name: AUDIO_PACK_63
+  description: Audio Block
+0xEE2DCD:
+  type: data
+  size: 0x469
+  name: AUDIO_PACK_138
+  description: Audio Block
+0xEE3236:
+  type: data
+  size: 0x427
+  name: AUDIO_PACK_127
+  description: Audio Block
+0xEE365D:
+  type: data
+  size: 0x420
+  name: AUDIO_PACK_16
+  description: Audio Block
+0xEE3A7D:
+  type: data
+  size: 0x41F
+  name: AUDIO_PACK_148
+  description: Audio Block
+0xEE3E9C:
+  type: data
+  size: 0x41F
+  name: AUDIO_PACK_23
+  description: Audio Block
+0xEE42BB:
+  type: data
+  size: 0x413
+  name: AUDIO_PACK_11
+  description: Audio Block
+0xEE46CE:
+  type: data
+  size: 0x411
+  name: AUDIO_PACK_142
+  description: Audio Block
+0xEE4ADF:
+  type: data
+  size: 0x40B
+  name: AUDIO_PACK_160
+  description: Audio Block
+0xEE4EEA:
+  type: data
+  size: 0x3FC
+  name: AUDIO_PACK_101
+  description: Audio Block
+0xEE52E6:
+  type: data
+  size: 0x3F9
+  name: AUDIO_PACK_103
+  description: Audio Block
+0xEE56DF:
+  type: data
+  size: 0x3BA
+  name: AUDIO_PACK_51
+  description: Audio Block
+0xEE5A99:
+  type: data
+  size: 0x361
+  name: AUDIO_PACK_93
+  description: Audio Block
+0xEE5DFA:
+  type: data
+  size: 0x352
+  name: AUDIO_PACK_95
+  description: Audio Block
+0xEE614C:
+  type: data
+  size: 0x340
+  name: AUDIO_PACK_164
+  description: Audio Block
+0xEE648C:
+  type: data
+  size: 0x32B
+  name: AUDIO_PACK_151
+  description: Audio Block
+0xEE67B7:
+  type: data
+  size: 0x2CE
+  name: AUDIO_PACK_12
+  description: Audio Block
+0xEE6A85:
+  type: data
+  size: 0x2B1
+  name: AUDIO_PACK_135
+  description: Audio Block
+0xEE6D36:
+  type: data
+  size: 0x2A7
+  name: AUDIO_PACK_83
+  description: Audio Block
+0xEE6FDD:
+  type: data
+  size: 0x297
+  name: AUDIO_PACK_88
+  description: Audio Block
+0xEE7274:
+  type: data
+  size: 0x263
+  name: AUDIO_PACK_31
+  description: Audio Block
+0xEE74D7:
+  type: data
+  size: 0x260
+  name: AUDIO_PACK_129
+  description: Audio Block
+0xEE7737:
+  type: data
+  size: 0x257
+  name: AUDIO_PACK_22
+  description: Audio Block
+0xEE798E:
+  type: data
+  size: 0x251
+  name: AUDIO_PACK_17
+  description: Audio Block
+0xEE7BDF:
+  type: data
+  size: 0x24A
+  name: AUDIO_PACK_91
+  description: Audio Block
+0xEE7E29:
+  type: data
+  size: 0x224
+  name: AUDIO_PACK_81
+  description: Audio Block
+0xEE804D:
+  type: data
+  size: 0x21F
+  name: AUDIO_PACK_147
+  description: Audio Block
+0xEE826C:
+  type: data
+  size: 0x1FA
+  name: AUDIO_PACK_152
+  description: Audio Block
+0xEE8466:
+  type: data
+  size: 0x1D2
+  name: AUDIO_PACK_128
+  description: Audio Block
+0xEE8638:
+  type: data
+  size: 0x193
+  name: AUDIO_PACK_159
+  description: Audio Block
+0xEE87CB:
+  type: data
+  size: 0x184
+  name: AUDIO_PACK_49
+  description: Audio Block
+0xEE894F:
+  type: data
+  size: 0x17B
+  name: AUDIO_PACK_9
+  description: Audio Block
+0xEE8ACA:
+  type: data
+  size: 0x154
+  name: AUDIO_PACK_69
+  description: Audio Block
+0xEE8C1E:
+  type: data
+  size: 0x147
+  name: AUDIO_PACK_167
+  description: Audio Block
+0xEE8D65:
+  type: data
+  size: 0x13D
+  name: AUDIO_PACK_130
+  description: Audio Block
+0xEE8EA2:
+  type: data
+  size: 0x134
+  name: AUDIO_PACK_168
+  description: Audio Block
+0xEE8FD6:
+  type: data
+  size: 0x129
+  name: AUDIO_PACK_137
+  description: Audio Block
+0xEE90FF:
+  type: data
+  size: 0x102
+  name: AUDIO_PACK_41
+  description: Audio Block
 0xEE9201:
   type: empty
   size: 28159
