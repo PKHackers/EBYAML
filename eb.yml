@@ -14645,7 +14645,7 @@ texttables:
   type: data
   size: 16
 0xC3E250:
-  name: WINDOW_POSITION_TABLE
+  name: WINDOW_CONFIGURATION_TABLE
   description: Window sizes and positions
   type: data
   size: 424
@@ -14897,10 +14897,10 @@ texttables:
   size: 197
   type: assembly
 0xC3F2B5:
-  name: PLAYABLE_CHARACTER_GRAPHICS_TABLE
+  name: PLAYABLE_CHAR_GFX_TABLE
   description: Playable Character Graphics Control Table
   type: data
-  size: 278
+  size: 272
   entries:
   - name: Default Sprite Group
     size: 2
@@ -14918,8 +14918,7 @@ texttables:
     size: 2
   - name: Unknown
     size: 2
-:
-0xC3F3C7:
+exC3F3C7:
   labels:
     0xF3E2: UNKNOWN0
     0xF3FB: UNKNOWN1
@@ -18084,7 +18083,7 @@ texttables:
 0xCADCA1:
   type: data
   description: 'Battle BGs: Rendering Data'
-  name: BATTLEBG_DATA_TABLE
+  name: BG_DATA_TABLE
   size: 5559
   entries:
   - name: Graphics and Arrangement
@@ -18191,7 +18190,7 @@ texttables:
 0xCBD89A:
   type: data
   description: Battle Group BG Association Table
-  name: GROUP_BATTLEBG_TABLE
+  name: BTL_ENTRY_BG_TABLE
   size: 1936
   entries:
   - name: Background 1
@@ -18967,8 +18966,8 @@ texttables:
   name: SPRITE_PLACEMENT_TABLE
 0xCF8985:
   type: data
-  description: Text Pointer Table
-  name: TEXT_PTR_TABLE
+  description: NPC Configuration Table
+  name: NPC_CONFIG_TABLE
   size: 26928
   entries:
   - name: Type
@@ -19115,8 +19114,8 @@ texttables:
   size: 2624
 0xD55000:
   type: data
-  description: Item Data
-  name: ITEM_DATA
+  description: Item Configuration Table
+  name: ITEM_CONFIGURATION_TABLE
   size: 9906
   entries:
   - name: Name
@@ -19142,7 +19141,7 @@ texttables:
     size: 2
   - name: Argument
     size: 4
-    type: hexint
+    type: bytearray
   - name: Help Text Pointer
     size: 4
     type: pointer
@@ -19684,7 +19683,7 @@ texttables:
 0xD5EA77:
   type: data
   description: Condiment Data
-  name: CONDIMENT_DATA
+  name: CONDIMENT_TABLE
   size: 308
   entries:
   - name: food
@@ -19728,9 +19727,9 @@ texttables:
     size: 1
   - name: Unknown
     size: 2
-0xD5F2F3:
+0xD5F2FB:
   type: data
-  size: 456
+  size: 440
   description: 'Map Data: Hotspots Table'
   name: MAP_DATA_HOTSPOTS_TABLE
   entries:
@@ -19762,7 +19761,7 @@ texttables:
   type: data
   size: 294
   description: Don't Care Preset Character Names
-  name: DONT_CARE_DEFAULT_NAMES
+  name: DONT_CARE_NAMES
   entries:
   - name: Name 1
     type: standardtext
