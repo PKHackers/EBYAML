@@ -14893,6 +14893,9 @@ texttables:
     0xF2AF: UNKNOWN6
   size: 197
   type: assembly
+0xC3F2B1:
+  type: data
+  size: 4
 0xC3F2B5:
   name: PLAYABLE_CHAR_GFX_TABLE
   description: Playable Character Graphics Control Table
@@ -19723,7 +19726,7 @@ texttables:
     size: 2
 0xD5F2FB:
   type: data
-  size: 440
+  size: 448
   description: 'Map Data: Hotspots Table'
   name: MAP_DATA_HOTSPOTS_TABLE
   entries:
