@@ -17913,15 +17913,18 @@ texttables:
   entries:
   - name: Sample Set 1
     type: int
-    signed: y
+    values:
+      255: None
     size: 1
   - name: Sample Set 2
     type: int
-    signed: y
+    values:
+      255: None
     size: 1
   - name: Sequence Set
     type: int
-    signed: y
+    values:
+      255: None
     size: 1
 0xC4F947:
   type: data
@@ -18177,7 +18180,7 @@ texttables:
 0xCBFEE2:
   type: data
   size: 0x11E
-  description: Audio Pack
+  description: Audio Block
   name: AUDIO_PACK_59
 0xCC0000:
   type: data
@@ -18292,13 +18295,32 @@ texttables:
   size: 2494
   description: Audio Block
   name: AUDIO_PACK_71
-  entries:
+  terminator: 0
+  entries: &AUDIO_SEQ
   - name: Size
     type: int
-    size: 3
+    size: 2
+  - name: Base Address
+    type: hexint
+    size: 2
   - name: Data
     type: bytearray
     size: Size
+#    entries:
+#    - name: SEQPTRS
+#      terminator: 255
+#      type: table
+#      entries:
+#      - name: Pointer
+#        type: int
+#        size: 2
+#    - name: CHANPTRS
+#      size: 32
+#      type: table
+#      entries:
+#      - name: Pointer
+#        type: int
+#        size: 2
 0xCCFFD5:
   type: data
   size: 3
@@ -19802,6 +19824,8 @@ texttables:
   size: 5050
   description: 'Audio Data: contains sequence pack 4'
   name: AUDIO_PACK_4
+  terminator: 0
+  entries: *AUDIO_SEQ
 0xE00000:
   type: data
   size: 1876
@@ -20258,6 +20282,8 @@ texttables:
   size: 0x45D8
   name: AUDIO_PACK_1
   description: Audio Block
+  terminator: 0
+  entries: *AUDIO_SEQ
 0xE645D8:
   type: data
   size: 0x45C2
@@ -20390,9 +20416,13 @@ texttables:
   description: Audio Block
 0xEAFE8B:
   type: data
-  size: 0x175
+  size: 0x154
   name: AUDIO_PACK_145
-  description: Audio Block
+  description: Hidden track sequence data
+  entries: *AUDIO_SEQ
+0xEAFFDF:
+  type: empty
+  size: 0x21
 0xEB0000:
   type: data
   size: 0x29E8
@@ -20777,7 +20807,9 @@ texttables:
   type: data
   size: 0x3F9
   name: AUDIO_PACK_103
-  description: Audio Block
+  terminator: 0
+  description: Sequence data for tracks "Return to your body", "Boarding School", and "Phase distorter"
+  entries: *AUDIO_SEQ
 0xEE56DF:
   type: data
   size: 0x3BA
