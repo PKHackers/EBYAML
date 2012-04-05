@@ -18250,19 +18250,84 @@ texttables:
   name: ANIMATION_SEQUENCE_POINTERS
 0xCC2E19:
   type: data
-  description: PSI Animation Arrangement - First Block
-  name: PSI_ANIM_ARR_BLOCK1
-  size: 32268
+  description: PSI Animation Arrangement 20
+  name: PSI_ARRANGEMENT_20
+  size: 4670
+0xCC4057:
+  type: data
+  size: 3324
+  description: PSI Animation Arrangement 31
+  name: PSI_ARRANGEMENT_31
+0xCC4D53:
+  type: data
+  size: 3112
+  description: PSI Animation Arrangement 19
+  name: PSI_ARRANGEMENT_19
+0xCC597B:
+  type: data
+  size: 2581
+  description: PSI Animation Arrangement 21
+  name: PSI_ARRANGEMENT_21
+0xCC6390:
+  type: data
+  size: 2535
+  description: PSI Animation Arrangement 13
+  name: PSI_ARRANGEMENT_13
+0xCC6D77:
+  type: data
+  size: 2196
+  description: PSI Animation Arrangement 23
+  name: PSI_ARRANGEMENT_23
+0xCC760B:
+  type: data
+  size: 2195
+  description: PSI Animation Arrangement 18
+  name: PSI_ARRANGEMENT_18
+0xCC7E9E:
+  type: data
+  size: 1931
+  description: PSI Animation Arrangement 8
+  name: PSI_ARRANGEMENT_8
+0xCC8629:
+  type: data
+  size: 1885
+  description: PSI Animation Arrangement 30
+  name: PSI_ARRANGEMENT_30
+0xCC8D86:
+  type: data
+  size: 1881
+  description: PSI Animation Arrangement 29
+  name: PSI_ARRANGEMENT_29
+0xCC94DF:
+  type: data
+  size: 1638
+  description: PSI Animation Arrangement 28
+  name: PSI_ARRANGEMENT_28
+0xCC9B45:
+  type: data
+  size: 1511
+  description: PSI Animation Arrangement 25
+  name: PSI_ARRANGEMENT_25
+0xCCA12C:
+  type: data
+  size: 1421
+  description: PSI Animation Arrangement 26
+  name: PSI_ARRANGEMENT_26
+0xCCA6B9:
+  type: data
+  size: 0x56C
+  description: PSI Animation Arrangement 9
+  name: PSI_ARRANGEMENT_9
 0xCCAC25:
   type: data
   description: PSI Animation Graphics - First Block
   name: PSI_ANIM_GFX_BLOCK1
-  size: 778
-0xCCAF2F:
+  size: 0x50A
+0xCCB12F:
   type: data
-  size: 1764
-  description: PSI Animation Arrangement - Second Block
-  name: PSI_ANIM_ARR_BLOCK2
+  size: 0x4E4
+  description: PSI Animation Arrangement 5
+  name: PSI_ARRANGEMENT_5
 0xCCB613:
   type: data
   size: 1204
@@ -18270,9 +18335,49 @@ texttables:
   name: PSI_ANIM_GFX_BLOCK2
 0xCCBAC7:
   type: data
-  size: 8288
-  description: PSI Animation Arrangement - Third Block
-  name: PSI_ANIM_ARR_BLOCK3
+  size: 0x466
+  description: PSI Animation Arrangement 3
+  name: PSI_ARRANGEMENT_3
+0xCCBF2D:
+  type: data
+  size: 1026
+  description: PSI Animation Arrangement 7
+  name: PSI_ARRANGEMENT_7
+0xCCC32F:
+  type: data
+  size: 978
+  description: PSI Animation Arrangement 0
+  name: PSI_ARRANGEMENT_0
+0xCCC701:
+  type: data
+  size: 940
+  description: PSI Animation Arrangement 6
+  name: PSI_ARRANGEMENT_6
+0xCCCAAD:
+  type: data
+  size: 938
+  description: PSI Animation Arrangement 17
+  name: PSI_ARRANGEMENT_17
+0xCCCE57:
+  type: data
+  size: 880
+  description: PSI Animation Arrangement 33
+  name: PSI_ARRANGEMENT_33
+0xCCD1C7:
+  type: data
+  size: 820
+  description: PSI Animation Arrangement 22
+  name: PSI_ARRANGEMENT_22
+0xCCD4FB:
+  type: data
+  size: 805
+  description: PSI Animation Arrangement 12
+  name: PSI_ARRANGEMENT_12
+0xCCD820:
+  type: data
+  size: 0x307
+  description: PSI Animation Arrangement 2
+  name: PSI_ARRANGEMENT_2
 0xCCDB27:
   type: data
   size: 722
@@ -18280,9 +18385,14 @@ texttables:
   name: PSI_ANIM_GFX_BLOCK3
 0xCCDDF9:
   type: data
-  size: 1316
-  description: PSI Animation Arrangement - Fourth Block
-  name: PSI_ANIM_ARR_BLOCK4
+  size: 0x2A8
+  description: PSI Animation Arrangement 1
+  name: PSI_ARRANGEMENT_1
+0xCCE0A1:
+  type: data
+  size: 0x27C
+  description: PSI Animation Arrangement 24
+  name: PSI_ARRANGEMENT_24
 0xCCE31D:
   type: data
   size: 592
@@ -18290,19 +18400,70 @@ texttables:
   name: PSI_ANIM_GFX_BLOCK4
 0xCCE56D:
   type: data
-  size: 2784
-  description: PSI Animation Arrangement - Fifth Block
-  name: PSI_ANIM_ARR_BLOCK5
+  size: 0x21E
+  description: PSI Animation Arrangement 16
+  name: PSI_ARRANGEMENT_16
+0xCCE78B:
+  type: data
+  size: 0x1E1
+  description: PSI Animation Arrangement 15
+  name: PSI_ARRANGEMENT_15
+0xCCE96C:
+  type: data
+  size: 0x1D3
+  description: PSI Animation Arrangement 11
+  name: PSI_ARRANGEMENT_11
+0xCCEB3F:
+  type: data
+  size: 0x1CF
+  description: PSI Animation Arrangement 14
+  name: PSI_ARRANGEMENT_14
+0xCCED0E:
+  type: data
+  size: 0x1A6
+  description: PSI Animation Arrangement 32
+  name: PSI_ARRANGEMENT_32
+0xCCEEB4:
+  type: data
+  size: 0x199
+  description: PSI Animation Arrangement 27
+  name: PSI_ARRANGEMENT_27
 0xCCF04D:
   type: data
   size: 408
   description: PSI Animation Configuration Data
   name: PSI_ANIM_CFG
+  entries:
+  - name: Short pointer to tileset
+    type: hexint
+    size: 2
+  - name: Frame duration (1/60th seconds)
+    size: 1
+  - name: Palette duration (1/60th seconds)
+    size: 1
+  - name: unknown
+    type: bytearray
+    size: 2
+  - name: Frame count
+    size: 1
+  - name: unknown 2
+    type: bytearray
+    size: 2
+  - name: Duration of enemy colour change
+    size: 1
+  - name: Enemy colour
+    type: palette
+    size: 2
 0xCCF1E5:
   type: data
-  size: 666
-  description: PSI Animation Arrangement - Sixth Block
-  name: PSI_ANIM_ARR_BLOCK6
+  size: 0x173
+  description: PSI Animation Arrangement 4
+  name: PSI_ARRANGEMENT_4
+0xCCF358:
+  type: data
+  size: 0x127
+  description: PSI Animation Arrangement 10
+  name: PSI_ARRANGEMENT_10
 0xCCF47F:
   type: data
   size: 272
