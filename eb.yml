@@ -14584,9 +14584,6 @@ texttables:
   type: data
   size: 73
 0xC30000:
-  type: data
-  size: 256
-0xC30000:
   description: Sprite Group Palettes Table
   name: SPRITE_GROUP_PALETTES
   size: 256
@@ -14918,7 +14915,10 @@ texttables:
     size: 2
   - name: Unknown
     size: 2
-exC3F3C7:
+0xC3F3C5:
+  type: data
+  size: 2
+0xC3F3C7:
   labels:
     0xF3E2: UNKNOWN0
     0xF3FB: UNKNOWN1
@@ -19181,15 +19181,9 @@ exC3F3C7:
     size: 2
   - name: Y
     size: 2
-0xD57A2C:
+0xD57A70:
   type: data
-  description: Clumsy Robot Event Flag
-  name: CLUMSYROBOT_EVENT
-  size: 2
-0xD57A2E:
-  type: data
-  size: 128
-  description: Unused Teleport Destination Text?
+  size: 62
 0xD57AAE:
   type: data
   size: 186
@@ -19250,15 +19244,15 @@ exC3F3C7:
   - name: PSI Name
     size: 1
     substtable: PSI_NAME_TABLE
-  - name: Greek Letter
+  - name: Strength
     size: 1
     values:
-    - 0
-    - alpha
-    - beta
-    - gamma
-    - sigma
-    - omega
+    - "": ~
+    - "\u03B1"
+    - "\u03B2"
+    - "\u03B3"
+    - "\u03A3"
+    - "\u03A9"
   - name: Type
     size: 1
     bitvalues:
@@ -19713,7 +19707,7 @@ exC3F3C7:
     size: 1
 0xD5EBAB:
   type: data
-  size: 1864
+  size: 1872
   description: Scripted Teleport Destination Table
   name: TELEPORT_DESTINATION_TABLE
   entries:
@@ -19786,7 +19780,7 @@ exC3F3C7:
     size: 6
 0xD5F5F5:
   type: data
-  size: 20
+  size: 80
   description: 'Starting Statistics'
   name: INITIAL_STATS
   entries:
