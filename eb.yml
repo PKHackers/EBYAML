@@ -9538,22 +9538,22 @@ texttables:
   size: 448
   type: assembly
   labels:
-    0xADFA: UNKNOWN0
-    0xADFD: UNKNOWN1
-    0xAE2A: UNKNOWN2
-    0xAE39: UNKNOWN3
-    0xAE54: UNKNOWN4
-    0xAE73: UNKNOWN5
-    0xAE8C: UNKNOWN6
-    0xAE99: UNKNOWN7
-    0xAEC2: UNKNOWN8
-    0xAECA: UNKNOWN9
-    0xAECD: UNKNOWN10
-    0xAEDB: UNKNOWN11
-    0xAF20: UNKNOWN12
-    0xAF26: UNKNOWN13
-    0xAF46: UNKNOWN14
-    0xAF50: UNKNOWN15
+    0xADFA: Other_PSI
+    0xADFD: Enemy_Targetting_PSI
+    0xAE2A: Enemy_None
+    0xAE39: Enemy_Single
+    0xAE54: Enemy_Single_Random
+    0xAE73: Enemy_Row
+    0xAE8C: Enemy_All
+    0xAE99: Ally_Targetting_PSI
+    0xAEC2: Ally_UnknownValue_Check1
+    0xAECA: Ally_UnknownValue_Check2
+    0xAECD: Ally_None
+    0xAEDB: Ally_Single
+    0xAF20: Only_One_Ally
+    0xAF26: Ally_Single_Random
+    0xAF46: Ally_All
+    0xAF50: Return
 0xC1AF74:
   size: 1602
   type: assembly
@@ -9871,6 +9871,8 @@ texttables:
     0xCBBA: UNKNOWN2
     0xCBC8: UNKNOWN3
 0xC1CBCD:
+  description: Battle PSI Menu
+  name: BATTLE_PSI_MENU
   size: 696
   type: assembly
   labels:
@@ -14708,6 +14710,8 @@ texttables:
     0xE6DF: UNKNOWN16
     0xE6EF: UNKNOWN17
     0xE6F4: UNKNOWN18
+  description: Close text window
+  name: CLOSE_WINDOW
   size: 471
   type: assembly
 0xC3E6F8:
@@ -19145,6 +19149,10 @@ texttables:
   size: 2560
   description: Sprite Placement Pointer Table
   name: SPRITE_PLACEMENT_PTR_TABLE
+  entries:
+  - name: Pointer
+    size: 2
+    type: pointer
 0xCF6BE7:
   type: data
   size: 7582
@@ -19233,11 +19241,11 @@ texttables:
   size: 704
 0xD01880:
   type: data
-  description: Enemy Placement Data
-  name: ENEMY_PLACEMENT_DATA
+  description: Map Enemy Placement Data
+  name: MAP_ENEMY_PLACEMENT
   size: 40960
   entries:
-  - name: Enemy Group
+  - name: Enemy Map Group
     size: 2
 0xD0B880:
   type: data
@@ -19984,11 +19992,11 @@ texttables:
     type: bytearray
 0xD5F645:
   type: data
-  description: Timed Delivery Events Table
-  name: TIMED_DELIVERY_EVENTS_TABLE
+  description: Timed Delivery Table
+  name: TIMED_DELIVERY_TABLE
   size: 200
   entries:
-  - name: Sprite
+  - name: Sprite Group
     size: 2
   - name: Event Flag
     size: 2
@@ -20037,6 +20045,11 @@ texttables:
   size: 5120
   description: 'Map Data: Per-Sector Attributes Table'
   name: MAP_DATA_PER-SECTOR_ATTRIBUTES_TABLE
+  entries:
+  - name: Bitfield
+    size: 1
+  - name: Item
+    size: 1
 0xD7C600:
   type: data
   size: 13800
@@ -20432,15 +20445,15 @@ texttables:
   - name: Event Flag
     size: 2
     type: hexint
-  - name: ???
+  - name: Unknown A
     size: 3
     type: bytearray
-  - name: ????
+  - name: Unknown B
     size: 2
-  - name: ?????
+  - name: Unknown C
     size: 1
     type: hexint
-  - name: ??????
+  - name: Unknown D
     size: 54
     type: bytearray
 0xE1374A:
@@ -20481,57 +20494,91 @@ texttables:
     0x4EBF: UNKNOWN17
 0xE14EC1:
   type: data
-  size: 105
+  description: "APE" Logo Arrangement
+  name: APE_ARRANGEMENT
+  size: 105 
 0xE14F2A:
   type: data
+  description: "APE" Logo Graphics
+  name: APE_GRAPHICS
   size: 518
 0xE15130:
   type: data
+  description: "APE" Logo Palette
+  name: APE_PALETTE
   size: 68
 0xE15174:
   type: data
+  description: "HALKEN" Logo Arrangement
+  name: HALKEN_ARRANGEMENT
   size: 116
 0xE151E8:
   type: data
+  description: "HALKEN" Logo Graphics
+  name: HALKEN_GRAPHICS
   size: 464
 0xE153B8:
   type: data
+  description: "HALKEN" Logo Palette
+  name: HALKEN_PALETTE
   size: 157
 0xE15455:
   type: data
+  description: "Nintendo" Logo Arrangement
+  name: NINTENDO_ARRANGEMENT
   size: 73
 0xE1549E:
   type: data
+  description: "Nintendo" Logo Graphics
+  name: NINTENDO_GRAPHICS
   size: 241
 0xE1558F:
   type: data
+  description: "Nintendo" Logo Palette
+  name: NINTENDO_PALETTE
   size: 68
 0xE155D3:
   type: data
+  description: Gas Station Arrangement
+  name: GAS_STATION_ARRANGEMENT
   size: 1376
 0xE15B33:
   type: data
+  description: Gas Station Graphics
+  name: GAS_STATION_GRAPHICS
   size: 20100
 0xE1A9B7:
   type: data
+  description: Gas Station Palette
+  name: GAS_STATION_PALETTE
   size: 166
 0xE1AA5D:
   type: data
   size: 130
 0xE1AADF:
   type: data
+  description: "Produced by Shigesato Itoi" Arrangement
+  name: PRODUCED_ITOI_ARRANGEMENT
   size: 108
 0xE1AB4B:
   type: data
+  description: "Produced by Shigesato Itoi" Graphics
+  name: PRODUCED_ITOI_GRAPHICS
   size: 438
 0xE1AD01:
   type: data
+  description: "Presented by Nintendo" Arrangement
+  name: PRESENTED_NINTENDO_ARRANGEMENT
   size: 77
 0xE1AD4E:
   type: data
+  description: "Presented by Nintendo" Graphics
+  name: PRESENTED_NINTENDO_GRAPHICS
   size: 289
 0xE1AE6F:
   type: data
+  description: "Produced by"/"Presented by" Palette
+  name: PRODUCED_PRESENTED_PALETTE
   size: 13
 0xE1AE7C:
   type: data
