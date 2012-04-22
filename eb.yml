@@ -9601,22 +9601,22 @@ texttables:
   size: 448
   type: assembly
   labels:
-    0xADFA: UNKNOWN0
-    0xADFD: UNKNOWN1
-    0xAE2A: UNKNOWN2
-    0xAE39: UNKNOWN3
-    0xAE54: UNKNOWN4
-    0xAE73: UNKNOWN5
-    0xAE8C: UNKNOWN6
-    0xAE99: UNKNOWN7
-    0xAEC2: UNKNOWN8
-    0xAECA: UNKNOWN9
-    0xAECD: UNKNOWN10
-    0xAEDB: UNKNOWN11
-    0xAF20: UNKNOWN12
-    0xAF26: UNKNOWN13
-    0xAF46: UNKNOWN14
-    0xAF50: UNKNOWN15
+    0xADFA: OTHER_PSI
+    0xADFD: ENEMY_TARGETTING_PSI
+    0xAE2A: ENEMY_NONE
+    0xAE39: ENEMY_SINGLE
+    0xAE54: ENEMY_SINGLE_RANDOM
+    0xAE73: ENEMY_ROW
+    0xAE8C: ENEMY_ALL
+    0xAE99: ALLY_TARGETTING_PSI
+    0xAEC2: ALLY_UNKNOWNVALUE_CHECK1
+    0xAECA: ALLY_UNKNOWNVALUE_CHECK2
+    0xAECD: ALLY_NONE
+    0xAEDB: ALLY_SINGLE
+    0xAF20: ONLY_ONE_ALLY
+    0xAF26: ALLY_SINGLE_RANDOM
+    0xAF46: ALLY_ALL
+    0xAF50: RETURN
 0xC1AF74:
   size: 1602
   type: assembly
@@ -9934,6 +9934,8 @@ texttables:
     0xCBBA: UNKNOWN2
     0xCBC8: UNKNOWN3
 0xC1CBCD:
+  name: BATTLE_PSI_MENU
+  description: Battle PSI Menu
   size: 696
   type: assembly
   labels:
@@ -14751,6 +14753,8 @@ texttables:
   size: 50
   type: assembly
 0xC3E521:
+  description: Close text window
+  name: CLOSE_WINDOW
   labels:
     0xE535: UNKNOWN0
     0xE546: UNKNOWN1
@@ -17753,9 +17757,13 @@ texttables:
 0xC4DD28:
   size: 168
   type: assembly
+  description: Decompress "Produced by Itoi" screen data
+  name: DECOMP_ITOI_PRODUCTION
 0xC4DDD0:
   size: 168
   type: assembly
+  description: Decompress "Presented by Nintendo" screen data
+  name: DECOMP_NINTENDO_PRESENTATION
 0xC4DE78:
   type: data
   size: 34
@@ -18028,7 +18036,7 @@ texttables:
   entries:
   - name: Unknown
     type: pointer
-    reverseendian: y
+    endianness: m
     size: 3
 0xC4FB42:
   size: 22
@@ -18383,8 +18391,8 @@ texttables:
   name: PSI_ARRANGEMENT_9
 0xCCAC25:
   type: data
-  description: PSI Animation Graphics - First Block
-  name: PSI_ANIM_GFX_BLOCK1
+  description: PSI Animation Graphics Set 1
+  name: PSI_ANIM_GFX_SET1
   size: 0x50A
 0xCCB12F:
   type: data
@@ -18394,8 +18402,8 @@ texttables:
 0xCCB613:
   type: data
   size: 1204
-  description: PSI Animation Graphics - Second Block
-  name: PSI_ANIM_GFX_BLOCK2
+  description: PSI Animation Graphics Set 2
+  name: PSI_ANIM_GFX_SET2
 0xCCBAC7:
   type: data
   size: 0x466
@@ -18444,8 +18452,8 @@ texttables:
 0xCCDB27:
   type: data
   size: 722
-  description: PSI Animation Graphics - Third Block
-  name: PSI_ANIM_GFX_BLOCK3
+  description: PSI Animation Graphics Set 3
+  name: PSI_ANIM_GFX_SET3
 0xCCDDF9:
   type: data
   size: 0x2A8
@@ -18459,8 +18467,8 @@ texttables:
 0xCCE31D:
   type: data
   size: 592
-  description: PSI Animation Graphics - Fourth Block
-  name: PSI_ANIM_GFX_BLOCK4
+  description: PSI Animation Graphics Set 4
+  name: PSI_ANIM_GFX_SET4
 0xCCE56D:
   type: data
   size: 0x21E
@@ -18498,8 +18506,9 @@ texttables:
   name: PSI_ANIM_CFG
   entries:
   - name: Short pointer to tileset
-    type: hexint
+    type: pointer
     size: 2
+    base: 0xCC0000
   - name: Frame duration (1/60th seconds)
     size: 1
   - name: Palette duration (1/60th seconds)
@@ -18634,6 +18643,7 @@ texttables:
   - name: Pointer
     size: 2
     type: pointer
+    base: 0xCE0000
 0xCEDD41:
   type: data
   size: 28
@@ -19198,6 +19208,7 @@ texttables:
   - name: Pointer
     size: 2
     type: pointer
+    base: 0xCF0000
 0xCF5A39:
   type: data
   size: 1966
@@ -19208,6 +19219,11 @@ texttables:
   size: 2560
   description: Sprite Placement Pointer Table
   name: SPRITE_PLACEMENT_PTR_TABLE
+  entries:
+  - name: Pointer
+    size: 2
+    type: pointer
+    base: 0xCF0000
 0xCF6BE7:
   type: data
   size: 7582
@@ -19314,6 +19330,7 @@ texttables:
   - name: Pointer
     size: 2
     type: pointer
+    base: 0xD00000
 0xD015C0:
   type: data
   description: 'Map Tiles: Event Control Table'
@@ -20072,11 +20089,11 @@ texttables:
     type: bytearray
 0xD5F645:
   type: data
-  description: Timed Delivery Events Table
-  name: TIMED_DELIVERY_EVENTS_TABLE
+  description: Timed Delivery Table
+  name: TIMED_DELIVERY_TABLE
   size: 200
   entries:
-  - name: Sprite
+  - name: Sprite Group
     size: 2
   - name: Event Flag
     size: 2
@@ -20086,10 +20103,10 @@ texttables:
     type: bytearray
   - name: Timer
     size: 2
-  - name: Suitable Area Text Pointer
+  - name: Delivery Success Text Pointer
     size: 3
     type: pointer
-  - name: Unsuitable Area Text Pointer
+  - name: Delivery Failure Text Pointer
     size: 3
     type: pointer
   - name: Unknown2
@@ -20126,9 +20143,10 @@ texttables:
   description: 'Map Data: Per-Sector Attributes Table'
   name: MAP_DATA_PER-SECTOR_ATTRIBUTES_TABLE
   entries:
-  - name: Attributes
-    type: bytearray
-    size: 2
+  - name: Flags
+    size: 1
+  - name: Item ID
+    size: 1
 0xD7C600:
   type: data
   size: 13800
@@ -20151,6 +20169,7 @@ texttables:
   - name: Pointer
     size: 2
     type: pointer
+    base: 0xD80000
 0xD8F05E:
   type: data
   size: 431
@@ -20574,57 +20593,93 @@ texttables:
 0xE14EC1:
   type: data
   size: 105
+  description: '"APE" Logo Arrangement'
+  name: APE_ARRANGEMENT
 0xE14F2A:
   type: data
   size: 518
+  description: '"APE" Logo Graphics'
+  name: APE_GRAPHICS
 0xE15130:
   type: data
   size: 68
+  description: '"APE" Logo Palette'
+  name: APE_PALETTE
 0xE15174:
   type: data
   size: 116
+  description: '"HALKEN" Logo Arrangement'
+  name: HALKEN_ARRANGEMENT
 0xE151E8:
   type: data
   size: 464
+  description: '"HALKEN" Logo Graphics'
+  name: HALKEN_GRAPHICS
 0xE153B8:
   type: data
   size: 157
+  description: '"HALKEN" Logo Palette'
+  name: HALKEN_PALETTE
 0xE15455:
   type: data
   size: 73
+  description: '"Nintendo" Logo Arrangement'
+  name: NINTENDO_ARRANGEMENT
 0xE1549E:
   type: data
   size: 241
+  description: '"Nintendo" Logo Graphics'
+  name: NINTENDO_GRAPHICS
 0xE1558F:
   type: data
   size: 68
+  description: '"Nintendo" Logo Palette'
+  name: NINTENDO_PALETTE
 0xE155D3:
   type: data
   size: 1376
+  description: 'Gas Station Intro Arrangement'
+  name: GAS_STATION_ARRANGEMENT
 0xE15B33:
   type: data
   size: 20100
+  description: 'Gas Station Intro Graphics'
+  name: GAS_STATION_GRAPHICS
 0xE1A9B7:
   type: data
   size: 166
+  description: 'Gas Station Intro Palette'
+  name: GAS_STATION_PALETTE
 0xE1AA5D:
   type: data
   size: 130
+  description: 'Gas Station Intro Palette 2'
+  name: GAS_STATION_PALETTE2
 0xE1AADF:
   type: data
   size: 108
+  description: 'Produced By Itoi Arrangement'
+  name: PRODUCED_ITOI_ARRANGEMENT
 0xE1AB4B:
   type: data
   size: 438
+  description: 'Produced By Itoi Graphics'
+  name: PRODUCED_ITOI_GRAPHICS
 0xE1AD01:
   type: data
   size: 77
+  description: 'Presented By Nintendo Arrangement'
+  name: NINTENDO_PRESENTATION_PALETTE
 0xE1AD4E:
   type: data
   size: 289
+  description: 'Presented By Nintendo Graphics'
+  name: NINTENDO_PRESENTATION_GRAPHICS
 0xE1AE6F:
   type: data
   size: 13
+  description: 'Produced by Itoi / Presented By Nintendo Palette'
+  name: NINTENDO_ITOI_PALETTE
 0xE1AE7C:
   type: data
   size: 7
@@ -20637,15 +20692,21 @@ texttables:
 0xE1AF7D:
   type: data
   size: 660
+  description: Title screen arrangement
+  name: TITLE_SCREEN_ARRANGEMENT
 0xE1B211:
   type: data
   size: 5332
+  description: Title screen graphics
+  name: TITLE_SCREEN_GRAPHICS
 0xE1C6E5:
   type: data
   size: 1788
 0xE1CDE1:
   type: data
   size: 39
+  description: Title screen palette
+  name: TITLE_SCREEN_PALETTE
 0xE1CE08:
   type: data
   size: 423
