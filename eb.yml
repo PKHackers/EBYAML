@@ -1072,6 +1072,12 @@ texttables:
 0x306000:
   description: ???
   name: UNKNOWN_SRAM
+0x7E0024:
+  description: Random number generator state A
+  name: RAND_A
+0x7E0026:
+  description: Random number generator state B
+  name: RAND_B
 0x7E0065:
   description: Controller 1 state
   name: PAD_1_STATE
@@ -1440,6 +1446,9 @@ texttables:
 0x7E987B:
   description: Party Leader Y Coordinate
   name: LEADER_Y_COORD
+0x7E9881:
+  description: Tile type currently being stood upon?
+  name: TRODDEN_TILE_TYPE
 0x7E9883:
   description: Current Walking Style
   name: WALKING_STYLE
@@ -1558,6 +1567,7 @@ texttables:
 0x7EB539:
   description: |
     Non-zero if SRAM size-checking routine is modified
+  name: PIRACY_FLAG
 0x7EB53B:
   description: Current Music Track
   name: CURRENT_MUSIC_TRACK
@@ -1730,6 +1740,11 @@ texttables:
 0xC00AA1:
   size: 36
   type: assembly
+  name: LOAD_SECTOR_ATTRS
+  description: Loads sector attributes based on the coordinates given
+  arguments:
+    A: X coordinate
+    X: Y coordinate
 0xC00AC5:
   size: 279
   type: assembly
@@ -1907,8 +1922,6 @@ texttables:
 0xC01A63:
   size: 6
   type: assembly
-  name: ""
-  description: ""
 0xC01A69:
   size: 29
   type: assembly
@@ -1921,8 +1934,6 @@ texttables:
   labels:
     0x1A8D: UNKNOWN0
     0x1A95: UNKNOWN1
-  name: ""
-  description: ""
 0xC01A9D:
   description: Find free space in 7E4682 table
   name: FIND_FREE_7E4682
@@ -2144,7 +2155,7 @@ texttables:
     0x2B34: UNKNOWN11
     0x2B42: UNKNOWN12
     0x2B51: UNKNOWN13
-    0x2B53: UNKNOWN14
+    0x2B53: RETURN
 0xC02B55:
   size: 233
   type: assembly
@@ -3008,9 +3019,25 @@ texttables:
 0xC06662:
   size: 589
   type: assembly
+  name: SCREEN_TRANSITION
+  description: Reads screen transition data
+  arguments:
+    A: Transition ID
+    'Y': Play Animation (boolean)
+  localvars:
+    0x02: ANIM_SPEED
+    0x04: ANIMATION_ENTRY_POSITION
+    0x06: ANIM_PTR_LO
+    0x08: ANIM_PTR_HI
+    0x0A: BASE_ANIM_PTR_LO
+    0x0C: BASE_ANIM_PTR_HI
+    0x19: ANIM_PTR_LO_CPY
+    0x1B: ANIM_PTR_HI_CPY
+    0x1D: ANIMATION_ID
+    0x1F: UNKNOWN_FLAGS
   labels:
-    0x66A8: UNKNOWN0
-    0x66CA: UNKNOWN1
+    0x66A8: NOT_MAX_DURATION
+    0x66CA: PLAY_ANIMATION
     0x66FD: UNKNOWN2
     0x6751: UNKNOWN3
     0x675D: UNKNOWN4
@@ -3756,8 +3783,15 @@ texttables:
     0x8F0C: UNKNOWN0
     0x8F11: UNKNOWN1
 0xC08F15:
-  description: Overwrite $7E0000+[$0E] to $7E0000+[$0E]+X with A
-  name: MEMSET2
+  description: Overwrite Memory (8-bit)
+  arguments:
+    A: Value
+    X: Size
+    $0E: Destination
+  name: MEMSET8
+  final processor state:
+    accum: 16
+    index: 16
   size: 13
   type: assembly
   labels:
@@ -4825,6 +4859,11 @@ texttables:
 0xC0B149:
   size: 438
   type: assembly
+  arguments:
+    A: Unknown
+    X: Unknown
+    'Y': Unknown
+    0x0E: Unknown
   labels:
     0xB166: UNKNOWN0
     0xB169: UNKNOWN1
@@ -4858,14 +4897,38 @@ texttables:
     0xB2F6: UNKNOWN29
     0xB2FD: UNKNOWN30
 0xC0B2FF:
-  size: 257
+  size: 256
+  type: data
+  entries:
+  - name: Value
+    size: 1
+0xC0B3FF:
+  size: 1
   type: data
 0xC0B400:
   size: 37
   type: assembly
+  name: COSINE
+  description: Cosine function
+  arguments:
+    A: Integer to take cosine of
+0xC0B40B:
+  size: 26
+  ignore: y
+  type: assembly
+  name: SINE
+  description: Sine function
+  arguments:
+    A: Integer to take sine of
 0xC0B425:
+  name: SINE_LOOKUP_TABLE
+  description: Lookup table for (co)sine function
   size: 256
   type: data
+  entries:
+  - name: Value
+    size: 1
+    signed: y
 0xC0B525:
   description: File Select Screen Initialization
   name: FILE_SELECT_INIT
@@ -10852,8 +10915,10 @@ texttables:
   size: 636
   type: assembly
 0xC21628:
-  description: Check Event Flag A, store result in A
+  description: Check Event Flag, return result
   name: CHKEVENT
+  arguments:
+    A: Event Flag ID
   labels:
     0x1659: UNKNOWN0
     0x165C: UNKNOWN1
@@ -11299,11 +11364,6 @@ texttables:
   - name: "Null"
     size: 1
 0xC2311B:
-  name: MYSTERY_POINTER
-  description: Unknown Pointer
-  type: data
-  size: 3
-0xC2311E:
   labels:
     0x315C: UNKNOWN0
     0x3163: UNKNOWN1
@@ -11419,7 +11479,7 @@ texttables:
     0x3B19: UNKNOWN111
     0x3B4D: UNKNOWN112
     0x3B64: UNKNOWN113
-  size: 2632
+  size: 2635
   type: assembly
 0xC23B66:
   labels:
@@ -12183,8 +12243,12 @@ texttables:
   size: 45
   type: assembly
 0xC2724A:
-  description: Inflict status Y from group X on target
+  description: Inflict status on target
   name: INFLICT_STATUS
+  arguments:
+    A: Target
+    X: Status Group
+    'Y': Status ID
   labels:
     0x7266: UNKNOWN0
     0x727B: UNKNOWN1
@@ -12890,7 +12954,6 @@ texttables:
     accum: 16
   description: PSI Shield Handler
   name: PSI_SHIELD_NULLIFY
-  returns: ""
   labels:
     0x93F6: UNKNOWN0
     0x940F: UNKNOWN1
@@ -14576,8 +14639,8 @@ texttables:
   type: assembly
 0xC2FF9A:
   labels:
-    0xFFB3: UNKNOWN0
-    0xFFB6: UNKNOWN1
+    0xFFB3: MINISPRITES
+    0xFFB6: RETURN
   size: 29
   type: assembly
 0xC2FFB7:
@@ -19217,6 +19280,31 @@ texttables:
   description: Screen Transition Configuration Table
   name: SCREEN_TRANSITION_CONFIG_TABLE
   size: 408
+  entries:
+  - name: Duration
+    size: 1
+  - name: Animation ID
+    size: 1
+  - name: Animation Flags
+    size: 1
+  - name: Fade Style
+    size: 1
+  - name: Direction
+    size: 1
+  - name: Unknown
+    size: 1
+  - name: Slide speed
+    size: 1
+  - name: Initial Sound effect
+    size: 1
+  - name: Secondary Duration
+    size: 1
+  - name: Secondary Animation ID
+    size: 1
+  - name: Secondary Animation Flags
+    size: 1
+  - name: Final Sound effect
+    size: 1
 0xD01598:
   type: data
   size: 40
@@ -20037,6 +20125,10 @@ texttables:
   size: 5120
   description: 'Map Data: Per-Sector Attributes Table'
   name: MAP_DATA_PER-SECTOR_ATTRIBUTES_TABLE
+  entries:
+  - name: Attributes
+    type: bytearray
+    size: 2
 0xD7C600:
   type: data
   size: 13800
