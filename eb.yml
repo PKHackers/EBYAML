@@ -4863,7 +4863,7 @@ texttables:
     A: Unknown
     X: Unknown
     'Y': Unknown
-    0x0E: Unknown
+    $0E: Unknown
   labels:
     0xB166: UNKNOWN0
     0xB169: UNKNOWN1
@@ -6372,6 +6372,8 @@ texttables:
 0xC1163C:
   size: 422
   type: assembly
+  name: PRINT_MENU_ITEMS
+  description: Prints selection menu items
   labels:
     0x164F: UNKNOWN0
     0x1678: UNKNOWN1
@@ -6421,6 +6423,10 @@ texttables:
 0xC1196A:
   size: 1520
   type: assembly
+  name: SELECTION_MENU
+  description: Selection Menu routine
+  arguments:
+    A: non-zero if selection can be cancelled
   labels:
     0x1986: UNKNOWN0
     0x19B3: UNKNOWN1
@@ -9600,6 +9606,7 @@ texttables:
 0xC1ADB4:
   size: 448
   type: assembly
+  name: DETERMINE_TARGETING
   labels:
     0xADFA: OTHER_PSI
     0xADFD: ENEMY_TARGETTING_PSI
@@ -10209,16 +10216,24 @@ texttables:
   name: REDIRECT_C3E6F8
 0xC1DDDA:
   size: 75
+  name: SELECTION_MENU_ITEM_SETUP
+  description: Set up Selection Menu items
+  arguments:
+    A: Return value
+    X: Tile Column
+    'Y': Tile Row
+    $0E: String address
+    $12: Unknown
   type: assembly
 0xC1DE25:
   size: 6
   type: assembly
-  description: Redirect to C1163C
+  description: Redirect to C1163C (PRINT_MENU_ITEMS)
   name: REDIRECT_C1163C
 0xC1DE2B:
   size: 6
   type: assembly
-  description: Redirect to C1196A
+  description: Redirect to C1196A (SELECTION_MENU)
   name: REDIRECT_C1196A
 0xC1DE31:
   size: 6
