@@ -6372,6 +6372,9 @@ texttables:
 0xC1163C:
   size: 422
   type: assembly
+  name: PRINT_MENU_ITEMS
+  description: Prints selection menu items.
+
   labels:
     0x164F: UNKNOWN0
     0x1678: UNKNOWN1
@@ -6421,6 +6424,8 @@ texttables:
 0xC1196A:
   size: 1520
   type: assembly
+  name: SELECTION_MENU
+  description: Selection Menu routine. (A = Non-cancellable if 0)
   labels:
     0x1986: UNKNOWN0
     0x19B3: UNKNOWN1
@@ -9598,6 +9603,7 @@ texttables:
     0xADAB: UNKNOWN0
     0xADB2: UNKNOWN1
 0xC1ADB4:
+  name: Determine_Targeting
   size: 448
   type: assembly
   labels:
@@ -10210,15 +10216,17 @@ texttables:
 0xC1DDDA:
   size: 75
   type: assembly
+  description: Set up Selection Menu items. ($0E + $10 is string address, $12 + $14 unknown, Y = Tile Row, X = Tile Column, A = Return Value)
+  name: SELECTION_MENU_ITEM_SETUP
 0xC1DE25:
   size: 6
   type: assembly
-  description: Redirect to C1163C
+  description: Redirect to C1163C (PRINT_MENU_ITEMS)
   name: REDIRECT_C1163C
 0xC1DE2B:
   size: 6
   type: assembly
-  description: Redirect to C1196A
+  description: Redirect to C1196A (SELECTION_MENU)
   name: REDIRECT_C1196A
 0xC1DE31:
   size: 6
