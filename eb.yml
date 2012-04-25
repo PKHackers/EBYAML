@@ -1,4 +1,4 @@
----
+﻿---
 processor: 65816
 platform: snes
 title: Earthbound (USA)
@@ -208,7 +208,7 @@ texttables:
         0xF2: 6
         0xF3: 5
     replacements:
-      0x00: "\n"
+#      0x00: "\n"
       0x03: "\n"
       0x50: ' '
       0x51: '!'
@@ -230,8 +230,8 @@ texttables:
       0x67: 7
       0x68: 8
       0x69: 9
-      0x6C: '&lt;'
-      0x6E: '&gt;'
+      0x6C: '"'
+      0x6E: '"'
       0x6F: '?'
       0x70: '@'
       0x71: A
@@ -260,6 +260,7 @@ texttables:
       0x88: X
       0x89: "Y"
       0x8A: Z
+      0x8F: Ω
       0x91: a
       0x92: b
       0x93: c
@@ -1490,6 +1491,9 @@ texttables:
 0x7E99CE:
   description: Name
   name: NAME
+0x7E99D3:
+  description: Level
+  name: LEVEL
 0x7E99D8:
   description: Max HP
   name: MAX_HP
@@ -2418,6 +2422,8 @@ texttables:
     0x3FEC: UNKNOWN1
 0xC0400E:
   size: 29
+  name: CENTER_SCREEN
+  description: Centers screen on coordinates
   type: assembly
 0xC0402B:
   size: 30
@@ -3874,11 +3880,28 @@ texttables:
 0xC0914B:
   size: 49
   type: assembly
+  name: DIVISION
+  description: Divides a number by another number, returns remainder and result
+  arguments:
+    A: Divisor
+    'Y': Dividend
   labels:
-    0x9154: UNKNOWN0
-    0x915B: UNKNOWN1
-    0x9167: UNKNOWN2
-    0x9173: UNKNOWN3
+    0x9154: DIVIDEND_POSITIVE
+    0x915B: DIVISOR_POSITIVE
+    0x9167: LOOP_BEGIN
+    0x9173: OVERFLOW
+0xC0915B:
+  size: 33
+  type: assembly
+  ignore: y
+  name: DIVISION_UNSIGNED
+  description: Divides a number by another number, returns remainder and result
+  arguments:
+    A: Divisor
+    'Y': Dividend
+  labels:
+    0x9167: LOOP_BEGIN
+    0x9173: OVERFLOW
 0xC0917C:
   size: 103
   type: assembly
@@ -3910,6 +3933,8 @@ texttables:
 0xC09231:
   size: 6
   type: assembly
+  name: GET_REMAINDER_LONG
+  description: Long redirect to GET_REMAINDER
 0xC09237:
   size: 11
   type: assembly
@@ -6217,6 +6242,8 @@ texttables:
   size: 7
   type: assembly
 0xC10CB6:
+  name: PRINT_LETTER
+  description: Prints a single letter on the screen
   size: 170
   type: assembly
   labels:
@@ -6241,6 +6268,8 @@ texttables:
     0x0D9E: UNKNOWN0
     0x0DCD: UNKNOWN1
 0xC10DF6:
+  name: PRINT_NUMBER
+  description: Prints a number on the screen
   size: 190
   type: assembly
   labels:
@@ -9347,6 +9376,8 @@ texttables:
 0xC198DE:
   size: 307
   type: assembly
+  name: INVENTORY_GET_ITEM_NAME
+  description: Gets item name for inventory
   labels:
     0x9903: UNKNOWN0
     0x9936: UNKNOWN1
@@ -9749,6 +9780,8 @@ texttables:
 0xC1BE4D:
   size: 121
   type: assembly
+  name: ATTEMPT_HOMESICKNESS
+  description: Attempt to inflict homesickness
   labels:
     0xBE6A: UNKNOWN0
     0xBE7D: UNKNOWN1
@@ -9757,8 +9790,8 @@ texttables:
     0xBEA8: UNKNOWN4
     0xBEB1: UNKNOWN5
     0xBEBF: UNKNOWN6
-    0xBEC1: UNKNOWN7
-    0xBEC4: UNKNOWN8
+    0xBEC1: FAILED
+    0xBEC4: RETURN
 0xC1BEC6:
   description: Get off the bicycle
   name: GET_OFF_BICYCLE
@@ -9875,11 +9908,13 @@ texttables:
   size: 79
   type: assembly
   labels:
-    0xC423: UNKNOWN0
+    0xC423: NOT_ROCKIN
     0xC43F: UNKNOWN1
 0xC1C452:
   size: 1025
   type: assembly
+  name: GENERATE_PSI_LIST
+  description: Creates PSI List
   labels:
     0xC482: UNKNOWN0
     0xC48F: UNKNOWN1
@@ -10001,8 +10036,8 @@ texttables:
   description: Level up Character
   name: LEVEL_UP_CHAR
   arguments:
-    X: Silent Mode
     A: Character to level-up
+    X: Silent Mode
   size: 1991
   type: assembly
   labels:
@@ -10088,6 +10123,11 @@ texttables:
     0xD984: UNKNOWN3
     0xD9E7: UNKNOWN4
 0xC1D9E9:
+  name: GAIN_EXP
+  description: Gain Experience
+  arguments:
+    A: Unknown
+    X: Unknown
   size: 330
   type: assembly
   labels:
@@ -10101,6 +10141,8 @@ texttables:
 0xC1DB33:
   size: 136
   type: assembly
+  name: FIND_CONDIMENT
+  description: Find condiment for food
   labels:
     0xDB6C: UNKNOWN0
     0xDB90: UNKNOWN1
@@ -10110,6 +10152,8 @@ texttables:
 0xC1DBBB:
   size: 97
   type: assembly
+  name: SHOW_HP_ALERT
+  description: Shows Low HP Alert message
 0xC1DC1C:
   description: Display In-Battle Text
   name: DISPLAY_IN_BATTLE_TEXT
@@ -10608,6 +10652,8 @@ texttables:
   size: 15
   type: empty
 0xC20000:
+  name: INFLICT_SUNSTROKE_CHECK
+  description: Determines if sunstroke should be inflicted
   labels:
     0x0010: UNKNOWN0
     0x001E: UNKNOWN1
@@ -10752,7 +10798,12 @@ texttables:
   type: assembly
 0xC20912:
   type: data
-  size: 142
+  size: 136
+0xC20998:
+  type: data
+  size: 8
+  description: The/the
+  name: THETHE
 0xC209A0:
   labels:
     0x09D5: UNKNOWN0
@@ -11063,6 +11114,8 @@ texttables:
   size: 110
   type: assembly
 0xC21E03:
+  name: CALC_RESISTANCES
+  description: Calculates character's resistances
   labels:
     0x1E5C: UNKNOWN0
     0x1E5F: UNKNOWN1
@@ -11248,6 +11301,8 @@ texttables:
   size: 85
   type: assembly
 0xC2281D:
+  name: DEPOSIT_INTO_ATM
+  description: Deposit money into ATM?
   labels:
     0x286D: UNKNOWN0
     0x286F: UNKNOWN1
@@ -11255,8 +11310,10 @@ texttables:
   size: 154
   type: assembly
 0xC228B7:
+  name: WITHDRAW_FROM_ATM
+  description: Attempt to withdraw money from ATM
   labels:
-    0x28F6: UNKNOWN0
+    0x28F6: INSUFFICIENT_FUNDS
   size: 65
   type: assembly
 0xC228F8:
@@ -11381,6 +11438,8 @@ texttables:
   - name: "Null"
     size: 1
 0xC2311B:
+  name: BATTLE_SELECTION_MENU
+  description: Creates battle selection menu and handles input
   labels:
     0x315C: UNKNOWN0
     0x3163: UNKNOWN1
@@ -11499,6 +11558,8 @@ texttables:
   size: 2635
   type: assembly
 0xC23B66:
+  name: COPY_ENEMY_NAME
+  description: Copy enemy name
   labels:
     0x3B7D: UNKNOWN0
     0x3B8F: UNKNOWN1
@@ -11553,6 +11614,8 @@ texttables:
   size: 226
   type: assembly
 0xC23F6C:
+  name: FIND_TARGETTABLE_NPC
+  description: Find targettable NPC?
   labels:
     0x3F82: UNKNOWN0
     0x3F89: UNKNOWN1
@@ -11565,10 +11628,12 @@ texttables:
   size: 126
   type: assembly
 0xC23FEA:
+  name: GET_SHIELD_TARGETTING
+  description: Determines if shield PSI is single target
   labels:
-    0x4000: UNKNOWN0
-    0x4005: UNKNOWN1
-    0x4008: UNKNOWN2
+    0x4000: SINGLETARGET
+    0x4005: MULTITARGET
+    0x4008: RETURN
   size: 31
   type: assembly
 0xC24009:
@@ -15423,6 +15488,8 @@ texttables:
 0xC430EC:
   size: 453
   type: assembly
+  name: VELOCITY_STORE
+  description: Stores velocities?
   labels:
     0x30FC: UNKNOWN0
     0x32A5: UNKNOWN1
@@ -15696,9 +15763,9 @@ texttables:
     0x463A: UNKNOWN2
     0x4651: UNKNOWN3
     0x4663: UNKNOWN4
-    0x4666: UNKNOWN5
-    0x46AE: UNKNOWN6
-    0x46F5: UNKNOWN7
+    0x4666: DICT1
+    0x46AE: DICT2
+    0x46F5: DICT3
     0x473A: UNKNOWN8
     0x4751: UNKNOWN9
     0x47A0: UNKNOWN10
@@ -15709,11 +15776,13 @@ texttables:
 0xC447FB:
   size: 129
   type: assembly
+  description: Copy some text?
   labels:
     0x4869: UNKNOWN0
 0xC4487C:
   size: 231
   type: assembly
+  description: Display text on screen?
   labels:
     0x48AD: UNKNOWN0
     0x48E1: UNKNOWN1
@@ -15856,6 +15925,8 @@ texttables:
 0xC45637:
   size: 76
   type: assembly
+  description: Search for item in inventory
+  name: FIND_ITEM_IN_INVENTORY
   labels:
     0x564E: UNKNOWN0
     0x566E: UNKNOWN1
@@ -15866,6 +15937,8 @@ texttables:
 0xC45683:
   size: 97
   type: assembly
+  name: CHECK_FOR_TOWN_MAP
+  description: Checks for town map
   labels:
     0x569D: UNKNOWN0
     0x56C2: UNKNOWN1
@@ -15875,6 +15948,10 @@ texttables:
 0xC456E4:
   size: 71
   type: assembly
+  description: Find space in character's inventory
+  name: FIND_INVENTORY_SPACE
+  arguments: 
+    A: Character ID
   labels:
     0x56F8: UNKNOWN0
     0x5716: UNKNOWN1
@@ -15883,7 +15960,10 @@ texttables:
     0x5726: UNKNOWN4
     0x5729: UNKNOWN5
 0xC4572B:
-  description: Search for free inventory space
+  description: Find first free inventory space
+  name: FIND_INVENTORY_SPACE_ALL
+  arguments:
+    A: -1 to search all character inventories, character ID otherwise
   size: 82
   type: assembly
   labels:
@@ -15916,13 +15996,18 @@ texttables:
     0x58F9: UNKNOWN1
     0x58FC: UNKNOWN2
 0xC458FE:
-  description: Give Status [X Y] to character A
+  description: Give status to character
+  name: INFLICT_STATUS2
+  arguments:
+    A: Character ID
+    X: Status group
+    'Y': Status ID
   size: 101
   type: assembly
   labels:
     0x5928: UNKNOWN0
-    0x595E: UNKNOWN1
-    0x5961: UNKNOWN2
+    0x595E: FAILURE
+    0x5961: RETURN
 0xC45963:
   size: 55
   type: data
@@ -15930,15 +16015,27 @@ texttables:
   name: MISC_TARGET_TEXT
 0xC4599A:
   size: 141
+  name: GET_REQUIRED_EXP
+  description: Gets amount of EXP required for next level
+  arguments:
+    A: Character ID
   type: assembly
   labels:
     0x59CA: UNKNOWN0
     0x5A1D: UNKNOWN1
 0xC45A27:
-  size: 617
+  size: 611
   type: data
   description: Status/Equip window text
   name: STATUS_EQUIP_WINDOW_TEXT
+0xC45C8A:
+  size: 6
+  type: data
+  description: Homesickness probabilities
+  name: HOMESICKNESS_PROBABILITY
+  entries:
+  - name: Probability
+    size: 1
 0xC45C90:
   size: 333
   type: assembly
@@ -15969,6 +16066,11 @@ texttables:
 0xC45ECE:
   size: 173
   type: assembly
+  description: Check if character knows specific PSI
+  name: CHECK_IF_PSI_KNOWN
+  arguments:
+    A: Character ID
+    X: PSI ID
   labels:
     0x5EEB: UNKNOWN0
     0x5F08: UNKNOWN1
@@ -15981,6 +16083,10 @@ texttables:
 0xC45F7B:
   size: 27
   type: assembly
+  name: RAND_MOD
+  description: Returns a random number up to a specified value
+  arguments:
+    A: Upper Limit
 0xC45F96:
   size: 18
   type: data
@@ -17036,9 +17142,19 @@ texttables:
 0xC4A08D:
   type: data
   size: 66
+  name: DEAD_TARGETTABLE_ACTIONS
+  description: List of actions that can target the dead
+  entries:
+  - name: Action ID
+    size: 2
 0xC4A0CF:
   size: 142
   type: assembly
+  name: AUTOHEALING
+  description: Determine who needs healing most (autofight)
+  arguments:
+    A: Unknown
+    X: Unknown
   labels:
     0xA0EB: UNKNOWN0
     0xA102: UNKNOWN1
@@ -17048,6 +17164,8 @@ texttables:
 0xC4A15D:
   size: 149
   type: assembly
+  name: AUTOLIFEUP
+  description: Determine who needs HP recovery most
   labels:
     0xA175: UNKNOWN0
     0xA18C: UNKNOWN1
@@ -17057,12 +17175,18 @@ texttables:
 0xC4A1F2:
   size: 3
   type: data
+  name: BATTLE_WINDOW_SIZES
+  description: Sizes of various battle windows
 0xC4A1F5:
   size: 51
   type: assembly
+  name: CHECK_IF_VALID_TARGET
+  description: Checks if target is valid
+  arguments:
+    A: Target ID
   labels:
-    0xA224: UNKNOWN0
-    0xA227: UNKNOWN1
+    0xA224: INVALID
+    0xA227: RETURN
 0xC4A228:
   size: 81
   type: assembly
@@ -17075,7 +17199,32 @@ texttables:
     0xA270: UNKNOWN5
     0xA275: UNKNOWN6
 0xC4A279:
-  size: 254
+  size: 128
+  type: data
+  name: POWERS_OF_TWO
+  description: List of powers of two
+  entries:
+  - name: Entry
+    size: 4
+0xC4A2F9:
+  size: 16
+  type: data
+  name: PRAYER_LIST
+  description: List of possible prayers
+  entries:
+  - name: Prayer
+    size: 1
+0xC4A309:
+  size: 40
+  type: data
+  name: PRAYER_TEXT_PTRS
+  description: Pointers to prayer text data
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+0xC4A331:
+  size: 72
   type: data
 0xC4A377:
   size: 538
@@ -21871,6 +22020,10 @@ texttables:
   size: 22842
   description: Text Data
   name: TEXT_DATA_EF4A40
+  entries:
+  - name: Text
+    terminator: 2
+    type: standardtext
 0xEFA37A:
   type: data
   description: Commands Window Text Strings
