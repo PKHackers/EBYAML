@@ -3853,7 +3853,11 @@ texttables:
   size: 84
   type: assembly
 0xC09086:
-  description: 32-bit Multiply, $06+08 *= $0A+$0C
+  description: 32-bit Multiply
+  name: MULT32
+  arguments:
+    $06: Multiplicand A
+    $0A: Multiplicand B
   size: 72
   type: assembly
 0xC090CE:
@@ -11637,6 +11641,8 @@ texttables:
   size: 31
   type: assembly
 0xC24009:
+  name: FEELING_STRANGE_RETARGETTING
+  description: Retargets if user is feeling strange
   labels:
     0x403A: UNKNOWN0
     0x4060: UNKNOWN1
@@ -11672,6 +11678,8 @@ texttables:
   size: 109
   type: assembly
 0xC241DC:
+  name: FIND_STEALABLE_ITEMS
+  description: Finds all stealable items
   labels:
     0x41EB: UNKNOWN0
     0x41FF: UNKNOWN1
@@ -11690,6 +11698,8 @@ texttables:
   size: 314
   type: assembly
 0xC24316:
+  name: SELECT_STEALABLE_ITEM
+  description: Selects a stealable item
   labels:
     0x432B: UNKNOWN0
     0x4339: UNKNOWN1
@@ -11719,6 +11729,8 @@ texttables:
   size: 67
   type: assembly
 0xC24477:
+  name: CHOOSE_TARGET
+  description: Chooses a target?
   labels:
     0x448A: UNKNOWN0
     0x449E: UNKNOWN1
@@ -11774,6 +11786,8 @@ texttables:
   name: BATTLE_ROUTINE
   size: 6504
   type: assembly
+  localvars:
+    0x25: TURNCOUNT
   labels:
     0x488C: UNKNOWN0
     0x489D: UNKNOWN1
@@ -12147,6 +12161,8 @@ texttables:
   size: 17
   type: assembly
 0xC269EF:
+  name: RAND_LONG
+  description: Long redirect to RAND
   final processor state:
     accum: 8
   size: 9
@@ -12157,13 +12173,17 @@ texttables:
   size: 53
   type: assembly
 0xC26A2D:
-  description: Random value between 0 and (A-1)
-  name: RAND_0TOA-1
+  description: Random value between 0 and a specified value
+  arguments:
+    A: Upper limit + 1
+  name: RAND_LIMIT
   size: 23
   type: assembly
 0xC26A44:
-  description: Multiply A by rand(0.5, 1.5)
-  name: MULT_A_X_RAND_0.5_1.5
+  description: Applies 50% variance to a value
+  name: 50_PERCENT_VARIANCE
+  arguments:
+    A: Value
   labels:
     0x6A7C: UNKNOWN0
     0x6A7E: UNKNOWN1
@@ -13956,8 +13976,11 @@ texttables:
     0xB6E0: UNKNOWN5
     0xB6E9: UNKNOWN6
 0xC2B6EB:
-  description: NPC AI Handler
-  name: BATTLE_NPC_AI_HANDLER
+  description: Initializes Enemy stats
+  name: BATTLE_INIT_ENEMY_STATS
+  arguments:
+    A: Enemy ID
+    X: Unknown
   size: 581
   type: assembly
   labels:
@@ -21841,6 +21864,8 @@ texttables:
 0xEF0A68:
   size: 310
   type: assembly
+  name: LOAD_SAVE
+  description: Loads data from SRAM into memory
 0xEF0B9E:
   description: SRAM Integrity Check
   name: CHECK_SRAM_INTEGRITY
