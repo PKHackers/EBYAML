@@ -208,7 +208,7 @@ texttables:
         0xF2: 6
         0xF3: 5
     replacements:
-#      0x00: "\n"
+      0x00: ''
       0x03: "\n"
       0x50: ' '
       0x51: '!'
@@ -10802,7 +10802,7 @@ texttables:
   type: assembly
 0xC20912:
   type: data
-  size: 136
+  size: 134
 0xC20998:
   type: data
   size: 8
@@ -17247,7 +17247,7 @@ texttables:
     size: 4
     type: pointer
 0xC4A331:
-  size: 72
+  size: 70
   type: data
 0xC4A377:
   size: 538
