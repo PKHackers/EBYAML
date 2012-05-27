@@ -1725,8 +1725,10 @@ texttables:
   labels:
     0x07FE: UNKNOWN0
     0x0822: UNKNOWN1
-    0x0863: UNKNOWN2
-    0x08C1: UNKNOWN3
+    0x083D: UNKNOWN2
+    0x0848: UNKNOWN3
+    0x0863: UNKNOWN4
+    0x08C1: UNKNOWN5
 0xC008C3:
   size: 478
   type: assembly
@@ -15089,9 +15091,6 @@ texttables:
   - name: Unknown
     size: 2
 0xC3F3C5:
-  type: data
-  size: 2
-0xC3F3C7:
   labels:
     0xF3E2: UNKNOWN0
     0xF3FB: UNKNOWN1
@@ -15117,7 +15116,7 @@ texttables:
     0xF5C0: UNKNOWN21
     0xF5D5: UNKNOWN22
     0xF5F7: UNKNOWN23
-  size: 562
+  size: 564
   type: assembly
 0xC3F5F9:
   labels:
@@ -18506,6 +18505,13 @@ texttables:
   size: 56
   description: Animation Sequence Data Pointers
   name: ANIMATION_SEQUENCE_POINTERS
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  - name: Unknown
+    type: bytearray
+    size: 4
 0xCC2E19:
   type: data
   description: PSI Animation Arrangement 20
@@ -20319,7 +20325,7 @@ texttables:
 0xD7A800:
   type: data
   description: Global map tileset/palette data
-  name: GLOBAL_MAP_ETPALETTE_DATA
+  name: GLOBAL_MAP_TILESETPALETTE_DATA
   size: 2560
   entries:
   - name: Value
