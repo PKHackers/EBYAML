@@ -1526,8 +1526,8 @@ texttables:
   description: Battlers table (see 7E9FAC_0x4E_byte_structure.txt)
   name: BATTLERS_TABLE
 0x7EA96C:
-  description: Battler bit flags
-  name: BATTLER_BIT_FLAGS
+  description: Battler target flags
+  name: BATTLER_TARGET_FLAGS
 0x7EA970:
   description: Current attacker (Pointer to a 7E9FAC battler entry)
   name: CURRENT_ATTACKER
@@ -12205,8 +12205,8 @@ texttables:
   size: 185
   type: assembly
 0xC26AFD:
-  description: Multiply A by rand(0.75, 1.25)
-  name: MULT_A_X_RAND_0.75_1.25
+  description: Applies 25% variance to a value
+  name: 25_PERCENT_VARIANCE
   labels:
     0x6B35: UNKNOWN0
     0x6B37: UNKNOWN1
@@ -12226,8 +12226,10 @@ texttables:
   size: 187
   type: assembly
 0xC26BB8:
-  description: Generate Success/Fail (A/256 chance)
+  description: Randomly select true/false (A/256)
   name: SUCCESS_256
+  arguments:
+    A: chance/256 of returning true
   final processor state:
     accum: 16
   labels:
@@ -12236,14 +12238,18 @@ texttables:
   size: 35
   type: assembly
 0xC26BDB:
-  description: Generate Success/Fail (A/500 chance)
+  description: Randomly select true/false (A/500)
   name: SUCCESS_500
+  arguments:
+    A: chance/500 of returning true
   labels:
     0x6BF6: UNKNOWN0
     0x6BF9: UNKNOWN1
   size: 32
   type: assembly
 0xC26BFB:
+  description: Target allies + NPCs
+  name: TARGET_ALLIES
   labels:
     0x6C19: UNKNOWN0
     0x6C31: UNKNOWN1
@@ -12252,6 +12258,8 @@ texttables:
   size: 135
   type: assembly
 0xC26C82:
+  description: Target all enemies
+  name: TARGET_ALL_ENEMIES
   labels:
     0x6CA0: UNKNOWN0
     0x6CF2: UNKNOWN1
@@ -12259,6 +12267,8 @@ texttables:
   size: 130
   type: assembly
 0xC26D04:
+  description: Target row
+  name: TARGET_ROW
   labels:
     0x6D28: UNKNOWN0
     0x6D33: UNKNOWN1
@@ -12271,6 +12281,8 @@ texttables:
   size: 252
   type: assembly
 0xC26E00:
+  description: Target everyone
+  name: TARGET_ALL
   labels:
     0x6E1E: UNKNOWN0
     0x6E65: UNKNOWN1
@@ -12278,6 +12290,8 @@ texttables:
   size: 119
   type: assembly
 0xC26E77:
+  description: Remove all npcs from targetting
+  name: REMOVE_NPC_TARGETTING
   labels:
     0x6E89: UNKNOWN0
     0x6EE6: UNKNOWN1
@@ -12285,6 +12299,8 @@ texttables:
   size: 129
   type: assembly
 0xC26EF8:
+  description: Random target
+  name: RANDOM_TARGETTING
   labels:
     0x6F24: UNKNOWN0
     0x6F31: UNKNOWN1
@@ -12299,15 +12315,25 @@ texttables:
   size: 77
   type: assembly
 0xC27029:
+  description: Determines if character is targetted
+  name: IS_CHAR_TARGETTED
+  arguments:
+    A: Target ID
   labels:
     0x7081: UNKNOWN0
     0x7086: UNKNOWN1
   size: 96
   type: assembly
 0xC27089:
+  name: REMOVE_TARGET
+  description: Removes targetting on target
+  arguments:
+    A: Target ID
   size: 91
   type: assembly
 0xC270E4:
+  name: REMOVE_DEAD_TARGETTING
+  description: Removes dead from targetting
   labels:
     0x70F3: UNKNOWN0
     0x711A: UNKNOWN1
@@ -12315,6 +12341,8 @@ texttables:
   size: 66
   type: assembly
 0xC27126:
+  description: Set new HP
+  name: SET_HP
   labels:
     0x7147: UNKNOWN0
     0x7171: UNKNOWN1
@@ -12333,6 +12361,9 @@ texttables:
 0xC271F0:
   description: HP reduction
   name: REDUCE_HP
+  arguments:
+    A: Target
+    X: Amount
   labels:
     0x7211: UNKNOWN0
     0x7216: UNKNOWN1
@@ -12341,6 +12372,9 @@ texttables:
 0xC2721D:
   description: PP reduction
   name: REDUCE_PP
+  arguments:
+    A: Target
+    X: Amount
   labels:
     0x723E: UNKNOWN0
     0x7243: UNKNOWN1
@@ -12363,6 +12397,9 @@ texttables:
 0xC27294:
   description: HP recovery
   name: RECOVER_HP
+  arguments:
+    A: Target
+    X: Amount
   labels:
     0x72EA: UNKNOWN0
     0x7308: UNKNOWN1
@@ -12372,6 +12409,9 @@ texttables:
 0xC27318:
   description: PP recovery
   name: RECOVER_PP
+  arguments:
+    A: Target
+    X: Amount
   labels:
     0x7361: UNKNOWN0
     0x7363: UNKNOWN1
@@ -12381,6 +12421,9 @@ texttables:
 0xC27397:
   description: Revive target
   name: REVIVE_TARGET
+  arguments:
+    A: Target
+    X: Unknown (Amount of HP to recover?)
   labels:
     0x743C: UNKNOWN0
     0x744C: UNKNOWN1
@@ -12399,6 +12442,8 @@ texttables:
 0xC27550:
   description: KO target
   name: KO_TARGET
+  arguments:
+    A: Target
   labels:
     0x756C: UNKNOWN0
     0x757C: UNKNOWN1
@@ -13608,23 +13653,31 @@ texttables:
   size: 29
   type: assembly
 0xC2A39D:
+  description: Heal poison
+  name: HEAL_POISON
   labels:
     0xA3CF: UNKNOWN0
   size: 52
   type: assembly
 0xC2A3D1:
+  description: "Battle action: Counter-PSI Unit"
+  name: BTLACT_COUNTER-PSI
   labels:
     0xA412: UNKNOWN0
     0xA420: UNKNOWN1
   size: 81
   type: assembly
 0xC2A422:
+  description: "Battle action: Shield Killer"
+  name: BTLACT_SHIELD-KILLER
   labels:
     0xA45B: UNKNOWN0
     0xA469: UNKNOWN1
   size: 73
   type: assembly
 0xC2A46B:
+  description: "Battle action: HP-Sucker"
+  name: BTLACT_HP-SUCKER
   labels:
     0xA47E: UNKNOWN0
     0xA49E: UNKNOWN1
@@ -13634,9 +13687,13 @@ texttables:
   size: 156
   type: assembly
 0xC2A507:
+  description: "Battle action: Hungry HP-Sucker"
+  name: BTLACT_HUNGRY_HP-SUCKER
   size: 7
   type: assembly
 0xC2A50E:
+  description: "Battle action: Mummy Wrap"
+  name: BTLACT_MUMMY_WRAP
   labels:
     0xA53F: UNKNOWN0
     0xA541: UNKNOWN1
@@ -13671,6 +13728,8 @@ texttables:
   size: 9
   type: assembly
 0xC2A5EC:
+  description: "Battle action: Handbag Strap"
+  name: BTLACT_HANDBAG_STRAP
   labels:
     0xA61D: UNKNOWN0
     0xA61F: UNKNOWN1
@@ -13716,18 +13775,24 @@ texttables:
   size: 9
   type: assembly
 0xC2A82A:
+  description: "Solidify"
+  name: SOLIDIFY
   labels:
     0xA85B: UNKNOWN0
     0xA869: UNKNOWN1
   size: 65
   type: assembly
 0xC2A86B:
+  description: "Battle action: Yogurt Dispenser"
+  name: BTLACT_YOGURT_DISPENSER
   labels:
     0xA88D: UNKNOWN0
     0xA89B: UNKNOWN1
   size: 50
   type: assembly
 0xC2A89D:
+  description: "Battle action: Snake"
+  name: BTLACT_SNAKE
   labels:
     0xA8F2: UNKNOWN0
     0xA900: UNKNOWN1
@@ -13746,8 +13811,8 @@ texttables:
   size: 73
   type: assembly
 0xC2A99C:
-  description: "Battle action: 800 \xB1 25% fire damage"
-  name: BTLACT_800_FIRE_DAMAGE
+  description: "Battle action: Bag of Dragonite (800 \xB1 25% fire damage)"
+  name: BTLACT_BAG_OF_DRAGONITE
   size: 33
   type: assembly
 0xC2A9BD:
@@ -13759,13 +13824,13 @@ texttables:
   size: 79
   type: assembly
 0xC2AA0C:
-  description: "Battle action: 100 \xB1 50% damage to insect-type enemies"
-  name: BTLACT_INSECT_SPRAY_100
+  description: "Battle action: Insecticide Spray (100 \xB1 50% damage to insect-type enemies)"
+  name: BTLACT_INSECTICIDE_SPRAY
   size: 9
   type: assembly
 0xC2AA15:
-  description: "Battle action: 200 \xB1 50% damage to insect-type enemies"
-  name: BTLACT_INSECT_SPRAY_200
+  description: "Battle action: Xterminator Spray (200 \xB1 50% damage to insect-type enemies)"
+  name: BTLACT_XTERMINATOR_SPRAY
   size: 9
   type: assembly
 0xC2AA1E:
@@ -13777,33 +13842,33 @@ texttables:
   size: 79
   type: assembly
 0xC2AA6D:
-  description: "Battle action: 200 \xB1 50% damage to metal-type enemies"
-  name: BTLACT_RUST_SPRAY_200
+  description: "Battle action: Rust Promoter (200 \xB1 50% damage to metal-type enemies)"
+  name: BTLACT_RUST_PROMOTER
   size: 9
   type: assembly
 0xC2AA76:
-  description: "Battle action: 400 \xB1 50% damage to metal-type enemies"
-  name: BTLACT_RUST_SPRAY_400
+  description: "Battle action: Rust Promoter DX (400 \xB1 50% damage to metal-type enemies)"
+  name: BTLACT_RUST_PROMOTER_DX
   size: 9
   type: assembly
 0xC2AA7F:
-  description: 'Battle action: Double current Guts'
-  name: BTLACT_DOUBLE_GUTS
+  description: 'Battle action: Sudden Guts Pill (Double current Guts)'
+  name: BTLACT_SUDDEN_GUTS_PILL
   labels:
     0xAA9E: UNKNOWN0
     0xAAC4: UNKNOWN1
   size: 71
   type: assembly
 0xC2AAC6:
-  description: 'Battle action: Defense spray'
+  description: 'Battle action: Defense Spray'
   name: BTLACT_DEFENSE_SPRAY
   labels:
     0xAB0B: UNKNOWN0
   size: 71
   type: assembly
 0xC2AB0D:
-  description: Redirect to C2AAC6
-  name: REDIRECT_C2AAC6
+  description: 'Battle action: Defense Shower'
+  name: BTLACT_DEFENSE_SHOWER
   size: 7
   type: assembly
 0xC2AB14:
@@ -13828,37 +13893,53 @@ texttables:
   size: 185
   type: assembly
 0xC2AC2A:
+  description: 'Battle action: Pray (Subtle Light)'
+  name: BTLACT_PRAY_SUBTLE
   size: 20
   type: assembly
 0xC2AC3E:
+  description: 'Battle action: Pray (Warm Light)'
+  name: BTLACT_PRAY_WARM
   size: 19
   type: assembly
 0xC2AC51:
+  description: 'Battle action: Pray (Golden Light)'
+  name: BTLACT_PRAY_GOLDEN
   size: 23
   type: assembly
 0xC2AC68:
+  description: 'Battle action: Pray (Mysterius Light)'
+  name: BTLACT_PRAY_MYSTERIOUS
   labels:
     0xAC74: UNKNOWN0
   size: 19
   type: assembly
 0xC2AC7B:
+  description: 'Battle action: Pray (Rainbow Light)'
+  name: BTLACT_PRAY_RAINBOW
   labels:
     0xAC98: UNKNOWN0
   size: 30
   type: assembly
 0xC2AC99:
+  description: 'Battle action: Pray (Mysterious Aroma)'
+  name: BTLACT_PRAY_AROMA
   labels:
     0xACCA: UNKNOWN0
     0xACD8: UNKNOWN1
   size: 65
   type: assembly
 0xC2ACDA:
+  description: 'Battle action: Pray (Heaven-rending Sound)'
+  name: BTLACT_PRAY_RENDING_SOUND
   labels:
     0xAD0B: UNKNOWN0
     0xAD19: UNKNOWN1
   size: 65
   type: assembly
 0xC2AD1B:
+  description: 'Battle action: Pray'
+  name: BTLACT_PRAY
   labels:
     0xAD74: UNKNOWN0
     0xAD7C: UNKNOWN1
@@ -13882,6 +13963,8 @@ texttables:
   size: 516
   type: assembly
 0xC2AF1F:
+  description: Copy Mirror data
+  name: COPY_MIRROR_DATA
   size: 386
   type: assembly
 0xC2B0A1:
@@ -13895,6 +13978,8 @@ texttables:
     0xB162: UNKNOWN2
     0xB170: UNKNOWN3
 0xC2B172:
+  description: Apply condiment
+  name: APPLY_CONDIMENT
   type: assembly
   size: 267
   labels:
@@ -13908,6 +13993,8 @@ texttables:
     0xB257: UNKNOWN7
     0xB27B: UNKNOWN8
 0xC2B27D:
+  description: Food
+  name: EAT_FOOD
   type: assembly
   size: 907
   labels:
@@ -13949,6 +14036,8 @@ texttables:
     0xB5E3: UNKNOWN35
     0xB606: UNKNOWN36
 0xC2B608:
+  description: Calculate PSI damage modifiers
+  name: CALC_PSI_DMG_MODIFIERS
   size: 49
   type: assembly
   labels:
@@ -13958,6 +14047,8 @@ texttables:
     0xB632: UNKNOWN3
     0xB636: UNKNOWN4
 0xC2B639:
+  description: Calculate PSI resistance modifiers
+  name: CALC_PSI_RES_MODIFIERS
   size: 49
   type: assembly
   labels:
@@ -13996,9 +14087,13 @@ texttables:
     0xB923: UNKNOWN7
     0xB92C: UNKNOWN8
 0xC2B930:
+  description: Initializes Player stats
+  name: BATTLE_INIT_PLAYER_STATS
   size: 405
   type: assembly
 0xC2BAC5:
+  description: Counts characters
+  name: COUNT_CHARS
   size: 83
   type: assembly
   labels:
@@ -14006,6 +14101,8 @@ texttables:
     0xBB08: UNKNOWN1
     0xBB0F: UNKNOWN2
 0xC2BB18:
+  name: CHECK_DEAD_PLAYERS
+  description: Check for dead player characters
   size: 324
   type: assembly
   labels:
@@ -14021,6 +14118,8 @@ texttables:
     0xBC4E: UNKNOWN9
     0xBC5A: UNKNOWN10
 0xC2BC5C:
+  name: RESET_POST-BATTLE_STATS
+  description: Resets stats after battle
   size: 93
   type: assembly
   labels:
@@ -14034,6 +14133,8 @@ texttables:
     0xBCDA: UNKNOWN0
     0xBCDF: UNKNOWN1
 0xC2BCE6:
+  name: LOSE_HP_STATUS
+  description: Lose HP from status effect in battle
   size: 45
   type: assembly
   labels:
@@ -14133,6 +14234,8 @@ texttables:
   size: 104
   type: assembly
 0xC2C3E2:
+  name: GIYGAS_HURT_PRAYER
+  description: Damage giygas with prayer
   size: 61
   type: assembly
 0xC2C41F:
@@ -14538,6 +14641,8 @@ texttables:
     0xEFE3: UNKNOWN3
     0xEFE6: UNKNOWN4
 0xC2EFFD:
+  description: Gets sprite width/spacing?
+  name: BATTLE_SPRITE_WIDTH
   size: 81
   type: assembly
   labels:
@@ -20067,23 +20172,23 @@ texttables:
     size: 1
     values:
     - 100%
-    - 70%
-    - 40%
-    - 5%
+    - 50%
+    - 10%
+    - 0%
   - name: Paralysis vulnerability
     size: 1
     values:
     - 100%
-    - 70%
-    - 40%
-    - 5%
+    - 50%
+    - 10%
+    - 0%
   - name: Hypnosis/Brainshock vulnerability
     size: 1
     values:
     - 100%
-    - 70%
-    - 40%
-    - 5%
+    - 50%
+    - 10%
+    - 0%
   - name: Miss Rate
     size: 1
   - name: Action Order
