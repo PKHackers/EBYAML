@@ -1975,6 +1975,8 @@ texttables:
     0x1BF9: UNKNOWN6
     0x1C0F: UNKNOWN7
 0xC01C11:
+  description: Allocate sprite memory
+  name: ALLOC_SPRITE_MEM
   size: 65
   type: assembly
   labels:
@@ -2143,7 +2145,8 @@ texttables:
     0x2A50: UNKNOWN31
     0x2A69: UNKNOWN32
 0xC02A6B:
-  description: Generate Enemies (?)
+  description: Generate Enemies/Butterflies for horizontal area
+  name: SPAWN_HORIZONTAL
   size: 234
   type: assembly
   labels:
@@ -2163,6 +2166,8 @@ texttables:
     0x2B51: UNKNOWN13
     0x2B53: RETURN
 0xC02B55:
+  description: Spawn Enemies/Butterflies for vertical area
+  name: SPAWN_VERTICAL
   size: 233
   type: assembly
   labels:
@@ -2208,6 +2213,8 @@ texttables:
     0x2D5D: UNKNOWN0
     0x2D6F: UNKNOWN1
 0xC02D8F:
+  name: ADJUST_POSITION
+  description: Adjust position based on velocity
   size: 648
   type: assembly
   labels:
@@ -4292,8 +4299,8 @@ texttables:
   labels:
     0x9321: UNKNOWN0
     0x9DB7: UNKNOWN1
-    0xC092F5: UNKNOWN2
-    0xC09C3B: UNKNOWN3
+    0x92F5: UNKNOWN2
+    0x9C3B: UNKNOWN3
 0xC09E98:
   size: 20
   type: assembly
@@ -18867,38 +18874,24 @@ texttables:
     size: 2
   - name: Data
     type: bytearray
-    size: Size
-#    entries:
-#    - name: SEQPTRS
-#      terminator: 255
-#      type: table
-#      entries:
-#      - name: Pointer
-#        type: int
-#        size: 2
-#    - name: CHANPTRS
-#      size: 32
-#      type: table
-#      entries:
-#      - name: Pointer
-#        type: int
-#        size: 2
+    size: Size-4
 0xCCFFD5:
   type: data
-  size: 3
+  size: 4
   name: UNKNOWN_PTR_CCFFD5
   entries:
   - name: Pointer
-    size: 3
+    size: 4
     type: pointer
-0xCCFFD8:
+0xCCFFD9:
   type: empty
-  size: 0x28
+  size: 0x27
 0xCD0000:
   type: data
   description: Enemy Battle Sprites
   name: BATTLE_SPRITES
-  size: 90862
+  dataindex: BATTLE_SPRITES_POINTERS
+  size: 0x162EE
 0xCE62EE:
   type: data
   description: Battle Sprites Pointer Table
