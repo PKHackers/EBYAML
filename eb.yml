@@ -1,7 +1,9 @@
 ---
 processor: 65816
 platform: snes
-title: Earthbound (USA)
+title: Earthbound
+country: US
+series: Mother
 localvars: directpage
 defaulttext: standardtext
 texttables:
