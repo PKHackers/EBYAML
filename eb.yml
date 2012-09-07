@@ -17013,6 +17013,11 @@ texttables:
 0xC400D4:
   size: 2685
   type: data
+  name: MOVEMENT_VALUE_POINTER_TABLE
+  entries:
+  - name: Pointer
+    size: 3
+    type: pointer
   offset: 0xC400D4
 0xC40B51:
   size: 36
