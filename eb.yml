@@ -21838,13 +21838,13 @@ texttables:
   name: MAP_TILE_EVENT_CONTROL_TABLE
   size: 704
   offset: 0xD015C0
-0xD01880: &ENEMY_PLACEMENT_DATA
+0xD01880: &MAP_ENEMY_PLACEMENT
   type: data
-  description: Enemy Placement Data
-  name: ENEMY_PLACEMENT_DATA
+  description: Map Enemy Placement Data
+  name: MAP_ENEMY_PLACEMENT
   size: 40960
   entries:
-  - name: Enemy Group
+  - name: Enemy Map Group
     size: 2
   offset: 0xD01880
 0xD0B880: &ENEMY_PLACEMENT_GROUPS_PTR_TABLE
@@ -21983,7 +21983,7 @@ texttables:
     size: 2
   - name: X
     size: 2
-  - name: true
+  - name: 'Y'
     size: 2
   offset: 0xD57880
 0xD57A70:
@@ -22015,8 +22015,8 @@ texttables:
   - name: Direction
     size: 1
     values:
-    - party
     - enemy
+    - party
   - name: Target
     size: 1
     values:
@@ -22068,13 +22068,13 @@ texttables:
     - Recovery
     - Assist
     - Other
-  - name: Target
+  - name: Usability Outside of Battle
     size: 1
     values:
     - ???
-    - Nobody
-    - Enemies
-    - Allies
+    - Other
+    - Unusable
+    - Usable
   - name: Effect
     size: 2
   - name: Level learned by Ness
@@ -22394,9 +22394,9 @@ texttables:
     size: 1
     values:
     - 100%
-    - 50%
-    - 10%
-    - 0%
+    - 70%
+    - 40%
+    - 5%
   - name: Paralysis vulnerability
     size: 1
     values:
@@ -22536,11 +22536,11 @@ texttables:
   - name: Unknown
     size: 2
   offset: 0xD5EBAB
-0xD5F2FB: &MAP_DATA_HOTSPOTS_TABLE
+0xD5F2FB: &MAP_HOTSPOTS
   type: data
   size: 448
   description: 'Map Data: Hotspots Table'
-  name: MAP_DATA_HOTSPOTS_TABLE
+  name: MAP_HOTSPOTS
   entries:
   - name: X1
     size: 2
@@ -22676,7 +22676,7 @@ texttables:
   description: 'Map Data: Per-Sector Attributes Table'
   name: MAP_DATA_PER-SECTOR_ATTRIBUTES_TABLE
   entries:
-  - name: Flags
+  - name: Bitfield
     size: 1
   - name: Item ID
     size: 1
@@ -23151,15 +23151,15 @@ texttables:
   - name: Event Flag
     size: 2
     type: hexint
-  - name: ???
+  - name: Unknown A
     size: 3
     type: bytearray
-  - name: ????
+  - name: Unknown B
     size: 2
-  - name: ?????
+  - name: Unknown C
     size: 1
     type: hexint
-  - name: ??????
+  - name: Unknown D
     size: 54
     type: bytearray
   offset: 0xE12F8A
@@ -26121,7 +26121,7 @@ DOOR_POINTER_TABLE: *DOOR_POINTER_TABLE
 SCREEN_TRANSITION_CONFIG_TABLE: *SCREEN_TRANSITION_CONFIG_TABLE
 EVENT_CONTROL_PTR_TABLE: *EVENT_CONTROL_PTR_TABLE
 MAP_TILE_EVENT_CONTROL_TABLE: *MAP_TILE_EVENT_CONTROL_TABLE
-ENEMY_PLACEMENT_DATA: *ENEMY_PLACEMENT_DATA
+MAP_ENEMY_PLACEMENT: *MAP_ENEMY_PLACEMENT
 ENEMY_PLACEMENT_GROUPS_PTR_TABLE: *ENEMY_PLACEMENT_GROUPS_PTR_TABLE
 ENEMY_PLACEMENT_GROUPS_TABLE: *ENEMY_PLACEMENT_GROUPS_TABLE
 BTL_ENTRY_PTR_TABLE: *BTL_ENTRY_PTR_TABLE
@@ -26141,7 +26141,7 @@ ENEMY_CONFIGURATION_TABLE: *ENEMY_CONFIGURATION_TABLE
 STATS_GROWTH_VARS: *STATS_GROWTH_VARS
 CONDIMENT_TABLE: *CONDIMENT_TABLE
 TELEPORT_DESTINATION_TABLE: *TELEPORT_DESTINATION_TABLE
-MAP_DATA_HOTSPOTS_TABLE: *MAP_DATA_HOTSPOTS_TABLE
+MAP_HOTSPOTS: *MAP_HOTSPOTS
 TIMED_ITEM_TRANSFORMATION_TABLE: *TIMED_ITEM_TRANSFORMATION_TABLE
 DONT_CARE_NAMES: *DONT_CARE_NAMES
 INITIAL_STATS: *INITIAL_STATS
