@@ -20403,8 +20403,7 @@ texttables:
   name: MUSIC_PACK_POINTER_TABLE
   entries:
   - name: Unknown
-    type: pointer
-    endianness: m
+    type: hilomid pointer
     size: 3
   offset: 0xC4F947
 0xC4FB42:
@@ -23372,13 +23371,21 @@ texttables:
   type: data
   size: 65
   offset: 0xE1E4E7
-0xE1E528:
+0xE1E528: &STAFF_CREDITS_FONT_GRAPHICS
   type: data
   size: 1004
+  description: Staff Credits Font Graphics
+  name: STAFF_CREDITS_FONT_GRAPHICS
   offset: 0xE1E528
-0xE1E914:
+0xE1E914: &STAFF_CREDITS_FONT_PALETTE
   type: data
   size: 16
+  description: Staff Credits Font Palette
+  name: STAFF_CREDITS_FONT_PALETTE
+  entries:
+  - name: Palette
+    size: 8
+    type: palette
   offset: 0xE1E914
 0xE1E924:
   size: 38
@@ -23388,14 +23395,26 @@ texttables:
   type: data
   size: 262
   offset: 0xE1E94A
-0xE1EA50:
+0xE1EA50: &TOWN_MAP_ICON_GRAPHICS
   type: data
   size: 1907
+  description: Town Map Icon Graphics
+  name: TOWN_MAP_ICON_GRAPHICS
   offset: 0xE1EA50
-0xE1F1C3:
-  size: 958
+0xE1F1C3: &TOWN_MAP_ICON_PALETTE
   type: data
+  size: 64
+  description: Town Map Icon Palette
+  name: TOWN_MAP_ICON_PALETTE
+  entries:
+  - name: Palette
+    size: 32
+    type: palette
   offset: 0xE1F1C3
+0xE1F203:
+  size: 894
+  type: data
+  offset: 0xE1F203
 0xE1F581: &AUDIO_PACK_123
   type: data
   size: 2687
@@ -26417,4 +26436,9 @@ DEBUG_CHECK_VIEW_CHARACTER_MODE: *DEBUG_CHECK_VIEW_CHARACTER_MODE
 DEBUG_MENU_FONT: *DEBUG_MENU_FONT
 KIRBY: *KIRBY
 UNKNOWN_VERSION_STRING: *UNKNOWN_VERSION_STRING
+STAFF_CREDITS_FONT_GRAPHICS: *STAFF_CREDITS_FONT_GRAPHICS
+STAFF_CREDITS_FONT_PALETTE: *STAFF_CREDITS_FONT_PALETTE
+TOWN_MAP_ICON_GRAPHICS: *TOWN_MAP_ICON_GRAPHICS
+TOWN_MAP_ICON_PALETTE: *TOWN_MAP_ICON_PALETTE
+
 ...
