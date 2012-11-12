@@ -16602,8 +16602,6 @@ texttables:
     0xE6DF: UNKNOWN16
     0xE6EF: UNKNOWN17
     0xE6F4: UNKNOWN18
-  description: Close text window
-  name: CLOSE_WINDOW
   size: 471
   type: assembly
   offset: 0xC3E521
