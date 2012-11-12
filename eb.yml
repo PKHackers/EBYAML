@@ -21983,7 +21983,7 @@ texttables:
     size: 2
   - name: X
     size: 2
-  - name: Y
+  - name: 'Y'
     size: 2
   offset: 0xD57880
 0xD57A70:
