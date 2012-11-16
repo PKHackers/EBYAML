@@ -20960,10 +20960,16 @@ texttables:
     size: 2
   - name: Frame count
     size: 1
-  - name: unknown 2
-    type: bytearray
-    size: 2
-  - name: Duration of enemy colour change
+  - name: Animation target
+    size: 1
+    values:
+    - One Enemy
+    - Row
+    - All Enemies
+    - Thunder
+  - name: Enemy color change delay
+    size: 1
+  - name: Enemy colour change duration
     size: 1
   - name: Enemy colour
     type: palette
@@ -23287,11 +23293,11 @@ texttables:
   description: Produced By Itoi Graphics
   name: PRODUCED_ITOI_GRAPHICS
   offset: 0xE1AB4B
-0xE1AD01: &NINTENDO_PRESENTATION_PALETTE
+0xE1AD01: &NINTENDO_PRESENTATION_ARRANGEMENT
   type: data
   size: 77
   description: Presented By Nintendo Arrangement
-  name: NINTENDO_PRESENTATION_PALETTE
+  name: NINTENDO_PRESENTATION_ARRANGEMENT
   offset: 0xE1AD01
 0xE1AD4E: &NINTENDO_PRESENTATION_GRAPHICS
   type: data
@@ -23412,9 +23418,25 @@ texttables:
     type: palette
   offset: 0xE1F1C3
 0xE1F203:
-  size: 894
+  size: 654
   type: data
   offset: 0xE1F203
+0xE1F491: &TOWN_MAP_ICON_PLACEMENT_PTR_TABLE
+  size: 24
+  type: data
+  description: Town Map Icon Placement Pointer Table
+  name: TOWN_MAP_ICON_PLACEMENT_PTR_TABLE
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  offset: 0xE1F491
+0xE1F4A9: &TOWN_MAP_ICON_PLACEMENT_DATA
+  size: 216
+  type: data
+  description: Town Map Icon Placement Data
+  name: TOWN_MAP_ICON_PLACEMENT_DATA
+  offset: 0xE1F4A9
 0xE1F581: &AUDIO_PACK_123
   type: data
   size: 2687
@@ -24790,8 +24812,25 @@ texttables:
   offset: 0xEFA460
 0xEFA6EC:
   type: data
-  size: 11823
+  size: 35
   offset: 0xEFA6EC
+0xEFA70F: &MAP_DATA_PER-SECTOR_TOWN_MAP_DATA
+  type: data
+  size: 7680
+  description: 'Map Data: Per-Sector Town Map Data'
+  name: MAP_DATA_PER-SECTOR_TOWN_MAP_DATA
+  entries:
+  - name: Town Map
+    size: 1
+  - name: Town Map X
+    size: 1
+  - name: Town Map Y
+    size: 1
+  offset: 0xEFA70F
+0xEFC50F:
+  type: data
+  size: 4108
+  offset: 0xEFC50F
 0xEFD51B: &DEBUG_SOUND_MODE_MENU_TEXT
   description: Programmers' Sound Mode Menu Text
   name: DEBUG_SOUND_MODE_MENU_TEXT
@@ -26246,7 +26285,7 @@ GAS_STATION_PALETTE: *GAS_STATION_PALETTE
 GAS_STATION_PALETTE2: *GAS_STATION_PALETTE2
 PRODUCED_ITOI_ARRANGEMENT: *PRODUCED_ITOI_ARRANGEMENT
 PRODUCED_ITOI_GRAPHICS: *PRODUCED_ITOI_GRAPHICS
-NINTENDO_PRESENTATION_PALETTE: *NINTENDO_PRESENTATION_PALETTE
+NINTENDO_PRESENTATION_ARRANGEMENT: *NINTENDO_PRESENTATION_ARRANGEMENT
 NINTENDO_PRESENTATION_GRAPHICS: *NINTENDO_PRESENTATION_GRAPHICS
 NINTENDO_ITOI_PALETTE: *NINTENDO_ITOI_PALETTE
 TITLE_SCREEN_ARRANGEMENT: *TITLE_SCREEN_ARRANGEMENT
@@ -26440,5 +26479,7 @@ STAFF_CREDITS_FONT_GRAPHICS: *STAFF_CREDITS_FONT_GRAPHICS
 STAFF_CREDITS_FONT_PALETTE: *STAFF_CREDITS_FONT_PALETTE
 TOWN_MAP_ICON_GRAPHICS: *TOWN_MAP_ICON_GRAPHICS
 TOWN_MAP_ICON_PALETTE: *TOWN_MAP_ICON_PALETTE
-
+TOWN_MAP_ICON_PLACEMENT_PTR_TABLE: *TOWN_MAP_ICON_PLACEMENT_PTR_TABLE
+TOWN_MAP_ICON_PLACEMENT_DATA: *TOWN_MAP_ICON_PLACEMENT_DATA
+MAP_DATA_PER-SECTOR_TOWN_MAP_DATA: *MAP_DATA_PER-SECTOR_TOWN_MAP_DATA
 ...
