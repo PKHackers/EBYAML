@@ -1071,10 +1071,6 @@ texttables:
   name: RESET_VECTOR
   description: Execution Entry Point
   offset: 0x008141
-0x300000: &SRAM
-  description: SRAM
-  name: SRAM
-  offset: 0x300000
 0x306000: &UNKNOWN_SRAM
   description: ???
   name: UNKNOWN_SRAM
@@ -25199,7 +25195,6 @@ texttables:
   size: 2581
   offset: 0xEFF5EB
 RESET_VECTOR: *RESET_VECTOR
-SRAM: *SRAM
 UNKNOWN_SRAM: *UNKNOWN_SRAM
 RAND_A: *RAND_A
 RAND_B: *RAND_B
