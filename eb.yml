@@ -21940,7 +21940,7 @@ texttables:
     - Cannot be given away
     - Unknown
     - Item disappears when used
-  - name: Effect
+  - name: Action
     size: 2
   - name: Argument
     size: 4
@@ -22076,7 +22076,7 @@ texttables:
     - Other
     - Unusable
     - Usable
-  - name: Effect
+  - name: Action 
     size: 2
   - name: Level learned by Ness
     size: 1
