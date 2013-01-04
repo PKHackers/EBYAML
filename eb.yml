@@ -5,8 +5,8 @@ title: Earthbound
 country: US
 series: Mother
 localvars: directpage
-defaulttext: standardtext
-texttables:
+defaultscript: standardtext
+scripttables:
   stafftext:
     lengths:
       3: 2
@@ -1071,10 +1071,247 @@ texttables:
   name: RESET_VECTOR
   description: Execution Entry Point
   offset: 0x008141
-0x306000: &UNKNOWN_SRAM
-  description: ???
-  name: UNKNOWN_SRAM
-  offset: 0x306000
+0x206000: &SAVE_SLOT_1
+  offset: 0x206000
+  name: Slot 1
+  size: 0x500
+  type: data
+  entries: &SAVE_SLOT
+  - type: script
+    charset: ascii
+    name: Signature
+    size: 20
+  - type: bytearray
+    name: Nullspace1
+    size: 8
+  - type: int
+    name: Checksum
+    size: 2
+  - type: int
+    name: Checksum Complement
+    size: 2
+  - type: table
+    name: Data1
+    size: 0x1D9
+    entries: &SAVE_DATA_ONE
+    - name: Mother 2 Player's Name
+      type: script
+      size: 12
+    - name: Earthbound Player's Name
+      type: script
+      size: 24
+    - name: Pet Name
+      type: script
+      size: 6
+    - name: Favourite Food
+      type: script
+      size: 5
+    - name: Favourite Thing
+      type: script
+      size: 13
+    - name: Money Carried
+      size: 4
+    - name: Money in ATM
+      size: 4
+    - name: UnknownA
+      size: 2
+    - name: Party NPC 1
+      size: 1
+    - name: Party NPC 2
+      size: 1
+    - name: Party NPC 1 HP
+      size: 1
+    - name: Party NPC 2 HP
+      size: 1
+    - name: UnknownB
+      type: bytearray
+      size: 376
+    - name: UnknownC
+      size: 18
+      type: bytearray
+    - name: Timer
+      size: 4
+    - name: Text Flavour
+      size: 1
+      values:
+       0: Null
+       1: Plain
+       2: Mint
+       3: Strawberry
+       4: Banana
+       5: Peanut
+  - type: table
+    name: Data2
+    size: 0x23A
+    entries: &CHAR_STRUCT_ENTRIES
+    - type: script
+      size: 5
+      name: Name
+    - name: Level
+      size: 1
+    - name: EXP
+      size: 2
+    - name: UnknownA
+      size: 2
+    - name: Max HP
+      size: 2
+    - name: Max PP
+      size: 2
+    - type: bytearray
+      size: 7
+      name: Afflictions
+    - name: Offense (Equipped)
+      size: 1
+    - name: Defense (Equipped)
+      size: 1
+    - name: Speed (Equipped)
+      size: 1
+    - name: Guts (Equipped)
+      size: 1
+    - name: Luck (Equipped)
+      size: 1
+    - name: Vitality (Equipped)
+      size: 1
+    - name: IQ (Equipped)
+      size: 1
+    - name: Offense
+      size: 1
+    - name: Defense
+      size: 1
+    - name: Speed
+      size: 1
+    - name: Guts
+      size: 1
+    - name: Luck
+      size: 1
+    - name: Vitality
+      size: 1
+    - name: IQ
+      size: 1
+    - type: bytearray
+      size: 14
+      name: Items
+    - type: bytearray
+      size: 0x14
+      name: unknown
+    - name: Current HP
+      size: 2
+    - name: Current HP (Rolling)
+      size: 2
+    - name: Unknown2
+      size: 2
+    - name: Current PP
+      size: 2
+    - name: Current PP (Rolling)
+      size: 2
+    - type: bytearray
+      size: 0x10
+      name: unknown3
+  - type: bytearray
+    name: Event Flags
+    size: 0x80
+  - type: bytearray
+    name: Nullspace2
+    size: 0x4D
+0x7E9839: &PSI_LEARNED
+  description: Learned PSI
+  name: PSI_LEARNED
+  offset: 0x7E9839
+0x7E9840: &STATUS
+  description: Status
+  name: STATUS
+  offset: 0x7E9840
+0x7E9847: &WALLET_BACKUP
+  description: Wallet Balance Backup
+  name: WALLET_BACKUP
+  size: 4
+  offset: 0x7E9847
+0x7E9877: &LEADER_X_COORD
+  description: Party Leader X Coordinate
+  name: LEADER_X_COORD
+  offset: 0x7E9877
+0x7E987B: &LEADER_Y_COORD
+  description: Party Leader Y Coordinate
+  name: LEADER_Y_COORD
+  offset: 0x7E987B
+0x7E9881: &TRODDEN_TILE_TYPE
+  description: Tile type currently being stood upon?
+  name: TRODDEN_TILE_TYPE
+  offset: 0x7E9881
+0x7E9883: &WALKING_STYLE
+  description: Current Walking Style
+  name: WALKING_STYLE
+  offset: 0x7E9883
+0x7E988B: &CURRENT_PARTY_MEMBERS
+  description: Current Party Members
+  name: CURRENT_PARTY_MEMBERS
+  offset: 0x7E988B
+0x7E9891: &PLAYER_CONTROLLED_PARTY_MEMBERS
+  description: Player-Controlled Party Members
+  name: PLAYER_CONTROLLED_PARTY_MEMBERS
+  offset: 0x7E9891
+0x7E9897:
+  offset: 0x7E9897
+0x7E98A3: &PARTY_MEMBER_COUNT
+  description: Number of party members
+  name: PARTY_MEMBER_COUNT
+  offset: 0x7E98A3
+0x7E98A4: &PC_PARTY_MEMBER_COUNT
+  description: |
+    Number of player-controlled party members
+  name: PC_PARTY_MEMBER_COUNT
+  offset: 0x7E98A4
+0x7E98B1: &AUTO_FIGHT_ENABLE
+  description: Auto Fight Flag
+  name: AUTO_FIGHT_ENABLE
+  offset: 0x7E98B1
+0x7E98B2: &EXIT_MOUSE_COORDS
+  description: Exit Mouse Coordinates
+  name: EXIT_MOUSE_COORDS
+  offset: 0x7E98B2
+0x7E98B6: &TEXT_SPEED
+  description: |
+    Text Speed (1 = fast, 2 = medium, 3 = slow)
+  name: TEXT_SPEED
+  offset: 0x7E98B6
+0x7E98B7: &SOUND_SETTING
+  description: Sound Setting (1 = stereo, 0 = mono)
+  name: SOUND_SETTING
+  offset: 0x7E98B7
+0x7E99C9: &TIMER_TEMP_LOW
+  description: Temporary storage for In-game Timer Low (1/60ths of a second)
+  name: TIMER_TEMP_LOW
+  offset: 0x7E99C9
+0x206500: &SAVE_SLOT_1_BK
+  offset: 0x206500
+  name: Slot 1 Backup
+  size: 0x500
+  type: data
+  entries: *SAVE_SLOT
+0x206A00: &SAVE_SLOT_2
+  offset: 0x206A00
+  name: Slot 2
+  size: 0x500
+  type: data
+  entries: *SAVE_SLOT
+0x206F00: &SAVE_SLOT_2_BK
+  offset: 0x206F00
+  name: Slot 2 Backup
+  size: 0x500
+  type: data
+  entries: *SAVE_SLOT
+0x207400: &SAVE_SLOT_3
+  offset: 0x207400
+  name: Slot 3
+  size: 0x500
+  type: data
+  entries: *SAVE_SLOT
+0x207900: &SAVE_SLOT_3_BK
+  offset: 0x207900
+  name: Slot 3 Backup
+  size: 0x500
+  type: data
+  entries: *SAVE_SLOT
 0x7E0024: &RAND_A
   description: Random number generator state A
   name: RAND_A
@@ -1516,146 +1753,18 @@ texttables:
 0x7E97DA:
   description: Storage for strings loaded with [19]? (How much space?)
   offset: 0x7E97DA
-0x7E97F5: &MOTHER2_PLAYERS_NAME
-  description: First 12 letters of player name with spaces (0x50) replaced with K
-    (0x7B). Leftover from Mother 2.
-  name: MOTHER2_PLAYERS_NAME
+0x7E97F5: &SOME_KINDA_STRUCT
+  type: data
   offset: 0x7E97F5
-0x7E9801: &PLAYER_NAME
-  description: Player's Name
-  name: PLAYER_NAME
-  offset: 0x7E9801
-0x7E9818: &PET_NAME
-  description: Pet's Name
-  name: PET_NAME
-  offset: 0x7E9818
-0x7E9831: &CARRIED_MONEY
-  description: Money carried
-  name: CARRIED_MONEY
-  offset: 0x7E9831
-0x7E9835: &ATM_MONEY
-  description: Money in ATM
-  name: ATM_MONEY
-  offset: 0x7E9835
-0x7E9839: &PSI_LEARNED
-  description: Learned PSI
-  name: PSI_LEARNED
-  offset: 0x7E9839
-0x7E9840: &STATUS
-  description: Status
-  name: STATUS
-  offset: 0x7E9840
-0x7E9841: &PARTY_NPC_1_BACKUP
-  description: 'Party NPC #1 Backup'
-  name: PARTY_NPC_1_BACKUP
-  offset: 0x7E9841
-0x7E9842: &PARTY_NPC_2_BACKUP
-  description: 'Party NPC #2 Backup'
-  name: PARTY_NPC_2_BACKUP
-  offset: 0x7E9842
-0x7E9843: &PARTY_NPC_1_BACKUP_HP
-  description: 'Party NPC #1 Backup HP'
-  name: PARTY_NPC_1_BACKUP_HP
-  offset: 0x7E9843
-0x7E9844: &PARTY_NPC_2_BACKUP_HP
-  description: 'Party NPC #2 Backup HP'
-  name: PARTY_NPC_2_BACKUP_HP
-  offset: 0x7E9844
-0x7E9847: &WALLET_BACKUP
-  description: Wallet Balance Backup
-  name: WALLET_BACKUP
-  size: 4
-  offset: 0x7E9847
-0x7E9877: &LEADER_X_COORD
-  description: Party Leader X Coordinate
-  name: LEADER_X_COORD
-  offset: 0x7E9877
-0x7E987B: &LEADER_Y_COORD
-  description: Party Leader Y Coordinate
-  name: LEADER_Y_COORD
-  offset: 0x7E987B
-0x7E9881: &TRODDEN_TILE_TYPE
-  description: Tile type currently being stood upon?
-  name: TRODDEN_TILE_TYPE
-  offset: 0x7E9881
-0x7E9883: &WALKING_STYLE
-  description: Current Walking Style
-  name: WALKING_STYLE
-  offset: 0x7E9883
-0x7E988B: &CURRENT_PARTY_MEMBERS
-  description: Current Party Members
-  name: CURRENT_PARTY_MEMBERS
-  offset: 0x7E988B
-0x7E9891: &PLAYER_CONTROLLED_PARTY_MEMBERS
-  description: Player-Controlled Party Members
-  name: PLAYER_CONTROLLED_PARTY_MEMBERS
-  offset: 0x7E9891
-0x7E9897:
-  offset: 0x7E9897
-0x7E98A3: &PARTY_MEMBER_COUNT
-  description: Number of party members
-  name: PARTY_MEMBER_COUNT
-  offset: 0x7E98A3
-0x7E98A4: &PC_PARTY_MEMBER_COUNT
-  description: |
-    Number of player-controlled party members
-  name: PC_PARTY_MEMBER_COUNT
-  offset: 0x7E98A4
-0x7E98B1: &AUTO_FIGHT_ENABLE
-  description: Auto Fight Flag
-  name: AUTO_FIGHT_ENABLE
-  offset: 0x7E98B1
-0x7E98B2: &EXIT_MOUSE_COORDS
-  description: Exit Mouse Coordinates
-  name: EXIT_MOUSE_COORDS
-  offset: 0x7E98B2
-0x7E98B6: &TEXT_SPEED
-  description: |
-    Text Speed (1 = fast, 2 = medium, 3 = slow)
-  name: TEXT_SPEED
-  offset: 0x7E98B6
-0x7E98B7: &SOUND_SETTING
-  description: Sound Setting (1 = stereo, 0 = mono)
-  name: SOUND_SETTING
-  offset: 0x7E98B7
-0x7E99C9: &TIMER_TEMP_LOW
-  description: Temporary storage for In-game Timer Low (1/60ths of a second)
-  name: TIMER_TEMP_LOW
-  offset: 0x7E99C9
-0x7E99CB: &TIMER_TEMP_HIGH
-  description: Temporary storage for In-game Timer High (1/60ths of a second)
-  name: TIMER_TEMP_HIGH
-  offset: 0x7E99CB
-0x7E99CD:
-  description: Current Text Flavour
-  offset: 0x7E99CD
-0x7E99CE: &NAME
-  description: Name
-  name: NAME
+  size: 0x1D9
+  name: SOME_KINDA_STRUCT
+  entries: *SAVE_DATA_ONE
+0x7E99CE: &CHAR_STRUCT
+  type: data
   offset: 0x7E99CE
-0x7E99D3: &LEVEL
-  description: Level
-  name: LEVEL
-  offset: 0x7E99D3
-0x7E99D8: &MAX_HP
-  description: Max HP
-  name: MAX_HP
-  offset: 0x7E99D8
-0x7E99DA: &MAX_PP
-  description: Max PP
-  name: MAX_PP
-  offset: 0x7E99DA
-0x7E99DC:
-  description: Status
-  offset: 0x7E99DC
-0x7E9A0B:
-  offset: 0x7E9A0B
-0x7E9A15:
-  description: Rolling HP Target
-  offset: 0x7E9A15
-0x7E9A1B:
-  description: Rolling PP Target
-  offset: 0x7E9A1B
+  size: 0x23A
+  name: CHAR_STRUCT
+  entries: *CHAR_STRUCT_ENTRIES
 0x7E9C08: &EVENT_FLAG
   description: Event Flags
   name: EVENT_FLAG
@@ -19687,7 +19796,7 @@ texttables:
   entries:
   - name: Text
     size: 67
-    type: standardtext
+    type: script
   offset: 0xC4C05E
 0xC4C2DE:
   size: 385
@@ -20470,7 +20579,7 @@ texttables:
   entries:
   - name: Text
     terminator: 2
-    type: standardtext
+    type: script
   offset: 0xC51B12
 0xC8BC2D: &COMPRESSED_TEXT_DATA
   type: data
@@ -20480,7 +20589,7 @@ texttables:
   entries:
   - name: Text
     terminator: 0
-    type: standardtext
+    type: script
   offset: 0xC8BC2D
 0xC8CDED: &COMPRESSED_TEXT_PTRS
   type: data
@@ -20500,7 +20609,7 @@ texttables:
   entries:
   - name: Text
     terminator: 2
-    type: standardtext
+    type: script
   offset: 0xC8D9ED
 0xC9FF2F:
   type: empty
@@ -21918,7 +22027,7 @@ texttables:
   entries:
   - name: Name
     size: 25
-    type: standardtext
+    type: script
   - name: Type
     size: 1
   - name: Cost
@@ -21972,7 +22081,7 @@ texttables:
   name: PSI_TELEPORT_DEST_TABLE
   entries:
   - name: Name
-    type: standardtext
+    type: script
     size: 25
   - name: Event Flag
     type: hexint
@@ -21994,7 +22103,7 @@ texttables:
   entries:
   - name: Name
     size: 25
-    type: standardtext
+    type: script
   - name: Event Flag
     size: 2
     type: hexint
@@ -22095,7 +22204,7 @@ texttables:
   entries:
   - name: Name
     size: 25
-    type: standardtext
+    type: script
   offset: 0xD58D7A
 0xD58F23: &NPC_AI_TABLE
   type: data
@@ -22320,7 +22429,7 @@ texttables:
     size: 1
   - name: Name
     size: 25
-    type: standardtext
+    type: script
   - name: Gender
     size: 1
     values:
@@ -22571,25 +22680,25 @@ texttables:
   name: DONT_CARE_NAMES
   entries:
   - name: Name 1
-    type: standardtext
+    type: script
     size: 6
   - name: Name 2
-    type: standardtext
+    type: script
     size: 6
   - name: Name 3
-    type: standardtext
+    type: script
     size: 6
   - name: Name 4
-    type: standardtext
+    type: script
     size: 6
   - name: Name 5
-    type: standardtext
+    type: script
     size: 6
   - name: Name 6
-    type: standardtext
+    type: script
     size: 6
   - name: Name 7
-    type: standardtext
+    type: script
     size: 6
   offset: 0xD5F4CF
 0xD5F5F5: &INITIAL_STATS
@@ -22946,7 +23055,11 @@ texttables:
 0xE009B4: &COMPRESSED_SRAM
   type: data
   size: 2469
+  filter_size: 0x2800
+  filters:
+  -  ebcomp
   description: Compressed SRAM Data
+  charset: standardtext
   name: COMPRESSED_SRAM
   offset: 0xE009B4
 0xE01359: &MRSATURN_FONT_DATA
@@ -23045,8 +23158,26 @@ texttables:
 0xE0ADB4: &TOWN_MAP_SCARABA
   type: data
   size: 6717
+  filter_size: 0x4840
   description: Scaraba Town Map Data
   name: TOWN_MAP_SCARABA
+  filters:
+  -  ebcomp
+  entries:
+  - name: Palette
+    size: 0x40
+    type: bytearray
+  - name: Arrangement
+    size: 0x800
+    type: bytearray
+  - name: Graphics
+    size: 0x4000
+    type: table
+    entries:
+    - name: Tile
+      type: tile
+      size: 32
+      bpp: 4
   offset: 0xE0ADB4
 0xE0C7F1: &TOWN_MAP_SUMMERS
   type: data
@@ -24468,6 +24599,7 @@ texttables:
   offset: 0xEF05A9
 0xEF0630:
   size: 83
+  name: SRAM_SIGNATURE_CHECK
   type: assembly
   labels:
     0x067E: UNKNOWN0
@@ -24745,7 +24877,7 @@ texttables:
   entries:
   - name: Text
     terminator: 2
-    type: standardtext
+    type: script
   offset: 0xEF4A40
 0xEFA37A: &CMD_WINDOW_TEXT
   type: data
@@ -24755,7 +24887,7 @@ texttables:
   entries:
   - name: Text
     size: 10
-    type: standardtext
+    type: script
   offset: 0xEFA37A
 0xEFA3B6: &STATUS_WINDOW_TEXT
   type: data
@@ -25200,7 +25332,12 @@ texttables:
   size: 2581
   offset: 0xEFF5EB
 RESET_VECTOR: *RESET_VECTOR
-UNKNOWN_SRAM: *UNKNOWN_SRAM
+SAVE_SLOT_1: *SAVE_SLOT_1
+SAVE_SLOT_1_BK: *SAVE_SLOT_1_BK
+SAVE_SLOT_2: *SAVE_SLOT_2
+SAVE_SLOT_2_BK: *SAVE_SLOT_2_BK
+SAVE_SLOT_3: *SAVE_SLOT_3
+SAVE_SLOT_3_BK: *SAVE_SLOT_3_BK
 RAND_A: *RAND_A
 RAND_B: *RAND_B
 PAD_1_STATE: *PAD_1_STATE
@@ -25299,36 +25436,6 @@ INPUT_LOCK_FLAG: *INPUT_LOCK_FLAG
 BLINKING_TRIANGLE_FLAG: *BLINKING_TRIANGLE_FLAG
 CC_ARGUMENT_STORAGE: *CC_ARGUMENT_STORAGE
 CC_ARGUMENT_GATHERING_LOOP_COUNTER: *CC_ARGUMENT_GATHERING_LOOP_COUNTER
-MOTHER2_PLAYERS_NAME: *MOTHER2_PLAYERS_NAME
-PLAYER_NAME: *PLAYER_NAME
-PET_NAME: *PET_NAME
-CARRIED_MONEY: *CARRIED_MONEY
-ATM_MONEY: *ATM_MONEY
-PSI_LEARNED: *PSI_LEARNED
-STATUS: *STATUS
-PARTY_NPC_1_BACKUP: *PARTY_NPC_1_BACKUP
-PARTY_NPC_2_BACKUP: *PARTY_NPC_2_BACKUP
-PARTY_NPC_1_BACKUP_HP: *PARTY_NPC_1_BACKUP_HP
-PARTY_NPC_2_BACKUP_HP: *PARTY_NPC_2_BACKUP_HP
-WALLET_BACKUP: *WALLET_BACKUP
-LEADER_X_COORD: *LEADER_X_COORD
-LEADER_Y_COORD: *LEADER_Y_COORD
-TRODDEN_TILE_TYPE: *TRODDEN_TILE_TYPE
-WALKING_STYLE: *WALKING_STYLE
-CURRENT_PARTY_MEMBERS: *CURRENT_PARTY_MEMBERS
-PLAYER_CONTROLLED_PARTY_MEMBERS: *PLAYER_CONTROLLED_PARTY_MEMBERS
-PARTY_MEMBER_COUNT: *PARTY_MEMBER_COUNT
-PC_PARTY_MEMBER_COUNT: *PC_PARTY_MEMBER_COUNT
-AUTO_FIGHT_ENABLE: *AUTO_FIGHT_ENABLE
-EXIT_MOUSE_COORDS: *EXIT_MOUSE_COORDS
-TEXT_SPEED: *TEXT_SPEED
-SOUND_SETTING: *SOUND_SETTING
-TIMER_TEMP_LOW: *TIMER_TEMP_LOW
-TIMER_TEMP_HIGH: *TIMER_TEMP_HIGH
-NAME: *NAME
-LEVEL: *LEVEL
-MAX_HP: *MAX_HP
-MAX_PP: *MAX_PP
 EVENT_FLAG: *EVENT_FLAG
 DMA_TRANSFER_FLAG: *DMA_TRANSFER_FLAG
 DAD_PHONE_TIMER: *DAD_PHONE_TIMER
@@ -26417,4 +26524,13 @@ DEBUG_CHECK_VIEW_CHARACTER_MODE: *DEBUG_CHECK_VIEW_CHARACTER_MODE
 DEBUG_MENU_FONT: *DEBUG_MENU_FONT
 KIRBY: *KIRBY
 UNKNOWN_VERSION_STRING: *UNKNOWN_VERSION_STRING
+SOME_KINDA_STRUCT: *SOME_KINDA_STRUCT
+CHAR_STRUCT: *CHAR_STRUCT
+0xA06000:
+  type: data
+  size: 0x2000
+  description: SRAM Data
+  charset: standardtext
+  name: COMPRESSED_SRAM
+  offset: 0xA06000
 ...
