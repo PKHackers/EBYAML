@@ -9,12 +9,21 @@ Default Script: standardtext
 Script Tables:
   flyover:
     Lengths:
+      1: 2
       2: 4
       8: 2
     Replacements:
       0: ""
+      1:
+        12: "\n"
       3: |2+
 
+      8:
+        1: NESS
+        2: PAULA
+        3: JEFF
+        4: POO
+      9: "\n"
       80: ' '
       81: '!'
       84: $
@@ -1158,50 +1167,176 @@ Script Tables:
       - spi
 ...
 ---
+SNES_HEADER:
+  Description: Structure holding information about the game, including cartridge type and various code vectors.
+  Offset: 0x00FFB0
+  Size: 0x4F
+  Type: data
+  Entries:
+  - Size: 6
+    Type: script
+    Charset: ascii
+    Name: Game ID
+  - Size: 10
+    Type: bytearray
+  - Size: 0x15
+    Type: script
+    Charset: ascii
+    Name: Game Title
+  - Size: 1
+    Name: ROM Layout
+  - Size: 1
+    Name: Cartridge Type
+  - Size: 1
+    Name: ROM Size
+    Values: &__HEADER_SIZES
+      0: None
+      1: 2KiB
+      2: 4KiB
+      3: 8KiB
+      4: 16KiB
+      5: 32KiB
+      6: 64KiB
+      7: 128KiB
+      8: 256KiB
+      9: 512KiB
+      10: 1024KiB
+      11: 2048KiB
+      12: 4096KiB
+      13: 8192KiB
+  - Size: 1
+    Name: RAM Size
+    Values: *__HEADER_SIZES
+  - Size: 1
+    Name: Country Code
+    Values:
+      0x00: Japan
+      0x01: North America
+      0x02: Europe
+      0x03: Scandinavia
+      0x06: Europe (French)
+      0x07: Dutch
+      0x08: Spanish
+      0x09: German
+      0x0A: Italian
+      0x0B: Chinese
+      0x0D: Korean
+      0x0E: Common
+      0x0F: Canada
+      0x10: Brazil
+      0x11: Australia
+  - Size: 1
+    Name: Licensee
+    Values:
+      0x33: Extended
+  - Size: 1
+    Name: Revision
+  - Size: 2
+    Type: int
+    Name: Checksum
+  - Size: 2
+    Type: int
+    Name: Checksum Complement
+  - Type: struct
+    Size: 0x10
+    Name: Native Mode Vectors
+    Entries:
+    - Size: 2
+      Type: pointer
+      Name: Unused
+    - Size: 2
+      Type: pointer
+      Name: Unused 2
+    - Size: 2
+      Type: pointer
+      Name: COP
+    - Size: 2
+      Type: pointer
+      Name: BRK
+    - Size: 2
+      Type: pointer
+      Name: ABORT
+    - Size: 2
+      Type: pointer
+      Name: NMI
+    - Size: 2
+      Type: pointer
+      Name: Unused 3
+    - Size: 2
+      Type: pointer
+      Name: IRQ
+  - Type: struct
+    Size: 0x10
+    Name: Emulation Mode Vectors
+    Entries:
+    - Size: 2
+      Type: pointer
+      Name: Unused
+    - Size: 2
+      Type: pointer
+      Name: Unused 2
+    - Size: 2
+      Type: pointer
+      Name: COP
+    - Size: 2
+      Type: pointer
+      Name: Unused 3
+    - Size: 2
+      Type: pointer
+      Name: ABORT
+    - Size: 2
+      Type: pointer
+      Name: NMI
+    - Size: 2
+      Type: pointer
+      Name: RESET
+    - Size: 2
+      Type: pointer
+      Name: IRQ
 SAVE_SLOT_1:
   Offset: 0x206000
-  Name: Slot 1
+  Description: Slot 1
   Size: 0x500
   Type: data
   Entries: &SAVE_SLOT
   - Type: script
     Charset: ascii
-    Name: Signature
+    Name: SIGNATURE
     Size: 20
   - Type: bytearray
-    Name: Nullspace1
+    Name: NULLSPACE1
     Size: 8
   - Type: int
-    Name: Checksum
+    Name: CHECKSUM
     Size: 2
   - Type: int
-    Name: Checksum Complement
+    Name: CHECKSUM COMPLEMENT
     Size: 2
   - Type: struct
     Name: GAME_STATE
     Description: Miscellaneous game state details
     Size: 0x1D9
     Entries: &GAME_STATE
-    - Name: Mother 2 Player's Name
+    - Name: MOTHER2_PLAYERNAME
       Type: script
       Size: 12
-    - Name: Earthbound Player's Name
+    - Name: EARTHBOUND_PLAYERNAME
       Type: script
       Size: 24
-    - Name: Pet Name
+    - Name: PET_NAME
       Type: script
       Size: 6
-    - Name: Favourite Food
+    - Name: FAVOURITE_FOOD
       Type: script
       Size: 5
-    - Name: Favourite Thing
+    - Name: FAVOURITE_THING
       Type: script
       Size: 13
-    - Name: Money Carried
+    - Name: MONEY_CARRIED
       Size: 4
-    - Name: Money in ATM
+    - Name: BANK_BALANCE
       Size: 4
-    - Name: PSI Learned
+    - Name: KNOWN_PSI
       Size: 2
       Bit Values:
       - A
@@ -1212,74 +1347,85 @@ SAVE_SLOT_1:
       - F
       - G
       - H
-    - Name: Party NPC 1
+    - Name: PARTY_NPC_1
       Size: 1
-    - Name: Party NPC 1 HP
+    - Name: PARTY_NPC_1_HP
       Size: 2
-    - Name: Party NPC 2 HP
+    - Name: PARTY_NPC_2_HP
       Size: 2
-    - Name: UnknownA
+    - Name: UNKNOWNA
       Size: 1
       Type: bytearray
-    - Name: Party Status
+    - Name: PARTY_STATUS
       Size: 1
       Values:
         0: Normal
         1: Burnt
         3: Skip Sandwiched
-    - Name: UnknownB
+    - Name: UNKNOWNB
       Size: 5
     - Name: WALLET_BACKUP
       Size: 4
-    - Name: Escargo Express Items
+    - Name: ESCARGO_EXPRESS_ITEMS
       Size: 36
       Type: bytearray
-    - Name: UnknownC
+    - Name: UNKNOWNC
       Type: bytearray
       Size: 6
-    - Name: UnknownC2
+    - Name: UNKNOWNC2
       Type: bytearray
       Size: 2
     - Name: LEADER_X_COORD
       Size: 2
       Description: Party Leader X Coordinate
-    - Name: UnknownD
+    - Name: UNKNOWND
       Size: 2
     - Name: LEADER_Y_COORD
       Size: 2
       Description: Party Leader Y Coordinate
-    - Name: UnknownE
+    - Name: UNKNOWNE
       Size: 4
     - Name: TRODDEN_TILE_TYPE
       Size: 2
-    - Name: Walking Style
+    - Name: WALKING_STYLE
+      Description: Walking Style
+      Values:
+        0: Normal
+        3: Bicycle
+        4: Ghost sprites
+        6: Slower movement
+        7: Ladder climbing
+        8: Rope climbing
+        10: Very slow movement
+        12: Escalator sliding
+        13: Stair movement
       Size: 2
-    - Name: UnknownF
+    - Name: UNKNOWNF
       Size: 4
       Type: bytearray
     - Name: CURRENT_PARTY_MEMBERS
       Size: 2
-    - Name: UnknownG
+    - Name: UNKNOWNG
       Size: 6
       Type: bytearray
     - Name: PLAYER_CONTROLLED_PARTY_MEMBERS
       Size: 1
       Description: Player-Controlled Party Members
-    - Name: UnknownG2
+    - Name: UNKNOWNG2
       Size: 17
       Type: bytearray
-    - Name: Party Member Count
+    - Name: PARTY_COUNT
       Size: 1
-    - Name: Player-Controlled Party Member Count
+    - Name: PLAYER_CONTROLLED_PARTY_COUNT
       Size: 1
-    - Name: UnknownH
+    - Name: UNKNOWNH
       Size: 12
       Type: bytearray
     - Name: AUTO_FIGHT_ENABLE
       Size: 1
     - Name: EXIT_MOUSE_COORDS
       Size: 2
-    - Name: UnknownI
+    - Name: UNKNOWNI
       Size: 2
     - Name: TEXT_SPEED
       Size: 1
@@ -1292,12 +1438,12 @@ SAVE_SLOT_1:
       Values:
         0: Mono
         1: Stereo
-    - Name: UnknownJ
+    - Name: UNKNOWNJ
       Size: 273
       Type: bytearray
-    - Name: Timer
+    - Name: TIMER
       Size: 4
-    - Name: Text Flavour
+    - Name: TEXT_FLAVOUR
       Size: 1
       Values:
        0: Null
@@ -1312,74 +1458,74 @@ SAVE_SLOT_1:
     Entries: &CHAR_STRUCT_ENTRIES
     - Type: script
       Size: 5
-      Name: Name
-    - Name: Level
+      Name: NAME
+    - Name: LEVEL
       Size: 1
     - Name: EXP
       Size: 4
-    - Name: Max HP
+    - Name: MAX HP
       Size: 2
-    - Name: Max PP
+    - Name: MAX PP
       Size: 2
     - Type: bytearray
       Size: 7
-      Name: Afflictions
-    - Name: Offense (Equipped)
+      Name: AFFLICTIONS
+    - Name: EQUIPPED_OFFENSE
       Size: 1
-    - Name: Defense (Equipped)
+    - Name: EQUIPPED_DEFENSE
       Size: 1
-    - Name: Speed (Equipped)
+    - Name: EQUIPPED_SPEED
       Size: 1
-    - Name: Guts (Equipped)
+    - Name: EQUIPPED_GUTS
       Size: 1
-    - Name: Luck (Equipped)
+    - Name: EQUIPPED_LUCK
       Size: 1
-    - Name: Vitality (Equipped)
+    - Name: EQUIPPED_VITALITY
       Size: 1
-    - Name: IQ (Equipped)
+    - Name: EQUIPPED_IQ
       Size: 1
-    - Name: Offense
+    - Name: OFFENSE
       Size: 1
-    - Name: Defense
+    - Name: DEFENSE
       Size: 1
-    - Name: Speed
+    - Name: SPEED
       Size: 1
-    - Name: Guts
+    - Name: GUTS
       Size: 1
-    - Name: Luck
+    - Name: LUCK
       Size: 1
-    - Name: Vitality
+    - Name: VITALITY
       Size: 1
     - Name: IQ
       Size: 1
     - Type: bytearray
       Size: 14
-      Name: Items
+      Name: ITEMS
     - Type: bytearray
       Size: 4
-      Name: Equipped Items
+      Name: EQUIPPED_ITEMS
     - Type: bytearray
       Size: 8
-      Name: unknown
+      Name: UNKNOWN
     - Type: int
       Size: 2
-      Name: Position index
+      Name: POSITION_INDEX
     - Type: bytearray
       Size: 4
-      Name: Unknown2
+      Name: UNKNOWN2
     - Size: 2
-      Name: Unknown3
-    - Name: Current HP
+      Name: UNKNOWN3
+    - Name: CURRENT_HP
       Size: 2
-    - Name: Current HP (Rolling)
+    - Name: CURRENT_HP_ROLLING
       Size: 2
-    - Name: Unknown4
+    - Name: UNKNOWN4
       Size: 2
-    - Name: Current PP
+    - Name: CURRENT_PP
       Size: 2
-    - Name: Current PP (Rolling)
+    - Name: CURRENT_PP_ROLLING
       Size: 2
-    - Name: HP/PP Window Options
+    - Name: HP_PP_WINDOW_OPTIONS
       Size: 2
       Type: bitfield
       Bit Values:
@@ -1401,49 +1547,49 @@ SAVE_SLOT_1:
         - 16
     - Type: int
       Size: 1
-      Name: Miss rate
+      Name: MISS_RATE
     - Type: struct
       Size: 5
-      Name: Resistances
+      Name: RESISTANCES
       Entries:
-      - Name: Fire
+      - Name: FIRE
         Size: 1
         Values: &RESISTANCES
         - 100%
         - 70%
         - 40%
         - 5%
-      - Name: Freeze
+      - Name: FREEZE
         Size: 1
         Values: *RESISTANCES
-      - Name: Flash
+      - Name: FLASH
         Size: 1
         Values: *RESISTANCES
-      - Name: Paralysis
+      - Name: PARALYSIS
         Size: 1
         Values: *RESISTANCES
-      - Name: Hypnosis/Brainshock
+      - Name: HYPNOSIS_BRAINSHOCK
         Size: 1
         Values: *RESISTANCES
     - Type: struct
       Size: 5
-      Name: Stat Boosts
+      Name: STAT_BOOSTS
       Entries:
-      - Name: Speed
+      - Name: SPEED
         Size: 1
-      - Name: Guts
+      - Name: GUTS
         Size: 1
-      - Name: Vitality
+      - Name: VITALITY
         Size: 1
       - Name: IQ
         Size: 1
-      - Name: Luck
+      - Name: LUCK
         Size: 1
     - Type: bytearray
       Size: 3
-      Name: Unknown5
+      Name: UNKNOWN5
   - Type: struct
-    Name: Event Flags
+    Name: EVENT_FLAGS
     Size: 0x80
     Entries: &EVENT_FLAG
     - Type: bitfield
@@ -1458,38 +1604,49 @@ SAVE_SLOT_1:
       - 7
       - 8
   - Type: bytearray
-    Name: Nullspace2
+    Name: NULLSPACE2
     Size: 0x4D
 SAVE_SLOT_1_BK:
   Offset: 0x206500
-  Name: Slot 1 Backup
+  Description: Slot 1 Backup
   Size: 0x500
   Type: data
   Entries: *SAVE_SLOT
 SAVE_SLOT_2:
   Offset: 0x206A00
-  Name: Slot 2
+  Description: Slot 2
   Size: 0x500
   Type: data
   Entries: *SAVE_SLOT
 SAVE_SLOT_2_BK:
   Offset: 0x206F00
-  Name: Slot 2 Backup
+  Description: Slot 2 Backup
   Size: 0x500
   Type: data
   Entries: *SAVE_SLOT
 SAVE_SLOT_3:
   Offset: 0x207400
-  Name: Slot 3
+  Description: Slot 3
   Size: 0x500
   Type: data
   Entries: *SAVE_SLOT
 SAVE_SLOT_3_BK:
   Offset: 0x207900
-  Name: Slot 3 Backup
+  Description: Slot 3 Backup
   Size: 0x500
   Type: data
   Entries: *SAVE_SLOT
+SAVE_NULLSPACE:
+  Offset: 0x207E00
+  Size: 0x1FE
+  Type: empty
+UNKNOWN_SAVE:
+  Offset: 0x207FFE
+  Size: 2
+  Type: data
+  Entries:
+  - Type: int
+    Size: 2
 RAND_A:
   Description: Random number generator state A
   Offset: 0x7E0024
@@ -1953,6 +2110,8 @@ CURRENT_BATTLE_GROUP:
 BATTLE_DEBUG:
   Description: Battle Debug Flag?
   Offset: 0x7E4DC2
+  Size: 2
+  Type: data
 CHOSEN_FOUR_PTRS:
   Description: Chosen Four Pointers
   Offset: 0x7E4DC8
@@ -2091,6 +2250,11 @@ UNKNOWN_7E89D4:
   Entries:
   - Type: script
     Size: 45
+UNKNOWN_7E9622:
+  Size: 2
+  Type: data
+  Notes: Window related?
+  Offset: 0x7E9622
 BATTLE_MODE_FLAG:
   Description: Battle Mode Flag
   Values:
@@ -2103,6 +2267,16 @@ INPUT_LOCK_FLAG:
 BLINKING_TRIANGLE_FLAG:
   Description: Blinking Prompt Flag
   Offset: 0x7E964D
+UNKNOWN_7E9652:
+  Size: 2
+  Type: data
+  Notes: Seen at C43CAA, window related?
+  Offset: 0x7E9652
+UNKNOWN_7E9654:
+  Size: 2
+  Type: data
+  Notes: Seen at C43CAA, window related?
+  Offset: 0x7E9654
 UNKNOWN_7E96AA:
   Description: Table involved with text subroutines (08 code) somehow. Ten entries
     of 0x1B (27) bytes each, so it runs up to 7E97B7? Text system stack frames?
@@ -2131,6 +2305,8 @@ GAME_STATE:
   Type: data
   Offset: 0x7E97F5
   Size: 0x1D9
+  Options:
+    Force Offset Keys: n
   Entries: *GAME_STATE
 CHAR_STRUCT:
   Type: data
@@ -2160,9 +2336,35 @@ UNKNOWN_7E9CA1:
   Size: 1
   Type: data
   Offset: 0x7E9CA1
+UNKNOWN_7E9E23:
+  Size: 2
+  Type: data
+  Notes: Seen at C43CAA, window related?
+  Offset: 0x7E9E23
+UNKNOWN_7E9E25:
+  Size: 2
+  Type: data
+  Notes: Seen at C43CAA, window related?
+  Offset: 0x7E9E25
 DMA_TRANSFER_FLAG:
   Description: Indicates if a DMA transfer is in progress
   Offset: 0x7E9E2B
+TELEPORT_DESTINATION:
+  Offset: 0x7E9F3F
+  Size: 2
+  Description: Destination for teleportation
+  Type: data
+TELEPORT_STYLE:
+  Offset: 0x7E9F41
+  Size: 2
+  Description: Teleportation Type
+  Type: data
+  Values:
+  - No teleportation
+  - PSI Teleport ɑ
+  - PSI Teleport β
+  - Instant
+  - Improved PSI Teleport β
 DAD_PHONE_TIMER:
   Description: Dad Phone Timer
   Offset: 0x7E9E54
@@ -2471,41 +2673,41 @@ UNKNOWN_C0004B:
 UNKNOWN_C00085:
   Size: 237
   Type: assembly
-  labels:
-    0x00C6: UNKNOWN0
-    0x0114: UNKNOWN1
-    0x016B: UNKNOWN2
-    0x0170: UNKNOWN3
+  Labels:
+    65: UNKNOWN0
+    143: UNKNOWN1
+    230: UNKNOWN2
+    235: UNKNOWN3
   Offset: 0xC00085
 UNKNOWN_C00172:
   Size: 205
   Type: assembly
-  labels:
-    0x0184: UNKNOWN0
-    0x0197: UNKNOWN1
-    0x01BD: UNKNOWN2
-    0x0227: UNKNOWN3
-    0x0231: UNKNOWN4
-    0x023D: UNKNOWN5
+  Labels:
+    18: UNKNOWN0
+    37: UNKNOWN1
+    75: UNKNOWN2
+    181: UNKNOWN3
+    191: UNKNOWN4
+    203: UNKNOWN5
   Offset: 0xC00172
 UNKNOWN_C0023F:
   Size: 208
   Type: assembly
-  labels:
-    0x0252: UNKNOWN0
-    0x0282: UNKNOWN1
-    0x02B3: UNKNOWN2
-    0x02BD: UNKNOWN3
-    0x02D9: UNKNOWN4
-    0x02EA: UNKNOWN5
-    0x030D: UNKNOWN6
+  Labels:
+    19: UNKNOWN0
+    67: UNKNOWN1
+    116: UNKNOWN2
+    126: UNKNOWN3
+    154: UNKNOWN4
+    171: UNKNOWN5
+    206: UNKNOWN6
   Offset: 0xC0023F
 UNKNOWN_C0030F:
   Size: 76
   Type: assembly
-  labels:
-    0x0337: UNKNOWN0
-    0x0359: UNKNOWN1
+  Labels:
+    40: UNKNOWN0
+    74: UNKNOWN1
   Offset: 0xC0030F
 UNKNOWN_C0035B:
   Size: 54
@@ -2514,33 +2716,33 @@ UNKNOWN_C0035B:
 UNKNOWN_C00391:
   Size: 163
   Type: assembly
-  labels:
-    0x03B8: UNKNOWN0
-    0x0400: UNKNOWN1
-    0x0405: UNKNOWN2
+  Labels:
+    39: UNKNOWN0
+    111: UNKNOWN1
+    116: UNKNOWN2
   Offset: 0xC00391
 UNKNOWN_C00434:
   Size: 76
   Type: assembly
-  labels:
-    0x044A: UNKNOWN0
-    0x0462: UNKNOWN1
-    0x0466: UNKNOWN2
-    0x047C: UNKNOWN3
-    0x047E: UNKNOWN4
+  Labels:
+    22: UNKNOWN0
+    46: UNKNOWN1
+    50: UNKNOWN2
+    72: UNKNOWN3
+    74: UNKNOWN4
   Offset: 0xC00434
 UNKNOWN_C00480:
   Size: 359
   Type: assembly
-  labels:
-    0x04DB: UNKNOWN0
-    0x04E7: UNKNOWN1
-    0x04F3: UNKNOWN2
-    0x04FB: UNKNOWN3
-    0x0562: UNKNOWN4
-    0x0582: UNKNOWN5
-    0x05D9: UNKNOWN6
-    0x05E5: UNKNOWN7
+  Labels:
+    91: UNKNOWN0
+    103: UNKNOWN1
+    115: UNKNOWN2
+    123: UNKNOWN3
+    226: UNKNOWN4
+    258: UNKNOWN5
+    345: UNKNOWN6
+    357: UNKNOWN7
   Offset: 0xC00480
 UNKNOWN_C005E7:
   Size: 67
@@ -2550,35 +2752,35 @@ LOAD_TILE_COLLISION:
   Description: Load Tile Collision Data
   Size: 84
   Type: assembly
-  labels:
-    0x0666: UNKNOWN0
-    0x0677: UNKNOWN1
+  Labels:
+    60: UNKNOWN0
+    77: UNKNOWN1
   Offset: 0xC0062A
 UNKNOWN_C0067E:
   Size: 116
   Type: assembly
-  labels:
-    0x06B9: UNKNOWN0
-    0x06C6: UNKNOWN1
+  Labels:
+    59: UNKNOWN0
+    72: UNKNOWN1
   Offset: 0xC0067E
 UNKNOWN_C006F2:
   Size: 134
   Type: assembly
-  labels:
-    0x0715: UNKNOWN0
-    0x0737: UNKNOWN1
-    0x0749: UNKNOWN2
-    0x0761: UNKNOWN3
-    0x0768: UNKNOWN4
-    0x0776: UNKNOWN5
+  Labels:
+    35: UNKNOWN0
+    69: UNKNOWN1
+    87: UNKNOWN2
+    111: UNKNOWN3
+    118: UNKNOWN4
+    132: UNKNOWN5
   Offset: 0xC006F2
 UNKNOWN_C00778:
   Size: 62
   Type: assembly
-  labels:
-    0x079B: UNKNOWN0
-    0x07AF: UNKNOWN1
-    0x07B4: UNKNOWN2
+  Labels:
+    35: UNKNOWN0
+    55: UNKNOWN1
+    60: UNKNOWN2
   Offset: 0xC00778
 LOAD_MAP_PAL:
   Description: Load Map Palette
@@ -2586,28 +2788,28 @@ LOAD_MAP_PAL:
   Type: assembly
   localvars:
     0x0006: MAPPAL
-  labels:
-    0x07FE: UNKNOWN0
-    0x0822: UNKNOWN1
-    0x083D: UNKNOWN2
-    0x0848: UNKNOWN3
-    0x0863: UNKNOWN4
-    0x08C1: UNKNOWN5
+  Labels:
+    72: UNKNOWN0
+    108: UNKNOWN1
+    135: UNKNOWN2
+    146: UNKNOWN3
+    173: UNKNOWN4
+    267: UNKNOWN5
   Offset: 0xC007B6
 UNKNOWN_C008C3:
   Size: 478
   Type: assembly
-  labels:
-    0x08E9: UNKNOWN0
-    0x09B1: UNKNOWN1
-    0x09D7: UNKNOWN2
-    0x09EE: UNKNOWN3
-    0x0A15: UNKNOWN4
-    0x0A25: UNKNOWN5
-    0x0A29: UNKNOWN6
-    0x0A30: UNKNOWN7
-    0x0A75: UNKNOWN8
-    0x0A8E: UNKNOWN9
+  Labels:
+    38: UNKNOWN0
+    238: UNKNOWN1
+    276: UNKNOWN2
+    299: UNKNOWN3
+    338: UNKNOWN4
+    354: UNKNOWN5
+    358: UNKNOWN6
+    365: UNKNOWN7
+    434: UNKNOWN8
+    459: UNKNOWN9
   Offset: 0xC008C3
 LOAD_SECTOR_ATTRS:
   Size: 36
@@ -2620,76 +2822,76 @@ LOAD_SECTOR_ATTRS:
 UNKNOWN_C00AC5:
   Size: 279
   Type: assembly
-  labels:
-    0x0AE9: UNKNOWN0
-    0x0AF0: UNKNOWN1
-    0x0B49: UNKNOWN2
-    0x0B55: UNKNOWN3
-    0x0B7D: UNKNOWN4
-    0x0B9D: UNKNOWN5
-    0x0BA8: UNKNOWN6
-    0x0BB9: UNKNOWN7
-    0x0BC2: UNKNOWN8
-    0x0BC9: UNKNOWN9
-    0x0BD5: UNKNOWN10
-    0x0BDA: UNKNOWN11
+  Labels:
+    36: UNKNOWN0
+    43: UNKNOWN1
+    132: UNKNOWN2
+    144: UNKNOWN3
+    184: UNKNOWN4
+    216: UNKNOWN5
+    227: UNKNOWN6
+    244: UNKNOWN7
+    253: UNKNOWN8
+    260: UNKNOWN9
+    272: UNKNOWN10
+    277: UNKNOWN11
   Offset: 0xC00AC5
 UNKNOWN_C00BDC:
   Size: 279
   Type: assembly
-  labels:
-    0x0BFB: UNKNOWN0
-    0x0C01: UNKNOWN1
-    0x0C56: UNKNOWN2
-    0x0C65: UNKNOWN3
-    0x0C8D: UNKNOWN4
-    0x0CAD: UNKNOWN5
-    0x0CB8: UNKNOWN6
-    0x0CCC: UNKNOWN7
-    0x0CD5: UNKNOWN8
-    0x0CDC: UNKNOWN9
-    0x0CEC: UNKNOWN10
-    0x0CF1: UNKNOWN11
+  Labels:
+    31: UNKNOWN0
+    37: UNKNOWN1
+    122: UNKNOWN2
+    137: UNKNOWN3
+    177: UNKNOWN4
+    209: UNKNOWN5
+    220: UNKNOWN6
+    240: UNKNOWN7
+    249: UNKNOWN8
+    256: UNKNOWN9
+    272: UNKNOWN10
+    277: UNKNOWN11
   Offset: 0xC00BDC
 UNKNOWN_C00CF3:
   Size: 139
   Type: assembly
-  labels:
-    0x0D32: UNKNOWN0
-    0x0D77: UNKNOWN1
+  Labels:
+    63: UNKNOWN0
+    132: UNKNOWN1
   Offset: 0xC00CF3
 UNKNOWN_C00D7E:
   Size: 152
   Type: assembly
-  labels:
-    0x0DB0: UNKNOWN0
-    0x0E0F: UNKNOWN1
+  Labels:
+    50: UNKNOWN0
+    145: UNKNOWN1
   Offset: 0xC00D7E
 UNKNOWN_C00E16:
   Size: 437
   Type: assembly
-  labels:
-    0x0E31: UNKNOWN0
-    0x0E93: UNKNOWN1
-    0x0EB8: UNKNOWN2
-    0x0EE4: UNKNOWN3
-    0x0EE6: UNKNOWN4
-    0x0F04: UNKNOWN5
-    0x0F10: UNKNOWN6
-    0x0FC9: UNKNOWN7
+  Labels:
+    27: UNKNOWN0
+    125: UNKNOWN1
+    162: UNKNOWN2
+    206: UNKNOWN3
+    208: UNKNOWN4
+    238: UNKNOWN5
+    250: UNKNOWN6
+    435: UNKNOWN7
   Offset: 0xC00E16
 UNKNOWN_C00FCB:
   Size: 438
   Type: assembly
-  labels:
-    0x0FE6: UNKNOWN0
-    0x1048: UNKNOWN1
-    0x1094: UNKNOWN2
-    0x1096: UNKNOWN3
-    0x10BC: UNKNOWN4
-    0x10C8: UNKNOWN5
-    0x1128: UNKNOWN6
-    0x117F: UNKNOWN7
+  Labels:
+    27: UNKNOWN0
+    125: UNKNOWN1
+    201: UNKNOWN2
+    203: UNKNOWN3
+    241: UNKNOWN4
+    253: UNKNOWN5
+    349: UNKNOWN6
+    436: UNKNOWN7
   Offset: 0xC00FCB
 UNKNOWN_C01181:
   Size: 169
@@ -2698,99 +2900,99 @@ UNKNOWN_C01181:
 UNKNOWN_C0122A:
   Size: 195
   Type: assembly
-  labels:
-    0x125C: UNKNOWN0
-    0x12A1: UNKNOWN1
-    0x12EB: UNKNOWN2
+  Labels:
+    50: UNKNOWN0
+    119: UNKNOWN1
+    193: UNKNOWN2
   Offset: 0xC0122A
 UNKNOWN_C012ED:
   Size: 265
   Type: assembly
-  labels:
-    0x134F: UNKNOWN0
-    0x1360: UNKNOWN1
-    0x136C: UNKNOWN2
-    0x1382: UNKNOWN3
-    0x138E: UNKNOWN4
-    0x13A4: UNKNOWN5
-    0x13B0: UNKNOWN6
-    0x13C1: UNKNOWN7
-    0x13C6: UNKNOWN8
+  Labels:
+    98: UNKNOWN0
+    115: UNKNOWN1
+    127: UNKNOWN2
+    149: UNKNOWN3
+    161: UNKNOWN4
+    183: UNKNOWN5
+    195: UNKNOWN6
+    212: UNKNOWN7
+    217: UNKNOWN8
   Offset: 0xC012ED
 UNKNOWN_C013F6:
   Size: 354
   Type: assembly
-  labels:
-    0x143D: UNKNOWN0
-    0x1464: UNKNOWN1
-    0x1475: UNKNOWN2
-    0x1481: UNKNOWN3
-    0x1497: UNKNOWN4
-    0x14A3: UNKNOWN5
-    0x14B9: UNKNOWN6
-    0x14BE: UNKNOWN7
-    0x14D4: UNKNOWN8
-    0x14E1: UNKNOWN9
-    0x1502: UNKNOWN10
-    0x151C: UNKNOWN11
-    0x1528: UNKNOWN12
-    0x153C: UNKNOWN13
-    0x154C: UNKNOWN14
+  Labels:
+    71: UNKNOWN0
+    110: UNKNOWN1
+    127: UNKNOWN2
+    139: UNKNOWN3
+    161: UNKNOWN4
+    173: UNKNOWN5
+    195: UNKNOWN6
+    200: UNKNOWN7
+    222: UNKNOWN8
+    235: UNKNOWN9
+    268: UNKNOWN10
+    294: UNKNOWN11
+    306: UNKNOWN12
+    326: UNKNOWN13
+    342: UNKNOWN14
   Offset: 0xC013F6
 UNKNOWN_C01558:
   Size: 473
   Type: assembly
-  labels:
-    0x158B: UNKNOWN0
-    0x1592: UNKNOWN1
-    0x15A6: UNKNOWN2
-    0x15B0: UNKNOWN3
-    0x160C: UNKNOWN4
-    0x165D: UNKNOWN5
-    0x1668: UNKNOWN6
-    0x166B: UNKNOWN7
-    0x16CA: UNKNOWN8
-    0x171A: UNKNOWN9
-    0x1725: UNKNOWN10
+  Labels:
+    51: UNKNOWN0
+    58: UNKNOWN1
+    78: UNKNOWN2
+    88: UNKNOWN3
+    180: UNKNOWN4
+    261: UNKNOWN5
+    272: UNKNOWN6
+    275: UNKNOWN7
+    370: UNKNOWN8
+    450: UNKNOWN9
+    461: UNKNOWN10
   Offset: 0xC01558
 UNKNOWN_C01731:
   Size: 185
   Type: assembly
-  labels:
-    0x1761: UNKNOWN0
-    0x1767: UNKNOWN1
-    0x177A: UNKNOWN2
-    0x1783: UNKNOWN3
-    0x179A: UNKNOWN4
-    0x17A7: UNKNOWN5
-    0x17B1: UNKNOWN6
-    0x17C9: UNKNOWN7
-    0x17D6: UNKNOWN8
+  Labels:
+    48: UNKNOWN0
+    54: UNKNOWN1
+    73: UNKNOWN2
+    82: UNKNOWN3
+    105: UNKNOWN4
+    118: UNKNOWN5
+    128: UNKNOWN6
+    152: UNKNOWN7
+    165: UNKNOWN8
   Offset: 0xC01731
 UNKNOWN_C017EA:
   Size: 265
   Type: assembly
-  labels:
-    0x180E: UNKNOWN0
-    0x1819: UNKNOWN1
-    0x1822: UNKNOWN2
-    0x182F: UNKNOWN3
-    0x183A: UNKNOWN4
-    0x184A: UNKNOWN5
-    0x1858: UNKNOWN6
-    0x1866: UNKNOWN7
-    0x187B: UNKNOWN8
-    0x1899: UNKNOWN9
-    0x18AD: UNKNOWN10
-    0x18E5: UNKNOWN11
+  Labels:
+    36: UNKNOWN0
+    47: UNKNOWN1
+    56: UNKNOWN2
+    69: UNKNOWN3
+    80: UNKNOWN4
+    96: UNKNOWN5
+    110: UNKNOWN6
+    124: UNKNOWN7
+    145: UNKNOWN8
+    175: UNKNOWN9
+    195: UNKNOWN10
+    251: UNKNOWN11
   Offset: 0xC017EA
 UNKNOWN_C018F3:
   Size: 191
   Type: assembly
-  labels:
-    0x1996: UNKNOWN0
-    0x199A: UNKNOWN1
-    0x19AC: UNKNOWN2
+  Labels:
+    163: UNKNOWN0
+    167: UNKNOWN1
+    185: UNKNOWN2
   Offset: 0xC018F3
 UNKNOWN_C019B2:
   Size: 48
@@ -2799,13 +3001,13 @@ UNKNOWN_C019B2:
 UNKNOWN_C019E2:
   Size: 129
   Type: assembly
-  labels:
-    0x19EF: UNKNOWN0
-    0x1A00: UNKNOWN1
-    0x1A28: UNKNOWN2
-    0x1A3C: UNKNOWN3
-    0x1A48: UNKNOWN4
-    0x1A5C: UNKNOWN5
+  Labels:
+    13: UNKNOWN0
+    30: UNKNOWN1
+    70: UNKNOWN2
+    90: UNKNOWN3
+    102: UNKNOWN4
+    122: UNKNOWN5
   Offset: 0xC019E2
 UNKNOWN_C01A63:
   Size: 6
@@ -2814,84 +3016,84 @@ UNKNOWN_C01A63:
 UNKNOWN_C01A69:
   Size: 29
   Type: assembly
-  labels:
-    0x1A70: UNKNOWN0
-    0x1A80: UNKNOWN1
+  Labels:
+    7: UNKNOWN0
+    23: UNKNOWN1
   Offset: 0xC01A69
 UNKNOWN_C01A86:
   Size: 23
   Type: assembly
-  labels:
-    0x1A8D: UNKNOWN0
-    0x1A95: UNKNOWN1
+  Labels:
+    7: UNKNOWN0
+    15: UNKNOWN1
   Offset: 0xC01A86
 FIND_FREE_7E4682:
   Description: Find free space in 7E4682 table
   Size: 120
   Type: assembly
-  labels:
-    0x1AB5: UNKNOWN0
-    0x1AC8: UNKNOWN1
-    0x1AD2: UNKNOWN2
-    0x1AE0: UNKNOWN3
-    0x1AF7: UNKNOWN4
-    0x1AFF: UNKNOWN5
-    0x1B10: UNKNOWN6
-    0x1B13: UNKNOWN7
+  Labels:
+    24: UNKNOWN0
+    43: UNKNOWN1
+    53: UNKNOWN2
+    67: UNKNOWN3
+    90: UNKNOWN4
+    98: UNKNOWN5
+    115: UNKNOWN6
+    118: UNKNOWN7
   Offset: 0xC01A9D
 UNKNOWN_C01B15:
   Size: 129
   Type: assembly
-  labels:
-    0x1B2B: UNKNOWN0
-    0x1B38: UNKNOWN1
-    0x1B8D: UNKNOWN2
-    0x1B94: UNKNOWN3
+  Labels:
+    22: UNKNOWN0
+    35: UNKNOWN1
+    120: UNKNOWN2
+    127: UNKNOWN3
   Offset: 0xC01B15
 UNKNOWN_C01B96:
   Size: 123
   Type: assembly
-  labels:
-    0x1BAB: UNKNOWN0
-    0x1BB2: UNKNOWN1
-    0x1BC6: UNKNOWN2
-    0x1BD5: UNKNOWN3
-    0x1BEC: UNKNOWN4
-    0x1BF7: UNKNOWN5
-    0x1BF9: UNKNOWN6
-    0x1C0F: UNKNOWN7
+  Labels:
+    21: UNKNOWN0
+    28: UNKNOWN1
+    48: UNKNOWN2
+    63: UNKNOWN3
+    86: UNKNOWN4
+    97: UNKNOWN5
+    99: UNKNOWN6
+    121: UNKNOWN7
   Offset: 0xC01B96
 ALLOC_SPRITE_MEM:
   Description: Allocate sprite memory
   Size: 65
   Type: assembly
-  labels:
-    0x1C23: UNKNOWN0
-    0x1C42: UNKNOWN1
-    0x1C48: UNKNOWN2
-    0x1C49: UNKNOWN3
+  Labels:
+    18: UNKNOWN0
+    49: UNKNOWN1
+    55: UNKNOWN2
+    56: UNKNOWN3
   Offset: 0xC01C11
 UNKNOWN_C01C52:
   Size: 230
   Type: assembly
-  labels:
-    0x1C93: UNKNOWN0
-    0x1CA2: UNKNOWN1
-    0x1CA8: UNKNOWN2
-    0x1CC1: UNKNOWN3
-    0x1D20: UNKNOWN4
-    0x1D34: UNKNOWN5
-    0x1D36: UNKNOWN6
+  Labels:
+    65: UNKNOWN0
+    80: UNKNOWN1
+    86: UNKNOWN2
+    111: UNKNOWN3
+    206: UNKNOWN4
+    226: UNKNOWN5
+    228: UNKNOWN6
   Offset: 0xC01C52
 UNKNOWN_C01D38:
   Size: 181
   Type: assembly
-  labels:
-    0x1D64: UNKNOWN0
-    0x1D6B: UNKNOWN1
-    0x1DD4: UNKNOWN2
-    0x1DE1: UNKNOWN3
-    0x1DEB: UNKNOWN4
+  Labels:
+    44: UNKNOWN0
+    51: UNKNOWN1
+    156: UNKNOWN2
+    169: UNKNOWN3
+    179: UNKNOWN4
   Offset: 0xC01D38
 UNKNOWN_C01DED:
   Size: 92
@@ -2899,202 +3101,202 @@ UNKNOWN_C01DED:
     A: SPRITE_ID
   Type: assembly
   Offset: 0xC01DED
-UNKNOWN_C01E49:
+PARSE_C3FC49_DATA:
   Size: 680
   Type: assembly
-  labels:
-    0x1E79: UNKNOWN0
-    0x1EB5: UNKNOWN1
-    0x1EBE: UNKNOWN2
-    0x1EEF: UNKNOWN3
-    0x1EF8: UNKNOWN4
-    0x1F4C: UNKNOWN5
-    0x1F6C: UNKNOWN6
-    0x202E: UNKNOWN7
-    0x20EF: UNKNOWN8
+  Labels:
+    48: UNKNOWN0
+    108: UNKNOWN1
+    117: UNKNOWN2
+    166: UNKNOWN3
+    175: UNKNOWN4
+    259: UNKNOWN5
+    291: UNKNOWN6
+    485: UNKNOWN7
+    678: UNKNOWN8
   Offset: 0xC01E49
 UNKNOWN_C020F1:
   Size: 79
   Type: assembly
-  labels:
-    0x2122: UNKNOWN0
-    0x2131: UNKNOWN1
+  Labels:
+    49: UNKNOWN0
+    64: UNKNOWN1
   Offset: 0xC020F1
 UNKNOWN_C02140:
   Size: 84
   Type: assembly
-  labels:
-    0x2170: UNKNOWN0
-    0x217F: UNKNOWN1
+  Labels:
+    48: UNKNOWN0
+    63: UNKNOWN1
   Offset: 0xC02140
 UNKNOWN_C02194:
   Size: 82
   Type: assembly
-  labels:
-    0x21AC: UNKNOWN0
-    0x21C1: UNKNOWN1
-    0x21C6: UNKNOWN2
-    0x21D2: UNKNOWN3
-    0x21DF: UNKNOWN4
+  Labels:
+    24: UNKNOWN0
+    45: UNKNOWN1
+    50: UNKNOWN2
+    62: UNKNOWN3
+    75: UNKNOWN4
   Offset: 0xC02194
 UNKNOWN_C021E6:
   Size: 69
   Type: assembly
-  labels:
-    0x21FE: UNKNOWN0
-    0x2218: UNKNOWN1
-    0x221D: UNKNOWN2
+  Labels:
+    24: UNKNOWN0
+    50: UNKNOWN1
+    55: UNKNOWN2
   Offset: 0xC021E6
 UNKNOWN_C0222B:
   Description: Unknown (Loads TPT entries?)
   Size: 817
   Type: assembly
-  labels:
-    0x2245: UNKNOWN0
-    0x224F: UNKNOWN1
-    0x2269: UNKNOWN2
-    0x2291: UNKNOWN3
-    0x2315: UNKNOWN4
-    0x2323: UNKNOWN5
-    0x2367: UNKNOWN6
-    0x2378: UNKNOWN7
-    0x237A: UNKNOWN8
-    0x2391: UNKNOWN9
-    0x23A2: UNKNOWN10
-    0x23A7: UNKNOWN11
-    0x23B8: UNKNOWN12
-    0x23BD: UNKNOWN13
-    0x23CC: UNKNOWN14
-    0x23D1: UNKNOWN15
-    0x23E0: UNKNOWN16
-    0x23E5: UNKNOWN17
-    0x2411: UNKNOWN18
-    0x2448: UNKNOWN19
-    0x244A: UNKNOWN20
-    0x2473: UNKNOWN21
-    0x248A: UNKNOWN22
-    0x24BF: UNKNOWN23
-    0x24CE: UNKNOWN24
-    0x24FB: UNKNOWN25
-    0x2529: UNKNOWN26
-    0x254F: UNKNOWN27
-    0x2551: UNKNOWN28
-    0x255A: UNKNOWN29
+  Labels:
+    26: UNKNOWN0
+    36: UNKNOWN1
+    62: UNKNOWN2
+    102: UNKNOWN3
+    234: UNKNOWN4
+    248: UNKNOWN5
+    316: UNKNOWN6
+    333: UNKNOWN7
+    335: UNKNOWN8
+    358: UNKNOWN9
+    375: UNKNOWN10
+    380: UNKNOWN11
+    397: UNKNOWN12
+    402: UNKNOWN13
+    417: UNKNOWN14
+    422: UNKNOWN15
+    437: UNKNOWN16
+    442: UNKNOWN17
+    486: UNKNOWN18
+    541: UNKNOWN19
+    543: UNKNOWN20
+    584: UNKNOWN21
+    607: UNKNOWN22
+    660: UNKNOWN23
+    675: UNKNOWN24
+    720: UNKNOWN25
+    766: UNKNOWN26
+    804: UNKNOWN27
+    806: UNKNOWN28
+    815: UNKNOWN29
   Offset: 0xC0222B
 UNKNOWN_C0255C:
   Size: 115
   Type: assembly
-  labels:
-    0x258B: UNKNOWN0
-    0x25B3: UNKNOWN1
-    0x25BD: UNKNOWN2
-    0x25CD: UNKNOWN3
+  Labels:
+    47: UNKNOWN0
+    87: UNKNOWN1
+    97: UNKNOWN2
+    113: UNKNOWN3
   Offset: 0xC0255C
 UNKNOWN_C025CF:
   Size: 110
   Type: assembly
-  labels:
-    0x25FD: UNKNOWN0
-    0x2621: UNKNOWN1
-    0x262B: UNKNOWN2
-    0x263B: UNKNOWN3
+  Labels:
+    46: UNKNOWN0
+    82: UNKNOWN1
+    92: UNKNOWN2
+    108: UNKNOWN3
   Offset: 0xC025CF
 UNKNOWN_C0263D:
   Description: Load Enemy Placement Data
   Size: 43
   Type: assembly
-  labels:
-    0x2663: UNKNOWN0
-    0x2666: UNKNOWN1
+  Labels:
+    38: UNKNOWN0
+    41: UNKNOWN1
   Offset: 0xC0263D
 UNKNOWN_C02668:
   Description: Enemy generation routine?
   Size: 1027
   Type: assembly
-  labels:
-    0x269E: UNKNOWN0
-    0x26AD: UNKNOWN1
-    0x26F1: UNKNOWN2
-    0x26FA: UNKNOWN3
-    0x2703: UNKNOWN4
-    0x270C: UNKNOWN5
-    0x2715: UNKNOWN6
-    0x271E: UNKNOWN7
-    0x2725: UNKNOWN8
-    0x273B: UNKNOWN9
-    0x2752: UNKNOWN10
-    0x2759: UNKNOWN11
-    0x2789: UNKNOWN12
-    0x2815: UNKNOWN13
-    0x2839: UNKNOWN14
-    0x284D: UNKNOWN15
-    0x2881: UNKNOWN16
-    0x28BE: UNKNOWN17
-    0x28DE: UNKNOWN18
-    0x28DF: UNKNOWN19
-    0x28E7: UNKNOWN20
-    0x294F: UNKNOWN21
-    0x2957: UNKNOWN22
-    0x2966: UNKNOWN23
-    0x2974: UNKNOWN24
-    0x298C: UNKNOWN25
-    0x29E0: UNKNOWN26
-    0x29E2: UNKNOWN27
-    0x29F1: UNKNOWN28
-    0x2A3A: UNKNOWN29
-    0x2A48: UNKNOWN30
-    0x2A50: UNKNOWN31
-    0x2A69: UNKNOWN32
+  Labels:
+    54: UNKNOWN0
+    69: UNKNOWN1
+    137: UNKNOWN2
+    146: UNKNOWN3
+    155: UNKNOWN4
+    164: UNKNOWN5
+    173: UNKNOWN6
+    182: UNKNOWN7
+    189: UNKNOWN8
+    211: UNKNOWN9
+    234: UNKNOWN10
+    241: UNKNOWN11
+    289: UNKNOWN12
+    429: UNKNOWN13
+    465: UNKNOWN14
+    485: UNKNOWN15
+    537: UNKNOWN16
+    598: UNKNOWN17
+    630: UNKNOWN18
+    631: UNKNOWN19
+    639: UNKNOWN20
+    743: UNKNOWN21
+    751: UNKNOWN22
+    766: UNKNOWN23
+    780: UNKNOWN24
+    804: UNKNOWN25
+    888: UNKNOWN26
+    890: UNKNOWN27
+    905: UNKNOWN28
+    978: UNKNOWN29
+    992: UNKNOWN30
+    1000: UNKNOWN31
+    1025: UNKNOWN32
   Offset: 0xC02668
 SPAWN_HORIZONTAL:
   Description: Generate Enemies/Butterflies for horizontal area
   Size: 234
   Type: assembly
-  labels:
-    0x2A89: UNKNOWN0
-    0x2A98: UNKNOWN1
-    0x2AA0: UNKNOWN2
-    0x2AAB: UNKNOWN3
-    0x2AB3: UNKNOWN4
-    0x2ABB: UNKNOWN5
-    0x2ACA: UNKNOWN6
-    0x2AD9: UNKNOWN7
-    0x2AE1: UNKNOWN8
-    0x2AF3: UNKNOWN9
-    0x2B2B: UNKNOWN10
-    0x2B34: UNKNOWN11
-    0x2B42: UNKNOWN12
-    0x2B51: UNKNOWN13
-    0x2B53: RETURN
+  Labels:
+    30: UNKNOWN0
+    45: UNKNOWN1
+    53: UNKNOWN2
+    64: UNKNOWN3
+    72: UNKNOWN4
+    80: UNKNOWN5
+    95: UNKNOWN6
+    110: UNKNOWN7
+    118: UNKNOWN8
+    136: UNKNOWN9
+    192: UNKNOWN10
+    201: UNKNOWN11
+    215: UNKNOWN12
+    230: UNKNOWN13
+    232: RETURN
   Offset: 0xC02A6B
 SPAWN_VERTICAL:
   Description: Spawn Enemies/Butterflies for vertical area
   Size: 233
   Type: assembly
-  labels:
-    0x2B74: UNKNOWN0
-    0x2B83: UNKNOWN1
-    0x2B8B: UNKNOWN2
-    0x2B96: UNKNOWN3
-    0x2B9E: UNKNOWN4
-    0x2BA6: UNKNOWN5
-    0x2BB3: UNKNOWN6
-    0x2BC4: UNKNOWN7
-    0x2BCA: UNKNOWN8
-    0x2BDC: UNKNOWN9
-    0x2C14: UNKNOWN10
-    0x2C1D: UNKNOWN11
-    0x2C2B: UNKNOWN12
-    0x2C3A: UNKNOWN13
-    0x2C3C: UNKNOWN14
+  Labels:
+    31: UNKNOWN0
+    46: UNKNOWN1
+    54: UNKNOWN2
+    65: UNKNOWN3
+    73: UNKNOWN4
+    81: UNKNOWN5
+    94: UNKNOWN6
+    111: UNKNOWN7
+    117: UNKNOWN8
+    135: UNKNOWN9
+    191: UNKNOWN10
+    200: UNKNOWN11
+    214: UNKNOWN12
+    229: UNKNOWN13
+    231: UNKNOWN14
   Offset: 0xC02B55
 UNKNOWN_C02C3E:
   Size: 69
   Type: assembly
-  labels:
-    0x2C71: UNKNOWN0
-    0x2C7F: UNKNOWN1
-    0x2C82: UNKNOWN2
+  Labels:
+    51: UNKNOWN0
+    65: UNKNOWN1
+    68: UNKNOWN2
   Offset: 0xC02C3E
 RESET_MUSHROOMIZED_WALKING:
   Description: Reset Mushroomize flag
@@ -3105,17 +3307,17 @@ UNKNOWN_C02C89:
   Description: Mushroomized Walking?
   Size: 160
   Type: assembly
-  labels:
-    0x2CAC: UNKNOWN0
-    0x2D27: UNKNOWN1
+  Labels:
+    35: UNKNOWN0
+    158: UNKNOWN1
   Offset: 0xC02C89
 UNKNOWN_C02D29:
   Description: Magicant?
   Size: 102
   Type: assembly
-  labels:
-    0x2D5D: UNKNOWN0
-    0x2D6F: UNKNOWN1
+  Labels:
+    52: UNKNOWN0
+    70: UNKNOWN1
   Offset: 0xC02D29
 ADJUST_POSITION:
   Description: Adjust position based on velocity
@@ -3294,12 +3496,12 @@ GET_ON_BICYCLE:
 UNKNOWN_C03CFD:
   Size: 173
   Type: assembly
-  labels:
-    0x3D10: UNKNOWN0
-    0x3D25: UNKNOWN1
-    0x3D4D: UNKNOWN2
-    0x3D9F: UNKNOWN3
-    0x3DA8: UNKNOWN4
+  Labels:
+    0x13: ON_BICYCLE
+    0x28: UNKNOWN1
+    0x50: UNKNOWN2
+    0xA2: UNKNOWN3
+    0xAB: RETURN
   Offset: 0xC03CFD
 UNKNOWN_C03DAA:
   Size: 123
@@ -3990,6 +4192,8 @@ UNKNOWN_C064E3:
   labels:
     0x6535: UNKNOWN0
   Offset: 0xC064E3
+  Arguments:
+    A: Unknown
 UNKNOWN_C06537:
   Size: 23
   Type: assembly
@@ -4267,6 +4471,7 @@ UNKNOWN_C072CF:
 UNKNOWN_C073C0:
   Size: 183
   Type: assembly
+  Notes: Appears to be responsible for generating footstep sounds, among other things
   labels:
     0x73D9: UNKNOWN0
     0x73E1: UNKNOWN1
@@ -4479,25 +4684,6 @@ IRQ:
     0x228: UNKNOWN15
     0x23B: UNKNOWN16
   Offset: 0xC0814F
-NMI:
-  Ignore: true
-  Description: NMI Handler
-  Size: 545
-  Type: assembly
-  labels:
-    0x0051: UNKNOWN2
-    0x2017: UNKNOWN3
-    0x0335: UNKNOWN6
-    0x2030: UNKNOWN7
-    0x2050: UNKNOWN8
-    0x2059: UNKNOWN9
-    0x0052: UNKNOWN10
-    0x208E: UNKNOWN11
-    0x0342: UNKNOWN12
-    0x0344: UNKNOWN13
-    0x20B9: UNKNOWN14
-    0x0346: UNKNOWN15
-  Offset: 0xC08170
 UNKNOWN_C08391:
   Size: 39
   Type: assembly
@@ -4538,14 +4724,14 @@ UNKNOWN_C08456:
 UNKNOWN_C08496:
   Size: 107
   Type: assembly
-  labels:
-    0x8498: WAIT_UNTIL_READY
-    0x84A9: UNKNOWN1
-    0x84CC: UNKNOWN2
-    0x84D6: UNKNOWN3
-    0x84DD: UNKNOWN4
-    0x84F9: UNKNOWN5
-    0x8500: UNKNOWN6
+  Labels:
+    2: WAIT_UNTIL_READY
+    19: UNKNOWN1
+    54: UNKNOWN2
+    64: UNKNOWN3
+    71: UNKNOWN4
+    99: UNKNOWN5
+    106: UNKNOWN6
   Offset: 0xC08496
 UNKNOWN_C08501:
   Size: 23
@@ -4587,6 +4773,9 @@ UNKNOWN_C08573:
 UNKNOWN_C085B7:
   Size: 95
   Type: assembly
+  Final State:
+    8 Bit Index: false
+    8 Bit Accum: false
   labels:
     0x85BC: UNKNOWN0
     0x85D9: UNKNOWN1
@@ -4613,6 +4802,11 @@ DECOMP_VRAM:
   Description: Decompress to VRAM
   Size: 127
   Type: assembly
+  Initial State:
+    8 Bit Accum: false
+  Final State:
+    8 Bit Index: false
+    8 Bit Accum: false
   labels:
     0x8671: UNKNOWN0
     0x8677: UNKNOWN1
@@ -4705,6 +4899,7 @@ UNKNOWN_C0886C:
 UNKNOWN_C0887A:
   Size: 17
   Type: assembly
+  Description: $0028 = (A^0xFF)+1, $0029 = X, $002A = X
   Offset: 0xC0887A
 UNKNOWN_C0888B:
   Size: 26
@@ -4835,6 +5030,8 @@ MEMCPY_A:
     A: destination
     X: size
     $0E: source
+  Initial State:
+    8 Bit Index: n
   Size: 27
   Type: assembly
   labels:
@@ -4962,38 +5159,32 @@ UNKNOWN_C090FF:
 UNKNOWN_C0911E:
   Size: 45
   Type: assembly
-  labels:
-    0x9126: UNKNOWN0
-    0x912C: UNKNOWN1
+  Labels:
+    8: UNKNOWN0
+    14: UNKNOWN1
   Offset: 0xC0911E
 DIVISION:
   Size: 49
   Type: assembly
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Description: Divides a number by another number, returns remainder and result
   Arguments:
     A: Divisor
     "Y": Dividend
-  labels:
-    0x9154: DIVIDEND_POSITIVE
-    0x915B: DIVISOR_POSITIVE
-    0x9167: LOOP_BEGIN
-    0x9173: OVERFLOW
+  Labels:
+    9: DIVIDEND_POSITIVE
+    16: DIVISOR_POSITIVE
+    28: LOOP_BEGIN
+    40: OVERFLOW
   Offset: 0xC0914B
-DIVISION_UNSIGNED:
-  Size: 33
-  Type: assembly
-  Ignore: true
-  Description: Divides a number by another number, returns remainder and result
-  Arguments:
-    A: Divisor
-    "Y": Dividend
-  labels:
-    0x9167: LOOP_BEGIN
-    0x9173: OVERFLOW
-  Offset: 0xC0915B
 UNKNOWN_C0917C:
   Size: 103
   Type: assembly
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   labels:
     0x9191: UNKNOWN0
     0x91A6: UNKNOWN1
@@ -5004,21 +5195,27 @@ UNKNOWN_C0917C:
 UNKNOWN_C091E3:
   Size: 17
   Type: assembly
-  labels:
-    0x91F3: UNKNOWN0
+  Labels:
+    16: UNKNOWN0
   Offset: 0xC091E3
 UNKNOWN_C091F4:
   Size: 18
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Type: assembly
-  labels:
-    0x9205: UNKNOWN0
+  Labels:
+    17: UNKNOWN0
   Offset: 0xC091F4
 UNKNOWN_C09206:
   Size: 37
   Type: assembly
-  labels:
-    0x9222: UNKNOWN0
-    0x9228: UNKNOWN1
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
+  Labels:
+    28: UNKNOWN0
+    34: UNKNOWN1
   Offset: 0xC09206
 UNKNOWN_C0922B:
   Size: 6
@@ -5091,6 +5288,9 @@ UNKNOWN_C092F5:
   Offset: 0xC092F5
 UNKNOWN_C0943C:
   Size: 21
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Type: assembly
   labels:
     0x9441: UNKNOWN0
@@ -5677,29 +5877,31 @@ UNKNOWN_C0A384:
 UNKNOWN_C0A3A4:
   Size: 458
   Type: assembly
-  labels:
-    0xA3B4: UNKNOWN0
-    0xA3C6: UNKNOWN1
-    0xA3CB: UNKNOWN2
-    0xA3D3: UNKNOWN3
-    0xA3E0: UNKNOWN4
-    0xA3EB: UNKNOWN5
-    0xA3F8: UNKNOWN6
-    0xA42C: UNKNOWN7
-    0xA468: UNKNOWN8
-    0xA49C: UNKNOWN9
-    0xA4C2: UNKNOWN10
-    0xA4F0: UNKNOWN11
-    0xA4F8: UNKNOWN12
-    0xA501: UNKNOWN13
-    0xA53D: UNKNOWN14
-    0xA559: UNKNOWN15
-    0xA56D: UNKNOWN16
-    0xC08C58: UNKNOWN17
+  Labels:
+    16: UNKNOWN0
+    34: UNKNOWN1
+    39: UNKNOWN2
+    47: UNKNOWN3
+    60: UNKNOWN4
+    71: UNKNOWN5
+    84: UNKNOWN6
+    136: UNKNOWN7
+    196: UNKNOWN8
+    248: UNKNOWN9
+    286: UNKNOWN10
+    332: UNKNOWN11
+    340: UNKNOWN12
+    349: UNKNOWN13
+    409: UNKNOWN14
+    437: UNKNOWN15
+    457: UNKNOWN16
   Offset: 0xC0A3A4
 UNKNOWN_C0A56E:
   Size: 157
   Type: assembly
+  Initial State:
+    8 Bit Accum: false
+    8 Bit Index: false
   labels:
     0xA5CE: UNKNOWN0
     0xA5D2: UNKNOWN1
@@ -5710,7 +5912,10 @@ UNKNOWN_C0A60B:
   Size: 48
   Type: data
   Offset: 0xC0A60B
-UNKNOWN_C0A63B:
+RAND_0-7:
+  Initial State:
+    8 Bit Accum: false
+    8 Bit Index: false
   Size: 8
   Type: assembly
   Offset: 0xC0A63B
@@ -5785,18 +5990,9 @@ UNKNOWN_C0A6DA:
 UNKNOWN_C0A6E3:
   Size: 157
   Type: assembly
-  labels:
-    0xA6FB: UNKNOWN0
-    0xA708: UNKNOWN1
-    0xA717: UNKNOWN2
-    0xA723: UNKNOWN3
-    0xA741: UNKNOWN4
-    0xA750: UNKNOWN5
-    0xA753: UNKNOWN6
-    0xA769: UNKNOWN7
-    0xA776: UNKNOWN8
-    0xA77C: UNKNOWN9
-    0xA77F: UNKNOWN10
+  Initial State:
+    8 Bit Accum: false
+    8 Bit Index: false
   Offset: 0xC0A6E3
 UNKNOWN_C0A780:
   Size: 20
@@ -6272,32 +6468,32 @@ BATTLE_INIT:
   Offset: 0xC0B731
 MAIN_LOOP:
   Description: Main Loop
-  labels:
-    0xB814: LOOP_BEGIN
-    0xB84A: UNKNOWN1
-    0xB855: UNKNOWN2
-    0xB860: UNKNOWN3
-    0xB868: UNKNOWN4
-    0xB876: UNKNOWN5
-    0xB892: UNKNOWN6
-    0xB8AE: DEBUG_PAD2_B_HELD
-    0xB8BA: DEBUG_PAD2_A_HELD
-    0xB8C6: NO_DEBUG
-    0xB8CE: UNKNOWN10
-    0xB8D6: UNKNOWN11
-    0xB8EE: NO_OPEN_MENU
-    0xB904: NO_OPEN_HPPP_DISPLAY
-    0xB912: NO_OPEN_TOWN_MAP
-    0xB920: UNKNOWN15
-    0xB923: UNKNOWN16
-    0xB92C: UNKNOWN17
-    0xB940: UNKNOWN18
-    0xB959: UNKNOWN19
-    0xB95E: UNKNOWN20
-    0xB97A: UNKNOWN21
-    0xB982: DEBUG_CHECKRESET
-    0xB98D: R_HELD
-    0xB998: L_HELD
+  Labels:
+    60: LOOP_BEGIN
+    114: UNKNOWN1
+    125: UNKNOWN2
+    136: UNKNOWN3
+    144: UNKNOWN4
+    158: UNKNOWN5
+    186: UNKNOWN6
+    214: DEBUG_PAD2_B_HELD
+    226: DEBUG_PAD2_A_HELD
+    238: NO_DEBUG
+    246: UNKNOWN10
+    254: UNKNOWN11
+    278: NO_OPEN_MENU
+    300: NO_OPEN_HPPP_DISPLAY
+    314: NO_OPEN_TOWN_MAP
+    328: UNKNOWN15
+    331: UNKNOWN16
+    340: UNKNOWN17
+    360: UNKNOWN18
+    385: UNKNOWN19
+    390: UNKNOWN20
+    418: UNKNOWN21
+    426: DEBUG_CHECKRESET
+    437: R_HELD
+    448: L_HELD
   Size: 450
   Type: assembly
   Offset: 0xC0B7D8
@@ -6920,11 +7116,14 @@ UNKNOWN_C0DD2C:
     0xDD3A: UNKNOWN0
     0xDD4F: UNKNOWN1
   Offset: 0xC0DD2C
-UNKNOWN_C0DD53:
+SET_TELEPORT_STATE:
   Final State:
     8 Bit Accum: false
   Size: 38
   Type: assembly
+  Arguments:
+    A: Destination ID
+    $0E: Style
   Offset: 0xC0DD53
 UNKNOWN_C0DD79:
   Size: 157
@@ -7333,11 +7532,6 @@ UNKNOWN_C0F8C2:
   Type: empty
   Size: 1774
   Offset: 0xC0F8C2
-INTERNAL_HEADER:
-  Type: data
-  Size: 80
-  Description: Internal SNES Header
-  Offset: 0xC0FFB0
 UNKNOWN_C10000:
   Description: Redirect to Hide HP/PP Windows
   Size: 4
@@ -7434,6 +7628,9 @@ CC_13+14:
   Description: Control codes [13] and [14]
   Size: 362
   Type: assembly
+  Arguments:
+    A: Unknown
+    X: Unknown
   labels:
     0x0177: UNKNOWN0
     0x018C: UNKNOWN1
@@ -7658,9 +7855,12 @@ REDIRECT_C10CB6:
   Size: 6
   Type: assembly
   Offset: 0xC10C86
-UNKNOWN_C10C8C:
+REDIRECT_DISPLAY_CONFIG_MENU_TITLE:
   Size: 35
   Type: assembly
+  Arguments:
+    A: Text length
+    $0E: Text pointer
   Offset: 0xC10C8C
 REDIRECT_C437B8:
   Description: Redirect to C437B8
@@ -7725,6 +7925,9 @@ DISPLAY_CONFIG_MENU_TITLE:
   Description: Displays window title for config menus
   Size: 68
   Type: assembly
+  Arguments:
+    A: Text length
+    $0E: Pointer to text
   labels:
     0x0F28: UNKNOWN0
     0x0F33: UNKNOWN1
@@ -7743,13 +7946,15 @@ UNKNOWN_C10FA3:
   Size: 9
   Type: assembly
   Offset: 0xC10FA3
-UNKNOWN_C10FAC:
+CHANGE_CURRENT_WINDOW_FONT:
   Size: 62
   Type: assembly
-  labels:
-    0x0FCE: UNKNOWN0
-    0x0FD3: UNKNOWN1
-    0x0FE8: UNKNOWN2
+  Arguments:
+    A: 'Font ID (0x30: Mr Saturn, 0x31: normal)'
+  Labels:
+    0x22: LOAD_MR_SATURN_FONT_ID
+    0x27: SKIP_MR_SATURN_FONT_ID
+    0x3C: RETURN
   Offset: 0xC10FAC
 UNKNOWN_C10FEA:
   Size: 50
@@ -7889,9 +8094,17 @@ UNKNOWN_C11887:
     0x18D6: UNKNOWN1
     0x18E2: UNKNOWN2
   Offset: 0xC11887
-UNKNOWN_C118E7:
+MOVE_CURSOR:
   Size: 131
   Type: assembly
+  Arguments:
+    A: Unknown
+    X: Unknown
+    'Y': Y axis movement
+    $0E: X axis movement
+    $10: Unknown
+    $12: Unknown
+    $14: Unknown
   labels:
     0x194D: UNKNOWN0
     0x195A: UNKNOWN1
@@ -8223,65 +8436,65 @@ UNKNOWN_C12E42:
 UNKNOWN_C12E63:
   Size: 804
   Type: assembly
-  labels:
-    0x2E79: UNKNOWN0
-    0x2E98: UNKNOWN1
-    0x2EBA: UNKNOWN2
-    0x2EF1: UNKNOWN3
-    0x2EF9: UNKNOWN4
-    0x2F01: UNKNOWN5
-    0x2F09: UNKNOWN6
-    0x2F11: UNKNOWN7
-    0x2F19: UNKNOWN8
-    0x2F21: UNKNOWN9
-    0x2F29: UNKNOWN10
-    0x2F31: UNKNOWN11
-    0x2F39: UNKNOWN12
-    0x2F41: UNKNOWN13
-    0x2F49: UNKNOWN14
-    0x2F51: UNKNOWN15
-    0x2F59: UNKNOWN16
-    0x2F61: UNKNOWN17
-    0x2F69: UNKNOWN18
-    0x2F71: UNKNOWN19
-    0x2F79: UNKNOWN20
-    0x2F81: UNKNOWN21
-    0x2F89: UNKNOWN22
-    0x2F91: UNKNOWN23
-    0x2F99: UNKNOWN24
-    0x2FA1: UNKNOWN25
-    0x2FA4: UNKNOWN26
-    0x2FAB: UNKNOWN27
-    0x2FB2: UNKNOWN28
-    0x2FC5: UNKNOWN29
-    0x2FDA: UNKNOWN30
-    0x2FEF: UNKNOWN31
-    0x3004: UNKNOWN32
-    0x3019: UNKNOWN33
-    0x3020: UNKNOWN34
-    0x3043: UNKNOWN35
-    0x3078: UNKNOWN36
-    0x3086: UNKNOWN37
-    0x3090: UNKNOWN38
-    0x309A: UNKNOWN39
-    0x30AB: UNKNOWN40
-    0x30B5: UNKNOWN41
-    0x30BF: UNKNOWN42
-    0x30C5: UNKNOWN43
-    0x30CB: UNKNOWN44
-    0x30D7: UNKNOWN45
-    0x30E0: UNKNOWN46
-    0x30EC: UNKNOWN47
-    0x30F7: UNKNOWN48
-    0x30FD: UNKNOWN49
-    0x3103: UNKNOWN50
-    0x3117: UNKNOWN51
-    0x3135: UNKNOWN52
-    0x313B: UNKNOWN53
-    0x3155: UNKNOWN54
-    0x315A: UNKNOWN55
-    0x316F: UNKNOWN56
-    0x3175: UNKNOWN57
+  Labels:
+    22: UNKNOWN0
+    53: UNKNOWN1
+    87: UNKNOWN2
+    142: UNKNOWN3
+    150: UNKNOWN4
+    158: UNKNOWN5
+    166: UNKNOWN6
+    174: UNKNOWN7
+    182: UNKNOWN8
+    190: UNKNOWN9
+    198: UNKNOWN10
+    206: UNKNOWN11
+    214: UNKNOWN12
+    222: UNKNOWN13
+    230: UNKNOWN14
+    238: UNKNOWN15
+    246: UNKNOWN16
+    254: UNKNOWN17
+    262: UNKNOWN18
+    270: UNKNOWN19
+    278: UNKNOWN20
+    286: UNKNOWN21
+    294: UNKNOWN22
+    302: UNKNOWN23
+    310: UNKNOWN24
+    318: UNKNOWN25
+    321: UNKNOWN26
+    328: UNKNOWN27
+    335: UNKNOWN28
+    354: UNKNOWN29
+    375: UNKNOWN30
+    396: UNKNOWN31
+    417: UNKNOWN32
+    438: UNKNOWN33
+    445: UNKNOWN34
+    480: UNKNOWN35
+    533: UNKNOWN36
+    547: UNKNOWN37
+    557: UNKNOWN38
+    567: UNKNOWN39
+    584: UNKNOWN40
+    594: UNKNOWN41
+    604: UNKNOWN42
+    610: UNKNOWN43
+    616: UNKNOWN44
+    628: UNKNOWN45
+    637: UNKNOWN46
+    649: UNKNOWN47
+    660: UNKNOWN48
+    666: UNKNOWN49
+    672: UNKNOWN50
+    692: UNKNOWN51
+    722: UNKNOWN52
+    728: UNKNOWN53
+    754: UNKNOWN54
+    759: UNKNOWN55
+    780: UNKNOWN56
+    786: UNKNOWN57
   Offset: 0xC12E63
 UNKNOWN_C13187:
   Size: 180
@@ -8336,102 +8549,102 @@ OPEN_MENU_BUTTON:
   Size: 2042
   Type: assembly
   Labels:
-    0x34CD: UNKNOWN0
-    0x34F3: UNKNOWN1
-    0x34FB: UNKNOWN2
-    0x3503: UNKNOWN3
-    0x350B: UNKNOWN4
-    0x350E: UNKNOWN5
-    0x3526: UNKNOWN6
-    0x3532: UNKNOWN7
-    0x3541: UNKNOWN8
-    0x3544: UNKNOWN9
-    0x3569: UNKNOWN10
-    0x3599: UNKNOWN11
-    0x35C8: UNKNOWN12
-    0x35DC: UNKNOWN13
-    0x35EB: UNKNOWN14
-    0x35FC: UNKNOWN15
-    0x362B: UNKNOWN16
-    0x3648: UNKNOWN17
-    0x3652: UNKNOWN18
-    0x3682: UNKNOWN19
-    0x3684: UNKNOWN20
-    0x3689: UNKNOWN21
-    0x368C: UNKNOWN22
-    0x3699: UNKNOWN23
-    0x36CC: UNKNOWN24
-    0x36E3: UNKNOWN25
-    0x3703: UNKNOWN26
-    0x370C: UNKNOWN27
-    0x3732: UNKNOWN28
-    0x373A: UNKNOWN29
-    0x373D: UNKNOWN30
-    0x3749: UNKNOWN31
-    0x376C: UNKNOWN32
-    0x3777: UNKNOWN33
-    0x3810: UNKNOWN34
-    0x385C: UNKNOWN35
-    0x3874: UNKNOWN36
-    0x38DC: UNKNOWN37
-    0x38FD: UNKNOWN38
-    0x3902: UNKNOWN39
-    0x3912: UNKNOWN40
-    0x392A: UNKNOWN41
-    0x3946: UNKNOWN42
-    0x394B: UNKNOWN43
-    0x39AC: UNKNOWN44
-    0x39B4: UNKNOWN45
-    0x39BC: UNKNOWN46
-    0x39C4: UNKNOWN47
-    0x39CC: UNKNOWN48
-    0x39D4: UNKNOWN49
-    0x39DC: UNKNOWN50
-    0x39DF: UNKNOWN51
-    0x3A03: UNKNOWN52
-    0x3A14: UNKNOWN53
-    0x3A25: UNKNOWN54
-    0x3A49: UNKNOWN55
-    0x3A6D: UNKNOWN56
-    0x3A90: UNKNOWN57
-    0x3AA0: UNKNOWN58
-    0x3AB0: UNKNOWN59
-    0x3AD3: UNKNOWN60
-    0x3AF6: UNKNOWN61
-    0x3AF8: UNKNOWN62
-    0x3B10: UNKNOWN63
-    0x3B62: UNKNOWN64
-    0x3B80: UNKNOWN65
-    0x3B89: UNKNOWN66
-    0x3B94: UNKNOWN67
-    0x3B9F: UNKNOWN68
-    0x3BAD: UNKNOWN69
-    0x3BC1: UNKNOWN70
-    0x3BCF: UNKNOWN71
-    0x3BE7: UNKNOWN72
-    0x3BF3: UNKNOWN73
-    0x3C01: UNKNOWN74
-    0x3C16: UNKNOWN75
-    0x3C5D: UNKNOWN76
-    0x78B: CHECKTALK
-    0x3C6D: UNKNOWN77
-    0x3C79: UNKNOWN78
-    0x3C8F: UNKNOWN79
+    38: UNKNOWN0
+    76: UNKNOWN1
+    84: UNKNOWN2
+    92: UNKNOWN3
+    100: UNKNOWN4
+    103: UNKNOWN5
+    127: UNKNOWN6
+    139: UNKNOWN7
+    154: UNKNOWN8
+    157: UNKNOWN9
+    194: UNKNOWN10
+    242: UNKNOWN11
+    289: UNKNOWN12
+    309: UNKNOWN13
+    324: UNKNOWN14
+    341: UNKNOWN15
+    388: UNKNOWN16
+    417: UNKNOWN17
+    427: UNKNOWN18
+    475: UNKNOWN19
+    477: UNKNOWN20
+    482: UNKNOWN21
+    485: UNKNOWN22
+    498: UNKNOWN23
+    549: UNKNOWN24
+    572: UNKNOWN25
+    604: UNKNOWN26
+    613: UNKNOWN27
+    651: UNKNOWN28
+    659: UNKNOWN29
+    662: UNKNOWN30
+    674: UNKNOWN31
+    709: UNKNOWN32
+    720: UNKNOWN33
+    873: UNKNOWN34
+    949: UNKNOWN35
+    973: UNKNOWN36
+    1077: UNKNOWN37
+    1110: UNKNOWN38
+    1115: UNKNOWN39
+    1131: UNKNOWN40
+    1155: UNKNOWN41
+    1183: UNKNOWN42
+    1188: UNKNOWN43
+    1285: UNKNOWN44
+    1293: UNKNOWN45
+    1301: UNKNOWN46
+    1309: UNKNOWN47
+    1317: UNKNOWN48
+    1325: UNKNOWN49
+    1333: UNKNOWN50
+    1336: UNKNOWN51
+    1372: UNKNOWN52
+    1389: UNKNOWN53
+    1406: UNKNOWN54
+    1442: UNKNOWN55
+    1478: UNKNOWN56
+    1513: UNKNOWN57
+    1529: UNKNOWN58
+    1545: UNKNOWN59
+    1580: UNKNOWN60
+    1615: UNKNOWN61
+    1617: UNKNOWN62
+    1641: UNKNOWN63
+    1723: UNKNOWN64
+    1753: UNKNOWN65
+    1762: UNKNOWN66
+    1773: UNKNOWN67
+    1784: UNKNOWN68
+    1798: UNKNOWN69
+    1818: UNKNOWN70
+    1832: UNKNOWN71
+    1856: UNKNOWN72
+    1868: UNKNOWN73
+    1882: UNKNOWN74
+    1903: UNKNOWN75
+    1931: CHECKTALK
+    1974: UNKNOWN76
+    1990: UNKNOWN77
+    2002: UNKNOWN78
+    2024: UNKNOWN79
 OPEN_HPPP_DISPLAY:
   Description: (B/Select) Open HP/PP Display
   Size: 68
   Type: assembly
-  labels:
-    0x3CB1: UNKNOWN0
-    0x3CC3: UNKNOWN1
-    0x3CE4: UNKNOWN2
+  Labels:
+    16: UNKNOWN0
+    34: UNKNOWN1
+    67: UNKNOWN2
   Offset: 0xC13CA1
 SHOW_TOWN_MAP:
   Description: (X) Display Town Map
   Size: 30
   Type: assembly
-  labels:
-    0x3D02: UNKNOWN0
+  Labels:
+    29: NO_TOWN_MAP
   Offset: 0xC13CE5
 UNKNOWN_C13D03:
   Size: 267
@@ -10221,304 +10434,304 @@ CC_1C_TREE:
   Description: 'Text system: [1C] comparison tree'
   Size: 381
   Type: assembly
-  labels:
-    0x7DA4: UNKNOWN0
-    0x7DAC: UNKNOWN1
-    0x7DB4: UNKNOWN2
-    0x7DBC: UNKNOWN3
-    0x7DC4: UNKNOWN4
-    0x7DCC: UNKNOWN5
-    0x7DD4: UNKNOWN6
-    0x7DDC: UNKNOWN7
-    0x7DE4: UNKNOWN8
-    0x7DEC: UNKNOWN9
-    0x7DF4: UNKNOWN10
-    0x7DFC: UNKNOWN11
-    0x7E04: UNKNOWN12
-    0x7E0C: UNKNOWN13
-    0x7E14: UNKNOWN14
-    0x7E1C: UNKNOWN15
-    0x7E24: UNKNOWN16
-    0x7E2C: UNKNOWN17
-    0x7E34: UNKNOWN18
-    0x7E3C: UNKNOWN19
-    0x7E44: UNKNOWN20
-    0x7E47: UNKNOWN21
-    0x7E4D: UNKNOWN22
-    0x7E53: UNKNOWN23
-    0x7E59: UNKNOWN24
-    0x7E5F: UNKNOWN25
-    0x7E65: UNKNOWN26
-    0x7E6B: UNKNOWN27
-    0x7E71: UNKNOWN28
-    0x7E77: UNKNOWN29
-    0x7E7D: UNKNOWN30
-    0x7E83: UNKNOWN31
-    0x7E89: UNKNOWN32
-    0x7E8F: UNKNOWN33
-    0x7E95: UNKNOWN34
-    0x7E9A: UNKNOWN35
-    0x7E9F: UNKNOWN36
-    0x7EC6: UNKNOWN37
-    0x7EED: UNKNOWN38
-    0x7EFD: UNKNOWN39
-    0x7F02: UNKNOWN40
-    0x7F07: UNKNOWN41
-    0x7F0C: UNKNOWN42
-    0x7F0F: UNKNOWN43
+  Labels:
+    16: UNKNOWN0
+    24: UNKNOWN1
+    32: UNKNOWN2
+    40: UNKNOWN3
+    48: UNKNOWN4
+    56: UNKNOWN5
+    64: UNKNOWN6
+    72: UNKNOWN7
+    80: UNKNOWN8
+    88: UNKNOWN9
+    96: UNKNOWN10
+    104: UNKNOWN11
+    112: UNKNOWN12
+    120: UNKNOWN13
+    128: UNKNOWN14
+    136: UNKNOWN15
+    144: UNKNOWN16
+    152: UNKNOWN17
+    160: UNKNOWN18
+    168: UNKNOWN19
+    176: UNKNOWN20
+    179: UNKNOWN21
+    185: UNKNOWN22
+    191: UNKNOWN23
+    197: UNKNOWN24
+    203: UNKNOWN25
+    209: UNKNOWN26
+    215: UNKNOWN27
+    221: UNKNOWN28
+    227: UNKNOWN29
+    233: UNKNOWN30
+    239: UNKNOWN31
+    245: UNKNOWN32
+    251: UNKNOWN33
+    257: UNKNOWN34
+    262: UNKNOWN35
+    267: UNKNOWN36
+    306: UNKNOWN37
+    345: UNKNOWN38
+    361: UNKNOWN39
+    366: UNKNOWN40
+    371: UNKNOWN41
+    376: UNKNOWN42
+    379: UNKNOWN43
   Offset: 0xC17D94
 CC_1D_TREE:
   Description: 'Text system: [1D] comparison tree'
   Size: 526
   Type: assembly
-  labels:
-    0x7F21: UNKNOWN0
-    0x7F29: UNKNOWN1
-    0x7F31: UNKNOWN2
-    0x7F39: UNKNOWN3
-    0x7F41: UNKNOWN4
-    0x7F49: UNKNOWN5
-    0x7F51: UNKNOWN6
-    0x7F59: UNKNOWN7
-    0x7F61: UNKNOWN8
-    0x7F69: UNKNOWN9
-    0x7F71: UNKNOWN10
-    0x7F79: UNKNOWN11
-    0x7F81: UNKNOWN12
-    0x7F89: UNKNOWN13
-    0x7F91: UNKNOWN14
-    0x7F99: UNKNOWN15
-    0x7FA1: UNKNOWN16
-    0x7FA9: UNKNOWN17
-    0x7FB1: UNKNOWN18
-    0x7FB9: UNKNOWN19
-    0x7FC1: UNKNOWN20
-    0x7FC9: UNKNOWN21
-    0x7FD1: UNKNOWN22
-    0x7FD9: UNKNOWN23
-    0x7FE1: UNKNOWN24
-    0x7FE9: UNKNOWN25
-    0x7FF1: UNKNOWN26
-    0x7FF9: UNKNOWN27
-    0x8001: UNKNOWN28
-    0x8009: UNKNOWN29
-    0x800C: UNKNOWN30
-    0x8012: UNKNOWN31
-    0x8018: UNKNOWN32
-    0x801E: UNKNOWN33
-    0x8024: UNKNOWN34
-    0x802A: UNKNOWN35
-    0x8030: UNKNOWN36
-    0x8036: UNKNOWN37
-    0x803C: UNKNOWN38
-    0x8042: UNKNOWN39
-    0x8048: UNKNOWN40
-    0x804E: UNKNOWN41
-    0x8054: UNKNOWN42
-    0x805A: UNKNOWN43
-    0x8060: UNKNOWN44
-    0x8066: UNKNOWN45
-    0x806C: UNKNOWN46
-    0x8072: UNKNOWN47
-    0x8078: UNKNOWN48
-    0x807E: UNKNOWN49
-    0x8084: UNKNOWN50
-    0x808A: UNKNOWN51
-    0x8090: UNKNOWN52
-    0x8096: UNKNOWN53
-    0x809C: UNKNOWN54
-    0x80A2: UNKNOWN55
-    0x80BF: UNKNOWN56
-    0x80CA: UNKNOWN57
-    0x80D7: UNKNOWN58
-    0x80DC: UNKNOWN59
-    0x80F8: UNKNOWN60
-    0x8103: UNKNOWN61
-    0x8110: UNKNOWN62
-    0x8115: UNKNOWN63
-    0x811A: UNKNOWN64
-    0x811D: UNKNOWN65
+  Labels:
+    16: UNKNOWN0
+    24: UNKNOWN1
+    32: UNKNOWN2
+    40: UNKNOWN3
+    48: UNKNOWN4
+    56: UNKNOWN5
+    64: UNKNOWN6
+    72: UNKNOWN7
+    80: UNKNOWN8
+    88: UNKNOWN9
+    96: UNKNOWN10
+    104: UNKNOWN11
+    112: UNKNOWN12
+    120: UNKNOWN13
+    128: UNKNOWN14
+    136: UNKNOWN15
+    144: UNKNOWN16
+    152: UNKNOWN17
+    160: UNKNOWN18
+    168: UNKNOWN19
+    176: UNKNOWN20
+    184: UNKNOWN21
+    192: UNKNOWN22
+    200: UNKNOWN23
+    208: UNKNOWN24
+    216: UNKNOWN25
+    224: UNKNOWN26
+    232: UNKNOWN27
+    240: UNKNOWN28
+    248: UNKNOWN29
+    251: UNKNOWN30
+    257: UNKNOWN31
+    263: UNKNOWN32
+    269: UNKNOWN33
+    275: UNKNOWN34
+    281: UNKNOWN35
+    287: UNKNOWN36
+    293: UNKNOWN37
+    299: UNKNOWN38
+    305: UNKNOWN39
+    311: UNKNOWN40
+    317: UNKNOWN41
+    323: UNKNOWN42
+    329: UNKNOWN43
+    335: UNKNOWN44
+    341: UNKNOWN45
+    347: UNKNOWN46
+    353: UNKNOWN47
+    359: UNKNOWN48
+    365: UNKNOWN49
+    371: UNKNOWN50
+    377: UNKNOWN51
+    383: UNKNOWN52
+    389: UNKNOWN53
+    395: UNKNOWN54
+    401: UNKNOWN55
+    430: UNKNOWN56
+    441: UNKNOWN57
+    454: UNKNOWN58
+    459: UNKNOWN59
+    487: UNKNOWN60
+    498: UNKNOWN61
+    511: UNKNOWN62
+    516: UNKNOWN63
+    521: UNKNOWN64
+    524: UNKNOWN65
   Offset: 0xC17F11
 CC_1E_TREE:
   Description: 'Text system: [1E] comparison tree'
   Size: 156
   Type: assembly
-  labels:
-    0x816C: UNKNOWN0
-    0x8171: UNKNOWN1
-    0x8176: UNKNOWN2
-    0x817B: UNKNOWN3
-    0x8180: UNKNOWN4
-    0x8185: UNKNOWN5
-    0x818A: UNKNOWN6
-    0x818F: UNKNOWN7
-    0x8194: UNKNOWN8
-    0x8199: UNKNOWN9
-    0x819E: UNKNOWN10
-    0x81A3: UNKNOWN11
-    0x81A8: UNKNOWN12
-    0x81AD: UNKNOWN13
-    0x81B2: UNKNOWN14
-    0x81B7: UNKNOWN15
-    0x81BA: UNKNOWN16
+  Labels:
+    77: UNKNOWN0
+    82: UNKNOWN1
+    87: UNKNOWN2
+    92: UNKNOWN3
+    97: UNKNOWN4
+    102: UNKNOWN5
+    107: UNKNOWN6
+    112: UNKNOWN7
+    117: UNKNOWN8
+    122: UNKNOWN9
+    127: UNKNOWN10
+    132: UNKNOWN11
+    137: UNKNOWN12
+    142: UNKNOWN13
+    147: UNKNOWN14
+    152: UNKNOWN15
+    155: UNKNOWN16
   Offset: 0xC1811F
 CC_1F_TREE:
   Description: 'Text system: [1F] comparison tree'
   Size: 1202
   Type: assembly
-  labels:
-    0x81CB: UNKNOWN0
-    0x81D3: UNKNOWN1
-    0x81DB: UNKNOWN2
-    0x81E3: UNKNOWN3
-    0x81EB: UNKNOWN4
-    0x81F3: UNKNOWN5
-    0x81FB: UNKNOWN6
-    0x8203: UNKNOWN7
-    0x820B: UNKNOWN8
-    0x8213: UNKNOWN9
-    0x821B: UNKNOWN10
-    0x8223: UNKNOWN11
-    0x822B: UNKNOWN12
-    0x8233: UNKNOWN13
-    0x823B: UNKNOWN14
-    0x8243: UNKNOWN15
-    0x824B: UNKNOWN16
-    0x8253: UNKNOWN17
-    0x825B: UNKNOWN18
-    0x8263: UNKNOWN19
-    0x826B: UNKNOWN20
-    0x8273: UNKNOWN21
-    0x827B: UNKNOWN22
-    0x8283: UNKNOWN23
-    0x828B: UNKNOWN24
-    0x8293: UNKNOWN25
-    0x829B: UNKNOWN26
-    0x82A3: UNKNOWN27
-    0x82AB: UNKNOWN28
-    0x82B3: UNKNOWN29
-    0x82BB: UNKNOWN30
-    0x82C3: UNKNOWN31
-    0x82CB: UNKNOWN32
-    0x82D3: UNKNOWN33
-    0x82DB: UNKNOWN34
-    0x82E3: UNKNOWN35
-    0x82EB: UNKNOWN36
-    0x82F3: UNKNOWN37
-    0x82FB: UNKNOWN38
-    0x8303: UNKNOWN39
-    0x830B: UNKNOWN40
-    0x8313: UNKNOWN41
-    0x831B: UNKNOWN42
-    0x8323: UNKNOWN43
-    0x832B: UNKNOWN44
-    0x8333: UNKNOWN45
-    0x833B: UNKNOWN46
-    0x8343: UNKNOWN47
-    0x834B: UNKNOWN48
-    0x8353: UNKNOWN49
-    0x835B: UNKNOWN50
-    0x8363: UNKNOWN51
-    0x836B: UNKNOWN52
-    0x8373: UNKNOWN53
-    0x837B: UNKNOWN54
-    0x8383: UNKNOWN55
-    0x838B: UNKNOWN56
-    0x8393: UNKNOWN57
-    0x839B: UNKNOWN58
-    0x83A3: UNKNOWN59
-    0x83AB: UNKNOWN60
-    0x83B3: UNKNOWN61
-    0x83BB: UNKNOWN62
-    0x83C3: UNKNOWN63
-    0x83CB: UNKNOWN64
-    0x83D3: UNKNOWN65
-    0x83DB: UNKNOWN66
-    0x83E3: UNKNOWN67
-    0x83EB: UNKNOWN68
-    0x83F3: UNKNOWN69
-    0x83FB: UNKNOWN70
-    0x8403: UNKNOWN71
-    0x840B: UNKNOWN72
-    0x8413: UNKNOWN73
-    0x8416: UNKNOWN74
-    0x841C: UNKNOWN75
-    0x8422: UNKNOWN76
-    0x8428: UNKNOWN77
-    0x8436: UNKNOWN78
-    0x843C: UNKNOWN79
-    0x8446: UNKNOWN80
-    0x8450: UNKNOWN81
-    0x8456: UNKNOWN82
-    0x845C: UNKNOWN83
-    0x8462: UNKNOWN84
-    0x8468: UNKNOWN85
-    0x846E: UNKNOWN86
-    0x8474: UNKNOWN87
-    0x847A: UNKNOWN88
-    0x8480: UNKNOWN89
-    0x8486: UNKNOWN90
-    0x848C: UNKNOWN91
-    0x8492: UNKNOWN92
-    0x8498: UNKNOWN93
-    0x849E: UNKNOWN94
-    0x84A4: UNKNOWN95
-    0x84AA: UNKNOWN96
-    0x84B0: UNKNOWN97
-    0x84B6: UNKNOWN98
-    0x84BC: UNKNOWN99
-    0x84C2: UNKNOWN100
-    0x84C8: UNKNOWN101
-    0x84CE: UNKNOWN102
-    0x84D4: UNKNOWN103
-    0x84DA: UNKNOWN104
-    0x84E0: UNKNOWN105
-    0x84E6: UNKNOWN106
-    0x84EC: UNKNOWN107
-    0x84F2: UNKNOWN108
-    0x84F8: UNKNOWN109
-    0x84FE: UNKNOWN110
-    0x8505: UNKNOWN111
-    0x850C: UNKNOWN112
-    0x8512: UNKNOWN113
-    0x8518: UNKNOWN114
-    0x8527: UNKNOWN115
-    0x852E: UNKNOWN116
-    0x853B: UNKNOWN117
-    0x8582: UNKNOWN118
-    0x8588: UNKNOWN119
-    0x858E: UNKNOWN120
-    0x8594: UNKNOWN121
-    0x85A9: UNKNOWN122
-    0x85B3: UNKNOWN123
-    0x85BD: UNKNOWN124
-    0x85CC: UNKNOWN125
-    0x85DA: UNKNOWN126
-    0x85E1: UNKNOWN127
-    0x85E7: UNKNOWN128
-    0x85ED: UNKNOWN129
-    0x8602: UNKNOWN130
-    0x8607: UNKNOWN131
-    0x860C: UNKNOWN132
-    0x8611: UNKNOWN133
-    0x8616: UNKNOWN134
-    0x861B: UNKNOWN135
-    0x8620: UNKNOWN136
-    0x8625: UNKNOWN137
-    0x862A: UNKNOWN138
-    0x862F: UNKNOWN139
-    0x8634: UNKNOWN140
-    0x8639: UNKNOWN141
-    0x863E: UNKNOWN142
-    0x8644: UNKNOWN143
-    0x8649: UNKNOWN144
-    0x864E: UNKNOWN145
-    0x8654: UNKNOWN146
-    0x8659: UNKNOWN147
-    0x865E: UNKNOWN148
-    0x8663: UNKNOWN149
-    0x8668: UNKNOWN150
-    0x866B: UNKNOWN151
+  Labels:
+    16: UNKNOWN0
+    24: UNKNOWN1
+    32: UNKNOWN2
+    40: UNKNOWN3
+    48: UNKNOWN4
+    56: UNKNOWN5
+    64: UNKNOWN6
+    72: UNKNOWN7
+    80: UNKNOWN8
+    88: UNKNOWN9
+    96: UNKNOWN10
+    104: UNKNOWN11
+    112: UNKNOWN12
+    120: UNKNOWN13
+    128: UNKNOWN14
+    136: UNKNOWN15
+    144: UNKNOWN16
+    152: UNKNOWN17
+    160: UNKNOWN18
+    168: UNKNOWN19
+    176: UNKNOWN20
+    184: UNKNOWN21
+    192: UNKNOWN22
+    200: UNKNOWN23
+    208: UNKNOWN24
+    216: UNKNOWN25
+    224: UNKNOWN26
+    232: UNKNOWN27
+    240: UNKNOWN28
+    248: UNKNOWN29
+    256: UNKNOWN30
+    264: UNKNOWN31
+    272: UNKNOWN32
+    280: UNKNOWN33
+    288: UNKNOWN34
+    296: UNKNOWN35
+    304: UNKNOWN36
+    312: UNKNOWN37
+    320: UNKNOWN38
+    328: UNKNOWN39
+    336: UNKNOWN40
+    344: UNKNOWN41
+    352: UNKNOWN42
+    360: UNKNOWN43
+    368: UNKNOWN44
+    376: UNKNOWN45
+    384: UNKNOWN46
+    392: UNKNOWN47
+    400: UNKNOWN48
+    408: UNKNOWN49
+    416: UNKNOWN50
+    424: UNKNOWN51
+    432: UNKNOWN52
+    440: UNKNOWN53
+    448: UNKNOWN54
+    456: UNKNOWN55
+    464: UNKNOWN56
+    472: UNKNOWN57
+    480: UNKNOWN58
+    488: UNKNOWN59
+    496: UNKNOWN60
+    504: UNKNOWN61
+    512: UNKNOWN62
+    520: UNKNOWN63
+    528: UNKNOWN64
+    536: UNKNOWN65
+    544: UNKNOWN66
+    552: UNKNOWN67
+    560: UNKNOWN68
+    568: UNKNOWN69
+    576: UNKNOWN70
+    584: UNKNOWN71
+    592: UNKNOWN72
+    600: UNKNOWN73
+    603: UNKNOWN74
+    609: UNKNOWN75
+    615: UNKNOWN76
+    621: UNKNOWN77
+    635: UNKNOWN78
+    641: UNKNOWN79
+    651: UNKNOWN80
+    661: UNKNOWN81
+    667: UNKNOWN82
+    673: UNKNOWN83
+    679: UNKNOWN84
+    685: UNKNOWN85
+    691: UNKNOWN86
+    697: UNKNOWN87
+    703: UNKNOWN88
+    709: UNKNOWN89
+    715: UNKNOWN90
+    721: UNKNOWN91
+    727: UNKNOWN92
+    733: UNKNOWN93
+    739: UNKNOWN94
+    745: UNKNOWN95
+    751: UNKNOWN96
+    757: UNKNOWN97
+    763: UNKNOWN98
+    769: UNKNOWN99
+    775: UNKNOWN100
+    781: UNKNOWN101
+    787: UNKNOWN102
+    793: UNKNOWN103
+    799: UNKNOWN104
+    805: UNKNOWN105
+    811: UNKNOWN106
+    817: UNKNOWN107
+    823: UNKNOWN108
+    829: UNKNOWN109
+    835: UNKNOWN110
+    842: UNKNOWN111
+    849: UNKNOWN112
+    855: UNKNOWN113
+    861: UNKNOWN114
+    876: UNKNOWN115
+    883: UNKNOWN116
+    896: UNKNOWN117
+    967: UNKNOWN118
+    973: UNKNOWN119
+    979: UNKNOWN120
+    985: UNKNOWN121
+    1006: UNKNOWN122
+    1016: UNKNOWN123
+    1026: UNKNOWN124
+    1041: UNKNOWN125
+    1055: UNKNOWN126
+    1062: UNKNOWN127
+    1068: UNKNOWN128
+    1074: UNKNOWN129
+    1095: UNKNOWN130
+    1100: UNKNOWN131
+    1105: UNKNOWN132
+    1110: UNKNOWN133
+    1115: UNKNOWN134
+    1120: UNKNOWN135
+    1125: UNKNOWN136
+    1130: UNKNOWN137
+    1135: UNKNOWN138
+    1140: UNKNOWN139
+    1145: UNKNOWN140
+    1150: UNKNOWN141
+    1155: UNKNOWN142
+    1161: UNKNOWN143
+    1166: UNKNOWN144
+    1171: UNKNOWN145
+    1177: UNKNOWN146
+    1182: UNKNOWN147
+    1187: UNKNOWN148
+    1192: UNKNOWN149
+    1197: UNKNOWN150
+    1200: UNKNOWN151
   Offset: 0xC181BB
 UNKNOWN_C1866D:
   Size: 48
@@ -10537,82 +10750,82 @@ DISPLAY_TEXT:
   Description: Display Text at ($0E+10)
   Size: 1147
   Type: assembly
-  labels:
-    0x870A: UNKNOWN0
-    0x871F: UNKNOWN1
-    0x8754: UNKNOWN2
-    0x8784: UNKNOWN3
-    0x8787: UNKNOWN4
-    0x87A7: UNKNOWN5
-    0x87CC: UNKNOWN6
-    0x87ED: UNKNOWN7
-    0x8801: UNKNOWN8
-    0x8804: COMPRESSION_BANK_ONE
-    0x885E: COMPRESSION_BANK_TWO
-    0x88B7: COMPRESSION_BANK_THREE
-    0x890E: UNKNOWN12
-    0x8916: UNKNOWN13
-    0x8921: UNKNOWN14
-    0x8929: UNKNOWN15
-    0x8931: UNKNOWN16
-    0x8939: UNKNOWN17
-    0x8941: UNKNOWN18
-    0x8949: UNKNOWN19
-    0x8951: UNKNOWN20
-    0x8959: UNKNOWN21
-    0x8961: UNKNOWN22
-    0x8969: UNKNOWN23
-    0x8971: UNKNOWN24
-    0x8979: UNKNOWN25
-    0x8981: UNKNOWN26
-    0x8989: UNKNOWN27
-    0x8991: UNKNOWN28
-    0x8999: UNKNOWN29
-    0x89A1: UNKNOWN30
-    0x89A9: UNKNOWN31
-    0x89B1: UNKNOWN32
-    0x89B9: UNKNOWN33
-    0x89C1: UNKNOWN34
-    0x89C9: UNKNOWN35
-    0x89D1: UNKNOWN36
-    0x89D9: UNKNOWN37
-    0x89E1: UNKNOWN38
-    0x89E9: UNKNOWN39
-    0x89F1: UNKNOWN40
-    0x89F9: UNKNOWN41
-    0x8A01: UNKNOWN42
-    0x8A04: UNKNOWN43
-    0x8A0B: UNKNOWN44
-    0x8A16: UNKNOWN45
-    0x8A1D: UNKNOWN46
-    0x8A29: UNKNOWN47
-    0x8A31: UNKNOWN48
-    0x8A39: UNKNOWN49
-    0x8A41: UNKNOWN50
-    0x8A49: UNKNOWN51
-    0x8A51: UNKNOWN52
-    0x8A59: UNKNOWN53
-    0x8A61: UNKNOWN54
-    0x8A69: UNKNOWN55
-    0x8A71: UNKNOWN56
-    0x8A79: UNKNOWN57
-    0x8A81: UNKNOWN58
-    0x8A87: UNKNOWN59
-    0x8A8F: UNKNOWN60
-    0x8AAA: UNKNOWN61
-    0x8AB0: UNKNOWN62
-    0x8ABA: UNKNOWN63
-    0x8AC4: UNKNOWN64
-    0x8ACC: UNKNOWN65
-    0x8AD4: UNKNOWN66
-    0x8ADC: UNKNOWN67
-    0x8AE4: UNKNOWN68
-    0x8AEC: UNKNOWN69
-    0x8AF4: UNKNOWN70
-    0x8AFC: UNKNOWN71
-    0x8B04: UNKNOWN72
-    0x8B0A: UNKNOWN73
-    0x8B2A: UNKNOWN74
+  Labels:
+    89: UNKNOWN0
+    110: UNKNOWN1
+    163: UNKNOWN2
+    211: UNKNOWN3
+    214: UNKNOWN4
+    246: UNKNOWN5
+    283: UNKNOWN6
+    316: UNKNOWN7
+    336: UNKNOWN8
+    339: COMPRESSION_BANK_ONE
+    429: COMPRESSION_BANK_TWO
+    518: COMPRESSION_BANK_THREE
+    605: UNKNOWN12
+    613: UNKNOWN13
+    624: UNKNOWN14
+    632: UNKNOWN15
+    640: UNKNOWN16
+    648: UNKNOWN17
+    656: UNKNOWN18
+    664: UNKNOWN19
+    672: UNKNOWN20
+    680: UNKNOWN21
+    688: UNKNOWN22
+    696: UNKNOWN23
+    704: UNKNOWN24
+    712: UNKNOWN25
+    720: UNKNOWN26
+    728: UNKNOWN27
+    736: UNKNOWN28
+    744: UNKNOWN29
+    752: UNKNOWN30
+    760: UNKNOWN31
+    768: UNKNOWN32
+    776: UNKNOWN33
+    784: UNKNOWN34
+    792: UNKNOWN35
+    800: UNKNOWN36
+    808: UNKNOWN37
+    816: UNKNOWN38
+    824: UNKNOWN39
+    832: UNKNOWN40
+    840: UNKNOWN41
+    848: UNKNOWN42
+    851: UNKNOWN43
+    858: UNKNOWN44
+    869: UNKNOWN45
+    876: UNKNOWN46
+    888: UNKNOWN47
+    896: UNKNOWN48
+    904: UNKNOWN49
+    912: UNKNOWN50
+    920: UNKNOWN51
+    928: UNKNOWN52
+    936: UNKNOWN53
+    944: UNKNOWN54
+    952: UNKNOWN55
+    960: UNKNOWN56
+    968: UNKNOWN57
+    976: UNKNOWN58
+    982: UNKNOWN59
+    990: UNKNOWN60
+    1017: UNKNOWN61
+    1023: UNKNOWN62
+    1033: UNKNOWN63
+    1043: UNKNOWN64
+    1051: UNKNOWN65
+    1059: UNKNOWN66
+    1067: UNKNOWN67
+    1075: UNKNOWN68
+    1083: UNKNOWN69
+    1091: UNKNOWN70
+    1099: UNKNOWN71
+    1107: UNKNOWN72
+    1113: UNKNOWN73
+    1145: UNKNOWN74
   Offset: 0xC186B1
 GIVE_ITEM_TO_SPECIFIC_CHARACTER:
   Description: Give item to character (one)
@@ -10943,8 +11156,10 @@ UNKNOWN_C19DB5:
   Offset: 0xC19DB5
 GET_ITEM_TYPE:
   Description: Return the type of an item
-  argument:
+  Arguments:
     A: Item ID
+  Return Values:
+    A: Item Type
   Size: 67
   Type: assembly
   labels:
@@ -11321,48 +11536,51 @@ GET_OFF_BICYCLE:
 UNKNOWN_C1BEFC:
   Size: 330
   Type: assembly
-  labels:
-    0xBF06: UNKNOWN0
-    0xBF0E: UNKNOWN1
-    0xBF16: UNKNOWN2
-    0xBF1E: UNKNOWN3
-    0xBF26: UNKNOWN4
-    0xBF2E: UNKNOWN5
-    0xBF36: UNKNOWN6
-    0xBF3E: UNKNOWN7
-    0xBF46: UNKNOWN8
-    0xBF4E: UNKNOWN9
-    0xBF56: UNKNOWN10
-    0xBF5E: UNKNOWN11
-    0xBF66: UNKNOWN12
-    0xBF6E: UNKNOWN13
-    0xBF76: UNKNOWN14
-    0xBF7E: UNKNOWN15
-    0xBF86: UNKNOWN16
-    0xBF8E: UNKNOWN17
-    0xBF91: UNKNOWN18
-    0xBF9B: UNKNOWN19
-    0xBFA5: UNKNOWN20
-    0xBFAF: UNKNOWN21
-    0xBFB9: UNKNOWN22
-    0xBFC3: UNKNOWN23
-    0xBFD0: UNKNOWN24
-    0xBFD6: UNKNOWN25
-    0xBFDC: UNKNOWN26
-    0xBFE5: UNKNOWN27
-    0xBFEE: UNKNOWN28
-    0xBFF4: UNKNOWN29
-    0xBFFA: UNKNOWN30
-    0xC002: UNKNOWN31
-    0xC00A: UNKNOWN32
-    0xC00F: UNKNOWN33
-    0xC015: UNKNOWN34
-    0xC01C: UNKNOWN35
-    0xC025: UNKNOWN36
-    0xC02A: UNKNOWN37
-    0xC03B: UNKNOWN38
-    0xC040: UNKNOWN39
-    0xC045: UNKNOWN40
+  Labels:
+    0xA: NOT_1F4101
+    0x12: NOT_1F4102
+    0x1A: NOT_1F4103
+    0x22: NOT_1F4104
+    0x2A: NOT_1F4105
+    0x32: NOT_1F4106
+    0x3A: NOT_1F4107
+    0x42: NOT_1F4108
+    0x4A: NOT_1F4109
+    0x52: NOT_1F410A
+    0x5A: NOT_1F410B
+    0x62: NOT_1F410C
+    0x6A: NOT_1F410D
+    0x72: NOT_1F410E
+    0x7A: NOT_1F410F
+    0x82: NOT_1F4110
+    0x8A: NOT_1F4111
+    0x92: NOT_1F4112
+    0x95: 1F4101_COFFEESCENE
+    0x9F: 1F4102_TEASCENE
+    0xA9: 1F4103_REGISTERREALNAME
+    0xB3: 1F4104_REGISTERREALNAME2
+    0xBD: 1F4105
+    0xC7: 1F4106
+    0xD4: 1F4107_TOWNMAP
+    0xDA: 1F4108
+    0xE0: 1F4109_SOUNDSTONE
+    0xE9: 1F410A_TITLESCREEN
+    0xF2: 1F410B_CASTSCREEN
+    0xF8: 1F410C_ENDCREDITS
+    0xFE: 1F410D
+    0x106: 1F410E
+    0x10E: 1F410F_CLEAREVENTFLAGS
+    0x113: 1F410F_CLEAREVENTFLAGS_LOOP_BEGINNING
+    0x119: 1F410F_CLEAREVENTFLAGS_LOOP_ENTRY
+    0x120: 1F4110_SOUNDSTONE_UNCANCELLABLE
+    0x129: 1F4111
+    0x12E: 1F4112
+    0x13F: RETURN_ZERO_1
+    0x144: RETURN_ZERO_RESET_ACCUM16
+    0x149: RETURN
+  Label States:
+    0x119:
+      8 Bit Accum: false
   Offset: 0xC1BEFC
 UNKNOWN_C1C046:
   Size: 287
@@ -11916,8 +12134,14 @@ UNKNOWN_C1E4BE:
     0xE536: UNKNOWN6
     0xE545: UNKNOWN7
   Offset: 0xC1E4BE
-UNKNOWN_C1E57F:
+TEXT_INPUT_DIALOG:
   Size: 1319
+  Arguments:
+    A: Unknown
+    X: Character limit
+    'Y': Unknown
+    $0E: Unknown
+    $10: Unknown
   Type: assembly
   labels:
     0xE5D1: UNKNOWN0
@@ -11974,9 +12198,16 @@ ENTER_YOUR_NAME_PLEASE:
     0xEB96: UNKNOWN3
     0xEBE4: UNKNOWN4
   Offset: 0xC1EAA6
-UNKNOWN_C1EC04:
+NAME_A_CHARACTER:
   Size: 139
   Type: assembly
+  Arguments:
+    A: Character limit
+    X: Character name pointer
+    'Y': Character ID
+    $0E: 4-byte description text pointer
+    $12: Description text length
+  Notes: Unknown. seems to use two pointers and length strings and calls config menu labelling routine.
   labels:
     0xEC42: UNKNOWN0
     0xEC48: UNKNOWN1
@@ -12120,69 +12351,69 @@ FILE_MENU_LOOP:
   Description: Big Loop for file select menu
   Size: 1831
   Type: assembly
-  labels:
-    0xF80D: UNKNOWN0
-    0xF824: VALID_FILE_SELECTED
-    0xF842: MENU_B_PRESSED
-    0xF847: MENU_STARTGAME_SELECTED
-    0xF85E: MENU_COPY_SELECTED
-    0xF868: MENU_DELETE_SELECTED
-    0xF872: MENU_SETUP_SELECTED
-    0xF876: UNKNOWN7
-    0xF88B: MENU_SETUP_SELECTED2
-    0xF88E: UNKNOWN9
-    0xF8A2: MENU_SETUP_SELECTED3
-    0xF8B3: MENU_OTHER_SELECTED
-    0xF8B9: EMPTY_FILE_SELECTED
-    0xF8BD: UNKNOWN13
-    0xF8D3: UNKNOWN14
-    0xF8D6: UNKNOWN15
-    0xF8EA: UNKNOWN16
-    0xF8FB: CHANGE_TO_NAMING_SCREEN_MUSIC
-    0xF902: UNKNOWN18
-    0xF90F: UNKNOWN19
-    0xF935: UNKNOWN20
-    0xF947: UNKNOWN21
-    0xF949: UNKNOWN22
-    0xF99B: UNKNOWN23
-    0xF9A5: UNKNOWN24
-    0xF9EF: UNKNOWN25
-    0xF9F9: UNKNOWN26
-    0xFA42: UNKNOWN27
-    0xFA4B: UNKNOWN28
-    0xFA94: UNKNOWN29
-    0xFA9B: UNKNOWN30
-    0xFAAE: UNKNOWN31
-    0xFABB: UNKNOWN32
-    0xFAC0: UNKNOWN33
-    0xFACE: UNKNOWN34
-    0xFAE3: UNKNOWN35
-    0xFAF1: UNKNOWN36
-    0xFAF3: UNKNOWN37
-    0xFB50: UNKNOWN38
-    0xFB66: UNKNOWN39
-    0xFB69: UNKNOWN40
-    0xFC02: UNKNOWN41
-    0xFC18: UNKNOWN42
-    0xFC1B: UNKNOWN43
-    0xFCDA: EVERYTHING_OKAY
-    0xFCEC: UNKNOWN45
-    0xFCF5: UNKNOWN46
-    0xFD03: UNKNOWN47
-    0xFD05: UNKNOWN48
-    0xFD0E: UNKNOWN49
-    0xFD72: UNKNOWN50
-    0xFDE4: UNKNOWN51
-    0xFDF1: UNKNOWN52
-    0xFDF6: UNKNOWN53
-    0xFE54: UNKNOWN54
-    0xFE6C: UNKNOWN55
-    0xFE71: UNKNOWN56
-    0xFE7F: UNKNOWN57
-    0xFE81: UNKNOWN58
-    0xFEC2: UNKNOWN59
-    0xFF0A: UNKNOWN60
-    0xFF16: UNKNOWN61
+  Labels:
+    8: UNKNOWN0
+    31: VALID_FILE_SELECTED
+    61: MENU_B_PRESSED
+    66: MENU_STARTGAME_SELECTED
+    89: MENU_COPY_SELECTED
+    99: MENU_DELETE_SELECTED
+    109: MENU_SETUP_SELECTED
+    113: UNKNOWN7
+    134: MENU_SETUP_SELECTED2
+    137: UNKNOWN9
+    157: MENU_SETUP_SELECTED3
+    174: MENU_OTHER_SELECTED
+    180: EMPTY_FILE_SELECTED
+    184: UNKNOWN13
+    206: UNKNOWN14
+    209: UNKNOWN15
+    229: UNKNOWN16
+    246: CHANGE_TO_NAMING_SCREEN_MUSIC
+    253: UNKNOWN18
+    266: UNKNOWN19
+    304: UNKNOWN20
+    322: UNKNOWN21
+    324: UNKNOWN22
+    406: UNKNOWN23
+    416: UNKNOWN24
+    490: UNKNOWN25
+    500: UNKNOWN26
+    573: UNKNOWN27
+    582: UNKNOWN28
+    655: UNKNOWN29
+    662: UNKNOWN30
+    681: UNKNOWN31
+    694: UNKNOWN32
+    699: DISPLAY_NAMES_FOR_CONFIRMATION
+    713: UNKNOWN34
+    734: UNKNOWN35
+    748: UNKNOWN36
+    750: UNKNOWN37
+    843: UNKNOWN38
+    865: UNKNOWN39
+    868: UNKNOWN40
+    1021: UNKNOWN41
+    1043: UNKNOWN42
+    1046: UNKNOWN43
+    1237: EVERYTHING_OKAY
+    1255: UNKNOWN45
+    1264: UNKNOWN46
+    1278: UNKNOWN47
+    1280: UNKNOWN48
+    1289: UNKNOWN49
+    1389: UNKNOWN50
+    1503: UNKNOWN51
+    1516: UNKNOWN52
+    1521: UNKNOWN53
+    1615: UNKNOWN54
+    1639: UNKNOWN55
+    1644: UNKNOWN56
+    1658: UNKNOWN57
+    1660: UNKNOWN58
+    1725: UNKNOWN59
+    1797: UNKNOWN60
+    1809: UNKNOWN61
   Offset: 0xC1F805
 UNKNOWN_C1FF2C:
   Size: 63
@@ -12375,6 +12606,7 @@ UNKNOWN_C208B8:
 UNKNOWN_C20912:
   Type: data
   Size: 134
+  Width: 14
   Offset: 0xC20912
 THETHE:
   Type: data
@@ -12900,13 +13132,13 @@ UNKNOWN_C2277C:
   Size: 76
   Type: assembly
   Offset: 0xC2277C
-UNKNOWN_C227C8:
-  labels:
-    0x27E0: UNKNOWN0
-    0x27EF: UNKNOWN1
-    0x27FE: UNKNOWN2
-    0x280D: UNKNOWN3
-    0x281A: UNKNOWN4
+LEARN_SPECIAL_PSI:
+  Labels:
+    0x18: LEARN_TELEPORT_ALPHA
+    0x27: LEARN_TELEPORT_BETA
+    0x36: LEARN_STARSTORM_ALPHA
+    0x45: LEARN_STARSTORM_BETA
+    0x52: RETURN
   Size: 85
   Type: assembly
   Offset: 0xC227C8
@@ -13036,10 +13268,12 @@ UNKNOWN_C2307B:
   Size: 120
   Type: assembly
   Offset: 0xC2307B
-UNKNOWN_C230F3:
+SET_TELEPORT_BOX_DESTINATION:
   Size: 22
   Type: assembly
   Offset: 0xC230F3
+  Arguments:
+    A: Destination ID
 CONSOLATION_ITEM_TABLE:
   Description: Table for enemies that offer consolation prizes
   Type: data
@@ -13055,121 +13289,121 @@ CONSOLATION_ITEM_TABLE:
   Offset: 0xC23109
 BATTLE_SELECTION_MENU:
   Description: Creates battle selection menu and handles input
-  labels:
-    0x315C: UNKNOWN0
-    0x3163: UNKNOWN1
-    0x3178: UNKNOWN2
-    0x319F: UNKNOWN3
-    0x31A1: UNKNOWN4
-    0x31AC: UNKNOWN5
-    0x31B9: UNKNOWN6
-    0x31C9: UNKNOWN7
-    0x31D9: UNKNOWN8
-    0x31EA: UNKNOWN9
-    0x321C: UNKNOWN10
-    0x322F: UNKNOWN11
-    0x3242: UNKNOWN12
-    0x3258: UNKNOWN13
-    0x325D: UNKNOWN14
-    0x326C: UNKNOWN15
-    0x3299: UNKNOWN16
-    0x32AC: UNKNOWN17
-    0x32D9: UNKNOWN18
-    0x32E9: UNKNOWN19
-    0x3316: UNKNOWN20
-    0x3326: UNKNOWN21
-    0x3337: UNKNOWN22
-    0x3364: UNKNOWN23
-    0x337A: UNKNOWN24
-    0x33A7: UNKNOWN25
-    0x33C5: UNKNOWN26
-    0x33E0: UNKNOWN27
-    0x33FB: UNKNOWN28
-    0x341B: UNKNOWN29
-    0x342B: UNKNOWN30
-    0x3449: UNKNOWN31
-    0x3464: UNKNOWN32
-    0x347D: UNKNOWN33
-    0x3498: UNKNOWN34
-    0x34C5: UNKNOWN35
-    0x34E3: UNKNOWN36
-    0x34FE: UNKNOWN37
-    0x3519: UNKNOWN38
-    0x3529: UNKNOWN39
-    0x3530: UNKNOWN40
-    0x3537: UNKNOWN41
-    0x353D: UNKNOWN42
-    0x356E: UNKNOWN43
-    0x3580: UNKNOWN44
-    0x3587: UNKNOWN45
-    0x3589: UNKNOWN46
-    0x358F: UNKNOWN47
-    0x35F5: UNKNOWN48
-    0x3616: UNKNOWN49
-    0x3637: UNKNOWN50
-    0x3656: UNKNOWN51
-    0x3660: UNKNOWN52
-    0x36E2: UNKNOWN53
-    0x36E9: UNKNOWN54
-    0x36F5: UNKNOWN55
-    0x36F8: UNKNOWN56
-    0x3708: UNKNOWN57
-    0x370C: UNKNOWN58
-    0x3784: UNKNOWN59
-    0x37AE: UNKNOWN60
-    0x37D9: UNKNOWN61
-    0x3801: UNKNOWN62
-    0x3829: UNKNOWN63
-    0x383E: UNKNOWN64
-    0x384F: UNKNOWN65
-    0x3869: UNKNOWN66
-    0x3877: UNKNOWN67
-    0x388F: UNKNOWN68
-    0x38A0: UNKNOWN69
-    0x38B3: UNKNOWN70
-    0x38B8: UNKNOWN71
-    0x38C0: UNKNOWN72
-    0x38CF: UNKNOWN73
-    0x38D9: UNKNOWN74
-    0x38ED: UNKNOWN75
-    0x38F5: UNKNOWN76
-    0x38FD: UNKNOWN77
-    0x3905: UNKNOWN78
-    0x390D: UNKNOWN79
-    0x3915: UNKNOWN80
-    0x3918: UNKNOWN81
-    0x3928: UNKNOWN82
-    0x3931: UNKNOWN83
-    0x393A: UNKNOWN84
-    0x3941: UNKNOWN85
-    0x395B: UNKNOWN86
-    0x3976: UNKNOWN87
-    0x3979: UNKNOWN88
-    0x398F: UNKNOWN89
-    0x39AD: UNKNOWN90
-    0x39C2: UNKNOWN91
-    0x39F9: UNKNOWN92
-    0x39FC: UNKNOWN93
-    0x3A12: UNKNOWN94
-    0x3A23: UNKNOWN95
-    0x3A37: UNKNOWN96
-    0x3A58: UNKNOWN97
-    0x3A85: UNKNOWN98
-    0x3A88: UNKNOWN99
-    0x3ABA: UNKNOWN100
-    0x3AC3: UNKNOWN101
-    0x3ACC: UNKNOWN102
-    0x3AD5: UNKNOWN103
-    0x3ADE: UNKNOWN104
-    0x3AE7: UNKNOWN105
-    0x3AF0: UNKNOWN106
-    0x3AF9: UNKNOWN107
-    0x3B02: UNKNOWN108
-    0x3B0B: UNKNOWN109
-    0x3B12: UNKNOWN110
-    0x3B19: UNKNOWN111
-    0x3B4D: UNKNOWN112
-    0x3B64: UNKNOWN113
+  Labels:
+    65: UNKNOWN0
+    72: UNKNOWN1
+    93: UNKNOWN2
+    132: UNKNOWN3
+    134: UNKNOWN4
+    145: UNKNOWN5
+    158: UNKNOWN6
+    174: UNKNOWN7
+    190: UNKNOWN8
+    207: UNKNOWN9
+    257: UNKNOWN10
+    276: UNKNOWN11
+    295: UNKNOWN12
+    317: UNKNOWN13
+    322: UNKNOWN14
+    337: UNKNOWN15
+    382: UNKNOWN16
+    401: UNKNOWN17
+    446: UNKNOWN18
+    462: UNKNOWN19
+    507: UNKNOWN20
+    523: UNKNOWN21
+    540: UNKNOWN22
+    585: UNKNOWN23
+    607: UNKNOWN24
+    652: UNKNOWN25
+    682: UNKNOWN26
+    709: UNKNOWN27
+    736: UNKNOWN28
+    768: UNKNOWN29
+    784: UNKNOWN30
+    814: UNKNOWN31
+    841: UNKNOWN32
+    866: UNKNOWN33
+    893: UNKNOWN34
+    938: UNKNOWN35
+    968: UNKNOWN36
+    995: UNKNOWN37
+    1022: UNKNOWN38
+    1038: UNKNOWN39
+    1045: UNKNOWN40
+    1052: UNKNOWN41
+    1058: UNKNOWN42
+    1107: UNKNOWN43
+    1125: UNKNOWN44
+    1132: UNKNOWN45
+    1134: UNKNOWN46
+    1140: UNKNOWN47
+    1242: UNKNOWN48
+    1275: UNKNOWN49
+    1308: UNKNOWN50
+    1339: UNKNOWN51
+    1349: UNKNOWN52
+    1479: UNKNOWN53
+    1486: UNKNOWN54
+    1498: UNKNOWN55
+    1501: UNKNOWN56
+    1517: UNKNOWN57
+    1521: UNKNOWN58
+    1641: UNKNOWN59
+    1683: UNKNOWN60
+    1726: UNKNOWN61
+    1766: UNKNOWN62
+    1806: UNKNOWN63
+    1827: UNKNOWN64
+    1844: UNKNOWN65
+    1870: UNKNOWN66
+    1884: UNKNOWN67
+    1908: UNKNOWN68
+    1925: UNKNOWN69
+    1944: UNKNOWN70
+    1949: UNKNOWN71
+    1957: UNKNOWN72
+    1972: UNKNOWN73
+    1982: UNKNOWN74
+    2002: UNKNOWN75
+    2010: UNKNOWN76
+    2018: UNKNOWN77
+    2026: UNKNOWN78
+    2034: UNKNOWN79
+    2042: UNKNOWN80
+    2045: UNKNOWN81
+    2061: UNKNOWN82
+    2070: UNKNOWN83
+    2079: UNKNOWN84
+    2086: UNKNOWN85
+    2112: UNKNOWN86
+    2139: UNKNOWN87
+    2142: UNKNOWN88
+    2164: UNKNOWN89
+    2194: UNKNOWN90
+    2215: UNKNOWN91
+    2270: UNKNOWN92
+    2273: UNKNOWN93
+    2295: UNKNOWN94
+    2312: UNKNOWN95
+    2332: UNKNOWN96
+    2365: UNKNOWN97
+    2410: UNKNOWN98
+    2413: UNKNOWN99
+    2463: UNKNOWN100
+    2472: UNKNOWN101
+    2481: UNKNOWN102
+    2490: UNKNOWN103
+    2499: UNKNOWN104
+    2508: UNKNOWN105
+    2517: UNKNOWN106
+    2526: UNKNOWN107
+    2535: UNKNOWN108
+    2544: UNKNOWN109
+    2551: UNKNOWN110
+    2558: UNKNOWN111
+    2610: UNKNOWN112
+    2633: UNKNOWN113
   Size: 2635
   Type: assembly
   Offset: 0xC2311B
@@ -16930,32 +17164,10 @@ PLAYABLE_CHAR_GFX_TABLE:
   - Name: Unknown
     Size: 2
   Offset: 0xC3F2B5
-UNKNOWN_C3F3C5:
-  labels:
-    0xF3E2: UNKNOWN0
-    0xF3FB: UNKNOWN1
-    0xF465: UNKNOWN2
-    0xF4E9: UNKNOWN3
-    0xF4F6: UNKNOWN4
-    0xF506: UNKNOWN5
-    0xF508: UNKNOWN6
-    0xF50A: UNKNOWN7
-    0xF51B: UNKNOWN8
-    0xF524: UNKNOWN9
-    0xF532: UNKNOWN10
-    0xF534: UNKNOWN11
-    0xF53B: UNKNOWN12
-    0xF557: UNKNOWN13
-    0xF55E: UNKNOWN14
-    0xF562: UNKNOWN15
-    0xF56F: UNKNOWN16
-    0xF57F: UNKNOWN17
-    0xF5A2: UNKNOWN18
-    0xF5A9: UNKNOWN19
-    0xF5BB: UNKNOWN20
-    0xF5C0: UNKNOWN21
-    0xF5D5: UNKNOWN22
-    0xF5F7: UNKNOWN23
+SHOW_TITLE_SCREEN:
+  Description: Displays the title screen
+  Arguments:
+    A: 0 to show animation, 1 for no animation
   Size: 564
   Type: assembly
   Offset: 0xC3F3C5
@@ -17024,9 +17236,26 @@ UNKNOWN_C3FB09:
   Offset: 0xC3FB09
 UNKNOWN_C3FB1F:
   Type: data
-  Size: 622
+  Size: 298
   Description: Has Name Registration text at the start...
   Offset: 0xC3FB1F
+UNKNOWN_C3FC49:
+  Size: 228
+  Offset: 0xC3FC49
+  Type: data
+  Entries:
+  - Type: struct
+    Terminator: 00
+    Entries:
+    - Size: 2
+UNKNOWN_C3FD2D:
+  Size: 56
+  Type: data
+  Offset: 0xC3FD2D
+UNKNOWN_C3FD65:
+  Offset: 0xC3FD65
+  Size: 40
+  Type: data
 ATTRACT_MODE_TXT:
   Type: data
   Size: 40
@@ -17117,7 +17346,7 @@ UNKNOWN_C40B75:
   labels:
     0x0BD2: UNKNOWN0
   Offset: 0xC40B75
-UNKNOWN_C40BD4:
+FOOTSTEP_SOUND_TABLE:
   Type: data
   Size: 543
   Offset: 0xC40BD4
@@ -17661,9 +17890,15 @@ UNKNOWN_C43F77:
     0x4066: UNKNOWN8
     0x4068: UNKNOWN9
   Offset: 0xC43F77
-UNKNOWN_C4406A:
+GET_CHARACTER_AT_CURSOR_POSITION:
   Size: 75
   Type: assembly
+  Arguments:
+    A: Column
+    X: Row
+    'Y': Unknown
+  Return Value:
+    A: Character selected
   Offset: 0xC4406A
 UNKNOWN_C440B5:
   Size: 258
@@ -18649,10 +18884,13 @@ UNKNOWN_C47369:
   Size: 7
   Type: assembly
   Offset: 0xC47369
-LOAD_FILESCREEN_BG:
-  Description: Loads background for the file select screen
+LOAD_BACKGROUND_ANIMATION:
+  Description: Loads background for the file select screen and coffee/tea scenes
   Size: 66
   Type: assembly
+  Arguments:
+    A: BG ID 1
+    X: BG ID 2
   Offset: 0xC47370
 UNKNOWN_C473B2:
   Size: 30
@@ -19251,34 +19489,40 @@ UNKNOWN_C49D16:
   Size: 8
   Type: assembly
   Offset: 0xC49D16
+  Arguments:
+    A: Character
+    X: Unknown
+    'Y': Unknown
 UNKNOWN_C49D1E:
   Size: 76
   Type: assembly
   labels:
     0x9D65: UNKNOWN0
   Offset: 0xC49D1E
-UNKNOWN_C49D6A:
+COFFEETEA_SCENE:
   Size: 314
   Type: assembly
-  labels:
-    0x9D92: UNKNOWN0
-    0x9D95: UNKNOWN1
-    0x9D9E: UNKNOWN2
-    0x9DA1: UNKNOWN3
-    0x9DC9: UNKNOWN4
-    0x9DD3: UNKNOWN5
-    0x9DD6: UNKNOWN6
-    0x9DF3: UNKNOWN7
-    0x9E09: UNKNOWN8
-    0x9E14: UNKNOWN9
-    0x9E2B: UNKNOWN10
-    0x9E39: UNKNOWN11
-    0x9E4B: UNKNOWN12
-    0x9E58: UNKNOWN13
-    0x9E62: UNKNOWN14
-    0x9E65: UNKNOWN15
-    0x9E7D: UNKNOWN16
-    0x9E86: UNKNOWN17
+  Labels:
+    0x28: SELECT_COFFEE_BG1
+    0x2B: SKIP_COFFEE_BG1
+    0x34: SELECT_COFFEE_BG2
+    0x37: SKIP_COFFEE_BG2
+    0x5F: SELECT_COFFEE_TEXT
+    0x69: SKIP_COFFEE_TEXT
+    0x6C: SCRIPTPARSEBEGIN
+    0x89: PARSE_09
+    0x9F: UNKNOWN8
+    0xAA: UNKNOWN9
+    0xC1: PARSE_01
+    0xCF: PARSE_08
+    0xE1: PRINTTEXT
+    0xEE: ENDOFSCRIPT
+    0xF8: UNKNOWN14
+    0xFB: UNKNOWN15
+    0x113: UNKNOWN16
+    0x11C: UNKNOWN17
+  Arguments:
+    A: 0 = Coffee, 1 = Tea
   Offset: 0xC49D6A
 UNKNOWN_C49EA4:
   Size: 32
@@ -19468,12 +19712,55 @@ UNKNOWN_C4A7B0:
   Offset: 0xC4A7B0
 UNKNOWN_C4AC57:
   Size: 1
-  Type: assembly
+  Type: data
   Offset: 0xC4AC57
 UNKNOWN_C4AC58:
-  Size: 118
+  Size: 35
   Type: data
   Offset: 0xC4AC58
+SOUND_STONE_UNKNOWN:
+  Size: 8
+  Type: data
+  Offset: 0xC4AC7B
+SOUND_STONE_UNKNOWN2:
+  Size: 8
+  Type: data
+  Offset: 0xC4AC83
+SOUND_STONE_UNKNOWN3:
+  Size: 8
+  Type: data
+  Offset: 0xC4AC8B
+SOUND_STONE_UNKNOWN4:
+  Size: 8
+  Type: data
+  Offset: 0xC4AC93
+SOUND_STONE_UNKNOWN5:
+  Size: 8
+  Type: data
+  Offset: 0xC4AC9B
+SOUND_STONE_UNKNOWN6:
+  Size: 8
+  Type: data
+  Offset: 0xC4ACA3
+SOUND_STONE_UNKNOWN7:
+  Size: 8
+  Type: data
+  Offset: 0xC4ACB4
+SOUND_STONE_MUSIC:
+  Size: 9
+  Type: data
+  Offset: 0xC4ACAB
+  Entries:
+  - Size: 1
+    Name: MUSIC
+SOUND_STONE_UNKNOWN8:
+  Size: 10
+  Type: data
+  Offset: 0xC4ACBC
+SOUND_STONE_UNKNOWN9:
+  Size: 8
+  Type: data
+  Offset: 0xC4ACC6
 USE_SOUND_STONE:
   Description: Sound Stone Screen
   Size: 1258
@@ -19649,36 +19936,36 @@ UNKNOWN_C4B859:
 UNKNOWN_C4B923:
   Size: 467
   Type: assembly
-  labels:
-    0xB938: UNKNOWN0
-    0xB955: UNKNOWN1
-    0xB95C: UNKNOWN2
-    0xB96B: UNKNOWN3
-    0xB9A3: UNKNOWN4
-    0xB9AA: UNKNOWN5
-    0xB9B1: UNKNOWN6
-    0xB9B6: UNKNOWN7
-    0xB9E1: UNKNOWN8
-    0xB9E2: UNKNOWN9
-    0xB9EE: UNKNOWN10
-    0xB9FE: UNKNOWN11
-    0xBA03: UNKNOWN12
-    0xBA2E: UNKNOWN13
-    0xBA2F: UNKNOWN14
-    0xBA3B: UNKNOWN15
-    0xBA45: UNKNOWN16
-    0xBA4C: UNKNOWN17
-    0xBA75: UNKNOWN18
-    0xBA7C: UNKNOWN19
-    0xBA82: UNKNOWN20
-    0xBA91: UNKNOWN21
-    0xBA98: UNKNOWN22
-    0xBAC1: UNKNOWN23
-    0xBAC8: UNKNOWN24
-    0xBACE: UNKNOWN25
-    0xBADD: UNKNOWN26
-    0xBAE9: UNKNOWN27
-    0xBAF4: UNKNOWN28
+  Labels:
+    21: UNKNOWN0
+    50: UNKNOWN1
+    57: UNKNOWN2
+    72: UNKNOWN3
+    128: UNKNOWN4
+    135: UNKNOWN5
+    142: UNKNOWN6
+    147: UNKNOWN7
+    190: UNKNOWN8
+    191: UNKNOWN9
+    203: UNKNOWN10
+    219: UNKNOWN11
+    224: UNKNOWN12
+    267: UNKNOWN13
+    268: UNKNOWN14
+    280: UNKNOWN15
+    290: UNKNOWN16
+    297: UNKNOWN17
+    338: UNKNOWN18
+    345: UNKNOWN19
+    351: UNKNOWN20
+    366: UNKNOWN21
+    373: UNKNOWN22
+    414: UNKNOWN23
+    421: UNKNOWN24
+    427: UNKNOWN25
+    442: UNKNOWN26
+    454: UNKNOWN27
+    465: UNKNOWN28
   Offset: 0xC4B923
 UNKNOWN_C4BAF6:
   Size: 676
@@ -19754,8 +20041,7 @@ FILE_SELECT_TEXT:
   Size: 640
   Type: data
   Entries:
-  - Name: Text
-    Terminator: 0
+  - Terminator: 0
     Type: script
   Offset: 0xC4C05E
 UNKNOWN_C4C2DE:
@@ -19994,9 +20280,12 @@ UNKNOWN_C4D065:
     0xD25C: UNKNOWN33
     0xD266: UNKNOWN34
   Offset: 0xC4D065
-UNKNOWN_C4D274:
+GET_TOWN_MAP_ID:
   Size: 52
   Type: assembly
+  Arguments:
+    A: X Position
+    X: Y Position
   Offset: 0xC4D274
 UNKNOWN_C4D2A8:
   Size: 72
@@ -20033,22 +20322,25 @@ UNKNOWN_C4D43F:
     0xD536: UNKNOWN6
     0xD548: UNKNOWN7
   Offset: 0xC4D43F
-UNKNOWN_C4D553:
+LOAD_TOWN_MAP_DATA:
+  Description: Loads town map data into memory
   Size: 302
   Type: assembly
   labels:
     0xD5A0: UNKNOWN0
+  Arguments:
+    A: Map ID
   Offset: 0xC4D553
-UNKNOWN_C4D681:
+DISPLAY_TOWN_MAP:
   Size: 195
   Type: assembly
-  labels:
-    0xD6AF: UNKNOWN0
-    0xD6B4: UNKNOWN1
-    0xD6E7: UNKNOWN2
-    0xD6F8: UNKNOWN3
-    0xD710: UNKNOWN4
-    0xD73F: UNKNOWN5
+  Labels:
+    0x2E: SKIP_RETURN
+    0x33: UNKNOWN1
+    0x66: UNKNOWN2
+    0x77: UNKNOWN3
+    0x8F: UNKNOWN4
+    0xBE: RETURN
   Offset: 0xC4D681
 UNKNOWN_C4D744:
   Size: 149
@@ -20062,9 +20354,11 @@ UNKNOWN_C4D744:
     0xD7B4: UNKNOWN5
     0xD7C6: UNKNOWN6
   Offset: 0xC4D744
-UNKNOWN_C4D7D9:
+DISPLAY_ANIMATED_NAMING_SPRITE:
   Size: 87
   Type: assembly
+  Arguments:
+    A: Sprite to animate
   labels:
     0xD806: UNKNOWN0
     0xD825: UNKNOWN1
@@ -20403,10 +20697,10 @@ COUNT_PHOTO_FLAGS:
   Description: Counts unset event flags for wandering photographer photos
   Size: 60
   Type: assembly
-  labels:
-    0xF445: LOOP_BEGIN
-    0xF460: EVENT_FLAG_UNSET
-    0xF465: LOOP_ENTRY
+  Labels:
+    18: LOOP_BEGIN
+    45: EVENT_FLAG_UNSET
+    50: LOOP_ENTRY
   Offset: 0xC4F433
 UNKNOWN_C4F46F:
   Size: 229
@@ -20415,7 +20709,7 @@ UNKNOWN_C4F46F:
     0xF50A: UNKNOWN0
     0xF54E: UNKNOWN1
   Offset: 0xC4F46F
-UNKNOWN_C4F554:
+PLAY_CREDITS:
   Size: 438
   Type: assembly
   labels:
@@ -20490,23 +20784,23 @@ CHANGE_MUSIC:
     0x000E: CURPACK
   Size: 347
   Type: assembly
-  labels:
-    0xFBD2: BEGIN_MUSIC_CHANGE
-    0xFBDB: UNKNOWN1
-    0xFBE9: UNKNOWN2
-    0xFBF4: UNKNOWN3
-    0xFC54: SKIP_DATA_LOAD_1
-    0xFCB3: SKIP_DATA_LOAD_2
-    0xFD0E: SKIP_DATA_LOAD_3
-    0xFD16: RETURN
+  Labels:
+    21: BEGIN_MUSIC_CHANGE
+    30: UNKNOWN1
+    44: UNKNOWN2
+    55: UNKNOWN3
+    151: SKIP_DATA_LOAD_1
+    246: SKIP_DATA_LOAD_2
+    337: SKIP_DATA_LOAD_3
+    345: RETURN
   Offset: 0xC4FBBD
 UNKNOWN_C4FD18:
   Description: Load stereo/mono data?
   Size: 45
   Type: assembly
-  labels:
-    0xFD31: MONO
-    0xFD3B: LOAD
+  Labels:
+    25: MONO
+    35: LOAD
   Offset: 0xC4FD18
 SET_BOUNDARY_BEHAVIOR:
   Description: A -> $B549 (Sector Boundary Behavior)
@@ -20676,8 +20970,10 @@ BG_DISTORTION_TABLE:
     - Unknown Type 4
   - Name: Ripple Frequency
     Size: 2
+    Signed: y
   - Name: Ripple Amplitude
     Size: 2
+    Signed: y
   - Name: Unknown B
     Size: 1
   - Name: Unknown C
@@ -21009,7 +21305,8 @@ AUDIO_PACK_71:
     Type: int
     Size: 2
   - Name: Base Address
-    Type: hexint
+    Type: int
+    Base: 16
     Size: 2
   - Name: Data
     Type: bytearray
@@ -21110,7 +21407,8 @@ DOOR_DEST_TABLE_1:
     Type: pointer
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: "Y"
     Size: 2
   - Name: X
@@ -21137,7 +21435,8 @@ DOOR_DEST_TABLE_2:
     Type: pointer
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: "Y"
     Size: 2
   - Name: X
@@ -21164,7 +21463,8 @@ DOOR_DEST_TABLE_3:
     Type: pointer
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: "Y"
     Size: 2
   - Name: X
@@ -21191,7 +21491,8 @@ DOOR_DEST_TABLE_4:
     Type: pointer
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: "Y"
     Size: 2
   - Name: X
@@ -21218,7 +21519,8 @@ DOOR_DEST_TABLE_5:
     Type: pointer
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: "Y"
     Size: 2
   - Name: X
@@ -21245,7 +21547,8 @@ DOOR_DEST_TABLE_6:
     Type: pointer
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: "Y"
     Size: 2
   - Name: X
@@ -21272,7 +21575,8 @@ DOOR_DEST_TABLE_7:
     Type: pointer
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: "Y"
     Size: 2
   - Name: X
@@ -21299,7 +21603,8 @@ DOOR_DEST_TABLE_8:
     Type: pointer
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: "Y"
     Size: 2
   - Name: X
@@ -21326,7 +21631,8 @@ DOOR_DEST_TABLE_9:
     Type: pointer
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: "Y"
     Size: 2
   - Name: X
@@ -21353,7 +21659,8 @@ DOOR_DEST_TABLE_10:
     Type: pointer
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: "Y"
     Size: 2
   - Name: X
@@ -21380,7 +21687,8 @@ DOOR_DEST_TABLE_11:
     Type: pointer
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: "Y"
     Size: 2
   - Name: X
@@ -21407,7 +21715,8 @@ DOOR_DEST_TABLE_12:
     Type: pointer
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: "Y"
     Size: 2
   - Name: X
@@ -21434,7 +21743,8 @@ DOOR_DEST_TABLE_13:
     Type: pointer
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: "Y"
     Size: 2
   - Name: X
@@ -21461,7 +21771,8 @@ DOOR_DEST_TABLE_14:
     Type: pointer
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: "Y"
     Size: 2
   - Name: X
@@ -21488,7 +21799,8 @@ DOOR_DEST_TABLE_15:
     Type: pointer
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: "Y"
     Size: 2
   - Name: X
@@ -21511,7 +21823,8 @@ DOOR_DEST_TABLE_16:
     Type: pointer
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: "Y"
     Size: 2
   - Name: X
@@ -21534,7 +21847,8 @@ DOOR_DEST_TABLE_17:
     Type: pointer
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: "Y"
     Size: 2
   - Name: X
@@ -21561,7 +21875,8 @@ DOOR_DEST_TABLE_18:
     Type: pointer
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: "Y"
     Size: 2
   - Name: X
@@ -21588,7 +21903,8 @@ DOOR_DEST_TABLE_19:
     Type: pointer
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: "Y"
     Size: 2
   - Name: X
@@ -21615,7 +21931,8 @@ DOOR_DEST_TABLE_20:
     Type: pointer
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: "Y"
     Size: 2
   - Name: X
@@ -21691,7 +22008,8 @@ NPC_CONFIG_TABLE:
     Size: 2
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: Show Sprite
     Size: 1
     Values:
@@ -21798,7 +22116,8 @@ BTL_ENTRY_PTR_TABLE:
     Type: pointer
   - Name: Fear event flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: Fear mode
     Size: 1
     Values:
@@ -21903,7 +22222,8 @@ PSI_TELEPORT_DEST_TABLE:
     Type: script
     Size: 25
   - Name: Event Flag
-    Type: hexint
+    Type: int
+    Base: 16
     Size: 2
   - Name: X
     Size: 2
@@ -21924,7 +22244,8 @@ TELEPHONE_CONTACTS_TABLE:
     Type: script
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: Text Pointer
     Size: 4
     Type: pointer
@@ -22319,7 +22640,8 @@ TIMED_DELIVERY_TABLE:
     Size: 2
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: Unknown
     Size: 4
     Type: bytearray
@@ -22579,7 +22901,8 @@ AUDIO_PACK_4:
     Type: int
     Size: 2
   - Name: Base Address
-    Type: hexint
+    Type: int
+    Base: 16
     Size: 2
   - Name: Data
     Type: bytearray
@@ -22603,8 +22926,8 @@ MOTHER2_ROMAJI_FONT:
 COMPRESSED_SRAM:
   Type: data
   Size: 2469
-  filter_Size: 0x2800
-  filters:
+  Filter_Size: 0x2800
+  Filters:
   -  ebcomp
   Description: Compressed SRAM Data
   Charset: standardtext
@@ -22732,14 +23055,22 @@ AUDIO_PACK_6:
   Offset: 0xE0FCE1
 COFFEE_SEQUENCE_TEXT:
   Type: data
-  Size: 1618
+  Size: 0x652
   Description: Coffee Sequence Text
   Offset: 0xE10000
+  Entries:
+  - Type: script
+    Size: 0x652
+    Charset: flyover
 TEA_SEQUENCE_TEXT:
   Type: data
   Size: 1332
   Description: Tea Sequence Text
   Offset: 0xE10652
+  Entries:
+  - Type: script
+    Size: 1332
+    Charset: flyover
 MOVEMENT_TEXT_STRINGS:
   Type: data
   Size: 244
@@ -22801,7 +23132,8 @@ PHOTOGRAPHER_CFG_TABLE:
   Entries:
   - Name: Event Flag
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: Unknown A
     Size: 3
     Type: bytearray
@@ -22809,7 +23141,8 @@ PHOTOGRAPHER_CFG_TABLE:
     Size: 2
   - Name: Unknown C
     Size: 1
-    Type: hexint
+    Type: int
+    Base: 16
   - Name: Unknown D
     Size: 54
     Type: bytearray
@@ -22824,9 +23157,9 @@ STAFF_TEXT:
   Size: 3241
   Description: Staff Credits Sequence Text
   Entries:
-  - Name: Text
-    Terminator: 0
-    Type: stafftext
+  - Terminator: 0
+    Type: script
+    Charset: stafftext
   Offset: 0xE1413F
 UNKNOWN_E14DE8:
   Size: 217
@@ -23020,14 +23353,20 @@ UNKNOWN_E1E94A:
   Type: data
   Size: 262
   Offset: 0xE1E94A
-UNKNOWN_E1EA50:
+TOWN_MAP_LABEL_GFX:
+  Description: Graphics used for labelling town map locations
   Type: data
   Size: 1907
   Offset: 0xE1EA50
 UNKNOWN_E1F1C3:
-  Size: 958
+  Size: 0x100
   Type: data
   Offset: 0xE1F1C3
+  Notes: Appears to be loaded into ram ($7E0300) during town map loading
+UNKNOWN_E1F2C3:
+  Size: 0x2BE
+  Type: data
+  Offset: 0xE1F2C3
 AUDIO_PACK_123:
   Type: data
   Size: 2687
@@ -23133,7 +23472,8 @@ AUDIO_PACK_1:
     Type: int
     Size: 2
   - Name: Base Address
-    Type: hexint
+    Type: int
+    Base: 16
     Size: 2
   - Name: Data
     Type: bytearray
@@ -23278,7 +23618,8 @@ AUDIO_PACK_145:
     Type: int
     Size: 2
   - Name: Base Address
-    Type: hexint
+    Type: int
+    Base: 16
     Size: 2
   - Name: Data
     Type: bytearray
@@ -23679,7 +24020,8 @@ AUDIO_PACK_103:
     Type: int
     Size: 2
   - Name: Base Address
-    Type: hexint
+    Type: int
+    Base: 16
     Size: 2
   - Name: Data
     Type: bytearray
@@ -24124,7 +24466,8 @@ TILESET_TABLE:
   Entries:
   - Name: Tileset
     Size: 2
-    Type: hexint
+    Type: int
+    Base: 16
   Offset: 0xEF101B
 MAP_DATA_TILESET_PTR_TABLE:
   Type: data
@@ -24324,12 +24667,37 @@ STATUS_WINDOW_TEXT:
 NAME_INPUT_WINDOW_SELECTION_LAYOUT:
   Type: data
   Description: Name Input Window Selection Layout
-  Size: 652
+  Size: 627
   Offset: 0xEFA460
-UNKNOWN_EFA6EC:
+NAME_INPUT_WINDOW_A:
+  Offset: 0xEFA66C
   Type: data
-  Size: 11823
-  Offset: 0xEFA6EC
+  Size: 0x3B
+  Entries:
+  - Type: script
+    Size: 0x3B
+NAME_INPUT_WINDOW_B:
+  Offset: 0xEFA6A7
+  Type: data
+  Size: 0x2C
+  Entries:
+  - Type: script
+    Size: 0x2C
+NAME_INPUT_WINDOW_SELECTION_LAYOUT_POINTERS:
+  Type: data
+  Size: 24
+  Offset: 0xEFA6D3
+  Entries:
+  - Base: 16
+    Size: 4
+UNKNOWN_EFA6EB:
+  Type: data
+  Size: 36
+  Offset: 0xEFA6EB
+TOWN_MAP_MAPPING:
+  Type: data
+  Size: 11788
+  Offset: 0xEFA70F
 DEBUG_SOUND_MODE_MENU_TEXT:
   Description: Programmers' Sound Mode Menu Text
   Size: 84
