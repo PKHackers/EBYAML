@@ -1459,57 +1459,81 @@ SAVE_SLOT_1:
     - Type: script
       Size: 5
       Name: NAME
+      Description: Character name
     - Name: LEVEL
       Size: 1
+      Description: Current Level
     - Name: EXP
       Size: 4
+      Description: Amount of Experience Points
     - Name: MAX HP
       Size: 2
+      Description: Maximum amount of HP
     - Name: MAX PP
       Size: 2
+      Description: Maximum amount of PP
     - Type: bytearray
       Size: 7
       Name: AFFLICTIONS
+      Description: Current Status Effects
     - Name: EQUIPPED_OFFENSE
       Size: 1
+      Description: Offense with current equipment
     - Name: EQUIPPED_DEFENSE
       Size: 1
+      Description: Defense with current equipment
     - Name: EQUIPPED_SPEED
       Size: 1
+      Description: Speed with current equipment
     - Name: EQUIPPED_GUTS
       Size: 1
+      Description: Guts with current equipment
     - Name: EQUIPPED_LUCK
       Size: 1
+      Description: Luck with current equipment
     - Name: EQUIPPED_VITALITY
       Size: 1
+      Description: Vitality with current equipment
     - Name: EQUIPPED_IQ
       Size: 1
+      Description: IQ with current equipment
     - Name: OFFENSE
       Size: 1
+      Description: Offense without current equipment
     - Name: DEFENSE
       Size: 1
+      Description: Defense without current equipment
     - Name: SPEED
       Size: 1
+      Description: Speed without current equipment
     - Name: GUTS
       Size: 1
+      Description: Guts without current equipment
     - Name: LUCK
       Size: 1
+      Description: Luck without current equipment
     - Name: VITALITY
       Size: 1
+      Description: Vitality without current equipment
     - Name: IQ
       Size: 1
+      Description: IQ without current equipment
     - Type: bytearray
       Size: 14
       Name: ITEMS
+      Description: Current held items
     - Type: bytearray
       Size: 4
       Name: EQUIPPED_ITEMS
+      Description: Current equipped items
     - Type: bytearray
       Size: 8
       Name: UNKNOWN
     - Type: int
       Size: 2
       Name: POSITION_INDEX
+      Description: Position Index
+      Notes: 'TODO: which table was this for again?'
     - Type: bytearray
       Size: 4
       Name: UNKNOWN2
@@ -1517,14 +1541,18 @@ SAVE_SLOT_1:
       Name: UNKNOWN3
     - Name: CURRENT_HP
       Size: 2
+      Description: Current HP
     - Name: CURRENT_HP_ROLLING
       Size: 2
+      Description: Current HP (Rolling)
     - Name: UNKNOWN4
       Size: 2
     - Name: CURRENT_PP
       Size: 2
+      Description: Current PP
     - Name: CURRENT_PP_ROLLING
       Size: 2
+      Description: Current PP (Rolling)
     - Name: HP_PP_WINDOW_OPTIONS
       Size: 2
       Type: bitfield
@@ -1545,9 +1573,11 @@ SAVE_SLOT_1:
         - 14
         - 15
         - 16
+      Description: HP/PP Window Options?
     - Type: int
       Size: 1
       Name: MISS_RATE
+      Description: Miss Rate
     - Type: struct
       Size: 5
       Name: RESISTANCES
@@ -1571,6 +1601,7 @@ SAVE_SLOT_1:
       - Name: HYPNOSIS_BRAINSHOCK
         Size: 1
         Values: *RESISTANCES
+      Description: Resistances
     - Type: struct
       Size: 5
       Name: STAT_BOOSTS
@@ -1585,6 +1616,7 @@ SAVE_SLOT_1:
         Size: 1
       - Name: LUCK
         Size: 1
+      Description: Current stat boosts
     - Type: bytearray
       Size: 3
       Name: UNKNOWN5
@@ -1647,6 +1679,33 @@ UNKNOWN_SAVE:
   Entries:
   - Type: int
     Size: 2
+UNKNOWN_7E0003:
+  Offset: 0x7E0003
+  Size: 2
+UNKNOWN_7E0005:
+  Offset: 0x7E0005
+  Size: 2
+UNKNOWN_7E0007:
+  Offset: 0x7E0007
+  Size: 2
+UNKNOWN_7E000A:
+  Offset: 0x7E000A
+  Size: 2
+UNKNOWN_7E000D:
+  Offset: 0x7E000D
+  Type: data
+  Size: 1
+OBSEL_MIRROR:
+  Offset: 0x7E000E
+  Type: data
+  Size: 1
+UNKNOWN_7E001A:
+  Offset: 0x7E001A
+  Type: data
+  Size: 2
+UNKNOWN_7E001E:
+  Size: 2
+  Offset: 0x7E001E
 RAND_A:
   Description: Random number generator state A
   Offset: 0x7E0024
@@ -1655,33 +1714,157 @@ RAND_B:
   Description: Random number generator state B
   Offset: 0x7E0026
   Size: 2
+UNKNOWN_7E002B:
+  Offset: 0x7E002B
+  Type: data
+  Size: 2
+UNKNOWN_7E002D:
+  Offset: 0x7E002D
+  Type: data
+  Size: 2
+UNKNOWN_7E002F:
+  Offset: 0x7E002F
+  Type: data
+  Size: 2
+X_POS_BG1:
+  Description: X position of visible screen's top-left corner, in absolute pixel coordinates (BG1)
+  Offset: 0x7E0031
+  Type: data
+  Size: 2
+Y_POS_BG1:
+  Description: Y position of visible screen's top-left corner, in absolute pixel coordinates (BG1)
+  Offset: 0x7E0033
+  Type: data
+  Size: 2
+X_POS_BG2:
+  Description: X position of visible screen's top-left corner, in absolute pixel coordinates (BG2)
+  Offset: 0x7E0035
+  Type: data
+  Size: 2
+Y_POS_BG2:
+  Description: Y position of visible screen's top-left corner, in absolute pixel coordinates (BG2)
+  Offset: 0x7E0037
+  Type: data
+  Size: 2
+UNKNOWN_7E0039:
+  Offset: 0x7E0039
+  Type: data
+  Size: 2
+UNKNOWN_7E003B:
+  Offset: 0x7E003B
+  Type: data
+  Size: 2
 PAD_1_STATE:
-  Description: Controller 1 state - BYSs^v<> AXLR0000
+  Description: Controller 1 state
+  Notes: |
+    10000000 00000000 (8000) - B button down
+    01000000 00000000 (4000) - Y button down
+    00100000 00000000 (2000) - Select button down
+    00010000 00000000 (1000) - Start button down
+    00001000 00000000 (0800) - Up down
+    00000100 00000000 (0400) - Down down
+    00000010 00000000 (0200) - Left down
+    00000001 00000000 (0100) - Right down
+    00000000 10000000 (0080) - A button down
+    00000000 01000000 (0040) - X button down
+    00000000 00100000 (0020) - L button down
+    00000000 00010000 (0010) - R button down
+    00000000 00001111 (000F) - Zero
   Offset: 0x7E0065
   Size: 2
   Type: data
 PAD_2_STATE:
-  Description: Controller 2 state - BYSs^v<> AXLR0000
+  Description: Controller 2 state
+  Notes: |
+    10000000 00000000 (8000) - B button down
+    01000000 00000000 (4000) - Y button down
+    00100000 00000000 (2000) - Select button down
+    00010000 00000000 (1000) - Start button down
+    00001000 00000000 (0800) - Up down
+    00000100 00000000 (0400) - Down down
+    00000010 00000000 (0200) - Left down
+    00000001 00000000 (0100) - Right down
+    00000000 10000000 (0080) - A button down
+    00000000 01000000 (0040) - X button down
+    00000000 00100000 (0020) - L button down
+    00000000 00010000 (0010) - R button down
+    00000000 00001111 (000F) - Zero
   Offset: 0x7E0067
   Size: 2
   Type: data
-PAD_1_UNKNOWN:
-  Description: Controller 1 unknown
+PAD_1_HELD:
+  Description: Controller 1 held buttons
+  Notes: |
+    10000000 00000000 (8000): B button held
+    01000000 00000000 (4000): Y button held
+    00100000 00000000 (2000): Select button held
+    00010000 00000000 (1000): Start button held
+    00001000 00000000 (0800): Up held
+    00000100 00000000 (0400): Down held
+    00000010 00000000 (0200): Left held
+    00000001 00000000 (0100): Right held
+    00000000 10000000 (0080): A button held
+    00000000 01000000 (0040): X button held
+    00000000 00100000 (0020): L button held
+    00000000 00010000 (0010): R button held
+    00000000 00001111 (000F): Zero
   Offset: 0x7E0069
   Size: 2
   Type: data
-PAD_2_UNKNOWN:
-  Description: Controller 2 unknown
+PAD_2_HELD:
+  Description: Controller 2 held buttons
+  Notes: |
+    10000000 00000000 (8000) - B button held
+    01000000 00000000 (4000) - Y button held
+    00100000 00000000 (2000) - Select button held
+    00010000 00000000 (1000) - Start button held
+    00001000 00000000 (0800) - Up held
+    00000100 00000000 (0400) - Down held
+    00000010 00000000 (0200) - Left held
+    00000001 00000000 (0100) - Right held
+    00000000 10000000 (0080) - A button held
+    00000000 01000000 (0040) - X button held
+    00000000 00100000 (0020) - L button held
+    00000000 00010000 (0010) - R button held
+    00000000 00001111 (000F) - Zero
   Offset: 0x7E006B
   Size: 2
   Type: data
 PAD_1_PRESS:
-  Description: Controller 1 button press - BYSs^v<> AXLR0000
+  Description: Controller 1 button presses
+  Notes: |
+    10000000 00000000 (8000) - B button pressed
+    01000000 00000000 (4000) - Y button pressed
+    00100000 00000000 (2000) - Select button pressed
+    00010000 00000000 (1000) - Start button pressed
+    00001000 00000000 (0800) - Up pressed
+    00000100 00000000 (0400) - Down pressed
+    00000010 00000000 (0200) - Left pressed
+    00000001 00000000 (0100) - Right pressed
+    00000000 10000000 (0080) - A button pressed
+    00000000 01000000 (0040) - X button pressed
+    00000000 00100000 (0020) - L button pressed
+    00000000 00010000 (0010) - R button pressed
+    00000000 00001111 (000F) - Zero
   Offset: 0x7E006D
   Size: 2
   Type: data
 PAD_2_PRESS:
-  Description: Controller 2 button press - BYSs^v<> AXLR0000
+  Description: Controller 2 button presses
+  Notes: |
+    10000000 00000000 (8000) - B button pressed
+    01000000 00000000 (4000) - Y button pressed
+    00100000 00000000 (2000) - Select button pressed
+    00010000 00000000 (1000) - Start button pressed
+    00001000 00000000 (0800) - Up pressed
+    00000100 00000000 (0400) - Down pressed
+    00000010 00000000 (0200) - Left pressed
+    00000001 00000000 (0100) - Right pressed
+    00000000 10000000 (0080) - A button pressed
+    00000000 01000000 (0040) - X button pressed
+    00000000 00100000 (0020) - L button pressed
+    00000000 00010000 (0010) - R button pressed
+    00000000 00001111 (000F) - Zero
   Offset: 0x7E006F
   Size: 2
   Type: data
@@ -1691,15 +1874,31 @@ TIMER_LOW:
 TIMER_HIGH:
   Description: In-game Timer (High half)
   Offset: 0x7E00A9
+SPC_DATA_PTR:
+  Offset: 0x7E00C6
+  Size: 4
 CUR_TEXT_PAL:
   Description: Current Text Palette
   Offset: 0x7E0200
 CUR_MAP_PAL:
   Description: Current Map Palette
   Offset: 0x7E0240
+UNKNOWN_7E02A0:
+  Type: data
+  Size: 2
+  Offset: 0x7E02A0
 CUR_PARTY_PAL:
   Description: Current Party Palette
   Offset: 0x7E03A0
+  Type: data
+UNKNOWN_7E0A50:
+  Size: 2
+  Offset: 0x7E0A50
+  Type: data
+UNKNOWN_7E0A58:
+  Offset: 0x7E0A58
+  Type: data
+  Size: 2
 LOADED_SPRITE_MOVEMENT_CODES_TABLE:
   Description: Loaded Sprite Movement Codes Table (Are we sure?)
   Offset: 0x7E0A62
@@ -1879,7 +2078,11 @@ UNKNOWN_30x2_TABLE_19:
 UNKNOWN_7E125A:
   Offset: 0x7E125A
   Type: data
-  Size: 0x118
+  Size: 0x8C
+UNKNOWN_7E12E6:
+  Offset: 0x7E12E6
+  Type: data
+  Size: 0x8C
 UNKNOWN_30x2_TABLE_20:
   Description: Unknown 30x2 table.
   Offset: 0x7E1372
@@ -1912,6 +2115,18 @@ UNKNOWN_30x2_TABLE_23:
   Offset: 0x7E1516
   Type: data
   Size: 0x3C
+UNKNOWN_7E2504:
+  Offset: 0x7E2504
+  Size: 2
+UNKNOWN_7E2606:
+  Offset: 0x7E2606
+  Size: 2
+UNKNOWN_7E2708:
+  Offset: 0x7E2708
+  Size: 2
+UNKNOWN_7E280A:
+  Offset: 0x7E280A
+  Size: 2
 UNKNOWN_30x2_TABLE_23_:
   Description: Unknown 30x2 table.
   Offset: 0x7E280C
@@ -2047,9 +2262,80 @@ DEBUG:
   Description: Debug Flag
   Offset: 0x7E436C
   Size: 2
+UNKNOWN_7E436E:
+  Offset: 0x7E436E
+  Type: data
+  Size: 2
+UNKNOWN_7E4370:
+  Offset: 0x7E4370
+  Type: data
+  Size: 2
+UNKNOWN_7E4372:
+  Offset: 0x7E4372
+  Type: data
+  Size: 2
 CURRENT_SECTOR_ATTRIBUTES:
   Description: Current Sector Attributes
   Offset: 0x7E438E
+UNKNOWN_7E438A:
+  Type: data
+  Size: 2
+  Offset: 0x7E438A
+  Notes: Seen at C03FA9, set to zero as part of respawning?
+UNKNOWN_7E438C:
+  Type: data
+  Size: 2
+  Offset: 0x7E438C
+  Notes: Seen at C03FA9, set to zero as part of respawning?
+UNKNOWN_7E43D0:
+  Type: data
+  Size: 2
+  Offset: 0x7E43D0
+UNKNOWN_7E43D2:
+  Type: data
+  Size: 2
+  Offset: 0x7E43D2
+UNKNOWN_7E43D4:
+  Type: data
+  Size: 2
+  Offset: 0x7E43D4
+UNKNOWN_7E43D6:
+  Type: data
+  Size: 2
+  Offset: 0x7E43D6
+UNKNOWN_7E43D8:
+  Type: data
+  Size: 2
+  Offset: 0x7E43D8
+UNKNOWN_7E43DA:
+  Type: data
+  Size: 2
+  Offset: 0x7E43DA
+UNKNOWN_7E445C:
+  Type: data
+  Size: 2
+  Offset: 0x7E445C
+UNKNOWN_7E445E:
+  Type: data
+  Size: 2
+  Offset: 0x7E445E
+UNKNOWN_7E4460:
+  Type: data
+  Size: 2
+  Offset: 0x7E4460
+UNKNOWN_7E4472:
+  Offset: 0x7E4472
+  Type: data
+  Size: 2
+UNKNOWN_7E4474:
+  Type: data
+  Size: 2
+  Offset: 0x7E4474
+UNKNOWN_7E4676:
+  Offset: 0x7E4676
+  Notes: Seen in the respawn function, set to 1
+  Size: 2
+  Type: data
 UNKNOWN_7E467A: 
   Description: Sprite Group Height
   Offset: 0x7E467A
@@ -2085,6 +2371,14 @@ SPRITE_TABLE_7E467E:
     Size: 1
   - Name: Visibility
     Size: 1
+  Notes: |
+    X position, graphics source, binary toggles, Y position, visibility?
+    E8 00 3A F8 00 --> F8 00 BA F8 00
+    F8 02 3A F8 80 --> E8 02 BA F8 80
+    E8 00 7A F8 00 --> F8 00 FA F8 00
+    F8 02 7A F8 80 --> E8 02 FA F8 80
+    Makes Ness walk around upside down! :D
+    Binary toggles: 80 is vertical flip, 40 horizontal... remaining bits unknown.
 UNKNOWN_7E4A00:
   Type: data
   Size: 88
@@ -2107,9 +2401,19 @@ CURRENT_BATTLE_GROUP:
   Offset: 0x7E4A8C
   Size: 2
   Type: data
+UNKNOWN_7E4DBA:
+  Offset: 0x7E4DBA
+  Size: 2
+  Type: data
+  Notes: Used in main loop, skips debug check and pad button check?
 BATTLE_DEBUG:
   Description: Battle Debug Flag?
   Offset: 0x7E4DC2
+  Size: 2
+  Type: data
+UNKNOWN_7E4DC6:
+  Offset: 0x7E4DC6
+  Notes: Seen in the respawn function, set to GAME_STATE.UNKNOWNC*95+0x99CE
   Size: 2
   Type: data
 CHOSEN_FOUR_PTRS:
@@ -2133,6 +2437,13 @@ PLAYER_POSITION_BUFFER:
 MISC_DEBUG_FLAGS:
   Description: Miscellaneous Debug Flags
   Offset: 0x7E5D56
+  Type: data
+  Size: 2
+UNKNOWN_7E5D58:
+  Size: 2
+  Type: data
+  Offset: 0x7E5D58
+  Notes: Set to zero at the respawn function
 BATTLE_SWIRL_COUNTDOWN:
   Description: Battle Swirl Countdown
   Offset: 0x7E5D60
@@ -2142,9 +2453,27 @@ CURRENT_TPT_ENTRY:
 UNKNOWN_7E5D74:
   Description: Related to timers?
   Offset: 0x7E5D74
+UNKNOWN_7E5D9A:
+  Offset: 0x7E5D9A
+  Size: 2
+  Type: data
+  Notes: Used in main loop, pad button check?
+UNKNOWN_7E5DBA:
+  Offset: 0x7E5DBA
+  Size: 2
+  Notes: 1 while teleporting
 MUSHROOMIZED_WALKING_FLAG:
   Description: Mushroomized Walking
   Offset: 0x7E5DA0
+UNKNOWN_7E5DC0:
+  Offset: 0x7E5DC0
+  Type: data
+  Size: 2
+UNKNOWN_7E5DD4:
+  Offset: 0x7E5DD4
+  Notes: Seen in the respawn function, set to -1
+  Size: 2
+  Type: data
 UNKNOWN_7E5DEA:
   Description: '*** UNKNOWN - Door-related table, four entries, six bytes each, last
     four are a long pointer ***'
@@ -2155,6 +2484,15 @@ UNKNOWN_7E5E02:
 UNKNOWN_7E5E04:
   Description: '*** UNKNOWN - Door-related ***'
   Offset: 0x7E5E04
+UNKNOWN_7E5E76:
+  Offset: 0x7E5E76
+  Size: 1
+UNKNOWN_7E5E77:
+  Offset: 0x7E5E77
+  Size: 1
+UNKNOWN_7E5E78:
+  Offset: 0x7E5E78
+  Size: 1
 WINDOW_STATS_TABLE:
   Description: Window Statistics Table
   Offset: 0x7E8650
@@ -2229,6 +2567,10 @@ WINDOW_STATS_TABLE:
     Size: 31
 UNKNOWN_7E88E0:
   Offset: 0x7E88E0
+UNKNOWN_7E88E2:
+  Offset: 0x7E88E2
+  Type: data
+  Size: 2
 WINDOW_EXISTENCE_TABLE:
   Description: Window Existence Table
   Offset: 0x7E88E4
@@ -2251,10 +2593,24 @@ UNKNOWN_7E89D4:
   - Type: script
     Size: 45
 UNKNOWN_7E9622:
-  Size: 2
+  Size: 1
   Type: data
   Notes: Window related?
   Offset: 0x7E9622
+UNKNOWN_7E9623:
+  Size: 1
+  Type: data
+  Notes: Seen at C442AC
+  Offset: 0x7E9623
+UNKNOWN_7E9625:
+  Size: 2
+  Type: data
+  Notes: Seen at C442AC
+  Offset: 0x7E9625
+UNKNOWN_7E9641:
+  Offset: 0x7E9641
+  Type: data
+  Size: 2
 BATTLE_MODE_FLAG:
   Description: Battle Mode Flag
   Values:
@@ -2267,6 +2623,11 @@ INPUT_LOCK_FLAG:
 BLINKING_TRIANGLE_FLAG:
   Description: Blinking Prompt Flag
   Offset: 0x7E964D
+UNKNOWN_7E964F:
+  Size: 2
+  Type: data
+  Notes: Seen at C442AC
+  Offset: 0x7E964F
 UNKNOWN_7E9652:
   Size: 2
   Type: data
@@ -2277,6 +2638,21 @@ UNKNOWN_7E9654:
   Type: data
   Notes: Seen at C43CAA, window related?
   Offset: 0x7E9654
+UNKNOWN_7E9658:
+  Size: 2
+  Type: data
+  Notes: Seen at C3E75D
+  Offset: 0x7E9658
+UNKNOWN_7E965A:
+  Size: 2
+  Type: data
+  Notes: Seen at C3E75D
+  Offset: 0x7E965A
+UNKNOWN_7E9662:
+  Size: 2
+  Type: data
+  Notes: Seen at C442AC
+  Offset: 0x7E9662
 UNKNOWN_7E96AA:
   Description: Table involved with text subroutines (08 code) somehow. Ten entries
     of 0x1B (27) bytes each, so it runs up to 7E97B7? Text system stack frames?
@@ -2302,13 +2678,14 @@ UNKNOWN_7E97DA:
   Description: Storage for strings loaded with [19]? (How much space?)
   Offset: 0x7E97DA
 GAME_STATE:
+  Description: Non-character game state
   Type: data
   Offset: 0x7E97F5
   Size: 0x1D9
-  Options:
-    Force Offset Keys: n
   Entries: *GAME_STATE
+  Notes: Contains miscellaneous data saved/loaded to/from SRAM
 CHAR_STRUCT:
+  Description: Data for the current playable characters
   Type: data
   Offset: 0x7E99CE
   Size: 0x23A
@@ -2336,6 +2713,16 @@ UNKNOWN_7E9CA1:
   Size: 1
   Type: data
   Offset: 0x7E9CA1
+RESPAWN_X:
+  Description: X coordinate where the party leader will return to after death
+  Size: 2
+  Type: data
+  Offset: 0x7E9D1F
+RESPAWN_Y:
+  Description: Y coordinate where the party leader will return to after death
+  Size: 2
+  Type: data
+  Offset: 0x7E9D21
 UNKNOWN_7E9E23:
   Size: 2
   Type: data
@@ -2349,6 +2736,16 @@ UNKNOWN_7E9E25:
 DMA_TRANSFER_FLAG:
   Description: Indicates if a DMA transfer is in progress
   Offset: 0x7E9E2B
+DAD_PHONE_TIMER:
+  Description: Dad Phone Timer
+  Size: 2
+  Type: data
+  Offset: 0x7E9E54
+UNKNOWN_7E9E56:
+  Size: 2
+  Type: data
+  Offset: 0x7E9E56
+  Notes: Set to zero at the respawn function
 TELEPORT_DESTINATION:
   Offset: 0x7E9F3F
   Size: 2
@@ -2365,12 +2762,64 @@ TELEPORT_STYLE:
   - PSI Teleport β
   - Instant
   - Improved PSI Teleport β
-DAD_PHONE_TIMER:
-  Description: Dad Phone Timer
-  Offset: 0x7E9E54
+UNKNOWN_7E9F43:
+  Offset: 0x7E9F43
+  Size: 2
+  Notes: 0 while teleporting normally, 1 while instant-teleporting
+UNKNOWN_7E9F45:
+  Offset: 0x7E9F45
+  Size: 2
+  Notes: 0 while teleporting
+UNKNOWN_7E9F47:
+  Offset: 0x7E9F47
+  Size: 2
+  Notes: 0 while teleporting
+UNKNOWN_7E9F6B:
+  Type: data
+  Size: 2
+  Offset: 0x7E9F6B
+  Notes: Seen at C03FA9, set to -1 as part of respawning?
 PAJAMA_FLAG:
   Description: Non-zero if Ness is in Pajamas
+  Size: 2
+  Type: data
   Offset: 0x7E9F71
+UNKNOWN_7E9F75:
+  Offset: 0x7E9F75
+  Type: data
+  Size: 2
+UNKNOWN_7E9F7A:
+  Offset: 0x7E9F7A
+  Type: data
+  Size: 2
+UNKNOWN_7E9F7C:
+  Offset: 0x7E9F7C
+  Type: data
+  Size: 2
+UNKNOWN_7E9F7E:
+  Offset: 0x7E9F7E
+  Type: data
+  Size: 2
+UNKNOWN_7E9F80:
+  Offset: 0x7E9F80
+  Type: data
+  Size: 2
+UNKNOWN_7E9F82:
+  Offset: 0x7E9F82
+  Type: data
+  Size: 2
+UNKNOWN_7E9F84:
+  Offset: 0x7E9F84
+  Type: data
+  Size: 2
+UNKNOWN_7E9F86:
+  Offset: 0x7E9F86
+  Type: data
+  Size: 2
+UNKNOWN_7E9F88:
+  Offset: 0x7E9F88
+  Type: data
+  Size: 2
 ENEMIES_IN_BATTLE:
   Description: Number of Enemies in Battle
   Offset: 0x7E9F8A
@@ -2383,123 +2832,154 @@ BATTLERS_TABLE:
   - Type: int
     Size: 1
     Name: ID
+    Description: ID
   - Type: int
     Size: 1
-    Name: UnknownA
+    Name: UNKNOWNA
   - Type: int
     Size: 1
-    Name: Sprite
+    Name: SPRITE
+    Description: Sprite to display
   - Type: int
     Size: 1
-    Name: UnknownB
+    Name: UNKNOWNB
   - Type: int
     Size: 2
-    Name: Current Action
+    Name: CURRENT_ACTION
+    Description: Current selected action
   - Type: int
     Size: 1
-    Name: Current Action Slot
+    Name: CURRENT_ACTION_SLOT
+    Description: Current action slot
   - Type: int
     Size: 1
-    Name: UnknownC
+    Name: UNKNOWNC
   - Type: int
     Size: 1
-    Name: Current Action Argument
+    Name: CURRENT_ACTION_ARGUMENT
+    Description: Current action argument
   - Type: int
     Size: 1
-    Name: UnknownD
+    Name: UNKNOWND
   - Type: int
     Size: 1
-    Name: Current Target
+    Name: CURRENT_TARGET
+    Description: Current Target
   - Type: int
     Size: 1
-    Name: '"The" Flag'
+    Name: THE_FLAG
+    Description: "'The' Flag"
   - Type: int
     Size: 1
-    Name: Consciousness
+    Name: CONSCIOUS_FLAG
     Values:
       0: Incapacitated
       1: Alive
+    Description: Consciousness
   - Type: int
     Size: 1
-    Name: UnknownE
+    Name: UNKNOWNE
   - Type: int
     Size: 1
-    Name: NPC ID
+    Name: NPCID
+    Description: NPC ID
   - Type: int
     Size: 1
-    Name: UnknownF
+    Name: UNKNOWNF
   - Type: int
     Size: 2
     Name: HP
+    Description: HP
   - Type: int
     Size: 2
-    Name: HP Target
+    Name: HP_TARGET
+    Description: HP Target
   - Type: int
     Size: 2
-    Name: HP Max
+    Name: HP_MAX
+    Description: HP Max
   - Type: int
     Size: 2
     Name: PP
+    Description: PP
   - Type: int
     Size: 2
-    Name: PP Target
+    Name: PP_TARGET
+    Description: PP Target
   - Type: int
     Size: 2
-    Name: PP Max
+    Name: PP_MAX
+    Description: PP Max
   - Type: struct
     Size: 6
-    Name: Afflictions
+    Name: AFFLICTIONS
     Entries:
     - Name: Affliction
       Size: 1
+    Description: Afflictions
   - Type: int
     Size: 1
-    Name: Shield
+    Name: SHIELD
+    Description: Shield
   - Type: int
     Size: 1
-    Name: Guard status
+    Name: GUARD_FLAG
+    Description: Is character defending?
   - Type: int
     Size: 1
-    Name: Shield HP
+    Name: SHIELD_HP
+    Description: Current shield HP
   - Type: int
     Size: 2
-    Name: Offense
+    Name: OFFENSE
+    Description: Offense
   - Type: int
     Size: 2
-    Name: Defense
+    Name: DEFENSE
+    Description: Defense
   - Type: int
     Size: 2
-    Name: Speed
+    Name: SPEED
+    Description: Speed
   - Type: int
     Size: 2
-    Name: Guts
+    Name: GUTS
+    Description: Guts
   - Type: int
     Size: 2
-    Name: Luck
+    Name: LUCK
+    Description: Luck
   - Type: int
     Size: 1
-    Name: Vitality
+    Name: VITALITY
+    Description: Vitality
   - Type: int
     Size: 1
     Name: IQ
+    Description: IQ
   - Type: int
     Size: 1
-    Name: Offense
+    Name: OFFENSE2
+    Description: Offense
   - Type: int
     Size: 1
-    Name: Defense
+    Name: DEFENSE2
+    Description: Defense
   - Type: int
     Size: 1
-    Name: Speed
+    Name: SPEED2
+    Description: Speed
   - Type: int
     Size: 1
-    Name: Guts
+    Name: GUTS2
+    Description: Guts
   - Type: int
     Size: 1
-    Name: Luck
+    Name: LUCK2
+    Description: Luck
   - Type: struct
     Size: 6
-    Name: Effectiveness
+    Name: EFFECTIVENESS
     Entries:
     - Name: Paralysis
       Size: 1
@@ -2519,30 +2999,38 @@ BATTLERS_TABLE:
     - Name: Hypnosis
       Size: 1
       Values: *RESISTANCES
+    Description: Status and elemental effectiveness
   - Type: int
     Size: 2
-    Name: Money
+    Name: MONEY
+    Description: Money
   - Type: int
     Size: 2
     Name: EXP
+    Description: Experience points
   - Type: int
     Size: 1
-    Name: Battle Sprite index
+    Name: BATTLE_SPRITE_INDEX
+    Description: Battle Sprite Index
   - Type: int
     Size: 1
-    Name: Battle Sprite X
+    Name: BATTLE_SPRITE_X
+    Description: Onscreen sprite location (X)
   - Type: int
     Size: 1
-    Name: Battle Sprite Y
+    Name: BATTLE_SPRITE_Y
+    Description: Onscreen sprite location (Y)
   - Type: int
     Size: 2
-    Name: Initiative
+    Name: INITIATIVE
+    Description: Initiative?
   - Type: bytearray
     Size: 5
-    Name: UnknownG
+    Name: UNKNOWNG
   - Type: int
     Size: 1
-    Name: Enemy ID (Copy?)
+    Name: ID2
+    Description: Enemy ID (Copy?)
   - Type: bytearray
     Size: 2
     Name: UnknownH
@@ -2586,6 +3074,8 @@ TARGET_NAME_ADJUST_SCRATCH:
   Offset: 0x7EA99E
 ITEM_DROPPED:
   Description: Item to receive at end of battle
+  Type: data
+  Size: 2
   Offset: 0x7EAA10
 MIRROR_ENEMY:
   Description: Enemy being mirrored by Poo
@@ -2593,9 +3083,24 @@ MIRROR_ENEMY:
 MIRROR_TURN_TIMER:
   Description: Poo mirror turn timer
   Offset: 0x7EAA62
+UNKNOWN_7EAD92:
+  Offset: 0x7EAD92
+  Type: data
+  Size: 2
+UNKNOWN_7EAD94:
+  Offset: 0x7EAD94
+  Type: data
+  Size: 2
 CURRENT_SAVE_SLOT:
   Description: Current Save Slot
   Offset: 0x7EB4A1
+UNKNOWN_7EB4A8:
+  Offset: 0x7EB4A8
+  Type: data
+  Size: 2
+UNKNOWN_7EB4B6:
+  Offset: 0x7EB4B6
+  Size: 2
 UNKNOWN_7EB4EF:
   Description: Photo display flag?
   Offset: 0x7EB4EF
@@ -2622,6 +3127,12 @@ CURRENT_SEQUENCE_PACK:
   Description: Current Sequence Pack
   Size: 2
   Offset: 0x7EB541
+UNKNOWN_7EB543:
+  Offset: 0x7EB543
+  Size: 2
+UNKNOWN_7EB547:
+  Offset: 0x7EB547
+  Size: 2
 SECTOR_BOUNDARY_BEHAVIOUR_FLAG:
   Description: Sector Boundary Behavior
   Offset: 0x7EB549
@@ -3323,42 +3834,42 @@ ADJUST_POSITION:
   Description: Adjust position based on velocity
   Size: 648
   Type: assembly
-  labels:
-    0x2DBB: UNKNOWN0
-    0x2DBE: UNKNOWN1
-    0x2DED: UNKNOWN2
-    0x2E39: UNKNOWN3
-    0x2E59: UNKNOWN4
-    0x2E88: UNKNOWN5
-    0x2ED4: UNKNOWN6
-    0x2EF4: UNKNOWN7
-    0x2F30: UNKNOWN8
-    0x2F3E: UNKNOWN9
-    0x2F48: UNKNOWN10
-    0x2F76: UNKNOWN11
-    0x2FC2: UNKNOWN12
-    0x2FE1: UNKNOWN13
-    0x3015: UNKNOWN14
+  Labels:
+    44: UNKNOWN0
+    47: UNKNOWN1
+    94: UNKNOWN2
+    170: UNKNOWN3
+    202: UNKNOWN4
+    249: UNKNOWN5
+    325: UNKNOWN6
+    357: UNKNOWN7
+    417: UNKNOWN8
+    431: UNKNOWN9
+    441: UNKNOWN10
+    487: UNKNOWN11
+    563: UNKNOWN12
+    594: UNKNOWN13
+    646: UNKNOWN14
   Offset: 0xC02D8F
 UNKNOWN_C03017:
   Size: 648
   Type: assembly
-  labels:
-    0x3043: UNKNOWN0
-    0x3046: UNKNOWN1
-    0x3075: UNKNOWN2
-    0x30C1: UNKNOWN3
-    0x30E1: UNKNOWN4
-    0x3110: UNKNOWN5
-    0x315C: UNKNOWN6
-    0x317C: UNKNOWN7
-    0x31B8: UNKNOWN8
-    0x31C6: UNKNOWN9
-    0x31D0: UNKNOWN10
-    0x31FE: UNKNOWN11
-    0x324A: UNKNOWN12
-    0x3269: UNKNOWN13
-    0x329D: UNKNOWN14
+  Labels:
+    44: UNKNOWN0
+    47: UNKNOWN1
+    94: UNKNOWN2
+    170: UNKNOWN3
+    202: UNKNOWN4
+    249: UNKNOWN5
+    325: UNKNOWN6
+    357: UNKNOWN7
+    417: UNKNOWN8
+    431: UNKNOWN9
+    441: UNKNOWN10
+    487: UNKNOWN11
+    563: UNKNOWN12
+    594: UNKNOWN13
+    646: UNKNOWN14
   Offset: 0xC03017
 UNKNOWN_C0329F:
   Size: 77
@@ -4915,6 +5426,8 @@ UNKNOWN_C088A5:
 UNKNOWN_C088B1:
   Size: 616
   Type: assembly
+  Final State:
+    8 Bit Accum: false
   labels:
     0x88CD: UNKNOWN0
     0x89F3: UNKNOWN1
@@ -4992,7 +5505,7 @@ UNKNOWN_C08D79:
   Size: 25
   Type: assembly
   Offset: 0xC08D79
-UNKNOWN_C08D92:
+SET_OAM_SIZE:
   Description: Set OAM Size Register
   Size: 12
   Type: assembly
@@ -5021,8 +5534,8 @@ RAND:
   Description: Generate pseudorandom number in A
   Size: 56
   Type: assembly
-  labels:
-    0x8EC7: UNKNOWN0
+  Labels:
+    45: UNKNOWN0
   Offset: 0xC08E9A
 MEMCPY_A:
   Description: Copy X bytes from $0E to A
@@ -5034,9 +5547,9 @@ MEMCPY_A:
     8 Bit Index: n
   Size: 27
   Type: assembly
-  labels:
-    0x8EDE: UNKNOWN0
-    0x8EE7: UNKNOWN1
+  Labels:
+    12: UNKNOWN0
+    21: UNKNOWN1
   Offset: 0xC08ED2
 MEMCPY_B:
   Description: Copy one portion of memory to another
@@ -5046,36 +5559,38 @@ MEMCPY_B:
     $0C: Source Pointer
   Size: 15
   Type: assembly
-  labels:
-    0x8EF2: UNKNOWN0
-    0x8EF6: UNKNOWN1
+  Labels:
+    5: UNKNOWN0
+    9: UNKNOWN1
   Offset: 0xC08EED
 MEMSET:
   Description: Overwrite Memory
   Arguments:
     A: Destination
-    X: Size*2
+    X: Size (16-bit Words)
     $0E: Value to overwrite data with
   Size: 25
   Type: assembly
-  labels:
-    0x8F0C: UNKNOWN0
-    0x8F11: UNKNOWN1
+  Final State:
+    8 Bit Accum: false
+  Labels:
+    16: LOOP_ITERATION
+    21: LOOP_ENTRY
   Offset: 0xC08EFC
 MEMSET8:
   Description: Overwrite Memory (8-bit)
   Arguments:
     A: Value
-    X: Size
+    X: Size (8-bit Words)
     $0E: Destination
   Final State:
     8 Bit Accum: false
     8 Bit Index: false
   Size: 13
   Type: assembly
-  labels:
-    0x8F18: UNKNOWN0
-    0x8F1F: UNKNOWN1
+  Labels:
+    3: UNKNOWN0
+    10: UNKNOWN1
   Offset: 0xC08F15
 STRLEN:
   Description: Returns the length of a string
@@ -5242,25 +5757,24 @@ UNKNOWN_C09242:
 UNKNOWN_C0924A:
   Size: 11
   Type: assembly
-  labels:
-    0x9250: UNKNOWN0
+  Labels:
+    6: UNKNOWN0
+    7: UNKNOWN1
   Offset: 0xC0924A
 UNKNOWN_C09255:
   Size: 6
   Type: assembly
-  labels:
-    0x9255: UNKNOWN0
+  Labels:
+    2: UNKNOWN00
   Offset: 0xC09255
 UNKNOWN_C0925B:
   Size: 30
   Type: assembly
-  labels:
-    0x9251: UNKNOWN0
-    0x9257: UNKNOWN1
-    0x9268: UNKNOWN2
-    0x926C: UNKNOWN3
-    0x9270: UNKNOWN4
-    0x9275: UNKNOWN5
+  Labels:
+    13: UNKNOWN0
+    17: UNKNOWN1
+    21: UNKNOWN2
+    26: UNKNOWN3
   Offset: 0xC0925B
 UNKNOWN_C09279:
   Type: assembly
@@ -5278,6 +5792,8 @@ UNKNOWN_C0927C:
   Offset: 0xC0927C
 UNKNOWN_C092F5:
   Size: 327
+  Initial State:
+    8 Bit Accum: false
   Type: assembly
   labels:
     0x933E: UNKNOWN0
@@ -5299,6 +5815,8 @@ UNKNOWN_C0943C:
 UNKNOWN_C09451:
   Size: 21
   Type: assembly
+  Initial State:
+    8 Bit Accum: n
   labels:
     0x9456: UNKNOWN0
     0x9465: UNKNOWN1
@@ -5324,6 +5842,8 @@ UNKNOWN_C094D0:
 UNKNOWN_C09506:
   Size: 82
   Type: assembly
+  Initial State:
+    8 Bit Accum: false
   labels:
     0x951E: UNKNOWN0
     0x9530: UNKNOWN1
@@ -5337,11 +5857,14 @@ MOVEMENT_CTRL_CODES_PTR_TABLE:
   Entries:
   - Name: Pointer
     Size: 2
+    Base: 0x830000
     Type: pointer
   Offset: 0xC09558
 UNKNOWN_C095F2:
   Size: 17
   Type: assembly
+  Initial State:
+    8 Bit Accum: n
   Offset: 0xC095F2
 UNKNOWN_C09603:
   Size: 29
@@ -5538,6 +6061,8 @@ UNKNOWN_C09C35:
 UNKNOWN_C09C3B:
   Size: 28
   Type: assembly
+  Initial State:
+    8 Bit Accum: n
   labels:
     0x9C55: UNKNOWN0
   Offset: 0xC09C3B
@@ -5638,10 +6163,14 @@ UNKNOWN_C09D99:
   Size: 5
   Type: assembly
   Offset: 0xC09D99
-UNKNOWN_C09D9E:
-  Size: 16
+JUMP_TO_LOADED_MOVEMENT_PTR:
+  Size: 3
   Type: assembly
   Offset: 0xC09D9E
+UNKNOWN_C09DA1:
+  Size: 13
+  Type: assembly
+  Offset: 0xC09DA1
 UNKNOWN_C09DAE:
   Size: 234
   Type: assembly
@@ -6145,14 +6674,14 @@ UNKNOWN_C0AA23:
 UNKNOWN_C0AA3F:
   Size: 47
   Type: assembly
-  labels:
-    0xAA4A: UNKNOWN0
+  Labels:
+    11: UNKNOWN0
   Offset: 0xC0AA3F
 UNKNOWN_C0AA6E:
   Size: 62
   Type: assembly
-  labels:
-    0xAA90: UNKNOWN0
+  Labels:
+    34: UNKNOWN0
   Offset: 0xC0AA6E
 UNKNOWN_C0AAAC:
   Size: 9
@@ -6173,9 +6702,9 @@ UNKNOWN_C0AAD1:
 UNKNOWN_C0AAD5:
   Size: 40
   Type: assembly
-  labels:
-    0xAAF1: UNKNOWN0
-    0xAAFC: UNKNOWN1
+  Labels:
+    28: UNKNOWN0
+    39: UNKNOWN1
   Offset: 0xC0AAD5
 UNKNOWN_C0AAFD:
   Size: 9
@@ -6185,26 +6714,30 @@ LOAD_SPC700_DATA:
   Description: Send Music Data to SPC-700
   Size: 162
   Type: assembly
-  labels:
-    0xAB27: UNKNOWN0
-    0xAB39: UNKNOWN1
-    0xAB41: UNKNOWN2
-    0xAB46: UNKNOWN3
-    0xAB4C: UNKNOWN4
-    0xAB56: UNKNOWN5
-    0xAB5B: UNKNOWN6
-    0xAB5F: UNKNOWN7
-    0xAB6C: UNKNOWN8
-    0xAB73: UNKNOWN9
-    0xAB87: UNKNOWN10
-    0xAB90: UNKNOWN11
+  Arguments:
+    A+X: Pointer to data
+  Initial State:
+    DBR: 0
+  Labels:
+    33: UNKNOWN0
+    51: UNKNOWN1
+    59: UNKNOWN2
+    64: UNKNOWN3
+    70: UNKNOWN4
+    80: UNKNOWN5
+    85: UNKNOWN6
+    89: UNKNOWN7
+    102: UNKNOWN8
+    109: UNKNOWN9
+    129: UNKNOWN10
+    138: UNKNOWN11
   Offset: 0xC0AB06
 WAIT_FOR_SPC700:
   Description: Wait until SPC-700 is ready
   Size: 21
   Type: assembly
-  labels:
-    0xABAE: UNKNOWN0
+  Labels:
+    6: UNKNOWN0
   Offset: 0xC0ABA8
 UNKNOWN_C0ABBD:
   Size: 9
@@ -6439,9 +6972,6 @@ FILE_SELECT_INIT:
   Description: File Select Screen Initialization
   Size: 314
   Type: assembly
-  labels:
-    0xB541: UNKNOWN0
-    0xB57D: UNKNOWN1
   Offset: 0xC0B525
 UNKNOWN_C0B65F:
   Size: 32
@@ -6455,16 +6985,16 @@ BATTLE_INIT:
   Description: Battle Initialization
   Size: 167
   Type: assembly
-  labels:
-    0xB741: UNKNOWN0
-    0xB74F: UNKNOWN1
-    0xB761: UNKNOWN2
-    0xB786: UNKNOWN3
-    0xB794: UNKNOWN4
-    0xB798: UNKNOWN5
-    0xB79F: UNKNOWN6
-    0xB7BE: UNKNOWN7
-    0xB7D6: UNKNOWN8
+  Labels:
+    16: UNKNOWN0
+    30: UNKNOWN1
+    48: UNKNOWN2
+    85: UNKNOWN3
+    99: UNKNOWN4
+    103: UNKNOWN5
+    110: UNKNOWN6
+    141: UNKNOWN7
+    165: UNKNOWN8
   Offset: 0xC0B731
 MAIN_LOOP:
   Description: Main Loop
@@ -7337,17 +7867,17 @@ UNKNOWN_C0EA68:
 UNKNOWN_C0EA99:
   Size: 327
   Type: assembly
-  labels:
-    0xEAE6: UNKNOWN0
-    0xEB03: UNKNOWN1
-    0xEB20: UNKNOWN2
-    0xEB28: UNKNOWN3
-    0xEB43: UNKNOWN4
-    0xEB54: UNKNOWN5
-    0xEB67: UNKNOWN6
-    0xEB7B: UNKNOWN7
-    0xEB9D: UNKNOWN8
-    0xEBA7: UNKNOWN9
+  Labels:
+    77: STYLE_1+5
+    106: STYLE_2
+    135: STYLE_3
+    143: STYLE_4
+    170: STYLE_OTHER
+    187: UNKNOWN5
+    206: UNKNOWN6
+    226: UNKNOWN7
+    260: UNKNOWN8
+    270: UNKNOWN9
   Offset: 0xC0EA99
 UNKNOWN_C0EBE0:
   Size: 151
@@ -7657,8 +8187,7 @@ UNKNOWN_C102D0:
     0x0300: UNKNOWN3
   Offset: 0xC102D0
 GET_ACTIVE_WINDOW_ADDRESS:
-  Description: |
-    Get the root address of the current active window
+  Description: Get the root address of the current active window
   Size: 35
   Type: assembly
   labels:
@@ -12124,15 +12653,19 @@ UNKNOWN_C1E48D:
 UNKNOWN_C1E4BE:
   Size: 193
   Type: assembly
-  labels:
-    0xE4F9: UNKNOWN0
-    0xE4FB: UNKNOWN1
-    0xE500: UNKNOWN2
-    0xE503: UNKNOWN3
-    0xE524: UNKNOWN4
-    0xE527: UNKNOWN5
-    0xE536: UNKNOWN6
-    0xE545: UNKNOWN7
+  Arguments:
+    A: Unknown (Window type?)
+    X: Unknown (A counter?)
+    'Y': Unknown
+  Labels:
+    59: UNKNOWN0
+    61: UNKNOWN1
+    66: UNKNOWN2
+    69: UNKNOWN3
+    102: UNKNOWN4
+    105: UNKNOWN5
+    120: UNKNOWN6
+    135: UNKNOWN7
   Offset: 0xC1E4BE
 TEXT_INPUT_DIALOG:
   Size: 1319
@@ -12143,60 +12676,67 @@ TEXT_INPUT_DIALOG:
     $0E: Unknown
     $10: Unknown
   Type: assembly
-  labels:
-    0xE5D1: UNKNOWN0
-    0xE5E9: UNKNOWN1
-    0xE628: UNKNOWN2
-    0xE653: UNKNOWN3
-    0xE65A: UNKNOWN4
-    0xE667: UNKNOWN5
-    0xE6AA: UNKNOWN6
-    0xE6ED: UNKNOWN7
-    0xE718: UNKNOWN8
-    0xE71F: UNKNOWN9
-    0xE736: UNKNOWN10
-    0xE75D: UNKNOWN11
-    0xE7E5: UNKNOWN12
-    0xE815: UNKNOWN13
-    0xE843: UNKNOWN14
-    0xE8B8: UNKNOWN15
-    0xE8FB: UNKNOWN16
-    0xE929: UNKNOWN17
-    0xE941: UNKNOWN18
-    0xE956: UNKNOWN19
-    0xE96F: UNKNOWN20
-    0xE97F: UNKNOWN21
-    0xE989: UNKNOWN22
-    0xE9A2: UNKNOWN23
-    0xE9A7: UNKNOWN24
-    0xE9AF: UNKNOWN25
-    0xE9C5: UNKNOWN26
-    0xE9E6: UNKNOWN27
-    0xE9ED: UNKNOWN28
-    0xEA07: UNKNOWN29
-    0xEA0C: UNKNOWN30
-    0xEA1B: UNKNOWN31
-    0xEA20: UNKNOWN32
-    0xEA23: UNKNOWN33
-    0xEA3B: UNKNOWN34
-    0xEA4E: UNKNOWN35
-    0xEA71: UNKNOWN36
-    0xEA7B: UNKNOWN37
-    0xEA84: UNKNOWN38
-    0xEA92: UNKNOWN39
-    0xEA9D: UNKNOWN40
-    0xEAA4: UNKNOWN41
+  Labels:
+    82: UNKNOWN0
+    106: UNKNOWN1
+    169: UNKNOWN2
+    212: UNKNOWN3
+    219: UNKNOWN4
+    232: UNKNOWN5
+    275: UNKNOWN6
+    299: UNKNOWN7
+    366: UNKNOWN8
+    409: UNKNOWN9
+    416: UNKNOWN10
+    439: UNKNOWN11
+    478: UNKNOWN12
+    614: UNKNOWN13
+    662: UNKNOWN14
+    708: UNKNOWN15
+    749: UNKNOWN16
+    793: UNKNOWN17
+    825: UNKNOWN18
+    857: UNKNOWN19
+    892: UNKNOWN20
+    927: UNKNOWN21
+    938: UNKNOWN22
+    962: DONTCARE_SELECTED
+    983: BACKSPACE_SELECTED
+    1008: UNKNOWN25
+    1018: UNKNOWN26
+    1024: OK_SELECTED
+    1034: SELECTION_NOT_IN_LINE_6
+    1059: UNKNOWN29
+    1064: UNKNOWN30
+    1072: UNKNOWN31
+    1094: UNKNOWN32
+    1127: UNKNOWN33
+    1137: UNKNOWN34
+    1143: UNKNOWN35
+    1160: UNKNOWN36
+    1165: UNKNOWN37
+    1180: UNKNOWN38
+    1185: UNKNOWN39
+    1188: UNKNOWN40
+    1212: UNKNOWN41
+    1231: UNKNOWN42
+    1266: UNKNOWN43
+    1276: UNKNOWN44
+    1285: UNKNOWN45
+    1299: UNKNOWN46
+    1310: UNKNOWN47
+    1317: UNKNOWN48
   Offset: 0xC1E57F
 ENTER_YOUR_NAME_PLEASE:
   Description: Display the Name Registry prompt
   Size: 350
   Type: assembly
-  labels:
-    0xEACE: UNKNOWN0
-    0xEB29: UNKNOWN1
-    0xEB4C: UNKNOWN2
-    0xEB96: UNKNOWN3
-    0xEBE4: UNKNOWN4
+  Labels:
+    40: UNKNOWN0
+    131: UNKNOWN1
+    166: UNKNOWN2
+    240: UNKNOWN3
+    318: UNKNOWN4
   Offset: 0xC1EAA6
 NAME_A_CHARACTER:
   Size: 139
@@ -12208,9 +12748,9 @@ NAME_A_CHARACTER:
     $0E: 4-byte description text pointer
     $12: Description text length
   Notes: Unknown. seems to use two pointers and length strings and calls config menu labelling routine.
-  labels:
-    0xEC42: UNKNOWN0
-    0xEC48: UNKNOWN1
+  Labels:
+    62: UNKNOWN0
+    68: UNKNOWN1
   Offset: 0xC1EC04
 UNKNOWN_C1EC8F:
   Size: 66
@@ -16100,8 +16640,7 @@ UNKNOWN_C2C1BD:
     0xC21D: UNKNOWN4
   Offset: 0xC2C1BD
 UNKNOWN_C2C21F:
-  Description: |
-    Load Music Track X and Battle Background of Enemy Group A
+  Description: Load Music Track X and Battle Background of Enemy Group A
   Size: 269
   Type: assembly
   labels:
@@ -16813,7 +17352,7 @@ UNKNOWN_C30184:
   Type: data
   Size: 2
   Offset: 0xC30184
-UNKNOWN_C30186:
+NESS_PAJAMA_FLAG:
   Description: Ness's Pajama Flag
   Size: 2
   Type: data
@@ -16944,20 +17483,26 @@ UNKNOWN_C3E6F8:
   Type: assembly
   Offset: 0xC3E6F8
 UNKNOWN_C3E75D:
-  labels:
-    0xE778: UNKNOWN0
-    0xE785: UNKNOWN1
-    0xE79F: UNKNOWN2
-    0xE7CE: UNKNOWN3
-    0xE7DF: UNKNOWN4
+  Label States:
+    27:
+      8 Bit Accum: n
+    55:
+      8 Bit Accum: n
+  Labels:
+    27: UNKNOWN0
+    40: UNKNOWN1
+    55: UNKNOWN2
+    66: UNKNOWN3
+    113: UNKNOWN4
+    130: UNKNOWN5
   Size: 134
   Type: assembly
   Offset: 0xC3E75D
 UNKNOWN_C3E7E3:
-  labels:
-    0xE819: UNKNOWN0
-    0xE835: UNKNOWN1
-    0xE84C: UNKNOWN2
+  Labels:
+    54: UNKNOWN0
+    82: UNKNOWN1
+    105: UNKNOWN2
   Size: 107
   Type: assembly
   Offset: 0xC3E7E3
@@ -17202,11 +17747,11 @@ UNKNOWN_C3F7FB:
   Type: assembly
   Offset: 0xC3F7FB
 UNKNOWN_C3F819:
-  Size: 362
+  Size: 360
   Type: data
   Offset: 0xC3F819
-UNKNOWN_C3F983:
-  Size: 326
+UNKNOWN_C3F981:
+  Size: 328
   Type: assembly
   labels:
     0xF99B: UNKNOWN0
@@ -17218,7 +17763,7 @@ UNKNOWN_C3F983:
     0xFA4A: UNKNOWN6
     0xFABD: UNKNOWN7
     0xFAC7: UNKNOWN8
-  Offset: 0xC3F983
+  Offset: 0xC3F981
 UNKNOWN_C3FAC9:
   labels:
     0xFAEA: UNKNOWN0
@@ -17278,8 +17823,7 @@ UNUSED_FORSALE_SIGN_SPRITE_TABLE:
     Size: 2
   Offset: 0xC3FDBD
 UNKNOWN_C3FDC5:
-  Description: |
-    Doom routine (wipes SRAM if anti-piracy is triggered)
+  Description: Doom routine (wipes SRAM if anti-piracy is triggered)
   labels:
     0xFDCD: UNKNOWN0
     0xFDE3: UNKNOWN1
@@ -17642,10 +18186,16 @@ UNKNOWN_C42B51:
   Offset: 0xC42B51
 UNKNOWN_C42F45:
   Description: Copies pointers to memory?
+  Arguments:
+    A: Base index
+    $0E: Pointer (Movement?)
+    $12: Pointer (Screen movement?)
   Size: 31
+  Initial State:
+    8 Bit Index: n
   Type: assembly
-  labels:
-    0x2F54: UNKNOWN0
+  Labels:
+    15: UNKNOWN0
   Offset: 0xC42F45
 UNKNOWN_C42F64:
   Size: 40
@@ -17903,15 +18453,15 @@ GET_CHARACTER_AT_CURSOR_POSITION:
 UNKNOWN_C440B5:
   Size: 258
   Type: assembly
-  labels:
-    0x40DA: UNKNOWN0
-    0x4132: UNKNOWN1
-    0x4147: UNKNOWN2
-    0x4187: UNKNOWN3
-    0x4189: UNKNOWN4
-    0x418B: UNKNOWN5
-    0x41B1: UNKNOWN6
-    0x41B5: UNKNOWN7
+  Labels:
+    37: UNKNOWN0
+    125: UNKNOWN1
+    146: UNKNOWN2
+    210: UNKNOWN3
+    212: UNKNOWN4
+    214: UNKNOWN5
+    252: UNKNOWN6
+    256: UNKNOWN7
   Offset: 0xC440B5
 UNKNOWN_C441B7:
   Size: 147
@@ -17930,29 +18480,35 @@ UNKNOWN_C4424A:
 UNKNOWN_C442AC:
   Size: 591
   Type: assembly
-  labels:
-    0x4303: UNKNOWN0
-    0x4310: UNKNOWN1
-    0x431B: UNKNOWN2
-    0x4329: UNKNOWN3
-    0x433F: UNKNOWN4
-    0x4363: UNKNOWN5
-    0x4390: UNKNOWN6
-    0x43B2: UNKNOWN7
-    0x43C8: UNKNOWN8
-    0x43E8: UNKNOWN9
-    0x4452: UNKNOWN10
-    0x4465: UNKNOWN11
-    0x4472: UNKNOWN12
-    0x4482: UNKNOWN13
-    0x44A1: UNKNOWN14
-    0x44B0: UNKNOWN15
-    0x44BD: UNKNOWN16
-    0x44C8: UNKNOWN17
-    0x44E3: UNKNOWN18
-    0x44EB: UNKNOWN19
-    0x44F4: UNKNOWN20
-    0x44F9: UNKNOWN21
+  Arguments:
+    A: Unknown (Unused?)
+    X: Unknown
+    'Y': Unknown
+  Return Values:
+    A: 0 if ???, 1 if ???
+  Labels:
+    87: UNKNOWN0
+    100: UNKNOWN1
+    111: UNKNOWN2
+    125: UNKNOWN3
+    147: UNKNOWN4
+    183: UNKNOWN5
+    228: UNKNOWN6
+    262: UNKNOWN7
+    284: UNKNOWN8
+    316: UNKNOWN9
+    422: UNKNOWN10
+    441: UNKNOWN11
+    454: UNKNOWN12
+    470: UNKNOWN13
+    501: UNKNOWN14
+    516: UNKNOWN15
+    529: UNKNOWN16
+    540: UNKNOWN17
+    567: UNKNOWN18
+    575: UNKNOWN19
+    584: UNKNOWN20
+    589: RETURN
   Offset: 0xC442AC
 UNKNOWN_C444FB:
   Size: 230
@@ -17967,22 +18523,22 @@ UNKNOWN_C444FB:
 UNKNOWN_C445E1:
   Size: 538
   Type: assembly
-  labels:
-    0x4616: UNKNOWN0
-    0x462C: UNKNOWN1
-    0x463A: UNKNOWN2
-    0x4651: UNKNOWN3
-    0x4663: UNKNOWN4
-    0x4666: DICT1
-    0x46AE: DICT2
-    0x46F5: DICT3
-    0x473A: UNKNOWN8
-    0x4751: UNKNOWN9
-    0x47A0: UNKNOWN10
-    0x47AE: UNKNOWN11
-    0x47D2: UNKNOWN12
-    0x47E0: UNKNOWN13
-    0x47F7: UNKNOWN14
+  Labels:
+    53: UNKNOWN0
+    75: UNKNOWN1
+    89: UNKNOWN2
+    112: UNKNOWN3
+    130: UNKNOWN4
+    133: DICT1
+    205: DICT2
+    276: DICT3
+    345: UNKNOWN8
+    368: UNKNOWN9
+    447: UNKNOWN10
+    461: UNKNOWN11
+    497: UNKNOWN12
+    511: UNKNOWN13
+    534: UNKNOWN14
   Offset: 0xC445E1
 UNKNOWN_C447FB:
   Size: 129
@@ -18118,32 +18674,32 @@ UNKNOWN_C4507A:
 UNKNOWN_C451FA:
   Size: 760
   Type: assembly
-  labels:
-    0x5236: UNKNOWN0
-    0x5277: UNKNOWN1
-    0x52CF: UNKNOWN2
-    0x52E5: UNKNOWN3
-    0x5306: UNKNOWN4
-    0x5327: UNKNOWN5
-    0x533E: UNKNOWN6
-    0x5366: UNKNOWN7
-    0x5372: UNKNOWN8
-    0x5382: UNKNOWN9
-    0x5389: UNKNOWN10
-    0x5390: UNKNOWN11
-    0x53B7: UNKNOWN12
-    0x53DB: UNKNOWN13
-    0x53F0: UNKNOWN14
-    0x540C: UNKNOWN15
-    0x543E: UNKNOWN16
-    0x5443: UNKNOWN17
-    0x5448: UNKNOWN18
-    0x5459: UNKNOWN19
-    0x5460: UNKNOWN20
-    0x5465: UNKNOWN21
-    0x54A9: UNKNOWN22
-    0x54BB: UNKNOWN23
-    0x54F0: UNKNOWN24
+  Labels:
+    60: UNKNOWN0
+    125: UNKNOWN1
+    213: UNKNOWN2
+    235: UNKNOWN3
+    268: UNKNOWN4
+    301: UNKNOWN5
+    324: UNKNOWN6
+    364: UNKNOWN7
+    376: UNKNOWN8
+    392: UNKNOWN9
+    399: UNKNOWN10
+    406: UNKNOWN11
+    445: UNKNOWN12
+    481: UNKNOWN13
+    502: UNKNOWN14
+    530: UNKNOWN15
+    580: UNKNOWN16
+    585: UNKNOWN17
+    590: UNKNOWN18
+    607: UNKNOWN19
+    614: UNKNOWN20
+    619: UNKNOWN21
+    687: UNKNOWN22
+    705: UNKNOWN23
+    758: UNKNOWN24
   Offset: 0xC451FA
 UNKNOWN_C454F2:
   Size: 325
@@ -18153,24 +18709,24 @@ FIND_ITEM_IN_INVENTORY:
   Size: 76
   Type: assembly
   Description: Search for item in inventory
-  labels:
-    0x564E: UNKNOWN0
-    0x566E: UNKNOWN1
-    0x5670: UNKNOWN2
-    0x567C: UNKNOWN3
-    0x567E: UNKNOWN4
-    0x5681: UNKNOWN5
+  Labels:
+    23: UNKNOWN0
+    55: UNKNOWN1
+    57: UNKNOWN2
+    69: UNKNOWN3
+    71: UNKNOWN4
+    74: UNKNOWN5
   Offset: 0xC45637
 CHECK_FOR_TOWN_MAP:
   Size: 97
   Type: assembly
   Description: Checks for town map
-  labels:
-    0x569D: UNKNOWN0
-    0x56C2: UNKNOWN1
-    0x56C8: UNKNOWN2
-    0x56DD: UNKNOWN3
-    0x56E2: UNKNOWN4
+  Labels:
+    26: UNKNOWN0
+    63: UNKNOWN1
+    69: UNKNOWN2
+    90: UNKNOWN3
+    95: UNKNOWN4
   Offset: 0xC45683
 FIND_INVENTORY_SPACE:
   Size: 71
@@ -18178,13 +18734,13 @@ FIND_INVENTORY_SPACE:
   Description: Find space in character's inventory
   Arguments:
     A: Character ID
-  labels:
-    0x56F8: UNKNOWN0
-    0x5716: UNKNOWN1
-    0x5718: UNKNOWN2
-    0x5724: UNKNOWN3
-    0x5726: UNKNOWN4
-    0x5729: UNKNOWN5
+  Labels:
+    20: UNKNOWN0
+    50: UNKNOWN1
+    52: UNKNOWN2
+    64: UNKNOWN3
+    66: UNKNOWN4
+    69: UNKNOWN5
   Offset: 0xC456E4
 FIND_INVENTORY_SPACE_ALL:
   Description: Find first free inventory space
@@ -18192,12 +18748,12 @@ FIND_INVENTORY_SPACE_ALL:
     A: -1 to search all character inventories, character ID otherwise
   Size: 82
   Type: assembly
-  labels:
-    0x5741: UNKNOWN0
-    0x5761: UNKNOWN1
-    0x5766: UNKNOWN2
-    0x5778: UNKNOWN3
-    0x577B: UNKNOWN4
+  Labels:
+    22: UNKNOWN0
+    54: UNKNOWN1
+    59: UNKNOWN2
+    77: UNKNOWN3
+    80: UNKNOWN4
   Offset: 0xC4572B
 UNKNOWN_C4577D:
   Description: Change equipped weapon
@@ -18223,10 +18779,10 @@ UNKNOWN_C458AB:
 UNKNOWN_C458AF:
   Size: 79
   Type: assembly
-  labels:
-    0x58CD: UNKNOWN0
-    0x58F9: UNKNOWN1
-    0x58FC: UNKNOWN2
+  Labels:
+    30: UNKNOWN0
+    74: UNKNOWN1
+    77: UNKNOWN2
   Offset: 0xC458AF
 INFLICT_STATUS2:
   Description: Give status to character
@@ -18236,10 +18792,10 @@ INFLICT_STATUS2:
     "Y": Status ID
   Size: 101
   Type: assembly
-  labels:
-    0x5928: UNKNOWN0
-    0x595E: FAILURE
-    0x5961: RETURN
+  Labels:
+    42: UNKNOWN0
+    96: FAILURE
+    99: RETURN
   Offset: 0xC458FE
 MISC_TARGET_TEXT:
   Size: 55
@@ -18252,9 +18808,9 @@ GET_REQUIRED_EXP:
   Arguments:
     A: Character ID
   Type: assembly
-  labels:
-    0x59CA: UNKNOWN0
-    0x5A1D: UNKNOWN1
+  Labels:
+    48: UNKNOWN0
+    131: UNKNOWN1
   Offset: 0xC4599A
 STATUS_EQUIP_WINDOW_TEXT:
   Size: 611
@@ -20104,7 +20660,7 @@ UNKNOWN_C4C64D:
     0xC713: UNKNOWN8
     0xC716: UNKNOWN9
   Offset: 0xC4C64D
-UNKNOWN_C4C718:
+SPAWN:
   Size: 396
   Type: assembly
   labels:
@@ -23284,22 +23840,22 @@ UNKNOWN_E1AE83:
   Offset: 0xE1AE83
 UNKNOWN_E1AEFD:
   Type: data
-  Size: 128
+  Size: 127
   Offset: 0xE1AEFD
 TITLE_SCREEN_ARRANGEMENT:
   Type: data
   Size: 660
   Description: Title screen arrangement
-  Offset: 0xE1AF7D
+  Offset: 0xE1AF7C
 TITLE_SCREEN_GRAPHICS:
   Type: data
   Size: 5332
   Description: Title screen graphics
-  Offset: 0xE1B211
-UNKNOWN_E1C6E5:
+  Offset: 0xE1B210
+UNKNOWN_E1C6E4:
   Type: data
-  Size: 1788
-  Offset: 0xE1C6E5
+  Size: 1789
+  Offset: 0xE1C6E4
 TITLE_SCREEN_PALETTE:
   Type: data
   Size: 39
