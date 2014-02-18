@@ -21938,7 +21938,7 @@ texttables:
     - Poo can use
     - Item can change
     - Cannot be given away
-    - Unknown
+    - Cannot be stored with Escargo Express 
     - Item disappears when used
   - name: Action
     size: 2
@@ -22355,7 +22355,7 @@ texttables:
     - 3
     - 4
     - 5
-    - 6
+    - Unknown
     - True
     - False
   - name: HP
