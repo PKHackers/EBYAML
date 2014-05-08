@@ -18035,9 +18035,9 @@ UNKNOWN_C3E3F8:
   Size: 88
   Offset: 0xC3E3F8
 UNKNOWN_C3E450:
-  labels:
-    0xE489: UNKNOWN0
-    0xE4AD: UNKNOWN1
+  Labels:
+    57: UNKNOWN0
+    93: UNKNOWN1
   Size: 122
   Type: assembly
   Offset: 0xC3E450
@@ -18060,44 +18060,44 @@ CALL_C12DD5_WITH_ZERO_9622:
   Type: assembly
   Offset: 0xC3E4E0
 UNKNOWN_C3E4EF:
-  labels:
-    0xE4FE: UNKNOWN0
-    0xE512: UNKNOWN1
-    0xE517: UNKNOWN2
-    0xE51F: UNKNOWN3
+  Labels:
+    15: UNKNOWN0
+    35: UNKNOWN1
+    40: UNKNOWN2
+    48: UNKNOWN3
   Size: 50
   Type: assembly
   Offset: 0xC3E4EF
 CLOSE_WINDOW:
   Description: Close text window
-  labels:
-    0xE535: UNKNOWN0
-    0xE546: UNKNOWN1
-    0xE553: UNKNOWN2
-    0xE577: UNKNOWN3
-    0xE585: UNKNOWN4
-    0xE591: UNKNOWN5
-    0xE59F: UNKNOWN6
-    0xE5E3: UNKNOWN7
-    0xE5F2: UNKNOWN8
-    0xE5F9: UNKNOWN9
-    0xE60A: UNKNOWN10
-    0xE62F: UNKNOWN11
-    0xE636: UNKNOWN12
-    0xE64D: UNKNOWN13
-    0xE686: UNKNOWN14
-    0xE6BC: UNKNOWN15
-    0xE6DF: UNKNOWN16
-    0xE6EF: UNKNOWN17
-    0xE6F4: UNKNOWN18
+  Labels:
+    20: UNKNOWN0
+    37: UNKNOWN1
+    50: UNKNOWN2
+    86: UNKNOWN3
+    100: UNKNOWN4
+    112: UNKNOWN5
+    126: UNKNOWN6
+    194: UNKNOWN7
+    209: UNKNOWN8
+    216: UNKNOWN9
+    233: UNKNOWN10
+    270: UNKNOWN11
+    277: UNKNOWN12
+    300: UNKNOWN13
+    357: UNKNOWN14
+    411: UNKNOWN15
+    446: UNKNOWN16
+    462: UNKNOWN17
+    467: UNKNOWN18
   Size: 471
   Type: assembly
   Offset: 0xC3E521
 UNKNOWN_C3E6F8:
-  labels:
-    0xE741: UNKNOWN0
-    0xE74A: UNKNOWN1
-    0xE759: UNKNOWN2
+  Labels:
+    73: UNKNOWN0
+    82: UNKNOWN1
+    97: UNKNOWN2
   Size: 101
   Type: assembly
   Offset: 0xC3E6F8
@@ -18142,113 +18142,113 @@ UNKNOWN_C3E977:
   Type: assembly
   Offset: 0xC3E977
 UNKNOWN_C3E9A0:
-  labels:
-    0xE9C5: UNKNOWN0
-    0xE9D4: UNKNOWN1
-    0xE9E3: UNKNOWN2
-    0xE9F2: UNKNOWN3
-    0xE9F5: UNKNOWN4
+  Labels:
+    37: UNKNOWN0
+    52: UNKNOWN1
+    67: UNKNOWN2
+    82: UNKNOWN3
+    85: UNKNOWN4
   Size: 87
   Type: assembly
   Offset: 0xC3E9A0
 UNKNOWN_C3E9F7:
-  labels:
-    0xEA38: UNKNOWN0
-    0xEA69: UNKNOWN1
-    0xEA9A: UNKNOWN2
-    0xEACB: UNKNOWN3
-    0xEACE: UNKNOWN4
+  Labels:
+    65: UNKNOWN0
+    114: UNKNOWN1
+    163: UNKNOWN2
+    212: UNKNOWN3
+    215: UNKNOWN4
   Size: 217
   Type: assembly
   Offset: 0xC3E9F7
 UNKNOWN_C3EAD0:
-  labels:
-    0xEAE5: UNKNOWN0
-    0xEB02: UNKNOWN1
-    0xEB07: UNKNOWN2
-    0xEB1A: UNKNOWN3
+  Labels:
+    21: UNKNOWN0
+    50: UNKNOWN1
+    55: UNKNOWN2
+    74: UNKNOWN3
   Size: 76
   Type: assembly
   Offset: 0xC3EAD0
 UNKNOWN_C3EB1C:
   Final State:
     8 Bit Accum: false
-  labels:
-    0xEB31: UNKNOWN0
-    0xEB34: UNKNOWN1
-    0xEB4D: UNKNOWN2
-    0xEB5B: UNKNOWN3
-    0xEB78: UNKNOWN4
-    0xEB8E: UNKNOWN5
-    0xEB98: UNKNOWN6
-    0xEBA4: UNKNOWN7
-    0xEBA6: UNKNOWN8
-    0xEBB6: UNKNOWN9
-    0xEBBB: UNKNOWN10
-    0xEBC8: UNKNOWN11
+  Labels:
+    21: UNKNOWN0
+    24: UNKNOWN1
+    49: UNKNOWN2
+    63: UNKNOWN3
+    92: UNKNOWN4
+    114: UNKNOWN5
+    124: UNKNOWN6
+    136: UNKNOWN7
+    138: UNKNOWN8
+    154: UNKNOWN9
+    159: UNKNOWN10
+    172: UNKNOWN11
   Size: 174
   Type: assembly
   Offset: 0xC3EB1C
 UNKNOWN_C3EBCA:
-  labels:
-    0xEBD9: UNKNOWN0
-    0xEBF3: UNKNOWN1
-    0xEBFB: UNKNOWN2
-    0xEC00: UNKNOWN3
+  Labels:
+    15: UNKNOWN0
+    41: UNKNOWN1
+    49: UNKNOWN2
+    54: UNKNOWN3
   Size: 85
   Type: assembly
   Offset: 0xC3EBCA
 UNKNOWN_C3EC1F:
-  labels:
-    0xEC64: UNKNOWN0
-    0xEC89: UNKNOWN1
+  Labels:
+    69: UNKNOWN0
+    106: UNKNOWN1
   Size: 108
   Type: assembly
   Offset: 0xC3EC1F
 UNKNOWN_C3EC8B:
-  labels:
-    0xEC9D: UNKNOWN0
-    0xECD3: UNKNOWN1
-    0xECFE: UNKNOWN2
-    0xED2A: UNKNOWN3
+  Labels:
+    18: UNKNOWN0
+    72: UNKNOWN1
+    115: UNKNOWN2
+    159: UNKNOWN3
   Size: 161
   Type: assembly
   Offset: 0xC3EC8B
 UNKNOWN_C3ED2C:
-  labels:
-    0xED71: UNKNOWN0
-    0xED96: UNKNOWN1
+  Labels:
+    69: UNKNOWN0
+    106: UNKNOWN1
   Size: 108
   Type: assembly
   Offset: 0xC3ED2C
 UNKNOWN_C3ED98:
-  labels:
-    0xEDDD: UNKNOWN0
-    0xEE12: UNKNOWN1
+  Labels:
+    69: UNKNOWN0
+    122: UNKNOWN1
   Size: 124
   Type: assembly
   Offset: 0xC3ED98
 UNKNOWN_C3EE14:
   Description: Check Item Ownership (?)
-  labels:
-    0xEE48: UNKNOWN0
-    0xEE4B: UNKNOWN1
+  Labels:
+    52: UNKNOWN0
+    55: UNKNOWN1
   Size: 57
   Type: assembly
   Offset: 0xC3EE14
 UNKNOWN_C3EE4D:
-  labels:
-    0xEE79: UNKNOWN0
+  Labels:
+    44: UNKNOWN0
   Size: 45
   Type: assembly
   Offset: 0xC3EE4D
 UNKNOWN_C3EE7A:
-  labels:
-    0xEEC2: UNKNOWN0
-    0xEEDB: UNKNOWN1
-    0xEEEE: UNKNOWN2
-    0xEF04: UNKNOWN3
-    0xEF17: UNKNOWN4
+  Labels:
+    72: UNKNOWN0
+    97: UNKNOWN1
+    116: UNKNOWN2
+    138: UNKNOWN3
+    157: UNKNOWN4
   Size: 169
   Type: assembly
   Offset: 0xC3EE7A
@@ -18293,14 +18293,14 @@ PSI_TARGET_TEXT:
   Description: PSI Target Text
   Offset: 0xC3F0B0
 UNKNOWN_C3F1EC:
-  labels:
-    0xF20A: UNKNOWN0
-    0xF212: UNKNOWN1
-    0xF260: UNKNOWN2
-    0xF289: UNKNOWN3
-    0xF28D: UNKNOWN4
-    0xF2AC: UNKNOWN5
-    0xF2AF: UNKNOWN6
+  Labels:
+    30: UNKNOWN0
+    38: UNKNOWN1
+    116: UNKNOWN2
+    157: UNKNOWN3
+    161: UNKNOWN4
+    192: UNKNOWN5
+    195: UNKNOWN6
   Size: 197
   Type: assembly
   Offset: 0xC3F1EC
@@ -18338,28 +18338,28 @@ SHOW_TITLE_SCREEN:
   Type: assembly
   Offset: 0xC3F3C5
 UNKNOWN_C3F5F9:
-  labels:
-    0xF615: UNKNOWN0
-    0xF66A: UNKNOWN1
-    0xF674: UNKNOWN2
+  Labels:
+    28: UNKNOWN0
+    113: UNKNOWN1
+    123: UNKNOWN2
   Size: 132
   Type: assembly
   Offset: 0xC3F5F9
 UNKNOWN_C3F67D:
-  labels:
-    0xF692: UNKNOWN0
-    0xF6F1: UNKNOWN1
-    0xF6FA: UNKNOWN2
-    0xF6FC: UNKNOWN3
+  Labels:
+    21: UNKNOWN0
+    116: UNKNOWN1
+    125: UNKNOWN2
+    127: UNKNOWN3
   Size: 136
   Type: assembly
   Offset: 0xC3F67D
 UNKNOWN_C3F705:
-  labels:
-    0xF752: UNKNOWN0
-    0xF755: UNKNOWN1
-    0xF797: UNKNOWN2
-    0xF7F9: UNKNOWN3
+  Labels:
+    77: UNKNOWN0
+    80: UNKNOWN1
+    146: UNKNOWN2
+    244: UNKNOWN3
   Size: 246
   Type: assembly
   Offset: 0xC3F705
@@ -18385,29 +18385,29 @@ UNKNOWN_C3F951:
 UNKNOWN_C3F981:
   Size: 328
   Type: assembly
-  labels:
-    0xF99B: UNKNOWN0
-    0xFA0F: UNKNOWN1
-    0xFA2B: UNKNOWN2
-    0xFA2E: UNKNOWN3
-    0xFA37: UNKNOWN4
-    0xFA40: UNKNOWN5
-    0xFA4A: UNKNOWN6
-    0xFABD: UNKNOWN7
-    0xFAC7: UNKNOWN8
+  Labels:
+    24: UNKNOWN0
+    140: UNKNOWN1
+    168: UNKNOWN2
+    171: UNKNOWN3
+    180: UNKNOWN4
+    189: UNKNOWN5
+    199: UNKNOWN6
+    314: UNKNOWN7
+    324: UNKNOWN8
   Offset: 0xC3F981
 UNKNOWN_C3FAC9:
-  labels:
-    0xFAEA: UNKNOWN0
-    0xFB00: UNKNOWN1
-    0xFB07: UNKNOWN2
+  Labels:
+    33: UNKNOWN0
+    55: UNKNOWN1
+    62: UNKNOWN2
   Size: 64
   Type: assembly
   Offset: 0xC3FAC9
 UNKNOWN_C3FB09:
-  labels:
-    0xFB1B: UNKNOWN0
-    0xFB1E: UNKNOWN1
+  Labels:
+    18: UNKNOWN0
+    21: UNKNOWN1
   Size: 22
   Type: assembly
   Offset: 0xC3FB09
@@ -18465,11 +18465,11 @@ UNUSED_FORSALE_SIGN_SPRITE_TABLE:
   Offset: 0xC3FDBD
 UNKNOWN_C3FDC5:
   Description: Doom routine (wipes SRAM if anti-piracy is triggered)
-  labels:
-    0xFDCD: UNKNOWN0
-    0xFDE3: UNKNOWN1
-    0xFDEF: UNKNOWN2
-    0xFDF1: UNKNOWN3
+  Labels:
+    8: UNKNOWN0
+    30: UNKNOWN1
+    42: UNKNOWN2
+    44: UNKNOWN3
   Size: 45
   Type: assembly
   Offset: 0xC3FDC5
