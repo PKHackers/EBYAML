@@ -3169,19 +3169,13 @@ BATTLERS_TABLE:
     Name: CURRENT_ACTION
     Description: Current selected action
   - Type: int
-    Size: 1
+    Size: 2
     Name: CURRENT_ACTION_SLOT
     Description: Current action slot
   - Type: int
-    Size: 1
-    Name: UNKNOWNC
-  - Type: int
-    Size: 1
+    Size: 2
     Name: CURRENT_ACTION_ARGUMENT
     Description: Current action argument
-  - Type: int
-    Size: 1
-    Name: UNKNOWND
   - Type: int
     Size: 1
     Name: CURRENT_TARGET
@@ -3200,6 +3194,12 @@ BATTLERS_TABLE:
   - Type: int
     Size: 1
     Name: UNKNOWNE
+  - Type: int
+    Size: 1
+    Name: ALLYENEMY_FLAG
+    Values:
+      0: Ally
+      1: Enemy
   - Type: int
     Size: 1
     Name: NPCID
@@ -3384,8 +3384,8 @@ BATTLERS_TABLE:
     Size: 1
     Name: ID2
     Description: Enemy ID (Copy?)
-  - Type: bytearray
-    Size: 2
+  - Type: int
+    Size: 1
     Name: UnknownH
 BATTLER_TARGET_FLAGS:
   Description: Battler target flags
@@ -18378,9 +18378,20 @@ UNKNOWN_C3F7FB:
   Type: assembly
   Offset: 0xC3F7FB
 UNKNOWN_C3F819:
-  Size: 360
+  Size: 312
   Type: data
   Offset: 0xC3F819
+UNKNOWN_C3F951:
+  Size: 0x30
+  Type: data
+  Offset: 0xC3F951
+  Entries:
+  - Name: RED
+    Size: 1
+  - Name: GREEN
+    Size: 1
+  - Name: BLUE
+    Size: 1
 UNKNOWN_C3F981:
   Size: 328
   Type: assembly
@@ -23669,7 +23680,7 @@ ENEMY_CONFIGURATION_TABLE:
     Size: 1
   - Name: Final Action Argument
     Size: 1
-  - Name: Unknown
+  - Name: IQ
     Size: 1
   - Name: Boss Flag
     Size: 1
