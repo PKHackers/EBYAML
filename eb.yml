@@ -8635,8 +8635,8 @@ UNKNOWN_C10000:
 UNKNOWN_C10004:
   Size: 50
   Type: assembly
-  labels:
-    0x0024: UNKNOWN0
+  Labels:
+    32: UNKNOWN0
   Offset: 0xC10004
 ENABLE_BLINKING_TRIANGLE:
   Description: Set blinking triangle prompt to A
@@ -8661,10 +8661,10 @@ UNKNOWN_C10048:
 UNKNOWN_C1004E:
   Size: 42
   Type: assembly
-  labels:
-    0x005C: UNKNOWN0
-    0x0067: UNKNOWN1
-    0x0077: UNKNOWN2
+  Labels:
+    14: UNKNOWN0
+    25: UNKNOWN1
+    41: UNKNOWN2
   Offset: 0xC1004E
 GET_WINDOW_FOCUS:
   Description: Get Window Focus
@@ -8726,21 +8726,21 @@ CC_13+14:
   Arguments:
     A: Unknown
     X: Unknown
-  labels:
-    0x0177: UNKNOWN0
-    0x018C: UNKNOWN1
-    0x0191: UNKNOWN2
-    0x01B0: UNKNOWN3
-    0x01B9: UNKNOWN4
-    0x01D4: UNKNOWN5
-    0x01D8: UNKNOWN6
-    0x01E3: UNKNOWN7
-    0x0224: UNKNOWN8
-    0x0235: UNKNOWN9
-    0x0278: UNKNOWN10
-    0x0289: UNKNOWN11
-    0x02CA: UNKNOWN12
-    0x02CE: UNKNOWN13
+  Labels:
+    17: UNKNOWN0
+    38: UNKNOWN1
+    43: UNKNOWN2
+    74: UNKNOWN3
+    83: UNKNOWN4
+    110: UNKNOWN5
+    114: UNKNOWN6
+    125: UNKNOWN7
+    190: UNKNOWN8
+    207: UNKNOWN9
+    274: UNKNOWN10
+    291: UNKNOWN11
+    356: UNKNOWN12
+    360: UNKNOWN13
   Offset: 0xC10166
 UNKNOWN_C102D0:
   Size: 49
@@ -9820,17 +9820,17 @@ CC_1C_01:
   Description: 'Text control code: [1C 01 XX]'
   Size: 31
   Type: assembly
-  labels:
-    0x40C2: UNKNOWN0
-    0x40C7: UNKNOWN1
+  Labels:
+    18: UNKNOWN0
+    23: UNKNOWN1
   Offset: 0xC140B0
 CC_1C_11:
   Description: 'Text control code: [1C 11 XX]'
   Size: 32
   Type: assembly
-  labels:
-    0x40E1: UNKNOWN0
-    0x40E6: UNKNOWN1
+  Labels:
+    18: UNKNOWN0
+    23: UNKNOWN1
   Offset: 0xC140CF
 CC_1C_09:
   Description: 'Text control code: [1C 09 XX]'
@@ -9846,54 +9846,54 @@ CC_0A:
   Description: 'Text control code: [0A XX XX XX 00]'
   Size: 205
   Type: assembly
-  labels:
-    0x411D: UNKNOWN0
-    0x411F: UNKNOWN1
-    0x4133: UNKNOWN2
-    0x41CE: UNKNOWN3
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    48: UNKNOWN2
+    203: UNKNOWN3
   Offset: 0xC14103
 CC_09:
   Description: 'Text control code: [09 XX (YY YY YY 00)]'
   Size: 149
   Type: assembly
-  labels:
-    0x41F7: UNKNOWN0
-    0x423E: UNKNOWN1
-    0x4263: UNKNOWN2
+  Labels:
+    39: UNKNOWN0
+    110: UNKNOWN1
+    147: UNKNOWN2
   Offset: 0xC141D0
 CC_04:
   Description: 'Text control code: [04 XX XX]'
   Size: 72
   Type: assembly
-  labels:
-    0x428B: UNKNOWN0
-    0x42AB: UNKNOWN1
+  Labels:
+    38: UNKNOWN0
+    70: UNKNOWN1
   Offset: 0xC14265
 CC_05:
   Description: 'Text control code: [05 XX XX]'
   Size: 72
   Type: assembly
-  labels:
-    0x42D3: UNKNOWN0
-    0x42F3: UNKNOWN1
+  Labels:
+    38: UNKNOWN0
+    70: UNKNOWN1
   Offset: 0xC142AD
 CC_06:
   Description: 'Text control code: [06 XX XX YY YY YY 00]'
   Size: 106
   Type: assembly
-  labels:
-    0x431A: UNKNOWN0
-    0x433E: UNKNOWN1
-    0x435D: UNKNOWN2
+  Labels:
+    37: UNKNOWN0
+    73: UNKNOWN1
+    104: UNKNOWN2
   Offset: 0xC142F5
 CC_07:
   Description: 'Text control code: [07 XX XX]'
   Size: 89
   Type: assembly
-  labels:
-    0x4385: UNKNOWN0
-    0x43A8: UNKNOWN1
-    0x43B6: UNKNOWN2
+  Labels:
+    38: UNKNOWN0
+    73: UNKNOWN1
+    87: UNKNOWN2
   Offset: 0xC1435F
 CC_1C_08:
   Description: 'Text control code: [1C 08 XX]'
@@ -9914,125 +9914,125 @@ CC_08:
   Description: 'Text control code: [08 XX XX XX 00]'
   Size: 205
   Type: assembly
-  labels:
-    0x43F0: UNKNOWN0
-    0x43F2: UNKNOWN1
-    0x4407: UNKNOWN2
-    0x44A1: UNKNOWN3
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    49: UNKNOWN2
+    203: UNKNOWN3
   Offset: 0xC143D6
 CC_1F_52:
   Description: 'Text control code: [1F 52 XX]'
   Size: 102
   Type: assembly
-  labels:
-    0x44C5: UNKNOWN0
-    0x44F9: UNKNOWN1
-    0x4504: UNKNOWN2
+  Labels:
+    34: UNKNOWN0
+    86: UNKNOWN1
+    97: UNKNOWN2
   Offset: 0xC144A3
 CC_18_05:
   Description: 'Text control code: [18 05 XX YY]'
   Size: 79
   Type: assembly
-  labels:
-    0x4520: UNKNOWN0
-    0x4522: UNKNOWN1
-    0x4535: UNKNOWN2
-    0x454D: UNKNOWN3
-    0x4553: UNKNOWN4
-    0x4556: UNKNOWN5
+  Labels:
+    23: UNKNOWN0
+    25: UNKNOWN1
+    44: UNKNOWN2
+    68: UNKNOWN3
+    74: UNKNOWN4
+    77: UNKNOWN5
   Offset: 0xC14509
 CC_0B:
   Description: 'Text control code: [0B XX]'
   Size: 57
   Type: assembly
-  labels:
-    0x4577: UNKNOWN0
-    0x4581: UNKNOWN1
+  Labels:
+    31: UNKNOWN0
+    41: UNKNOWN1
   Offset: 0xC14558
 CC_0C:
   Description: 'Text control code: [0C XX]'
   Size: 57
   Type: assembly
-  labels:
-    0x45B0: UNKNOWN0
-    0x45BA: UNKNOWN1
+  Labels:
+    31: UNKNOWN0
+    41: UNKNOWN1
   Offset: 0xC14591
 CC_1C_07:
   Description: 'Text control code: [1C 07 XX]'
   Size: 37
   Type: assembly
-  labels:
-    0x45DC: UNKNOWN0
-    0x45E1: UNKNOWN1
+  Labels:
+    18: UNKNOWN0
+    23: UNKNOWN1
   Offset: 0xC145CA
 CC_0D:
   Description: 'Text control code: [0D XX]'
   Size: 43
   Type: assembly
-  labels:
-    0x4607: UNKNOWN0
-    0x460A: UNKNOWN1
+  Labels:
+    24: UNKNOWN0
+    27: UNKNOWN1
   Offset: 0xC145EF
 CC_0E:
   Description: 'Text control code: [0E XX]'
   Size: 33
   Type: assembly
-  labels:
-    0x4632: UNKNOWN0
+  Labels:
+    24: UNKNOWN0
   Offset: 0xC1461A
 CC_1A_00:
   Description: 'Text control code: [1A 00 WW WW WW WW XX XX XX XX YY YY YY YY ZZ ZZ
     ZZ ZZ]'
   Size: 66
   Type: assembly
-  labels:
-    0x4660: UNKNOWN0
-    0x467B: UNKNOWN1
+  Labels:
+    37: UNKNOWN0
+    64: UNKNOWN1
   Offset: 0xC1463B
 CC_1A_01:
   Description: 'Text control code: [1A 01 WW WW WW WW XX XX XX XX YY YY YY YY ZZ ZZ
     ZZ ZZ]'
   Size: 66
   Type: assembly
-  labels:
-    0x46A2: UNKNOWN0
-    0x46BD: UNKNOWN1
+  Labels:
+    37: UNKNOWN0
+    64: UNKNOWN1
   Offset: 0xC1467D
 CC_1C_05:
   Description: 'Text control code: [1C 05 XX]'
   Size: 31
   Type: assembly
-  labels:
-    0x46D1: UNKNOWN0
-    0x46D6: UNKNOWN1
+  Labels:
+    18: UNKNOWN0
+    23: UNKNOWN1
   Offset: 0xC146BF
 CC_1C_06:
   Description: 'Text control code: [1C 06 XX]'
   Size: 69
   Type: assembly
-  labels:
-    0x46F2: UNKNOWN0
-    0x46F9: UNKNOWN1
+  Labels:
+    20: UNKNOWN0
+    27: UNKNOWN1
   Offset: 0xC146DE
 CC_19_10:
   Description: 'Text control code: [19 10 XX]'
   Size: 46
   Type: assembly
-  labels:
-    0x4735: UNKNOWN0
-    0x473A: UNKNOWN1
+  Labels:
+    18: UNKNOWN0
+    23: UNKNOWN1
   Offset: 0xC14723
 CC_1F_00:
   Description: 'Text control code: [1F 00 XX YY]'
   Size: 79
   Type: assembly
-  labels:
-    0x476B: UNKNOWN0
-    0x476D: UNKNOWN1
-    0x4781: UNKNOWN2
-    0x478B: UNKNOWN3
-    0x478E: UNKNOWN4
-    0x479E: UNKNOWN5
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    48: UNKNOWN2
+    58: UNKNOWN3
+    61: UNKNOWN4
+    77: UNKNOWN5
   Offset: 0xC14751
 CC_1F_01:
   Description: 'Text control code: [1F 01 XX]'
@@ -10043,243 +10043,243 @@ CC_1F_02:
   Description: 'Text control code: [1F 02 XX]'
   Size: 33
   Type: assembly
-  labels:
-    0x47BE: UNKNOWN0
-    0x47C1: UNKNOWN1
+  Labels:
+    19: UNKNOWN0
+    22: UNKNOWN1
   Offset: 0xC147AB
 CC_19_11:
   Description: 'Text control code: [19 11 XX]'
   Size: 77
   Type: assembly
-  labels:
-    0x47DE: UNKNOWN0
-    0x47E3: UNKNOWN1
+  Labels:
+    18: UNKNOWN0
+    23: UNKNOWN1
   Offset: 0xC147CC
 CC_19_28:
   Description: 'Text control code: [19 28 XX]'
   Size: 116
   Type: assembly
-  labels:
-    0x485B: UNKNOWN0
-    0x4875: UNKNOWN1
-    0x487D: UNKNOWN2
+  Labels:
+    66: UNKNOWN0
+    92: UNKNOWN1
+    100: UNKNOWN2
   Offset: 0xC14819
 CC_1C_03:
   Description: 'Text control code: [1C 03 XX]'
   Size: 31
   Type: assembly
-  labels:
-    0x489F: UNKNOWN0
-    0x48A4: UNKNOWN1
+  Labels:
+    18: UNKNOWN0
+    23: UNKNOWN1
   Offset: 0xC1488D
 CC_1D_02:
   Description: 'Text control code: [1D 02 XX]'
   Size: 61
   Type: assembly
-  labels:
-    0x48CE: UNKNOWN0
-    0x48D9: UNKNOWN1
+  Labels:
+    34: UNKNOWN0
+    45: UNKNOWN1
   Offset: 0xC148AC
 CC_1D_08:
   Description: 'Text control code: [1D 08 XX XX]'
   Size: 97
   Type: assembly
-  labels:
-    0x490F: UNKNOWN0
-    0x492B: UNKNOWN1
-    0x492E: UNKNOWN2
-    0x4948: UNKNOWN3
+  Labels:
+    38: UNKNOWN0
+    66: UNKNOWN1
+    69: UNKNOWN2
+    95: UNKNOWN3
   Offset: 0xC148E9
 CC_1D_09:
   Description: 'Text control code: [1D 09 XX XX]'
   Size: 108
   Type: assembly
-  labels:
-    0x4970: UNKNOWN0
-    0x498C: UNKNOWN1
-    0x498F: UNKNOWN2
-    0x49A6: UNKNOWN3
-    0x49B4: UNKNOWN4
+  Labels:
+    38: UNKNOWN0
+    66: UNKNOWN1
+    69: UNKNOWN2
+    92: UNKNOWN3
+    106: UNKNOWN4
   Offset: 0xC1494A
 CC_1E_00:
   Description: 'Text control code: [1E 00 XX YY]'
   Size: 77
   Type: assembly
-  labels:
-    0x49CF: UNKNOWN0
-    0x49D1: UNKNOWN1
-    0x49E5: UNKNOWN2
-    0x49F1: UNKNOWN3
-    0x49F6: UNKNOWN4
-    0x4A01: UNKNOWN5
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    47: UNKNOWN2
+    59: UNKNOWN3
+    64: UNKNOWN4
+    75: UNKNOWN5
   Offset: 0xC149B6
 CC_1E_01:
   Description: 'Text control code: [1E 01 XX YY]'
   Size: 77
   Type: assembly
-  labels:
-    0x4A1C: UNKNOWN0
-    0x4A1E: UNKNOWN1
-    0x4A32: UNKNOWN2
-    0x4A3E: UNKNOWN3
-    0x4A43: UNKNOWN4
-    0x4A4E: UNKNOWN5
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    47: UNKNOWN2
+    59: UNKNOWN3
+    64: UNKNOWN4
+    75: UNKNOWN5
   Offset: 0xC14A03
 CC_1E_02:
   Description: 'Text control code: [1E 02 XX YY]'
   Size: 77
   Type: assembly
-  labels:
-    0x4A69: UNKNOWN0
-    0x4A6B: UNKNOWN1
-    0x4A7F: UNKNOWN2
-    0x4A8B: UNKNOWN3
-    0x4A90: UNKNOWN4
-    0x4A9B: UNKNOWN5
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    47: UNKNOWN2
+    59: UNKNOWN3
+    64: UNKNOWN4
+    75: UNKNOWN5
   Offset: 0xC14A50
 CC_1E_03:
   Description: 'Text control code: [1E 03 XX YY]'
   Size: 77
   Type: assembly
-  labels:
-    0x4AB6: UNKNOWN0
-    0x4AB8: UNKNOWN1
-    0x4ACC: UNKNOWN2
-    0x4AD8: UNKNOWN3
-    0x4ADD: UNKNOWN4
-    0x4AE8: UNKNOWN5
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    47: UNKNOWN2
+    59: UNKNOWN3
+    64: UNKNOWN4
+    75: UNKNOWN5
   Offset: 0xC14A9D
 CC_1E_04:
   Description: 'Text control code: [1E 04 XX YY]'
   Size: 77
   Type: assembly
-  labels:
-    0x4B03: UNKNOWN0
-    0x4B05: UNKNOWN1
-    0x4B19: UNKNOWN2
-    0x4B25: UNKNOWN3
-    0x4B2A: UNKNOWN4
-    0x4B35: UNKNOWN5
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    47: UNKNOWN2
+    59: UNKNOWN3
+    64: UNKNOWN4
+    75: UNKNOWN5
   Offset: 0xC14AEA
 CC_1E_05:
   Description: 'Text control code: [1E 05 XX YY]'
   Size: 77
   Type: assembly
-  labels:
-    0x4B50: UNKNOWN0
-    0x4B52: UNKNOWN1
-    0x4B66: UNKNOWN2
-    0x4B72: UNKNOWN3
-    0x4B77: UNKNOWN4
-    0x4B82: UNKNOWN5
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    47: UNKNOWN2
+    59: UNKNOWN3
+    64: UNKNOWN4
+    75: UNKNOWN5
   Offset: 0xC14B37
 CC_1E_06:
   Description: 'Text control code: [1E 06 XX YY]'
   Size: 77
   Type: assembly
-  labels:
-    0x4B9D: UNKNOWN0
-    0x4B9F: UNKNOWN1
-    0x4BB2: UNKNOWN2
-    0x4BBF: UNKNOWN3
-    0x4BC4: UNKNOWN4
-    0x4BCF: UNKNOWN5
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    46: UNKNOWN2
+    59: UNKNOWN3
+    64: UNKNOWN4
+    75: UNKNOWN5
   Offset: 0xC14B84
 CC_1E_07:
   Description: 'Text control code: [1E 07 XX YY]'
   Size: 77
   Type: assembly
-  labels:
-    0x4BEA: UNKNOWN0
-    0x4BEC: UNKNOWN1
-    0x4C00: UNKNOWN2
-    0x4C0C: UNKNOWN3
-    0x4C11: UNKNOWN4
-    0x4C1C: UNKNOWN5
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    47: UNKNOWN2
+    59: UNKNOWN3
+    64: UNKNOWN4
+    75: UNKNOWN5
   Offset: 0xC14BD1
 CC_1D_00:
   Description: 'Text control code: [1D 00 XX YY]'
   Size: 104
   Type: assembly
-  labels:
-    0x4C35: UNKNOWN0
-    0x4C37: UNKNOWN1
-    0x4C4A: UNKNOWN2
-    0x4C5B: UNKNOWN3
-    0x4C63: UNKNOWN4
-    0x4C6C: UNKNOWN5
-    0x4C84: UNKNOWN6
+  Labels:
+    23: UNKNOWN0
+    25: UNKNOWN1
+    44: UNKNOWN2
+    61: UNKNOWN3
+    69: UNKNOWN4
+    78: UNKNOWN5
+    102: UNKNOWN6
   Offset: 0xC14C1E
 CC_1D_01:
   Description: 'Text control code: [1D 01 XX YY]'
   Size: 104
   Type: assembly
-  labels:
-    0x4C9D: UNKNOWN0
-    0x4C9F: UNKNOWN1
-    0x4CB2: UNKNOWN2
-    0x4CC3: UNKNOWN3
-    0x4CCB: UNKNOWN4
-    0x4CD4: UNKNOWN5
-    0x4CEC: UNKNOWN6
+  Labels:
+    23: UNKNOWN0
+    25: UNKNOWN1
+    44: UNKNOWN2
+    61: UNKNOWN3
+    69: UNKNOWN4
+    78: UNKNOWN5
+    102: UNKNOWN6
   Offset: 0xC14C86
 CC_1D_03:
   Description: 'Text control code: [1D 03 XX]'
   Size: 54
   Type: assembly
-  labels:
-    0x4D00: UNKNOWN0
-    0x4D05: UNKNOWN1
-    0x4D14: UNKNOWN2
+  Labels:
+    18: UNKNOWN0
+    23: UNKNOWN1
+    38: UNKNOWN2
   Offset: 0xC14CEE
 CC_1D_04:
   Description: 'Text control code: [1D 04 XX YY]'
   Size: 111
   Type: assembly
-  labels:
-    0x4D3B: UNKNOWN0
-    0x4D3D: UNKNOWN1
-    0x4D50: UNKNOWN2
-    0x4D61: UNKNOWN3
-    0x4D69: UNKNOWN4
-    0x4D72: UNKNOWN5
-    0x4D83: UNKNOWN6
-    0x4D91: UNKNOWN7
+  Labels:
+    23: UNKNOWN0
+    25: UNKNOWN1
+    44: UNKNOWN2
+    61: UNKNOWN3
+    69: UNKNOWN4
+    78: UNKNOWN5
+    95: UNKNOWN6
+    109: UNKNOWN7
   Offset: 0xC14D24
 CC_1D_05:
   Description: 'Text control code: [1D 05 XX YY]'
   Size: 104
   Type: assembly
-  labels:
-    0x4DAA: UNKNOWN0
-    0x4DAC: UNKNOWN1
-    0x4DBF: UNKNOWN2
-    0x4DD0: UNKNOWN3
-    0x4DD8: UNKNOWN4
-    0x4DE1: UNKNOWN5
-    0x4DF9: UNKNOWN6
+  Labels:
+    23: UNKNOWN0
+    25: UNKNOWN1
+    44: UNKNOWN2
+    61: UNKNOWN3
+    69: UNKNOWN4
+    78: UNKNOWN5
+    102: UNKNOWN6
   Offset: 0xC14D93
 CC_1F_20:
   Description: 'Text control code: [1F 20 XX YY]'
   Size: 145
   Type: assembly
-  labels:
-    0x4E15: UNKNOWN0
-    0x4E17: UNKNOWN1
-    0x4E2B: UNKNOWN2
-    0x4E46: UNKNOWN3
-    0x4E51: UNKNOWN4
-    0x4E60: UNKNOWN5
-    0x4E71: UNKNOWN6
-    0x4E8A: UNKNOWN7
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    48: UNKNOWN2
+    75: UNKNOWN3
+    86: UNKNOWN4
+    101: UNKNOWN5
+    118: UNKNOWN6
+    143: UNKNOWN7
   Offset: 0xC14DFB
 CC_1F_21:
   Description: 'Text control code: [1F 21 XX]'
   Size: 31
   Type: assembly
-  labels:
-    0x4E9E: UNKNOWN0
-    0x4EA3: UNKNOWN1
+  Labels:
+    18: UNKNOWN0
+    23: UNKNOWN1
   Offset: 0xC14E8C
 CC_10:
   Description: 'Text control code: [10 XX]'
@@ -10290,155 +10290,155 @@ CC_1A_06:
   Description: 'Text control code: [1A 06 XX]'
   Size: 67
   Type: assembly
-  labels:
-    0x4ED6: UNKNOWN0
-    0x4EDB: UNKNOWN1
+  Labels:
+    33: UNKNOWN0
+    38: UNKNOWN1
   Offset: 0xC14EB5
 CC_1D_0A:
   Description: 'Text control code: [1D 0A XX]'
   Size: 59
   Type: assembly
-  labels:
-    0x4F0A: UNKNOWN0
-    0x4F0F: UNKNOWN1
+  Labels:
+    18: UNKNOWN0
+    23: UNKNOWN1
   Offset: 0xC14EF8
 CC_1D_0B:
   Description: 'Text control code: [1D 0B XX]'
   Size: 60
   Type: assembly
-  labels:
-    0x4F45: UNKNOWN0
-    0x4F4A: UNKNOWN1
+  Labels:
+    18: UNKNOWN0
+    23: UNKNOWN1
   Offset: 0xC14F33
 CC_1F_81:
   Description: 'Text control code: [1F 81 XX YY]'
   Size: 104
   Type: assembly
-  labels:
-    0x4F86: UNKNOWN0
-    0x4F88: UNKNOWN1
-    0x4F9B: UNKNOWN2
-    0x4FAC: UNKNOWN3
-    0x4FB4: UNKNOWN4
-    0x4FBD: UNKNOWN5
-    0x4FD5: UNKNOWN6
+  Labels:
+    23: UNKNOWN0
+    25: UNKNOWN1
+    44: UNKNOWN2
+    61: UNKNOWN3
+    69: UNKNOWN4
+    78: UNKNOWN5
+    102: UNKNOWN6
   Offset: 0xC14F6F
 CC_1C_02:
   Description: 'Text control code: [1C 02 XX]'
   Size: 48
   Type: assembly
-  labels:
-    0x4FF2: UNKNOWN0
-    0x4FFA: UNKNOWN1
-    0x4FFF: UNKNOWN2
-    0x5002: UNKNOWN3
+  Labels:
+    27: UNKNOWN0
+    35: UNKNOWN1
+    40: UNKNOWN2
+    43: UNKNOWN3
   Offset: 0xC14FD7
 CC_19_16:
   Description: 'Text control code: [19 16 XX YY]'
   Size: 104
   Type: assembly
-  labels:
-    0x501E: UNKNOWN0
-    0x5020: UNKNOWN1
-    0x5033: UNKNOWN2
-    0x5044: UNKNOWN3
-    0x504C: UNKNOWN4
-    0x5055: UNKNOWN5
-    0x506D: UNKNOWN6
+  Labels:
+    23: UNKNOWN0
+    25: UNKNOWN1
+    44: UNKNOWN2
+    61: UNKNOWN3
+    69: UNKNOWN4
+    78: UNKNOWN5
+    102: UNKNOWN6
   Offset: 0xC15007
 CC_19_05:
   Description: 'Text control code: [19 05 XX YY YY]'
   Size: 117
   Type: assembly
-  labels:
-    0x5088: UNKNOWN0
-    0x508A: UNKNOWN1
-    0x509E: UNKNOWN2
-    0x50B4: UNKNOWN3
-    0x50BC: UNKNOWN4
-    0x50C3: UNKNOWN5
-    0x50C8: UNKNOWN6
-    0x50E2: UNKNOWN7
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    47: UNKNOWN2
+    69: UNKNOWN3
+    77: UNKNOWN4
+    84: UNKNOWN5
+    89: UNKNOWN6
+    115: UNKNOWN7
   Offset: 0xC1506F
 CC_1D_0D:
   Description: 'Text control code: [1D 0D XX YY YY]'
   Size: 135
   Type: assembly
-  labels:
-    0x50FD: UNKNOWN0
-    0x50FF: UNKNOWN1
-    0x5113: UNKNOWN2
-    0x5130: UNKNOWN3
-    0x5138: UNKNOWN4
-    0x5141: UNKNOWN5
-    0x5150: UNKNOWN6
-    0x515B: UNKNOWN7
-    0x5169: UNKNOWN8
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    47: UNKNOWN2
+    76: UNKNOWN3
+    84: UNKNOWN4
+    93: UNKNOWN5
+    108: UNKNOWN6
+    119: UNKNOWN7
+    133: UNKNOWN8
   Offset: 0xC150E4
 CC_1C_14:
   Description: 'Text control code: [1C 14 XX]'
   Size: 145
   Type: assembly
-  labels:
-    0x519B: UNKNOWN0
-    0x519E: UNKNOWN1
-    0x51A1: UNKNOWN2
-    0x51BC: UNKNOWN3
-    0x51D2: UNKNOWN4
-    0x51D5: UNKNOWN5
-    0x51E5: UNKNOWN6
-    0x51E8: UNKNOWN7
+  Labels:
+    48: UNKNOWN0
+    51: UNKNOWN1
+    54: UNKNOWN2
+    81: UNKNOWN3
+    103: UNKNOWN4
+    106: UNKNOWN5
+    122: UNKNOWN6
+    125: UNKNOWN7
   Offset: 0xC1516B
 CC_1C_15:
   Description: 'Text control code: [1C 15 XX]'
   Size: 145
   Type: assembly
-  labels:
-    0x522C: UNKNOWN0
-    0x522F: UNKNOWN1
-    0x5232: UNKNOWN2
-    0x524D: UNKNOWN3
-    0x5263: UNKNOWN4
-    0x5266: UNKNOWN5
-    0x5276: UNKNOWN6
-    0x5279: UNKNOWN7
+  Labels:
+    48: UNKNOWN0
+    51: UNKNOWN1
+    54: UNKNOWN2
+    81: UNKNOWN3
+    103: UNKNOWN4
+    106: UNKNOWN5
+    122: UNKNOWN6
+    125: UNKNOWN7
   Offset: 0xC151FC
 CC_18_07:
   Description: 'Text control code: [18 07 XX XX XX XX YY]'
   Size: 247
   Type: assembly
-  labels:
-    0x52B5: UNKNOWN0
-    0x5337: UNKNOWN1
-    0x5341: UNKNOWN2
-    0x5348: UNKNOWN3
-    0x5357: UNKNOWN4
-    0x5361: UNKNOWN5
-    0x5368: UNKNOWN6
-    0x536B: UNKNOWN7
-    0x536C: UNKNOWN8
-    0x5374: UNKNOWN9
-    0x5382: UNKNOWN10
+  Labels:
+    40: UNKNOWN0
+    170: UNKNOWN1
+    180: UNKNOWN2
+    187: UNKNOWN3
+    202: UNKNOWN4
+    212: UNKNOWN5
+    219: UNKNOWN6
+    222: UNKNOWN7
+    223: UNKNOWN8
+    231: UNKNOWN9
+    245: UNKNOWN10
   Offset: 0xC1528D
 CC_19_18:
   Description: 'Text control code: [19 18 XX]'
   Size: 43
   Type: assembly
-  labels:
-    0x5396: UNKNOWN0
-    0x539B: UNKNOWN1
+  Labels:
+    18: UNKNOWN0
+    23: UNKNOWN1
   Offset: 0xC15384
 CC_1C_0A:
   Description: 'Text control code: [1C 0A XX XX XX XX]'
   Size: 229
   Type: assembly
-  labels:
-    0x53C9: UNKNOWN0
-    0x53CB: UNKNOWN1
-    0x53E0: UNKNOWN2
-    0x547F: UNKNOWN3
-    0x5484: UNKNOWN4
-    0x5492: UNKNOWN5
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    49: UNKNOWN2
+    208: UNKNOWN3
+    213: UNKNOWN4
+    227: UNKNOWN5
   Offset: 0xC153AF
 CC_1F_60:
   Description: 'Text control code: [1F 60 XX]'
@@ -10449,14 +10449,14 @@ CC_1A_05:
   Description: 'Text control code: [1A 05 XX YY]'
   Size: 139
   Type: assembly
-  labels:
-    0x54BA: UNKNOWN0
-    0x54BC: UNKNOWN1
-    0x54CF: UNKNOWN2
-    0x5511: UNKNOWN3
-    0x551A: UNKNOWN4
-    0x551F: UNKNOWN5
-    0x5527: UNKNOWN6
+  Labels:
+    28: UNKNOWN0
+    30: UNKNOWN1
+    49: UNKNOWN2
+    115: UNKNOWN3
+    124: UNKNOWN4
+    129: UNKNOWN5
+    137: UNKNOWN6
   Offset: 0xC1549E
 CC_18_08:
   Description: 'Text control code: [18 08 XX]'
@@ -10472,178 +10472,178 @@ CC_1C_0B:
   Description: 'Text control code: [1C 0B XX XX XX XX]'
   Size: 230
   Type: assembly
-  labels:
-    0x558D: UNKNOWN0
-    0x558F: UNKNOWN1
-    0x55A4: UNKNOWN2
-    0x5643: UNKNOWN3
-    0x5648: UNKNOWN4
-    0x5657: UNKNOWN5
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    49: UNKNOWN2
+    208: UNKNOWN3
+    213: UNKNOWN4
+    228: UNKNOWN5
   Offset: 0xC15573
 CC_1D_0E:
   Description: 'Text control code: [1D 0E XX YY]'
   Size: 130
   Type: assembly
-  labels:
-    0x5670: UNKNOWN0
-    0x5672: UNKNOWN1
-    0x5685: UNKNOWN2
-    0x5696: UNKNOWN3
-    0x569E: UNKNOWN4
-    0x56A7: UNKNOWN5
-    0x56D9: UNKNOWN6
+  Labels:
+    23: UNKNOWN0
+    25: UNKNOWN1
+    44: UNKNOWN2
+    61: UNKNOWN3
+    69: UNKNOWN4
+    78: UNKNOWN5
+    128: UNKNOWN6
   Offset: 0xC15659
 CC_1D_0F:
   Description: 'Text control code: [1D 0F XX XX]'
   Size: 130
   Type: assembly
-  labels:
-    0x56F4: UNKNOWN0
-    0x56F6: UNKNOWN1
-    0x5709: UNKNOWN2
-    0x5715: UNKNOWN3
-    0x571A: UNKNOWN4
-    0x5723: UNKNOWN5
-    0x5728: UNKNOWN6
-    0x575B: UNKNOWN7
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    46: UNKNOWN2
+    58: UNKNOWN3
+    63: UNKNOWN4
+    72: UNKNOWN5
+    77: UNKNOWN6
+    128: UNKNOWN7
   Offset: 0xC156DB
 CC_1D_10:
   Description: 'Text control code: [1D 10 XX XX]'
   Size: 112
   Type: assembly
-  labels:
-    0x5777: UNKNOWN0
-    0x5779: UNKNOWN1
-    0x578C: UNKNOWN2
-    0x5798: UNKNOWN3
-    0x579D: UNKNOWN4
-    0x57A6: UNKNOWN5
-    0x57AB: UNKNOWN6
-    0x57BD: UNKNOWN7
-    0x57CB: UNKNOWN8
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    47: UNKNOWN2
+    59: UNKNOWN3
+    64: UNKNOWN4
+    73: UNKNOWN5
+    78: UNKNOWN6
+    96: UNKNOWN7
+    110: UNKNOWN8
   Offset: 0xC1575D
 CC_1D_11:
   Description: 'Text control code: [1D 11 XX XX]'
   Size: 112
   Type: assembly
-  labels:
-    0x57E7: UNKNOWN0
-    0x57E9: UNKNOWN1
-    0x57FC: UNKNOWN2
-    0x5808: UNKNOWN3
-    0x580D: UNKNOWN4
-    0x5816: UNKNOWN5
-    0x581B: UNKNOWN6
-    0x583B: UNKNOWN7
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    47: UNKNOWN2
+    59: UNKNOWN3
+    64: UNKNOWN4
+    73: UNKNOWN5
+    78: UNKNOWN6
+    110: UNKNOWN7
   Offset: 0xC157CD
 CC_1F_83:
   Description: 'Text control code: [1F 83 XX YY]'
   Size: 104
   Type: assembly
-  labels:
-    0x5857: UNKNOWN0
-    0x5859: UNKNOWN1
-    0x586C: UNKNOWN2
-    0x5878: UNKNOWN3
-    0x587D: UNKNOWN4
-    0x5886: UNKNOWN5
-    0x588B: UNKNOWN6
-    0x58A3: UNKNOWN7
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    47: UNKNOWN2
+    59: UNKNOWN3
+    64: UNKNOWN4
+    73: UNKNOWN5
+    78: UNKNOWN6
+    102: UNKNOWN7
   Offset: 0xC1583D
 CC_1D_12:
   Description: 'Text control code: [1D 12 XX XX]'
   Size: 89
   Type: assembly
-  labels:
-    0x58BF: UNKNOWN0
-    0x58C1: UNKNOWN1
-    0x58D4: UNKNOWN2
-    0x58E0: UNKNOWN3
-    0x58E5: UNKNOWN4
-    0x58EE: UNKNOWN5
-    0x58F3: UNKNOWN6
-    0x58FC: UNKNOWN7
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    47: UNKNOWN2
+    59: UNKNOWN3
+    64: UNKNOWN4
+    73: UNKNOWN5
+    78: UNKNOWN6
+    87: UNKNOWN7
   Offset: 0xC158A5
 CC_1D_13:
   Description: 'Text control code: [1D 13 XX XX]'
   Size: 129
   Type: assembly
-  labels:
-    0x5915: UNKNOWN0
-    0x5917: UNKNOWN1
-    0x592A: UNKNOWN2
-    0x593B: UNKNOWN3
-    0x5943: UNKNOWN4
-    0x594C: UNKNOWN5
-    0x597D: UNKNOWN6
+  Labels:
+    23: UNKNOWN0
+    25: UNKNOWN1
+    44: UNKNOWN2
+    61: UNKNOWN3
+    69: UNKNOWN4
+    78: UNKNOWN5
+    127: UNKNOWN6
   Offset: 0xC158FE
 CC_19_19:
   Description: 'Text control code: [19 19 XX YY]'
   Size: 122
   Type: assembly
-  labels:
-    0x5999: UNKNOWN0
-    0x599B: UNKNOWN1
-    0x59AE: UNKNOWN2
-    0x59BA: UNKNOWN3
-    0x59BF: UNKNOWN4
-    0x59C8: UNKNOWN5
-    0x59CD: UNKNOWN6
-    0x59F7: UNKNOWN7
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    47: UNKNOWN2
+    59: UNKNOWN3
+    64: UNKNOWN4
+    73: UNKNOWN5
+    78: UNKNOWN6
+    120: UNKNOWN7
   Offset: 0xC1597F
 CC_1D_14:
   Description: 'Text control code: [1D 14 XX XX XX XX]'
   Size: 277
   Type: assembly
-  labels:
-    0x5A13: UNKNOWN0
-    0x5A15: UNKNOWN1
-    0x5A2A: UNKNOWN2
-    0x5ACE: UNKNOWN3
-    0x5AD3: UNKNOWN4
-    0x5AF4: UNKNOWN5
-    0x5AFE: UNKNOWN6
-    0x5B0C: UNKNOWN7
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    49: UNKNOWN2
+    213: UNKNOWN3
+    218: UNKNOWN4
+    251: UNKNOWN5
+    261: UNKNOWN6
+    275: UNKNOWN7
   Offset: 0xC159F9
 CC_19_1A:
   Description: 'Text control code: [19 1A XX]'
   Size: 56
   Type: assembly
-  labels:
-    0x5B20: UNKNOWN0
-    0x5B25: UNKNOWN1
+  Labels:
+    18: UNKNOWN0
+    23: UNKNOWN1
   Offset: 0xC15B0E
 CC_18_0D:
   Description: 'Text control code: [18 0D XX YY]'
   Size: 97
   Type: assembly
-  labels:
-    0x5B60: UNKNOWN0
-    0x5B62: UNKNOWN1
-    0x5B75: UNKNOWN2
-    0x5B81: UNKNOWN3
-    0x5B86: UNKNOWN4
-    0x5B96: UNKNOWN5
-    0x5B9D: UNKNOWN6
-    0x5BA2: UNKNOWN7
-    0x5BA5: UNKNOWN8
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    47: UNKNOWN2
+    59: UNKNOWN3
+    64: UNKNOWN4
+    80: UNKNOWN5
+    87: UNKNOWN6
+    92: UNKNOWN7
+    95: UNKNOWN8
   Offset: 0xC15B46
 CC_1C_0C:
   Description: 'Text control code: [1C 0C XX]'
   Size: 35
   Type: assembly
-  labels:
-    0x5BB9: UNKNOWN0
-    0x5BBE: UNKNOWN1
+  Labels:
+    18: UNKNOWN0
+    23: UNKNOWN1
   Offset: 0xC15BA7
 CC_1D_15:
   Description: 'Text control code: [1D 15 XX XX]'
   Size: 108
   Type: assembly
-  labels:
-    0x5BF0: UNKNOWN0
-    0x5C13: UNKNOWN1
-    0x5C34: UNKNOWN2
+  Labels:
+    38: UNKNOWN0
+    73: UNKNOWN1
+    106: UNKNOWN2
   Offset: 0xC15BCA
 CC_19_1B:
   Description: 'Text control code: [19 1B XX]'
@@ -10654,349 +10654,349 @@ CC_1F_71:
   Description: 'Text control code: [1F 71 XX YY]'
   Size: 45
   Type: assembly
-  labels:
-    0x5C67: UNKNOWN0
-    0x5C69: UNKNOWN1
-    0x5C7C: UNKNOWN2
-    0x5C84: UNKNOWN3
+  Labels:
+    15: UNKNOWN0
+    17: UNKNOWN1
+    36: UNKNOWN2
+    44: UNKNOWN3
   Offset: 0xC15C58
 CC_1D_06:
   Description: 'Text control code: [1D 06 XX XX XX XX]'
   Size: 230
   Type: assembly
-  labels:
-    0x5C9F: UNKNOWN0
-    0x5CA1: UNKNOWN1
-    0x5CB6: UNKNOWN2
-    0x5D55: UNKNOWN3
-    0x5D5A: UNKNOWN4
-    0x5D69: UNKNOWN5
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    49: UNKNOWN2
+    208: UNKNOWN3
+    213: UNKNOWN4
+    228: UNKNOWN5
   Offset: 0xC15C85
 CC_1D_07:
   Description: 'Text control code: [1D 07 XX XX XX XX]'
   Size: 241
   Type: assembly
-  labels:
-    0x5D85: UNKNOWN0
-    0x5D87: UNKNOWN1
-    0x5D9C: UNKNOWN2
-    0x5E3B: UNKNOWN3
-    0x5E40: UNKNOWN4
-    0x5E5A: UNKNOWN5
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    49: UNKNOWN2
+    208: UNKNOWN3
+    213: UNKNOWN4
+    239: UNKNOWN5
   Offset: 0xC15D6B
 CC_1D_17:
   Description: 'Text control code: [1D 17 XX XX XX XX]'
   Size: 277
   Type: assembly
-  labels:
-    0x5E76: UNKNOWN0
-    0x5E78: UNKNOWN1
-    0x5E8D: UNKNOWN2
-    0x5F2C: UNKNOWN3
-    0x5F31: UNKNOWN4
-    0x5F57: UNKNOWN5
-    0x5F61: UNKNOWN6
-    0x5F6F: UNKNOWN7
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    49: UNKNOWN2
+    208: UNKNOWN3
+    213: UNKNOWN4
+    251: UNKNOWN5
+    261: UNKNOWN6
+    275: UNKNOWN7
   Offset: 0xC15E5C
 CC_1F_11:
   Description: 'Text control code: [1F 11 XX]'
   Size: 32
   Type: assembly
-  labels:
-    0x5F83: UNKNOWN0
-    0x5F88: UNKNOWN1
+  Labels:
+    18: UNKNOWN0
+    23: UNKNOWN1
   Offset: 0xC15F71
 CC_1F_12:
   Description: 'Text control code: [1F 12 XX]'
   Size: 32
   Type: assembly
-  labels:
-    0x5FA3: UNKNOWN0
-    0x5FA8: UNKNOWN1
+  Labels:
+    18: UNKNOWN0
+    23: UNKNOWN1
   Offset: 0xC15F91
 UNKNOWN_C15FB1:
   Size: 70
   Type: assembly
-  labels:
-    0x5FC4: UNKNOWN0
-    0x5FED: UNKNOWN1
-    0x5FEE: UNKNOWN2
-    0x5FF3: UNKNOWN3
+  Labels:
+    19: UNKNOWN0
+    60: UNKNOWN1
+    61: UNKNOWN2
+    66: UNKNOWN3
   Offset: 0xC15FB1
 CC_19_1C:
   Description: 'Text control code: [19 1C XX YY]'
   Size: 137
   Type: assembly
-  labels:
-    0x6010: UNKNOWN0
-    0x6012: UNKNOWN1
-    0x6025: UNKNOWN2
-    0x603C: UNKNOWN3
-    0x603F: UNKNOWN4
-    0x604C: UNKNOWN5
-    0x6051: UNKNOWN6
-    0x6063: UNKNOWN7
-    0x6074: UNKNOWN8
-    0x607E: UNKNOWN9
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    46: UNKNOWN2
+    69: UNKNOWN3
+    72: UNKNOWN4
+    85: UNKNOWN5
+    90: UNKNOWN6
+    108: UNKNOWN7
+    125: UNKNOWN8
+    135: UNKNOWN9
   Offset: 0xC15FF7
 CC_19_1D:
   Description: 'Text control code: [19 1D XX YY]'
   Size: 164
   Type: assembly
-  labels:
-    0x6099: UNKNOWN0
-    0x609B: UNKNOWN1
-    0x60AF: UNKNOWN2
-    0x60BB: UNKNOWN3
-    0x60C0: UNKNOWN4
-    0x611D: UNKNOWN5
-    0x6122: UNKNOWN6
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    47: UNKNOWN2
+    59: UNKNOWN3
+    64: UNKNOWN4
+    157: UNKNOWN5
+    162: UNKNOWN6
   Offset: 0xC16080
 CC_1D_18:
   Description: 'Text control code: [1D 18 XX]'
   Size: 31
   Type: assembly
-  labels:
-    0x6136: UNKNOWN0
-    0x613B: UNKNOWN1
+  Labels:
+    18: UNKNOWN0
+    23: UNKNOWN1
   Offset: 0xC16124
 CC_19_21:
   Description: 'Text control code: [19 21 XX]'
   Size: 47
   Type: assembly
-  labels:
-    0x6155: UNKNOWN0
-    0x615A: UNKNOWN1
+  Labels:
+    18: UNKNOWN0
+    23: UNKNOWN1
   Offset: 0xC16143
 CC_1D_19:
   Description: 'Text control code: [1D 19 XX]'
   Size: 95
   Type: assembly
-  labels:
-    0x618D: UNKNOWN0
-    0x6190: UNKNOWN1
-    0x61B6: UNKNOWN2
-    0x61C1: UNKNOWN3
+  Labels:
+    27: UNKNOWN0
+    30: UNKNOWN1
+    68: UNKNOWN2
+    79: UNKNOWN3
   Offset: 0xC16172
 CC_1C_12:
   Description: 'Text control code: [1C 12 XX]'
   Size: 31
   Type: assembly
-  labels:
-    0x61E3: UNKNOWN0
-    0x61E8: UNKNOWN1
+  Labels:
+    18: UNKNOWN0
+    23: UNKNOWN1
   Offset: 0xC161D1
 CC_1D_21:
   Description: 'Text control code: [1D 21 XX]'
   Size: 47
   Type: assembly
-  labels:
-    0x6202: UNKNOWN0
-    0x6207: UNKNOWN1
+  Labels:
+    18: UNKNOWN0
+    23: UNKNOWN1
   Offset: 0xC161F0
 UNKNOWN_C1621F:
   Size: 233
   Type: assembly
-  labels:
-    0x6238: UNKNOWN0
-    0x623A: UNKNOWN1
-    0x624E: UNKNOWN2
-    0x6306: UNKNOWN3
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    47: UNKNOWN2
+    231: UNKNOWN3
   Offset: 0xC1621F
 CC_1F_C0:
   Description: 'Text control code: [1F C0 XX YY YY YY 00]'
   Size: 159
   Type: assembly
-  labels:
-    0x632E: UNKNOWN0
-    0x6384: UNKNOWN1
-    0x63A5: UNKNOWN2
+  Labels:
+    38: UNKNOWN0
+    124: UNKNOWN1
+    157: UNKNOWN2
   Offset: 0xC16308
 CC_1F_D0:
   Description: 'Text control code: [1F D0 XX]'
   Size: 86
   Type: assembly
-  labels:
-    0x63B9: UNKNOWN0
-    0x63BE: UNKNOWN1
-    0x63D1: UNKNOWN2
-    0x63DB: UNKNOWN3
+  Labels:
+    18: UNKNOWN0
+    23: UNKNOWN1
+    42: UNKNOWN2
+    52: UNKNOWN3
   Offset: 0xC163A7
 CC_1F_13:
   Description: 'Text control code: [1F 13 XX YY]'
   Size: 113
   Type: assembly
-  labels:
-    0x6417: UNKNOWN0
-    0x6419: UNKNOWN1
-    0x642D: UNKNOWN2
-    0x6444: UNKNOWN3
-    0x6447: UNKNOWN4
-    0x6459: UNKNOWN5
-    0x645C: UNKNOWN6
-    0x646C: UNKNOWN7
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    48: UNKNOWN2
+    71: UNKNOWN3
+    74: UNKNOWN4
+    92: UNKNOWN5
+    95: UNKNOWN6
+    111: UNKNOWN7
   Offset: 0xC163FD
 CC_1F_14:
   Description: 'Text control code: [1F 14 XX]'
   Size: 34
   Type: assembly
-  labels:
-    0x6481: UNKNOWN0
-    0x6484: UNKNOWN1
+  Labels:
+    19: UNKNOWN0
+    22: UNKNOWN1
   Offset: 0xC1646E
 CC_1F_16:
   Description: 'Text control code: [1F 16 XX XX YY]'
   Size: 121
   Type: assembly
-  labels:
-    0x64A9: UNKNOWN0
-    0x64AB: UNKNOWN1
-    0x64BE: UNKNOWN2
-    0x64E3: UNKNOWN3
-    0x64E6: UNKNOWN4
-    0x64F7: UNKNOWN5
-    0x64FA: UNKNOWN6
-    0x6507: UNKNOWN7
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    46: UNKNOWN2
+    83: UNKNOWN3
+    86: UNKNOWN4
+    103: UNKNOWN5
+    106: UNKNOWN6
+    119: UNKNOWN7
   Offset: 0xC16490
 CC_1F_17:
   Description: 'Text control code: [1F 17 XX XX YY YY ZZ]'
   Size: 121
   Type: assembly
-  labels:
-    0x6523: UNKNOWN0
-    0x6525: UNKNOWN1
-    0x6538: UNKNOWN2
-    0x6580: UNKNOWN3
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    47: UNKNOWN2
+    119: UNKNOWN3
   Offset: 0xC16509
 CC_1F_18:
   Description: 'Text control code: [1F 18 XX XX XX XX XX XX XX]'
   Size: 40
   Type: assembly
-  labels:
-    0x6591: UNKNOWN0
-    0x6593: UNKNOWN1
-    0x65A6: UNKNOWN2
-    0x65A9: UNKNOWN3
+  Labels:
+    15: UNKNOWN0
+    17: UNKNOWN1
+    36: UNKNOWN2
+    39: UNKNOWN3
   Offset: 0xC16582
 CC_1F_19:
   Description: 'Text control code: [1F 19 XX XX XX XX XX XX XX]'
   Size: 40
   Type: assembly
-  labels:
-    0x65B9: UNKNOWN0
-    0x65BB: UNKNOWN1
-    0x65CE: UNKNOWN2
-    0x65D1: UNKNOWN3
+  Labels:
+    15: UNKNOWN0
+    17: UNKNOWN1
+    36: UNKNOWN2
+    39: UNKNOWN3
   Offset: 0xC165AA
 CC_1F_1A:
   Description: 'Text control code: [1F 1A XX XX YY]'
   Size: 88
   Type: assembly
-  labels:
-    0x65EB: UNKNOWN0
-    0x65ED: UNKNOWN1
-    0x6600: UNKNOWN2
-    0x6628: UNKNOWN3
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    46: UNKNOWN2
+    86: UNKNOWN3
   Offset: 0xC165D2
 CC_1F_1B:
   Description: 'Text control code: [1F 1B XX XX]'
   Size: 67
   Type: assembly
-  labels:
-    0x6650: UNKNOWN0
-    0x666B: UNKNOWN1
+  Labels:
+    38: UNKNOWN0
+    65: UNKNOWN1
   Offset: 0xC1662A
 CC_1F_1C:
   Description: 'Text control code: [1F 1C XX YY]'
   Size: 112
   Type: assembly
-  labels:
-    0x6687: UNKNOWN0
-    0x6689: UNKNOWN1
-    0x669D: UNKNOWN2
-    0x66B4: UNKNOWN3
-    0x66B7: UNKNOWN4
-    0x66C9: UNKNOWN5
-    0x66CC: UNKNOWN6
-    0x66DB: UNKNOWN7
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    48: UNKNOWN2
+    71: UNKNOWN3
+    74: UNKNOWN4
+    92: UNKNOWN5
+    95: UNKNOWN6
+    110: UNKNOWN7
   Offset: 0xC1666D
 CC_1F_1D:
   Description: 'Text control code: [1F 1D XX]'
   Size: 33
   Type: assembly
-  labels:
-    0x66F0: UNKNOWN0
-    0x66F3: UNKNOWN1
+  Labels:
+    19: UNKNOWN0
+    22: UNKNOWN1
   Offset: 0xC166DD
 CC_1F_E1:
   Description: 'Text control code: [1F E1 XX YY ZZ]'
   Size: 70
   Type: assembly
-  labels:
-    0x6715: UNKNOWN0
-    0x6717: UNKNOWN1
-    0x672A: UNKNOWN2
-    0x6742: UNKNOWN3
+  Labels:
+    23: UNKNOWN0
+    25: UNKNOWN1
+    44: UNKNOWN2
+    68: UNKNOWN3
   Offset: 0xC166FE
 CC_1F_15:
   Description: 'Text control code: [1F 15 XX XX YY YY ZZ]'
   Size: 146
   Type: assembly
-  labels:
-    0x675D: UNKNOWN0
-    0x675F: UNKNOWN1
-    0x6773: UNKNOWN2
-    0x67BF: UNKNOWN3
-    0x67D1: UNKNOWN4
-    0x67D4: UNKNOWN5
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    47: UNKNOWN2
+    123: UNKNOWN3
+    141: UNKNOWN4
+    144: UNKNOWN5
   Offset: 0xC16744
 CC_1F_1E:
   Description: 'Text control code: [1F 1E XX XX YY]'
   Size: 101
   Type: assembly
-  labels:
-    0x67EF: UNKNOWN0
-    0x67F1: UNKNOWN1
-    0x6805: UNKNOWN2
-    0x6839: UNKNOWN3
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    47: UNKNOWN2
+    99: UNKNOWN3
   Offset: 0xC167D6
 CC_1F_1F:
   Description: 'Text control code: [1F 1F XX XX YY]'
   Size: 101
   Type: assembly
-  labels:
-    0x6854: UNKNOWN0
-    0x6856: UNKNOWN1
-    0x686A: UNKNOWN2
-    0x689E: UNKNOWN3
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    47: UNKNOWN2
+    99: UNKNOWN3
   Offset: 0xC1683B
 CC_19_22:
   Description: 'Text control code: [19 22 XX XX YY YY]'
   Size: 167
   Type: assembly
-  labels:
-    0x68BA: UNKNOWN0
-    0x68BC: UNKNOWN1
-    0x68D0: UNKNOWN2
-    0x68EE: UNKNOWN3
-    0x68F1: UNKNOWN4
-    0x691A: UNKNOWN5
-    0x691D: UNKNOWN6
-    0x6945: UNKNOWN7
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    48: UNKNOWN2
+    78: UNKNOWN3
+    81: UNKNOWN4
+    122: UNKNOWN5
+    125: UNKNOWN6
+    165: UNKNOWN7
   Offset: 0xC168A0
 CC_19_23:
   Description: 'Text control code: [19 23 XX XX YY YY ZZ]'
   Size: 176
   Type: assembly
-  labels:
-    0x6961: UNKNOWN0
-    0x6963: UNKNOWN1
-    0x6978: UNKNOWN2
-    0x69A1: UNKNOWN3
-    0x69A4: UNKNOWN4
-    0x69CD: UNKNOWN5
-    0x69D0: UNKNOWN6
-    0x69F5: UNKNOWN7
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    49: UNKNOWN2
+    90: UNKNOWN3
+    93: UNKNOWN4
+    134: UNKNOWN5
+    137: UNKNOWN6
+    174: UNKNOWN7
   Offset: 0xC16947
 CC_1F_62:
   Description: 'Text control code: [1F 62 XX]'
@@ -11007,44 +11007,44 @@ CC_1E_08:
   Description: 'Text control code: [1E 08 XX YY]'
   Size: 122
   Type: assembly
-  labels:
-    0x6A18: UNKNOWN0
-    0x6A1A: UNKNOWN1
-    0x6A2D: UNKNOWN2
-    0x6A44: UNKNOWN3
-    0x6A46: UNKNOWN4
-    0x6A51: UNKNOWN5
-    0x6A66: UNKNOWN6
-    0x6A69: UNKNOWN7
-    0x6A79: UNKNOWN8
+  Labels:
+    23: UNKNOWN0
+    25: UNKNOWN1
+    44: UNKNOWN2
+    67: UNKNOWN3
+    69: UNKNOWN4
+    80: UNKNOWN5
+    101: UNKNOWN6
+    104: UNKNOWN7
+    120: UNKNOWN8
   Offset: 0xC16A01
 CC_19_24:
   Description: 'Text control code: [19 24 XX XX YY YY ZZ]'
   Size: 176
   Type: assembly
-  labels:
-    0x6A95: UNKNOWN0
-    0x6A97: UNKNOWN1
-    0x6AAC: UNKNOWN2
-    0x6AD5: UNKNOWN3
-    0x6AD8: UNKNOWN4
-    0x6B01: UNKNOWN5
-    0x6B04: UNKNOWN6
-    0x6B29: UNKNOWN7
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    49: UNKNOWN2
+    90: UNKNOWN3
+    93: UNKNOWN4
+    134: UNKNOWN5
+    137: UNKNOWN6
+    174: UNKNOWN7
   Offset: 0xC16A7B
 CC_1F_E4:
   Description: 'Text control code: [1F E4 XX XX YY]'
   Size: 121
   Type: assembly
-  labels:
-    0x6B44: UNKNOWN0
-    0x6B46: UNKNOWN1
-    0x6B59: UNKNOWN2
-    0x6B7E: UNKNOWN3
-    0x6B81: UNKNOWN4
-    0x6B92: UNKNOWN5
-    0x6B95: UNKNOWN6
-    0x6BA2: UNKNOWN7
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    46: UNKNOWN2
+    83: UNKNOWN3
+    86: UNKNOWN4
+    103: UNKNOWN5
+    106: UNKNOWN6
+    119: UNKNOWN7
   Offset: 0xC16B2B
 CC_1F_E5:
   Description: 'Text control code: [1F E5 XX]'
@@ -11055,17 +11055,17 @@ CC_1F_E6:
   Description: 'Text control code: [1F E6 XX XX]'
   Size: 67
   Type: assembly
-  labels:
-    0x6BD5: UNKNOWN0
-    0x6BF0: UNKNOWN1
+  Labels:
+    38: UNKNOWN0
+    65: UNKNOWN1
   Offset: 0xC16BAF
 CC_1F_E7:
   Description: 'Text control code: [1F E7 XX XX]'
   Size: 67
   Type: assembly
-  labels:
-    0x6C18: UNKNOWN0
-    0x6C33: UNKNOWN1
+  Labels:
+    38: UNKNOWN0
+    65: UNKNOWN1
   Offset: 0xC16BF2
 CC_1F_E8:
   Description: 'Text control code: [1F E8 XX]'
@@ -11076,227 +11076,227 @@ CC_1F_E9:
   Description: 'Text control code: [1F E9 XX XX]'
   Size: 67
   Type: assembly
-  labels:
-    0x6C66: UNKNOWN0
-    0x6C81: UNKNOWN1
+  Labels:
+    38: UNKNOWN0
+    65: UNKNOWN1
   Offset: 0xC16C40
 CC_1F_EA:
   Description: 'Text control code: [1F EA XX XX]'
   Size: 67
   Type: assembly
-  labels:
-    0x6CA9: UNKNOWN0
-    0x6CC4: UNKNOWN1
+  Labels:
+    38: UNKNOWN0
+    65: UNKNOWN1
   Offset: 0xC16C83
 CC_1F_EB:
   Description: 'Text control code: [1F EB XX YY]'
   Size: 78
   Type: assembly
-  labels:
-    0x6CDF: UNKNOWN0
-    0x6CE1: UNKNOWN1
-    0x6CF4: UNKNOWN2
-    0x6D12: UNKNOWN3
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    46: UNKNOWN2
+    76: UNKNOWN3
   Offset: 0xC16CC6
 CC_1F_EC:
   Description: 'Text control code: [1F EC XX YY]'
   Size: 78
   Type: assembly
-  labels:
-    0x6D2D: UNKNOWN0
-    0x6D2F: UNKNOWN1
-    0x6D42: UNKNOWN2
-    0x6D60: UNKNOWN3
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    46: UNKNOWN2
+    76: UNKNOWN3
   Offset: 0xC16D14
 CC_1F_EE:
   Description: 'Text control code: [1F EE XX XX]'
   Size: 67
   Type: assembly
-  labels:
-    0x6D88: UNKNOWN0
-    0x6DA3: UNKNOWN1
+  Labels:
+    38: UNKNOWN0
+    65: UNKNOWN1
   Offset: 0xC16D62
 CC_1F_EF:
   Description: 'Text control code: [1F EF XX XX]'
   Size: 67
   Type: assembly
-  labels:
-    0x6DCB: UNKNOWN0
-    0x6DE6: UNKNOWN1
+  Labels:
+    38: UNKNOWN0
+    65: UNKNOWN1
   Offset: 0xC16DA5
 CC_1F_63:
   Description: 'Text control code: [1F 63 XX XX XX 00]'
   Size: 215
   Type: assembly
-  labels:
-    0x6E02: UNKNOWN0
-    0x6E04: UNKNOWN1
-    0x6E19: UNKNOWN2
-    0x6EBD: UNKNOWN3
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    49: UNKNOWN2
+    213: UNKNOWN3
   Offset: 0xC16DE8
 CC_1F_F1:
   Description: 'Text control code: [1F F1 XX XX YY YY]'
   Size: 112
   Type: assembly
-  labels:
-    0x6ED9: UNKNOWN0
-    0x6EDB: UNKNOWN1
-    0x6EEF: UNKNOWN2
-    0x6F2D: UNKNOWN3
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    48: UNKNOWN2
+    110: UNKNOWN3
   Offset: 0xC16EBF
 CC_1F_F2:
   Description: 'Text control code: [1F F2 XX XX YY YY]'
   Size: 112
   Type: assembly
-  labels:
-    0x6F49: UNKNOWN0
-    0x6F4B: UNKNOWN1
-    0x6F5F: UNKNOWN2
-    0x6F9D: UNKNOWN3
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    48: UNKNOWN2
+    110: UNKNOWN3
   Offset: 0xC16F2F
 CC_19_25:
   Description: 'Text control code: [19 25 XX]'
   Size: 50
   Type: assembly
-  labels:
-    0x6FB2: UNKNOWN0
-    0x6FB5: UNKNOWN1
+  Labels:
+    19: UNKNOWN0
+    22: UNKNOWN1
   Offset: 0xC16F9F
 CC_1F_23:
   Description: 'Text control code: [1F 23 XX XX]'
   Size: 102
   Type: assembly
-  labels:
-    0x6FF7: UNKNOWN0
-    0x7013: UNKNOWN1
-    0x7016: UNKNOWN2
-    0x7027: UNKNOWN3
-    0x7035: UNKNOWN4
+  Labels:
+    38: UNKNOWN0
+    66: UNKNOWN1
+    69: UNKNOWN2
+    86: UNKNOWN3
+    100: UNKNOWN4
   Offset: 0xC16FD1
 CC_19_26:
   Description: 'Text control code: [19 26 XX]'
   Size: 33
   Type: assembly
-  labels:
-    0x704A: UNKNOWN0
-    0x704D: UNKNOWN1
+  Labels:
+    19: UNKNOWN0
+    22: UNKNOWN1
   Offset: 0xC17037
 CC_1D_0C:
   Description: 'Text control code: [1D 0C XX XX]'
   Size: 196
   Type: assembly
-  labels:
-    0x7072: UNKNOWN0
-    0x7074: UNKNOWN1
-    0x7088: UNKNOWN2
-    0x7094: UNKNOWN3
-    0x7099: UNKNOWN4
-    0x70A2: UNKNOWN5
-    0x70A7: UNKNOWN6
-    0x70B9: UNKNOWN7
-    0x70BE: UNKNOWN8
-    0x70FB: UNKNOWN9
-    0x70FE: UNKNOWN10
-    0x710C: UNKNOWN11
-    0x711A: UNKNOWN12
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    48: UNKNOWN2
+    60: UNKNOWN3
+    65: UNKNOWN4
+    74: UNKNOWN5
+    79: UNKNOWN6
+    97: UNKNOWN7
+    102: UNKNOWN8
+    163: UNKNOWN9
+    166: UNKNOWN10
+    180: UNKNOWN11
+    194: UNKNOWN12
   Offset: 0xC17058
 CC_1F_66:
   Description: 'Text control code: [1F 66 XX YY ZZ ZZ ZZ 00]'
   Size: 279
   Type: assembly
-  labels:
-    0x7135: UNKNOWN0
-    0x7137: UNKNOWN1
-    0x714B: UNKNOWN2
-    0x715F: UNKNOWN3
-    0x7162: UNKNOWN4
-    0x717E: UNKNOWN5
-    0x7181: UNKNOWN6
-    0x7231: UNKNOWN7
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    47: UNKNOWN2
+    67: UNKNOWN3
+    70: UNKNOWN4
+    98: UNKNOWN5
+    101: UNKNOWN6
+    277: UNKNOWN7
   Offset: 0xC1711C
 CC_1F_67:
   Description: 'Text control code: [1F 67 XX]'
   Size: 33
   Type: assembly
-  labels:
-    0x7246: UNKNOWN0
-    0x7249: UNKNOWN1
+  Labels:
+    19: UNKNOWN0
+    22: UNKNOWN1
   Offset: 0xC17233
 CC_1F_04:
   Description: 'Text control code: [1F 04 XX]'
   Size: 32
   Type: assembly
-  labels:
-    0x7267: UNKNOWN0
-    0x726A: UNKNOWN1
+  Labels:
+    19: UNKNOWN0
+    22: UNKNOWN1
   Offset: 0xC17254
 CC_1D_24:
   Description: 'Text control code: [1D 24 XX]'
   Size: 72
   Type: assembly
-  labels:
-    0x72B7: UNKNOWN0
+  Labels:
+    67: UNKNOWN0
   Offset: 0xC17274
 CC_1F_40:
   Description: 'Text control code: [1F 40 XX]'
   Size: 30
   Type: assembly
-  labels:
-    0x72D6: UNKNOWN0
-    0x72D9: UNKNOWN1
+  Labels:
+    26: UNKNOWN0
+    29: UNKNOWN1
   Offset: 0xC172BC
 CC_1F_41:
   Description: 'Text control code: [1F 41 XX]'
   Size: 42
   Type: assembly
-  labels:
-    0x72F4: UNKNOWN0
+  Labels:
+    26: UNKNOWN0
   Offset: 0xC172DA
 CC_1F_D2:
   Description: 'Text control code: [1F D2 XX]'
   Size: 33
   Type: assembly
-  labels:
-    0x7317: UNKNOWN0
-    0x731A: UNKNOWN1
+  Labels:
+    19: UNKNOWN0
+    22: UNKNOWN1
   Offset: 0xC17304
 CC_1F_F3:
   Description: 'Text control code: [1F F3 XX XX YY]'
   Size: 88
   Type: assembly
-  labels:
-    0x733E: UNKNOWN0
-    0x7340: UNKNOWN1
-    0x7353: UNKNOWN2
-    0x737B: UNKNOWN3
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    46: UNKNOWN2
+    86: UNKNOWN3
   Offset: 0xC17325
 CC_1F_F4:
   Description: 'Text control code: [1F F4 XX]'
   Size: 67
   Type: assembly
-  labels:
-    0x73A3: UNKNOWN0
-    0x73BE: UNKNOWN1
+  Labels:
+    38: UNKNOWN0
+    65: UNKNOWN1
   Offset: 0xC1737D
 CC_1C_13:
   Description: 'Text control code: [1C 13 XX YY]'
   Size: 95
   Type: assembly
-  labels:
-    0x73D9: UNKNOWN0
-    0x73DB: UNKNOWN1
-    0x73EE: UNKNOWN2
-    0x740F: UNKNOWN3
-    0x741A: UNKNOWN4
-    0x741D: UNKNOWN5
+  Labels:
+    25: UNKNOWN0
+    27: UNKNOWN1
+    46: UNKNOWN2
+    79: UNKNOWN3
+    90: UNKNOWN4
+    93: UNKNOWN5
   Offset: 0xC173C0
 CC_1F_07:
   Description: 'Text control code: [1F 07 XX]'
   Size: 33
   Type: assembly
-  labels:
-    0x7432: UNKNOWN0
-    0x7435: UNKNOWN1
+  Labels:
+    19: UNKNOWN0
+    22: UNKNOWN1
   Offset: 0xC1741F
 CC_1F_D3:
   Description: 'Text control code: [1F D3 XX]'
@@ -11307,99 +11307,99 @@ CC_1E_09:
   Description: 'Text control code: [1E 09 XX YY YY YY]'
   Size: 216
   Type: assembly
-  labels:
-    0x7465: UNKNOWN0
-    0x7467: UNKNOWN1
-    0x747C: UNKNOWN2
-    0x7521: UNKNOWN3
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    49: UNKNOWN2
+    214: UNKNOWN3
   Offset: 0xC1744B
 CC_1E_0A:
   Description: 'Text control code: [1E 0A XX YY]'
   Size: 97
   Type: assembly
-  labels:
-    0x753D: UNKNOWN0
-    0x753F: UNKNOWN1
-    0x7553: UNKNOWN2
-    0x7582: UNKNOWN3
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    48: UNKNOWN2
+    95: UNKNOWN3
   Offset: 0xC17523
 CC_1E_0B:
   Description: 'Text control code: [1E 0B XX YY]'
   Size: 97
   Type: assembly
-  labels:
-    0x759E: UNKNOWN0
-    0x75A0: UNKNOWN1
-    0x75B4: UNKNOWN2
-    0x75E3: UNKNOWN3
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    48: UNKNOWN2
+    95: UNKNOWN3
   Offset: 0xC17584
 CC_1E_0C:
   Description: 'Text control code: [1E 0C XX YY]'
   Size: 97
   Type: assembly
-  labels:
-    0x75FF: UNKNOWN0
-    0x7601: UNKNOWN1
-    0x7615: UNKNOWN2
-    0x7644: UNKNOWN3
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    48: UNKNOWN2
+    95: UNKNOWN3
   Offset: 0xC175E5
 CC_1E_0D:
   Description: 'Text control code: [1E 0D XX YY]'
   Size: 97
   Type: assembly
-  labels:
-    0x7660: UNKNOWN0
-    0x7662: UNKNOWN1
-    0x7676: UNKNOWN2
-    0x76A5: UNKNOWN3
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    48: UNKNOWN2
+    95: UNKNOWN3
   Offset: 0xC17646
 CC_1E_0E:
   Description: 'Text control code: [1E 0E XX YY]'
   Size: 97
   Type: assembly
-  labels:
-    0x76C1: UNKNOWN0
-    0x76C3: UNKNOWN1
-    0x76D7: UNKNOWN2
-    0x7706: UNKNOWN3
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    48: UNKNOWN2
+    95: UNKNOWN3
   Offset: 0xC176A7
 CC_1D_23:
   Description: 'Text control code: [1D 23 XX]'
   Size: 98
   Type: assembly
-  labels:
-    0x771B: UNKNOWN0
-    0x771E: UNKNOWN1
-    0x7749: UNKNOWN2
-    0x774E: UNKNOWN3
-    0x7753: UNKNOWN4
-    0x7756: UNKNOWN5
+  Labels:
+    19: UNKNOWN0
+    22: UNKNOWN1
+    65: UNKNOWN2
+    70: UNKNOWN3
+    75: UNKNOWN4
+    78: UNKNOWN5
   Offset: 0xC17708
 CC_19_27:
   Description: 'Text control code: [19 27 XX]'
   Size: 44
   Type: assembly
-  labels:
-    0x777D: UNKNOWN0
-    0x7780: UNKNOWN1
+  Labels:
+    19: UNKNOWN0
+    22: UNKNOWN1
   Offset: 0xC1776A
 UNKNOWN_C17796:
   Size: 243
   Type: assembly
-  labels:
-    0x77B0: UNKNOWN0
-    0x77B2: UNKNOWN1
-    0x77C7: UNKNOWN2
-    0x7887: UNKNOWN3
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    49: UNKNOWN2
+    241: UNKNOWN3
   Offset: 0xC17796
 UNKNOWN_C17889:
   Size: 110
   Type: assembly
-  labels:
-    0x78A0: UNKNOWN0
-    0x78B2: UNKNOWN1
-    0x78E5: UNKNOWN2
-    0x78F5: UNKNOWN3
+  Labels:
+    23: UNKNOWN0
+    41: UNKNOWN1
+    92: UNKNOWN2
+    108: UNKNOWN3
   Offset: 0xC17889
 CC_19_02:
   Description: 'Text control code: [19 02]'
@@ -11410,119 +11410,119 @@ CC_18_TREE:
   Description: 'Text system: [18] comparison tree'
   Size: 159
   Type: assembly
-  labels:
-    0x7954: UNKNOWN0
-    0x7959: UNKNOWN1
-    0x795E: UNKNOWN2
-    0x7971: UNKNOWN3
-    0x7976: UNKNOWN4
-    0x7982: UNKNOWN5
-    0x7987: UNKNOWN6
-    0x798C: UNKNOWN7
-    0x7991: UNKNOWN8
-    0x7996: UNKNOWN9
-    0x799B: UNKNOWN10
-    0x79A0: UNKNOWN11
-    0x79A5: UNKNOWN12
-    0x79A8: UNKNOWN13
+  Labels:
+    73: UNKNOWN0
+    78: UNKNOWN1
+    83: UNKNOWN2
+    102: UNKNOWN3
+    107: UNKNOWN4
+    119: UNKNOWN5
+    124: UNKNOWN6
+    129: UNKNOWN7
+    134: UNKNOWN8
+    139: UNKNOWN9
+    144: UNKNOWN10
+    149: UNKNOWN11
+    154: UNKNOWN12
+    157: UNKNOWN13
   Offset: 0xC1790B
 CC_19_TREE:
   Description: 'Text system: [19] comparison tree'
   Size: 428
   Type: assembly
-  labels:
-    0x79BD: UNKNOWN0
-    0x79C5: UNKNOWN1
-    0x79CD: UNKNOWN2
-    0x79D5: UNKNOWN3
-    0x79DD: UNKNOWN4
-    0x79E5: UNKNOWN5
-    0x79ED: UNKNOWN6
-    0x79F5: UNKNOWN7
-    0x79FD: UNKNOWN8
-    0x7A05: UNKNOWN9
-    0x7A0D: UNKNOWN10
-    0x7A15: UNKNOWN11
-    0x7A1D: UNKNOWN12
-    0x7A25: UNKNOWN13
-    0x7A2D: UNKNOWN14
-    0x7A35: UNKNOWN15
-    0x7A3D: UNKNOWN16
-    0x7A45: UNKNOWN17
-    0x7A4D: UNKNOWN18
-    0x7A55: UNKNOWN19
-    0x7A5D: UNKNOWN20
-    0x7A65: UNKNOWN21
-    0x7A6D: UNKNOWN22
-    0x7A75: UNKNOWN23
-    0x7A78: UNKNOWN24
-    0x7A7E: UNKNOWN25
-    0x7A84: UNKNOWN26
-    0x7A8A: UNKNOWN27
-    0x7A90: UNKNOWN28
-    0x7A96: UNKNOWN29
-    0x7ABB: UNKNOWN30
-    0x7AC1: UNKNOWN31
-    0x7AC7: UNKNOWN32
-    0x7ACD: UNKNOWN33
-    0x7AD3: UNKNOWN34
-    0x7AD9: UNKNOWN35
-    0x7ADE: UNKNOWN36
-    0x7AE3: UNKNOWN37
-    0x7AF3: UNKNOWN38
-    0x7B0D: UNKNOWN39
-    0x7B29: UNKNOWN40
-    0x7B2E: UNKNOWN41
-    0x7B33: UNKNOWN42
-    0x7B38: UNKNOWN43
-    0x7B3D: UNKNOWN44
-    0x7B42: UNKNOWN45
-    0x7B47: UNKNOWN46
-    0x7B4C: UNKNOWN47
-    0x7B51: UNKNOWN48
-    0x7B54: UNKNOWN49
+  Labels:
+    19: UNKNOWN0
+    27: UNKNOWN1
+    35: UNKNOWN2
+    43: UNKNOWN3
+    51: UNKNOWN4
+    59: UNKNOWN5
+    67: UNKNOWN6
+    75: UNKNOWN7
+    83: UNKNOWN8
+    91: UNKNOWN9
+    99: UNKNOWN10
+    107: UNKNOWN11
+    115: UNKNOWN12
+    123: UNKNOWN13
+    131: UNKNOWN14
+    139: UNKNOWN15
+    147: UNKNOWN16
+    155: UNKNOWN17
+    163: UNKNOWN18
+    171: UNKNOWN19
+    179: UNKNOWN20
+    187: UNKNOWN21
+    195: UNKNOWN22
+    203: UNKNOWN23
+    206: UNKNOWN24
+    212: UNKNOWN25
+    218: UNKNOWN26
+    224: UNKNOWN27
+    230: UNKNOWN28
+    236: UNKNOWN29
+    273: UNKNOWN30
+    279: UNKNOWN31
+    285: UNKNOWN32
+    291: UNKNOWN33
+    297: UNKNOWN34
+    303: UNKNOWN35
+    308: UNKNOWN36
+    313: UNKNOWN37
+    329: UNKNOWN38
+    355: UNKNOWN39
+    383: UNKNOWN40
+    388: UNKNOWN41
+    393: UNKNOWN42
+    398: UNKNOWN43
+    403: UNKNOWN44
+    408: UNKNOWN45
+    413: UNKNOWN46
+    418: UNKNOWN47
+    423: UNKNOWN48
+    426: UNKNOWN49
   Offset: 0xC179AA
 CC_1A_TREE:
   Description: 'Text system: [1A] comparison tree'
   Size: 224
   Type: assembly
-  labels:
-    0x7B8E: UNKNOWN0
-    0x7B96: UNKNOWN1
-    0x7B99: UNKNOWN2
-    0x7B9F: UNKNOWN3
-    0x7BA5: UNKNOWN4
-    0x7BBF: UNKNOWN5
-    0x7BC4: UNKNOWN6
-    0x7BC9: UNKNOWN7
-    0x7BDD: UNKNOWN8
-    0x7BF4: UNKNOWN9
-    0x7C0B: UNKNOWN10
-    0x7C1F: UNKNOWN11
-    0x7C31: UNKNOWN12
-    0x7C34: UNKNOWN13
+  Labels:
+    56: UNKNOWN0
+    64: UNKNOWN1
+    67: UNKNOWN2
+    73: UNKNOWN3
+    79: UNKNOWN4
+    105: UNKNOWN5
+    110: UNKNOWN6
+    115: UNKNOWN7
+    135: UNKNOWN8
+    158: UNKNOWN9
+    181: UNKNOWN10
+    201: UNKNOWN11
+    219: UNKNOWN12
+    222: UNKNOWN13
   Offset: 0xC17B56
 CC_1B_TREE:
   Description: 'Text system: [1B] comparison tree'
   Size: 350
   Type: assembly
-  labels:
-    0x7C5D: UNKNOWN0
-    0x7C65: UNKNOWN1
-    0x7C6D: UNKNOWN2
-    0x7C70: UNKNOWN3
-    0x7C76: UNKNOWN4
-    0x7C7C: UNKNOWN5
-    0x7C93: UNKNOWN6
-    0x7C9B: UNKNOWN7
-    0x7CBA: UNKNOWN8
-    0x7CD1: UNKNOWN9
-    0x7CD9: UNKNOWN10
-    0x7CF8: UNKNOWN11
-    0x7D36: UNKNOWN12
-    0x7D5A: UNKNOWN13
-    0x7D8D: UNKNOWN14
-    0x7D92: UNKNOWN15
+  Labels:
+    39: UNKNOWN0
+    47: UNKNOWN1
+    55: UNKNOWN2
+    58: UNKNOWN3
+    64: UNKNOWN4
+    70: UNKNOWN5
+    93: UNKNOWN6
+    101: UNKNOWN7
+    132: UNKNOWN8
+    155: UNKNOWN9
+    163: UNKNOWN10
+    194: UNKNOWN11
+    256: UNKNOWN12
+    292: UNKNOWN13
+    343: UNKNOWN14
+    348: UNKNOWN15
   Offset: 0xC17C36
 CC_1C_TREE:
   Description: 'Text system: [1C] comparison tree'
@@ -13561,18 +13561,18 @@ UNKNOWN_C1FFF1:
   Offset: 0xC1FFF1
 INFLICT_SUNSTROKE_CHECK:
   Description: Determines if sunstroke should be inflicted
-  labels:
-    0x0010: UNKNOWN0
-    0x001E: UNKNOWN1
-    0x0039: UNKNOWN2
-    0x0046: UNKNOWN3
-    0x0048: UNKNOWN4
-    0x0064: UNKNOWN5
-    0x007F: UNKNOWN6
-    0x009C: UNKNOWN7
-    0x00A6: UNKNOWN8
-    0x00AB: UNKNOWN9
-    0x00B5: UNKNOWN10
+  Labels:
+    16: UNKNOWN0
+    30: UNKNOWN1
+    57: UNKNOWN2
+    70: UNKNOWN3
+    72: UNKNOWN4
+    100: UNKNOWN5
+    127: UNKNOWN6
+    156: UNKNOWN7
+    166: UNKNOWN8
+    171: UNKNOWN9
+    181: UNKNOWN10
   Size: 185
   Type: assembly
   Offset: 0xC20000
@@ -13581,35 +13581,35 @@ UNKNOWN_C200B9:
   Size: 32
   Offset: 0xC200B9
 UNKNOWN_C200D9:
-  labels:
-    0x011E: UNKNOWN0
-    0x0131: UNKNOWN1
-    0x013D: UNKNOWN2
-    0x014A: UNKNOWN3
-    0x0156: UNKNOWN4
-    0x0163: UNKNOWN5
-    0x0179: UNKNOWN6
-    0x0182: UNKNOWN7
-    0x018B: UNKNOWN8
-    0x019B: UNKNOWN9
-    0x01A7: UNKNOWN10
-    0x01AE: UNKNOWN11
-    0x01C9: UNKNOWN12
-    0x01D5: UNKNOWN13
+  Labels:
+    69: UNKNOWN0
+    88: UNKNOWN1
+    100: UNKNOWN2
+    113: UNKNOWN3
+    125: UNKNOWN4
+    138: UNKNOWN5
+    160: UNKNOWN6
+    169: UNKNOWN7
+    178: UNKNOWN8
+    194: UNKNOWN9
+    206: UNKNOWN10
+    213: UNKNOWN11
+    240: UNKNOWN12
+    252: UNKNOWN13
   Size: 397
   Type: assembly
   Offset: 0xC200D9
 UNKNOWN_C20266:
-  labels:
-    0x0280: UNKNOWN0
-    0x028C: UNKNOWN1
+  Labels:
+    26: UNKNOWN0
+    38: UNKNOWN1
   Size: 45
   Type: assembly
   Offset: 0xC20266
 UNKNOWN_C20293:
-  labels:
-    0x029D: UNKNOWN0
-    0x02A6: UNKNOWN1
+  Labels:
+    10: UNKNOWN0
+    19: UNKNOWN1
   Final State:
     8 Bit Accum: false
     8 Bit Index: false
@@ -13617,12 +13617,12 @@ UNKNOWN_C20293:
   Type: assembly
   Offset: 0xC20293
 UNKNOWN_C202AC:
-  labels:
-    0x02DE: UNKNOWN0
-    0x02F3: UNKNOWN1
-    0x02FA: UNKNOWN2
-    0x030E: UNKNOWN3
-    0x0329: UNKNOWN4
+  Labels:
+    50: UNKNOWN0
+    71: UNKNOWN1
+    78: UNKNOWN2
+    98: UNKNOWN3
+    125: UNKNOWN4
   Size: 127
   Type: assembly
   Offset: 0xC202AC
@@ -13631,10 +13631,10 @@ READ_NAME:
   Arguments:
     X: Length of name
     $06: Address
-  labels:
-    0x0356: UNKNOWN0
-    0x0362: UNKNOWN1
-    0x037B: UNKNOWN2
+  Labels:
+    43: UNKNOWN0
+    55: UNKNOWN1
+    80: UNKNOWN2
   Size: 96
   Type: assembly
   Offset: 0xC2032B
@@ -13643,35 +13643,35 @@ UNKNOWN_C2038B:
   Type: assembly
   Offset: 0xC2038B
 UNKNOWN_C203C3:
-  labels:
-    0x042D: UNKNOWN0
-    0x0445: UNKNOWN1
-    0x0453: UNKNOWN2
-    0x0458: UNKNOWN3
-    0x04A8: UNKNOWN4
-    0x04B4: UNKNOWN5
-    0x0515: UNKNOWN6
-    0x0533: UNKNOWN7
-    0x0541: UNKNOWN8
-    0x0542: UNKNOWN9
-    0x05B9: UNKNOWN10
-    0x05D3: UNKNOWN11
-    0x05DF: UNKNOWN12
-    0x05E0: UNKNOWN13
-    0x063D: UNKNOWN14
-    0x0655: UNKNOWN15
-    0x0671: UNKNOWN16
-    0x067A: UNKNOWN17
-    0x0690: UNKNOWN18
-    0x06AC: UNKNOWN19
-    0x06DD: UNKNOWN20
-    0x06F5: UNKNOWN21
-    0x0711: UNKNOWN22
-    0x071A: UNKNOWN23
-    0x0730: UNKNOWN24
-    0x074C: UNKNOWN25
-    0x0764: UNKNOWN26
-    0x0770: UNKNOWN27
+  Labels:
+    106: UNKNOWN0
+    130: UNKNOWN1
+    144: UNKNOWN2
+    149: UNKNOWN3
+    229: UNKNOWN4
+    241: UNKNOWN5
+    338: UNKNOWN6
+    368: UNKNOWN7
+    382: UNKNOWN8
+    383: UNKNOWN9
+    502: UNKNOWN10
+    528: UNKNOWN11
+    540: UNKNOWN12
+    541: UNKNOWN13
+    634: UNKNOWN14
+    658: UNKNOWN15
+    686: UNKNOWN16
+    695: UNKNOWN17
+    717: UNKNOWN18
+    745: UNKNOWN19
+    794: UNKNOWN20
+    818: UNKNOWN21
+    846: UNKNOWN22
+    855: UNKNOWN23
+    877: UNKNOWN24
+    905: UNKNOWN25
+    929: UNKNOWN26
+    941: UNKNOWN27
   Locals:
     0x0016: TILEARRPTR
     0x0024: NAMEOFFSET
@@ -13679,10 +13679,10 @@ UNKNOWN_C203C3:
   Type: assembly
   Offset: 0xC203C3
 UNKNOWN_C2077D:
-  labels:
-    0x0791: UNKNOWN0
-    0x079B: UNKNOWN1
-    0x07A7: UNKNOWN2
+  Labels:
+    20: UNKNOWN0
+    30: UNKNOWN1
+    42: UNKNOWN2
   Size: 57
   Type: assembly
   Offset: 0xC2077D
@@ -13691,28 +13691,28 @@ UNKNOWN_C207B6:
   Type: assembly
   Offset: 0xC207B6
 UNKNOWN_C207E1:
-  labels:
-    0x0814: UNKNOWN0
-    0x0819: UNKNOWN1
-    0x0862: UNKNOWN2
-    0x086F: UNKNOWN3
-    0x0878: UNKNOWN4
+  Labels:
+    51: UNKNOWN0
+    56: UNKNOWN1
+    129: UNKNOWN2
+    142: UNKNOWN3
+    151: UNKNOWN4
   Size: 155
   Type: assembly
   Offset: 0xC207E1
 UNKNOWN_C2087C:
-  labels:
-    0x088F: UNKNOWN0
-    0x089C: UNKNOWN1
-    0x08B6: UNKNOWN2
+  Labels:
+    19: UNKNOWN0
+    32: UNKNOWN1
+    58: UNKNOWN2
   Size: 60
   Type: assembly
   Offset: 0xC2087C
 UNKNOWN_C208B8:
-  labels:
-    0x0908: UNKNOWN0
-    0x090D: UNKNOWN1
-    0x0910: UNKNOWN2
+  Labels:
+    80: UNKNOWN0
+    85: UNKNOWN1
+    88: UNKNOWN2
   Size: 90
   Type: assembly
   Offset: 0xC208B8
@@ -13727,62 +13727,62 @@ THETHE:
   Description: The/the
   Offset: 0xC20998
 UNKNOWN_C209A0:
-  labels:
-    0x09D5: UNKNOWN0
-    0x09E0: UNKNOWN1
-    0x09F1: UNKNOWN2
-    0x0A0B: UNKNOWN3
-    0x0A1E: UNKNOWN4
+  Labels:
+    53: UNKNOWN0
+    64: UNKNOWN1
+    81: UNKNOWN2
+    107: UNKNOWN3
+    126: UNKNOWN4
   Size: 128
   Type: assembly
   Offset: 0xC209A0
 UNKNOWN_C20A20:
-  labels:
-    0x0A3E: UNKNOWN0
-    0x0ABA: UNKNOWN1
+  Labels:
+    30: UNKNOWN0
+    154: UNKNOWN1
   Size: 156
   Type: assembly
   Offset: 0xC20A20
 UNKNOWN_C20ABC:
-  labels:
-    0x0AD6: UNKNOWN0
-    0x0AE7: UNKNOWN1
-    0x0B63: UNKNOWN2
+  Labels:
+    26: UNKNOWN0
+    43: UNKNOWN1
+    167: UNKNOWN2
   Size: 169
   Type: assembly
   Offset: 0xC20ABC
 UNKNOWN_C20B65:
-  labels:
-    0x0BA3: UNKNOWN0
-    0x0BAC: UNKNOWN1
-    0x0BBD: UNKNOWN2
-    0x0BC6: UNKNOWN3
-    0x0BDF: UNKNOWN4
-    0x0BE8: UNKNOWN5
-    0x0BF9: UNKNOWN6
-    0x0BFE: UNKNOWN7
-    0x0C16: UNKNOWN8
-    0x0C31: UNKNOWN9
-    0x0C37: UNKNOWN10
-    0x0C48: UNKNOWN11
-    0x0C4A: UNKNOWN12
-    0x0C5E: UNKNOWN13
-    0x0C70: UNKNOWN14
-    0x0C79: UNKNOWN15
-    0x0C8A: UNKNOWN16
-    0x0C91: UNKNOWN17
-    0x0CA3: UNKNOWN18
-    0x0CAA: UNKNOWN19
-    0x0CBB: UNKNOWN20
-    0x0CD5: UNKNOWN21
-    0x0CE9: UNKNOWN22
-    0x0CEF: UNKNOWN23
-    0x0D00: UNKNOWN24
-    0x0D18: UNKNOWN25
-    0x0D21: UNKNOWN26
-    0x0D26: UNKNOWN27
-    0x0D33: UNKNOWN28
-    0x0D3D: UNKNOWN29
+  Labels:
+    62: UNKNOWN0
+    71: UNKNOWN1
+    88: UNKNOWN2
+    97: UNKNOWN3
+    122: UNKNOWN4
+    131: UNKNOWN5
+    148: UNKNOWN6
+    153: UNKNOWN7
+    177: UNKNOWN8
+    204: UNKNOWN9
+    210: UNKNOWN10
+    227: UNKNOWN11
+    229: UNKNOWN12
+    249: UNKNOWN13
+    267: UNKNOWN14
+    276: UNKNOWN15
+    293: UNKNOWN16
+    300: UNKNOWN17
+    318: UNKNOWN18
+    325: UNKNOWN19
+    342: UNKNOWN20
+    368: UNKNOWN21
+    388: UNKNOWN22
+    394: UNKNOWN23
+    411: UNKNOWN24
+    435: UNKNOWN25
+    444: UNKNOWN26
+    449: UNKNOWN27
+    462: UNKNOWN28
+    472: UNKNOWN29
   Size: 474
   Type: assembly
   Offset: 0xC20B65
@@ -13791,24 +13791,24 @@ UNKNOWN_C20D3F:
   Type: assembly
   Offset: 0xC20D3F
 UNKNOWN_C20D89:
-  labels:
-    0x0DA7: UNKNOWN0
-    0x0DBE: UNKNOWN1
+  Labels:
+    30: UNKNOWN0
+    53: UNKNOWN1
   Size: 60
   Type: assembly
   Offset: 0xC20D89
 UNKNOWN_C20DC5:
-  labels:
-    0x0DDE: UNKNOWN0
-    0x0DE5: UNKNOWN1
-    0x0E6C: UNKNOWN2
-    0x0E6F: UNKNOWN3
-    0x0E7B: UNKNOWN4
-    0x0E7E: UNKNOWN5
-    0x0EBC: UNKNOWN6
-    0x0EBF: UNKNOWN7
-    0x0ECB: UNKNOWN8
-    0x0ECE: UNKNOWN9
+  Labels:
+    25: UNKNOWN0
+    32: UNKNOWN1
+    167: UNKNOWN2
+    170: UNKNOWN3
+    182: UNKNOWN4
+    185: UNKNOWN5
+    247: UNKNOWN6
+    250: UNKNOWN7
+    262: UNKNOWN8
+    265: UNKNOWN9
   Size: 323
   Type: assembly
   Offset: 0xC20DC5
@@ -13817,104 +13817,104 @@ UNKNOWN_C20F08:
   Type: assembly
   Offset: 0xC20F08
 UNKNOWN_C20F26:
-  labels:
-    0x0F47: UNKNOWN0
-    0x0F56: UNKNOWN1
+  Labels:
+    33: UNKNOWN0
+    48: UNKNOWN1
   Size: 50
   Type: assembly
   Offset: 0xC20F26
 UNKNOWN_C20F58:
-  labels:
-    0x0F84: UNKNOWN0
-    0x0F96: UNKNOWN1
+  Labels:
+    44: UNKNOWN0
+    62: UNKNOWN1
   Size: 66
   Type: assembly
   Offset: 0xC20F58
 UNKNOWN_C20F9A:
-  labels:
-    0x0FA9: UNKNOWN0
-    0x0FD4: UNKNOWN1
-    0x0FF4: UNKNOWN2
-    0x1014: UNKNOWN3
-    0x1016: UNKNOWN4
-    0x1029: UNKNOWN5
+  Labels:
+    15: UNKNOWN0
+    58: UNKNOWN1
+    90: UNKNOWN2
+    122: UNKNOWN3
+    124: UNKNOWN4
+    143: UNKNOWN5
   Size: 154
   Type: assembly
   Offset: 0xC20F9A
 UNKNOWN_C21034:
-  labels:
-    0x1043: UNKNOWN0
-    0x108A: UNKNOWN1
+  Labels:
+    15: UNKNOWN0
+    86: UNKNOWN1
   Size: 88
   Type: assembly
   Offset: 0xC21034
 UNKNOWN_C2108C:
-  labels:
-    0x109C: UNKNOWN0
+  Labels:
+    16: UNKNOWN0
   Size: 19
   Type: assembly
   Offset: 0xC2108C
 HP_PP_ROLLER:
   Description: HP/PP Rolling
-  labels:
-    0x10B2: UNKNOWN0
-    0x10C7: UNKNOWN1
-    0x10DC: UNKNOWN2
-    0x1105: UNKNOWN3
-    0x112D: UNKNOWN4
-    0x1139: UNKNOWN5
-    0x113C: UNKNOWN6
-    0x117A: UNKNOWN7
-    0x118B: UNKNOWN8
-    0x11A8: UNKNOWN9
-    0x11C3: UNKNOWN10
-    0x11C6: UNKNOWN11
-    0x1203: UNKNOWN12
-    0x1216: UNKNOWN13
-    0x122B: UNKNOWN14
-    0x1244: UNKNOWN15
-    0x126E: UNKNOWN16
-    0x1278: UNKNOWN17
-    0x12B4: UNKNOWN18
-    0x12C5: UNKNOWN19
-    0x12E2: UNKNOWN20
-    0x12FB: UNKNOWN21
-    0x1305: UNKNOWN22
-    0x1340: UNKNOWN23
-    0x1353: UNKNOWN24
-    0x1368: UNKNOWN25
-    0x1381: UNKNOWN26
-    0x138D: UNKNOWN27
-    0x139E: UNKNOWN28
-    0x13AA: UNKNOWN29
+  Labels:
+    19: UNKNOWN0
+    40: UNKNOWN1
+    61: UNKNOWN2
+    102: UNKNOWN3
+    142: UNKNOWN4
+    154: UNKNOWN5
+    157: UNKNOWN6
+    219: UNKNOWN7
+    236: UNKNOWN8
+    265: UNKNOWN9
+    292: UNKNOWN10
+    295: UNKNOWN11
+    356: UNKNOWN12
+    375: UNKNOWN13
+    396: UNKNOWN14
+    421: UNKNOWN15
+    463: UNKNOWN16
+    473: UNKNOWN17
+    533: UNKNOWN18
+    550: UNKNOWN19
+    579: UNKNOWN20
+    604: UNKNOWN21
+    614: UNKNOWN22
+    673: UNKNOWN23
+    692: UNKNOWN24
+    713: UNKNOWN25
+    738: UNKNOWN26
+    750: UNKNOWN27
+    767: UNKNOWN28
+    779: UNKNOWN29
   Size: 781
   Type: assembly
   Offset: 0xC2109F
 UNKNOWN_C213AC:
-  labels:
-    0x13BF: UNKNOWN0
-    0x13D7: UNKNOWN1
-    0x13E5: UNKNOWN2
-    0x13EA: UNKNOWN3
-    0x13FD: UNKNOWN4
-    0x1409: UNKNOWN5
-    0x140C: UNKNOWN6
-    0x1484: UNKNOWN7
-    0x14E3: UNKNOWN8
-    0x14EC: UNKNOWN9
-    0x1505: UNKNOWN10
-    0x151B: UNKNOWN11
-    0x152F: UNKNOWN12
-    0x153E: UNKNOWN13
-    0x1548: UNKNOWN14
-    0x1557: UNKNOWN15
-    0x15BE: UNKNOWN16
-    0x15C9: UNKNOWN17
-    0x15E7: UNKNOWN18
-    0x15FC: UNKNOWN19
-    0x1612: UNKNOWN20
-    0x1617: UNKNOWN21
-    0x1624: UNKNOWN22
+  Labels:
+    19: UNKNOWN0
+    43: UNKNOWN1
+    57: UNKNOWN2
+    62: UNKNOWN3
+    81: UNKNOWN4
+    93: UNKNOWN5
+    96: UNKNOWN6
+    216: UNKNOWN7
+    311: UNKNOWN8
+    320: UNKNOWN9
+    345: UNKNOWN10
+    367: UNKNOWN11
+    387: UNKNOWN12
+    402: UNKNOWN13
+    412: UNKNOWN14
+    427: UNKNOWN15
+    530: UNKNOWN16
+    541: UNKNOWN17
+    571: UNKNOWN18
+    592: UNKNOWN19
+    614: UNKNOWN20
+    619: UNKNOWN21
+    632: UNKNOWN22
   Size: 636
   Type: assembly
   Offset: 0xC213AC
@@ -13949,89 +13949,88 @@ UNKNOWN_C216D0:
   Type: assembly
   Offset: 0xC216D0
 UNKNOWN_C216DB:
-  labels:
-    0x169B: UNKNOWN0
-    0x16EC: UNKNOWN1
-    0x1712: UNKNOWN2
-    0x1791: UNKNOWN3
-    0x1793: UNKNOWN4
-    0x179B: UNKNOWN5
-    0x179F: UNKNOWN6
-    0x17B4: UNKNOWN7
-    0x17B6: UNKNOWN8
-    0x17D2: UNKNOWN9
-    0x17D6: UNKNOWN10
-    0x17E2: UNKNOWN11
-    0x1847: UNKNOWN12
-    0x1855: UNKNOWN13
+  Labels:
+    17: UNKNOWN0
+    55: UNKNOWN1
+    182: UNKNOWN2
+    184: UNKNOWN3
+    192: UNKNOWN4
+    196: UNKNOWN5
+    217: UNKNOWN6
+    219: UNKNOWN7
+    247: UNKNOWN8
+    251: UNKNOWN9
+    263: UNKNOWN10
+    364: UNKNOWN11
+    378: UNKNOWN12
   Size: 380
   Type: assembly
   Offset: 0xC216DB
 RECALC_CHARACTER_POSTMATH_OFFENSE:
   Description: Recalculate one character's postmath Offense
-  labels:
-    0x1895: UNKNOWN0
-    0x18E1: UNKNOWN1
-    0x18EF: UNKNOWN2
-    0x18F1: UNKNOWN3
-    0x18F6: UNKNOWN4
-    0x1901: UNKNOWN5
-    0x1903: UNKNOWN6
-    0x1908: UNKNOWN7
-    0x190F: UNKNOWN8
+  Labels:
+    62: UNKNOWN0
+    138: UNKNOWN1
+    152: UNKNOWN2
+    154: UNKNOWN3
+    159: UNKNOWN4
+    170: UNKNOWN5
+    172: UNKNOWN6
+    177: UNKNOWN7
+    184: UNKNOWN8
   Size: 212
   Type: assembly
   Offset: 0xC21857
 RECALC_CHARACTER_POSTMATH_DEFENSE:
   Description: Recalculate one character's postmath Defense
-  labels:
-    0x1968: UNKNOWN0
-    0x19B7: UNKNOWN1
-    0x19DD: UNKNOWN2
-    0x1A2C: UNKNOWN3
-    0x1A52: UNKNOWN4
-    0x1AA1: UNKNOWN5
-    0x1AB1: UNKNOWN6
-    0x1AB3: UNKNOWN7
-    0x1AB8: UNKNOWN8
-    0x1AC3: UNKNOWN9
-    0x1AC5: UNKNOWN10
-    0x1ACA: UNKNOWN11
-    0x1AD0: UNKNOWN12
+  Labels:
+    61: UNKNOWN0
+    140: UNKNOWN1
+    178: UNKNOWN2
+    257: UNKNOWN3
+    295: UNKNOWN4
+    374: UNKNOWN5
+    390: UNKNOWN6
+    392: UNKNOWN7
+    397: UNKNOWN8
+    408: UNKNOWN9
+    410: UNKNOWN10
+    415: UNKNOWN11
+    421: UNKNOWN12
   Size: 448
   Type: assembly
   Offset: 0xC2192B
 RECALC_CHARACTER_POSTMATH_SPEED:
   Description: Recalculate one character's postmath Speed
-  labels:
-    0x1B51: UNKNOWN0
-    0x1B7B: UNKNOWN1
-    0x1B7D: UNKNOWN2
-    0x1B82: UNKNOWN3
-    0x1B8A: UNKNOWN4
+  Labels:
+    102: UNKNOWN0
+    144: UNKNOWN1
+    146: UNKNOWN2
+    151: UNKNOWN3
+    159: UNKNOWN4
   Size: 185
   Type: assembly
   Offset: 0xC21AEB
 RECALC_CHARACTER_POSTMATH_GUTS:
   Description: Recalculate one character's postmath Guts
-  labels:
-    0x1C0A: UNKNOWN0
-    0x1C34: UNKNOWN1
-    0x1C36: UNKNOWN2
-    0x1C3B: UNKNOWN3
-    0x1C43: UNKNOWN4
+  Labels:
+    102: UNKNOWN0
+    144: UNKNOWN1
+    146: UNKNOWN2
+    151: UNKNOWN3
+    159: UNKNOWN4
   Size: 185
   Type: assembly
   Offset: 0xC21BA4
 RECALC_CHARACTER_POSTMATH_LUCK:
   Description: Recalculate one character's postmath Luck
-  labels:
-    0x1CC3: UNKNOWN0
-    0x1D12: UNKNOWN1
-    0x1D3C: UNKNOWN2
-    0x1D3E: UNKNOWN3
-    0x1D43: UNKNOWN4
-    0x1D4B: UNKNOWN5
+  Labels:
+    102: UNKNOWN0
+    181: UNKNOWN1
+    223: UNKNOWN2
+    225: UNKNOWN3
+    230: UNKNOWN4
+    238: UNKNOWN5
   Size: 264
   Type: assembly
   Offset: 0xC21C5D
@@ -14047,117 +14046,117 @@ RECALC_CHARACTER_POSTMATH_IQ:
   Offset: 0xC21D7D
 RECALC_CHARACTER_MISS_RATE:
   Description: Recalculate one character's miss rate
-  labels:
-    0x1DE6: UNKNOWN0
-    0x1DE9: UNKNOWN1
+  Labels:
+    81: UNKNOWN0
+    84: UNKNOWN1
   Size: 110
   Type: assembly
   Offset: 0xC21D95
 CALC_RESISTANCES:
   Description: Calculates character's resistances
-  labels:
-    0x1E5C: UNKNOWN0
-    0x1E5F: UNKNOWN1
-    0x1EB6: UNKNOWN2
-    0x1EC2: UNKNOWN3
-    0x1EC4: UNKNOWN4
-    0x1ECB: UNKNOWN5
-    0x1ED0: UNKNOWN6
-    0x1F38: UNKNOWN7
-    0x1F3B: UNKNOWN8
-    0x1FA2: UNKNOWN9
-    0x1FAE: UNKNOWN10
-    0x1FB0: UNKNOWN11
-    0x1FB9: UNKNOWN12
-    0x1FC0: UNKNOWN13
-    0x2028: UNKNOWN14
-    0x202B: UNKNOWN15
-    0x2092: UNKNOWN16
-    0x209E: UNKNOWN17
-    0x20A0: UNKNOWN18
-    0x20A9: UNKNOWN19
-    0x20B0: UNKNOWN20
-    0x2118: UNKNOWN21
-    0x211B: UNKNOWN22
-    0x2182: UNKNOWN23
-    0x218E: UNKNOWN24
-    0x2190: UNKNOWN25
-    0x2199: UNKNOWN26
-    0x21A0: UNKNOWN27
-    0x21F9: UNKNOWN28
-    0x21FE: UNKNOWN29
+  Labels:
+    89: UNKNOWN0
+    92: UNKNOWN1
+    179: UNKNOWN2
+    191: UNKNOWN3
+    193: UNKNOWN4
+    200: UNKNOWN5
+    205: UNKNOWN6
+    309: UNKNOWN7
+    312: UNKNOWN8
+    415: UNKNOWN9
+    427: UNKNOWN10
+    429: UNKNOWN11
+    438: UNKNOWN12
+    445: UNKNOWN13
+    549: UNKNOWN14
+    552: UNKNOWN15
+    655: UNKNOWN16
+    667: UNKNOWN17
+    669: UNKNOWN18
+    678: UNKNOWN19
+    685: UNKNOWN20
+    789: UNKNOWN21
+    792: UNKNOWN22
+    895: UNKNOWN23
+    907: UNKNOWN24
+    909: UNKNOWN25
+    918: UNKNOWN26
+    925: UNKNOWN27
+    1014: UNKNOWN28
+    1019: UNKNOWN29
   Size: 1041
   Type: assembly
   Offset: 0xC21E03
 INCREASE_WALLET_BALANCE:
   Description: Increase wallet balance
-  labels:
-    0x2254: UNKNOWN0
-    0x2256: UNKNOWN1
-    0x225E: UNKNOWN2
+  Labels:
+    64: UNKNOWN0
+    66: UNKNOWN1
+    74: UNKNOWN2
   Size: 94
   Type: assembly
   Offset: 0xC22214
 DECREASE_WALLET_BALANCE:
   Description: Decrease wallet balance
-  labels:
-    0x22BD: UNKNOWN0
-    0x22BF: UNKNOWN1
-    0x22C4: UNKNOWN2
-    0x22D1: UNKNOWN3
+  Labels:
+    75: UNKNOWN0
+    77: UNKNOWN1
+    82: UNKNOWN2
+    95: UNKNOWN3
   Size: 97
   Type: assembly
   Offset: 0xC22272
 UNKNOWN_C222D3:
-  labels:
-    0x2304: UNKNOWN0
-    0x232F: UNKNOWN1
-    0x234F: UNKNOWN2
+  Labels:
+    49: UNKNOWN0
+    92: UNKNOWN1
+    124: UNKNOWN2
   Size: 126
   Type: assembly
   Offset: 0xC222D3
 UNKNOWN_C22351:
-  labels:
-    0x2366: UNKNOWN0
-    0x236B: UNKNOWN1
-    0x2379: UNKNOWN2
-    0x237B: UNKNOWN3
-    0x2399: UNKNOWN4
+  Labels:
+    21: UNKNOWN0
+    26: UNKNOWN1
+    40: UNKNOWN2
+    42: UNKNOWN3
+    72: UNKNOWN4
   Size: 76
   Type: assembly
   Offset: 0xC22351
 UNKNOWN_C2239D:
-  labels:
-    0x23AE: UNKNOWN0
-    0x23C0: UNKNOWN1
-    0x23C1: UNKNOWN2
-    0x23D2: UNKNOWN3
-    0x23D4: UNKNOWN4
-    0x23D7: UNKNOWN5
+  Labels:
+    17: UNKNOWN0
+    35: UNKNOWN1
+    36: UNKNOWN2
+    53: UNKNOWN3
+    55: UNKNOWN4
+    58: UNKNOWN5
   Size: 60
   Type: assembly
   Offset: 0xC2239D
 UNKNOWN_C223D9:
-  labels:
-    0x23F5: UNKNOWN0
-    0x2409: UNKNOWN1
-    0x2411: UNKNOWN2
-    0x241F: UNKNOWN3
-    0x242D: UNKNOWN4
-    0x2432: UNKNOWN5
-    0x2455: UNKNOWN6
-    0x2472: UNKNOWN7
+  Labels:
+    28: UNKNOWN0
+    48: UNKNOWN1
+    56: UNKNOWN2
+    70: UNKNOWN3
+    84: UNKNOWN4
+    89: UNKNOWN5
+    124: UNKNOWN6
+    153: UNKNOWN7
   Size: 155
   Type: assembly
   Offset: 0xC223D9
 UNKNOWN_C22474:
-  labels:
-    0x248E: UNKNOWN0
-    0x24A2: UNKNOWN1
-    0x24AA: UNKNOWN2
-    0x24B8: UNKNOWN3
-    0x24C2: UNKNOWN4
-    0x24DF: UNKNOWN5
+  Labels:
+    26: UNKNOWN0
+    46: UNKNOWN1
+    54: UNKNOWN2
+    68: UNKNOWN3
+    78: UNKNOWN4
+    107: UNKNOWN5
   Size: 109
   Type: assembly
   Offset: 0xC22474
@@ -14165,50 +14164,50 @@ GET_ITEM_SUBTYPE:
   Description: Returns item subtype
   Arguments:
     A: Item Number
-  labels:
-    0x250C: UNKNOWN0
-    0x2511: UNKNOWN1
-    0x2516: UNKNOWN2
-    0x251B: UNKNOWN3
-    0x2520: UNKNOWN4
-    0x2523: UNKNOWN5
+  Labels:
+    43: UNKNOWN0
+    48: UNKNOWN1
+    53: UNKNOWN2
+    58: UNKNOWN3
+    63: UNKNOWN4
+    66: UNKNOWN5
   Size: 67
   Type: assembly
   Offset: 0xC224E1
 GET_ITEM_SUBTYPE_2:
   Description: Returns item subtype (2)
-  labels:
-    0x254F: UNKNOWN0
-    0x2554: UNKNOWN1
-    0x2559: UNKNOWN2
-    0x255E: UNKNOWN3
-    0x2561: UNKNOWN4
+  Labels:
+    43: UNKNOWN0
+    48: UNKNOWN1
+    53: UNKNOWN2
+    58: UNKNOWN3
+    61: UNKNOWN4
   Size: 62
   Type: assembly
   Offset: 0xC22524
 UNKNOWN_C22562:
-  labels:
-    0x2575: UNKNOWN0
+  Labels:
+    19: UNKNOWN0
   Size: 74
   Type: assembly
   Offset: 0xC22562
 UNKNOWN_C225AC:
-  labels:
-    0x25DA: UNKNOWN0
+  Labels:
+    46: UNKNOWN0
   Size: 97
   Type: assembly
   Offset: 0xC225AC
 UNKNOWN_C2260D:
-  labels:
-    0x2644: UNKNOWN0
-    0x2645: UNKNOWN1
+  Labels:
+    55: UNKNOWN0
+    56: UNKNOWN1
   Size: 102
   Type: assembly
   Offset: 0xC2260D
 UNKNOWN_C22673:
-  labels:
-    0x26B0: UNKNOWN0
-    0x26B1: UNKNOWN1
+  Labels:
+    61: UNKNOWN0
+    62: UNKNOWN1
   Size: 82
   Type: assembly
   Offset: 0xC22673
@@ -14221,27 +14220,27 @@ UNKNOWN_C226E6:
   Type: assembly
   Offset: 0xC226E6
 UNKNOWN_C226F0:
-  labels:
-    0x26FF: UNKNOWN0
-    0x2702: UNKNOWN1
-    0x272B: UNKNOWN2
+  Labels:
+    15: UNKNOWN0
+    18: UNKNOWN1
+    59: UNKNOWN2
   Size: 63
   Type: assembly
   Offset: 0xC226F0
 UNKNOWN_C2272F:
-  labels:
-    0x2741: UNKNOWN0
-    0x2766: UNKNOWN1
-    0x276B: UNKNOWN2
+  Labels:
+    18: UNKNOWN0
+    55: UNKNOWN1
+    60: UNKNOWN2
   Size: 77
   Type: assembly
   Offset: 0xC2272F
 UNKNOWN_C2277C:
-  labels:
-    0x278B: UNKNOWN0
-    0x27B1: UNKNOWN1
-    0x27B6: UNKNOWN2
-    0x27C6: UNKNOWN3
+  Labels:
+    15: UNKNOWN0
+    53: UNKNOWN1
+    58: UNKNOWN2
+    74: UNKNOWN3
   Size: 76
   Type: assembly
   Offset: 0xC2277C
@@ -14257,10 +14256,10 @@ LEARN_SPECIAL_PSI:
   Offset: 0xC227C8
 DEPOSIT_INTO_ATM:
   Description: Deposit money into ATM?
-  labels:
-    0x286D: UNKNOWN0
-    0x286F: UNKNOWN1
-    0x2877: UNKNOWN2
+  Labels:
+    80: UNKNOWN0
+    82: UNKNOWN1
+    90: UNKNOWN2
   Size: 154
   Type: assembly
   Offset: 0xC2281D
@@ -14273,40 +14272,40 @@ WITHDRAW_FROM_ATM:
   Offset: 0xC228B7
 ADD_CHAR_TO_PARTY:
   Description: Add character to the party
-  labels:
-    0x290E: UNKNOWN0
-    0x2925: UNKNOWN1
-    0x292B: UNKNOWN2
-    0x2932: UNKNOWN3
-    0x2936: UNKNOWN4
-    0x2944: UNKNOWN5
-    0x2946: UNKNOWN6
-    0x2947: UNKNOWN7
-    0x2951: UNKNOWN8
-    0x295C: UNKNOWN9
-    0x296C: UNKNOWN10
-    0x296E: UNKNOWN11
-    0x2997: UNKNOWN12
-    0x29A1: UNKNOWN13
-    0x29A7: UNKNOWN14
-    0x29B4: UNKNOWN15
-    0x29B9: UNKNOWN16
+  Labels:
+    22: UNKNOWN0
+    45: UNKNOWN1
+    51: UNKNOWN2
+    58: UNKNOWN3
+    62: UNKNOWN4
+    76: UNKNOWN5
+    78: UNKNOWN6
+    79: UNKNOWN7
+    89: UNKNOWN8
+    100: UNKNOWN9
+    116: UNKNOWN10
+    118: UNKNOWN11
+    159: UNKNOWN12
+    169: UNKNOWN13
+    175: UNKNOWN14
+    188: UNKNOWN15
+    193: UNKNOWN16
   Size: 195
   Type: assembly
   Offset: 0xC228F8
 REMOVE_CHAR_FROM_PARTY:
   Description: Remove character from party
-  labels:
-    0x29CD: UNKNOWN0
-    0x29DB: UNKNOWN1
-    0x29E4: UNKNOWN2
-    0x29F4: UNKNOWN3
-    0x29F6: UNKNOWN4
-    0x2A0C: UNKNOWN5
-    0x2A16: UNKNOWN6
-    0x2A17: UNKNOWN7
-    0x2A28: UNKNOWN8
-    0x2A2A: UNKNOWN9
+  Labels:
+    18: UNKNOWN0
+    32: UNKNOWN1
+    41: UNKNOWN2
+    57: UNKNOWN3
+    59: UNKNOWN4
+    81: UNKNOWN5
+    91: UNKNOWN6
+    92: UNKNOWN7
+    109: UNKNOWN8
+    111: UNKNOWN9
   Size: 113
   Type: assembly
   Offset: 0xC229BB
@@ -14316,59 +14315,59 @@ SAVE_CURRENT_GAME:
   Offset: 0xC22A2C
   Description: Saves the game to the currently selected save slot
 UNKNOWN_C22A3A:
-  labels:
-    0x2A73: UNKNOWN0
-    0x2A84: UNKNOWN1
-    0x2AAA: UNKNOWN2
-    0x2AE9: UNKNOWN3
-    0x2B07: UNKNOWN4
-    0x2B39: UNKNOWN5
-    0x2B66: UNKNOWN6
-    0x2B8E: UNKNOWN7
-    0x2B99: UNKNOWN8
-    0x2BB2: UNKNOWN9
-    0x2BDA: UNKNOWN10
-    0x2C07: UNKNOWN11
-    0x2C2F: UNKNOWN12
-    0x2C3A: UNKNOWN13
-    0x2C53: UNKNOWN14
-    0x2C7B: UNKNOWN15
-    0x2CA8: UNKNOWN16
-    0x2CD0: UNKNOWN17
-    0x2CDB: UNKNOWN18
-    0x2CF4: UNKNOWN19
-    0x2D1C: UNKNOWN20
-    0x2D49: UNKNOWN21
-    0x2D71: UNKNOWN22
-    0x2D7C: UNKNOWN23
-    0x2D87: UNKNOWN24
-    0x2DB4: UNKNOWN25
-    0x2DE1: UNKNOWN26
-    0x2E09: UNKNOWN27
-    0x2E14: UNKNOWN28
-    0x2E30: UNKNOWN29
-    0x2E4C: UNKNOWN30
-    0x2E68: UNKNOWN31
-    0x2E82: UNKNOWN32
-    0x2EAD: UNKNOWN33
-    0x2EDA: UNKNOWN34
-    0x2F07: UNKNOWN35
-    0x2F34: UNKNOWN36
+  Labels:
+    57: UNKNOWN0
+    74: UNKNOWN1
+    112: UNKNOWN2
+    175: UNKNOWN3
+    205: UNKNOWN4
+    255: UNKNOWN5
+    300: UNKNOWN6
+    340: UNKNOWN7
+    351: UNKNOWN8
+    376: UNKNOWN9
+    416: UNKNOWN10
+    461: UNKNOWN11
+    501: UNKNOWN12
+    512: UNKNOWN13
+    537: UNKNOWN14
+    577: UNKNOWN15
+    622: UNKNOWN16
+    662: UNKNOWN17
+    673: UNKNOWN18
+    698: UNKNOWN19
+    738: UNKNOWN20
+    783: UNKNOWN21
+    823: UNKNOWN22
+    834: UNKNOWN23
+    845: UNKNOWN24
+    890: UNKNOWN25
+    935: UNKNOWN26
+    975: UNKNOWN27
+    986: UNKNOWN28
+    1014: UNKNOWN29
+    1042: UNKNOWN30
+    1070: UNKNOWN31
+    1096: UNKNOWN32
+    1139: UNKNOWN33
+    1184: UNKNOWN34
+    1229: UNKNOWN35
+    1274: UNKNOWN36
   Size: 1278
   Type: assembly
   Offset: 0xC22A3A
 UNKNOWN_C22F38:
-  labels:
-    0x2F6C: UNKNOWN0
-    0x2F7C: UNKNOWN1
-    0x2F8F: UNKNOWN2
-    0x2FAF: UNKNOWN3
-    0x2FB7: UNKNOWN4
-    0x2FD6: UNKNOWN5
-    0x2FE4: UNKNOWN6
-    0x2FF1: UNKNOWN7
-    0x3003: UNKNOWN8
-    0x3006: UNKNOWN9
+  Labels:
+    52: UNKNOWN0
+    68: UNKNOWN1
+    87: UNKNOWN2
+    119: UNKNOWN3
+    127: UNKNOWN4
+    158: UNKNOWN5
+    172: UNKNOWN6
+    185: UNKNOWN7
+    203: UNKNOWN8
+    206: UNKNOWN9
   Size: 208
   Type: assembly
   Offset: 0xC22F38
@@ -14377,8 +14376,8 @@ UNKNOWN_C23008:
   Type: assembly
   Offset: 0xC23008
 UNKNOWN_C2307B:
-  labels:
-    0x30DD: UNKNOWN0
+  Labels:
+    98: UNKNOWN0
   Size: 120
   Type: assembly
   Offset: 0xC2307B
@@ -14523,73 +14522,73 @@ BATTLE_SELECTION_MENU:
   Offset: 0xC2311B
 COPY_ENEMY_NAME:
   Description: Copy enemy name
-  labels:
-    0x3B7D: UNKNOWN0
-    0x3B8F: UNKNOWN1
-    0x3BA6: UNKNOWN2
-    0x3BAD: UNKNOWN3
-    0x3BB3: UNKNOWN4
-    0x3BB7: UNKNOWN5
-    0x3BC3: UNKNOWN6
+  Labels:
+    23: UNKNOWN0
+    41: UNKNOWN1
+    64: UNKNOWN2
+    71: UNKNOWN3
+    77: UNKNOWN4
+    81: UNKNOWN5
+    93: UNKNOWN6
   Size: 105
   Type: assembly
   Offset: 0xC23B66
 FIX_ATTACKER_NAME:
   Description: Apply attacker name adjustments
-  labels:
-    0x3C0B: UNKNOWN0
-    0x3C6E: UNKNOWN1
-    0x3C8D: UNKNOWN2
-    0x3CC0: UNKNOWN3
-    0x3CD7: UNKNOWN4
-    0x3CE4: UNKNOWN5
-    0x3D03: UNKNOWN6
+  Labels:
+    60: UNKNOWN0
+    159: UNKNOWN1
+    190: UNKNOWN2
+    241: UNKNOWN3
+    264: UNKNOWN4
+    277: UNKNOWN5
+    308: UNKNOWN6
   Size: 310
   Type: assembly
   Offset: 0xC23BCF
 FIX_TARGET_NAME:
   Description: Apply target name adjustments
-  labels:
-    0x3D3C: UNKNOWN0
-    0x3D9B: UNKNOWN1
-    0x3DBA: UNKNOWN2
-    0x3DED: UNKNOWN3
-    0x3E04: UNKNOWN4
-    0x3E11: UNKNOWN5
-    0x3E30: UNKNOWN6
+  Labels:
+    55: UNKNOWN0
+    150: UNKNOWN1
+    181: UNKNOWN2
+    232: UNKNOWN3
+    255: UNKNOWN4
+    268: UNKNOWN5
+    299: UNKNOWN6
   Size: 301
   Type: assembly
   Offset: 0xC23D05
 UNKNOWN_C23E32:
-  labels:
-    0x3E56: UNKNOWN0
-    0x3E5F: UNKNOWN1
-    0x3E6E: UNKNOWN2
-    0x3E73: UNKNOWN3
-    0x3E88: UNKNOWN4
+  Labels:
+    36: UNKNOWN0
+    45: UNKNOWN1
+    60: UNKNOWN2
+    65: UNKNOWN3
+    86: UNKNOWN4
   Size: 88
   Type: assembly
   Offset: 0xC23E32
 UNKNOWN_C23E8A:
-  labels:
-    0x3EC4: UNKNOWN0
-    0x3ECE: UNKNOWN1
-    0x3F24: UNKNOWN2
-    0x3F4E: UNKNOWN3
+  Labels:
+    58: UNKNOWN0
+    68: UNKNOWN1
+    154: UNKNOWN2
+    196: UNKNOWN3
   Size: 226
   Type: assembly
   Offset: 0xC23E8A
 FIND_TARGETTABLE_NPC:
   Description: Find targettable NPC?
-  labels:
-    0x3F82: UNKNOWN0
-    0x3F89: UNKNOWN1
-    0x3FAE: UNKNOWN2
-    0x3FD1: UNKNOWN3
-    0x3FD6: UNKNOWN4
-    0x3FDB: UNKNOWN5
-    0x3FE0: UNKNOWN6
-    0x3FE8: UNKNOWN7
+  Labels:
+    22: UNKNOWN0
+    29: UNKNOWN1
+    66: UNKNOWN2
+    101: UNKNOWN3
+    106: UNKNOWN4
+    111: UNKNOWN5
+    116: UNKNOWN6
+    124: UNKNOWN7
   Size: 126
   Type: assembly
   Offset: 0xC23F6C
@@ -14604,148 +14603,148 @@ GET_SHIELD_TARGETTING:
   Offset: 0xC23FEA
 FEELING_STRANGE_RETARGETTING:
   Description: Retargets if user is feeling strange
-  labels:
-    0x403A: UNKNOWN0
-    0x4060: UNKNOWN1
-    0x4071: UNKNOWN2
-    0x4080: UNKNOWN3
-    0x4084: UNKNOWN4
-    0x40A2: UNKNOWN5
+  Labels:
+    49: UNKNOWN0
+    87: UNKNOWN1
+    104: UNKNOWN2
+    119: UNKNOWN3
+    123: UNKNOWN4
+    153: UNKNOWN5
   Size: 155
   Type: assembly
   Offset: 0xC24009
 UNKNOWN_C240A4:
-  labels:
-    0x40B6: UNKNOWN0
-    0x40BA: UNKNOWN1
-    0x40D0: UNKNOWN2
-    0x40F2: UNKNOWN3
-    0x4104: UNKNOWN4
-    0x4113: UNKNOWN5
-    0x4125: UNKNOWN6
-    0x4147: UNKNOWN7
-    0x4159: UNKNOWN8
-    0x4168: UNKNOWN9
+  Labels:
+    18: UNKNOWN0
+    22: UNKNOWN1
+    44: UNKNOWN2
+    78: UNKNOWN3
+    96: UNKNOWN4
+    111: UNKNOWN5
+    129: UNKNOWN6
+    163: UNKNOWN7
+    181: UNKNOWN8
+    196: UNKNOWN9
   Size: 203
   Type: assembly
   Offset: 0xC240A4
 UNKNOWN_C2416F:
-  labels:
-    0x417E: UNKNOWN0
-    0x418B: UNKNOWN1
-    0x419B: UNKNOWN2
-    0x41C9: UNKNOWN3
-    0x41D0: UNKNOWN4
-    0x41D5: UNKNOWN5
-    0x41DA: UNKNOWN6
+  Labels:
+    15: UNKNOWN0
+    28: UNKNOWN1
+    44: UNKNOWN2
+    90: UNKNOWN3
+    97: UNKNOWN4
+    102: UNKNOWN5
+    107: UNKNOWN6
   Size: 109
   Type: assembly
   Offset: 0xC2416F
 FIND_STEALABLE_ITEMS:
   Description: Finds all stealable items
-  labels:
-    0x41EB: UNKNOWN0
-    0x41FF: UNKNOWN1
-    0x420B: UNKNOWN2
-    0x4212: UNKNOWN3
-    0x4239: UNKNOWN4
-    0x423E: UNKNOWN5
-    0x4248: UNKNOWN6
-    0x4257: UNKNOWN7
-    0x427A: UNKNOWN8
-    0x42F6: UNKNOWN9
-    0x42F8: UNKNOWN10
-    0x4304: UNKNOWN11
-    0x4306: UNKNOWN12
-    0x4312: UNKNOWN13
+  Labels:
+    15: UNKNOWN0
+    35: UNKNOWN1
+    47: UNKNOWN2
+    54: UNKNOWN3
+    93: UNKNOWN4
+    98: UNKNOWN5
+    108: UNKNOWN6
+    123: UNKNOWN7
+    158: UNKNOWN8
+    282: UNKNOWN9
+    284: UNKNOWN10
+    296: UNKNOWN11
+    298: UNKNOWN12
+    310: UNKNOWN13
   Size: 314
   Type: assembly
   Offset: 0xC241DC
 SELECT_STEALABLE_ITEM:
   Description: Selects a stealable item
-  labels:
-    0x432B: UNKNOWN0
-    0x4339: UNKNOWN1
-    0x4346: UNKNOWN2
+  Labels:
+    21: UNKNOWN0
+    35: UNKNOWN1
+    48: UNKNOWN2
   Size: 50
   Type: assembly
   Offset: 0xC24316
 UNKNOWN_C24348:
-  labels:
-    0x4360: UNKNOWN0
-    0x4370: UNKNOWN1
-    0x4375: UNKNOWN2
-    0x437C: UNKNOWN3
+  Labels:
+    24: UNKNOWN0
+    40: UNKNOWN1
+    45: UNKNOWN2
+    52: UNKNOWN3
   Size: 54
   Type: assembly
   Offset: 0xC24348
 UNKNOWN_C2437E:
-  labels:
-    0x4394: UNKNOWN0
-    0x43A2: UNKNOWN1
-    0x43B8: UNKNOWN2
-    0x4432: UNKNOWN3
+  Labels:
+    22: UNKNOWN0
+    36: UNKNOWN1
+    58: UNKNOWN2
+    180: UNKNOWN3
   Size: 182
   Type: assembly
   Offset: 0xC2437E
 UNKNOWN_C24434:
-  labels:
-    0x446D: UNKNOWN0
-    0x4475: UNKNOWN1
+  Labels:
+    57: UNKNOWN0
+    65: UNKNOWN1
   Size: 67
   Type: assembly
   Offset: 0xC24434
 CHOOSE_TARGET:
   Description: Chooses a target?
-  labels:
-    0x448A: UNKNOWN0
-    0x449E: UNKNOWN1
-    0x44AA: UNKNOWN2
-    0x44BE: UNKNOWN3
-    0x44C7: UNKNOWN4
-    0x44F3: UNKNOWN5
-    0x44FE: UNKNOWN6
-    0x4516: UNKNOWN7
-    0x451D: UNKNOWN8
-    0x4562: UNKNOWN9
-    0x456A: UNKNOWN10
-    0x456D: UNKNOWN11
-    0x45A4: UNKNOWN12
-    0x45BC: UNKNOWN13
-    0x4609: UNKNOWN14
-    0x4629: UNKNOWN15
-    0x462B: UNKNOWN16
-    0x463E: UNKNOWN17
-    0x4640: UNKNOWN18
-    0x4658: UNKNOWN19
-    0x466B: UNKNOWN20
-    0x466D: UNKNOWN21
-    0x468C: UNKNOWN22
-    0x46B7: UNKNOWN23
-    0x46C7: UNKNOWN24
-    0x46D7: UNKNOWN25
-    0x46E7: UNKNOWN26
-    0x46FF: UNKNOWN27
+  Labels:
+    19: UNKNOWN0
+    39: UNKNOWN1
+    51: UNKNOWN2
+    71: UNKNOWN3
+    80: UNKNOWN4
+    124: UNKNOWN5
+    135: UNKNOWN6
+    159: UNKNOWN7
+    166: UNKNOWN8
+    235: UNKNOWN9
+    243: UNKNOWN10
+    246: UNKNOWN11
+    301: UNKNOWN12
+    325: UNKNOWN13
+    402: UNKNOWN14
+    434: UNKNOWN15
+    436: UNKNOWN16
+    455: UNKNOWN17
+    457: UNKNOWN18
+    481: UNKNOWN19
+    500: UNKNOWN20
+    502: UNKNOWN21
+    533: UNKNOWN22
+    576: UNKNOWN23
+    592: UNKNOWN24
+    608: UNKNOWN25
+    624: UNKNOWN26
+    648: UNKNOWN27
   Size: 652
   Type: assembly
   Offset: 0xC24477
 UNKNOWN_C24703:
-  labels:
-    0x473E: UNKNOWN0
-    0x4746: UNKNOWN1
-    0x4749: UNKNOWN2
-    0x4757: UNKNOWN3
-    0x4777: UNKNOWN4
-    0x477E: UNKNOWN5
-    0x479D: UNKNOWN6
-    0x47A9: UNKNOWN7
-    0x47BA: UNKNOWN8
-    0x47E9: UNKNOWN9
-    0x47EE: UNKNOWN10
-    0x47F5: UNKNOWN11
-    0x4809: UNKNOWN12
-    0x481B: UNKNOWN13
-    0x481F: UNKNOWN14
+  Labels:
+    59: UNKNOWN0
+    67: UNKNOWN1
+    70: UNKNOWN2
+    84: UNKNOWN3
+    116: UNKNOWN4
+    123: UNKNOWN5
+    154: UNKNOWN6
+    166: UNKNOWN7
+    183: UNKNOWN8
+    230: UNKNOWN9
+    235: UNKNOWN10
+    242: UNKNOWN11
+    262: UNKNOWN12
+    280: UNKNOWN13
+    284: UNKNOWN14
   Size: 286
   Type: assembly
   Offset: 0xC24703
@@ -15006,102 +15005,102 @@ BATTLE_ROUTINE:
     6476: UNKNOWN246
   Offset: 0xC24821
 UNKNOWN_C26189:
-  labels:
-    0x619D: UNKNOWN0
-    0x61AB: UNKNOWN1
+  Labels:
+    20: UNKNOWN0
+    34: UNKNOWN1
   Size: 52
   Type: assembly
   Offset: 0xC26189
 INSTANT_WIN_HANDLER:
   Description: Instant Win Handler
-  labels:
-    0x61DA: UNKNOWN0
-    0x61F1: UNKNOWN1
-    0x6228: UNKNOWN2
-    0x6235: UNKNOWN3
-    0x6253: UNKNOWN4
-    0x6274: UNKNOWN5
-    0x62C3: UNKNOWN6
-    0x62DF: UNKNOWN7
-    0x62EB: UNKNOWN8
-    0x62FC: UNKNOWN9
-    0x630F: UNKNOWN10
-    0x6314: UNKNOWN11
-    0x632C: UNKNOWN12
-    0x637F: UNKNOWN13
-    0x63EC: UNKNOWN14
-    0x6431: UNKNOWN15
-    0x643D: UNKNOWN16
-    0x64B1: UNKNOWN17
-    0x64BF: UNKNOWN18
-    0x64CD: UNKNOWN19
-    0x64DB: UNKNOWN20
-    0x64E9: UNKNOWN21
-    0x64F7: UNKNOWN22
-    0x6505: UNKNOWN23
-    0x6511: UNKNOWN24
-    0x652D: UNKNOWN25
-    0x6542: UNKNOWN26
-    0x6546: UNKNOWN27
+  Labels:
+    29: UNKNOWN0
+    52: UNKNOWN1
+    107: UNKNOWN2
+    120: UNKNOWN3
+    150: UNKNOWN4
+    183: UNKNOWN5
+    262: UNKNOWN6
+    290: UNKNOWN7
+    302: UNKNOWN8
+    319: UNKNOWN9
+    338: UNKNOWN10
+    343: UNKNOWN11
+    367: UNKNOWN12
+    450: UNKNOWN13
+    559: UNKNOWN14
+    628: UNKNOWN15
+    640: UNKNOWN16
+    756: UNKNOWN17
+    770: UNKNOWN18
+    784: UNKNOWN19
+    798: UNKNOWN20
+    812: UNKNOWN21
+    826: UNKNOWN22
+    840: UNKNOWN23
+    852: UNKNOWN24
+    880: UNKNOWN25
+    901: UNKNOWN26
+    905: UNKNOWN27
   Size: 911
   Type: assembly
   Offset: 0xC261BD
 UNKNOWN_C2654C:
-  labels:
-    0x6562: UNKNOWN0
-    0x6591: UNKNOWN1
-    0x659E: UNKNOWN2
-    0x65B4: UNKNOWN3
-    0x65C1: UNKNOWN4
-    0x65CF: UNKNOWN5
-    0x65DB: UNKNOWN6
-    0x65F3: UNKNOWN7
-    0x6629: UNKNOWN8
-    0x662B: UNKNOWN9
+  Labels:
+    22: UNKNOWN0
+    69: UNKNOWN1
+    82: UNKNOWN2
+    104: UNKNOWN3
+    117: UNKNOWN4
+    131: UNKNOWN5
+    143: UNKNOWN6
+    167: UNKNOWN7
+    221: UNKNOWN8
+    223: UNKNOWN9
   Size: 232
   Type: assembly
   Offset: 0xC2654C
 INSTANT_WIN_CHECK:
   Description: Instant Win check
-  labels:
-    0x664A: UNKNOWN0
-    0x6661: UNKNOWN1
-    0x6674: UNKNOWN2
-    0x667E: UNKNOWN3
-    0x6694: UNKNOWN4
-    0x66AE: UNKNOWN5
-    0x671B: UNKNOWN6
-    0x6720: UNKNOWN7
-    0x672A: UNKNOWN8
-    0x6739: UNKNOWN9
-    0x6741: UNKNOWN10
-    0x6748: UNKNOWN11
-    0x6769: UNKNOWN12
-    0x676E: UNKNOWN13
-    0x677F: UNKNOWN14
-    0x6786: UNKNOWN15
-    0x67DC: UNKNOWN16
-    0x67E1: UNKNOWN17
-    0x67EC: UNKNOWN18
-    0x67F3: UNKNOWN19
-    0x6848: UNKNOWN20
-    0x684D: UNKNOWN21
-    0x6857: UNKNOWN22
-    0x685D: UNKNOWN23
-    0x688F: UNKNOWN24
-    0x6894: UNKNOWN25
-    0x689D: UNKNOWN26
-    0x68AC: UNKNOWN27
-    0x68B8: UNKNOWN28
-    0x68BD: UNKNOWN29
-    0x6905: UNKNOWN30
-    0x6906: UNKNOWN31
-    0x690D: UNKNOWN32
-    0x6927: UNKNOWN33
-    0x696E: UNKNOWN34
-    0x697D: UNKNOWN35
-    0x6982: UNKNOWN36
-    0x6989: UNKNOWN37
+  Labels:
+    22: UNKNOWN0
+    45: UNKNOWN1
+    64: UNKNOWN2
+    74: UNKNOWN3
+    96: UNKNOWN4
+    122: UNKNOWN5
+    231: UNKNOWN6
+    236: UNKNOWN7
+    246: UNKNOWN8
+    261: UNKNOWN9
+    269: UNKNOWN10
+    276: UNKNOWN11
+    309: UNKNOWN12
+    314: UNKNOWN13
+    331: UNKNOWN14
+    338: UNKNOWN15
+    424: UNKNOWN16
+    429: UNKNOWN17
+    440: UNKNOWN18
+    447: UNKNOWN19
+    532: UNKNOWN20
+    537: UNKNOWN21
+    547: UNKNOWN22
+    553: UNKNOWN23
+    603: UNKNOWN24
+    608: UNKNOWN25
+    617: UNKNOWN26
+    632: UNKNOWN27
+    644: UNKNOWN28
+    649: UNKNOWN29
+    721: UNKNOWN30
+    722: UNKNOWN31
+    729: UNKNOWN32
+    755: UNKNOWN33
+    826: UNKNOWN34
+    841: UNKNOWN35
+    846: UNKNOWN36
+    853: UNKNOWN37
   Size: 855
   Type: assembly
   Offset: 0xC26634
@@ -15120,16 +15119,16 @@ GET_ENEMY_TYPE:
   Type: assembly
   Offset: 0xC269A8
 UNKNOWN_C269BE:
-  labels:
-    0x69CD: UNKNOWN0
-    0x69D1: UNKNOWN1
+  Labels:
+    15: UNKNOWN0
+    19: UNKNOWN1
   Size: 32
   Type: assembly
   Offset: 0xC269BE
 UNKNOWN_C269DE:
-  labels:
-    0x69E2: UNKNOWN0
-    0x69E6: UNKNOWN1
+  Labels:
+    4: UNKNOWN0
+    8: UNKNOWN1
   Size: 17
   Type: assembly
   Offset: 0xC269DE
@@ -15157,43 +15156,43 @@ RAND_LIMIT:
   Description: Applies 50% variance to a value
   Arguments:
     A: Value
-  labels:
-    0x6A7C: UNKNOWN0
-    0x6A7E: UNKNOWN1
-    0x6A86: UNKNOWN2
-    0x6A88: UNKNOWN3
-    0x6A9F: UNKNOWN4
-    0x6AA1: UNKNOWN5
-    0x6AA9: UNKNOWN6
-    0x6AAB: UNKNOWN7
-    0x6AB8: UNKNOWN8
-    0x6AC6: UNKNOWN9
-    0x6AC8: UNKNOWN10
-    0x6ADB: UNKNOWN11
-    0x6AE6: UNKNOWN12
-    0x6AE8: UNKNOWN13
-    0x6AF9: UNKNOWN14
+  Labels:
+    56: UNKNOWN0
+    58: UNKNOWN1
+    66: UNKNOWN2
+    68: UNKNOWN3
+    91: UNKNOWN4
+    93: UNKNOWN5
+    101: UNKNOWN6
+    103: UNKNOWN7
+    116: UNKNOWN8
+    130: UNKNOWN9
+    132: UNKNOWN10
+    151: UNKNOWN11
+    162: UNKNOWN12
+    164: UNKNOWN13
+    181: UNKNOWN14
   Size: 185
   Type: assembly
   Offset: 0xC26A44
 25_PERCENT_VARIANCE:
   Description: Applies 25% variance to a value
-  labels:
-    0x6B35: UNKNOWN0
-    0x6B37: UNKNOWN1
-    0x6B3F: UNKNOWN2
-    0x6B41: UNKNOWN3
-    0x6B58: UNKNOWN4
-    0x6B5A: UNKNOWN5
-    0x6B62: UNKNOWN6
-    0x6B64: UNKNOWN7
-    0x6B71: UNKNOWN8
-    0x6B7F: UNKNOWN9
-    0x6B81: UNKNOWN10
-    0x6B95: UNKNOWN11
-    0x6BA0: UNKNOWN12
-    0x6BA2: UNKNOWN13
-    0x6BB4: UNKNOWN14
+  Labels:
+    56: UNKNOWN0
+    58: UNKNOWN1
+    66: UNKNOWN2
+    68: UNKNOWN3
+    91: UNKNOWN4
+    93: UNKNOWN5
+    101: UNKNOWN6
+    103: UNKNOWN7
+    116: UNKNOWN8
+    130: UNKNOWN9
+    132: UNKNOWN10
+    152: UNKNOWN11
+    163: UNKNOWN12
+    165: UNKNOWN13
+    183: UNKNOWN14
   Size: 187
   Type: assembly
   Offset: 0xC26AFD
@@ -15203,9 +15202,9 @@ SUCCESS_256:
     A: chance/256 of returning true
   Final State:
     8 Bit Accum: false
-  labels:
-    0x6BD4: UNKNOWN0
-    0x6BD9: UNKNOWN1
+  Labels:
+    28: UNKNOWN0
+    33: UNKNOWN1
   Size: 35
   Type: assembly
   Offset: 0xC26BB8
@@ -15213,73 +15212,73 @@ SUCCESS_500:
   Description: Randomly select true/false (A/500)
   Arguments:
     A: chance/500 of returning true
-  labels:
-    0x6BF6: UNKNOWN0
-    0x6BF9: UNKNOWN1
+  Labels:
+    27: UNKNOWN0
+    30: UNKNOWN1
   Size: 32
   Type: assembly
   Offset: 0xC26BDB
 TARGET_ALLIES:
   Description: Target allies + NPCs
-  labels:
-    0x6C19: UNKNOWN0
-    0x6C31: UNKNOWN1
-    0x6C70: UNKNOWN2
-    0x6C7B: UNKNOWN3
+  Labels:
+    30: UNKNOWN0
+    54: UNKNOWN1
+    117: UNKNOWN2
+    128: UNKNOWN3
   Size: 135
   Type: assembly
   Offset: 0xC26BFB
 TARGET_ALL_ENEMIES:
   Description: Target all enemies
-  labels:
-    0x6CA0: UNKNOWN0
-    0x6CF2: UNKNOWN1
-    0x6CFD: UNKNOWN2
+  Labels:
+    30: UNKNOWN0
+    112: UNKNOWN1
+    123: UNKNOWN2
   Size: 130
   Type: assembly
   Offset: 0xC26C82
 TARGET_ROW:
   Description: Target row
-  labels:
-    0x6D28: UNKNOWN0
-    0x6D33: UNKNOWN1
-    0x6D45: UNKNOWN2
-    0x6D50: UNKNOWN3
-    0x6D91: UNKNOWN4
-    0x6DE9: UNKNOWN5
-    0x6DF4: UNKNOWN6
-    0x6DFE: UNKNOWN7
+  Labels:
+    36: UNKNOWN0
+    47: UNKNOWN1
+    65: UNKNOWN2
+    76: UNKNOWN3
+    141: UNKNOWN4
+    229: UNKNOWN5
+    240: UNKNOWN6
+    250: UNKNOWN7
   Size: 252
   Type: assembly
   Offset: 0xC26D04
 TARGET_ALL:
   Description: Target everyone
-  labels:
-    0x6E1E: UNKNOWN0
-    0x6E65: UNKNOWN1
-    0x6E70: UNKNOWN2
+  Labels:
+    30: UNKNOWN0
+    101: UNKNOWN1
+    112: UNKNOWN2
   Size: 119
   Type: assembly
   Offset: 0xC26E00
 REMOVE_NPC_TARGETTING:
   Description: Remove all npcs from targetting
-  labels:
-    0x6E89: UNKNOWN0
-    0x6EE6: UNKNOWN1
-    0x6EF1: UNKNOWN2
+  Labels:
+    18: UNKNOWN0
+    111: UNKNOWN1
+    122: UNKNOWN2
   Size: 129
   Type: assembly
   Offset: 0xC26E77
 RANDOM_TARGETTING:
   Description: Random target
-  labels:
-    0x6F24: UNKNOWN0
-    0x6F31: UNKNOWN1
-    0x6F46: UNKNOWN2
-    0x6F55: UNKNOWN3
-    0x6FA5: UNKNOWN4
-    0x6FA7: UNKNOWN5
-    0x6FDA: UNKNOWN6
+  Labels:
+    44: UNKNOWN0
+    57: UNKNOWN1
+    78: UNKNOWN2
+    93: UNKNOWN3
+    173: UNKNOWN4
+    175: UNKNOWN5
+    226: UNKNOWN6
   Size: 228
   Type: assembly
   Offset: 0xC26EF8
@@ -15291,9 +15290,9 @@ IS_CHAR_TARGETTED:
   Description: Determines if character is targetted
   Arguments:
     A: Target ID
-  labels:
-    0x7081: UNKNOWN0
-    0x7086: UNKNOWN1
+  Labels:
+    88: UNKNOWN0
+    93: UNKNOWN1
   Size: 96
   Type: assembly
   Offset: 0xC27029
@@ -15306,29 +15305,29 @@ REMOVE_TARGET:
   Offset: 0xC27089
 REMOVE_DEAD_TARGETTING:
   Description: Removes dead from targetting
-  labels:
-    0x70F3: UNKNOWN0
-    0x711A: UNKNOWN1
-    0x711F: UNKNOWN2
+  Labels:
+    15: UNKNOWN0
+    54: UNKNOWN1
+    59: UNKNOWN2
   Size: 66
   Type: assembly
   Offset: 0xC270E4
 SET_HP:
   Description: Set new HP
-  labels:
-    0x7147: UNKNOWN0
-    0x7171: UNKNOWN1
-    0x7187: UNKNOWN2
-    0x718F: UNKNOWN3
+  Labels:
+    33: UNKNOWN0
+    75: UNKNOWN1
+    97: UNKNOWN2
+    105: UNKNOWN3
   Size: 107
   Type: assembly
   Offset: 0xC27126
 UNKNOWN_C27191:
-  labels:
-    0x71B2: UNKNOWN0
-    0x71DC: UNKNOWN1
-    0x71E6: UNKNOWN2
-    0x71EE: UNKNOWN3
+  Labels:
+    33: UNKNOWN0
+    75: UNKNOWN1
+    85: UNKNOWN2
+    93: UNKNOWN3
   Size: 95
   Type: assembly
   Offset: 0xC27191
@@ -15337,9 +15336,9 @@ REDUCE_HP:
   Arguments:
     A: Target
     X: Amount
-  labels:
-    0x7211: UNKNOWN0
-    0x7216: UNKNOWN1
+  Labels:
+    33: UNKNOWN0
+    38: UNKNOWN1
   Size: 45
   Type: assembly
   Offset: 0xC271F0
@@ -15348,9 +15347,9 @@ REDUCE_PP:
   Arguments:
     A: Target
     X: Amount
-  labels:
-    0x723E: UNKNOWN0
-    0x7243: UNKNOWN1
+  Labels:
+    33: UNKNOWN0
+    38: UNKNOWN1
   Size: 45
   Type: assembly
   Offset: 0xC2721D
@@ -15386,11 +15385,11 @@ INFLICT_STATUS:
     Group 5:
       1: Homesickness
       
-  labels:
-    0x7266: UNKNOWN0
-    0x727B: UNKNOWN1
-    0x728F: UNKNOWN2
-    0x7292: UNKNOWN3
+  Labels:
+    28: UNKNOWN0
+    49: UNKNOWN1
+    69: UNKNOWN2
+    72: UNKNOWN3
   Size: 74
   Type: assembly
   Offset: 0xC2724A
@@ -15399,10 +15398,10 @@ RECOVER_HP:
   Arguments:
     A: Target
     X: Amount
-  labels:
-    0x72EA: UNKNOWN0
-    0x7308: UNKNOWN1
-    0x7316: UNKNOWN2
+  Labels:
+    86: UNKNOWN0
+    116: UNKNOWN1
+    130: UNKNOWN2
   Size: 132
   Type: assembly
   Offset: 0xC27294
@@ -15411,10 +15410,10 @@ RECOVER_PP:
   Arguments:
     A: Target
     X: Amount
-  labels:
-    0x7361: UNKNOWN0
-    0x7363: UNKNOWN1
-    0x7395: UNKNOWN2
+  Labels:
+    73: UNKNOWN0
+    75: UNKNOWN1
+    125: UNKNOWN2
   Size: 127
   Type: assembly
   Offset: 0xC27318
@@ -15423,19 +15422,19 @@ REVIVE_TARGET:
   Arguments:
     A: Target
     X: Unknown (Amount of HP to recover?)
-  labels:
-    0x743C: UNKNOWN0
-    0x744C: UNKNOWN1
-    0x7459: UNKNOWN2
-    0x7463: UNKNOWN3
-    0x7474: UNKNOWN4
-    0x7489: UNKNOWN5
-    0x74A6: UNKNOWN6
-    0x74BB: UNKNOWN7
-    0x74DB: UNKNOWN8
-    0x74F6: UNKNOWN9
-    0x753E: UNKNOWN10
-    0x754B: UNKNOWN11
+  Labels:
+    165: UNKNOWN0
+    181: UNKNOWN1
+    194: UNKNOWN2
+    204: UNKNOWN3
+    221: UNKNOWN4
+    242: UNKNOWN5
+    271: UNKNOWN6
+    292: UNKNOWN7
+    324: UNKNOWN8
+    351: UNKNOWN9
+    423: UNKNOWN10
+    436: UNKNOWN11
   Size: 441
   Type: assembly
   Offset: 0xC27397
@@ -15520,55 +15519,55 @@ SUCCESS_LUCK80:
   Offset: 0xC27C96
 SUCCESS_SPEED:
   Description: Generate Success/Fail ((2 * Target's Speed) - Attacker's Speed) / A
-  labels:
-    0x7CE2: UNKNOWN0
-    0x7CE7: UNKNOWN1
-    0x7CF8: UNKNOWN2
-    0x7CFB: UNKNOWN3
+  Labels:
+    51: UNKNOWN0
+    56: UNKNOWN1
+    73: UNKNOWN2
+    76: UNKNOWN3
   Size: 78
   Type: assembly
   Offset: 0xC27CAF
 ATK_FAIL_CHK:
   Description: Attack Failure Check
-  labels:
-    0x7D23: UNKNOWN0
-    0x7D26: UNKNOWN1
+  Labels:
+    38: UNKNOWN0
+    41: UNKNOWN1
   Size: 43
   Type: assembly
   Offset: 0xC27CFD
 INCREASE_OFFENSE_16TH:
   Description: Increase offense by 1/16th
-  labels:
-    0x7D45: UNKNOWN0
-    0x7D48: UNKNOWN1
-    0x7D80: UNKNOWN2
+  Labels:
+    29: UNKNOWN0
+    32: UNKNOWN1
+    88: UNKNOWN2
   Size: 90
   Type: assembly
   Offset: 0xC27D28
 INCREASE_DEFENSE_16TH:
   Description: Increase defense by 1/16th
-  labels:
-    0x7D9F: UNKNOWN0
-    0x7DA2: UNKNOWN1
-    0x7DDA: UNKNOWN2
+  Labels:
+    29: UNKNOWN0
+    32: UNKNOWN1
+    88: UNKNOWN2
   Size: 90
   Type: assembly
   Offset: 0xC27D82
 HEXADECIMATE_OFFENSE:
   Description: Reduce offense by 1/16th
-  labels:
-    0x7DF9: UNKNOWN0
-    0x7DFC: UNKNOWN1
-    0x7E31: UNKNOWN2
+  Labels:
+    29: UNKNOWN0
+    32: UNKNOWN1
+    85: UNKNOWN2
   Size: 87
   Type: assembly
   Offset: 0xC27DDC
 HEXADECIMATE_DEFENSE:
   Description: Reduce defense by 1/16th
-  labels:
-    0x7E50: UNKNOWN0
-    0x7E53: UNKNOWN1
-    0x7E88: UNKNOWN2
+  Labels:
+    29: UNKNOWN0
+    32: UNKNOWN1
+    85: UNKNOWN2
   Size: 87
   Type: assembly
   Offset: 0xC27E33
@@ -15582,30 +15581,30 @@ CALC_DAMAGE:
   Arguments:
     A: Attacker pointer
     X: Amount of damage
-  labels:
-    0x7ED8: UNKNOWN0
-    0x7EF5: UNKNOWN1
-    0x7F48: UNKNOWN2
-    0x7F78: UNKNOWN3
-    0x7F7E: UNKNOWN4
-    0x7FA6: UNKNOWN5
-    0x7FA7: UNKNOWN6
-    0x7FB9: UNKNOWN7
-    0x7FDF: UNKNOWN8
-    0x8003: UNKNOWN9
-    0x8009: UNKNOWN10
-    0x8039: UNKNOWN11
-    0x8058: UNKNOWN12
-    0x8070: UNKNOWN13
-    0x8084: UNKNOWN14
-    0x8085: UNKNOWN15
-    0x808A: UNKNOWN16
-    0x80B9: UNKNOWN17
-    0x80E8: UNKNOWN18
-    0x810D: UNKNOWN19
-    0x8113: UNKNOWN20
-    0x8120: UNKNOWN21
-    0x8123: UNKNOWN22
+  Labels:
+    41: UNKNOWN0
+    70: UNKNOWN1
+    153: UNKNOWN2
+    201: UNKNOWN3
+    207: UNKNOWN4
+    247: UNKNOWN5
+    248: UNKNOWN6
+    266: UNKNOWN7
+    304: UNKNOWN8
+    340: UNKNOWN9
+    346: UNKNOWN10
+    394: UNKNOWN11
+    425: UNKNOWN12
+    449: UNKNOWN13
+    469: UNKNOWN14
+    470: UNKNOWN15
+    475: UNKNOWN16
+    522: UNKNOWN17
+    569: UNKNOWN18
+    606: UNKNOWN19
+    612: UNKNOWN20
+    625: UNKNOWN21
+    628: UNKNOWN22
   Size: 630
   Type: assembly
   Offset: 0xC27EAF
@@ -15646,137 +15645,137 @@ CALC_RESIST_DAMAGE:
   Offset: 0xC28125
 MISS_CALC:
   Description: Miss calculation
-  labels:
-    0x8313: UNKNOWN0
-    0x8321: UNKNOWN1
-    0x836F: UNKNOWN2
-    0x8374: UNKNOWN3
-    0x8390: UNKNOWN4
-    0x839C: UNKNOWN5
-    0x83B8: UNKNOWN6
-    0x83E0: UNKNOWN7
-    0x83EE: UNKNOWN8
-    0x83F3: UNKNOWN9
-    0x83F6: UNKNOWN10
+  Labels:
+    27: UNKNOWN0
+    41: UNKNOWN1
+    119: UNKNOWN2
+    124: UNKNOWN3
+    152: UNKNOWN4
+    164: UNKNOWN5
+    192: UNKNOWN6
+    232: UNKNOWN7
+    246: UNKNOWN8
+    251: UNKNOWN9
+    254: UNKNOWN10
   Size: 256
   Type: assembly
   Offset: 0xC282F8
 SMAAAASH:
   Description: SMAAAASH! calculation
-  labels:
-    0x8422: UNKNOWN0
-    0x842F: UNKNOWN1
-    0x8450: UNKNOWN2
-    0x8464: UNKNOWN3
-    0x8478: UNKNOWN4
-    0x8482: UNKNOWN5
-    0x84A8: UNKNOWN6
-    0x84AB: UNKNOWN7
+  Labels:
+    42: UNKNOWN0
+    55: UNKNOWN1
+    88: UNKNOWN2
+    108: UNKNOWN3
+    128: UNKNOWN4
+    138: UNKNOWN5
+    176: UNKNOWN6
+    179: UNKNOWN7
   Size: 181
   Type: assembly
   Offset: 0xC283F8
 DETERMINE_DODGE:
   Description: Determine if target dodges
-  labels:
-    0x84C8: UNKNOWN0
-    0x84DB: UNKNOWN1
-    0x84E5: UNKNOWN2
-    0x84EF: UNKNOWN3
-    0x850D: UNKNOWN4
-    0x850F: UNKNOWN5
-    0x8519: UNKNOWN6
-    0x851E: UNKNOWN7
-    0x8521: UNKNOWN8
+  Labels:
+    27: UNKNOWN0
+    46: UNKNOWN1
+    56: UNKNOWN2
+    66: UNKNOWN3
+    96: UNKNOWN4
+    98: UNKNOWN5
+    108: UNKNOWN6
+    113: UNKNOWN7
+    116: UNKNOWN8
   Size: 118
   Type: assembly
   Offset: 0xC284AD
 BTLACT_LEVEL_2_ATK:
   Description: 'Battle Action: Level 2 Attack'
-  labels:
-    0x8545: UNKNOWN0
-    0x8547: UNKNOWN1
-    0x854E: UNKNOWN2
-    0x855A: UNKNOWN3
-    0x855C: UNKNOWN4
-    0x8561: UNKNOWN5
+  Labels:
+    34: UNKNOWN0
+    36: UNKNOWN1
+    43: UNKNOWN2
+    55: UNKNOWN3
+    57: UNKNOWN4
+    62: UNKNOWN5
   Size: 72
   Type: assembly
   Offset: 0xC28523
 HEAL_STRANGENESS:
   Description: Heals Feeling Strange
-  labels:
-    0x859D: UNKNOWN0
+  Labels:
+    50: UNKNOWN0
   Size: 52
   Type: assembly
   Offset: 0xC2856B
 BTLACT_BASH:
   Description: 'Battle Action: Bash'
-  labels:
-    0x85CA: UNKNOWN0
-    0x85D8: UNKNOWN1
+  Labels:
+    43: UNKNOWN0
+    57: UNKNOWN1
   Size: 59
   Type: assembly
   Offset: 0xC2859F
 BTLACT_LEVEL_4_ATK:
   Description: 'Battle Action: Level 4 Attack'
-  labels:
-    0x8618: UNKNOWN0
-    0x861A: UNKNOWN1
-    0x8621: UNKNOWN2
-    0x862D: UNKNOWN3
-    0x862F: UNKNOWN4
-    0x8634: UNKNOWN5
-    0x8641: UNKNOWN6
-    0x864F: UNKNOWN7
+  Labels:
+    62: UNKNOWN0
+    64: UNKNOWN1
+    71: UNKNOWN2
+    83: UNKNOWN3
+    85: UNKNOWN4
+    90: UNKNOWN5
+    103: UNKNOWN6
+    117: UNKNOWN7
   Size: 119
   Type: assembly
   Offset: 0xC285DA
 BTLACT_LEVEL_3_ATK:
   Description: 'Battle Action: Level 3 Attack'
-  labels:
-    0x8692: UNKNOWN0
-    0x8694: UNKNOWN1
-    0x869B: UNKNOWN2
-    0x86A7: UNKNOWN3
-    0x86A9: UNKNOWN4
-    0x86AE: UNKNOWN5
-    0x86BB: UNKNOWN6
-    0x86C9: UNKNOWN7
+  Labels:
+    65: UNKNOWN0
+    67: UNKNOWN1
+    74: UNKNOWN2
+    86: UNKNOWN3
+    88: UNKNOWN4
+    93: UNKNOWN5
+    106: UNKNOWN6
+    120: UNKNOWN7
   Size: 122
   Type: assembly
   Offset: 0xC28651
 BTLACT_LEVEL_1_ATK:
   Description: 'Battle Action: Level 1 Attack'
-  labels:
-    0x8707: UNKNOWN0
-    0x8709: UNKNOWN1
-    0x8710: UNKNOWN2
-    0x871C: UNKNOWN3
-    0x871E: UNKNOWN4
-    0x8723: UNKNOWN5
-    0x8730: UNKNOWN6
-    0x873E: UNKNOWN7
+  Labels:
+    60: UNKNOWN0
+    62: UNKNOWN1
+    69: UNKNOWN2
+    81: UNKNOWN3
+    83: UNKNOWN4
+    88: UNKNOWN5
+    101: UNKNOWN6
+    115: UNKNOWN7
   Size: 117
   Type: assembly
   Offset: 0xC286CB
 BTLACT_SHOOT:
   Description: 'Battle Action: Shoot'
-  labels:
-    0x8760: UNKNOWN0
-    0x876E: UNKNOWN1
+  Labels:
+    32: UNKNOWN0
+    46: UNKNOWN1
   Size: 48
   Type: assembly
   Offset: 0xC28740
 BTLACT_SPY:
   Description: 'Battle Action: Spy'
-  labels:
-    0x87D4: UNKNOWN0
-    0x87F0: UNKNOWN1
-    0x880C: UNKNOWN2
-    0x8828: UNKNOWN3
-    0x8844: UNKNOWN4
-    0x8860: UNKNOWN5
-    0x8899: UNKNOWN6
+  Labels:
+    100: UNKNOWN0
+    128: UNKNOWN1
+    156: UNKNOWN2
+    184: UNKNOWN3
+    212: UNKNOWN4
+    240: UNKNOWN5
+    297: UNKNOWN6
   Size: 299
   Type: assembly
   Offset: 0xC28770
@@ -15787,105 +15786,105 @@ BTLACT_NULL:
   Offset: 0xC2889B
 BTLACT_STEAL:
   Description: 'Battle Action: Steal From Enemy'
-  labels:
-    0x88D4: UNKNOWN0
-    0x88EA: UNKNOWN1
+  Labels:
+    54: UNKNOWN0
+    76: UNKNOWN1
   Size: 77
   Type: assembly
   Offset: 0xC2889E
 BTLACT_FREEZETIME:
   Description: 'Battle Action: Freeze Time'
-  labels:
-    0x891B: UNKNOWN0
-    0x893B: UNKNOWN1
-    0x8972: UNKNOWN2
-    0x8981: UNKNOWN3
-    0x8986: UNKNOWN4
-    0x89A4: UNKNOWN5
-    0x89AE: UNKNOWN6
+  Labels:
+    48: UNKNOWN0
+    80: UNKNOWN1
+    135: UNKNOWN2
+    150: UNKNOWN3
+    155: UNKNOWN4
+    185: UNKNOWN5
+    195: UNKNOWN6
   Size: 227
   Type: assembly
   Offset: 0xC288EB
 BTLACT_DIAMONDIZE:
   Description: 'Battle Action: Inflict Diamondize'
-  labels:
-    0x89E1: UNKNOWN0
-    0x89F4: UNKNOWN1
-    0x8A08: UNKNOWN2
-    0x8A82: UNKNOWN3
-    0x8A90: UNKNOWN4
+  Labels:
+    19: UNKNOWN0
+    38: UNKNOWN1
+    58: UNKNOWN2
+    180: UNKNOWN3
+    194: UNKNOWN4
   Size: 196
   Type: assembly
   Offset: 0xC289CE
 BTLACT_PARALYZE:
   Description: 'Battle Action: Inflict Paralysis'
-  labels:
-    0x8ADB: UNKNOWN0
-    0x8AE9: UNKNOWN1
+  Labels:
+    73: UNKNOWN0
+    87: UNKNOWN1
   Size: 89
   Type: assembly
   Offset: 0xC28A92
 BTLACT_NAUSEATE:
   Description: 'Battle Action: Inflict Nausea'
-  labels:
-    0x8B1C: UNKNOWN0
-    0x8B2A: UNKNOWN1
+  Labels:
+    49: UNKNOWN0
+    63: UNKNOWN1
   Size: 65
   Type: assembly
   Offset: 0xC28AEB
 BTLACT_POISON:
   Description: 'Battle Action: Inflict Poison'
-  labels:
-    0x8B5D: UNKNOWN0
-    0x8B6B: UNKNOWN1
+  Labels:
+    49: UNKNOWN0
+    63: UNKNOWN1
   Size: 65
   Type: assembly
   Offset: 0xC28B2C
 BTLACT_COLD:
   Description: 'Battle Action: Inflict Cold'
-  labels:
-    0x8BAE: UNKNOWN0
-    0x8BBC: UNKNOWN1
+  Labels:
+    65: UNKNOWN0
+    79: UNKNOWN1
   Size: 81
   Type: assembly
   Offset: 0xC28B6D
 BTLACT_MUSHROOMIZE:
   Description: 'Battle Action: Inflict Mushroomize'
-  labels:
-    0x8BED: UNKNOWN0
-    0x8BFB: UNKNOWN1
+  Labels:
+    47: UNKNOWN0
+    61: UNKNOWN1
   Size: 63
   Type: assembly
   Offset: 0xC28BBE
 BTLACT_POSSESS:
   Description: 'Battle Action: Inflict Possession'
-  labels:
-    0x8C57: UNKNOWN0
-    0x8C65: UNKNOWN1
+  Labels:
+    90: UNKNOWN0
+    104: UNKNOWN1
   Size: 108
   Type: assembly
   Offset: 0xC28BFD
 BTLACT_CRYING:
   Description: 'Battle Action: Inflict Crying'
-  labels:
-    0x8CA8: UNKNOWN0
-    0x8CB6: UNKNOWN1
+  Labels:
+    63: UNKNOWN0
+    77: UNKNOWN1
   Size: 79
   Type: assembly
   Offset: 0xC28C69
 BTLACT_IMMOBILIZE:
   Description: 'Battle Action: Inflict Immobilization'
-  labels:
-    0x8CE1: UNKNOWN0
-    0x8CEF: UNKNOWN1
+  Labels:
+    41: UNKNOWN0
+    55: UNKNOWN1
   Size: 57
   Type: assembly
   Offset: 0xC28CB8
 BTLACT_SOLIDIFY:
   Description: 'Battle Action: Inflict Solidification'
-  labels:
-    0x8D2A: UNKNOWN0
-    0x8D38: UNKNOWN1
+  Labels:
+    57: UNKNOWN0
+    71: UNKNOWN1
   Size: 73
   Type: assembly
   Offset: 0xC28CF1
@@ -15896,33 +15895,33 @@ REDIRECT_C2A056:
   Offset: 0xC28D3A
 SUCCESS_LUCK40:
   Description: Generate Success/Fail (Luck/40 chance)
-  labels:
-    0x8D56: UNKNOWN0
-    0x8D59: UNKNOWN1
+  Labels:
+    21: UNKNOWN0
+    24: UNKNOWN1
   Size: 25
   Type: assembly
   Offset: 0xC28D41
 BTLACT_DISTRACT:
   Description: 'Battle Action: Inflict inability to concentrate'
-  labels:
-    0x8DAB: UNKNOWN0
-    0x8DB9: UNKNOWN1
+  Labels:
+    81: UNKNOWN0
+    95: UNKNOWN1
   Size: 97
   Type: assembly
   Offset: 0xC28D5A
 BTLACT_FEELSTRANGE:
   Description: 'Battle Action: Inflict feeling strange'
-  labels:
-    0x8DEC: UNKNOWN0
-    0x8DFA: UNKNOWN1
+  Labels:
+    49: UNKNOWN0
+    63: UNKNOWN1
   Size: 65
   Type: assembly
   Offset: 0xC28DBB
 BTLACT_CRYING2:
   Description: 'Battle Action: Inflict Crying (2)'
-  labels:
-    0x8E2B: UNKNOWN0
-    0x8E39: UNKNOWN1
+  Labels:
+    47: UNKNOWN0
+    61: UNKNOWN1
   Size: 63
   Type: assembly
   Offset: 0xC28DFC
@@ -15933,34 +15932,34 @@ REDIRECT_C29F06:
   Offset: 0xC28E3B
 BTLACT_REDUCEPP:
   Description: 'Battle action: Reduce target''s PP by (1/16 max PP ± 50%)'
-  labels:
-    0x8E62: UNKNOWN0
-    0x8E90: UNKNOWN1
-    0x8E9E: UNKNOWN2
-    0x8EAC: UNKNOWN3
+  Labels:
+    32: UNKNOWN0
+    78: UNKNOWN1
+    92: UNKNOWN2
+    106: UNKNOWN3
   Size: 108
   Type: assembly
   Offset: 0xC28E42
 BTLACT_CUTGUTS:
   Description: 'Battle action: Reduce target''s Guts by ?'
-  labels:
-    0x8EFD: UNKNOWN0
-    0x8F1F: UNKNOWN1
+  Labels:
+    79: UNKNOWN0
+    113: UNKNOWN1
   Size: 115
   Type: assembly
   Offset: 0xC28EAE
 BTLACT_REDUCEOFFDEF:
   Description: 'Battle action: Reduce target''s Offense and Defense'
-  labels:
-    0x8F95: UNKNOWN0
+  Labels:
+    116: UNKNOWN0
   Size: 118
   Type: assembly
   Offset: 0xC28F21
 BTLACT_LEVEL_2_ATK_POISON:
   Description: 'Battle action: Level 2 attack, inflict poison'
-  labels:
-    0x8FE9: UNKNOWN0
-    0x8FF7: UNKNOWN1
+  Labels:
+    82: UNKNOWN0
+    96: UNKNOWN1
   Size: 98
   Type: assembly
   Offset: 0xC28F97
@@ -16041,40 +16040,40 @@ BTLACT_NEUTRALIZE:
   Offset: 0xC29051
 UNKNOWN_C290C6:
   Description: Mirror Related?
-  labels:
-    0x90DD: UNKNOWN0
-    0x913D: UNKNOWN1
-    0x9146: UNKNOWN2
-    0x914B: UNKNOWN3
+  Labels:
+    23: UNKNOWN0
+    119: UNKNOWN1
+    128: UNKNOWN2
+    133: UNKNOWN3
   Size: 168
   Type: assembly
   Offset: 0xC290C6
 BTLACT_LVL_2_ATK_DIAMONDIZE:
   Description: 'Battle action: Level 2 attack, inflict diamondization'
-  labels:
-    0x9181: UNKNOWN0
-    0x918F: UNKNOWN1
-    0x919A: UNKNOWN2
-    0x91A5: UNKNOWN3
-    0x91B6: UNKNOWN4
-    0x91CA: UNKNOWN5
-    0x9244: UNKNOWN6
-    0x9252: UNKNOWN7
+  Labels:
+    19: UNKNOWN0
+    33: UNKNOWN1
+    44: UNKNOWN2
+    55: UNKNOWN3
+    72: UNKNOWN4
+    92: UNKNOWN5
+    214: UNKNOWN6
+    228: UNKNOWN7
   Size: 230
   Type: assembly
   Offset: 0xC2916E
 BTLACT_REDUCEOFF:
   Description: 'Battle action: Reduce target''s Offense'
-  labels:
-    0x9296: UNKNOWN0
+  Labels:
+    66: UNKNOWN0
   Size: 68
   Type: assembly
   Offset: 0xC29254
 BTLACT_CLUMSYDEATH:
   Description: 'Battle action: Clumsy Robot death'
-  labels:
-    0x92C9: UNKNOWN0
-    0x92E9: UNKNOWN1
+  Labels:
+    49: UNKNOWN0
+    81: UNKNOWN1
   Size: 83
   Type: assembly
   Offset: 0xC29298
@@ -16085,22 +16084,22 @@ BTLACT_ENEMYEXTEND:
   Offset: 0xC292EB
 BTLACT_MASTERBARFDEATH:
   Description: 'Battle action: Master Barf death'
-  labels:
-    0x9314: UNKNOWN0
-    0x9344: UNKNOWN1
-    0x9356: UNKNOWN2
-    0x9357: UNKNOWN3
-    0x9365: UNKNOWN4
-    0x9367: UNKNOWN5
-    0x9369: UNKNOWN6
-    0x936E: UNKNOWN7
-    0x937C: UNKNOWN8
-    0x937E: UNKNOWN9
-    0x93BA: UNKNOWN10
-    0x93EF: UNKNOWN11
-    0x93F4: UNKNOWN12
-    0x9402: UNKNOWN13
-    0x9404: UNKNOWN14
+  Labels:
+    38: UNKNOWN0
+    86: UNKNOWN1
+    104: UNKNOWN2
+    105: UNKNOWN3
+    119: UNKNOWN4
+    121: UNKNOWN5
+    123: UNKNOWN6
+    128: UNKNOWN7
+    142: UNKNOWN8
+    144: UNKNOWN9
+    204: UNKNOWN10
+    257: UNKNOWN11
+    262: UNKNOWN12
+    276: UNKNOWN13
+    278: UNKNOWN14
   Size: 303
   Type: assembly
   Offset: 0xC292EE
@@ -16222,29 +16221,29 @@ PSI_THUNDER_COMMON:
   Arguments:
     A: Base Damage
     X: Number of Strikes
-  labels:
-    0x9683: UNKNOWN0
-    0x9692: UNKNOWN1
-    0x9697: UNKNOWN2
-    0x96B1: UNKNOWN3
-    0x96CB: UNKNOWN4
-    0x96FD: UNKNOWN5
-    0x9702: UNKNOWN6
-    0x9739: UNKNOWN7
-    0x9748: UNKNOWN8
-    0x974D: UNKNOWN9
-    0x9771: UNKNOWN10
-    0x9788: UNKNOWN11
-    0x9798: UNKNOWN12
-    0x979C: UNKNOWN13
-    0x97EB: UNKNOWN14
-    0x97FF: UNKNOWN15
-    0x9809: UNKNOWN16
-    0x981C: UNKNOWN17
-    0x9821: UNKNOWN18
-    0x983D: UNKNOWN19
-    0x985A: UNKNOWN20
-    0x9863: UNKNOWN21
+  Labels:
+    24: UNKNOWN0
+    39: UNKNOWN1
+    44: UNKNOWN2
+    70: UNKNOWN3
+    96: UNKNOWN4
+    146: UNKNOWN5
+    151: UNKNOWN6
+    206: UNKNOWN7
+    221: UNKNOWN8
+    226: UNKNOWN9
+    262: UNKNOWN10
+    285: UNKNOWN11
+    301: UNKNOWN12
+    305: UNKNOWN13
+    384: UNKNOWN14
+    404: UNKNOWN15
+    414: UNKNOWN16
+    433: UNKNOWN17
+    438: UNKNOWN18
+    466: UNKNOWN19
+    495: UNKNOWN20
+    504: UNKNOWN21
   Locals:
     0x0004: UNKNOWN
   Size: 518
@@ -16272,86 +16271,86 @@ BTLACT_PSI_THUNDER_O:
   Offset: 0xC29895
 FLASH_IMMUNITY_TEST:
   Description: PSI Flash immunity test
-  labels:
-    0x98B6: UNKNOWN0
-    0x98CB: UNKNOWN1
-    0x98DC: UNKNOWN2
+  Labels:
+    21: UNKNOWN0
+    42: UNKNOWN1
+    59: UNKNOWN2
   Size: 61
   Type: assembly
   Offset: 0xC298A1
 FLASH_INFLICT_FEELING_STRANGE:
   Description: 'PSI Flash: Inflict feeling strange'
-  labels:
-    0x9907: UNKNOWN0
-    0x9915: UNKNOWN1
+  Labels:
+    41: UNKNOWN0
+    55: UNKNOWN1
   Size: 57
   Type: assembly
   Offset: 0xC298DE
 FLASH_INFLICT_PARALYSIS:
   Description: 'PSI Flash: Inflict paralysis'
-  labels:
-    0x9940: UNKNOWN0
-    0x994E: UNKNOWN1
+  Labels:
+    41: UNKNOWN0
+    55: UNKNOWN1
   Size: 57
   Type: assembly
   Offset: 0xC29917
 FLASH_INFLICT_CRYING:
   Description: 'PSI Flash: Inflict crying'
-  labels:
-    0x9977: UNKNOWN0
-    0x9985: UNKNOWN1
+  Labels:
+    39: UNKNOWN0
+    53: UNKNOWN1
   Size: 55
   Type: assembly
   Offset: 0xC29950
 BTLACT_PSI_FLASH_A:
   Description: 'Battle action: PSI Flash α'
-  labels:
-    0x99A7: UNKNOWN0
-    0x99AA: UNKNOWN1
-    0x99AD: UNKNOWN2
+  Labels:
+    32: UNKNOWN0
+    35: UNKNOWN1
+    38: UNKNOWN2
   Size: 39
   Type: assembly
   Offset: 0xC29987
 BTLACT_PSI_FLASH_B:
   Description: 'Battle action: PSI Flash β'
-  labels:
-    0x99D5: UNKNOWN0
-    0x99DE: UNKNOWN1
-    0x99E3: UNKNOWN2
-    0x99E8: UNKNOWN3
-    0x99EB: UNKNOWN4
-    0x99EE: UNKNOWN5
+  Labels:
+    39: UNKNOWN0
+    48: UNKNOWN1
+    53: UNKNOWN2
+    58: UNKNOWN3
+    61: UNKNOWN4
+    64: UNKNOWN5
   Size: 65
   Type: assembly
   Offset: 0xC299AE
 BTLACT_PSI_FLASH_G:
   Description: 'Battle action: PSI Flash γ'
-  labels:
-    0x9A1B: UNKNOWN0
-    0x9A24: UNKNOWN1
-    0x9A29: UNKNOWN2
-    0x9A2E: UNKNOWN3
-    0x9A31: UNKNOWN4
-    0x9A34: UNKNOWN5
+  Labels:
+    44: UNKNOWN0
+    53: UNKNOWN1
+    58: UNKNOWN2
+    63: UNKNOWN3
+    66: UNKNOWN4
+    69: UNKNOWN5
   Size: 70
   Type: assembly
   Offset: 0xC299EF
 BTLACT_PSI_FLASH_O:
   Description: 'Battle action: PSI Flash Ω'
-  labels:
-    0x9A66: UNKNOWN0
-    0x9A6F: UNKNOWN1
-    0x9A74: UNKNOWN2
-    0x9A79: UNKNOWN3
-    0x9A7C: UNKNOWN4
-    0x9A7F: UNKNOWN5
+  Labels:
+    49: UNKNOWN0
+    58: UNKNOWN1
+    63: UNKNOWN2
+    68: UNKNOWN3
+    71: UNKNOWN4
+    74: UNKNOWN5
   Size: 75
   Type: assembly
   Offset: 0xC29A35
 PSI_STARSTORM_COMMON:
   Description: PSI Starstorm (common code)
-  labels:
-    0x9AA4: UNKNOWN0
+  Labels:
+    36: UNKNOWN0
   Size: 38
   Type: assembly
   Offset: 0xC29A80
@@ -16392,63 +16391,63 @@ BTLACT_LIFEUP_O:
   Offset: 0xC29AE1
 BTLACT_HEALING_A:
   Description: 'Battle action: Healing α'
-  labels:
-    0x9B0C: UNKNOWN0
-    0x9B25: UNKNOWN1
-    0x9B3E: UNKNOWN2
-    0x9B6A: UNKNOWN3
-    0x9B78: UNKNOWN4
+  Labels:
+    34: UNKNOWN0
+    59: UNKNOWN1
+    84: UNKNOWN2
+    128: UNKNOWN3
+    142: UNKNOWN4
   Size: 144
   Type: assembly
   Offset: 0xC29AEA
 BTLACT_HEALING_B:
   Description: 'Battle action: Healing β'
-  labels:
-    0x9B9C: UNKNOWN0
-    0x9BB5: UNKNOWN1
-    0x9BCE: UNKNOWN2
-    0x9BFA: UNKNOWN3
-    0x9C26: UNKNOWN4
-    0x9C2A: UNKNOWN5
+  Labels:
+    34: UNKNOWN0
+    59: UNKNOWN1
+    84: UNKNOWN2
+    128: UNKNOWN3
+    172: UNKNOWN4
+    176: UNKNOWN5
   Size: 178
   Type: assembly
   Offset: 0xC29B7A
 BTLACT_HEALING_G:
   Description: 'Battle action: Healing γ'
-  labels:
-    0x9C53: UNKNOWN0
-    0x9C6C: UNKNOWN1
-    0x9C85: UNKNOWN2
-    0x9CA2: UNKNOWN3
-    0x9CB2: UNKNOWN4
-    0x9CB6: UNKNOWN5
+  Labels:
+    39: UNKNOWN0
+    64: UNKNOWN1
+    89: UNKNOWN2
+    118: UNKNOWN3
+    134: UNKNOWN4
+    138: UNKNOWN5
   Size: 140
   Type: assembly
   Offset: 0xC29C2C
 BTLACT_HEALING_O:
   Description: 'Battle action: Healing Ω'
-  labels:
-    0x9CD7: UNKNOWN0
-    0x9CDB: UNKNOWN1
+  Labels:
+    31: UNKNOWN0
+    35: UNKNOWN1
   Size: 36
   Type: assembly
   Offset: 0xC29CB8
 SHIELDS_COMMON:
   Description: Shield and PSI Shield (common code)
-  labels:
-    0x9D1B: UNKNOWN0
-    0x9D1D: UNKNOWN1
-    0x9D24: UNKNOWN2
-    0x9D2B: UNKNOWN3
-    0x9D42: UNKNOWN4
+  Labels:
+    63: UNKNOWN0
+    65: UNKNOWN1
+    72: UNKNOWN2
+    79: UNKNOWN3
+    102: UNKNOWN4
   Size: 104
   Type: assembly
   Offset: 0xC29CDC
 BTLACT_SHIELD_A:
   Description: 'Battle action: Shield α'
-  labels:
-    0x9D6A: UNKNOWN0
-    0x9D78: UNKNOWN1
+  Labels:
+    38: UNKNOWN0
+    52: UNKNOWN1
   Size: 54
   Type: assembly
   Offset: 0xC29D44
@@ -16459,9 +16458,9 @@ REDIRECT_C29D44:
   Offset: 0xC29D7A
 BTLACT_SHIELD_B:
   Description: 'Battle action: Shield β'
-  labels:
-    0x9DA7: UNKNOWN0
-    0x9DB5: UNKNOWN1
+  Labels:
+    38: UNKNOWN0
+    52: UNKNOWN1
   Size: 54
   Type: assembly
   Offset: 0xC29D81
@@ -16472,9 +16471,9 @@ REDIRECT_C29D81:
   Offset: 0xC29DB7
 BTLACT_PSI_SHIELD_A:
   Description: 'Battle action: PSI Shield α'
-  labels:
-    0x9DE4: UNKNOWN0
-    0x9DF2: UNKNOWN1
+  Labels:
+    38: UNKNOWN0
+    52: UNKNOWN1
   Size: 54
   Type: assembly
   Offset: 0xC29DBE
@@ -16485,9 +16484,9 @@ REDIRECT_C29DBE:
   Offset: 0xC29DF4
 BTLACT_PSI_SHIELD_B:
   Description: 'Battle action: PSI Shield β'
-  labels:
-    0x9E21: UNKNOWN0
-    0x9E2F: UNKNOWN1
+  Labels:
+    38: UNKNOWN0
+    52: UNKNOWN1
   Size: 54
   Type: assembly
   Offset: 0xC29DFB
@@ -16498,8 +16497,8 @@ REDIRECT_C29DFB:
   Offset: 0xC29E31
 BTLACT_OFFENSE_UP_A:
   Description: 'Battle action: Offense Up α'
-  labels:
-    0x9E7D: UNKNOWN0
+  Labels:
+    69: UNKNOWN0
   Size: 71
   Type: assembly
   Offset: 0xC29E38
@@ -16510,13 +16509,13 @@ REDIRECT_C29E38:
   Offset: 0xC29E7F
 BTLACT_DEFENSE_DOWN_A:
   Description: 'Battle action: Defense Down α'
-  labels:
-    0x9EC6: UNKNOWN0
-    0x9EC8: UNKNOWN1
-    0x9ECD: UNKNOWN2
-    0x9EE1: UNKNOWN3
-    0x9EEF: UNKNOWN4
-    0x9EFD: UNKNOWN5
+  Labels:
+    64: UNKNOWN0
+    66: UNKNOWN1
+    71: UNKNOWN2
+    91: UNKNOWN3
+    105: UNKNOWN4
+    119: UNKNOWN5
   Size: 121
   Type: assembly
   Offset: 0xC29E86
@@ -16527,9 +16526,9 @@ REDIRECT_C29E86:
   Offset: 0xC29EFF
 BTLACT_HYPNOSIS_A:
   Description: 'Battle action: Hypnosis α (Inflict sleep)'
-  labels:
-    0x9F47: UNKNOWN0
-    0x9F55: UNKNOWN1
+  Labels:
+    65: UNKNOWN0
+    79: UNKNOWN1
   Size: 81
   Type: assembly
   Offset: 0xC29F06
@@ -16540,27 +16539,27 @@ REDIRECT_C29F06_COPY:
   Offset: 0xC29F57
 BTLACT_MAGNET_A:
   Description: 'Battle action: Magnet α (Steal 2d4 PP)'
-  labels:
-    0x9F7E: UNKNOWN0
-    0x9FA7: UNKNOWN1
-    0x9FBB: UNKNOWN2
-    0x9FDF: UNKNOWN3
+  Labels:
+    32: UNKNOWN0
+    73: UNKNOWN1
+    93: UNKNOWN2
+    129: UNKNOWN3
   Size: 131
   Type: assembly
   Offset: 0xC29F5E
 BTLACT_MAGNET_O:
   Description: 'Battle action: Magnet Ω (Steal 2d4 PP)'
-  labels:
-    0x9FF9: UNKNOWN0
-    0x9FFD: UNKNOWN1
+  Labels:
+    24: UNKNOWN0
+    28: UNKNOWN1
   Size: 29
   Type: assembly
   Offset: 0xC29FE1
 BTLACT_PARALYSIS_A:
   Description: 'Battle action: Paralysis α (Inflict paralysis)'
-  labels:
-    0xA03F: UNKNOWN0
-    0xA04D: UNKNOWN1
+  Labels:
+    65: UNKNOWN0
+    79: UNKNOWN1
   Size: 81
   Type: assembly
   Offset: 0xC29FFE
@@ -16571,9 +16570,9 @@ REDIRECT_C29FFE:
   Offset: 0xC2A04F
 BTLACT_BRAINSHOCK_A:
   Description: 'Battle action: Brainshock α (Inflict feeling strange)'
-  labels:
-    0xA097: UNKNOWN0
-    0xA0A5: UNKNOWN1
+  Labels:
+    65: UNKNOWN0
+    79: UNKNOWN1
   Size: 81
   Type: assembly
   Offset: 0xC2A056
@@ -16603,32 +16602,32 @@ UNKNOWN_C2A0EF:
   Type: assembly
   Offset: 0xC2A0EF
 UNKNOWN_C2A0FF:
-  labels:
-    0xA13D: UNKNOWN0
+  Labels:
+    62: UNKNOWN0
   Size: 76
   Type: assembly
   Offset: 0xC2A0FF
 UNKNOWN_C2A14B:
-  labels:
-    0xA185: UNKNOWN0
+  Labels:
+    58: UNKNOWN0
   Size: 72
   Type: assembly
   Offset: 0xC2A14B
 UNKNOWN_C2A193:
-  labels:
-    0xA1CD: UNKNOWN0
+  Labels:
+    58: UNKNOWN0
   Size: 72
   Type: assembly
   Offset: 0xC2A193
 UNKNOWN_C2A1DB:
-  labels:
-    0xA219: UNKNOWN0
+  Labels:
+    62: UNKNOWN0
   Size: 76
   Type: assembly
   Offset: 0xC2A1DB
 UNKNOWN_C2A227:
-  labels:
-    0xA261: UNKNOWN0
+  Labels:
+    58: UNKNOWN0
   Size: 72
   Type: assembly
   Offset: 0xC2A227
@@ -16637,22 +16636,22 @@ UNKNOWN_C2A26F:
   Type: assembly
   Offset: 0xC2A26F
 UNKNOWN_C2A27F:
-  labels:
-    0xA29F: UNKNOWN0
-    0xA2A7: UNKNOWN1
-    0xA2AF: UNKNOWN2
-    0xA2B7: UNKNOWN3
-    0xA2BF: UNKNOWN4
-    0xA2C2: UNKNOWN5
-    0xA2F4: UNKNOWN6
-    0xA302: UNKNOWN7
-    0xA334: UNKNOWN8
-    0xA342: UNKNOWN9
-    0xA348: UNKNOWN10
-    0xA34E: UNKNOWN11
-    0xA354: UNKNOWN12
-    0xA35A: UNKNOWN13
-    0xA35E: UNKNOWN14
+  Labels:
+    32: UNKNOWN0
+    40: UNKNOWN1
+    48: UNKNOWN2
+    56: UNKNOWN3
+    64: UNKNOWN4
+    67: UNKNOWN5
+    117: UNKNOWN6
+    131: UNKNOWN7
+    181: UNKNOWN8
+    195: UNKNOWN9
+    201: UNKNOWN10
+    207: UNKNOWN11
+    213: UNKNOWN12
+    219: UNKNOWN13
+    223: UNKNOWN14
   Size: 225
   Type: assembly
   Offset: 0xC2A27F
@@ -16665,43 +16664,43 @@ UNKNOWN_C2A370:
   Type: assembly
   Offset: 0xC2A370
 UNKNOWN_C2A380:
-  labels:
-    0xA398: UNKNOWN0
-    0xA39C: UNKNOWN1
+  Labels:
+    24: UNKNOWN0
+    28: UNKNOWN1
   Size: 29
   Type: assembly
   Offset: 0xC2A380
 HEAL_POISON:
   Description: Heal poison
-  labels:
-    0xA3CF: UNKNOWN0
+  Labels:
+    50: UNKNOWN0
   Size: 52
   Type: assembly
   Offset: 0xC2A39D
 BTLACT_COUNTER-PSI:
   Description: 'Battle action: Counter-PSI Unit'
-  labels:
-    0xA412: UNKNOWN0
-    0xA420: UNKNOWN1
+  Labels:
+    65: UNKNOWN0
+    79: UNKNOWN1
   Size: 81
   Type: assembly
   Offset: 0xC2A3D1
 BTLACT_SHIELD-KILLER:
   Description: 'Battle action: Shield Killer'
-  labels:
-    0xA45B: UNKNOWN0
-    0xA469: UNKNOWN1
+  Labels:
+    57: UNKNOWN0
+    71: UNKNOWN1
   Size: 73
   Type: assembly
   Offset: 0xC2A422
 BTLACT_HP-SUCKER:
   Description: 'Battle action: HP-Sucker'
-  labels:
-    0xA47E: UNKNOWN0
-    0xA49E: UNKNOWN1
-    0xA4C9: UNKNOWN2
-    0xA4F7: UNKNOWN3
-    0xA505: UNKNOWN4
+  Labels:
+    19: UNKNOWN0
+    51: UNKNOWN1
+    94: UNKNOWN2
+    140: UNKNOWN3
+    154: UNKNOWN4
   Size: 156
   Type: assembly
   Offset: 0xC2A46B
@@ -16712,22 +16711,22 @@ BTLACT_HUNGRY_HP-SUCKER:
   Offset: 0xC2A507
 BTLACT_MUMMY_WRAP:
   Description: 'Battle action: Mummy Wrap'
-  labels:
-    0xA53F: UNKNOWN0
-    0xA541: UNKNOWN1
-    0xA56A: UNKNOWN2
-    0xA578: UNKNOWN3
+  Labels:
+    49: UNKNOWN0
+    51: UNKNOWN1
+    92: UNKNOWN2
+    106: UNKNOWN3
   Size: 108
   Type: assembly
   Offset: 0xC2A50E
 BOTTLE_ROCKET_COMMON:
   Description: Bottle rocket (common code)
-  labels:
-    0xA590: UNKNOWN0
-    0xA5A0: UNKNOWN1
-    0xA5A5: UNKNOWN2
-    0xA5C1: UNKNOWN3
-    0xA5CF: UNKNOWN4
+  Labels:
+    22: UNKNOWN0
+    38: UNKNOWN1
+    43: UNKNOWN2
+    71: UNKNOWN3
+    85: UNKNOWN4
   Size: 87
   Type: assembly
   Offset: 0xC2A57A
@@ -16748,38 +16747,38 @@ BTLACT_MULTI_BOTTLE_ROCKET:
   Offset: 0xC2A5E3
 BTLACT_HANDBAG_STRAP:
   Description: 'Battle action: Handbag Strap'
-  labels:
-    0xA61D: UNKNOWN0
-    0xA61F: UNKNOWN1
-    0xA648: UNKNOWN2
-    0xA656: UNKNOWN3
+  Labels:
+    49: UNKNOWN0
+    51: UNKNOWN1
+    92: UNKNOWN2
+    106: UNKNOWN3
   Size: 108
   Type: assembly
   Offset: 0xC2A5EC
 BOMB_COMMON:
   Description: Bomb (common code)
-  labels:
-    0xA688: UNKNOWN0
-    0xA69F: UNKNOWN1
-    0xA6A4: UNKNOWN2
-    0xA6B8: UNKNOWN3
-    0xA6CF: UNKNOWN4
-    0xA6D4: UNKNOWN5
-    0xA6E1: UNKNOWN6
-    0xA6E6: UNKNOWN7
-    0xA6F7: UNKNOWN8
-    0xA701: UNKNOWN9
-    0xA71D: UNKNOWN10
-    0xA72B: UNKNOWN11
-    0xA73B: UNKNOWN12
-    0xA782: UNKNOWN13
-    0xA788: UNKNOWN14
-    0xA7BA: UNKNOWN15
-    0xA7BE: UNKNOWN16
-    0xA7CA: UNKNOWN17
-    0xA7D6: UNKNOWN18
-    0xA7F4: UNKNOWN19
-    0xA80D: UNKNOWN20
+  Labels:
+    48: UNKNOWN0
+    71: UNKNOWN1
+    76: UNKNOWN2
+    96: UNKNOWN3
+    119: UNKNOWN4
+    124: UNKNOWN5
+    137: UNKNOWN6
+    142: UNKNOWN7
+    159: UNKNOWN8
+    169: UNKNOWN9
+    197: UNKNOWN10
+    211: UNKNOWN11
+    227: UNKNOWN12
+    298: UNKNOWN13
+    304: UNKNOWN14
+    354: UNKNOWN15
+    358: UNKNOWN16
+    370: UNKNOWN17
+    382: UNKNOWN18
+    412: UNKNOWN19
+    437: UNKNOWN20
   Size: 448
   Type: assembly
   Offset: 0xC2A658
@@ -16795,39 +16794,39 @@ BTLACT_SUPER_BOMB:
   Offset: 0xC2A821
 SOLIDIFY:
   Description: Solidify
-  labels:
-    0xA85B: UNKNOWN0
-    0xA869: UNKNOWN1
+  Labels:
+    49: UNKNOWN0
+    63: UNKNOWN1
   Size: 65
   Type: assembly
   Offset: 0xC2A82A
 BTLACT_YOGURT_DISPENSER:
   Description: 'Battle action: Yogurt Dispenser'
-  labels:
-    0xA88D: UNKNOWN0
-    0xA89B: UNKNOWN1
+  Labels:
+    34: UNKNOWN0
+    48: UNKNOWN1
   Size: 50
   Type: assembly
   Offset: 0xC2A86B
 BTLACT_SNAKE:
   Description: 'Battle action: Snake'
-  labels:
-    0xA8F2: UNKNOWN0
-    0xA900: UNKNOWN1
+  Labels:
+    85: UNKNOWN0
+    99: UNKNOWN1
   Size: 101
   Type: assembly
   Offset: 0xC2A89D
 UNKNOWN_C2A902:
-  labels:
-    0xA943: UNKNOWN0
-    0xA951: UNKNOWN1
+  Labels:
+    65: UNKNOWN0
+    79: UNKNOWN1
   Size: 81
   Type: assembly
   Offset: 0xC2A902
 UNKNOWN_C2A953:
-  labels:
-    0xA98C: UNKNOWN0
-    0xA99A: UNKNOWN1
+  Labels:
+    57: UNKNOWN0
+    71: UNKNOWN1
   Size: 73
   Type: assembly
   Offset: 0xC2A953
@@ -16876,16 +16875,16 @@ BTLACT_RUST_PROMOTER_DX:
   Offset: 0xC2AA76
 BTLACT_SUDDEN_GUTS_PILL:
   Description: 'Battle action: Sudden Guts Pill (Double current Guts)'
-  labels:
-    0xAA9E: UNKNOWN0
-    0xAAC4: UNKNOWN1
+  Labels:
+    31: UNKNOWN0
+    69: UNKNOWN1
   Size: 71
   Type: assembly
   Offset: 0xC2AA7F
 BTLACT_DEFENSE_SPRAY:
   Description: 'Battle action: Defense Spray'
-  labels:
-    0xAB0B: UNKNOWN0
+  Labels:
+    69: UNKNOWN0
   Size: 71
   Type: assembly
   Offset: 0xC2AAC6
@@ -16932,56 +16931,56 @@ BTLACT_PRAY_GOLDEN:
   Offset: 0xC2AC51
 BTLACT_PRAY_MYSTERIOUS:
   Description: 'Battle action: Pray (Mysterius Light)'
-  labels:
-    0xAC74: UNKNOWN0
+  Labels:
+    12: UNKNOWN0
   Size: 19
   Type: assembly
   Offset: 0xC2AC68
 BTLACT_PRAY_RAINBOW:
   Description: 'Battle action: Pray (Rainbow Light)'
-  labels:
-    0xAC98: UNKNOWN0
+  Labels:
+    29: UNKNOWN0
   Size: 30
   Type: assembly
   Offset: 0xC2AC7B
 BTLACT_PRAY_AROMA:
   Description: 'Battle action: Pray (Mysterious Aroma)'
-  labels:
-    0xACCA: UNKNOWN0
-    0xACD8: UNKNOWN1
+  Labels:
+    49: UNKNOWN0
+    63: UNKNOWN1
   Size: 65
   Type: assembly
   Offset: 0xC2AC99
 BTLACT_PRAY_RENDING_SOUND:
   Description: 'Battle action: Pray (Heaven-rending Sound)'
-  labels:
-    0xAD0B: UNKNOWN0
-    0xAD19: UNKNOWN1
+  Labels:
+    49: UNKNOWN0
+    63: UNKNOWN1
   Size: 65
   Type: assembly
   Offset: 0xC2ACDA
 BTLACT_PRAY:
   Description: 'Battle action: Pray'
-  labels:
-    0xAD74: UNKNOWN0
-    0xAD7C: UNKNOWN1
-    0xAD84: UNKNOWN2
-    0xAD8C: UNKNOWN3
-    0xAD94: UNKNOWN4
-    0xAD9C: UNKNOWN5
-    0xADA4: UNKNOWN6
-    0xADA7: UNKNOWN7
-    0xADC4: UNKNOWN8
-    0xADE1: UNKNOWN9
-    0xADFE: UNKNOWN10
-    0xAE3E: UNKNOWN11
-    0xAE7D: UNKNOWN12
-    0xAE95: UNKNOWN13
-    0xAEAD: UNKNOWN14
-    0xAEC5: UNKNOWN15
-    0xAEDD: UNKNOWN16
-    0xAEF3: UNKNOWN17
-    0xAEFD: UNKNOWN18
+  Labels:
+    89: UNKNOWN0
+    97: UNKNOWN1
+    105: UNKNOWN2
+    113: UNKNOWN3
+    121: UNKNOWN4
+    129: UNKNOWN5
+    137: UNKNOWN6
+    140: UNKNOWN7
+    169: UNKNOWN8
+    198: UNKNOWN9
+    227: UNKNOWN10
+    291: UNKNOWN11
+    354: UNKNOWN12
+    378: UNKNOWN13
+    402: UNKNOWN14
+    426: UNKNOWN15
+    450: UNKNOWN16
+    472: UNKNOWN17
+    482: UNKNOWN18
   Size: 516
   Type: assembly
   Offset: 0xC2AD1B
@@ -16994,103 +16993,103 @@ BTLACT_MIRROR:
   Type: assembly
   Size: 209
   Description: 'Battle action: Mirror'
-  labels:
-    0xB0C0: UNKNOWN0
-    0xB0CE: UNKNOWN1
-    0xB162: UNKNOWN2
-    0xB170: UNKNOWN3
+  Labels:
+    31: UNKNOWN0
+    45: UNKNOWN1
+    193: UNKNOWN2
+    207: UNKNOWN3
   Offset: 0xC2B0A1
 APPLY_CONDIMENT:
   Description: Apply condiment
   Type: assembly
   Size: 267
-  labels:
-    0xB199: UNKNOWN0
-    0xB1B0: UNKNOWN1
-    0xB1E0: UNKNOWN2
-    0xB1E6: UNKNOWN3
-    0xB219: UNKNOWN4
-    0xB21C: UNKNOWN5
-    0xB249: UNKNOWN6
-    0xB257: UNKNOWN7
-    0xB27B: UNKNOWN8
+  Labels:
+    39: UNKNOWN0
+    62: UNKNOWN1
+    110: UNKNOWN2
+    116: UNKNOWN3
+    167: UNKNOWN4
+    170: UNKNOWN5
+    215: UNKNOWN6
+    229: UNKNOWN7
+    265: UNKNOWN8
   Offset: 0xC2B172
 EAT_FOOD:
   Description: Food
   Type: assembly
   Size: 907
-  labels:
-    0xB2B4: UNKNOWN0
-    0xB2CB: UNKNOWN1
-    0xB2CE: UNKNOWN2
-    0xB2FF: UNKNOWN3
-    0xB307: UNKNOWN4
-    0xB30F: UNKNOWN5
-    0xB317: UNKNOWN6
-    0xB31F: UNKNOWN7
-    0xB327: UNKNOWN8
-    0xB32F: UNKNOWN9
-    0xB337: UNKNOWN10
-    0xB33F: UNKNOWN11
-    0xB342: UNKNOWN12
-    0xB354: UNKNOWN13
-    0xB357: UNKNOWN14
-    0xB360: UNKNOWN15
-    0xB36C: UNKNOWN16
-    0xB36F: UNKNOWN17
-    0xB378: UNKNOWN18
-    0xB38A: UNKNOWN19
-    0xB38D: UNKNOWN20
-    0xB39E: UNKNOWN21
-    0xB3A1: UNKNOWN22
-    0xB3AA: UNKNOWN23
-    0xB3BD: UNKNOWN24
-    0xB3C5: UNKNOWN25
-    0xB3CD: UNKNOWN26
-    0xB3D5: UNKNOWN27
-    0xB3D8: UNKNOWN28
-    0xB43F: UNKNOWN29
-    0xB4A6: UNKNOWN30
-    0xB50D: UNKNOWN31
-    0xB573: UNKNOWN32
-    0xB5D9: UNKNOWN33
-    0xB5DF: UNKNOWN34
-    0xB5E3: UNKNOWN35
-    0xB606: UNKNOWN36
+  Labels:
+    55: UNKNOWN0
+    78: UNKNOWN1
+    81: UNKNOWN2
+    130: UNKNOWN3
+    138: UNKNOWN4
+    146: UNKNOWN5
+    154: UNKNOWN6
+    162: UNKNOWN7
+    170: UNKNOWN8
+    178: UNKNOWN9
+    186: UNKNOWN10
+    194: UNKNOWN11
+    197: UNKNOWN12
+    215: UNKNOWN13
+    218: UNKNOWN14
+    227: UNKNOWN15
+    239: UNKNOWN16
+    242: UNKNOWN17
+    251: UNKNOWN18
+    269: UNKNOWN19
+    272: UNKNOWN20
+    289: UNKNOWN21
+    292: UNKNOWN22
+    301: UNKNOWN23
+    320: UNKNOWN24
+    328: UNKNOWN25
+    336: UNKNOWN26
+    344: UNKNOWN27
+    347: UNKNOWN28
+    450: UNKNOWN29
+    553: UNKNOWN30
+    656: UNKNOWN31
+    758: UNKNOWN32
+    860: UNKNOWN33
+    866: UNKNOWN34
+    870: UNKNOWN35
+    905: UNKNOWN36
   Offset: 0xC2B27D
 CALC_PSI_DMG_MODIFIERS:
   Description: Calculate PSI damage modifiers
   Size: 49
   Type: assembly
-  labels:
-    0xB620: UNKNOWN0
-    0xB626: UNKNOWN1
-    0xB62C: UNKNOWN2
-    0xB632: UNKNOWN3
-    0xB636: UNKNOWN4
+  Labels:
+    24: UNKNOWN0
+    30: UNKNOWN1
+    36: UNKNOWN2
+    42: UNKNOWN3
+    46: UNKNOWN4
   Offset: 0xC2B608
 CALC_PSI_RES_MODIFIERS:
   Description: Calculate PSI resistance modifiers
   Size: 49
   Type: assembly
-  labels:
-    0xB651: UNKNOWN0
-    0xB657: UNKNOWN1
-    0xB65D: UNKNOWN2
-    0xB663: UNKNOWN3
-    0xB667: UNKNOWN4
+  Labels:
+    24: UNKNOWN0
+    30: UNKNOWN1
+    36: UNKNOWN2
+    42: UNKNOWN3
+    46: UNKNOWN4
   Offset: 0xC2B639
 UNKNOWN_C2B66A:
   Size: 129
   Type: assembly
-  labels:
-    0xB68E: UNKNOWN0
-    0xB6C0: UNKNOWN1
-    0xB6C7: UNKNOWN2
-    0xB6D1: UNKNOWN3
-    0xB6DF: UNKNOWN4
-    0xB6E0: UNKNOWN5
-    0xB6E9: UNKNOWN6
+  Labels:
+    36: UNKNOWN0
+    86: UNKNOWN1
+    93: UNKNOWN2
+    103: UNKNOWN3
+    117: UNKNOWN4
+    118: UNKNOWN5
+    127: UNKNOWN6
   Offset: 0xC2B66A
 BATTLE_INIT_ENEMY_STATS:
   Description: Initializes Enemy stats
@@ -17099,16 +17098,16 @@ BATTLE_INIT_ENEMY_STATS:
     X: Unknown
   Size: 581
   Type: assembly
-  labels:
-    0xB737: UNKNOWN0
-    0xB8E5: UNKNOWN1
-    0xB8EF: UNKNOWN2
-    0xB8F9: UNKNOWN3
-    0xB903: UNKNOWN4
-    0xB90D: UNKNOWN5
-    0xB918: UNKNOWN6
-    0xB923: UNKNOWN7
-    0xB92C: UNKNOWN8
+  Labels:
+    76: UNKNOWN0
+    506: UNKNOWN1
+    516: UNKNOWN2
+    526: UNKNOWN3
+    536: UNKNOWN4
+    546: UNKNOWN5
+    557: UNKNOWN6
+    568: UNKNOWN7
+    577: UNKNOWN8
   Offset: 0xC2B6EB
 BATTLE_INIT_PLAYER_STATS:
   Description: Initializes Player stats
@@ -17119,99 +17118,99 @@ COUNT_CHARS:
   Description: Counts characters
   Size: 83
   Type: assembly
-  labels:
-    0xBADC: UNKNOWN0
-    0xBB08: UNKNOWN1
-    0xBB0F: UNKNOWN2
+  Labels:
+    23: UNKNOWN0
+    67: UNKNOWN1
+    74: UNKNOWN2
   Offset: 0xC2BAC5
 CHECK_DEAD_PLAYERS:
   Description: Check for dead player characters
   Size: 324
   Type: assembly
-  labels:
-    0xBB28: UNKNOWN0
-    0xBB3F: UNKNOWN1
-    0xBB4A: UNKNOWN2
-    0xBB55: UNKNOWN3
-    0xBBF5: UNKNOWN4
-    0xBBFC: UNKNOWN5
-    0xBC29: UNKNOWN6
-    0xBC48: UNKNOWN7
-    0xBC4C: UNKNOWN8
-    0xBC4E: UNKNOWN9
-    0xBC5A: UNKNOWN10
+  Labels:
+    16: UNKNOWN0
+    39: UNKNOWN1
+    50: UNKNOWN2
+    61: UNKNOWN3
+    221: UNKNOWN4
+    228: UNKNOWN5
+    273: UNKNOWN6
+    304: UNKNOWN7
+    308: UNKNOWN8
+    310: UNKNOWN9
+    322: UNKNOWN10
   Offset: 0xC2BB18
 RESET_POST-BATTLE_STATS:
   Description: Resets stats after battle
   Size: 93
   Type: assembly
-  labels:
-    0xBC6B: UNKNOWN0
-    0xBCAB: UNKNOWN1
-    0xBCB2: UNKNOWN2
+  Labels:
+    15: UNKNOWN0
+    79: UNKNOWN1
+    86: UNKNOWN2
   Offset: 0xC2BC5C
 UNKNOWN_C2BCB9:
   Size: 45
   Type: assembly
-  labels:
-    0xBCDA: UNKNOWN0
-    0xBCDF: UNKNOWN1
+  Labels:
+    33: UNKNOWN0
+    38: UNKNOWN1
   Offset: 0xC2BCB9
 LOSE_HP_STATUS:
   Description: Lose HP from status effect in battle
   Size: 45
   Type: assembly
-  labels:
-    0xBD07: UNKNOWN0
-    0xBD0C: UNKNOWN1
+  Labels:
+    33: UNKNOWN0
+    38: UNKNOWN1
   Offset: 0xC2BCE6
 UNKNOWN_C2BD13:
   Size: 75
   Type: assembly
-  labels:
-    0xBD2C: UNKNOWN0
-    0xBD46: UNKNOWN1
-    0xBD55: UNKNOWN2
+  Labels:
+    25: UNKNOWN0
+    51: UNKNOWN1
+    66: UNKNOWN2
   Offset: 0xC2BD13
 CALL_FOR_HELP_COMMON:
   Description: Call for help (common code)
   Size: 990
   Type: assembly
-  labels:
-    0xBDA3: UNKNOWN0
-    0xBDB4: UNKNOWN1
-    0xBDC6: UNKNOWN2
-    0xBDDB: UNKNOWN3
-    0xBDEC: UNKNOWN4
-    0xBDF9: UNKNOWN5
-    0xBE1B: UNKNOWN6
-    0xBE22: UNKNOWN7
-    0xBE79: UNKNOWN8
-    0xBECD: UNKNOWN9
-    0xBEE6: UNKNOWN10
-    0xBF1C: UNKNOWN11
-    0xBF33: UNKNOWN12
-    0xBF42: UNKNOWN13
-    0xBF46: UNKNOWN14
-    0xBF53: UNKNOWN15
-    0xBF5D: UNKNOWN16
-    0xBF69: UNKNOWN17
-    0xBF96: UNKNOWN18
-    0xBFB0: UNKNOWN19
-    0xBFE2: UNKNOWN20
-    0xBFF8: UNKNOWN21
-    0xC004: UNKNOWN22
-    0xC05B: UNKNOWN23
-    0xC067: UNKNOWN24
-    0xC071: UNKNOWN25
-    0xC08E: UNKNOWN26
-    0xC09A: UNKNOWN27
-    0xC0B0: UNKNOWN28
-    0xC0B5: UNKNOWN29
-    0xC0F3: UNKNOWN30
-    0xC0FD: UNKNOWN31
-    0xC12C: UNKNOWN32
-    0xC13A: UNKNOWN33
+  Labels:
+    69: UNKNOWN0
+    86: UNKNOWN1
+    104: UNKNOWN2
+    125: UNKNOWN3
+    142: UNKNOWN4
+    155: UNKNOWN5
+    189: UNKNOWN6
+    196: UNKNOWN7
+    283: UNKNOWN8
+    367: UNKNOWN9
+    392: UNKNOWN10
+    446: UNKNOWN11
+    469: UNKNOWN12
+    484: UNKNOWN13
+    488: UNKNOWN14
+    501: UNKNOWN15
+    511: UNKNOWN16
+    523: UNKNOWN17
+    568: UNKNOWN18
+    594: UNKNOWN19
+    644: UNKNOWN20
+    666: UNKNOWN21
+    678: UNKNOWN22
+    765: UNKNOWN23
+    777: UNKNOWN24
+    787: UNKNOWN25
+    816: UNKNOWN26
+    828: UNKNOWN27
+    850: UNKNOWN28
+    855: UNKNOWN29
+    917: UNKNOWN30
+    927: UNKNOWN31
+    974: UNKNOWN32
+    988: UNKNOWN33
   Offset: 0xC2BD5E
 BTLACT_SOW_SEEDS:
   Description: 'Battle action: Sow seeds'
@@ -17231,28 +17230,28 @@ BTLACT_RAINBOW_OF_COLOURS:
 UNKNOWN_C2C1BD:
   Size: 98
   Type: assembly
-  labels:
-    0xC1CD: UNKNOWN0
-    0xC1ED: UNKNOWN1
-    0xC203: UNKNOWN2
-    0xC20A: UNKNOWN3
-    0xC21D: UNKNOWN4
+  Labels:
+    16: UNKNOWN0
+    48: UNKNOWN1
+    70: UNKNOWN2
+    77: UNKNOWN3
+    96: UNKNOWN4
   Offset: 0xC2C1BD
 UNKNOWN_C2C21F:
   Description: Load Music Track X and Battle Background of Enemy Group A
   Size: 269
   Type: assembly
-  labels:
-    0xC23B: UNKNOWN0
-    0xC240: UNKNOWN1
-    0xC253: UNKNOWN2
-    0xC257: UNKNOWN3
-    0xC260: UNKNOWN4
-    0xC2E6: UNKNOWN5
-    0xC2FD: UNKNOWN6
-    0xC31D: UNKNOWN7
-    0xC321: UNKNOWN8
-    0xC32A: UNKNOWN9
+  Labels:
+    28: UNKNOWN0
+    33: UNKNOWN1
+    52: UNKNOWN2
+    56: UNKNOWN3
+    65: UNKNOWN4
+    199: UNKNOWN5
+    222: UNKNOWN6
+    254: UNKNOWN7
+    258: UNKNOWN8
+    267: UNKNOWN9
   Offset: 0xC2C21F
 UNKNOWN_C2C32C:
   Size: 78
@@ -17328,18 +17327,18 @@ GIYGAS_PRAYER_9:
   Description: 'Battle action: Giygas prayer #9'
   Size: 472
   Type: assembly
-  labels:
-    0xC77B: UNKNOWN0
-    0xC7BC: UNKNOWN1
-    0xC817: UNKNOWN2
-    0xC81E: UNKNOWN3
-    0xC83D: UNKNOWN4
-    0xC842: UNKNOWN5
-    0xC868: UNKNOWN6
-    0xC86D: UNKNOWN7
-    0xC872: UNKNOWN8
-    0xC8A0: UNKNOWN9
-    0xC8A4: UNKNOWN10
+  Labels:
+    139: UNKNOWN0
+    204: UNKNOWN1
+    295: UNKNOWN2
+    302: UNKNOWN3
+    333: UNKNOWN4
+    338: UNKNOWN5
+    376: UNKNOWN6
+    381: UNKNOWN7
+    386: UNKNOWN8
+    432: UNKNOWN9
+    436: UNKNOWN10
   Offset: 0xC2C6F0
 LOAD_ENEMY_BATTLE_SPRITES:
   Description: Load enemy sprites into WRAM
@@ -17349,51 +17348,51 @@ LOAD_ENEMY_BATTLE_SPRITES:
 UNKNOWN_C2C92D:
   Size: 1720
   Type: assembly
-  labels:
-    0xC94F: UNKNOWN0
-    0xC967: UNKNOWN1
-    0xC979: UNKNOWN2
-    0xC99A: UNKNOWN3
-    0xC9A2: UNKNOWN4
-    0xC9A5: UNKNOWN5
-    0xC9C2: UNKNOWN6
-    0xC9DC: UNKNOWN7
-    0xC9E2: UNKNOWN8
-    0xCA16: UNKNOWN9
-    0xCA3B: UNKNOWN10
-    0xCA58: UNKNOWN11
-    0xCA72: UNKNOWN12
-    0xCA78: UNKNOWN13
-    0xCAAC: UNKNOWN14
-    0xCACF: UNKNOWN15
-    0xCAD9: UNKNOWN16
-    0xCAF5: UNKNOWN17
-    0xCB1F: UNKNOWN18
-    0xCB39: UNKNOWN19
-    0xCB6B: UNKNOWN20
-    0xCB79: UNKNOWN21
-    0xCBA5: UNKNOWN22
-    0xCBAE: UNKNOWN23
-    0xCBB9: UNKNOWN24
-    0xCBC8: UNKNOWN25
-    0xCBD1: UNKNOWN26
-    0xCC0D: UNKNOWN27
-    0xCC15: UNKNOWN28
-    0xCC9C: UNKNOWN29
-    0xCD08: UNKNOWN30
-    0xCD28: UNKNOWN31
-    0xCD48: UNKNOWN32
-    0xCD68: UNKNOWN33
-    0xCD86: UNKNOWN34
-    0xCD95: UNKNOWN35
-    0xCD9E: UNKNOWN36
-    0xCDDA: UNKNOWN37
-    0xCDE2: UNKNOWN38
-    0xCF1B: UNKNOWN39
-    0xCF29: UNKNOWN40
-    0xCF3D: UNKNOWN41
-    0xCFC3: UNKNOWN42
-    0xCFE3: UNKNOWN43
+  Labels:
+    34: UNKNOWN0
+    58: UNKNOWN1
+    76: UNKNOWN2
+    109: UNKNOWN3
+    117: UNKNOWN4
+    120: UNKNOWN5
+    149: UNKNOWN6
+    175: UNKNOWN7
+    181: UNKNOWN8
+    233: UNKNOWN9
+    270: UNKNOWN10
+    299: UNKNOWN11
+    325: UNKNOWN12
+    331: UNKNOWN13
+    383: UNKNOWN14
+    418: UNKNOWN15
+    428: UNKNOWN16
+    456: UNKNOWN17
+    498: UNKNOWN18
+    524: UNKNOWN19
+    574: UNKNOWN20
+    588: UNKNOWN21
+    632: UNKNOWN22
+    641: UNKNOWN23
+    652: UNKNOWN24
+    667: UNKNOWN25
+    676: UNKNOWN26
+    736: UNKNOWN27
+    744: UNKNOWN28
+    879: UNKNOWN29
+    987: UNKNOWN30
+    1019: UNKNOWN31
+    1051: UNKNOWN32
+    1083: UNKNOWN33
+    1113: UNKNOWN34
+    1128: UNKNOWN35
+    1137: UNKNOWN36
+    1197: UNKNOWN37
+    1205: UNKNOWN38
+    1518: UNKNOWN39
+    1532: UNKNOWN40
+    1552: UNKNOWN41
+    1686: UNKNOWN42
+    1718: UNKNOWN43
   Offset: 0xC2C92D
 UNKNOWN_C2CFE5:
   Size: 199
@@ -17405,9 +17404,9 @@ UNKNOWN_C2D0AC:
     8 Bit Index: false
   Size: 117
   Type: assembly
-  labels:
-    0xD0D5: UNKNOWN0
-    0xD0EF: UNKNOWN1
+  Labels:
+    41: UNKNOWN0
+    67: UNKNOWN1
   Offset: 0xC2D0AC
 LOAD_BATTLE_BG:
   Description: Loads Battle Backgrounds
@@ -17415,33 +17414,33 @@ LOAD_BATTLE_BG:
     A: Background 1
     X: Background 2
     "Y": Letterboxing mode
-  labels:
-    0xD160: UNKNOWN0
-    0xD16B: UNKNOWN1
-    0xD179: UNKNOWN2
-    0xD187: UNKNOWN3
-    0xD193: UNKNOWN4
-    0xD232: UNKNOWN5
-    0xD248: UNKNOWN6
-    0xD317: UNKNOWN7
-    0xD325: UNKNOWN8
-    0xD34A: UNKNOWN9
-    0xD4AB: UNKNOWN10
-    0xD4B5: UNKNOWN11
-    0xD584: UNKNOWN12
-    0xD5A9: UNKNOWN13
-    0xD6DF: UNKNOWN14
-    0xD714: UNKNOWN15
-    0xD754: UNKNOWN16
-    0xD777: UNKNOWN17
-    0xD8A2: UNKNOWN18
-    0xD95E: UNKNOWN19
-    0xD981: UNKNOWN20
-    0xDA9F: UNKNOWN21
-    0xDAA4: UNKNOWN22
-    0xDAB2: UNKNOWN23
-    0xDACD: UNKNOWN24
-    0xDADD: UNKNOWN25
+  Labels:
+    63: UNKNOWN0
+    74: UNKNOWN1
+    88: UNKNOWN2
+    102: UNKNOWN3
+    114: UNKNOWN4
+    273: UNKNOWN5
+    295: UNKNOWN6
+    502: UNKNOWN7
+    516: UNKNOWN8
+    553: UNKNOWN9
+    906: UNKNOWN10
+    916: UNKNOWN11
+    1123: UNKNOWN12
+    1160: UNKNOWN13
+    1470: UNKNOWN14
+    1523: UNKNOWN15
+    1587: UNKNOWN16
+    1622: UNKNOWN17
+    1921: UNKNOWN18
+    2109: UNKNOWN19
+    2144: UNKNOWN20
+    2430: UNKNOWN21
+    2435: UNKNOWN22
+    2449: UNKNOWN23
+    2476: UNKNOWN24
+    2492: UNKNOWN25
   Size: 2498
   Type: assembly
   Offset: 0xC2D121
@@ -17463,146 +17462,146 @@ UNKNOWN_C2DB3F:
     0xE8:
       8 Bit Accum: false
       8 Bit Index: false
-  labels:
-    0xDB73: UNKNOWN0
-    0xDB75: UNKNOWN1
-    0xDB7E: UNKNOWN2
-    0xDB8C: UNKNOWN3
-    0xDBA5: UNKNOWN4
-    0xDBAB: UNKNOWN5
-    0xDBC2: UNKNOWN6
-    0xDBC8: UNKNOWN7
-    0xDBCF: UNKNOWN8
-    0xDBE3: UNKNOWN9
-    0xDBE9: UNKNOWN10
-    0xDBF3: UNKNOWN11
-    0xDC27: UNKNOWN12
-    0xDC6A: UNKNOWN13
-    0xDC8E: UNKNOWN14
-    0xDC93: UNKNOWN15
-    0xDC9B: UNKNOWN16
-    0xDCA1: UNKNOWN17
-    0xDCBA: UNKNOWN18
-    0xDCCB: UNKNOWN19
-    0xDCD3: UNKNOWN20
-    0xDCDC: UNKNOWN21
-    0xDCF9: UNKNOWN22
-    0xDD2E: UNKNOWN23
-    0xDD3E: UNKNOWN24
-    0xDD6F: UNKNOWN25
-    0xDD7F: UNKNOWN26
-    0xDDA0: UNKNOWN27
-    0xDDA7: UNKNOWN28
-    0xDDCF: UNKNOWN29
-    0xDDE3: UNKNOWN30
-    0xDDF6: UNKNOWN31
-    0xDE09: UNKNOWN32
-    0xDE0D: UNKNOWN33
+  Labels:
+    52: UNKNOWN0
+    54: UNKNOWN1
+    63: UNKNOWN2
+    77: UNKNOWN3
+    102: UNKNOWN4
+    108: UNKNOWN5
+    131: UNKNOWN6
+    137: UNKNOWN7
+    144: UNKNOWN8
+    164: UNKNOWN9
+    170: UNKNOWN10
+    180: UNKNOWN11
+    232: UNKNOWN12
+    299: UNKNOWN13
+    335: UNKNOWN14
+    340: UNKNOWN15
+    348: UNKNOWN16
+    354: UNKNOWN17
+    379: UNKNOWN18
+    396: UNKNOWN19
+    404: UNKNOWN20
+    413: UNKNOWN21
+    442: UNKNOWN22
+    495: UNKNOWN23
+    511: UNKNOWN24
+    560: UNKNOWN25
+    576: UNKNOWN26
+    609: UNKNOWN27
+    616: UNKNOWN28
+    656: UNKNOWN29
+    676: UNKNOWN30
+    695: UNKNOWN31
+    714: UNKNOWN32
+    718: UNKNOWN33
   Offset: 0xC2DB3F
 UNKNOWN_C2DE0F:
   Size: 135
   Type: assembly
-  labels:
-    0xDE1C: UNKNOWN0
-    0xDE45: UNKNOWN1
-    0xDE94: UNKNOWN2
+  Labels:
+    13: UNKNOWN0
+    54: UNKNOWN1
+    133: UNKNOWN2
   Offset: 0xC2DE0F
 UNKNOWN_C2DE96:
   Size: 152
   Type: assembly
-  labels:
-    0xDF2C: UNKNOWN0
+  Labels:
+    150: UNKNOWN0
   Offset: 0xC2DE96
 UNKNOWN_C2DF2E:
   Size: 352
   Type: assembly
-  labels:
-    0xDF49: UNKNOWN0
-    0xDF68: UNKNOWN1
-    0xDF93: UNKNOWN2
-    0xE043: UNKNOWN3
-    0xE04F: UNKNOWN4
-    0xE067: UNKNOWN5
-    0xE073: UNKNOWN6
-    0xE08C: UNKNOWN7
+  Labels:
+    27: UNKNOWN0
+    58: UNKNOWN1
+    101: UNKNOWN2
+    277: UNKNOWN3
+    289: UNKNOWN4
+    313: UNKNOWN5
+    325: UNKNOWN6
+    350: UNKNOWN7
   Offset: 0xC2DF2E
 UNKNOWN_C2E08E:
   Size: 89
   Type: assembly
-  labels:
-    0xE0AC: UNKNOWN0
-    0xE0B8: UNKNOWN1
-    0xE0C1: UNKNOWN2
-    0xE0C8: UNKNOWN3
-    0xE0DE: UNKNOWN4
-    0xE0E5: UNKNOWN5
+  Labels:
+    30: UNKNOWN0
+    42: UNKNOWN1
+    51: UNKNOWN2
+    58: UNKNOWN3
+    80: UNKNOWN4
+    87: UNKNOWN5
   Offset: 0xC2E08E
 UNKNOWN_C2E0E7:
   Size: 47
   Type: assembly
-  labels:
-    0xE105: UNKNOWN0
+  Labels:
+    30: UNKNOWN0
   Offset: 0xC2E0E7
 SHOW_PSI_ANIMATION:
   Description: Play PSI Animation A
   Size: 1437
   Type: assembly
-  labels:
-    0xE166: UNKNOWN0
-    0xE194: UNKNOWN1
-    0xE1ED: UNKNOWN2
-    0xE25C: UNKNOWN3
-    0xE2C9: UNKNOWN4
-    0xE2D3: UNKNOWN5
-    0xE2F0: UNKNOWN6
-    0xE4CA: UNKNOWN7
-    0xE4D4: UNKNOWN8
-    0xE4E7: UNKNOWN9
-    0xE4F8: UNKNOWN10
-    0xE524: UNKNOWN11
-    0xE527: UNKNOWN12
-    0xE567: UNKNOWN13
-    0xE587: UNKNOWN14
-    0xE5AC: UNKNOWN15
-    0xE5F3: UNKNOWN16
-    0xE60E: UNKNOWN17
-    0xE61D: UNKNOWN18
-    0xE627: UNKNOWN19
-    0xE637: UNKNOWN20
-    0xE647: UNKNOWN21
-    0xE67C: UNKNOWN22
-    0xE687: UNKNOWN23
-    0xE68C: UNKNOWN24
-    0xE6A5: UNKNOWN25
-    0xE6B1: UNKNOWN26
+  Labels:
+    80: UNKNOWN0
+    126: UNKNOWN1
+    215: UNKNOWN2
+    326: UNKNOWN3
+    435: UNKNOWN4
+    445: UNKNOWN5
+    474: UNKNOWN6
+    948: UNKNOWN7
+    958: UNKNOWN8
+    977: UNKNOWN9
+    994: UNKNOWN10
+    1038: UNKNOWN11
+    1041: UNKNOWN12
+    1105: UNKNOWN13
+    1137: UNKNOWN14
+    1174: UNKNOWN15
+    1245: UNKNOWN16
+    1272: UNKNOWN17
+    1287: UNKNOWN18
+    1297: UNKNOWN19
+    1313: UNKNOWN20
+    1329: UNKNOWN21
+    1382: UNKNOWN22
+    1393: UNKNOWN23
+    1398: UNKNOWN24
+    1423: UNKNOWN25
+    1435: UNKNOWN26
   Offset: 0xC2E116
 UNKNOWN_C2E6B3:
   Size: 529
   Type: assembly
-  labels:
-    0xE6B5: UNKNOWN0
-    0xE6C9: UNKNOWN1
-    0xE6DF: UNKNOWN2
-    0xE766: UNKNOWN3
-    0xE782: UNKNOWN4
-    0xE796: UNKNOWN5
-    0xE7A8: UNKNOWN6
-    0xE7C7: UNKNOWN7
-    0xE7E1: UNKNOWN8
-    0xE7E9: UNKNOWN9
-    0xE813: UNKNOWN10
-    0xE834: UNKNOWN11
-    0xE83D: UNKNOWN12
-    0xE859: UNKNOWN13
-    0xE869: UNKNOWN14
-    0xE883: UNKNOWN15
-    0xE88A: UNKNOWN16
-    0xE88C: UNKNOWN17
-    0xE893: UNKNOWN18
-    0xE8A8: UNKNOWN19
-    0xE8B8: UNKNOWN20
-    0xE8BD: UNKNOWN21
-    0xE8C2: UNKNOWN22
+  Labels:
+    2: UNKNOWN0
+    22: UNKNOWN1
+    44: UNKNOWN2
+    179: UNKNOWN3
+    207: UNKNOWN4
+    227: UNKNOWN5
+    245: UNKNOWN6
+    276: UNKNOWN7
+    302: UNKNOWN8
+    310: UNKNOWN9
+    352: UNKNOWN10
+    385: UNKNOWN11
+    394: UNKNOWN12
+    422: UNKNOWN13
+    438: UNKNOWN14
+    464: UNKNOWN15
+    471: UNKNOWN16
+    473: UNKNOWN17
+    480: UNKNOWN18
+    501: UNKNOWN19
+    517: UNKNOWN20
+    522: UNKNOWN21
+    527: UNKNOWN22
   Offset: 0xC2E6B3
 UNKNOWN_C2E8C4:
   Size: 28
@@ -17612,25 +17611,25 @@ UNKNOWN_C2E8E0:
   Description: Set Battle Swirl Parameters
   Size: 232
   Type: assembly
-  labels:
-    0xE90A: UNKNOWN0
-    0xE918: UNKNOWN1
-    0xE935: UNKNOWN2
-    0xE94B: UNKNOWN3
-    0xE964: UNKNOWN4
-    0xE995: UNKNOWN5
-    0xE99F: UNKNOWN6
-    0xE9BA: UNKNOWN7
-    0xE9C1: UNKNOWN8
+  Labels:
+    42: UNKNOWN0
+    56: UNKNOWN1
+    85: UNKNOWN2
+    107: UNKNOWN3
+    132: UNKNOWN4
+    181: UNKNOWN5
+    191: UNKNOWN6
+    218: UNKNOWN7
+    225: UNKNOWN8
   Offset: 0xC2E8E0
 UNKNOWN_C2E9C8:
   Size: 37
   Type: assembly
-  labels:
-    0xE9E2: UNKNOWN0
-    0xE9E4: UNKNOWN1
-    0xE9E9: UNKNOWN2
-    0xE9EC: UNKNOWN3
+  Labels:
+    26: UNKNOWN0
+    28: UNKNOWN1
+    33: UNKNOWN2
+    36: UNKNOWN3
   Offset: 0xC2E9C8
 UNKNOWN_C2E9ED:
   Size: 40
@@ -17639,18 +17638,18 @@ UNKNOWN_C2E9ED:
 UNKNOWN_C2EA15:
   Size: 95
   Type: assembly
-  labels:
-    0xEA4A: UNKNOWN0
-    0xEA58: UNKNOWN1
-    0xEA66: UNKNOWN2
-    0xEA72: UNKNOWN3
+  Labels:
+    53: UNKNOWN0
+    67: UNKNOWN1
+    81: UNKNOWN2
+    93: UNKNOWN3
   Offset: 0xC2EA15
 UNKNOWN_C2EA74:
   Size: 54
   Type: assembly
-  labels:
-    0xEA9D: UNKNOWN0
-    0xEAA9: UNKNOWN1
+  Labels:
+    41: UNKNOWN0
+    53: UNKNOWN1
   Offset: 0xC2EA74
 UNKNOWN_C2EAAA:
   Size: 37
@@ -17659,83 +17658,83 @@ UNKNOWN_C2EAAA:
 UNKNOWN_C2EACF:
   Size: 27
   Type: assembly
-  labels:
-    0xEAE1: UNKNOWN0
-    0xEAE6: UNKNOWN1
-    0xEAE9: UNKNOWN2
+  Labels:
+    18: UNKNOWN0
+    23: UNKNOWN1
+    26: UNKNOWN2
   Offset: 0xC2EACF
 UNKNOWN_C2EAEA:
   Size: 1021
   Type: assembly
-  labels:
-    0xEB2F: UNKNOWN0
-    0xEBC4: UNKNOWN1
-    0xEBCE: UNKNOWN2
-    0xEC02: UNKNOWN3
-    0xEC05: UNKNOWN4
-    0xEC1D: UNKNOWN5
-    0xEC2B: UNKNOWN6
-    0xEC5C: UNKNOWN7
-    0xECAE: UNKNOWN8
-    0xED4B: UNKNOWN9
-    0xEDB6: UNKNOWN10
-    0xEDD6: UNKNOWN11
-    0xEE60: UNKNOWN12
-    0xEE82: UNKNOWN13
-    0xEE97: UNKNOWN14
-    0xEEC4: UNKNOWN15
-    0xEED6: UNKNOWN16
-    0xEEDB: UNKNOWN17
-    0xEEE5: UNKNOWN18
+  Labels:
+    69: UNKNOWN0
+    218: UNKNOWN1
+    228: UNKNOWN2
+    280: UNKNOWN3
+    283: UNKNOWN4
+    307: UNKNOWN5
+    321: UNKNOWN6
+    370: UNKNOWN7
+    452: UNKNOWN8
+    609: UNKNOWN9
+    716: UNKNOWN10
+    748: UNKNOWN11
+    886: UNKNOWN12
+    920: UNKNOWN13
+    941: UNKNOWN14
+    986: UNKNOWN15
+    1004: UNKNOWN16
+    1009: UNKNOWN17
+    1019: UNKNOWN18
   Offset: 0xC2EAEA
 UNKNOWN_C2EEE7:
   Size: 278
   Type: assembly
-  labels:
-    0xEF21: UNKNOWN0
-    0xEFC3: UNKNOWN1
-    0xEFD4: UNKNOWN2
-    0xEFE3: UNKNOWN3
-    0xEFE6: UNKNOWN4
+  Labels:
+    58: UNKNOWN0
+    220: UNKNOWN1
+    237: UNKNOWN2
+    252: UNKNOWN3
+    255: UNKNOWN4
   Offset: 0xC2EEE7
 BATTLE_SPRITE_WIDTH:
   Description: Gets sprite width/spacing?
   Size: 81
   Type: assembly
-  labels:
-    0xF03A: UNKNOWN0
-    0xF03F: UNKNOWN1
-    0xF044: UNKNOWN2
-    0xF049: UNKNOWN3
-    0xF04C: UNKNOWN4
+  Labels:
+    61: UNKNOWN0
+    66: UNKNOWN1
+    71: UNKNOWN2
+    76: UNKNOWN3
+    79: UNKNOWN4
   Offset: 0xC2EFFD
 UNKNOWN_C2F04E:
   Size: 81
   Type: assembly
-  labels:
-    0xF08B: UNKNOWN0
-    0xF090: UNKNOWN1
-    0xF095: UNKNOWN2
-    0xF09A: UNKNOWN3
-    0xF09D: UNKNOWN4
+  Labels:
+    61: UNKNOWN0
+    66: UNKNOWN1
+    71: UNKNOWN2
+    76: UNKNOWN3
+    79: UNKNOWN4
   Offset: 0xC2F04E
 UNKNOWN_C2F09F:
   Size: 50
   Type: assembly
-  labels:
-    0xF0B3: UNKNOWN0
-    0xF0C2: UNKNOWN1
-    0xF0C7: UNKNOWN2
-    0xF0CF: UNKNOWN3
+  Labels:
+    20: UNKNOWN0
+    35: UNKNOWN1
+    40: UNKNOWN2
+    48: UNKNOWN3
   Offset: 0xC2F09F
 UNKNOWN_C2F0D1:
   Size: 80
   Type: assembly
-  labels:
-    0xF0E3: UNKNOWN0
-    0xF115: UNKNOWN1
-    0xF11A: UNKNOWN2
-    0xF11F: UNKNOWN3
+  Labels:
+    18: UNKNOWN0
+    68: UNKNOWN1
+    73: UNKNOWN2
+    78: UNKNOWN3
   Offset: 0xC2F0D1
 UNKNOWN_C2F121:
   Labels:
@@ -17804,21 +17803,21 @@ UNKNOWN_C2F121:
   Type: assembly
   Offset: 0xC2F121
 UNKNOWN_C2F724:
-  labels:
-    0xF73F: UNKNOWN0
-    0xF74C: UNKNOWN1
-    0xF75C: UNKNOWN2
-    0xF76C: UNKNOWN3
-    0xF77B: UNKNOWN4
-    0xF785: UNKNOWN5
-    0xF7AE: UNKNOWN6
-    0xF808: UNKNOWN7
-    0xF84D: UNKNOWN8
-    0xF867: UNKNOWN9
-    0xF8A1: UNKNOWN10
-    0xF8D9: UNKNOWN11
-    0xF8EB: UNKNOWN12
-    0xF8F7: UNKNOWN13
+  Labels:
+    27: UNKNOWN0
+    40: UNKNOWN1
+    56: UNKNOWN2
+    72: UNKNOWN3
+    87: UNKNOWN4
+    97: UNKNOWN5
+    138: UNKNOWN6
+    228: UNKNOWN7
+    297: UNKNOWN8
+    323: UNKNOWN9
+    381: UNKNOWN10
+    437: UNKNOWN11
+    455: UNKNOWN12
+    467: UNKNOWN13
   Size: 469
   Type: assembly
   Offset: 0xC2F724
@@ -17827,25 +17826,25 @@ UNKNOWN_C2F8F9:
   Type: assembly
   Offset: 0xC2F8F9
 UNKNOWN_C2F917:
-  labels:
-    0xF92C: UNKNOWN0
-    0xF95F: UNKNOWN1
-    0xF962: UNKNOWN2
-    0xF967: UNKNOWN3
-    0xF976: UNKNOWN4
-    0xF982: UNKNOWN5
-    0xF9C3: UNKNOWN6
-    0xF9C9: UNKNOWN7
-    0xF9CE: UNKNOWN8
-    0xFA12: UNKNOWN9
-    0xFA1E: UNKNOWN10
-    0xFA28: UNKNOWN11
-    0xFA34: UNKNOWN12
-    0xFA75: UNKNOWN13
-    0xFA7B: UNKNOWN14
-    0xFA80: UNKNOWN15
-    0xFAC4: UNKNOWN16
-    0xFAD0: UNKNOWN17
+  Labels:
+    21: UNKNOWN0
+    72: UNKNOWN1
+    75: UNKNOWN2
+    80: UNKNOWN3
+    95: UNKNOWN4
+    107: UNKNOWN5
+    172: UNKNOWN6
+    178: UNKNOWN7
+    183: UNKNOWN8
+    251: UNKNOWN9
+    263: UNKNOWN10
+    273: UNKNOWN11
+    285: UNKNOWN12
+    350: UNKNOWN13
+    356: UNKNOWN14
+    361: UNKNOWN15
+    429: UNKNOWN16
+    441: UNKNOWN17
   Size: 443
   Type: assembly
   Offset: 0xC2F917
@@ -17861,65 +17860,65 @@ UNKNOWN_C2FAD8:
   Type: assembly
   Offset: 0xC2FAD8
 UNKNOWN_C2FADE:
-  labels:
-    0xFAFD: UNKNOWN0
-    0xFB2E: UNKNOWN1
+  Labels:
+    31: UNKNOWN0
+    80: UNKNOWN1
   Size: 87
   Type: assembly
   Offset: 0xC2FADE
 UNKNOWN_C2FB35:
-  labels:
-    0xFBB0: UNKNOWN0
-    0xFBC6: UNKNOWN1
-    0xFBE8: UNKNOWN2
-    0xFC14: UNKNOWN3
-    0xFC29: UNKNOWN4
-    0xFC46: UNKNOWN5
-    0xFC67: UNKNOWN6
-    0xFC7B: UNKNOWN7
-    0xFC92: UNKNOWN8
+  Labels:
+    123: UNKNOWN0
+    145: UNKNOWN1
+    179: UNKNOWN2
+    223: UNKNOWN3
+    244: UNKNOWN4
+    273: UNKNOWN5
+    306: UNKNOWN6
+    326: UNKNOWN7
+    349: UNKNOWN8
   Size: 369
   Type: assembly
   Offset: 0xC2FB35
 UNKNOWN_C2FCA6:
-  labels:
-    0xFD11: UNKNOWN0
-    0xFD1D: UNKNOWN1
-    0xFD48: UNKNOWN2
-    0xFD56: UNKNOWN3
-    0xFD79: UNKNOWN4
-    0xFD85: UNKNOWN5
+  Labels:
+    107: UNKNOWN0
+    119: UNKNOWN1
+    162: UNKNOWN2
+    176: UNKNOWN3
+    211: UNKNOWN4
+    223: UNKNOWN5
   Size: 243
   Type: assembly
   Offset: 0xC2FCA6
 UNKNOWN_C2FD99:
-  labels:
-    0xFDAB: UNKNOWN0
-    0xFDBB: UNKNOWN1
-    0xFDFA: UNKNOWN2
-    0xFE0E: UNKNOWN3
-    0xFE24: UNKNOWN4
-    0xFE34: UNKNOWN5
-    0xFE54: UNKNOWN6
-    0xFE6A: UNKNOWN7
-    0xFE7A: UNKNOWN8
-    0xFE9A: UNKNOWN9
-    0xFEB0: UNKNOWN10
-    0xFEC0: UNKNOWN11
-    0xFED2: UNKNOWN12
-    0xFEDE: UNKNOWN13
-    0xFEE5: UNKNOWN14
-    0xFEEB: UNKNOWN15
-    0xFEF7: UNKNOWN16
+  Labels:
+    18: UNKNOWN0
+    34: UNKNOWN1
+    97: UNKNOWN2
+    117: UNKNOWN3
+    139: UNKNOWN4
+    155: UNKNOWN5
+    187: UNKNOWN6
+    209: UNKNOWN7
+    225: UNKNOWN8
+    257: UNKNOWN9
+    279: UNKNOWN10
+    295: UNKNOWN11
+    313: UNKNOWN12
+    325: UNKNOWN13
+    332: UNKNOWN14
+    338: UNKNOWN15
+    350: UNKNOWN16
   Size: 352
   Type: assembly
   Offset: 0xC2FD99
 UNKNOWN_C2FEF9:
-  labels:
-    0xFF73: UNKNOWN0
-    0xFF7A: UNKNOWN1
-    0xFF8C: UNKNOWN2
-    0xFF98: UNKNOWN3
+  Labels:
+    122: UNKNOWN0
+    129: UNKNOWN1
+    147: UNKNOWN2
+    159: UNKNOWN3
   Size: 161
   Type: assembly
   Offset: 0xC2FEF9
