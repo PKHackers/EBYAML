@@ -20512,8 +20512,7 @@ scripttables:
   name: MUSIC_PACK_POINTER_TABLE
   entries:
   - name: Unknown
-    type: pointer
-    endianness: m
+    type: hilomid pointer
     size: 3
   offset: 0xC4F947
 0xC4FB42:
@@ -21070,10 +21069,16 @@ scripttables:
     size: 2
   - name: Frame count
     size: 1
-  - name: unknown 2
-    type: bytearray
-    size: 2
-  - name: Duration of enemy colour change
+  - name: Animation target
+    size: 1
+    values:
+    - One Enemy
+    - Row
+    - All Enemies
+    - Thunder
+  - name: Enemy color change delay
+    size: 1
+  - name: Enemy colour change duration
     size: 1
   - name: Enemy colour
     type: palette
@@ -22042,9 +22047,9 @@ scripttables:
     - Poo can use
     - Item can change
     - Cannot be given away
-    - Unknown
+    - Cannot be stored with Escargo Express 
     - Item disappears when used
-  - name: Effect
+  - name: Action
     size: 2
   - name: Argument
     size: 4
@@ -22180,7 +22185,7 @@ scripttables:
     - Other
     - Unusable
     - Usable
-  - name: Effect
+  - name: Action 
     size: 2
   - name: Level learned by Ness
     size: 1
@@ -22427,6 +22432,9 @@ scripttables:
   entries:
   - name: '"The" Flag'
     size: 1
+    values:
+    - False
+    - True
   - name: Name
     size: 25
     type: script
@@ -22449,6 +22457,16 @@ scripttables:
     size: 2
   - name: Run Flag
     size: 1
+    values:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - Unknown
+    - True
+    - False
   - name: HP
     size: 2
   - name: PP
@@ -22544,8 +22562,20 @@ scripttables:
     size: 1
   - name: Boss Flag
     size: 1
+    values:
+    - False
+    - True
   - name: Item Rarity
     size: 1
+    values:
+    - 1/128
+    - 2/128
+    - 4/128
+    - 8/128
+    - 16/128
+    - 32/128
+    - 64/128
+    - 128/128
   - name: Item Dropped
     size: 1
   - name: Initial Status
@@ -23419,11 +23449,11 @@ scripttables:
   description: Produced By Itoi Graphics
   name: PRODUCED_ITOI_GRAPHICS
   offset: 0xE1AB4B
-0xE1AD01: &NINTENDO_PRESENTATION_PALETTE
+0xE1AD01: &NINTENDO_PRESENTATION_ARRANGEMENT
   type: data
   size: 77
   description: Presented By Nintendo Arrangement
-  name: NINTENDO_PRESENTATION_PALETTE
+  name: NINTENDO_PRESENTATION_ARRANGEMENT
   offset: 0xE1AD01
 0xE1AD4E: &NINTENDO_PRESENTATION_GRAPHICS
   type: data
@@ -23503,13 +23533,21 @@ scripttables:
   type: data
   size: 65
   offset: 0xE1E4E7
-0xE1E528:
+0xE1E528: &STAFF_CREDITS_FONT_GRAPHICS
   type: data
   size: 1004
+  description: Staff Credits Font Graphics
+  name: STAFF_CREDITS_FONT_GRAPHICS
   offset: 0xE1E528
-0xE1E914:
+0xE1E914: &STAFF_CREDITS_FONT_PALETTE
   type: data
   size: 16
+  description: Staff Credits Font Palette
+  name: STAFF_CREDITS_FONT_PALETTE
+  entries:
+  - name: Palette
+    size: 8
+    type: palette
   offset: 0xE1E914
 0xE1E924:
   size: 38
@@ -23519,14 +23557,42 @@ scripttables:
   type: data
   size: 262
   offset: 0xE1E94A
-0xE1EA50:
+0xE1EA50: &TOWN_MAP_ICON_GRAPHICS
   type: data
   size: 1907
+  description: Town Map Icon Graphics
+  name: TOWN_MAP_ICON_GRAPHICS
   offset: 0xE1EA50
-0xE1F1C3:
-  size: 958
+0xE1F1C3: &TOWN_MAP_ICON_PALETTE
   type: data
+  size: 64
+  description: Town Map Icon Palette
+  name: TOWN_MAP_ICON_PALETTE
+  entries:
+  - name: Palette
+    size: 32
+    type: palette
   offset: 0xE1F1C3
+0xE1F203:
+  size: 654
+  type: data
+  offset: 0xE1F203
+0xE1F491: &TOWN_MAP_ICON_PLACEMENT_PTR_TABLE
+  size: 24
+  type: data
+  description: Town Map Icon Placement Pointer Table
+  name: TOWN_MAP_ICON_PLACEMENT_PTR_TABLE
+  entries:
+  - name: Pointer
+    size: 4
+    type: pointer
+  offset: 0xE1F491
+0xE1F4A9: &TOWN_MAP_ICON_PLACEMENT_DATA
+  size: 216
+  type: data
+  description: Town Map Icon Placement Data
+  name: TOWN_MAP_ICON_PLACEMENT_DATA
+  offset: 0xE1F4A9
 0xE1F581: &AUDIO_PACK_123
   type: data
   size: 2687
@@ -24903,8 +24969,25 @@ scripttables:
   offset: 0xEFA460
 0xEFA6EC:
   type: data
-  size: 11823
+  size: 35
   offset: 0xEFA6EC
+0xEFA70F: &MAP_DATA_PER-SECTOR_TOWN_MAP_DATA
+  type: data
+  size: 7680
+  description: 'Map Data: Per-Sector Town Map Data'
+  name: MAP_DATA_PER-SECTOR_TOWN_MAP_DATA
+  entries:
+  - name: Town Map
+    size: 1
+  - name: Town Map X
+    size: 1
+  - name: Town Map Y
+    size: 1
+  offset: 0xEFA70F
+0xEFC50F:
+  type: data
+  size: 4108
+  offset: 0xEFC50F
 0xEFD51B: &DEBUG_SOUND_MODE_MENU_TEXT
   description: Programmers' Sound Mode Menu Text
   name: DEBUG_SOUND_MODE_MENU_TEXT
@@ -26334,7 +26417,7 @@ GAS_STATION_PALETTE: *GAS_STATION_PALETTE
 GAS_STATION_PALETTE2: *GAS_STATION_PALETTE2
 PRODUCED_ITOI_ARRANGEMENT: *PRODUCED_ITOI_ARRANGEMENT
 PRODUCED_ITOI_GRAPHICS: *PRODUCED_ITOI_GRAPHICS
-NINTENDO_PRESENTATION_PALETTE: *NINTENDO_PRESENTATION_PALETTE
+NINTENDO_PRESENTATION_ARRANGEMENT: *NINTENDO_PRESENTATION_ARRANGEMENT
 NINTENDO_PRESENTATION_GRAPHICS: *NINTENDO_PRESENTATION_GRAPHICS
 NINTENDO_ITOI_PALETTE: *NINTENDO_ITOI_PALETTE
 TITLE_SCREEN_ARRANGEMENT: *TITLE_SCREEN_ARRANGEMENT
@@ -26533,4 +26616,11 @@ CHAR_STRUCT: *CHAR_STRUCT
   charset: standardtext
   name: COMPRESSED_SRAM
   offset: 0xA06000
+STAFF_CREDITS_FONT_GRAPHICS: *STAFF_CREDITS_FONT_GRAPHICS
+STAFF_CREDITS_FONT_PALETTE: *STAFF_CREDITS_FONT_PALETTE
+TOWN_MAP_ICON_GRAPHICS: *TOWN_MAP_ICON_GRAPHICS
+TOWN_MAP_ICON_PALETTE: *TOWN_MAP_ICON_PALETTE
+TOWN_MAP_ICON_PLACEMENT_PTR_TABLE: *TOWN_MAP_ICON_PLACEMENT_PTR_TABLE
+TOWN_MAP_ICON_PLACEMENT_DATA: *TOWN_MAP_ICON_PLACEMENT_DATA
+MAP_DATA_PER-SECTOR_TOWN_MAP_DATA: *MAP_DATA_PER-SECTOR_TOWN_MAP_DATA
 ...
