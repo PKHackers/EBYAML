@@ -1208,7 +1208,7 @@ Script Tables:
 ...
 ---
 SNES_HEADER:
-  Description: Structure holding information about the game, including cartridge type and various code vectors.
+  Description: Structure describing aspects of the cartridge
   Offset: 0x00FFB0
   Size: 0x4F
   Type: data
@@ -1951,26 +1951,32 @@ UNKNOWN_7E0091:
   Notes: "$C085B7?"
   Offset: 0x7E0091
   Size: 1
+  Type: data
 UNKNOWN_7E0092:
   Notes: "$C085B7?"
   Offset: 0x7E0092
   Size: 2
+  Type: data
 UNKNOWN_7E0094:
   Notes: "$C085B7? Lower half of an address?"
   Offset: 0x7E0094
   Size: 2
+  Type: data
 UNKNOWN_7E0096:
   Notes: "$C085B7? Upper half of an address?"
   Offset: 0x7E0096
   Size: 1
+  Type: data
 UNKNOWN_7E0097:
   Notes: "$C085B7?"
   Offset: 0x7E0097
   Size: 2
+  Type: data
 UNKNOWN_7E0099:
   Notes: "$C085B7?"
   Offset: 0x7E0099
   Size: 2
+  Type: data
 TIMER_LOW:
   Description: In-game Timer (Low half)
   Offset: 0x7E00A7
@@ -2048,27 +2054,27 @@ UNKNOWN_30x2_TABLE_2:
   Type: data
   Size: 0x3C
 SPRITE_SCREEN_X_TABLE:
-  Description: 30x2 table - X position in screen pixel coordinates
+  Description: Sprite X screen position table
   Offset: 0x7E0B16
   Type: data
   Size: 0x3C
 SPRITE_SCREEN_Y_TABLE:
-  Description: 30x2 table - Y position in screen pixel coordinates
+  Description: Sprite Y screen position table
   Offset: 0x7E0B52
   Type: data
   Size: 0x3C
 SPRITE_ABS_X_TABLE:
-  Description: 30x2 table - X position in absolute pixel coordinates
+  Description: Sprite X world position table
   Offset: 0x7E0B8E
   Type: data
   Size: 0x3C
 SPRITE_ABS_Y_TABLE:
-  Description: 30x2 table - Y position in absolute pixel coordinates
+  Description: Sprite Y world position table
   Offset: 0x7E0BCA
   Type: data
   Size: 0x3C
 SPRITE_ABS_Z_TABLE:
-  Description: 30x2 table - Z position in absolute pixel coordinates
+  Description: Sprite Z world position table
   Offset: 0x7E0C06
   Type: data
   Size: 0x3C
@@ -2118,92 +2124,92 @@ SPRITE_DELTA_Z_FRACTION_TABLE:
   Type: data
   Size: 0x3C
 UNKNOWN_30x2_TABLE_3:
-  Description: '*** UNKNOWN - 30x2 table - C09AF9 entry 0 - Used by timed events like
+  Notes: '*** 30x2 table - C09AF9 entry 0 - Used by timed events like
     Escargo Express? ***'
   Offset: 0x7E0E5E
   Type: data
   Size: 0x3C
 UNKNOWN_30x2_TABLE_4:
-  Description: '*** UNKNOWN - 30x2 table - C09AF9 entry 1 ***'
+  Notes: '*** UNKNOWN - 30x2 table - C09AF9 entry 1 ***'
   Offset: 0x7E0E9A
   Type: data
   Size: 0x3C
 UNKNOWN_30x2_TABLE_5:
-  Description: '*** UNKNOWN - 30x2 table - C09AF9 entry 2 ***'
+  Notes: '*** UNKNOWN - 30x2 table - C09AF9 entry 2 ***'
   Offset: 0x7E0ED6
   Type: data
   Size: 0x3C
 UNKNOWN_30x2_TABLE_6:
-  Description: '*** UNKNOWN - 30x2 table - C09AF9 entry 3 ***'
+  Notes: '*** UNKNOWN - 30x2 table - C09AF9 entry 3 ***'
   Offset: 0x7E0F12
   Type: data
   Size: 0x3C
 UNKNOWN_30x2_TABLE_7:
-  Description: '*** UNKNOWN - 30x2 table - C09AF9 entry 4 ***'
+  Notes: '*** UNKNOWN - 30x2 table - C09AF9 entry 4 ***'
   Offset: 0x7E0F4E
   Type: data
   Size: 0x3C
 UNKNOWN_30x2_TABLE_8:
-  Description: '*** UNKNOWN - 30x2 table - C09AF9 entry 5 ***'
+  Notes: '*** UNKNOWN - 30x2 table - C09AF9 entry 5 ***'
   Offset: 0x7E0F8A
   Type: data
   Size: 0x3C
 UNKNOWN_30x2_TABLE_9:
-  Description: 30x2 table - C09AF9 entry 6 - X destination in absolute pixel coordinates
+  Notes: 30x2 table - C09AF9 entry 6 - X destination in absolute pixel coordinates
   Offset: 0x7E0FC6
   Type: data
   Size: 0x3C
 UNKNOWN_30x2_TABLE_10:
-  Description: 30x2 table - C09AF9 entry 6 - Y destination in absolute pixel coordinates
+  Notes: 30x2 table - C09AF9 entry 6 - Y destination in absolute pixel coordinates
   Offset: 0x7E1002
   Type: data
   Size: 0x3C
 UNKNOWN_30x2_TABLE_11:
-  Description: '*** UNKNOWN - 30x2 table - Sprite-drawing priority, lower numbers
+  Notes: '*** UNKNOWN - 30x2 table - Sprite-drawing priority, lower numbers
     first? ***'
   Offset: 0x7E103E
   Type: data
   Size: 0x3C
 UNKNOWN_30x2_TABLE_12:
-  Description: '*** UNKNOWN - 30x2 table - Low part of a long pointer? ***'
+  Notes: '*** UNKNOWN - 30x2 table - Low part of a long pointer? ***'
   Offset: 0x7E107A
   Type: data
   Size: 0x3C
 UNKNOWN_30x2_TABLE_13:
-  Description: '*** UNKNOWN - 30x2 table - High part of a long pointer? ***'
+  Notes: '*** UNKNOWN - 30x2 table - High part of a long pointer? ***'
   Offset: 0x7E10B6
   Type: data
   Size: 0x3C
 UNKNOWN_30x2_TABLE_14:
-  Description: '*** UNKNOWN - 30x2 table - Adjusted by movement codes: [26], [3C],
+  Notes: '*** UNKNOWN - 30x2 table - Adjusted by movement codes: [26], [3C],
     [3D], [3E] ***'
   Offset: 0x7E10F2
   Type: data
   Size: 0x3C
 UNKNOWN_30x2_TABLE_15:
-  Description: '*** UNKNOWN - 30x2 table - Low part of a long pointer ***'
+  Notes: '*** UNKNOWN - 30x2 table - Low part of a long pointer ***'
   Offset: 0x7E112E
   Type: data
   Size: 0x3C
 UNKNOWN_30x2_TABLE_16:
-  Description: '*** UNKNOWN - 30x2 table - High part of a long pointer ***'
+  Notes: '*** UNKNOWN - 30x2 table - High part of a long pointer ***'
   Offset: 0x7E116A
   Type: data
   Size: 0x3C
 UNKNOWN_30x2_TABLE_17:
-  Description: '*** UNKNOWN - 30x2 table - Short assembly pointer (set by [23] - callback:
+  Notes: '*** UNKNOWN - 30x2 table - Short assembly pointer (set by [23] - callback:
     recalc screen coords?) ***'
   Offset: 0x7E11A6
   Type: data
   Size: 0x3C
 UNKNOWN_30x2_TABLE_18:
-  Description: '*** UNKNOWN - 30x2 table - Short assembly pointer (set by [22] - see
+  Notes: '*** UNKNOWN - 30x2 table - Short assembly pointer (set by [22] - see
     C0/A0F6?) ***'
   Offset: 0x7E11E2
   Type: data
   Size: 0x3C
 UNKNOWN_30x2_TABLE_19:
-  Description: '*** UNKNOWN - 30x2 table - Short assembly pointer (set by [25] - callback:
+  Notes: '*** UNKNOWN - 30x2 table - Short assembly pointer (set by [25] - callback:
     atomic motion?) ***'
   Offset: 0x7E121E
   Type: data
@@ -2473,13 +2479,15 @@ UNKNOWN_30x2_TABLE_41:
   Type: data
   Size: 0x3C
 LOADED_TPT_ENTRIES:
-  Description: 30x2 table - TPT entry (has another meaning for generated enemies)
+  Description: Loaded TPT entries?
+  Notes: 30x2 table - TPT entry (has another meaning for generated enemies)
     <-- LOOK INTO
   Offset: 0x7E2C9A
   Type: data
   Size: 0x3C
 LOADED_TPT_ENTRIES_SPRITES:
-  Description: 30x2 table - Sprite (uses standard out-of-battle sprite listing)
+  Description: Sprites for loaded TPT entries
+  Notes: 30x2 table - Sprite (uses standard out-of-battle sprite listing)
   Offset: 0x7E2CD6
   Type: data
   Size: 0x3C
@@ -2640,20 +2648,27 @@ UNKNOWN_7E4A58:
   Description: Unknown, Prevents TPT entries from loading when zero
   Offset: 0x7E4A58
   Type: data
+  Size: 2
 UNKNOWN_7E4A5C:
   Offset: 0x7E4A5C
   Type: data
+  Size: 2
+  Notes: Seen at C02194
 MAGIC_BUTTERFLY:
   Description: Magic Butterfly Flag
   Offset: 0x7E4A60
   Type: data
+  Size: 2
 SHOW_NPC_FLAG:
   Description: People-type TPT appearance Flag
   Offset: 0x7E4A66
   Type: data
+  Size: 2
 UNKNOWN_7E4A68:
   Offset: 0x7E4A68
   Type: data
+  Size: 2
+  Notes: Seen at C02194
 CURRENT_BATTLE_GROUP:
   Description: Current battle group (see [1F 23] for listing)
   Offset: 0x7E4A8C
@@ -2717,10 +2732,12 @@ CURRENT_TPT_ENTRY:
   Description: Current TPT entry
   Offset: 0x7E5D62
   Type: data
+  Size: 2
 UNKNOWN_7E5D74:
   Description: Related to timers?
   Offset: 0x7E5D74
   Type: data
+  Size: 2
 UNKNOWN_7E5D9A:
   Offset: 0x7E5D9A
   Size: 2
@@ -2734,6 +2751,7 @@ UNKNOWN_7E5DBA:
 MUSHROOMIZED_WALKING_FLAG:
   Description: Mushroomized Walking
   Offset: 0x7E5DA0
+  Size: 2
   Type: data
 UNKNOWN_7E5DC0:
   Offset: 0x7E5DC0
@@ -2745,19 +2763,20 @@ UNKNOWN_7E5DD4:
   Size: 2
   Type: data
 UNKNOWN_7E5DEA:
-  Description: '*** UNKNOWN - Door-related table, four entries, six bytes each, last
-    four are a long pointer ***'
+  Notes: Door-related table, four entries, six bytes each, last four are a long pointer
   Offset: 0x7E5DEA
   Type: data
   Size: 24
 UNKNOWN_7E5E02:
-  Description: '*** UNKNOWN - Door-related ***'
+  Notes: Door-related
   Offset: 0x7E5E02
   Type: data
+  Size: 2
 UNKNOWN_7E5E04:
-  Description: '*** UNKNOWN - Door-related ***'
+  Notes: Door-related
   Offset: 0x7E5E04
   Type: data
+  Size: 2
 UNKNOWN_7E5E6D:
   Offset: 0x7E5E6D
   Size: 1
@@ -2854,6 +2873,7 @@ WINDOW_STATS_TABLE:
     Size: 31
 UNKNOWN_7E88E0:
   Offset: 0x7E88E0
+  Size: 2
   Type: data
 UNKNOWN_7E88E2:
   Offset: 0x7E88E2
@@ -2872,6 +2892,7 @@ CURRENT_FOCUS_WINDOW:
 PSI_WINDOW_CHARACTER:
   Description: Main menu PSI window character number (Ness = 0x00, Poo = 0x03)
   Offset: 0x7E89CA
+  Size: 2
   Type: data
 UNKNOWN_7E89D4:
   Description: Text slots for 70 strings of 45 bytes each?
@@ -2964,7 +2985,7 @@ UNKNOWN_7E9662:
   Notes: Seen at C442AC
   Offset: 0x7E9662
 UNKNOWN_7E96AA:
-  Description: Table involved with text subroutines (08 code) somehow. Ten entries
+  Notes: Table involved with text subroutines (08 code) somehow. Ten entries
     of 0x1B (27) bytes each, so it runs up to 7E97B7? Text system stack frames?
   Offset: 0x7E96AA
   Size: 0x10E
@@ -2987,6 +3008,7 @@ CC_ARGUMENT_GATHERING_LOOP_COUNTER:
 UNKNOWN_7E97DA:
   Description: Storage for strings loaded with [19]? (How much space?)
   Offset: 0x7E97DA
+  Size: 0x1B
   Type: data
 GAME_STATE:
   Description: Non-character game state
@@ -3048,6 +3070,7 @@ DMA_TRANSFER_FLAG:
   Description: Indicates if a DMA transfer is in progress
   Offset: 0x7E9E2B
   Type: data
+  Size: 2
 DAD_PHONE_TIMER:
   Description: Dad Phone Timer
   Size: 2
@@ -3139,6 +3162,7 @@ UNKNOWN_7E9F88:
 ENEMIES_IN_BATTLE:
   Description: Number of Enemies in Battle
   Offset: 0x7E9F8A
+  Size: 2
   Type: data
 UNKNOWN_7E9F8C:
   Offset: 0x7E9F8C
@@ -3422,17 +3446,17 @@ UNKNOWN_7EA97C:
   Size: 1
   Type: data
 ATTACKER_NAME_ADJUST_SCRATCH:
-  Description: C2/3BCF scratch space for attacker name adjustments (eg. 0xAC --> "Ness"
-    for the Nightmare)
+  Description: C2/3BCF scratch space for attacker name adjustments
   Offset: 0x7EA983
   Type: data
   Size: 0x1B
+  Notes: eg. 0xAC --> "Ness" for Ness's Nightmare
 TARGET_NAME_ADJUST_SCRATCH:
-  Description: C2/3D05 scratch space for target name adjustments (eg. 0xAC --> "Ness"
-    for the Nightmare)
+  Description: C2/3D05 scratch space for target name adjustments
   Offset: 0x7EA99E
   Type: data
   Size: 0x1A
+  Notes: eg. 0xAC --> "Ness" for Ness's Nightmare
 UNKNOWN_7EAA0C:
   Type: data
   Offset: 0x7EAA0C
@@ -3449,10 +3473,12 @@ ITEM_DROPPED:
 MIRROR_ENEMY:
   Description: Enemy being mirrored by Poo
   Offset: 0x7EAA12
+  Size: 2
   Type: data
 MIRROR_TURN_TIMER:
   Description: Poo mirror turn timer
   Offset: 0x7EAA62
+  Size: 2
   Type: data
 UNKNOWN_7EAA70:
   Offset: 0x7EAA70
@@ -3570,6 +3596,7 @@ CURRENT_SAVE_SLOT:
   Description: Current Save Slot
   Offset: 0x7EB4A1
   Type: data
+  Size: 1
 UNKNOWN_7EB4A8:
   Offset: 0x7EB4A8
   Type: data
@@ -3586,15 +3613,17 @@ UNKNOWN_7EB4CE:
 UNKNOWN_7EB4EF:
   Description: Photo display flag?
   Offset: 0x7EB4EF
+  Size: 2
   Type: data
 CUR_PHOTO_DISPLAY:
   Description: Current Photo Displayed
   Offset: 0x7EB4F1
+  Size: 2
   Type: data
 PIRACY_FLAG:
-  Description: |
-    Non-zero if SRAM size-checking routine is modified
+  Description: Non-zero if SRAM size-checking routine is modified
   Offset: 0x7EB539
+  Size: 2
   Type: data
 CURRENT_MUSIC_TRACK:
   Description: Current Music Track
@@ -3627,10 +3656,12 @@ UNKNOWN_7EB547:
 SECTOR_BOUNDARY_BEHAVIOUR_FLAG:
   Description: Sector Boundary Behavior
   Offset: 0x7EB549
+  Size: 2
   Type: data
 DEBUG_MENU_CURSOR_POSITION:
   Description: Cursor position in debug menu
   Offset: 0x7EB555
+  Size: 2
   Type: data
 DEBUG_MODE_NUMBER:
   Description: Option selected in debug menu
@@ -3638,12 +3669,12 @@ DEBUG_MODE_NUMBER:
   Size: 2
   Type: data
 DEBUG_START_POSITION_X:
-  Description: X Coordinate used for the party leader's starting position in debug mode
+  Description: X coordinate of the party leader's starting position in debug mode
   Offset: 0x7EB561
   Size: 2
   Type: data
 DEBUG_START_POSITION_Y:
-  Description: Y Coordinate used for the party leader's starting position in debug mode
+  Description: Y coordinate of the party leader's starting position in debug mode
   Offset: 0x7EB563
   Size: 2
   Type: data
@@ -3658,6 +3689,7 @@ UNKNOWN_7F0000:
 UNKNOWN_7F8000:
   Offset: 0x7F8000
   Type: data
+  Size: 0x8000
 TILE_COLLISION:
   Description: Tile Collision Data
   Size: 960
@@ -6189,7 +6221,7 @@ UNKNOWN_C090CE:
     23: UNKNOWN0
   Offset: 0xC090CE
 DIVISION16:
-  Description: Divides a number by another number, returns remainder and result. Everything is 16-bit.
+  Description: Divides a 16-bit number by another 16-bit number
   Size: 25
   Type: assembly
   Labels:
@@ -6716,7 +6748,7 @@ UNKNOWN_C09DA1:
 UNKNOWN_C09DAE:
   Size: 234
   Type: assembly
-  labels:
+  Labels:
     9: UNKNOWN0
   Offset: 0xC09DAE
 UNKNOWN_C09E98:
@@ -9980,23 +10012,23 @@ CC_0E:
     24: UNKNOWN0
   Offset: 0xC1461A
 CC_1A_00:
-  Description: 'Text control code: [1A 00 WW WW WW WW XX XX XX XX YY YY YY YY ZZ ZZ
-    ZZ ZZ]'
+  Description: Text control code
   Size: 66
   Type: assembly
   Labels:
     37: UNKNOWN0
     64: UNKNOWN1
   Offset: 0xC1463B
+  Notes: [1A 00 WW WW WW WW XX XX XX XX YY YY YY YY ZZ ZZ ZZ ZZ]
 CC_1A_01:
-  Description: 'Text control code: [1A 01 WW WW WW WW XX XX XX XX YY YY YY YY ZZ ZZ
-    ZZ ZZ]'
+  Description: Text control code
   Size: 66
   Type: assembly
   Labels:
     37: UNKNOWN0
     64: UNKNOWN1
   Offset: 0xC1467D
+  Notes: [1A 01 WW WW WW WW XX XX XX XX YY YY YY YY ZZ ZZ ZZ ZZ]
 CC_1C_05:
   Description: 'Text control code: [1C 05 XX]'
   Size: 31
@@ -16830,10 +16862,11 @@ UNKNOWN_C2A953:
   Type: assembly
   Offset: 0xC2A953
 BTLACT_BAG_OF_DRAGONITE:
-  Description: 'Battle action: Bag of Dragonite (800 ± 25% fire damage)'
+  Description: 'Battle action: Bag of Dragonite'
   Size: 33
   Type: assembly
   Offset: 0xC2A99C
+  Notes: 800 ± 25% fire damage
 INSECT_SPRAY_COMMON:
   Description: Insect spray (common code)
   Labels:
@@ -16843,17 +16876,17 @@ INSECT_SPRAY_COMMON:
   Type: assembly
   Offset: 0xC2A9BD
 BTLACT_INSECTICIDE_SPRAY:
-  Description: 'Battle action: Insecticide Spray (100 ± 50% damage to insect-type
-    enemies)'
+  Description: 'Battle action: Insecticide Spray'
   Size: 9
   Type: assembly
   Offset: 0xC2AA0C
+  Notes: 100 ± 50% damage to insect-type enemies
 BTLACT_XTERMINATOR_SPRAY:
-  Description: 'Battle action: Xterminator Spray (200 ± 50% damage to insect-type
-    enemies)'
+  Description: 'Battle action: Xterminator Spray'
   Size: 9
   Type: assembly
   Offset: 0xC2AA15
+  Notes: 200 ± 50% damage to insect-type enemies
 RUST_SPRAY_COMMON:
   Description: Rust spray (common code)
   Labels:
@@ -16863,15 +16896,17 @@ RUST_SPRAY_COMMON:
   Type: assembly
   Offset: 0xC2AA1E
 BTLACT_RUST_PROMOTER:
-  Description: 'Battle action: Rust Promoter (200 ± 50% damage to metal-type enemies)'
+  Description: 'Battle action: Rust Promoter'
   Size: 9
   Type: assembly
   Offset: 0xC2AA6D
+  Notes: 200 ± 50% damage to metal-type enemies
 BTLACT_RUST_PROMOTER_DX:
-  Description: 'Battle action: Rust Promoter DX (400 ± 50% damage to metal-type enemies)'
+  Description: 'Battle action: Rust Promoter DX'
   Size: 9
   Type: assembly
   Offset: 0xC2AA76
+  Notes: 400 ± 50% damage to metal-type enemies
 BTLACT_SUDDEN_GUTS_PILL:
   Description: 'Battle action: Sudden Guts Pill (Double current Guts)'
   Labels:
