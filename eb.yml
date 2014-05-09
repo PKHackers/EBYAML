@@ -5920,8 +5920,7 @@ UNKNOWN_C0888B:
   Size: 26
   Type: assembly
   Labels:
-    0: UNKNOWN0
-    23: UNKNOWN1
+    23: UNKNOWN0
   Offset: 0xC0888B
 UNKNOWN_C088A5:
   Size: 12
@@ -22445,7 +22444,7 @@ PSI_ANIM_CFG:
   - Name: Short pointer to tileset
     Type: pointer
     Size: 2
-    base: 13369344
+    base: 0xCC0000
   - Name: Frame duration (1/60th seconds)
     Size: 1
   - Name: Palette duration (1/60th seconds)
@@ -22455,11 +22454,20 @@ PSI_ANIM_CFG:
     Size: 2
   - Name: Frame count
     Size: 1
-  - Name: unknown 2
-    Type: bytearray
-    Size: 2
-  - Name: Duration of enemy colour change
+  - Name: ANIMATION_TARGET
+    Description: Animation Target
+    Values:
+    - One Enemy
+    - Row
+    - All Enemies
+    - Thunder
     Size: 1
+  - Description: Enemy color change delay
+    Size: 1
+    Name: COLOR_CHANGE_DELAY
+  - Description: Duration of enemy colour change
+    Size: 1
+    Name: COLOR_CHANGE_DURATION
   - Name: Enemy colour
     Type: palette
     Size: 2
@@ -23376,10 +23384,10 @@ ITEM_CONFIGURATION_TABLE:
     - Poo can use
     - Item can change
     - Cannot be given away
-    - Unknown
+    - Cannot be stored with Escargo Express
     - Item disappears when used
-  - Name: EFFECT
-    Description: Effect ID
+  - Name: ACTION
+    Description: Battle action ID
     Size: 2
   - Name: ARGUMENT
     Description: Argument
@@ -23514,7 +23522,7 @@ PSI_ABILITY_TABLE:
     - Other
     - Unusable
     - Usable
-  - Name: Effect
+  - Name: ACTION
     Size: 2
   - Name: Level learned by Ness
     Size: 1
@@ -23562,6 +23570,9 @@ ENEMY_CONFIGURATION_TABLE:
   Entries:
   - Name: '"The" Flag'
     Size: 1
+    Values:
+    - False
+    - True
   - Name: Name
     Size: 25
     Type: script
@@ -23584,6 +23595,16 @@ ENEMY_CONFIGURATION_TABLE:
     Size: 2
   - Name: Run Flag
     Size: 1
+    Values:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - Unknown
+    - True
+    - False
   - Name: HP
     Size: 2
   - Name: PP
@@ -23659,8 +23680,20 @@ ENEMY_CONFIGURATION_TABLE:
     Size: 1
   - Name: Boss Flag
     Size: 1
+    Values:
+    - False
+    - True
   - Name: Item Rarity
     Size: 1
+    Values:
+    - 1/128
+    - 2/128
+    - 4/128
+    - 8/128
+    - 16/128
+    - 32/128
+    - 64/128
+    - 128/128
   - Name: Item Dropped
     Size: 1
   - Name: Initial Status
@@ -24534,14 +24567,20 @@ UNKNOWN_E1E4E7:
   Type: data
   Size: 65
   Offset: 0xE1E4E7
-UNKNOWN_E1E528:
+STAFF_CREDITS_FONT_GRAPHICS:
   Type: data
   Size: 1004
   Offset: 0xE1E528
-UNKNOWN_E1E914:
+  Description: Staff Credits Font Graphics
+STAFF_CREDITS_FONT_PALETTE:
   Type: data
   Size: 16
   Offset: 0xE1E914
+  Description: Staff Credits Font Palette
+  Entries:
+   - Name: Palette
+     Size: 8
+     Type: palette
 UNKNOWN_E1E924:
   Size: 38
   Type: data
@@ -24555,15 +24594,33 @@ TOWN_MAP_LABEL_GFX:
   Type: data
   Size: 1907
   Offset: 0xE1EA50
-UNKNOWN_E1F1C3:
-  Size: 0x100
+TOWN_MAP_ICON_PALETTE:
+  Size: 64
   Type: data
   Offset: 0xE1F1C3
-  Notes: Appears to be loaded into ram ($7E0300) during town map loading
-UNKNOWN_E1F2C3:
-  Size: 0x2BE
+  Description: Town Map Icon Palette
+  Entries:
+  - Name: Palette
+    Size: 32
+    Type: palette
+UNKNOWN_E1F203:
+  Size: 0x28E
   Type: data
-  Offset: 0xE1F2C3
+  Offset: 0xE1F203
+TOWN_MAP_ICON_PLACEMENT_PTR_TABLE:
+  Size: 24
+  Type: data
+  Description: Town Map Icon Placement Pointer Table
+  Entries:
+  - Name: Pointer
+    Size: 4
+    Type: pointer
+  Offset: 0xE1F491
+TOWN_MAP_ICON_PLACEMENT_DATA:
+  Size: 216
+  Type: data
+  Description: Town Map Icon Placement Data
+  Offset: 0xE1F4A9
 AUDIO_PACK_123:
   Type: data
   Size: 2687
@@ -25889,8 +25946,24 @@ NAME_INPUT_WINDOW_SELECTION_LAYOUT_POINTERS:
     Size: 4
 UNKNOWN_EFA6EB:
   Type: data
-  Size: 36
+  Size: 34
   Offset: 0xEFA6EB
+MAP_DATA_PER-SECTOR_TOWN_MAP_DATA:
+  Type: data
+  Size: 7680
+  Description: 'Map Data: Per-Sector Town Map Data'
+  Entries:
+  - Name: Town Map
+    Size: 1
+  - Name: Town Map X
+    Size: 1
+  - Name: Town Map Y
+    Size: 1
+  Offset: 0xEFA70F
+UNKNOWN_EFC50F:
+  Type: data
+  Size: 4108
+  Offset: 0xEFC50F
 TOWN_MAP_MAPPING:
   Type: data
   Size: 11788
