@@ -1223,11 +1223,14 @@ SNES_HEADER: !struct
     Size: 0x15
     Charset: ascii
     Name: Game Title
-  - Size: 1
+  - !int
+    Size: 1
     Name: ROM Layout
-  - Size: 1
+  - !int
+    Size: 1
     Name: Cartridge Type
-  - Size: 1
+  - !int
+    Size: 1
     Name: ROM Size
     Values: &__HEADER_SIZES
       0: None
@@ -1244,10 +1247,12 @@ SNES_HEADER: !struct
       11: 2048KiB
       12: 4096KiB
       13: 8192KiB
-  - Size: 1
+  - !int
+    Size: 1
     Name: RAM Size
     Values: *__HEADER_SIZES
-  - Size: 1
+  - !int
+    Size: 1
     Name: Country Code
     Values:
       0x00: Japan
@@ -1265,11 +1270,13 @@ SNES_HEADER: !struct
       0x0F: Canada
       0x10: Brazil
       0x11: Australia
-  - Size: 1
+  - !int
+    Size: 1
     Name: Licensee
     Values:
       0x33: Extended
-  - Size: 1
+  - !int
+    Size: 1
     Name: Revision
   - !int
     Size: 2
@@ -1375,11 +1382,14 @@ SAVE_SLOT_1: !struct
     - !script
       Name: FAVOURITE_THING
       Size: 13
-    - Name: MONEY_CARRIED
+    - !int
+      Name: MONEY_CARRIED
       Size: 4
-    - Name: BANK_BALANCE
+    - !int
+      Name: BANK_BALANCE
       Size: 4
-    - Name: KNOWN_PSI
+    - !int
+      Name: KNOWN_PSI
       Size: 2
       Bit Values:
       - A
@@ -1390,24 +1400,30 @@ SAVE_SLOT_1: !struct
       - F
       - G
       - H
-    - Name: PARTY_NPC_1
+    - !int
+      Name: PARTY_NPC_1
       Size: 1
-    - Name: PARTY_NPC_1_HP
+    - !int
+      Name: PARTY_NPC_1_HP
       Size: 2
-    - Name: PARTY_NPC_2_HP
+    - !int
+      Name: PARTY_NPC_2_HP
       Size: 2
     - !array
       Name: UNKNOWNA
       Size: 1
-    - Name: PARTY_STATUS
+    - !int
+      Name: PARTY_STATUS
       Size: 1
       Values:
         0: Normal
         1: Burnt
         3: Skip Sandwiched
-    - Name: UNKNOWNB
+    - !int
+      Name: UNKNOWNB
       Size: 5
-    - Name: WALLET_BACKUP
+    - !int
+      Name: WALLET_BACKUP
       Size: 4
     - !array
       Name: ESCARGO_EXPRESS_ITEMS
@@ -1418,24 +1434,31 @@ SAVE_SLOT_1: !struct
     - !array
       Name: UNKNOWNC2
       Size: 2
-    - Name: LEADER_X_COORD
+    - !int
+      Name: LEADER_X_COORD
       Size: 2
       Description: Party Leader X Coordinate
       Notes: Used for respawning
-    - Name: UNKNOWND
+    - !int
+      Name: UNKNOWND
       Size: 2
-    - Name: LEADER_Y_COORD
+    - !int
+      Name: LEADER_Y_COORD
       Size: 2
       Description: Party Leader Y Coordinate
       Notes: Used for respawning
-    - Name: UNKNOWNE
+    - !int
+      Name: UNKNOWNE
       Size: 2
-    - Name: LEADER_DIRECTION
+    - !int
+      Name: LEADER_DIRECTION
       Description: Direction the party leader is facing
       Size: 2
-    - Name: TRODDEN_TILE_TYPE
+    - !int
+      Name: TRODDEN_TILE_TYPE
       Size: 2
-    - Name: WALKING_STYLE
+    - !int
+      Name: WALKING_STYLE
       Description: Walking Style
       Values:
         0: Normal
@@ -1451,37 +1474,46 @@ SAVE_SLOT_1: !struct
     - !array
       Name: UNKNOWNF
       Size: 4
-    - Name: CURRENT_PARTY_MEMBERS
+    - !int
+      Name: CURRENT_PARTY_MEMBERS
       Size: 2
     - !array
       Name: UNKNOWNG
       Size: 6
-    - Name: PLAYER_CONTROLLED_PARTY_MEMBERS
+    - !int
+      Name: PLAYER_CONTROLLED_PARTY_MEMBERS
       Size: 1
       Description: Player-Controlled Party Members
     - !array
       Name: UNKNOWNG2
       Size: 17
-    - Name: PARTY_COUNT
+    - !int
+      Name: PARTY_COUNT
       Size: 1
-    - Name: PLAYER_CONTROLLED_PARTY_COUNT
+    - !int
+      Name: PLAYER_CONTROLLED_PARTY_COUNT
       Size: 1
     - !array
       Name: UNKNOWNH
       Size: 12
-    - Name: AUTO_FIGHT_ENABLE
+    - !int
+      Name: AUTO_FIGHT_ENABLE
       Size: 1
-    - Name: EXIT_MOUSE_COORDS
+    - !int
+      Name: EXIT_MOUSE_COORDS
       Size: 2
-    - Name: UNKNOWNI
+    - !int
+      Name: UNKNOWNI
       Size: 2
-    - Name: TEXT_SPEED
+    - !int
+      Name: TEXT_SPEED
       Size: 1
       Values:
         1: Fast
         2: Medium
         3: Slow
-    - Name: SOUND_SETTING
+    - !int
+      Name: SOUND_SETTING
       Size: 1
       Values:
         0: Mono
@@ -1489,9 +1521,11 @@ SAVE_SLOT_1: !struct
     - !array
       Name: UNKNOWNJ
       Size: 273
-    - Name: TIMER
+    - !int
+      Name: TIMER
       Size: 4
-    - Name: TEXT_FLAVOUR
+    - !int
+      Name: TEXT_FLAVOUR
       Size: 1
       Values:
        0: Null
@@ -1509,62 +1543,80 @@ SAVE_SLOT_1: !struct
       Size: 5
       Name: NAME
       Description: Character name
-    - Name: LEVEL
+    - !int
+      Name: LEVEL
       Size: 1
       Description: Current Level
-    - Name: EXP
+    - !int
+      Name: EXP
       Size: 4
       Description: Amount of Experience Points
-    - Name: MAX HP
+    - !int
+      Name: MAX HP
       Size: 2
       Description: Maximum amount of HP
-    - Name: MAX PP
+    - !int
+      Name: MAX PP
       Size: 2
       Description: Maximum amount of PP
     - !array
       Size: 7
       Name: AFFLICTIONS
       Description: Current Status Effects
-    - Name: EQUIPPED_OFFENSE
+    - !int
+      Name: EQUIPPED_OFFENSE
       Size: 1
       Description: Offense with current equipment
-    - Name: EQUIPPED_DEFENSE
+    - !int
+      Name: EQUIPPED_DEFENSE
       Size: 1
       Description: Defense with current equipment
-    - Name: EQUIPPED_SPEED
+    - !int
+      Name: EQUIPPED_SPEED
       Size: 1
       Description: Speed with current equipment
-    - Name: EQUIPPED_GUTS
+    - !int
+      Name: EQUIPPED_GUTS
       Size: 1
       Description: Guts with current equipment
-    - Name: EQUIPPED_LUCK
+    - !int
+      Name: EQUIPPED_LUCK
       Size: 1
       Description: Luck with current equipment
-    - Name: EQUIPPED_VITALITY
+    - !int
+      Name: EQUIPPED_VITALITY
       Size: 1
       Description: Vitality with current equipment
-    - Name: EQUIPPED_IQ
+    - !int
+      Name: EQUIPPED_IQ
       Size: 1
       Description: IQ with current equipment
-    - Name: OFFENSE
+    - !int
+      Name: OFFENSE
       Size: 1
       Description: Offense without current equipment
-    - Name: DEFENSE
+    - !int
+      Name: DEFENSE
       Size: 1
       Description: Defense without current equipment
-    - Name: SPEED
+    - !int
+      Name: SPEED
       Size: 1
       Description: Speed without current equipment
-    - Name: GUTS
+    - !int
+      Name: GUTS
       Size: 1
       Description: Guts without current equipment
-    - Name: LUCK
+    - !int
+      Name: LUCK
       Size: 1
       Description: Luck without current equipment
-    - Name: VITALITY
+    - !int
+      Name: VITALITY
       Size: 1
       Description: Vitality without current equipment
-    - Name: IQ
+    - !int
+      Name: IQ
       Size: 1
       Description: IQ without current equipment
     - !array
@@ -1586,20 +1638,26 @@ SAVE_SLOT_1: !struct
     - !array
       Size: 4
       Name: UNKNOWN2
-    - Size: 2
+    - !int
+      Size: 2
       Name: UNKNOWN3
-    - Name: CURRENT_HP
+    - !int
+      Name: CURRENT_HP
       Size: 2
       Description: Current HP
-    - Name: CURRENT_HP_ROLLING
+    - !int
+      Name: CURRENT_HP_ROLLING
       Size: 2
       Description: Current HP (Rolling)
-    - Name: UNKNOWN4
+    - !int
+      Name: UNKNOWN4
       Size: 2
-    - Name: CURRENT_PP
+    - !int
+      Name: CURRENT_PP
       Size: 2
       Description: Current PP
-    - Name: CURRENT_PP_ROLLING
+    - !int
+      Name: CURRENT_PP_ROLLING
       Size: 2
       Description: Current PP (Rolling)
     - !bitfield
@@ -1631,23 +1689,28 @@ SAVE_SLOT_1: !struct
       Size: 5
       Name: RESISTANCES
       Entries:
-      - Name: FIRE
+      - !int
+        Name: FIRE
         Size: 1
         Values: &RESISTANCES
         - 100%
         - 70%
         - 40%
         - 5%
-      - Name: FREEZE
+      - !int
+        Name: FREEZE
         Size: 1
         Values: *RESISTANCES
-      - Name: FLASH
+      - !int
+        Name: FLASH
         Size: 1
         Values: *RESISTANCES
-      - Name: PARALYSIS
+      - !int
+        Name: PARALYSIS
         Size: 1
         Values: *RESISTANCES
-      - Name: HYPNOSIS_BRAINSHOCK
+      - !int
+        Name: HYPNOSIS_BRAINSHOCK
         Size: 1
         Values: *RESISTANCES
       Description: Resistances
@@ -1655,15 +1718,20 @@ SAVE_SLOT_1: !struct
       Size: 5
       Name: STAT_BOOSTS
       Entries:
-      - Name: SPEED
+      - !int
+        Name: SPEED
         Size: 1
-      - Name: GUTS
+      - !int
+        Name: GUTS
         Size: 1
-      - Name: VITALITY
+      - !int
+        Name: VITALITY
         Size: 1
-      - Name: IQ
+      - !int
+        Name: IQ
         Size: 1
-      - Name: LUCK
+      - !int
+        Name: LUCK
         Size: 1
       Description: Current stat boosts
     - !array
@@ -1945,15 +2013,20 @@ UNKNOWN_7E0400: !struct
   Offset: 0x7E0400
   Size: 0x100
   Entries:
-  - Name: INDEX
+  - !int
+    Name: INDEX
     Size: 1
-  - Name: DAS0L
+  - !int
+    Name: DAS0L
     Size: 2
-  - Name: A1T0L
+  - !int
+    Name: A1T0L
     Size: 1
-  - Name: A1B0
+  - !int
+    Name: A1B0
     Size: 2
-  - Name: VMADDL
+  - !int
+    Name: VMADDL
     Size: 2
 UNKNOWN_7E0A50: !unknown
   Size: 2
@@ -2418,11 +2491,14 @@ SPRITE_TABLE_7E467E: !struct
   Offset: 0x7E467E
   Description: Table with 5-byte entries, related to drawing of onscreen sprites?
   Entries:
-  - Name: X Position
+  - !int
+    Name: X Position
     Size: 1
-  - Name: Source
+  - !int
+    Name: Source
     Size: 1
-  - Name: Flags
+  - !int
+    Name: Flags
     Size: 1
     Bit Values:
     - 01
@@ -2433,9 +2509,11 @@ SPRITE_TABLE_7E467E: !struct
     - 20
     - Horizontal Flip
     - Vertical Flip
-  - Name: Y Position
+  - !int
+    Name: Y Position
     Size: 1
-  - Name: Visibility
+  - !int
+    Name: Visibility
     Size: 1
   Notes: |
     X position, graphics source, binary toggles, Y position, visibility?
@@ -2976,7 +3054,8 @@ BATTLERS_TABLE: !struct
     Size: 6
     Name: AFFLICTIONS
     Entries:
-    - Name: GROUP0
+    - !int
+      Name: GROUP0
       Bit Values:
       - Unconscious
       - Diamondized
@@ -2986,27 +3065,32 @@ BATTLERS_TABLE: !struct
       - Sunstroke
       - Cold
       Size: 1
-    - Name: GROUP1
+    - !int
+      Name: GROUP1
       Bit Values:
       - Mushroomized
       - Possessed
       Size: 1
-    - Name: GROUP2
+    - !int
+      Name: GROUP2
       Bit Values:
       - Asleep
       - Crying
       - Immobilized
       - Solidified
       Size: 1
-    - Name: GROUP3
+    - !int
+      Name: GROUP3
       Bit Values:
       - Feeling Strange
       Size: 1
-    - Name: GROUP4
+    - !int
+      Name: GROUP4
       Bit Values:
       - Cannot Concentrate
       Size: 1
-    - Name: GROUP5
+    - !int
+      Name: GROUP5
       Bit Values:
       - Homesickness
       Size: 1
@@ -3075,22 +3159,28 @@ BATTLERS_TABLE: !struct
     Size: 6
     Name: EFFECTIVENESS
     Entries:
-    - Name: Paralysis
+    - !int
+      Name: Paralysis
       Size: 1
       Values: *RESISTANCES
-    - Name: Freeze
+    - !int
+      Name: Freeze
       Size: 1
       Values: *RESISTANCES
-    - Name: Flash
+    - !int
+      Name: Flash
       Size: 1
       Values: *RESISTANCES
-    - Name: Fire
+    - !int
+      Name: Fire
       Size: 1
       Values: *RESISTANCES
-    - Name: Brainshock
+    - !int
+      Name: Brainshock
       Size: 1
       Values: *RESISTANCES
-    - Name: Hypnosis
+    - !int
+      Name: Hypnosis
       Size: 1
       Values: *RESISTANCES
     Description: Status and elemental effectiveness
@@ -12984,12 +13074,14 @@ CONSOLATION_ITEM_TABLE: !struct
   Description: Table for enemies that offer consolation prizes
   Size: 18
   Entries:
-  - Name: Enemy ID
+  - !int
+    Name: Enemy ID
     Size: 1
   - !array
     Name: Item IDs
     Size: 7
-  - Name: "Null"
+  - !int
+    Name: "Null"
     Size: 1
   Offset: 0xC23109
 BATTLE_SELECTION_MENU: !assembly
@@ -16276,13 +16368,17 @@ WINDOW_CONFIGURATION_TABLE: !struct
   Description: Window sizes and positions
   Size: 424
   Entries:
-  - Name: X Offset
+  - !int
+    Name: X Offset
     Size: 2
-  - Name: Y Offset
+  - !int
+    Name: Y Offset
     Size: 2
-  - Name: Width
+  - !int
+    Name: Width
     Size: 2
-  - Name: Height
+  - !int
+    Name: Height
     Size: 2
   Offset: 0xC3E250
 UNKNOWN_C3E3F8: !unknown
