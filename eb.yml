@@ -1216,22 +1216,22 @@ SNES_HEADER: !struct
   - !script
     Size: 6
     Charset: ascii
-    Name: Game ID
+    Name: ID
   - !array
     Size: 10
   - !script
     Size: 0x15
     Charset: ascii
-    Name: Game Title
+    Name: TITLE
   - !int
     Size: 1
-    Name: ROM Layout
+    Name: ROMLAYOUT
   - !int
     Size: 1
-    Name: Cartridge Type
+    Name: CARTTYPE
   - !int
     Size: 1
-    Name: ROM Size
+    Name: ROMSIZE
     Values: &__HEADER_SIZES
       0: None
       1: 2KiB
@@ -1249,11 +1249,11 @@ SNES_HEADER: !struct
       13: 8192KiB
   - !int
     Size: 1
-    Name: RAM Size
+    Name: RAMSIZE
     Values: *__HEADER_SIZES
   - !int
     Size: 1
-    Name: Country Code
+    Name: COUNTRYCODE
     Values:
       0x00: Japan
       0x01: North America
@@ -1272,28 +1272,28 @@ SNES_HEADER: !struct
       0x11: Australia
   - !int
     Size: 1
-    Name: Licensee
+    Name: LICENSEE
     Values:
       0x33: Extended
   - !int
     Size: 1
-    Name: Revision
+    Name: REVISION
   - !int
     Size: 2
-    Name: Checksum
+    Name: CHECKSUM
   - !int
     Size: 2
-    Name: Checksum Complement
+    Name: CHECKSUMCOMPLEMENT
   - !struct
     Size: 0x10
-    Name: Native Mode Vectors
+    Name: NATIVEMODEVECTORS
     Entries:
     - !pointer
       Size: 2
-      Name: Unused
+      Name: UNUSED
     - !pointer
       Size: 2
-      Name: Unused 2
+      Name: UNUSED2
     - !pointer
       Size: 2
       Name: COP
@@ -1308,26 +1308,26 @@ SNES_HEADER: !struct
       Name: NMI
     - !pointer
       Size: 2
-      Name: Unused 3
+      Name: UNUSED3
     - !pointer
       Size: 2
       Name: IRQ
   - !struct
     Size: 0x10
-    Name: Emulation Mode Vectors
+    Name: EMULATIONMODEVECTORS
     Entries:
     - !pointer
       Size: 2
-      Name: Unused
+      Name: UNUSED
     - !pointer
       Size: 2
-      Name: Unused 2
+      Name: UNUSED2
     - !pointer
       Size: 2
       Name: COP
     - !pointer
       Size: 2
-      Name: Unused 3
+      Name: UNUSED3
     - !pointer
       Size: 2
       Name: ABORT
@@ -1535,7 +1535,7 @@ SAVE_SLOT_1: !struct
        4: Banana
        5: Peanut
   - !struct
-    Name: Character Data
+    Name: CHARACTERDATA
     Description: Data for each character in the game
     Size: 0x23A
     Entries: &CHAR_STRUCT_ENTRIES
@@ -2492,13 +2492,13 @@ SPRITE_TABLE_7E467E: !struct
   Description: Table with 5-byte entries, related to drawing of onscreen sprites?
   Entries:
   - !int
-    Name: X Position
+    Name: X
     Size: 1
   - !int
-    Name: Source
+    Name: SOURCE
     Size: 1
   - !int
-    Name: Flags
+    Name: FLAGS
     Size: 1
     Bit Values:
     - 01
@@ -2510,10 +2510,10 @@ SPRITE_TABLE_7E467E: !struct
     - Horizontal Flip
     - Vertical Flip
   - !int
-    Name: Y Position
+    Name: Y
     Size: 1
   - !int
-    Name: Visibility
+    Name: VISIBILITY
     Size: 1
   Notes: |
     X position, graphics source, binary toggles, Y position, visibility?
@@ -3160,27 +3160,27 @@ BATTLERS_TABLE: !struct
     Name: EFFECTIVENESS
     Entries:
     - !int
-      Name: Paralysis
+      Name: PARALYSIS
       Size: 1
       Values: *RESISTANCES
     - !int
-      Name: Freeze
+      Name: FREEZE
       Size: 1
       Values: *RESISTANCES
     - !int
-      Name: Flash
+      Name: FLASH
       Size: 1
       Values: *RESISTANCES
     - !int
-      Name: Fire
+      Name: FIRE
       Size: 1
       Values: *RESISTANCES
     - !int
-      Name: Brainshock
+      Name: BRAINSHOCK
       Size: 1
       Values: *RESISTANCES
     - !int
-      Name: Hypnosis
+      Name: HYPNOSIS
       Size: 1
       Values: *RESISTANCES
     Description: Status and elemental effectiveness
@@ -3219,7 +3219,7 @@ BATTLERS_TABLE: !struct
     Description: Enemy ID (Copy?)
   - !int
     Size: 1
-    Name: UnknownH
+    Name: UNKNOWNH
 BATTLER_TARGET_FLAGS: !int
   Size: 4
   Offset: 0x7EA96C
@@ -13075,13 +13075,13 @@ CONSOLATION_ITEM_TABLE: !struct
   Size: 18
   Entries:
   - !int
-    Name: Enemy ID
+    Name: ENEMYID
     Size: 1
   - !array
-    Name: Item IDs
+    Name: ITEMIDS
     Size: 7
   - !int
-    Name: "Null"
+    Name: "NULL"
     Size: 1
   Offset: 0xC23109
 BATTLE_SELECTION_MENU: !assembly
@@ -16369,16 +16369,16 @@ WINDOW_CONFIGURATION_TABLE: !struct
   Size: 424
   Entries:
   - !int
-    Name: X Offset
+    Name: X
     Size: 2
   - !int
-    Name: Y Offset
+    Name: Y
     Size: 2
   - !int
-    Name: Width
+    Name: WIDTH
     Size: 2
   - !int
-    Name: Height
+    Name: HEIGHT
     Size: 2
   Offset: 0xC3E250
 UNKNOWN_C3E3F8: !unknown
@@ -20039,13 +20039,25 @@ BTL_ENTRY_BG_TABLE: !array
     - Name: Background 2
       Size: 2
   Offset: 0xCBD89A
-AUDIO_PACK_66: !unknown
+AUDIO_PACK_66: !struct
   Size: 7864
   Description: Audio Block
+  Entries: &AUDIO_PACK
+  - !int
+    Name: SIZE
+    Size: 2
+  - !int
+    Name: BASEADDRESS
+    Base: 16
+    Size: 2
+  - !array
+    Name: DATA
+    Size: Size-4
   Offset: 0xCBE02A
-AUDIO_PACK_59: !unknown
+AUDIO_PACK_59: !struct
   Size: 286
   Description: Audio Block
+  Entries: *AUDIO_PACK
   Offset: 0xCBFEE2
 ANIMATIONDATA_CARPAINTER_LIGHTNING_REFLECT: !unknown
   Size: 6091
@@ -20287,17 +20299,7 @@ AUDIO_PACK_71: !struct
   Size: 2494
   Description: Audio Block
   Terminator: 0
-  Entries:
-  - !int
-    Name: Size
-    Size: 2
-  - !int
-    Name: Base Address
-    Base: 16
-    Size: 2
-  - !array
-    Name: Data
-    Size: Size-4
+  Entries: *AUDIO_PACK
   Offset: 0xCCF617
 UNKNOWN_PTR_CCFFD5: !pointer
   Size: 4
@@ -21596,17 +21598,7 @@ AUDIO_PACK_4: !struct
   Size: 5050
   Description: 'Audio Data: contains sequence pack 4'
   Terminator: 0
-  Entries:
-  - !int
-    Name: Size
-    Size: 2
-  - !int
-    Name: Base Address
-    Base: 16
-    Size: 2
-  - !array
-    Name: Data
-    Size: Size-4
+  Entries: *AUDIO_PACK
   Offset: 0xDFEC46
 TEXT_WINDOW_GFX: !unknown
   Size: 1876
@@ -22073,17 +22065,7 @@ AUDIO_PACK_1: !struct
   Size: 17880
   Description: Audio Block
   Terminator: 0
-  Entries:
-  - !int
-    Name: Size
-    Size: 2
-  - !int
-    Name: Base Address
-    Base: 16
-    Size: 2
-  - !array
-    Name: Data
-    Size: Size-4
+  Entries: *AUDIO_PACK
   Offset: 0xE60000
 AUDIO_PACK_74: !unknown
   Size: 17858
@@ -22192,17 +22174,7 @@ AUDIO_PACK_140: !unknown
 AUDIO_PACK_145: !struct
   Size: 340
   Description: Hidden track sequence data
-  Entries:
-  - !int
-    Name: Size
-    Size: 2
-  - !int
-    Name: Base Address
-    Base: 16
-    Size: 2
-  - !array
-    Name: Data
-    Size: Size-4
+  Entries: *AUDIO_PACK
   Offset: 0xEAFE8B
 UNKNOWN_EAFFDF: !empty
   Size: 33
@@ -22516,17 +22488,7 @@ AUDIO_PACK_103: !struct
   Terminator: 0
   Description: Music sequence data
   Notes: '"Return to your body", "Boarding School", "Phase distorter"'
-  Entries:
-  - !int
-    Name: Size
-    Size: 2
-  - !int
-    Name: Base Address
-    Base: 16
-    Size: 2
-  - !array
-    Name: Data
-    Size: Size-4
+  Entries: *AUDIO_PACK
   Offset: 0xEE52E6
 AUDIO_PACK_51: !unknown
   Size: 954
