@@ -1217,7 +1217,7 @@ SNES_HEADER: !struct
     Size: 6
     Charset: ascii
     Name: ID
-  - !array
+  - !unknown
     Size: 10
   - !script
     Size: 0x15
@@ -1350,7 +1350,7 @@ SAVE_SLOT_1: !struct
     Description: 'Signature of the company that created the game in ASCII: Hal Laboratory, Inc.'
     Name: SIGNATURE
     Size: 20
-  - !array
+  - !empty
     Name: NULLSPACE1
     Description: Blank?
     Size: 8
@@ -1409,7 +1409,7 @@ SAVE_SLOT_1: !struct
     - !int
       Name: PARTY_NPC_2_HP
       Size: 2
-    - !array
+    - !int
       Name: UNKNOWNA
       Size: 1
     - !int
@@ -1427,11 +1427,13 @@ SAVE_SLOT_1: !struct
       Size: 4
     - !array
       Name: ESCARGO_EXPRESS_ITEMS
+      Item Type: !int
+        Size: 1
       Size: 36
-    - !array
+    - !unknown
       Name: UNKNOWNC
       Size: 6
-    - !array
+    - !unknown
       Name: UNKNOWNC2
       Size: 2
     - !int
@@ -1471,20 +1473,20 @@ SAVE_SLOT_1: !struct
         12: Escalator sliding
         13: Stair movement
       Size: 2
-    - !array
+    - !unknown
       Name: UNKNOWNF
       Size: 4
     - !int
       Name: CURRENT_PARTY_MEMBERS
       Size: 2
-    - !array
+    - !unknown
       Name: UNKNOWNG
       Size: 6
     - !int
       Name: PLAYER_CONTROLLED_PARTY_MEMBERS
       Size: 1
       Description: Player-Controlled Party Members
-    - !array
+    - !unknown
       Name: UNKNOWNG2
       Size: 17
     - !int
@@ -1493,7 +1495,7 @@ SAVE_SLOT_1: !struct
     - !int
       Name: PLAYER_CONTROLLED_PARTY_COUNT
       Size: 1
-    - !array
+    - !unknown
       Name: UNKNOWNH
       Size: 12
     - !int
@@ -1518,7 +1520,7 @@ SAVE_SLOT_1: !struct
       Values:
         0: Mono
         1: Stereo
-    - !array
+    - !unknown
       Name: UNKNOWNJ
       Size: 273
     - !int
@@ -1559,7 +1561,7 @@ SAVE_SLOT_1: !struct
       Name: MAX PP
       Size: 2
       Description: Maximum amount of PP
-    - !array
+    - !unknown
       Size: 7
       Name: AFFLICTIONS
       Description: Current Status Effects
@@ -1622,12 +1624,16 @@ SAVE_SLOT_1: !struct
     - !array
       Size: 14
       Name: ITEMS
+      Item Type: !int
+        Size: 1
       Description: Current held items
     - !array
       Size: 4
       Name: EQUIPPED_ITEMS
+      Item Type: !int
+        Size: 1
       Description: Current equipped items
-    - !array
+    - !unknown
       Size: 8
       Name: UNKNOWN
     - !int
@@ -1635,7 +1641,7 @@ SAVE_SLOT_1: !struct
       Name: POSITION_INDEX
       Description: Position Index
       Notes: 'TODO: which table was this for again?'
-    - !array
+    - !unknown
       Size: 4
       Name: UNKNOWN2
     - !int
@@ -1734,7 +1740,7 @@ SAVE_SLOT_1: !struct
         Name: LUCK
         Size: 1
       Description: Current stat boosts
-    - !array
+    - !unknown
       Size: 3
       Name: UNKNOWN5
   - !struct
@@ -1753,7 +1759,7 @@ SAVE_SLOT_1: !struct
       - 6
       - 7
       - 8
-  - !array
+  - !empty
     Name: NULLSPACE2
     Description: Unused space
     Size: 0x4D
@@ -1998,10 +2004,14 @@ CUR_TEXT_PAL: !array
   Size: 0x40
   Offset: 0x7E0200
   Description: Current Text Palette
+  Item Type: !color
+    Size: 2
 CUR_MAP_PAL: !array
   Size: 0xC0
   Offset: 0x7E0240
   Description: Current Map Palette
+  Item Type: !color
+    Size: 2
 UNKNOWN_7E02A0: !unknown
   Size: 2
   Offset: 0x7E02A0
@@ -2009,6 +2019,8 @@ CUR_PARTY_PAL: !array
   Size: 0x20
   Offset: 0x7E03A0
   Description: Current Party Palette
+  Item Type: !color
+    Size: 2
 UNKNOWN_7E0400: !struct
   Offset: 0x7E0400
   Size: 0x100
@@ -2040,143 +2052,178 @@ MOVEMENT_42_LOADED_PTR: !pointer
 LOADED_SPRITE_MOVEMENT_CODES_TABLE: !array
   Offset: 0x7E0A62
   Description: Loaded Sprite Movement Codes Table (Are we sure?)
+  Item Type: &30x2 !unknown
+    Size: 2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_1: !unknown
+UNKNOWN_30x2_TABLE_1: !array
   Offset: 0x7E0A9E
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_2: !unknown
+UNKNOWN_30x2_TABLE_2: !array
   Offset: 0x7E0ADA
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-SPRITE_SCREEN_X_TABLE: !unknown
+SPRITE_SCREEN_X_TABLE: !array
   Offset: 0x7E0B16
   Description: Sprite X screen position table
+  Item Type: *30x2
   Size: 0x3C
-SPRITE_SCREEN_Y_TABLE: !unknown
+SPRITE_SCREEN_Y_TABLE: !array
   Offset: 0x7E0B52
   Description: Sprite Y screen position table
+  Item Type: *30x2
   Size: 0x3C
-SPRITE_ABS_X_TABLE: !unknown
+SPRITE_ABS_X_TABLE: !array
   Offset: 0x7E0B8E
   Description: Sprite X world position table
+  Item Type: *30x2
   Size: 0x3C
-SPRITE_ABS_Y_TABLE: !unknown
+SPRITE_ABS_Y_TABLE: !array
   Offset: 0x7E0BCA
   Description: Sprite Y world position table
+  Item Type: *30x2
   Size: 0x3C
-SPRITE_ABS_Z_TABLE: !unknown
+SPRITE_ABS_Z_TABLE: !array
   Offset: 0x7E0C06
   Description: Sprite Z world position table
+  Item Type: *30x2
   Size: 0x3C
-SPRITE_ABS_X_FRACTION_TABLE: !unknown
+SPRITE_ABS_X_FRACTION_TABLE: !array
   Offset: 0x7E0C42
   Description: 30x2 table - X position fractional component
+  Item Type: *30x2
   Size: 0x3C
-SPRITE_ABS_Y_FRACTION_TABLE: !unknown
+SPRITE_ABS_Y_FRACTION_TABLE: !array
   Offset: 0x7E0C7E
   Description: 30x2 table - Y position fractional component
+  Item Type: *30x2
   Size: 0x3C
-SPRITE_ABS_Z_FRACTION_TABLE: !unknown
+SPRITE_ABS_Z_FRACTION_TABLE: !array
   Offset: 0x7E0CBA
   Description: 30x2 table - Z position fractional component
+  Item Type: *30x2
   Size: 0x3C
-SPRITE_DELTA_X_TABLE: !unknown
+SPRITE_DELTA_X_TABLE: !array
   Offset: 0x7E0CF6
   Description: 30x2 table - X delta in pixels
+  Item Type: *30x2
   Size: 0x3C
-SPRITE_DELTA_Y_TABLE: !unknown
+SPRITE_DELTA_Y_TABLE: !array
   Offset: 0x7E0D32
   Description: 30x2 table - Y delta in pixels
+  Item Type: *30x2
   Size: 0x3C
-SPRITE_DELTA_Z_TABLE: !unknown
+SPRITE_DELTA_Z_TABLE: !array
   Offset: 0x7E0D6E
   Description: 30x2 table - Z delta in pixels
+  Item Type: *30x2
   Size: 0x3C
-SPRITE_DELTA_X_FRACTION_TABLE: !unknown
+SPRITE_DELTA_X_FRACTION_TABLE: !array
   Offset: 0x7E0DAA
   Description: 30x2 table - X delta fractional component
+  Item Type: *30x2
   Size: 0x3C
-SPRITE_DELTA_Y_FRACTION_TABLE: !unknown
+SPRITE_DELTA_Y_FRACTION_TABLE: !array
   Offset: 0x7E0DE6
   Description: 30x2 table - Y delta fractional component
+  Item Type: *30x2
   Size: 0x3C
-SPRITE_DELTA_Z_FRACTION_TABLE: !unknown
+SPRITE_DELTA_Z_FRACTION_TABLE: !array
   Offset: 0x7E0E22
   Description: 30x2 table - Z delta fractional component
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_3: !unknown
+UNKNOWN_30x2_TABLE_3: !array
   Notes: '*** 30x2 table - C09AF9 entry 0 - Used by timed events like
     Escargo Express? ***'
+  Item Type: *30x2
   Offset: 0x7E0E5E
   Size: 0x3C
-UNKNOWN_30x2_TABLE_4: !unknown
+UNKNOWN_30x2_TABLE_4: !array
   Notes: '*** UNKNOWN - 30x2 table - C09AF9 entry 1 ***'
+  Item Type: *30x2
   Offset: 0x7E0E9A
   Size: 0x3C
-UNKNOWN_30x2_TABLE_5: !unknown
+UNKNOWN_30x2_TABLE_5: !array
   Notes: '*** UNKNOWN - 30x2 table - C09AF9 entry 2 ***'
+  Item Type: *30x2
   Offset: 0x7E0ED6
   Size: 0x3C
-UNKNOWN_30x2_TABLE_6: !unknown
+UNKNOWN_30x2_TABLE_6: !array
   Notes: '*** UNKNOWN - 30x2 table - C09AF9 entry 3 ***'
+  Item Type: *30x2
   Offset: 0x7E0F12
   Size: 0x3C
-UNKNOWN_30x2_TABLE_7: !unknown
+UNKNOWN_30x2_TABLE_7: !array
   Notes: '*** UNKNOWN - 30x2 table - C09AF9 entry 4 ***'
+  Item Type: *30x2
   Offset: 0x7E0F4E
   Size: 0x3C
-UNKNOWN_30x2_TABLE_8: !unknown
+UNKNOWN_30x2_TABLE_8: !array
   Notes: '*** UNKNOWN - 30x2 table - C09AF9 entry 5 ***'
+  Item Type: *30x2
   Offset: 0x7E0F8A
   Size: 0x3C
-UNKNOWN_30x2_TABLE_9: !unknown
+UNKNOWN_30x2_TABLE_9: !array
   Notes: 30x2 table - C09AF9 entry 6 - X destination in absolute pixel coordinates
+  Item Type: *30x2
   Offset: 0x7E0FC6
   Size: 0x3C
-UNKNOWN_30x2_TABLE_10: !unknown
+UNKNOWN_30x2_TABLE_10: !array
   Notes: 30x2 table - C09AF9 entry 6 - Y destination in absolute pixel coordinates
+  Item Type: *30x2
   Offset: 0x7E1002
   Size: 0x3C
-UNKNOWN_30x2_TABLE_11: !unknown
+UNKNOWN_30x2_TABLE_11: !array
   Notes: '*** UNKNOWN - 30x2 table - Sprite-drawing priority, lower numbers
     first? ***'
+  Item Type: *30x2
   Offset: 0x7E103E
   Size: 0x3C
-UNKNOWN_30x2_TABLE_12: !unknown
+UNKNOWN_30x2_TABLE_12: !array
   Notes: '*** UNKNOWN - 30x2 table - Low part of a long pointer? ***'
+  Item Type: *30x2
   Offset: 0x7E107A
   Size: 0x3C
-UNKNOWN_30x2_TABLE_13: !unknown
+UNKNOWN_30x2_TABLE_13: !array
   Notes: '*** UNKNOWN - 30x2 table - High part of a long pointer? ***'
+  Item Type: *30x2
   Offset: 0x7E10B6
   Size: 0x3C
-UNKNOWN_30x2_TABLE_14: !unknown
+UNKNOWN_30x2_TABLE_14: !array
   Notes: '*** UNKNOWN - 30x2 table - Adjusted by movement codes: [26], [3C],
     [3D], [3E] ***'
+  Item Type: *30x2
   Offset: 0x7E10F2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_15: !unknown
+UNKNOWN_30x2_TABLE_15: !array
   Notes: '*** UNKNOWN - 30x2 table - Low part of a long pointer ***'
+  Item Type: *30x2
   Offset: 0x7E112E
   Size: 0x3C
-UNKNOWN_30x2_TABLE_16: !unknown
+UNKNOWN_30x2_TABLE_16: !array
   Notes: '*** UNKNOWN - 30x2 table - High part of a long pointer ***'
+  Item Type: *30x2
   Offset: 0x7E116A
   Size: 0x3C
-UNKNOWN_30x2_TABLE_17: !unknown
+UNKNOWN_30x2_TABLE_17: !array
   Notes: '*** UNKNOWN - 30x2 table - Short assembly pointer (set by [23] - callback:
     recalc screen coords?) ***'
+  Item Type: *30x2
   Offset: 0x7E11A6
   Size: 0x3C
-UNKNOWN_30x2_TABLE_18: !unknown
+UNKNOWN_30x2_TABLE_18: !array
   Notes: '*** UNKNOWN - 30x2 table - Short assembly pointer (set by [22] - see
     C0/A0F6?) ***'
+  Item Type: *30x2
   Offset: 0x7E11E2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_19: !unknown
+UNKNOWN_30x2_TABLE_19: !array
   Notes: '*** UNKNOWN - 30x2 table - Short assembly pointer (set by [25] - callback:
     atomic motion?) ***'
+  Item Type: *30x2
   Offset: 0x7E121E
   Size: 0x3C
 UNKNOWN_7E125A: !unknown
@@ -2185,30 +2232,34 @@ UNKNOWN_7E125A: !unknown
 UNKNOWN_7E12E6: !unknown
   Size: 0x8C
   Offset: 0x7E12E6
-UNKNOWN_30x2_TABLE_20: !unknown
+UNKNOWN_30x2_TABLE_20: !array
   Offset: 0x7E1372
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
 UNKNOWN_7E13AE: !unknown
   Size: 0x50
   Offset: 0x7E13AE
-UNKNOWN_30x2_TABLE_21: !unknown
+UNKNOWN_30x2_TABLE_21: !array
   Offset: 0x7E13FE
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
 UNKNOWN_7E143A: !unknown
   Size: 0x50
   Offset: 0x7E143A
-UNKNOWN_30x2_TABLE_22: !unknown
+UNKNOWN_30x2_TABLE_22: !array
   Offset: 0x7E148A
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
 UNKNOWN_7E14C6: !unknown
   Size: 0x50
   Offset: 0x7E14C6
-UNKNOWN_30x2_TABLE_23: !unknown
+UNKNOWN_30x2_TABLE_23: !array
   Offset: 0x7E1516
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
 UNKNOWN_7E1B9E: !unknown
   Size: 2
@@ -2309,112 +2360,138 @@ UNKNOWN_7E27CA: !unknown
 UNKNOWN_7E280A: !unknown
   Size: 2
   Offset: 0x7E280A
-UNKNOWN_30x2_TABLE_23_: !unknown
+UNKNOWN_30x2_TABLE_23_: !array
   Offset: 0x7E280C
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_24: !unknown
+UNKNOWN_30x2_TABLE_24: !array
   Offset: 0x7E289E
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_25: !unknown
+UNKNOWN_30x2_TABLE_25: !array
   Offset: 0x7E28DA
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_26: !unknown
+UNKNOWN_30x2_TABLE_26: !array
   Offset: 0x7E2916
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_27: !unknown
+UNKNOWN_30x2_TABLE_27: !array
   Offset: 0x7E2952
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_28: !unknown
+UNKNOWN_30x2_TABLE_28: !array
   Offset: 0x7E298E
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_29: !unknown
+UNKNOWN_30x2_TABLE_29: !array
   Offset: 0x7E29CA
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_30: !unknown
+UNKNOWN_30x2_TABLE_30: !array
   Offset: 0x7E2A06
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_31: !unknown
+UNKNOWN_30x2_TABLE_31: !array
   Offset: 0x7E2A42
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_32: !unknown
+UNKNOWN_30x2_TABLE_32: !array
   Offset: 0x7E2A7E
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_33: !unknown
+UNKNOWN_30x2_TABLE_33: !array
   Offset: 0x7E2ABA
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_34: !unknown
+UNKNOWN_30x2_TABLE_34: !array
   Offset: 0x7E2AF6
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_35: !unknown
+UNKNOWN_30x2_TABLE_35: !array
   Offset: 0x7E2B32
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_36: !unknown
+UNKNOWN_30x2_TABLE_36: !array
   Offset: 0x7E2B6E
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_37: !unknown
+UNKNOWN_30x2_TABLE_37: !array
   Offset: 0x7E2BAA
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_39: !unknown
+UNKNOWN_30x2_TABLE_39: !array
   Offset: 0x7E2BCC
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_38: !unknown
+UNKNOWN_30x2_TABLE_38: !array
   Offset: 0x7E2BE6
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_40: !unknown
+UNKNOWN_30x2_TABLE_40: !array
   Offset: 0x7E2C22
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_41: !unknown
+UNKNOWN_30x2_TABLE_41: !array
   Offset: 0x7E2C5E
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-LOADED_TPT_ENTRIES: !unknown
+LOADED_TPT_ENTRIES: !array
   Description: Loaded TPT entries?
   Notes: 30x2 table - TPT entry (has another meaning for generated enemies)
     <-- LOOK INTO
+  Item Type: *30x2
   Offset: 0x7E2C9A
   Size: 0x3C
-LOADED_TPT_ENTRIES_SPRITES: !unknown
+LOADED_TPT_ENTRIES_SPRITES: !array
   Description: Sprites for loaded TPT entries
   Notes: 30x2 table - Sprite (uses standard out-of-battle sprite listing)
+  Item Type: *30x2
   Offset: 0x7E2CD6
   Size: 0x3C
-UNKNOWN_30x2_TABLE_42: !unknown
+UNKNOWN_30x2_TABLE_42: !array
   Offset: 0x7E2D12
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_43: !unknown
+UNKNOWN_30x2_TABLE_43: !array
   Offset: 0x7E2D4E
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_44: !unknown
+UNKNOWN_30x2_TABLE_44: !array
   Offset: 0x7E2D8A
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_45: !unknown
+UNKNOWN_30x2_TABLE_45: !array
   Offset: 0x7E2DC6
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_46: !unknown
+UNKNOWN_30x2_TABLE_46: !array
   Offset: 0x7E2E02
   Description: Unknown 30x2 table.
+  Item Type: *30x2
   Size: 0x3C
 DEBUG: !int
   Offset: 0x7E436C
@@ -2565,7 +2642,7 @@ UNKNOWN_7E4DC6: !unknown
   Offset: 0x7E4DC6
   Notes: Seen in the respawn function, set to GAME_STATE.UNKNOWNC*95+0x99CE
   Size: 2
-CHOSEN_FOUR_PTRS: !array
+CHOSEN_FOUR_PTRS: !unknown
   Offset: 0x7E4DC8
   Description: Chosen Four Pointers
   Size: 10
@@ -2581,9 +2658,9 @@ PLAYER_POSITION_BUFFER: !array
     - !int
       Size: 2
       Name: 'Y'
-    - !array
+    - !unknown
       Size: 8
-      Name: Unknown
+      Name: UNKNOWN
 MISC_DEBUG_FLAGS: !int
   Offset: 0x7E5D56
   Description: Miscellaneous Debug Flags
@@ -2658,8 +2735,8 @@ WINDOW_STATS_TABLE: !array
   Size: 656
   Item Type: !struct
     Entries:
-    - !array
-      Name: UnknownA
+    - !unknown
+      Name: UNKNOWNA
       Size: 4
     - !int
       Name: ID
@@ -2671,58 +2748,58 @@ WINDOW_STATS_TABLE: !array
       Name: 'Y'
       Size: 2
     - !int
-      Name: Width
+      Name: WIDTH
       Size: 2
     - !int
-      Name: Height
+      Name: HEIGHT
       Size: 2
     - !int
-      Name: Text X Pos
+      Name: TEXTX
       Size: 2
     - !int
-      Name: Text Y Pos
+      Name: TEXTY
       Size: 2
     - !int
-      Name: Text Area Width
+      Name: TEXTWIDTH
       Size: 2
     - !int
-      Name: Text Area Height
+      Name: TEXTHEIGHT
       Size: 2
     - !int
-      Name: UnknownB
+      Name: UNKNOWNB
       Size: 1
     - !int
-      Name: UnknownC
+      Name: UNKNOWNC
       Size: 1
     - !int
-      Name: Tile-related
+      Name: TILEUNKNOWN
       Size: 1
     - !int
-      Name: Font
+      Name: FONT
       Size: 1
     - !int
-      Name: UnknownC
+      Name: UNKNOWNC
       Size: 1
-    - !array
-      Name: Working memory
+    - !unknown
+      Name: WORKINGMEMORY
       Size: 4
-    - !array
-      Name: Argument memory
+    - !unknown
+      Name: ARGUMENTMEMORY
       Size: 4
-    - !array
-      Name: Secondary memory
+    - !unknown
+      Name: SECONDARYMEMORY
       Size: 4
-    - !array
-      Name: Working memory storage
+    - !unknown
+      Name: WORKINGMEMORYSTORAGE
       Size: 4
-    - !array
-      Name: Argument memory storage
+    - !unknown
+      Name: ARGUMENTMEMORYSTORAGE
       Size: 4
-    - !array
-      Name: Secondary memory storage
+    - !unknown
+      Name: SECONDARYMEMORYSTORAGE
       Size: 4
-    - !array
-      Name: UnknownD
+    - !unknown
+      Name: UNKNOWND
       Size: 31
 UNKNOWN_7E88E0: !unknown
   Size: 2
@@ -2730,7 +2807,7 @@ UNKNOWN_7E88E0: !unknown
 UNKNOWN_7E88E2: !unknown
   Size: 2
   Offset: 0x7E88E2
-WINDOW_EXISTENCE_TABLE: !array
+WINDOW_EXISTENCE_TABLE: !unknown
   Size: 0x74
   Offset: 0x7E88E4
   Description: Window Existence Table
@@ -2825,7 +2902,7 @@ UNKNOWN_7E97B8: !unknown
   Size: 2
   Offset: 0x7E97B8
   Description: Which entry in the 96AA table to use?
-CC_ARGUMENT_STORAGE: !array
+CC_ARGUMENT_STORAGE: !unknown
   Size: 16
   Offset: 0x7E97BA
   Description: CC argument storage
@@ -3211,7 +3288,7 @@ BATTLERS_TABLE: !struct
   - !array
     Size: 5
     Item Type: !int
-      size: 1
+      Size: 1
     Name: UNKNOWNG
   - !int
     Size: 1
@@ -3432,13 +3509,13 @@ DEBUG_START_POSITION_Y: !int
 DEBUG_UNKNOWN_B565: !int
   Size: 2
   Offset: 0x7EB565
-UNKNOWN_7F0000: !array
+UNKNOWN_7F0000: !unknown
   Size: 0x8000
   Offset: 0x7F0000
-UNKNOWN_7F8000: !array
+UNKNOWN_7F8000: !unknown
   Size: 0x8000
   Offset: 0x7F8000
-TILE_COLLISION: !array
+TILE_COLLISION: !unknown
   Description: Tile Collision Data
   Size: 960
   Offset: 0x7FF800
@@ -4997,7 +5074,7 @@ UNKNOWN_C06BFF: !assembly
     497: UNKNOWN14
     513: UNKNOWN15
   Offset: 0xC06BFF
-UNKNOWN_C06E02: !array
+UNKNOWN_C06E02: !unknown
   Size: 24
   Offset: 0xC06E02
 UNKNOWN_C06E1A: !assembly
@@ -5657,12 +5734,15 @@ DMA_TABLE: !array
   Offset: 0xC08FB0
   Item Type: !struct
     Entries:
-    - Name: DMAP
+    - !int
+      Name: DMAP
       Size: 1
       Bit Values: [a3,a2,a1,b,c,0,h,v]
-    - Name: BBAD
+    - !int
+      Name: BBAD
       Size: 1
-    - Name: VMAIN
+    - !int
+      Name: VMAIN
       Size: 1
       Bit Values: [d,c,b,a,u2,u1,u0,i]
 UNKNOWN_C08FC2: !unknown
@@ -6630,10 +6710,10 @@ STEREO_MONO_DATA: !struct
   Size: 14
   Offset: 0xC0AC2C
   Entries:
-  - !array
+  - !unknown
     Name: STEREO
     Size: 7
-  - !array
+  - !unknown
     Name: MONO
     Size: 7
 UNKNOWN_C0AC3A: !assembly
@@ -6709,16 +6789,16 @@ UNKNOWN_C0AFF1: !struct
   Size: 41
   Offset: 0xC0AFF1
   Entries:
-  - !array
+  - !unknown
     Name: TM
     Size: 11
-  - !array
+  - !unknown
     Name: TD
     Size: 10
-  - !array
+  - !unknown
     Name: CGWSEL
     Size: 10
-  - !array
+  - !unknown
     Name: CGADSUB
     Size: 10
 SET_BATTLE_SWIRL_COLOUR: !assembly
@@ -12334,7 +12414,7 @@ INFLICT_SUNSTROKE_CHECK: !assembly
     181: UNKNOWN10
   Size: 185
   Offset: 0xC20000
-UNKNOWN_C200B9: !array
+UNKNOWN_C200B9: !unknown
   Size: 32
   Offset: 0xC200B9
 UNKNOWN_C200D9: !assembly
@@ -12461,7 +12541,7 @@ UNKNOWN_C208B8: !assembly
     85: UNKNOWN1
     88: UNKNOWN2
   Offset: 0xC208B8
-UNKNOWN_C20912: !array
+UNKNOWN_C20912: !unknown
   Size: 134
   Offset: 0xC20912
 THETHE: !script
@@ -13079,6 +13159,8 @@ CONSOLATION_ITEM_TABLE: !struct
     Size: 1
   - !array
     Name: ITEMIDS
+    Item Type: !int
+      Size: 1
     Size: 7
   - !int
     Name: "NULL"
@@ -16304,7 +16386,7 @@ UNKNOWN_C2FF9A: !assembly
     28: RETURN
   Notes: Involves mini sprites flag?
   Offset: 0xC2FF9A
-UNKNOWN_C2FFB7: !array
+UNKNOWN_C2FFB7: !unknown
   Size: 73
   Offset: 0xC2FFB7
 SPRITE_GROUP_PALETTES: !array
@@ -16312,6 +16394,8 @@ SPRITE_GROUP_PALETTES: !array
   Description: Sprite Group Palettes Table
   Item Type: !array
     Size: 32
+    Item Type: !color
+      Size: 2
   Offset: 0xC30000
 DISPLAY_ANTI-PIRACY_SCREEN: !assembly
   Size: 66
@@ -16336,31 +16420,31 @@ UNKNOWN_C30188: !array
   Item Type: !script
     Charset: movement
     Terminator: 0
-UNKNOWN_C3E12C: !array
+UNKNOWN_C3E12C: !unknown
   Size: 28
   Description: Unknown Table
   Offset: 0xC3E12C
-UNKNOWN_C3E148: !array
+UNKNOWN_C3E148: !unknown
   Size: 16
   Description: Unknown Table
   Offset: 0xC3E148
-UNKNOWN_C3E158: !array
+UNKNOWN_C3E158: !unknown
   Size: 16
   Description: Unknown Table
   Offset: 0xC3E158
-UNKNOWN_C3E168: !array
+UNKNOWN_C3E168: !unknown
   Size: 16
   Description: Unknown Table
   Offset: 0xC3E168
-UNKNOWN_C3E178: !array
+UNKNOWN_C3E178: !unknown
   Size: 184
   Description: Unknown
   Offset: 0xC3E178
-UNKNOWN_C3E230: !array
+UNKNOWN_C3E230: !unknown
   Size: 16
   Description: Unknown Table
   Offset: 0xC3E230
-UNKNOWN_C3E240: !array
+UNKNOWN_C3E240: !unknown
   Description: Unknown Table
   Size: 16
   Offset: 0xC3E240
@@ -16595,16 +16679,16 @@ FONT_PTR_TABLE: !array
   Item Type: !struct
     Entries:
     - !pointer
-      Name: VWF Pointer
+      Name: VWFPOINTER
       Size: 4
     - !pointer
-      Name: GFX Pointer
+      Name: GFXPOINTER
       Size: 4
     - !int
-      Name: Height?
+      Name: HEIGHT
       Size: 2
     - !int
-      Name: Width?
+      Name: WIDTH
       Size: 2
   Offset: 0xC3F054
 UNKNOWN_C3F090: !unknown
@@ -16633,21 +16717,36 @@ PLAYABLE_CHAR_GFX_TABLE: !array
   Size: 272
   Item Type: !struct
     Entries:
-    - Name: Default Sprite Group
+    - !int
+      Name: DEFAULTSPRITEGROUP
+      Pretty Name: Default Sprite Group
       Size: 2
-    - Name: Dead Sprite Group
+    - !int
+      Name: DEADSPRITEGROUP
+      Pretty Name: Dead Sprite Group
       Size: 2
-    - Name: Ladder Sprite Group
+    - !int
+      Name: LADDERSPRITEGROUP
+      Pretty Name: Ladder Sprite Group
       Size: 2
-    - Name: Rope Sprite Group
+    - !int
+      Name: ROPESPRITEGROUP
+      Pretty Name: Rope Sprite Group
       Size: 2
-    - Name: Tiny Sprite Group
+    - !int
+      Name: TINYSPRITEGROUP
+      Pretty Name: Tiny Sprite Group
       Size: 2
-    - Name: Tiny Dead Sprite Group
+    - !int
+      Name: TINYDEADSPRITEGROUP
+      Pretty Name: Tiny Dead Sprite Group
       Size: 2
-    - Name: Robot Sprite Group
+    - !int
+      Name: ROBOTSPRITEGROUP
+      Pretty Name: Robot Sprite Group
       Size: 2
-    - Name: Unknown
+    - !int
+      Name: UNKNOWN
       Size: 2
   Offset: 0xC3F2B5
 SHOW_TITLE_SCREEN: !assembly
@@ -16690,11 +16789,14 @@ UNKNOWN_C3F951: !array
   Offset: 0xC3F951
   Item Type: !struct
     Entries:
-    - Name: RED
+    - !int
+      Name: RED
       Size: 1
-    - Name: GREEN
+    - !int
+      Name: GREEN
       Size: 1
-    - Name: BLUE
+    - !int
+      Name: BLUE
       Size: 1
 UNKNOWN_C3F981: !assembly
   Size: 328
@@ -16727,9 +16829,11 @@ UNKNOWN_C3FB1F: !array
   Offset: 0xC3FB1F
   Item Type: !struct
     Entries:
-    - Name: UNKNOWNA
+    - !int
+      Name: UNKNOWNA
       Size: 2
-    - Name: UNKNOWNB
+    - !int
+      Name: UNKNOWNB
       Size: 2
 UNKNOWN_C3FB2B: !unknown
   Size: 286
@@ -17134,7 +17238,7 @@ UNKNOWN_C4343E: !assembly
     260: UNKNOWN10
     270: UNKNOWN11
   Offset: 0xC4343E
-ITEM_USE_MENU: !array
+ITEM_USE_MENU: !unknown
   Size: 24
   Description: Item Use menu
   Offset: 0xC43550
@@ -18771,7 +18875,7 @@ AUTOLIFEUP: !assembly
     114: UNKNOWN3
     143: UNKNOWN4
   Offset: 0xC4A15D
-BATTLE_WINDOW_SIZES: !array
+BATTLE_WINDOW_SIZES: !unknown
   Size: 3
   Description: Sizes of various battle windows
   Offset: 0xC4A1F2
@@ -19804,17 +19908,20 @@ MUSIC_DATASET_TABLE: !array
   Item Type: !struct
     Entries:
     - !int
-      Name: Sample Set 1
+      Name: SAMPLESET1
+      Pretty Name: Sample Set 1
       Values:
         255: None
       Size: 1
     - !int
-      Name: Sample Set 2
+      Name: SAMPLESET2
+      Pretty Name: Sample Set 2
       Values:
         255: None
       Size: 1
     - !int
-      Name: Sequence Set
+      Name: SEQUENCESET
+      Pretty Name: Sequence Set
       Values:
         255: None
       Size: 1
@@ -19899,7 +20006,7 @@ TEXT_DATA_2: !array
 UNKNOWN_C9FF2F: !empty
   Size: 209
   Offset: 0xC9FF2F
-BATTLEBG_PRIMARY_DATA_GROUP: !array
+BATTLEBG_PRIMARY_DATA_GROUP: !unknown
   Size: 55201
   Description: 'Battle BGs: Primary Data Group'
   Offset: 0xCA0000
@@ -19926,44 +20033,78 @@ BG_DATA_TABLE: !array
   Size: 5559
   Item Type: !struct
     Entries:
-    - Name: Graphics and Arrangement
+    - !int
+      Name: GRAPHICSANDARRANGEMENT
+      Pretty Name: Graphics and Arrangement
       Size: 1
-    - Name: Palette
+    - !int
+      Name: PALETTE
+      Pretty Name: Palette
       Size: 1
-    - Name: Colour depth
+    - !int
+      Name: COLOURDEPTH
+      Pretty Name: Colour depth
       Size: 1
-    - Name: Palette Cycle
+    - !int
+      Name: PALETTECYCLE
+      Pretty Name: Palette Cycle
       Size: 1
       Values:
       - None
       - 1
       - 1 + 2
       - 1 (Reverse)
-    - Name: Palette Cycle 1 Begin
+    - !int
+      Name: PALETTECYCLE1BEGIN
+      Pretty Name: Palette Cycle 1 Begin
       Size: 1
-    - Name: Palette Cycle 1 End
+    - !int
+      Name: PALETTECYCLE1END
+      Pretty Name: Palette Cycle 1 End
       Size: 1
-    - Name: Palette Cycle 2 Begin
+    - !int
+      Name: PALETTECYCLE2BEGIN
+      Pretty Name: Palette Cycle 2 Begin
       Size: 1
-    - Name: Palette Cycle 2 End
+    - !int
+      Name: PALETTECYCLE2END
+      Pretty Name: Palette Cycle 2 End
       Size: 1
-    - Name: Palette-changing speed
+    - !int
+      Name: PALETTECHANGERATE
+      Pretty Name: Palette-changing speed
       Size: 1
-    - Name: Scrolling Movement 1
+    - !int
+      Name: SCROLLINGMOVEMENT1
+      Pretty Name: Scrolling Movement 1
       Size: 1
-    - Name: Scrolling Movement 2
+    - !int
+      Name: SCROLLINGMOVEMENT2
+      Pretty Name: Scrolling Movement 2
       Size: 1
-    - Name: Scrolling Movement 3
+    - !int
+      Name: SCROLLINGMOVEMENT3
+      Pretty Name: Scrolling Movement 3
       Size: 1
-    - Name: Scrolling Movement 4
+    - !int
+      Name: SCROLLINGMOVEMENT4
+      Pretty Name: Scrolling Movement 4
       Size: 1
-    - Name: Distortion 1
+    - !int
+      Name: DISTORTION1
+      Pretty Name: Distortion 1
       Size: 1
-    - Name: Distortion 2
+    - !int
+      Name: DISTORTION2
+      Pretty Name: Distortion 2
       Size: 1
-    - Name: Distortion 3
+    - !int
+      Name: DISTORTION3
+      Pretty Name: Distortion 3
       Size: 1
-    - Name: Distortion 4
+    - !int
+      Name: DISTORTION4
+      Pretty Name: Distortion 4
       Size: 1
   Offset: 0xCADCA1
 BG_SCROLLING_TABLE: !array
@@ -19971,18 +20112,28 @@ BG_SCROLLING_TABLE: !array
   Size: 1200
   Item Type: !struct
     Entries:
-    - Name: Duration
+    - !int
+      Pretty Name: Duration
+      Name: DURATION
       Size: 2
-    - Name: Horizontal Movement
-      Size: 2
-      Signed: true
-    - Name: Vertical Movement
-      Size: 2
-      Signed: true
-    - Name: Horizontal Acceleration
+    - !int
+      Name: HORIZONTALMOVEMENT
+      Pretty Name: Horizontal Movement
       Size: 2
       Signed: true
-    - Name: Vertical Acceleration
+    - !int
+      Name: VERTICALMOVEMENT
+      Pretty Name: Vertical Movement
+      Size: 2
+      Signed: true
+    - !int
+      Name: HORIZONTALACCELERATION
+      Pretty Name: Horizontal Acceleration
+      Size: 2
+      Signed: true
+    - !int
+      Name: VERTICALACCELERATION
+      Pretty Name: Vertical Acceleration
       Size: 2
       Signed: true
   Offset: 0xCAF258
@@ -19991,9 +20142,12 @@ BG_DISTORTION_TABLE: !array
   Size: 2295
   Item Type: !struct
     Entries:
-    - Name: Unknown A
+    - !int
+      Name: UNKNOWNA
       Size: 2
-    - Name: Type
+    - !int
+      Name: TYPE
+      Pretty Name: Type
       Size: 1
       Values:
       - Unknown Type 0
@@ -20001,31 +20155,44 @@ BG_DISTORTION_TABLE: !array
       - Horizontal, Interlaced
       - Vertical, Smooth
       - Unknown Type 4
-    - Name: Ripple Frequency
+    - !int
+      Name: RIPPLEFREQUENCY
+      Pretty Name: Ripple Frequency
       Size: 2
       Signed: y
-    - Name: Ripple Amplitude
+    - !int
+      Name: RIPPLEAMPLITUDE
+      Pretty Name: Ripple Amplitude
       Size: 2
       Signed: y
-    - Name: Unknown B
+    - !int
+      Name: UNKNOWNB
       Size: 1
-    - Name: Unknown C
+    - !int
+      Name: UNKNOWNC
       Size: 2
-    - Name: Ripple Frequency Acceleration
+    - !int
+      Name: RIPPLEFREQUENCYACCELERATION
+      Pretty Name: Ripple Frequency Acceleration
       Size: 2
       Signed: true
-    - Name: Ripple Amplitude Acceleration
+    - !int
+      Name: RIPPLEAMPLITUDEACCELERATION
+      Pretty Name: Ripple Amplitude Acceleration
       Size: 2
       Signed: true
-    - Name: Speed
+    - !int
+      Name: SPEED
+      Pretty Name: Speed
       Size: 1
-    - Name: Unknown D
+    - !int
+      Name: UNKNOWND
       Size: 2
   Offset: 0xCAF708
 UNKNOWN_CAFFFF: !empty
   Size: 1
   Offset: 0xCAFFFF
-BATTLEBGS_SECONDARY_DATA: !array
+BATTLEBGS_SECONDARY_DATA: !unknown
   Size: 55450
   Description: Battle Background Secondary Data Group
   Offset: 0xCB0000
@@ -20034,9 +20201,11 @@ BTL_ENTRY_BG_TABLE: !array
   Size: 1936
   Item Type: !struct
     Entries:
-    - Name: Background 1
+    - !int
+      Name: BACKGROUND1
       Size: 2
-    - Name: Background 2
+    - !int
+      Name: BACKGROUND2
       Size: 2
   Offset: 0xCBD89A
 AUDIO_PACK_66: !struct
@@ -20050,9 +20219,9 @@ AUDIO_PACK_66: !struct
     Name: BASEADDRESS
     Base: 16
     Size: 2
-  - !array
+  - !unknown
     Name: DATA
-    Size: Size-4
+    Size: SIZE-4
   Offset: 0xCBE02A
 AUDIO_PACK_59: !struct
   Size: 286
@@ -20089,10 +20258,10 @@ ANIMATION_SEQUENCE_POINTERS: !array
   Item Type: !struct
     Entries:
     - !pointer
-      Name: Pointer
+      Name: POINTER
       Size: 4
-    - !array
-      Name: Unknown
+    - !unknown
+      Name: UNKNOWN
       Size: 4
   Offset: 0xCC2DE1
 PSI_ARRANGEMENT_20: !unknown
@@ -20245,34 +20414,44 @@ PSI_ANIM_CFG: !array
   Item Type: !struct
     Entries:
     - !pointer
-      Name: Short pointer to tileset
+      Name: TILESETPOINTER
+      Pretty Name: Short pointer to tileset
       Size: 2
       Base: 0xCC0000
-    - Name: Frame duration (1/60th seconds)
+    - !int
+      Name: FRAMEDURATION
+      Pretty Name: Frame duration (1/60th seconds)
       Size: 1
-    - Name: Palette duration (1/60th seconds)
+    - !int
+      Name: PALETTEDURATION
+      Pretty Name: Palette duration (1/60th seconds)
       Size: 1
-    - !array
-      Name: unknown
+    - !unknown
+      Name: UNKNOWN
       Size: 2
-    - Name: Frame count
+    - !int
+      Name: FRAMECOUNT
       Size: 1
-    - Name: ANIMATION_TARGET
-      Description: Animation Target
+    - !int
+      Name: ANIMATIONTARGET
+      Pretty Name: Animation Target
       Values:
       - One Enemy
       - Row
       - All Enemies
       - Thunder
       Size: 1
-    - Description: Enemy color change delay
+    - !int
+      Name: COLORCHANGEDELAY
+      Pretty Name: Enemy color change delay
       Size: 1
-      Name: COLOR_CHANGE_DELAY
-    - Description: Duration of enemy colour change
+    - !int
+      Name: COLORCHANGEDURATION
+      Pretty Name: Duration of enemy colour change
       Size: 1
-      Name: COLOR_CHANGE_DURATION
-    - !array
-      Name: Enemy colour
+    - !color
+      Name: ENEMYCOLOUR
+      Pretty Name: Enemy colour
       Size: 2
   Offset: 0xCCF04D
 PSI_ARRANGEMENT_4: !unknown
@@ -20288,6 +20467,8 @@ PSI_ANIM_PALETTES: !array
   Description: PSI Animation Palettes
   Item Type: !array
     Size: 16
+    Item Type: !color
+      Size: 2
   Offset: 0xCCF47F
 PSI_ANIM_POINTERS: !array
   Size: 136
@@ -20317,9 +20498,10 @@ BATTLE_SPRITES_POINTERS: !array
   Item Type: !struct
     Entries:
     - !pointer
-      Name: Pointer
+      Name: POINTER
       Size: 4
-    - Name: Sprite Size
+    - !int
+      Name: SPRITESIZE
       Size: 1
       Values:
       - 0
@@ -20335,6 +20517,8 @@ BATTLE_SPRITE_PALETTES: !array
   Size: 1024
   Item Type: !array
     Size: 32
+    Item Type: !color
+      Size: 2
   Offset: 0xCE6514
 SWIRL_DATA: !unknown
   Size: 29489
@@ -20360,6 +20544,8 @@ SOUND_STONE_PALETTE: !array
   Description: Sound stone palette
   Item Type: !array
     Size: 32
+    Item Type: !color
+      Size: 2
   Offset: 0xCEF806
 AUDIO_PACK_102: !unknown
   Size: 1850
@@ -20371,10 +20557,10 @@ DOOR_DEST_TABLE_1: !array
   Item Type: !struct
     Entries: &DOORDESTTABLEENTRIES
     - !pointer
-      Name: Pointer
+      Name: POINTER
       Size: 4
     - !int
-      Name: Event Flag
+      Name: EVENTFLAG
       Size: 2
       Base: 16
     - !int
@@ -20384,7 +20570,7 @@ DOOR_DEST_TABLE_1: !array
       Name: X
       Size: 2
     - !int
-      Name: Style
+      Name: STYLE
       Size: 1
   Offset: 0xCF0000
 SIGN_POINTERS_1: !array
@@ -20650,7 +20836,7 @@ NPC_CONFIG_TABLE: !array
   Item Type: !struct
     Entries:
     - !int
-      Name: Type
+      Name: TYPE
       Size: 1
       Values:
       - 0
@@ -20658,10 +20844,10 @@ NPC_CONFIG_TABLE: !array
       - Item
       - Object
     - !int
-      Name: Sprite
+      Name: SPRITE
       Size: 2
     - !int
-      Name: Direction
+      Name: DIRECTION
       Size: 1
       Values:
       - Up
@@ -20673,24 +20859,24 @@ NPC_CONFIG_TABLE: !array
       - Left
       - Up-Left
     - !int
-      Name: Movement
+      Name: MOVEMENT
       Size: 2
     - !int
-      Name: Event Flag
+      Name: EVENTFLAG
       Size: 2
       Base: 16
     - !int
-      Name: Show Sprite
+      Name: APPEARANCEREQUIREMENT
       Size: 1
       Values:
       - Always
       - When event flag unset
       - When event flag set
     - !pointer
-      Name: Text Pointer 1
+      Name: TEXTPOINTER1
       Size: 4
     - !pointer
-      Name: Text Pointer 2
+      Name: TEXTPOINTER2
       Size: 4
   Offset: 0xCF8985
 AUDIO_PACK_94: !unknown
@@ -20712,29 +20898,52 @@ SCREEN_TRANSITION_CONFIG_TABLE: !array
   Size: 408
   Item Type: !struct
     Entries:
-    - Name: Duration
+    - !int
+      Name: DURATION
+      Pretty Name: Duration
       Size: 1
-    - Name: Animation ID
+    - !int
+      Name: ANIMATIONID
+      Pretty Name: Animation ID
       Size: 1
-    - Name: Animation Flags
+    - !int
+      Name: ANIMATIONFLAGS
+      Pretty Name: Animation Flags
       Size: 1
-    - Name: Fade Style
+    - !int
+      Name: FADESTYLE
+      Pretty Name: Fade Style
       Size: 1
-    - Name: Direction
+    - !int
+      Name: DIRECTION
+      Pretty Name: Direction
       Size: 1
-    - Name: Unknown
+    - !int
+      Name: UNKNOWN
       Size: 1
-    - Name: Slide speed
+    - !int
+      Name: SLIDESPEED
+      Pretty Name: Slide speed
       Size: 1
-    - Name: Initial Sound effect
+    - !int
+      Name: INITIALSOUNDEFFECT
+      Pretty Name: Initial Sound effect
       Size: 1
-    - Name: Secondary Duration
+    - !int
+      Name: SECONDARYDURATION
+      Pretty Name: Secondary Duration
       Size: 1
-    - Name: Secondary Animation ID
+    - !int
+      Name: SECONDARYANIMATIONID
+      Pretty Name: Secondary Animation ID
       Size: 1
-    - Name: Secondary Animation Flags
+    - !int
+      Name: SECONDARYANIMATIONFLAGS
+      Pretty Name: Secondary Animation Flags
       Size: 1
-    - Name: Final Sound effect
+    - !int
+      Name: FINALSOUNDEFFECT
+      Pretty Name: Final Sound effect
       Size: 1
   Offset: 0xD01400
 EVENT_CONTROL_PTR_TABLE: !array
@@ -20744,7 +20953,7 @@ EVENT_CONTROL_PTR_TABLE: !array
     Size: 2
     Base: 0xD00000
   Offset: 0xD01598
-MAP_TILE_EVENT_CONTROL_TABLE: !array
+MAP_TILE_EVENT_CONTROL_TABLE: !unknown
   Description: 'Map Tiles: Event Control Table'
   Size: 704
   Offset: 0xD015C0
@@ -20770,20 +20979,24 @@ BTL_ENTRY_PTR_TABLE: !array
   Item Type: !struct
     Entries:
     - !pointer
-      Name: Pointer
+      Name: POINTER
+      Pretty Name: Pointer
       Size: 4
     - !int
-      Name: Fear event flag
+      Name: FEAREVENTFLAG
+      Pretty Name: Fear event flag
       Size: 2
       Base: 16
     - !int
-      Name: Fear mode
+      Name: FEARMODE
+      Pretty Name: Fear mode
       Size: 1
       Values:
       - Run away if flag is unset
       - Run away if flag is set
     - !int
-      Name: Letterbox Size
+      Name: LETTERBOXSIZE
+      Pretty Name: Letterbox Size
       Size: 1
   Offset: 0xD0C60D
 ENEMY_BATTLE_GROUPS_TABLE: !unknown
@@ -20802,7 +21015,7 @@ OVERWORLD_SPRITES: !array
   Size: 280000
   Item Type: !tile
     Size: 16
-    bpp: 4
+    BPP: 4
   Offset: 0xD10000
 UNKNOWN_D545C0: !empty
   Size: 2624
@@ -20814,17 +21027,19 @@ ITEM_CONFIGURATION_TABLE: !array
     Entries:
     - !script
       Name: NAME
-      Description: Name
+      Pretty Name: Name
       Size: 25
-    - Name: TYPE
-      Description: Item Type
+    - !int
+      Name: TYPE
+      Pretty Name: Item Type
       Size: 1
-    - Name: COST
-      Description: Cost of Item
+    - !int
+      Name: COST
+      Pretty Name: Cost of Item
       Size: 2
     - !bitfield
       Name: MISC
-      Description: Miscellaneous Flags
+      Pretty Name: Miscellaneous Flags
       Size: 1
       Bit Values:
       - Ness can use
@@ -20835,16 +21050,17 @@ ITEM_CONFIGURATION_TABLE: !array
       - Cannot be given away
       - Cannot be stored with Escargo Express
       - Item disappears when used
-    - Name: ACTION
-      Description: Battle action ID
+    - !int
+      Name: ACTION
+      Pretty Name: Battle action ID
       Size: 2
-    - !array
+    - !unknown
       Name: ARGUMENT
-      Description: Argument
+      Pretty Name: Argument
       Size: 4
     - !pointer
       Name: HELP_PTR
-      Description: Help Text Pointer
+      Pretty Name: Help Text Pointer
       Size: 4
   Offset: 0xD55000
 STORE_TABLE: !array
@@ -20852,19 +21068,26 @@ STORE_TABLE: !array
   Size: 462
   Item Type: !struct
     Entries:
-    - Name: Item 1
+    - !int
+      Name: ITEM1
       Size: 1
-    - Name: Item 2
+    - !int
+      Name: ITEM2
       Size: 1
-    - Name: Item 3
+    - !int
+      Name: ITEM3
       Size: 1
-    - Name: Item 4
+    - !int
+      Name: ITEM4
       Size: 1
-    - Name: Item 5
+    - !int
+      Name: ITEM5
       Size: 1
-    - Name: Item 6
+    - !int
+      Name: ITEM6
       Size: 1
-    - Name: Item 7
+    - !int
+      Name: ITEM7
       Size: 1
   Offset: 0xD576B2
 PSI_TELEPORT_DEST_TABLE: !array
@@ -20873,10 +21096,12 @@ PSI_TELEPORT_DEST_TABLE: !array
   Item Type: !struct
     Entries:
     - !script
-      Name: Name
+      Name: NAME
+      Pretty Name: Name
       Size: 25
     - !int
-      Name: Event Flag
+      Name: EVENTFLAG
+      Pretty Name: Event Flag
       Base: 16
       Size: 2
     - !int
@@ -20895,14 +21120,17 @@ TELEPHONE_CONTACTS_TABLE: !array
   Item Type: !struct
     Entries:
     - !script
-      Name: Name
+      Name: NAME
+      Pretty Name: Name
       Size: 25
     - !int
-      Name: Event Flag
+      Name: EVENTFLAG
+      Pretty Name: Event Flag
       Size: 2
       Base: 16
     - !pointer
-      Name: Text Pointer
+      Name: TEXTPOINTER
+      Pretty Name: Text Pointer
       Size: 4
   Offset: 0xD57AAE
 BATTLE_ACTION_TABLE: !array
@@ -20911,13 +21139,15 @@ BATTLE_ACTION_TABLE: !array
   Item Type: !struct
     Entries:
     - !int
-      Name: Direction
+      Name: DIRECTION
+      Pretty Name: Direction
       Size: 1
       Values:
       - enemy
       - party
     - !int
-      Name: Target
+      Name: TARGET
+      Pretty Name: Target
       Size: 1
       Values:
       - none
@@ -20926,7 +21156,8 @@ BATTLE_ACTION_TABLE: !array
       - row
       - all
     - !int
-      Name: Action type
+      Name: ACTIONTYPE
+      Pretty Name: Action type
       Size: 1
       Values:
       - nothing
@@ -20936,13 +21167,16 @@ BATTLE_ACTION_TABLE: !array
       - item
       - other
     - !int
-      Name: PP Cost
+      Name: PPCOST
+      Pretty Name: PP Cost
       Size: 1
     - !pointer
-      Name: Text Address
+      Name: TEXTADDRESS
+      Pretty Name: Text Address
       Size: 4
     - !pointer
-      Name: Code Address
+      Name: CODEADDRESS
+      Pretty Name: Code Address
       Size: 4
   Offset: 0xD57B68
 PSI_ABILITY_TABLE: !array
@@ -20951,11 +21185,13 @@ PSI_ABILITY_TABLE: !array
   Item Type: !struct
     Entries:
     - !int
-      Name: PSI Name
+      Name: PSINAME
+      Pretty Name: PSI Name
       Size: 1
       References: PSI_NAME_TABLE
     - !int
-      Name: Strength
+      Name: STRENGTH
+      Pretty Name: Strength
       Size: 1
       Values:
       - "": ~
@@ -20965,7 +21201,8 @@ PSI_ABILITY_TABLE: !array
       - Σ
       - Ω
     - !int
-      Name: Type
+      Name: TYPE
+      Pretty Name: Type
       Size: 1
       Bit Values:
       - Offense
@@ -20973,7 +21210,8 @@ PSI_ABILITY_TABLE: !array
       - Assist
       - Other
     - !int
-      Name: Usability Outside of Battle
+      Name: OUTOFBATTLEUSABILITY
+      Pretty Name: Usability Outside of Battle
       Size: 1
       Values:
       - ???
@@ -20984,22 +21222,28 @@ PSI_ABILITY_TABLE: !array
       Name: ACTION
       Size: 2
     - !int
-      Name: Level learned by Ness
+      Name: NESSLEVEL
+      Pretty Name: Level learned by Ness
       Size: 1
     - !int
-      Name: Level learned by Paula
+      Name: PAULALEVEL
+      Pretty Name: Level learned by Paula
       Size: 1
     - !int
-      Name: Level learned by Poo
+      Name: POOLEVEL
+      Pretty Name: Level learned by Poo
       Size: 1
     - !int
-      Name: PSI Menu position (X)
+      Name: PSIMENUPOSITIONX
+      Pretty Name: PSI Menu position (X)
       Size: 1
     - !int
-      Name: PSI Menu position (Y)
+      Name: PSIMENUPOSITIONY
+      Pretty Name: PSI Menu position (Y)
       Size: 1
     - !pointer
-      Name: Text Address
+      Name: TEXTADDRESS
+      Pretty Name: Text Address
       Size: 4
   Offset: 0xD58A50
 PSI_NAME_TABLE: !array
@@ -21026,16 +21270,19 @@ ENEMY_CONFIGURATION_TABLE: !array
   Item Type: !struct
     Entries:
     - !int
-      Name: '"The" Flag'
+      Name: THEFLAG
+      Pretty Name: '"The" Flag'
       Size: 1
       Values:
       - False
       - True
     - !script
-      Name: Name
+      Name: NAME
+      Pretty Name: Name
       Size: 25
     - !int
-      Name: Gender
+      Name: GENDER
+      Pretty Name: Gender
       Size: 1
       Values:
       - Invalid
@@ -21043,20 +21290,24 @@ ENEMY_CONFIGURATION_TABLE: !array
       - Female
       - Neutral
     - !int
-      Name: Type
+      Name: TYPE
+      Pretty Name: Type
       Size: 1
       Values:
       - Normal
       - Insect
       - Metal
     - !int
-      Name: Battle Sprite
+      Name: BATTLESPRITE
+      Pretty Name: Battle Sprite
       Size: 2
     - !int
-      Name: Overworld Sprite
+      Name: OVERWORLDSPRITE
+      Pretty Name: Overworld Sprite
       Size: 2
     - !int
-      Name: Run Flag
+      Name: RUNFLAG
+      Pretty Name: Run Flag
       Size: 1
       Values:
       - 0
@@ -21075,111 +21326,143 @@ ENEMY_CONFIGURATION_TABLE: !array
       Name: PP
       Size: 2
     - !int
-      Name: Experience points
+      Name: EXP
+      Pretty Name: Experience points
       Size: 4
     - !int
-      Name: Money
+      Name: MONEY
+      Pretty Name: Money
       Size: 2
     - !int
-      Name: Movement pattern
+      Name: MOVEMENTPATTERN
+      Pretty Name: Movement pattern
       Size: 2
     - !pointer
-      Name: Encounter Text Pointer
+      Name: ENCOUNTERTEXTPTR
+      Pretty Name: Encounter Text Pointer
       Size: 4
     - !pointer
-      Name: Death Text Pointer
+      Name: DEATHTEXTPTR
+      Pretty Name: Death Text Pointer
       Size: 4
     - !int
-      Name: Battle Sprite Palette
+      Name: BATTLESPRITEPALETTE
+      Pretty Name: Battle Sprite Palette
       Size: 1
     - !int
-      Name: Level
+      Name: LEVEL
+      Pretty Name: Level
       Size: 1
     - !int
-      Name: Music
+      Name: MUSIC
+      Pretty Name: Music
       Size: 1
     - !int
-      Name: Offense
+      Name: OFFENSE
+      Pretty Name: Offense
       Size: 2
     - !int
-      Name: Defense
+      Name: DEFENSE
+      Pretty Name: Defense
       Size: 2
     - !int
-      Name: Speed
+      Name: SPEED
+      Pretty Name: Speed
       Size: 1
     - !int
-      Name: Guts
+      Name: GUTS
+      Pretty Name: Guts
       Size: 1
     - !int
-      Name: Luck
+      Name: LUCK
+      Pretty Name: Luck
       Size: 1
     - !int
-      Name: Fire vulnerability
+      Name: FIREVULNERABILITY
+      Pretty Name: Fire vulnerability
       Size: 1
       Values: *RESISTANCES
     - !int
-      Name: Freeze vulnerability
+      Name: FREEZEVULNERABILITY
+      Pretty Name: Freeze vulnerability
       Size: 1
       Values: *RESISTANCES
     - !int
-      Name: Flash vulnerability
+      Name: FLASHVULNERABILITY
+      Pretty Name: Flash vulnerability
       Size: 1
       Values: *RESISTANCES
     - !int
-      Name: Paralysis vulnerability
+      Name: PARALYSIS VULNERABILITY
+      Pretty Name: Paralysis vulnerability
       Size: 1
       Values: *RESISTANCES
     - !int
-      Name: Hypnosis/Brainshock vulnerability
+      Name: HYPNOSHOCKVULNERABILITY
+      Pretty Name: Hypnosis/Brainshock vulnerability
       Size: 1
       Values: *RESISTANCES
     - !int
-      Name: Miss Rate
+      Name: MISSRATE
+      Pretty Name: Miss Rate
       Size: 1
     - !int
-      Name: Action Order
+      Name: ACTIONORDER
+      Pretty Name: Action Order
       Size: 1
     - !int
-      Name: Action 1
+      Name: ACTION1
+      Pretty Name: Action 1
       Size: 2
     - !int
-      Name: Action 2
+      Name: ACTION2
+      Pretty Name: Action 2
       Size: 2
     - !int
-      Name: Action 3
+      Name: ACTION3
+      Pretty Name: Action 3
       Size: 2
     - !int
-      Name: Action 4
+      Name: ACTION4
+      Pretty Name: Action 4
       Size: 2
     - !int
-      Name: Final Action
+      Name: FINALACTION
+      Pretty Name: Final Action
       Size: 2
     - !int
-      Name: Action 1 Argument
+      Name: ACTION1ARG
+      Pretty Name: Action 1 Argument
       Size: 1
     - !int
-      Name: Action 2 Argument
+      Name: ACTION2ARG
+      Pretty Name: Action 2 Argument
       Size: 1
     - !int
-      Name: Action 3 Argument
+      Name: ACTION3ARG
+      Pretty Name: Action 3 Argument
       Size: 1
     - !int
-      Name: Action 4 Argument
+      Name: ACTION4ARG
+      Pretty Name: Action 4 Argument
       Size: 1
     - !int
-      Name: Final Action Argument
+      Name: FINALACTIONARG
+      Pretty Name: Final Action Argument
       Size: 1
     - !int
       Name: IQ
       Size: 1
     - !int
-      Name: Boss Flag
+      Name: BOSS
+      Pretty Name: Boss Flag
       Size: 1
       Values:
       - False
       - True
     - !int
-      Name: Item Rarity
+      Name: ITEMDROPRATE
+      Pretty Name: Item Rarity
       Size: 1
       Values:
       - 1/128
@@ -21191,10 +21474,12 @@ ENEMY_CONFIGURATION_TABLE: !array
       - 64/128
       - 128/128
     - !int
-      Name: Item Dropped
+      Name: ITEMDROPPED
+      Pretty Name: Item Dropped
       Size: 1
     - !int
-      Name: Initial Status
+      Name: INITIALSTATUS
+      Pretty Name: Initial Status
       Size: 1
       Values:
       - Normal
@@ -21206,19 +21491,23 @@ ENEMY_CONFIGURATION_TABLE: !array
       - Cannot Concentrate
       - Feeling Strange
     - !int
-      Name: Death Sound
+      Name: DEATHTYPE
+      Pretty Name: Death Sound
       Size: 1
       Values:
       - Normal
       - Boss
     - !int
-      Name: Row
+      Name: ROW
+      Pretty Name: Row
       Size: 1
     - !int
-      Name: Max Call
+      Name: MAXCALLED
+      Pretty Name: Max Call
       Size: 1
     - !int
-      Name: Mirror Success Rate
+      Name: MIRRORSUCCESS
+      Pretty Name: Mirror Success Rate
       Size: 1
   Offset: 0xD59589
 STATS_GROWTH_VARS: !array
@@ -21227,25 +21516,31 @@ STATS_GROWTH_VARS: !array
   Item Type: !struct
     Entries:
     - !int
-      Name: Offense
+      Name: OFFENSE
+      Pretty Name: Offense
       Size: 1
     - !int
-      Name: Defense
+      Name: DEFENSE
+      Pretty Name: Defense
       Size: 1
     - !int
-      Name: Speed
+      Name: SPEED
+      Pretty Name: Speed
       Size: 1
     - !int
-      Name: Guts
+      Name: GUTS
+      Pretty Name: Guts
       Size: 1
     - !int
-      Name: Vitality
+      Name: VITALITY
+      Pretty Name: Vitality
       Size: 1
     - !int
       Name: IQ
       Size: 1
     - !int
-      Name: Luck
+      Name: LUCK
+      Pretty Name: Luck
       Size: 1
   Offset: 0xD5EA5B
 CONDIMENT_TABLE: !array
@@ -21254,16 +21549,20 @@ CONDIMENT_TABLE: !array
   Item Type: !struct
     Entries:
     - !int
-      Name: food
+      Name: FOOD
+      Pretty Name: Food
       Size: 1
     - !int
-      Name: condiment 1
+      Name: CONDIMENT1
+      Pretty Name: Condiment 1
       Size: 1
     - !int
-      Name: condiment 2
+      Name: CONDIMENT2
+      Pretty Name: Condiment 2
       Size: 1
     - !int
-      Name: effect
+      Name: EFFECT
+      Pretty Name: Effect
       Size: 1
       Values:
       - Restore HP
@@ -21277,13 +21576,16 @@ CONDIMENT_TABLE: !array
       - Increase Luck
       - No visible effect
     - !int
-      Name: good recover
+      Name: GOODRECOVER
+      Pretty Name: Good Recover
       Size: 1
     - !int
-      Name: bad recover
+      Name: BADRECOVER
+      Pretty Name: Bad Recover
       Size: 1
     - !int
-      Name: run time
+      Name: RUNTIME
+      Pretty Name: Run Time
       Size: 1
   Offset: 0xD5EA77
 TELEPORT_DESTINATION_TABLE: !array
@@ -21298,13 +21600,15 @@ TELEPORT_DESTINATION_TABLE: !array
       Name: "Y"
       Size: 2
     - !int
-      Name: Direction
+      Name: DIRECTION
+      Pretty Name: Direction
       Size: 1
     - !int
-      Name: Warp Style
+      Name: WARPSTYLE
+      Pretty Name: Warp Style
       Size: 1
     - !int
-      Name: Unknown
+      Name: UNKNOWN
       Size: 2
   Offset: 0xD5EBAB
 MAP_HOTSPOTS: !array
@@ -21312,13 +21616,17 @@ MAP_HOTSPOTS: !array
   Description: 'Map Data: Hotspots Table'
   Item Type: !struct
     Entries:
-    - Name: X1
+    - !int
+      Name: X1
       Size: 2
-    - Name: Y1
+    - !int
+      Name: Y1
       Size: 2
-    - Name: X2
+    - !int
+      Name: X2
       Size: 2
-    - Name: Y2
+    - !int
+      Name: Y2
       Size: 2
   Offset: 0xD5F2FB
 TIMED_ITEM_TRANSFORMATION_TABLE: !array
@@ -21326,15 +21634,25 @@ TIMED_ITEM_TRANSFORMATION_TABLE: !array
   Description: Timed Item Transformation Table
   Item Type: !struct
     Entries:
-    - Name: Item ID
+    - !int
+      Name: ITEMID
+      Pretty Name: Item ID
       Size: 1
-    - Name: Sound Effect
+    - !int
+      Name: SOUNDEFFECT
+      Pretty Name: Sound Effect
       Size: 1
-    - Name: Sound Frequency
+    - !int
+      Name: SOUNDFREQUENCY
+      Pretty Name: Sound Frequency
       Size: 1
-    - Name: New Item
+    - !int
+      Name: TARGETITEM
+      Pretty Name: New Item
       Size: 1
-    - Name: Delay
+    - !int
+      Name: TRANSFORMDELAY
+      Pretty Name: Delay
       Size: 1
   Offset: 0xD5F4BB
 DONT_CARE_NAMES: !array
@@ -21343,25 +21661,32 @@ DONT_CARE_NAMES: !array
   Item Type: !struct
     Entries:
     - !script
-      Name: Name 1
+      Name: NAME1
+      Pretty Name: Name 1
       Size: 6
     - !script
-      Name: Name 2
+      Name: NAME2
+      Pretty Name: Name 2
       Size: 6
     - !script
-      Name: Name 3
+      Name: NAME3
+      Pretty Name: Name 3
       Size: 6
     - !script
-      Name: Name 4
+      Name: NAME4
+      Pretty Name: Name 4
       Size: 6
     - !script
-      Name: Name 5
+      Name: NAME5
+      Pretty Name: Name 5
       Size: 6
     - !script
-      Name: Name 6
+      Name: NAME6
+      Pretty Name: Name 6
       Size: 6
     - !script
-      Name: Name 7
+      Name: NAME7
+      Pretty Name: Name 7
       Size: 6
   Offset: 0xD5F4CF
 INITIAL_STATS: !array
@@ -21369,20 +21694,26 @@ INITIAL_STATS: !array
   Description: Starting Statistics
   Item Type: !struct
     Entries:
-    - !array
-      Name: Unknown
+    - !unknown
+      Name: UNKNOWN
       Size: 4
     - !int
-      Name: Money
+      Name: MONEY
+      Pretty Name: Money
       Size: 2
     - !int
-      Name: Level
+      Name: LEVEL
+      Pretty Name: Level
       Size: 2
     - !int
-      Name: Experience Points
+      Name: EXP
+      Pretty Name: Experience Points
       Size: 2
     - !array
-      Name: Items Possessed
+      Name: ITEMS
+      Pretty Name: Items Possessed
+      Item Type: !int
+        Size: 1
       Size: 10
   Offset: 0xD5F5F5
 TIMED_DELIVERY_TABLE: !array
@@ -21391,26 +21722,31 @@ TIMED_DELIVERY_TABLE: !array
   Item Type: !struct
     Entries:
     - !int
-      Name: Sprite Group
+      Name: SPRITEGROUP
+      Pretty Name: Sprite Group
       Size: 2
     - !int
-      Name: Event Flag
+      Name: EVENTFLAG
+      Pretty Name: Event Flag
       Size: 2
       Base: 16
-    - !array
-      Name: Unknown
+    - !unknown
+      Name: UNKNOWN
       Size: 4
     - !int
-      Name: Timer
+      Name: TIMER
+      Pretty Name: Timer
       Size: 2
     - !pointer
-      Name: Delivery Success Text Pointer
+      Name: DELIVERYSUCCESSTEXTPTR
+      Pretty Name: Delivery Success Text Pointer
       Size: 3
     - !pointer
-      Name: Delivery Failure Text Pointer
+      Name: DELIVERYFAILTEXTPTR
+      Pretty Name: Delivery Failure Text Pointer
       Size: 3
-    - !array
-      Name: Unknown2
+    - !unknown
+      Name: UNKNOWN2
       Size: 4
   Offset: 0xD5F645
 UNKNOWN_D5F70D: !empty
@@ -21421,6 +21757,8 @@ MAP_DATA_TILE_TABLE: !array
   Description: 'Map Data: Tile Table'
   Item Type: !array
     Size: 256
+    Item Type: !int
+      Size: 1
   Offset: 0xD60000
 MAP_DATA_LOCAL_TILESET_TABLE: !unknown
   Size: 22528
@@ -21437,9 +21775,13 @@ MAP_DATA_PER-SECTOR_ATTRIBUTES_TABLE: !array
   Description: 'Map Data: Per-Sector Attributes Table'
   Item Type: !struct
     Entries:
-    - Name: Bitfield
+    - !int
+      Name: BITFIELD
+      Pretty Name: Bitfield
       Size: 1
-    - Name: Item ID
+    - !int
+      Name: ITEMID
+      Pretty Name: Item ID
       Size: 1
   Offset: 0xD7B200
 MAP_DATA_TILE_ARRANGEMENT_BLOCK_1: !unknown
@@ -21471,15 +21813,21 @@ ANTI-PIRACY_NOTICE_GRAPHICS: !unknown
 WARNING_PALETTE: !array
   Size: 8
   Description: Palette for Anti-Piracy and Faulty Game Pak Screens
+  Item Type: !color
+    Size: 2
   Offset: 0xD8F3BE
 FAULTY_GAME_PAK_ARRANGEMENT: !array
   Size: 510
   Description: Faulty Game Pak Notice Screen Arrangement
   Item Type: !struct
     Entries:
-    - Name: Tile
+    - !int
+      Name: TILE
+      Pretty Name: Tile
       Size: 1
-    - Name: Misc
+    - !int
+      Name: MISC
+      Pretty Name: Misc
       Size: 1
   Offset: 0xD8F3C6
 FAULTY_GAME_PAK_GRAPHICS: !unknown
@@ -21511,6 +21859,8 @@ MAP_DATA_PALETTES: !array
   Size: 32256
   Item Type: !array
     Size: 32
+    Item Type: !color
+      Size: 2
   Offset: 0xDA7CA7
 MAP_DATA_UNKNOWN_PALETTE_PTR_TABLE: !array
   Size: 96
@@ -21635,33 +21985,59 @@ TEXT_WINDOW_FLAVOUR_PALETTES: !array
   Item Type: !struct
     Entries:
     - !array
-      Name: Text Palette
+      Name: TEXTPALETTE
+      Pretty Name: Text Palette
+      Item Type: !color
+        Size: 2
       Size: 8
     - !array
-      Name: Cursor, Box, Number Palette
+      Name: CURSORBOXNUMPALETTE
+      Pretty Name: Cursor, Box, Number Palette
+      Item Type: !color
+        Size: 2
       Size: 8
     - !array
-      Name: Unknown Palette
+      Name: UNKNOWNPALETTE
+      Pretty Name: Unknown Palette
+      Item Type: !color
+        Size: 2
       Size: 8
     - !array
-      Name: Special Text Palette
+      Name: SPECIALTEXTPALETTE
+      Pretty Name: Special Text Palette
+      Item Type: !color
+        Size: 2
       Size: 8
     - !array
-      Name: HP/PP Palette
+      Name: HPPPPALETTE
+      Pretty Name: HP/PP Palette
+      Item Type: !color
+        Size: 2
       Size: 8
     - !array
-      Name: Darkened Palette
+      Name: DARKENEDPALETTE
+      Pretty Name: Darkened Palette
+      Item Type: !color
+        Size: 2
       Size: 8
     - !array
-      Name: AUTO, affliction Palette
+      Name: AUTOAFFLICTIONPALETTE
+      Pretty Name: AUTO, affliction Palette
+      Item Type: !color
+        Size: 2
       Size: 8
     - !array
-      Name: Non-battle text Palette
+      Name: NONBATTLETEXTPALETTE
+      Pretty Name: Non-battle text Palette
+      Item Type: !color
+        Size: 2
       Size: 8
   Offset: 0xE01FC8
 MOVEMENT_TEXT_STRING_PALETTE: !array
   Size: 8
   Description: Movement-Referenced Text String Palette
+  Item Type: !color
+    Size: 2
   Offset: 0xE02188
 TOWN_MAP_GFX_POINTER_TABLE: !array
   Size: 24
@@ -21776,21 +22152,22 @@ PHOTOGRAPHER_CFG_TABLE: !array
   Item Type: !struct
     Entries:
     - !int
-      Name: Event Flag
+      Name: EVENTFLAG
+      Pretty Name: Event Flag
       Size: 2
       Base: 16
-    - !array
-      Name: Unknown A
+    - !unknown
+      Name: UNKNOWNA
       Size: 3
     - !int
-      Name: Unknown B
+      Name: UNKNOWNB
       Size: 2
     - !int
-      Name: Unknown C
+      Name: UNKNOWNC
       Size: 1
       Base: 16
-    - !array
-      Name: Unknown D
+    - !unknown
+      Name: UNKNOWND
       Size: 54
   Offset: 0xE12F8A
 COMPRESSED_PALETTE_UNKNOWN: !unknown
@@ -21956,6 +22333,8 @@ STAFF_CREDITS_FONT_PALETTE: !array
   Description: Staff Credits Font Palette
   Item Type: !array
     Size: 8
+    Item Type: !color
+      Size: 2
 UNKNOWN_E1E924: !unknown
   Size: 38
   Offset: 0xE1E924
@@ -21972,6 +22351,8 @@ TOWN_MAP_ICON_PALETTE: !array
   Description: Town Map Icon Palette
   Item Type: !array
     Size: 32
+    Item Type: !color
+      Size: 2
 UNKNOWN_E1F203: !unknown
   Size: 0x28E
   Offset: 0xE1F203
@@ -22898,35 +23279,39 @@ MAP_DATA_WEIRD_TILE_ANIMATION_TABLE: !array
   Item Type: !struct
     Entries:
     - !int
-      Name: Count
+      Name: COUNT
+      Pretty Name: Count
       Size: 1
     - !struct
-      Name: Tile Group
-      Size: Count*8
+      Name: TILEGROUP
+      Pretty Name: Tile Group
+      Size: COUNT*8
       Entries:
       - !int
-        Name: Animation Frames
+        Name: FRAMECOUNT
+        Pretty Name: Animation Frames
         Size: 1
       - !int
-        Name: Animation Speed
+        Name: SPEED
+        Pretty Name: Animation Speed
         Size: 1
       - !int
-        Name: Unknown1
+        Name: UNKNOWN1
         Size: 1
       - !int
-        Name: Unknown2
+        Name: UNKNOWN2
         Size: 1
       - !int
-        Name: Unknown3
+        Name: UNKNOWN3
         Size: 1
       - !int
-        Name: Unknown4
+        Name: UNKNOWN4
         Size: 1
       - !int
-        Name: Unknown5
+        Name: UNKNOWN5
         Size: 1
       - !int
-        Name: Unknown6
+        Name: UNKNOWN6
         Size: 1
 SPRITE_GROUPING_PTR_TABLE: !array
   Description: Sprite Grouping Pointer Table
@@ -22941,70 +23326,90 @@ SPRITE_GROUPING_DATA: !array
   Item Type: !struct
     Entries:
     - !int
-      Name: Height
+      Name: HEIGHT
+      Pretty Name: Height
       Size: 1
     - !int
-      Name: Width
+      Name: WIDTH
+      Pretty Name: Width
       Size: 1
     - !int
-      Name: UnknownA
+      Name: UNKNOWNA
       Size: 1
     - !int
-      Name: Flags
+      Name: FLAGS
+      Pretty Name: Flags
       Size: 1
-    - !array
-      Name: UnknownB
+    - !unknown
+      Name: UNKNOWNB
       Size: 4
     - !int
-      Name: Bank
+      Name: BANK
+      Pretty Name: Bank
       Size: 1
     - !int
-      Name: North_Sprite_A
+      Name: NSPRITEA
+      Pretty Name: North Sprite A
       Size: 2
     - !int
-      Name: North_Sprite_B
+      Name: NSPRITEB
+      Pretty Name: North Sprite B
       Size: 2
     - !int
-      Name: East_Sprite_A
+      Name: ESPRITEA
+      Pretty Name: East Sprite A
       Size: 2
     - !int
-      Name: East_Sprite_B
+      Name: ESPRITEB
+      Pretty Name: East Sprite B
       Size: 2
     - !int
-      Name: South_Sprite_A
+      Name: SSPRITEA
+      Pretty Name: South Sprite A
       Size: 2
     - !int
-      Name: South_Sprite_B
+      Name: SSPRITEB
+      Pretty Name: South Sprite B
       Size: 2
     - !int
-      Name: West_Sprite_A
+      Name: WSPRITEA
+      Pretty Name: West Sprite A
       Size: 2
     - !int
-      Name: West_Sprite_B
+      Name: WSPRITEB
+      Pretty Name: West Sprite B
       Size: 2
     - !int
-      Name: North_East_Sprite_A
+      Name: NESPRITEA
+      Pretty Name: North East Sprite A
       Size: 2
     - !int
-      Name: North_East_Sprite_B
+      Name: NESPRITEB
+      Pretty Name: North East Sprite B
       Size: 2
     - !int
-      Name: South_East_Sprite_A
+      Name: SESPRITEA
+      Pretty Name: South East Sprite A
       Size: 2
     - !int
-      Name: South_East_Sprite_B
+      Name: SESPRITEB
+      Pretty Name: South East Sprite B
       Size: 2
     - !int
-      Name: South_West_Sprite_A
+      Name: SWSPRITEA
+      Pretty Name: South West Sprite A
       Size: 2
     - !int
-      Name: South_West_Sprite_B
+      Name: SWSPRITEB
+      Pretty Name: South West Sprite B
       Size: 2
     - !int
-      Name: South_East_Sprite_A
+      Name: NWSPRITEA
+      Pretty Name: North West Sprite A
       Size: 2
     - !int
-      Name: South_East_Sprite_B
+      Name: NWSPRITEB
+      Pretty Name: North West Sprite B
       Size: 2
 TEXT_DATA_EF4A40: !array
   Size: 22842
@@ -23046,20 +23451,26 @@ MAP_DATA_PER-SECTOR_TOWN_MAP_DATA: !array
   Description: 'Map Data: Per-Sector Town Map Data'
   Item Type: !struct
     Entries:
-    - Name: Town Map
+    - !int
+      Name: TOWNMAP
+      Pretty Name: Town Map
       Size: 1
-    - Name: Town Map X
+    - !int
+      Name: X
+      Pretty Name: Town Map X
       Size: 1
-    - Name: Town Map Y
+    - !int
+      Name: 'Y'
+      Pretty Name: Town Map Y
       Size: 1
   Offset: 0xEFA70F
-UNKNOWN_EFC50F: !array
+UNKNOWN_EFC50F: !unknown
   Size: 4108
   Offset: 0xEFC50F
-TOWN_MAP_MAPPING: !array
+TOWN_MAP_MAPPING: !unknown
   Size: 11788
   Offset: 0xEFA70F
-DEBUG_SOUND_MODE_MENU_TEXT: !array
+DEBUG_SOUND_MODE_MENU_TEXT: !unknown
   Size: 84
   Description: Programmers' Sound Mode Menu Text
   Offset: 0xEFD51B
@@ -23106,7 +23517,7 @@ UNKNOWN_EFD6D4: !assembly
     459: UNKNOWN28
     479: UNKNOWN29
   Offset: 0xEFD6D4
-DEBUG_MENU_TEXT: !array
+DEBUG_MENU_TEXT: !unknown
   Description: Programmers' Debug Mode Menu Text
   Size: 169
   Offset: 0xEFD8B5
@@ -23358,7 +23769,7 @@ UNKNOWN_EFEAA4: !assembly
 UNKNOWN_EFEAC8: !assembly
   Size: 85
   Offset: 0xEFEAC8
-UNKNOWN_EFEB1D: !array
+UNKNOWN_EFEB1D: !unknown
   Size: 13
   Offset: 0xEFEB1D
 UNKNOWN_EFEB2A: !assembly
@@ -23375,7 +23786,7 @@ DEBUG_MENU_FONT: !array
   Size: 1024
   Item Type: !tile
     Size: 16
-    bpp: 2
+    BPP: 2
   Offset: 0xEFEB70
 UNKNOWN_EFEF70: !unknown
   Size: 71
@@ -23385,8 +23796,7 @@ KIRBY: !array
   Size: 288
   Item Type: !tile
     Size: 32
-    bpp: 4
-    palette: 15725243
+    BPP: 4
   Offset: 0xEFEFB7
 UNKNOWN_EFF0D7: !empty
   Size: 228
@@ -23395,6 +23805,8 @@ UNKNOWN_EFF1BB: !array
   Size: 512
   Item Type: !array
     Size: 32
+    Item Type: !color
+      Size: 2
   Offset: 0xEFF1BB
 UNKNOWN_VERSION_STRING: !script
   Size: 32
