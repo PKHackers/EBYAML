@@ -6020,6 +6020,11 @@ MOVEMENT_CODE_36: !assembly
   Offset: 0xC09875
   Initial State:
     8 Bit Accum: n
+MOVEMENT_CODE_0C: !assembly
+  Size: 0x2A
+  Offset: 0xC099C3
+  Initial State:
+    8 Bit Accum: n
 UNKNOWN_C099DD: !assembly
   Size: 49
   Labels:
@@ -6048,11 +6053,13 @@ UNKNOWN_C09A44: !assembly
 UNKNOWN_C09A5C: !assembly
   Size: 43
   Offset: 0xC09A5C
-UNKNOWN_C09A87: !assembly
+MOVEMENT_CODE_20: !assembly
   Size: 69
   Labels:
     27: UNKNOWN0
     28: UNKNOWN1
+  Initial State:
+    8 Bit Accum: n
   Offset: 0xC09A87
 UNKNOWN_C09ACC: !assembly
   Size: 7
@@ -6080,8 +6087,11 @@ UNKNOWN_C09B2C: !assembly
   Labels:
     21: UNKNOWN0
   Offset: 0xC09B2C
-UNKNOWN_C09B44: !assembly
+MOVEMENT_CODE_21: !assembly
   Size: 29
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09B44
 UNKNOWN_C09B61: !assembly
   Size: 10
@@ -6184,12 +6194,18 @@ UNKNOWN_C09D1F: !assembly
     18: UNKNOWN0
     22: UNKNOWN1
     30: UNKNOWN2
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09D1F
 UNKNOWN_C09D3E: !assembly
   Size: 34
   Labels:
     19: UNKNOWN0
     30: UNKNOWN1
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09D3E
 UNKNOWN_C09D60: !assembly
   Size: 24
@@ -10920,6 +10936,9 @@ GIVE_ITEM_TO_CHARACTER: !assembly
 REMOVE_ITEM_FROM_INVENTORY: !assembly
   Size: 564
   Description: Remove item from inventory
+  Arguments:
+    A: Character
+    X: Unknown
   Labels:
     52: UNKNOWN0
     77: UNKNOWN1
@@ -11409,7 +11428,8 @@ DETERMINE_TARGETTING: !assembly
     402: ALLY_ALL
     412: RETURN
   Offset: 0xC1ADB4
-UNKNOWN_C1AF74: !assembly
+OVERWORLD_USE_ITEM: !assembly
+  Description: Use item on the overworld
   Size: 1602
   Labels:
     127: UNKNOWN0
@@ -18148,7 +18168,7 @@ UNKNOWN_C46DE5: !assembly
 UNKNOWN_C46E37: !assembly
   Size: 15
   Offset: 0xC46E37
-UNKNOWN_C46E46: !assembly
+BEGIN_ATTRACT_MODE_TRANSITION: !assembly
   Size: 9
   Offset: 0xC46E46
 UNKNOWN_C46E4F: !assembly
@@ -18842,9 +18862,11 @@ UNKNOWN_C49EC4: !assembly
     245: UNKNOWN9
     256: UNKNOWN10
   Offset: 0xC49EC4
-BATTLE_MENU_TEXT: !script
+BATTLE_MENU_TEXT: !array
   Size: 172
   Description: Battle Menu Text
+  Item Type: !script
+    Size: 16
   Offset: 0xC49FE1
 DEAD_TARGETTABLE_ACTIONS: !array
   Size: 66
