@@ -1313,7 +1313,7 @@ SNES_HEADER: !struct
           Size: 2
 SAVE_SLOT_1: !struct
   Offset: 0x206000
-  Description: Slot 1
+  Pretty Name: Save Slot 1
   Size: 0x500
   Entries: &SAVE_SLOT
     SIGNATURE: !script
@@ -1386,13 +1386,13 @@ SAVE_SLOT_1: !struct
           Size: 2
         LEADER_X_COORD: !int
           Size: 2
-          Description: Party Leader X Coordinate
+          Pretty Name: Party Leader X Coordinate
           Notes: Used for respawning
         UNKNOWND: !int
           Size: 2
         LEADER_Y_COORD: !int
           Size: 2
-          Description: Party Leader Y Coordinate
+          Pretty Name: Party Leader Y Coordinate
           Notes: Used for respawning
         UNKNOWNE: !int
           Size: 2
@@ -1422,7 +1422,7 @@ SAVE_SLOT_1: !struct
           Size: 6
         PLAYER_CONTROLLED_PARTY_MEMBERS: !int
           Size: 1
-          Description: Player-Controlled Party Members
+          Pretty Name: Player-Controlled Party Members
         UNKNOWNG2: !unknown
           Size: 17
         PARTY_COUNT: !int
@@ -1467,79 +1467,79 @@ SAVE_SLOT_1: !struct
       Entries: &CHAR_STRUCT_ENTRIES
         NAME: !script
           Size: 5
-          Description: Character name
+          Pretty Name: Character name
         LEVEL: !int
           Size: 1
-          Description: Current Level
+          Pretty Name: Current Level
         EXP: !int
           Size: 4
-          Description: Amount of Experience Points
+          Pretty Name: Experience Points
         MAXHP: !int
           Size: 2
-          Description: Maximum amount of HP
+          Pretty Name: Maximum HP
         MAXPP: !int
           Size: 2
-          Description: Maximum amount of PP
+          Pretty Name: Maximum PP
         AFFLICTIONS: !unknown
           Size: 7
-          Description: Current Status Effects
+          Pretty Name: Current Status Effects
         EQUIPPED_OFFENSE: !int
           Size: 1
-          Description: Offense with current equipment
+          Pretty Name: Offense with current equipment
         EQUIPPED_DEFENSE: !int
           Size: 1
-          Description: Defense with current equipment
+          Pretty Name: Defense with current equipment
         EQUIPPED_SPEED: !int
           Size: 1
-          Description: Speed with current equipment
+          Pretty Name: Speed with current equipment
         EQUIPPED_GUTS: !int
           Size: 1
-          Description: Guts with current equipment
+          Pretty Name: Guts with current equipment
         EQUIPPED_LUCK: !int
           Size: 1
-          Description: Luck with current equipment
+          Pretty Name: Luck with current equipment
         EQUIPPED_VITALITY: !int
           Size: 1
-          Description: Vitality with current equipment
+          Pretty Name: Vitality with current equipment
         EQUIPPED_IQ: !int
           Size: 1
-          Description: IQ with current equipment
+          Pretty Name: IQ with current equipment
         OFFENSE: !int
           Size: 1
-          Description: Offense without current equipment
+          Pretty Name: Offense without current equipment
         DEFENSE: !int
           Size: 1
-          Description: Defense without current equipment
+          Pretty Name: Defense without current equipment
         SPEED: !int
           Size: 1
-          Description: Speed without current equipment
+          Pretty Name: Speed without current equipment
         GUTS: !int
           Size: 1
-          Description: Guts without current equipment
+          Pretty Name: Guts without current equipment
         LUCK: !int
           Size: 1
-          Description: Luck without current equipment
+          Pretty Name: Luck without current equipment
         VITALITY: !int
           Size: 1
-          Description: Vitality without current equipment
+          Pretty Name: Vitality without current equipment
         IQ: !int
           Size: 1
-          Description: IQ without current equipment
+          Pretty Name: IQ without current equipment
         ITEMS: !array
           Size: 14
           Item Type: !int
             Size: 1
-          Description: Current held items
+          Pretty Name: Current held items
         EQUIPPED_ITEMS: !array
           Size: 4
           Item Type: !int
             Size: 1
-          Description: Current equipped items
+          Pretty Name: Current equipped items
         UNKNOWN: !unknown
           Size: 8
         POSITION_INDEX: !int
           Size: 2
-          Description: Position Index
+          Pretty Name: Position Index
           Notes: 'TODO: which table was this for again?'
         UNKNOWN2: !unknown
           Size: 4
@@ -1547,18 +1547,18 @@ SAVE_SLOT_1: !struct
           Size: 2
         CURRENT_HP: !int
           Size: 2
-          Description: Current HP
+          Pretty Name: Current HP
         CURRENT_HP_ROLLING: !int
           Size: 2
-          Description: Current HP (Rolling)
+          Pretty Name: Current HP (Rolling)
         UNKNOWN4: !int
           Size: 2
         CURRENT_PP: !int
           Size: 2
-          Description: Current PP
+          Pretty Name: Current PP
         CURRENT_PP_ROLLING: !int
           Size: 2
-          Description: Current PP (Rolling)
+          Pretty Name: Current PP (Rolling)
         HP_PP_WINDOW_OPTIONS: !bitfield
           Size: 2
           Bit Values:
@@ -1581,7 +1581,7 @@ SAVE_SLOT_1: !struct
           Description: HP/PP Window Options?
         MISS_RATE: !int
           Size: 1
-          Description: Miss Rate
+          Pretty Name: Miss Rate
         RESISTANCES: !struct
           Size: 5
           Entries:
@@ -1604,7 +1604,7 @@ SAVE_SLOT_1: !struct
             HYPNOSIS_BRAINSHOCK: !int
               Size: 1
               Values: *RESISTANCES
-          Description: Resistances
+          Pretty Name: Resistances
         STAT_BOOSTS: !struct
           Size: 5
           Entries:
@@ -1618,7 +1618,7 @@ SAVE_SLOT_1: !struct
               Size: 1
             LUCK: !int
               Size: 1
-          Description: Current stat boosts
+          Pretty Name: Current stat boosts
         UNKNOWN5: !unknown
           Size: 3
     EVENT_FLAGS: !struct
@@ -4024,6 +4024,7 @@ GET_ON_BICYCLE: !assembly
     36: UNKNOWN1
     48: UNKNOWN2
     157: UNKNOWN3
+  Notes: Used by text CC [1F F0]
   Offset: 0xC03C5E
 UNKNOWN_C03CFD: !assembly
   Size: 173
@@ -4750,6 +4751,7 @@ CHANGE_MUSIC_5DD6: !assembly
   Offset: 0xC069ED
 UNKNOWN_C069F7: !assembly
   Size: 16
+  Notes: Used by text CC [1F 03]
   Offset: 0xC069F7
 UNKNOWN_C06A07: !assembly
   Size: 20
@@ -5394,8 +5396,8 @@ RAND: !assembly
   Labels:
     45: UNKNOWN0
   Offset: 0xC08E9A
-MEMCPY_A: !assembly
-  Description: Copy X bytes from $0E to A
+MEMCPY16: !assembly
+  Description: Copy X bytes from [$0E] to 0x7E0000+A
   Arguments:
     A: destination
     X: size
@@ -5407,8 +5409,8 @@ MEMCPY_A: !assembly
     12: UNKNOWN0
     21: UNKNOWN1
   Offset: 0xC08ED2
-MEMCPY_B: !assembly
-  Description: Copy one portion of memory to another
+MEMCPY24: !assembly
+  Description: Copy A bytes from [$12] to [$0E]
   Arguments:
     A: Size
     $0E: Destination Pointer
@@ -5418,28 +5420,28 @@ MEMCPY_B: !assembly
     5: UNKNOWN0
     9: UNKNOWN1
   Offset: 0xC08EED
-MEMSET: !assembly
-  Description: Overwrite Memory
+MEMSET16: !assembly
+  Description: Write value at $0E to 0x7E0000+A to 0x7E0000+A+X
   Arguments:
     A: Destination
     X: Size (16-bit Words)
     $0E: Value to overwrite data with
   Size: 25
   Final State:
-    8 Bit Accum: false
+    8 Bit Accum: n
   Labels:
     16: LOOP_ITERATION
     21: LOOP_ENTRY
   Offset: 0xC08EFC
-MEMSET8: !assembly
-  Description: Overwrite Memory (8-bit)
+MEMSET24: !assembly
+  Description: Write value in A to [$0E] to [$0E]+X
   Arguments:
     A: Value
     X: Size (8-bit Words)
     $0E: Destination
   Final State:
-    8 Bit Accum: false
-    8 Bit Index: false
+    8 Bit Accum: n
+    8 Bit Index: n
   Size: 13
   Labels:
     3: UNKNOWN0
@@ -5448,12 +5450,29 @@ MEMSET8: !assembly
 STRLEN: !assembly
   Size: 13
   Description: Returns the length of a string
+  Arguments:
+    $0E: String to check
+  Final State:
+    8 Bit Index: n
+    8 Bit Accum: n
+  Return Values:
+    A: String length
   Labels:
     4: UNKNOWN0
   Offset: 0xC08F22
 STRCMP: !assembly
   Size: 19
   Description: Compares two strings
+  Arguments:
+    $0E: String A
+    $12: String B
+  Return Values:
+    A: 0 if equal, 1 otherwise
+  Initial State:
+    8 Bit Index: n
+  Final State:
+    8 Bit Index: n
+    8 Bit Accum: n
   Labels:
     5: UNKNOWN0
     16: UNKNOWN1
@@ -5465,6 +5484,7 @@ UNKNOWN_C08F68: !assembly
   Size: 35
   Offset: 0xC08F68
 UNKNOWN_C08F8B: !assembly
+  Notes: Waits for $7E0001 to be equal to $7E0000. Likely busy-waiting for a hardware operation.
   Size: 13
   Labels:
     5: UNKNOWN0
@@ -5488,25 +5508,25 @@ DMA_TABLE: !array
 UNKNOWN_C08FC2: !unknown
   Size: 0x26
   Offset: 0xC08FC2
-EIGHT_BIT_MULT_AA: !assembly
+MULT8: !assembly
   Description: Multiply Low byte of A by High byte of A
   Arguments:
     A: Multiplicands
   Size: 15
   Offset: 0xC08FE8
-EIGHT_BIT_MULT_YA: !assembly
+MULT168: !assembly
   Description: Multiply low byte of Y by A
   Arguments:
     A: Multiplicand A
     'Y': Multiplicand B
   Final State:
-    8 Bit Accum: false
-    8 Bit Index: false
+    8 Bit Accum: n
+    8 Bit Index: n
   Size: 59
   Labels:
     43: UNKNOWN0
   Offset: 0xC08FF7
-MULT_YA: !assembly
+MULT16: !assembly
   Description: Multiply Y by A
   Arguments:
     A: Multiplicand A
@@ -13853,7 +13873,6 @@ INFLICT_STATUS: !assembly
       1: Can't concentrate
     Group 5:
       1: Homesickness
-      
   Labels:
     28: UNKNOWN0
     49: UNKNOWN1
