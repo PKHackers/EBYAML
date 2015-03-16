@@ -5536,37 +5536,72 @@ MULT32: !assembly
     $0A: Multiplicand B
   Size: 72
   Offset: 0xC09086
-UNKNOWN_C090CE: !assembly
+DIVISION8: !assembly
+  Notes: Divides an 8-bit number by another 8-bit number
   Size: 24
   Labels:
     23: UNKNOWN0
+  Initial State:
+    8 Bit Accum: y
+    8 Bit Index: y
+  Arguments:
+    A: Divisor
+    'Y': Dividend
+  Return Values:
+    A: Quotient
+    'Y': Remainder
   Offset: 0xC090CE
 DIVISION16: !assembly
+  Notes: Divides a 16-bit number by another 16-bit number
   Size: 25
-  Description: Divides a 16-bit number by another 16-bit number
   Labels:
     24: UNKNOWN0
   Arguments:
     A: Divisor
-    "Y": Dividend
+    'Y': Dividend
   Return Values:
-    A: Result
-    "Y": Remainder
-  Offset: 0xC090E6
+    A: Quotient
+    'Y': Remainder
   Initial State:
     8 Bit Accum: n
-UNKNOWN_C090FF: !assembly
+    8 Bit Index: n
+  Offset: 0xC090E6
+DIVISION32: !assembly
+  Notes: Divides a 32-bit number by another 32-bit number
   Size: 31
   Labels:
     30: UNKNOWN0
+  Arguments:
+    $06: Divisor
+    $0A: Dividend
+  Return Values:
+    $06: Quotient
+    $0A: Remainder
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC090FF
-UNKNOWN_C0911E: !assembly
+DIVISION8S: !assembly
+  Notes: Divides a signed 8-bit number by another signed 8-bit number
   Size: 45
+  Initial State:
+    8 Bit Accum: y
+    8 Bit Index: y
+  Final State:
+    8 Bit Accum: y
+    8 Bit Index: y
+  Arguments:
+    A: Divisor
+    'Y': Dividend
+  Return Values:
+    A: Quotient
+    'Y': Remainder
   Labels:
-    8: UNKNOWN0
-    14: UNKNOWN1
+    8: DIVIDEND_POSITIVE
+    14: DIVISOR_POSITIVE
   Offset: 0xC0911E
-DIVISION: !assembly
+DIVISION16S: !assembly
+  Notes: Divides a signed 16-bit number by another signed 16-bit number
   Size: 49
   Initial State:
     8 Bit Accum: n
@@ -5574,84 +5609,209 @@ DIVISION: !assembly
   Final State:
     8 Bit Accum: n
     8 Bit Index: n
-  Description: Divides a number by another number, returns remainder and result
   Arguments:
     A: Divisor
-    "Y": Dividend
+    'Y': Dividend
+  Return Values:
+    A: Quotient
+    'Y': Remainder
   Labels:
     9: DIVIDEND_POSITIVE
     16: DIVISOR_POSITIVE
     28: LOOP_BEGIN
     40: OVERFLOW
   Offset: 0xC0914B
-UNKNOWN_C0917C: !assembly
+DIVISION32S: !assembly
+  Notes: Divides a signed 32-bit number by another signed 32-bit number
   Size: 103
   Initial State:
     8 Bit Accum: n
     8 Bit Index: n
+  Final State:
+    8 Bit Accum: n
+    8 Bit Index: n
+  Arguments:
+    $06: Divisor
+    $0A: Dividend
+  Return Values:
+    $06: Quotient
+    $0A: Remainder
   Labels:
-    21: UNKNOWN0
-    42: UNKNOWN1
-    59: UNKNOWN2
-    79: UNKNOWN3
-    95: UNKNOWN4
+    21: DIVIDEND_POSITIVE
+    42: DIVISOR_POSITIVE
+    59: LOOP_BEGIN
+    79: UNKNOWN
+    95: OVERFLOW
   Offset: 0xC0917C
-UNKNOWN_C091E3: !assembly
+MODULUS8S: !assembly
+  Notes: Divides a signed 8-bit number by another signed 8-bit number, quotient only
   Size: 17
+  Initial State:
+    8 Bit Accum: y
+    8 Bit Index: y
+  Final State:
+    8 Bit Accum: y
+    8 Bit Index: y
+  Arguments:
+    A: Divisor
+    'Y': Dividend
+  Return Values:
+    A: Remainder
+    'Y': Remainder
   Labels:
     16: UNKNOWN0
   Offset: 0xC091E3
-UNKNOWN_C091F4: !assembly
+MODULUS16S: !assembly
+  Notes: Divides a signed 16-bit number by another signed 16-bit number, quotient only
   Size: 18
+  Arguments:
+    A: Divisor
+    'Y': Dividend
+  Return Values:
+    A: Remainder
+    'Y': Remainder
   Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
+  Final State:
     8 Bit Accum: n
     8 Bit Index: n
   Labels:
     17: UNKNOWN0
   Offset: 0xC091F4
-UNKNOWN_C09206: !assembly
+MODULUS32S: !assembly
+  Notes: Divides a signed 32-bit number by another signed 32-bit number, quotient only
   Size: 37
   Initial State:
     8 Bit Accum: n
     8 Bit Index: n
+  Final State:
+    8 Bit Accum: n
+    8 Bit Index: n
+  Arguments:
+    $06: Divisor
+    $0A: Dividend
+  Return Values:
+    $06: Remainder
+    $0A: Remainder
   Labels:
     28: UNKNOWN0
     34: UNKNOWN1
   Offset: 0xC09206
-UNKNOWN_C0922B: !assembly
+MODULUS8: !assembly
+  Notes: Divides an unsigned 8-bit number by another unsigned 8-bit number, quotient only
   Size: 6
+  Initial State:
+    8 Bit Accum: y
+    8 Bit Index: y
+  Final State:
+    8 Bit Accum: y
+    8 Bit Index: y
+  Arguments:
+    A: Divisor
+    'Y': Dividend
+  Return Values:
+    A: Remainder
+    'Y': Remainder
   Offset: 0xC0922B
-GET_REMAINDER_LONG: !assembly
+MODULUS16: !assembly
+  Notes: Divides an unsigned 16-bit number by another unsigned 16-bit number, quotient only
   Size: 6
-  Description: Long redirect to GET_REMAINDER
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
+  Final State:
+    8 Bit Accum: n
+    8 Bit Index: n
+  Arguments:
+    A: Divisor
+    'Y': Dividend
+  Return Values:
+    A: Remainder
+    'Y': Remainder
   Offset: 0xC09231
-UNKNOWN_C09237: !assembly
-  Size: 11
+MODULUS32: !assembly
+  Notes: Divides an unsigned 32-bit number by another unsigned 32-bit number, quotient only
+  Size: 6
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
+  Final State:
+    8 Bit Accum: n
+    8 Bit Index: n
+  Arguments:
+    $06: Divisor
+    $0A: Dividend
+  Return Values:
+    $06: Remainder
+    $0A: Remainder
   Labels:
     6: UNKNOWN0
   Offset: 0xC09237
-UNKNOWN_C09242: !assembly
+ASL16: !assembly
+  Size: 5
+  Notes: Arithmetic shifts A to the left Y times. 8/16-bit
+  Arguments:
+    A: Value to shift
+    'Y': Number of places to shift
+  Offset: 0xC0923D
+ASL32: !assembly
   Size: 8
+  Notes: Arithmetic shifts $06 to the left Y times. 32-bit
+  Arguments:
+    $06: Value to shift
+    'Y': Number of places to shift
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
+  Final State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09242
-UNKNOWN_C0924A: !assembly
-  Size: 11
+ASR8: !assembly
+  Size: 17
+  Notes: Arithmetic shifts A to the right Y times. 8-bit
+  Arguments:
+    A: Value to shift
+    'Y': Number of places to shift
+  Initial State:
+    8 Bit Accum: y
+    8 Bit Index: y
+  Final State:
+    8 Bit Accum: y
+    8 Bit Index: y
   Labels:
     6: UNKNOWN0
     7: UNKNOWN1
   Offset: 0xC0924A
-UNKNOWN_C09255: !assembly
-  Size: 6
-  Labels:
-    2: UNKNOWN00
-  Offset: 0xC09255
-UNKNOWN_C0925B: !assembly
-  Size: 30
-  Labels:
-    13: UNKNOWN0
-    17: UNKNOWN1
-    21: UNKNOWN2
-    26: UNKNOWN3
+ASR16: !assembly
+  Size: 7
+  Notes: Arithmetic shifts A to the right Y times. 16-bit
+  Arguments:
+    A: Value to shift
+    'Y': Number of places to shift
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
+  Final State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC0925B
+ASR32: !assembly
+  Size: 22
+  Notes: Arithmetic shifts $06 to the right Y times. 32-bit
+  Arguments:
+    $06: Value to shift
+    'Y': Number of places to shift
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
+  Labels:
+    6: UNKNOWN0
+    10: UNKNOWN1
+    14: UNKNOWN2
+    19: UNKNOWN3
+  Offset: 0xC09262
 UNKNOWN_C09279: !assembly
   Size: 3
   Offset: 0xC09279
@@ -5666,6 +5826,7 @@ UNKNOWN_C0927C: !assembly
   Offset: 0xC0927C
 UNKNOWN_C092F5: !assembly
   Size: 327
+  Notes: Apparently involves sprite movement...C093F9?
   Initial State:
     8 Bit Accum: false
   Labels:
@@ -5776,6 +5937,11 @@ MOVEMENT_CODE_36: !assembly
   Offset: 0xC09875
   Initial State:
     8 Bit Accum: n
+MOVEMENT_CODE_39: !assembly
+  Size: 21
+  Offset: 0xC09907
+  Arguments:
+    A: Index
 MOVEMENT_CODE_0C: !assembly
   Size: 0x2A
   Offset: 0xC099C3
@@ -13697,10 +13863,10 @@ RAND_LIMIT: !assembly
     183: UNKNOWN14
   Size: 187
   Offset: 0xC26AFD
-SUCCESS_256: !assembly
-  Description: Randomly select true/false (A/256)
+SUCCESS_255: !assembly
+  Description: Randomly select true/false (A/255)
   Arguments:
-    A: chance/256 of returning true
+    A: chance/255 of returning true
   Final State:
     8 Bit Accum: false
   Labels:
@@ -19674,7 +19840,6 @@ MUSIC_PACK_POINTER_TABLE: !array
   Size: 507
   Description: Music Pack Pointer Table
   Item Type: !pointer
-    Endianness: m
     Size: 3
   Offset: 0xC4F947
 UNKNOWN_C4FB42: !assembly
@@ -19878,11 +20043,11 @@ BG_DISTORTION_TABLE: !array
       RIPPLEFREQUENCY: !int
         Pretty Name: Ripple Frequency
         Size: 2
-        Signed: y
+        Signed: true
       RIPPLEAMPLITUDE: !int
         Pretty Name: Ripple Amplitude
         Size: 2
-        Signed: y
+        Signed: true
       UNKNOWNB: !int
         Size: 1
       UNKNOWNC: !int
@@ -20830,7 +20995,7 @@ PSI_ABILITY_TABLE: !array
         Pretty Name: Strength
         Size: 1
         Values:
-        - "": ~
+        - ""
         - α
         - β
         - γ
