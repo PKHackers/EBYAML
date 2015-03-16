@@ -1,8 +1,6 @@
 ---
 CPU:
-  Architecture: 65816
-  Localvars: directpage
-  DefaultDataBank: 0x7E
+  Default DataBank: 0x7E
 Platform: snes
 Title: Earthbound
 Country: US
