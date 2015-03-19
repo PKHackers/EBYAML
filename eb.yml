@@ -20083,10 +20083,10 @@ BTL_ENTRY_BG_TABLE: !array
       BACKGROUND2: !int
         Size: 2
   Offset: 0xCBD89A
-AUDIO_PACK_66: !struct
+AUDIO_PACK_66: &AUDIO_PACK !struct
   Size: 7864
   Description: Audio Block
-  Entries: &AUDIO_PACK
+  Entries:
     SIZE: !int
       Size: 2
     BASEADDRESS: !int
@@ -20096,9 +20096,8 @@ AUDIO_PACK_66: !struct
       Size: SIZE-4
   Offset: 0xCBE02A
 AUDIO_PACK_59: !struct
+  <<: *AUDIO_PACK
   Size: 286
-  Description: Audio Block
-  Entries: *AUDIO_PACK
   Offset: 0xCBFEE2
 ANIMATIONDATA_CARPAINTER_LIGHTNING_REFLECT: !unknown
   Size: 6091
@@ -20338,10 +20337,8 @@ PSI_ANIM_POINTERS: !array
     Size: 4
   Offset: 0xCCF58F
 AUDIO_PACK_71: !struct
+  <<: *AUDIO_PACK
   Size: 2494
-  Description: Audio Block
-  Terminator: 0
-  Entries: *AUDIO_PACK
   Offset: 0xCCF617
 UNKNOWN_PTR_CCFFD5: !pointer
   Size: 4
@@ -20406,9 +20403,9 @@ SOUND_STONE_PALETTE: !array
     Item Type: !color
       Size: 2
   Offset: 0xCEF806
-AUDIO_PACK_102: !unknown
+AUDIO_PACK_102: !struct
+  <<: *AUDIO_PACK
   Size: 1850
-  Description: Audio Block
   Offset: 0xCEF8C6
 DOOR_DEST_TABLE_1: !array
   Size: 1408
@@ -20725,13 +20722,13 @@ NPC_CONFIG_TABLE: !array
       TEXTPOINTER2: !pointer
         Size: 4
   Offset: 0xCF8985
-AUDIO_PACK_94: !unknown
-  Description: Audio Block
+AUDIO_PACK_94: !struct
+  <<: *AUDIO_PACK
   Size: 3203
   Offset: 0xCFF2B5
-AUDIO_PACK_96: !unknown
+AUDIO_PACK_96: !struct
+  <<: *AUDIO_PACK
   Size: 200
-  Description: Audio Block
   Offset: 0xCFFF38
 DOOR_POINTER_TABLE: !array
   Description: Door Pointer Table
@@ -20833,8 +20830,8 @@ ENEMY_BATTLE_GROUPS_TABLE: !unknown
   Description: Enemy Battle Groups Table
   Size: 2695
   Offset: 0xD0D52D
-AUDIO_PACK_139: !unknown
-  Description: Audio Block
+AUDIO_PACK_139: !struct
+  <<: *AUDIO_PACK
   Size: 8180
   Offset: 0xD0DFB4
 UNKNOWN_D0FFA8: !empty
@@ -21527,9 +21524,9 @@ FAULTY_GAME_PAK_GRAPHICS: !unknown
   Size: 243
   Description: Faulty Game Pak Notice Screen Graphics
   Offset: 0xD8F5C4
-AUDIO_PACK_61: !unknown
+AUDIO_PACK_61: !struct
+  <<: *AUDIO_PACK
   Size: 2377
-  Description: Audio Block
   Offset: 0xD8F6B7
 MAP_DATA_TILE_ARRANGEMENT_BLOCK_2: !unknown
   Size: 52818
@@ -21539,9 +21536,9 @@ MAP_DATA_TILE_GRAPHICS_BLOCK_1: !unknown
   Size: 11718
   Description: 'Map Data: Tile Graphics Block 1'
   Offset: 0xD9CE52
-AUDIO_PACK_45: !unknown
+AUDIO_PACK_45: !struct
+  <<: *AUDIO_PACK
   Size: 1000
-  Description: Audio Block
   Offset: 0xD9FC18
 MAP_DATA_TILE_ARRANGEMENT_BLOCK_3: !unknown
   Size: 31911
@@ -21561,17 +21558,17 @@ MAP_DATA_UNKNOWN_PALETTE_PTR_TABLE: !array
   Item Type: !pointer
     Size: 3
   Offset: 0xDAFAA7
-AUDIO_PACK_111: !unknown
+AUDIO_PACK_111: !struct
+  <<: *AUDIO_PACK
   Size: 1273
-  Description: Audio Block
   Offset: 0xDAFB07
 MAP_DATA_TILE_ARRANGEMENT_BLOCK_4: !unknown
   Description: 'Map Data: Tile Arrangement Block 4'
   Size: 62187
   Offset: 0xDB0000
-AUDIO_PACK_65: !unknown
+AUDIO_PACK_65: !struct
+  <<: *AUDIO_PACK
   Size: 3349
-  Description: Audio Block
   Offset: 0xDBF2EB
 MAP_DATA_TILE_ARRANGEMENT_BLOCK_5: !unknown
   Size: 45091
@@ -21587,21 +21584,21 @@ MAP_DATA_PER-SECTOR_MUSIC: !array
   Item Type: !int
     Size: 1
   Offset: 0xDCD637
-AUDIO_PACK_156: !unknown
+AUDIO_PACK_156: !struct
+  <<: *AUDIO_PACK
   Size: 6280
-  Description: Audio Block
   Offset: 0xDCE037
-AUDIO_PACK_79: !unknown
+AUDIO_PACK_79: !struct
+  <<: *AUDIO_PACK
   Size: 1857
-  Description: Audio Block
   Offset: 0xDCF8BF
 MAP_DATA_TILE_GRAPHICS_BLOCK_3: !unknown
   Size: 65230
   Description: 'Map Data: Tile Graphics Block 3'
   Offset: 0xDD0000
-AUDIO_PACK_75: !unknown
+AUDIO_PACK_75: !struct
+  <<: *AUDIO_PACK
   Size: 306
-  Description: Audio Block
   Offset: 0xDDFECE
 MAP_DATA_TILE_GRAPHICS_BLOCK_4: !unknown
   Size: 61671
@@ -21611,9 +21608,9 @@ MAP_DATA_ANIMATED_TILE_GFX_BLOCK_1: !unknown
   Size: 3062
   Description: 'Map Data: Graphics for Animated Tiles Block 1'
   Offset: 0xDEF0E7
-AUDIO_PACK_143: !unknown
+AUDIO_PACK_143: !struct
+  <<: *AUDIO_PACK
   Size: 803
-  Description: Audio Block
   Offset: 0xDEFCDD
 MAP_DATA_TILE_GRAPHICS_BLOCK_5: !unknown
   Size: 49731
@@ -21638,10 +21635,9 @@ MAP_DATA_PALETTE_ANIM_TABLE: !unknown
   Description: 'Map Data: Palette Animation Table'
   Offset: 0xDFE61B
 AUDIO_PACK_4: !struct
+  <<: *AUDIO_PACK
   Size: 5050
   Description: 'Audio Data: contains sequence pack 4'
-  Terminator: 0
-  Entries: *AUDIO_PACK
   Offset: 0xDFEC46
 TEXT_WINDOW_GFX: !unknown
   Size: 1876
@@ -21770,13 +21766,13 @@ TOWN_MAP_SUMMERS: !unknown
   Size: 9490
   Description: Summers Town Map Data
   Offset: 0xE0C7F1
-AUDIO_PACK_110: !unknown
+AUDIO_PACK_110: !struct
+  <<: *AUDIO_PACK
   Size: 4062
-  Description: Audio Block
   Offset: 0xE0ED03
-AUDIO_PACK_6: !unknown
+AUDIO_PACK_6: !struct
+  <<: *AUDIO_PACK
   Size: 799
-  Description: Audio Block
   Offset: 0xE0FCE1
 COFFEE_SEQUENCE_TEXT: !script
   Size: 0x652
@@ -22046,618 +22042,611 @@ TOWN_MAP_ICON_PLACEMENT_DATA: !unknown
   Size: 216
   Description: Town Map Icon Placement Data
   Offset: 0xE1F4A9
-AUDIO_PACK_123: !unknown
+AUDIO_PACK_123: !struct
+  <<: *AUDIO_PACK
   Size: 2687
-  Description: Audio Block
   Offset: 0xE1F581
-AUDIO_PACK_108: !unknown
+AUDIO_PACK_108: !struct
+  <<: *AUDIO_PACK
   Size: 30704
-  Description: Audio Block
   Offset: 0xE20000
-AUDIO_PACK_0: !unknown
+AUDIO_PACK_0: !struct
+  <<: *AUDIO_PACK
   Size: 30012
-  Description: Audio Block
   Offset: 0xE277F0
-AUDIO_PACK_36: !unknown
+AUDIO_PACK_36: !struct
+  <<: *AUDIO_PACK
   Size: 3932
-  Description: Audio Block
   Offset: 0xE2ED2C
-AUDIO_PACK_18: !unknown
+AUDIO_PACK_18: !struct
+  <<: *AUDIO_PACK
   Size: 888
-  Description: Audio Block
   Offset: 0xE2FC88
-AUDIO_PACK_3: !unknown
+AUDIO_PACK_3: !struct
+  <<: *AUDIO_PACK
   Size: 24420
-  Description: Audio Block
   Offset: 0xE30000
-AUDIO_PACK_70: !unknown
+AUDIO_PACK_70: !struct
+  <<: *AUDIO_PACK
   Size: 20886
-  Description: Audio Block
   Offset: 0xE35F64
-AUDIO_PACK_37: !unknown
+AUDIO_PACK_37: !struct
+  <<: *AUDIO_PACK
   Size: 19666
-  Description: Audio Block
   Offset: 0xE3B0FA
-AUDIO_PACK_32: !unknown
+AUDIO_PACK_32: !struct
+  <<: *AUDIO_PACK
   Size: 564
-  Description: Audio Block
   Offset: 0xE3FDCC
-AUDIO_PACK_64: !unknown
+AUDIO_PACK_64: !struct
+  <<: *AUDIO_PACK
   Size: 20810
-  Description: Audio Block
   Offset: 0xE40000
-AUDIO_PACK_42: !unknown
+AUDIO_PACK_42: !struct
+  <<: *AUDIO_PACK
   Size: 20712
-  Description: Audio Block
   Offset: 0xE4514A
-AUDIO_PACK_126: !unknown
+AUDIO_PACK_126: !struct
+  <<: *AUDIO_PACK
   Size: 19614
-  Description: Audio Block
   Offset: 0xE4A232
-AUDIO_PACK_125: !unknown
+AUDIO_PACK_125: !struct
+  <<: *AUDIO_PACK
   Size: 3778
-  Description: Audio Block
   Offset: 0xE4EED0
-AUDIO_PACK_155: !unknown
+AUDIO_PACK_155: !struct
+  <<: *AUDIO_PACK
   Size: 622
-  Description: Audio Block
   Offset: 0xE4FD92
-AUDIO_PACK_50: !unknown
+AUDIO_PACK_50: !struct
+  <<: *AUDIO_PACK
   Size: 19530
-  Description: Audio Block
   Offset: 0xE50000
-AUDIO_PACK_92: !unknown
+AUDIO_PACK_92: !struct
+  <<: *AUDIO_PACK
   Size: 18692
-  Description: Audio Block
   Offset: 0xE54C4A
-AUDIO_PACK_56: !unknown
+AUDIO_PACK_56: !struct
+  <<: *AUDIO_PACK
   Size: 18404
-  Description: Audio Block
   Offset: 0xE5954E
-AUDIO_PACK_122: !unknown
+AUDIO_PACK_122: !struct
+  <<: *AUDIO_PACK
   Size: 8710
-  Description: Audio Block
   Offset: 0xE5DD32
-AUDIO_PACK_166: !unknown
+AUDIO_PACK_166: !struct
+  <<: *AUDIO_PACK
   Size: 200
-  Description: Audio Block
   Offset: 0xE5FF38
 AUDIO_PACK_1: !struct
   Size: 17880
-  Description: Audio Block
-  Terminator: 0
-  Entries: *AUDIO_PACK
   Offset: 0xE60000
-AUDIO_PACK_74: !unknown
+AUDIO_PACK_74: !struct
+  <<: *AUDIO_PACK
   Size: 17858
-  Description: Audio Block
   Offset: 0xE645D8
-AUDIO_PACK_76: !unknown
+AUDIO_PACK_76: !struct
+  <<: *AUDIO_PACK
   Size: 17262
-  Description: Audio Block
   Offset: 0xE68B9A
-AUDIO_PACK_47: !unknown
+AUDIO_PACK_47: !struct
+  <<: *AUDIO_PACK
   Size: 12304
-  Description: Audio Block
   Offset: 0xE6CF08
-AUDIO_PACK_73: !unknown
+AUDIO_PACK_73: !struct
+  <<: *AUDIO_PACK
   Size: 232
-  Description: Audio Block
   Offset: 0xE6FF18
-AUDIO_PACK_78: !unknown
+AUDIO_PACK_78: !struct
+  <<: *AUDIO_PACK
   Size: 17172
-  Description: Audio Block
   Offset: 0xE70000
-AUDIO_PACK_82: !unknown
+AUDIO_PACK_82: !struct
+  <<: *AUDIO_PACK
   Size: 16776
-  Description: Audio Block
   Offset: 0xE74314
-AUDIO_PACK_8: !unknown
+AUDIO_PACK_8: !struct
+  <<: *AUDIO_PACK
   Size: 16684
-  Description: Audio Block
   Offset: 0xE7849C
-AUDIO_PACK_24: !unknown
+AUDIO_PACK_24: !struct
+  <<: *AUDIO_PACK
   Size: 14904
-  Description: Audio Block
   Offset: 0xE7C5C8
-AUDIO_PACK_84: !unknown
+AUDIO_PACK_84: !struct
+  <<: *AUDIO_PACK
   Size: 16486
-  Description: Audio Block
   Offset: 0xE80000
-AUDIO_PACK_60: !unknown
+AUDIO_PACK_60: !struct
+  <<: *AUDIO_PACK
   Size: 15936
-  Description: Audio Block
   Offset: 0xE84066
-AUDIO_PACK_153: !unknown
+AUDIO_PACK_153: !struct
+  <<: *AUDIO_PACK
   Size: 15842
-  Description: Audio Block
   Offset: 0xE87EA6
-AUDIO_PACK_124: !unknown
+AUDIO_PACK_124: !struct
+  <<: *AUDIO_PACK
   Size: 15338
-  Description: Audio Block
   Offset: 0xE8BC88
-AUDIO_PACK_46: !unknown
+AUDIO_PACK_46: !struct
+  <<: *AUDIO_PACK
   Size: 1705
-  Description: Audio Block
   Offset: 0xE8F872
-AUDIO_PACK_7: !unknown
+AUDIO_PACK_7: !struct
+  <<: *AUDIO_PACK
   Size: 229
-  Description: Audio Block
   Offset: 0xE8FF1B
-AUDIO_PACK_27: !unknown
+AUDIO_PACK_27: !struct
+  <<: *AUDIO_PACK
   Size: 14964
-  Description: Audio Block
   Offset: 0xE90000
-AUDIO_PACK_80: !unknown
+AUDIO_PACK_80: !struct
+  <<: *AUDIO_PACK
   Size: 14562
-  Description: Audio Block
   Offset: 0xE93A74
-AUDIO_PACK_118: !unknown
+AUDIO_PACK_118: !struct
+  <<: *AUDIO_PACK
   Size: 14544
-  Description: Audio Block
   Offset: 0xE97356
-AUDIO_PACK_131: !unknown
+AUDIO_PACK_131: !struct
+  <<: *AUDIO_PACK
   Size: 13406
-  Description: Audio Block
   Offset: 0xE9AC26
-AUDIO_PACK_2: !unknown
+AUDIO_PACK_2: !struct
+  <<: *AUDIO_PACK
   Size: 6212
-  Description: Audio Block
   Offset: 0xE9E084
-AUDIO_PACK_149: !unknown
+AUDIO_PACK_149: !struct
+  <<: *AUDIO_PACK
   Size: 1848
-  Description: Audio Block
   Offset: 0xE9F8C8
-AUDIO_PACK_54: !unknown
+AUDIO_PACK_54: !struct
+  <<: *AUDIO_PACK
   Size: 13178
-  Description: Audio Block
   Offset: 0xEA0000
-AUDIO_PACK_52: !unknown
+AUDIO_PACK_52: !struct
+  <<: *AUDIO_PACK
   Size: 12826
-  Description: Audio Block
   Offset: 0xEA337A
-AUDIO_PACK_72: !unknown
+AUDIO_PACK_72: !struct
+  <<: *AUDIO_PACK
   Size: 12642
-  Description: Audio Block
   Offset: 0xEA6594
-AUDIO_PACK_89: !unknown
+AUDIO_PACK_89: !struct
+  <<: *AUDIO_PACK
   Size: 11930
-  Description: Audio Block
   Offset: 0xEA96F6
-AUDIO_PACK_35: !unknown
+AUDIO_PACK_35: !struct
+  <<: *AUDIO_PACK
   Size: 11156
-  Description: Audio Block
   Offset: 0xEAC590
-AUDIO_PACK_140: !unknown
+AUDIO_PACK_140: !struct
+  <<: *AUDIO_PACK
   Size: 3431
-  Description: Audio Block
   Offset: 0xEAF124
 AUDIO_PACK_145: !struct
+  <<: *AUDIO_PACK
   Size: 340
-  Description: Hidden track sequence data
-  Entries: *AUDIO_PACK
+  Notes: Hidden track sequence data
   Offset: 0xEAFE8B
 UNKNOWN_EAFFDF: !empty
   Size: 33
   Offset: 0xEAFFDF
-AUDIO_PACK_44: !unknown
+AUDIO_PACK_44: !struct
+  <<: *AUDIO_PACK
   Size: 10728
-  Description: Audio Block
   Offset: 0xEB0000
-AUDIO_PACK_21: !unknown
+AUDIO_PACK_21: !struct
+  <<: *AUDIO_PACK
   Size: 10276
-  Description: Audio Block
   Offset: 0xEB29E8
-AUDIO_PACK_5: !unknown
+AUDIO_PACK_5: !struct
+  <<: *AUDIO_PACK
   Size: 9930
-  Description: Audio Block
   Offset: 0xEB520C
-AUDIO_PACK_40: !unknown
+AUDIO_PACK_40: !struct
+  <<: *AUDIO_PACK
   Size: 9912
-  Description: Audio Block
   Offset: 0xEB78D6
-AUDIO_PACK_33: !unknown
+AUDIO_PACK_33: !struct
+  <<: *AUDIO_PACK
   Size: 9562
-  Description: Audio Block
   Offset: 0xEB9F8E
-AUDIO_PACK_105: !unknown
+AUDIO_PACK_105: !struct
+  <<: *AUDIO_PACK
   Size: 9468
-  Description: Audio Block
   Offset: 0xEBC4E8
-AUDIO_PACK_154: !unknown
+AUDIO_PACK_154: !struct
+  <<: *AUDIO_PACK
   Size: 5182
-  Description: Audio Block
   Offset: 0xEBE9E4
-AUDIO_PACK_13: !unknown
+AUDIO_PACK_13: !struct
+  <<: *AUDIO_PACK
   Size: 478
-  Description: Audio Block
   Offset: 0xEBFE22
-AUDIO_PACK_114: !unknown
+AUDIO_PACK_114: !struct
+  <<: *AUDIO_PACK
   Size: 9196
-  Description: Audio Block
   Offset: 0xEC0000
-AUDIO_PACK_109: !unknown
+AUDIO_PACK_109: !struct
+  <<: *AUDIO_PACK
   Size: 8614
-  Description: Audio Block
   Offset: 0xEC23EC
-AUDIO_PACK_107: !unknown
+AUDIO_PACK_107: !struct
+  <<: *AUDIO_PACK
   Size: 8558
-  Description: Audio Block
   Offset: 0xEC4592
-AUDIO_PACK_98: !unknown
+AUDIO_PACK_98: !struct
+  <<: *AUDIO_PACK
   Size: 8548
-  Description: Audio Block
   Offset: 0xEC6700
-AUDIO_PACK_165: !unknown
+AUDIO_PACK_165: !struct
+  <<: *AUDIO_PACK
   Size: 4882
-  Description: Audio Block
   Offset: 0xEC8864
-AUDIO_PACK_62: !unknown
+AUDIO_PACK_62: !struct
+  <<: *AUDIO_PACK
   Size: 3170
-  Description: Audio Block
   Offset: 0xEC9B76
-AUDIO_PACK_58: !unknown
+AUDIO_PACK_58: !struct
+  <<: *AUDIO_PACK
   Size: 2994
-  Description: Audio Block
   Offset: 0xECA7D8
-AUDIO_PACK_133: !unknown
+AUDIO_PACK_133: !struct
+  <<: *AUDIO_PACK
   Size: 2974
-  Description: Audio Block
   Offset: 0xECB38A
-AUDIO_PACK_97: !unknown
+AUDIO_PACK_97: !struct
+  <<: *AUDIO_PACK
   Size: 2937
-  Description: Audio Block
   Offset: 0xECBF28
-AUDIO_PACK_55: !unknown
+AUDIO_PACK_55: !struct
+  <<: *AUDIO_PACK
   Size: 2871
-  Description: Audio Block
   Offset: 0xECCAA1
-AUDIO_PACK_106: !unknown
+AUDIO_PACK_106: !struct
+  <<: *AUDIO_PACK
   Size: 2857
-  Description: Audio Block
   Offset: 0xECD5D8
-AUDIO_PACK_25: !unknown
+AUDIO_PACK_25: !struct
+  <<: *AUDIO_PACK
   Size: 2640
-  Description: Audio Block
   Offset: 0xECE101
-AUDIO_PACK_15: !unknown
+AUDIO_PACK_15: !struct
+  <<: *AUDIO_PACK
   Size: 2599
-  Description: Audio Block
   Offset: 0xECEB51
-AUDIO_PACK_157: !unknown
+AUDIO_PACK_157: !struct
+  <<: *AUDIO_PACK
   Size: 2696
-  Description: Audio Block
   Offset: 0xECF578
-AUDIO_PACK_121: !unknown
+AUDIO_PACK_121: !struct
+  <<: *AUDIO_PACK
   Size: 2567
-  Description: Audio Block
   Offset: 0xED0000
-AUDIO_PACK_87: !unknown
+AUDIO_PACK_87: !struct
+  <<: *AUDIO_PACK
   Size: 2559
-  Description: Audio Block
   Offset: 0xED0A07
-AUDIO_PACK_132: !unknown
+AUDIO_PACK_132: !struct
+  <<: *AUDIO_PACK
   Size: 2553
-  Description: Audio Block
   Offset: 0xED1406
-AUDIO_PACK_116: !unknown
+AUDIO_PACK_116: !struct
+  <<: *AUDIO_PACK
   Size: 2552
-  Description: Audio Block
   Offset: 0xED1DFF
-AUDIO_PACK_34: !unknown
+AUDIO_PACK_34: !struct
+  <<: *AUDIO_PACK
   Size: 2462
-  Description: Audio Block
   Offset: 0xED27F7
-AUDIO_PACK_119: !unknown
+AUDIO_PACK_119: !struct
+  <<: *AUDIO_PACK
   Size: 2311
-  Description: Audio Block
   Offset: 0xED3195
-AUDIO_PACK_141: !unknown
+AUDIO_PACK_141: !struct
+  <<: *AUDIO_PACK
   Size: 2255
-  Description: Audio Block
   Offset: 0xED3A9C
-AUDIO_PACK_48: !unknown
+AUDIO_PACK_48: !struct
+  <<: *AUDIO_PACK
   Size: 2108
-  Description: Audio Block
   Offset: 0xED436B
-AUDIO_PACK_39: !unknown
+AUDIO_PACK_39: !struct
+  <<: *AUDIO_PACK
   Size: 2104
-  Description: Audio Block
   Offset: 0xED4BA7
-AUDIO_PACK_150: !unknown
+AUDIO_PACK_150: !struct
+  <<: *AUDIO_PACK
   Size: 2082
-  Description: Audio Block
   Offset: 0xED53DF
-AUDIO_PACK_120: !unknown
+AUDIO_PACK_120: !struct
+  <<: *AUDIO_PACK
   Size: 2056
-  Description: Audio Block
   Offset: 0xED5C01
-AUDIO_PACK_38: !unknown
+AUDIO_PACK_38: !struct
+  <<: *AUDIO_PACK
   Size: 2045
-  Description: Audio Block
   Offset: 0xED6409
-AUDIO_PACK_161: !unknown
+AUDIO_PACK_161: !struct
+  <<: *AUDIO_PACK
   Size: 2012
-  Description: Audio Block
   Offset: 0xED6C06
-AUDIO_PACK_68: !unknown
+AUDIO_PACK_68: !struct
+  <<: *AUDIO_PACK
   Size: 2004
-  Description: Audio Block
   Offset: 0xED73E2
-AUDIO_PACK_104: !unknown
+AUDIO_PACK_104: !struct
+  <<: *AUDIO_PACK
   Size: 2003
-  Description: Audio Block
   Offset: 0xED7BB6
-AUDIO_PACK_90: !unknown
+AUDIO_PACK_90: !struct
+  <<: *AUDIO_PACK
   Size: 1944
-  Description: Audio Block
   Offset: 0xED8389
-AUDIO_PACK_86: !unknown
+AUDIO_PACK_86: !struct
+  <<: *AUDIO_PACK
   Size: 1678
-  Description: Audio Block
   Offset: 0xED8B21
-AUDIO_PACK_100: !unknown
+AUDIO_PACK_100: !struct
+  <<: *AUDIO_PACK
   Size: 1653
-  Description: Audio Block
   Offset: 0xED91AF
-AUDIO_PACK_26: !unknown
+AUDIO_PACK_26: !struct
+  <<: *AUDIO_PACK
   Size: 1647
-  Description: Audio Block
   Offset: 0xED9824
-AUDIO_PACK_43: !unknown
+AUDIO_PACK_43: !struct
+  <<: *AUDIO_PACK
   Size: 1604
-  Description: Audio Block
   Offset: 0xED9E93
-AUDIO_PACK_162: !unknown
+AUDIO_PACK_162: !struct
+  <<: *AUDIO_PACK
   Size: 1595
-  Description: Audio Block
   Offset: 0xEDA4D7
-AUDIO_PACK_85: !unknown
+AUDIO_PACK_85: !struct
+  <<: *AUDIO_PACK
   Size: 1572
-  Description: Audio Block
   Offset: 0xEDAB12
-AUDIO_PACK_99: !unknown
+AUDIO_PACK_99: !struct
+  <<: *AUDIO_PACK
   Size: 1565
-  Description: Audio Block
   Offset: 0xEDB136
-AUDIO_PACK_28: !unknown
+AUDIO_PACK_28: !struct
+  <<: *AUDIO_PACK
   Size: 1549
-  Description: Audio Block
   Offset: 0xEDB753
-AUDIO_PACK_10: !unknown
+AUDIO_PACK_10: !struct
+  <<: *AUDIO_PACK
   Size: 1548
-  Description: Audio Block
   Offset: 0xEDBD60
-AUDIO_PACK_117: !unknown
+AUDIO_PACK_117: !struct
+  <<: *AUDIO_PACK
   Size: 1538
-  Description: Audio Block
   Offset: 0xEDC36C
-AUDIO_PACK_77: !unknown
+AUDIO_PACK_77: !struct
+  <<: *AUDIO_PACK
   Size: 1511
-  Description: Audio Block
   Offset: 0xEDC96E
-AUDIO_PACK_19: !unknown
+AUDIO_PACK_19: !struct
+  <<: *AUDIO_PACK
   Size: 1508
-  Description: Audio Block
   Offset: 0xEDCF55
-AUDIO_PACK_57: !unknown
+AUDIO_PACK_57: !struct
+  <<: *AUDIO_PACK
   Size: 1476
-  Description: Audio Block
   Offset: 0xEDD539
-AUDIO_PACK_14: !unknown
+AUDIO_PACK_14: !struct
+  <<: *AUDIO_PACK
   Size: 1457
-  Description: Audio Block
   Offset: 0xEDDAFD
-AUDIO_PACK_158: !unknown
+AUDIO_PACK_158: !struct
+  <<: *AUDIO_PACK
   Size: 1454
-  Description: Audio Block
   Offset: 0xEDE0AE
-AUDIO_PACK_30: !unknown
+AUDIO_PACK_30: !struct
+  <<: *AUDIO_PACK
   Size: 1432
-  Description: Audio Block
   Offset: 0xEDE65C
-AUDIO_PACK_134: !unknown
+AUDIO_PACK_134: !struct
+  <<: *AUDIO_PACK
   Size: 1423
-  Description: Audio Block
   Offset: 0xEDEBF4
-AUDIO_PACK_113: !unknown
+AUDIO_PACK_113: !struct
+  <<: *AUDIO_PACK
   Size: 1421
-  Description: Audio Block
   Offset: 0xEDF183
-AUDIO_PACK_146: !unknown
+AUDIO_PACK_146: !struct
+  <<: *AUDIO_PACK
   Size: 1420
-  Description: Audio Block
   Offset: 0xEDF710
-AUDIO_PACK_29: !unknown
+AUDIO_PACK_29: !struct
+  <<: *AUDIO_PACK
   Size: 868
-  Description: Audio Block
   Offset: 0xEDFC9C
-AUDIO_PACK_136: !unknown
+AUDIO_PACK_136: !struct
+  <<: *AUDIO_PACK
   Size: 1364
-  Description: Audio Block
   Offset: 0xEE0000
-AUDIO_PACK_112: !unknown
+AUDIO_PACK_112: !struct
+  <<: *AUDIO_PACK
   Size: 1335
-  Description: Audio Block
   Offset: 0xEE0554
-AUDIO_PACK_163: !unknown
+AUDIO_PACK_163: !struct
+  <<: *AUDIO_PACK
   Size: 1319
-  Description: Audio Block
   Offset: 0xEE0A8B
-AUDIO_PACK_115: !unknown
+AUDIO_PACK_115: !struct
+  <<: *AUDIO_PACK
   Size: 1314
-  Description: Audio Block
   Offset: 0xEE0FB2
-AUDIO_PACK_53: !unknown
+AUDIO_PACK_53: !struct
+  <<: *AUDIO_PACK
   Size: 1306
-  Description: Audio Block
   Offset: 0xEE14D4
-AUDIO_PACK_67: !unknown
+AUDIO_PACK_67: !struct
+  <<: *AUDIO_PACK
   Size: 1296
-  Description: Audio Block
   Offset: 0xEE19EE
-AUDIO_PACK_20: !unknown
+AUDIO_PACK_20: !struct
+  <<: *AUDIO_PACK
   Size: 1283
-  Description: Audio Block
   Offset: 0xEE1EFE
-AUDIO_PACK_144: !unknown
+AUDIO_PACK_144: !struct
+  <<: *AUDIO_PACK
   Size: 1277
-  Description: Audio Block
   Offset: 0xEE2401
-AUDIO_PACK_63: !unknown
+AUDIO_PACK_63: !struct
+  <<: *AUDIO_PACK
   Size: 1231
-  Description: Audio Block
   Offset: 0xEE28FE
-AUDIO_PACK_138: !unknown
+AUDIO_PACK_138: !struct
+  <<: *AUDIO_PACK
   Size: 1129
-  Description: Audio Block
   Offset: 0xEE2DCD
-AUDIO_PACK_127: !unknown
+AUDIO_PACK_127: !struct
+  <<: *AUDIO_PACK
   Size: 1063
-  Description: Audio Block
   Offset: 0xEE3236
-AUDIO_PACK_16: !unknown
+AUDIO_PACK_16: !struct
+  <<: *AUDIO_PACK
   Size: 1056
-  Description: Audio Block
   Offset: 0xEE365D
-AUDIO_PACK_148: !unknown
+AUDIO_PACK_148: !struct
+  <<: *AUDIO_PACK
   Size: 1055
-  Description: Audio Block
   Offset: 0xEE3A7D
-AUDIO_PACK_23: !unknown
+AUDIO_PACK_23: !struct
+  <<: *AUDIO_PACK
   Size: 1055
-  Description: Audio Block
   Offset: 0xEE3E9C
-AUDIO_PACK_11: !unknown
+AUDIO_PACK_11: !struct
+  <<: *AUDIO_PACK
   Size: 1043
-  Description: Audio Block
   Offset: 0xEE42BB
-AUDIO_PACK_142: !unknown
+AUDIO_PACK_142: !struct
+  <<: *AUDIO_PACK
   Size: 1041
-  Description: Audio Block
   Offset: 0xEE46CE
-AUDIO_PACK_160: !unknown
+AUDIO_PACK_160: !struct
+  <<: *AUDIO_PACK
   Size: 1035
-  Description: Audio Block
   Offset: 0xEE4ADF
-AUDIO_PACK_101: !unknown
+AUDIO_PACK_101: !struct
+  <<: *AUDIO_PACK
   Size: 1020
-  Description: Audio Block
   Offset: 0xEE4EEA
 AUDIO_PACK_103: !struct
+  <<: *AUDIO_PACK
   Size: 1017
-  Terminator: 0
-  Description: Music sequence data
   Notes: '"Return to your body", "Boarding School", "Phase distorter"'
-  Entries: *AUDIO_PACK
   Offset: 0xEE52E6
-AUDIO_PACK_51: !unknown
+AUDIO_PACK_51: !struct
+  <<: *AUDIO_PACK
   Size: 954
-  Description: Audio Block
   Offset: 0xEE56DF
-AUDIO_PACK_93: !unknown
+AUDIO_PACK_93: !struct
+  <<: *AUDIO_PACK
   Size: 865
-  Description: Audio Block
   Offset: 0xEE5A99
-AUDIO_PACK_95: !unknown
+AUDIO_PACK_95: !struct
+  <<: *AUDIO_PACK
   Size: 850
-  Description: Audio Block
   Offset: 0xEE5DFA
-AUDIO_PACK_164: !unknown
+AUDIO_PACK_164: !struct
+  <<: *AUDIO_PACK
   Size: 832
-  Description: Audio Block
   Offset: 0xEE614C
-AUDIO_PACK_151: !unknown
+AUDIO_PACK_151: !struct
+  <<: *AUDIO_PACK
   Size: 811
-  Description: Audio Block
   Offset: 0xEE648C
-AUDIO_PACK_12: !unknown
+AUDIO_PACK_12: !struct
+  <<: *AUDIO_PACK
   Size: 718
-  Description: Audio Block
   Offset: 0xEE67B7
-AUDIO_PACK_135: !unknown
   Size: 689
-  Description: Audio Block
   Offset: 0xEE6A85
-AUDIO_PACK_83: !unknown
+AUDIO_PACK_83: !struct
+  <<: *AUDIO_PACK
   Size: 679
-  Description: Audio Block
   Offset: 0xEE6D36
-AUDIO_PACK_88: !unknown
+AUDIO_PACK_88: !struct
+  <<: *AUDIO_PACK
   Size: 663
-  Description: Audio Block
   Offset: 0xEE6FDD
-AUDIO_PACK_31: !unknown
+AUDIO_PACK_31: !struct
+  <<: *AUDIO_PACK
   Size: 611
-  Description: Audio Block
   Offset: 0xEE7274
-AUDIO_PACK_129: !unknown
+AUDIO_PACK_129: !struct
+  <<: *AUDIO_PACK
   Size: 608
-  Description: Audio Block
   Offset: 0xEE74D7
-AUDIO_PACK_22: !unknown
+AUDIO_PACK_22: !struct
+  <<: *AUDIO_PACK
   Size: 599
-  Description: Audio Block
   Offset: 0xEE7737
-AUDIO_PACK_17: !unknown
+AUDIO_PACK_17: !struct
+  <<: *AUDIO_PACK
   Size: 593
-  Description: Audio Block
   Offset: 0xEE798E
-AUDIO_PACK_91: !unknown
+AUDIO_PACK_91: !struct
+  <<: *AUDIO_PACK
   Size: 586
-  Description: Audio Block
   Offset: 0xEE7BDF
-AUDIO_PACK_81: !unknown
+AUDIO_PACK_81: !struct
+  <<: *AUDIO_PACK
   Size: 548
-  Description: Audio Block
   Offset: 0xEE7E29
-AUDIO_PACK_147: !unknown
+AUDIO_PACK_147: !struct
+  <<: *AUDIO_PACK
   Size: 543
-  Description: Audio Block
   Offset: 0xEE804D
-AUDIO_PACK_152: !unknown
+AUDIO_PACK_152: !struct
+  <<: *AUDIO_PACK
   Size: 506
-  Description: Audio Block
   Offset: 0xEE826C
-AUDIO_PACK_128: !unknown
+AUDIO_PACK_128: !struct
+  <<: *AUDIO_PACK
   Size: 466
-  Description: Audio Block
   Offset: 0xEE8466
-AUDIO_PACK_159: !unknown
+AUDIO_PACK_159: !struct
+  <<: *AUDIO_PACK
   Size: 403
-  Description: Audio Block
   Offset: 0xEE8638
-AUDIO_PACK_49: !unknown
+AUDIO_PACK_49: !struct
+  <<: *AUDIO_PACK
   Size: 388
-  Description: Audio Block
   Offset: 0xEE87CB
-AUDIO_PACK_9: !unknown
+AUDIO_PACK_9: !struct
+  <<: *AUDIO_PACK
   Size: 379
-  Description: Audio Block
   Offset: 0xEE894F
-AUDIO_PACK_69: !unknown
+AUDIO_PACK_69: !struct
+  <<: *AUDIO_PACK
   Size: 340
-  Description: Audio Block
   Offset: 0xEE8ACA
-AUDIO_PACK_167: !unknown
+AUDIO_PACK_167: !struct
+  <<: *AUDIO_PACK
   Size: 327
-  Description: Audio Block
   Offset: 0xEE8C1E
-AUDIO_PACK_130: !unknown
+AUDIO_PACK_130: !struct
+  <<: *AUDIO_PACK
   Size: 317
-  Description: Audio Block
   Offset: 0xEE8D65
-AUDIO_PACK_168: !unknown
+AUDIO_PACK_168: !struct
+  <<: *AUDIO_PACK
   Size: 308
-  Description: Audio Block
   Offset: 0xEE8EA2
-AUDIO_PACK_137: !unknown
+AUDIO_PACK_137: !struct
+  <<: *AUDIO_PACK
   Size: 297
-  Description: Audio Block
   Offset: 0xEE8FD6
-AUDIO_PACK_41: !unknown
+AUDIO_PACK_41: !struct
+  <<: *AUDIO_PACK
   Size: 258
-  Description: Audio Block
   Offset: 0xEE90FF
 UNKNOWN_EE9201: !empty
   Size: 28159
