@@ -20407,11 +20407,11 @@ AUDIO_PACK_102: !struct
   <<: *AUDIO_PACK
   Size: 1850
   Offset: 0xCEF8C6
-DOOR_DEST_TABLE_1: !array
+DOOR_DEST_TABLE_1: &DOOR_DEST_TABLE !array
   Size: 1408
   Description: Door Destinations Table (1)
   Item Type: !struct
-    Entries: &DOORDESTTABLEENTRIES
+    Entries:
       POINTER: !pointer
         Size: 4
       EVENTFLAG: !int
@@ -20431,10 +20431,9 @@ SIGN_POINTERS_1: !array
     Size: 4
   Offset: 0xCF0580
 DOOR_DEST_TABLE_2: !array
+  <<: *DOOR_DEST_TABLE
   Size: 44
   Description: Door Destinations Table (2)
-  Item Type: !struct
-    Entries: *DOORDESTTABLEENTRIES
   Offset: 0xCF05AC
 SIGN_POINTERS_2: !array
   Size: 32
@@ -20443,10 +20442,9 @@ SIGN_POINTERS_2: !array
     Size: 4
   Offset: 0xCF05D8
 DOOR_DEST_TABLE_3: !array
+  <<: *DOOR_DEST_TABLE
   Size: 44
   Description: Door Destinations Table (3)
-  Item Type: !struct
-    Entries: *DOORDESTTABLEENTRIES
   Offset: 0xCF05F8
 UNKNOWN_DPOINTERS_1: !array
   Size: 36
@@ -20455,10 +20453,9 @@ UNKNOWN_DPOINTERS_1: !array
     Size: 4
   Offset: 0xCF0624
 DOOR_DEST_TABLE_4: !array
+  <<: *DOOR_DEST_TABLE
   Size: 847
   Description: Door Destinations Table (4)
-  Item Type: !struct
-    Entries: *DOORDESTTABLEENTRIES
   Offset: 0xCF0648
 UNKNOWN_DPOINTERS_2: !array
   Size: 32
@@ -20467,10 +20464,9 @@ UNKNOWN_DPOINTERS_2: !array
     Size: 4
   Offset: 0xCF0997
 DOOR_DEST_TABLE_5: !array
+  <<: *DOOR_DEST_TABLE
   Size: 275
   Description: Door Destinations Table (5)
-  Item Type: !struct
-    Entries: *DOORDESTTABLEENTRIES
   Offset: 0xCF09B7
 UNKNOWN_DPOINTERS_3: !array
   Size: 8
@@ -20479,10 +20475,9 @@ UNKNOWN_DPOINTERS_3: !array
     Size: 4
   Offset: 0xCF0ACA
 DOOR_DEST_TABLE_6: !array
+  <<: *DOOR_DEST_TABLE
   Size: 781
   Description: Door Destinations Table (6)
-  Item Type: !struct
-    Entries: *DOORDESTTABLEENTRIES
   Offset: 0xCF0AD2
 UNKNOWN_DPOINTERS_4: !array
   Size: 8
@@ -20491,10 +20486,9 @@ UNKNOWN_DPOINTERS_4: !array
     Size: 4
   Offset: 0xCF0DDF
 DOOR_DEST_TABLE_7: !array
+  <<: *DOOR_DEST_TABLE
   Size: 77
   Description: Door Destinations Table (7)
-  Item Type: !struct
-    Entries: *DOORDESTTABLEENTRIES
   Offset: 0xCF0DE7
 UNKNOWN_DPOINTERS_5: !array
   Size: 36
@@ -20503,10 +20497,9 @@ UNKNOWN_DPOINTERS_5: !array
     Size: 4
   Offset: 0xCF0E34
 DOOR_DEST_TABLE_8: !array
+  <<: *DOOR_DEST_TABLE
   Size: 154
   Description: Door Destinations Table (8)
-  Item Type: !struct
-    Entries: *DOORDESTTABLEENTRIES
   Offset: 0xCF0E58
 UNKNOWN_DPOINTERS_6: !array
   Size: 4
@@ -20515,10 +20508,9 @@ UNKNOWN_DPOINTERS_6: !array
     Size: 4
   Offset: 0xCF0EF2
 DOOR_DEST_TABLE_9: !array
+  <<: *DOOR_DEST_TABLE
   Size: 902
   Description: Door Destinations Table (9)
-  Item Type: !struct
-    Entries: *DOORDESTTABLEENTRIES
   Offset: 0xCF0EF6
 UNKNOWN_DPOINTERS_7: !array
   Size: 4
@@ -20527,10 +20519,9 @@ UNKNOWN_DPOINTERS_7: !array
     Size: 4
   Offset: 0xCF127C
 DOOR_DEST_TABLE_10: !array
+  <<: *DOOR_DEST_TABLE
   Size: 297
   Description: Door Destinations Table (10)
-  Item Type: !struct
-    Entries: *DOORDESTTABLEENTRIES
   Offset: 0xCF1280
 UNKNOWN_DPOINTERS_8: !array
   Size: 4
@@ -20539,10 +20530,9 @@ UNKNOWN_DPOINTERS_8: !array
     Size: 4
   Offset: 0xCF13A9
 DOOR_DEST_TABLE_11: !array
+  <<: *DOOR_DEST_TABLE
   Size: 1991
   Description: Door Destinations Table (11)
-  Item Type: !struct
-    Entries: *DOORDESTTABLEENTRIES
   Offset: 0xCF13AD
 UNKNOWN_DPOINTERS_9: !array
   Size: 12
@@ -20551,10 +20541,9 @@ UNKNOWN_DPOINTERS_9: !array
     Size: 4
   Offset: 0xCF1B74
 DOOR_DEST_TABLE_12: !array
+  <<: *DOOR_DEST_TABLE
   Size: 11
   Description: Door Destinations Table (12)
-  Item Type: !struct
-    Entries: *DOORDESTTABLEENTRIES
   Offset: 0xCF1B80
 UNKNOWN_DPOINTERS_10: !array
   Size: 24
@@ -20563,10 +20552,9 @@ UNKNOWN_DPOINTERS_10: !array
     Size: 4
   Offset: 0xCF1B8B
 DOOR_DEST_TABLE_13: !array
+  <<: *DOOR_DEST_TABLE
   Size: 528
   Description: Door Destinations Table (13)
-  Item Type: !struct
-    Entries: *DOORDESTTABLEENTRIES
   Offset: 0xCF1BA3
 UNKNOWN_DPOINTERS_11: !array
   Size: 32
@@ -20575,10 +20563,9 @@ UNKNOWN_DPOINTERS_11: !array
     Size: 4
   Offset: 0xCF1DB3
 DOOR_DEST_TABLE_14: !array
+  <<: *DOOR_DEST_TABLE
   Size: 22
   Description: Door Destinations Table (14)
-  Item Type: !struct
-    Entries: *DOORDESTTABLEENTRIES
   Offset: 0xCF1DD3
 UNKNOWN_DPOINTERS_12: !array
   Size: 12
@@ -20587,10 +20574,9 @@ UNKNOWN_DPOINTERS_12: !array
     Size: 4
   Offset: 0xCF1DE9
 DOOR_DEST_TABLE_15: !array
+  <<: *DOOR_DEST_TABLE
   Size: 341
   Description: Door Destinations Table (15)
-  Item Type: !struct
-    Entries: *DOORDESTTABLEENTRIES
   Offset: 0xCF1DF5
 UNKNOWN_DPOINTERS_13: !array
   Size: 34
@@ -20599,10 +20585,9 @@ UNKNOWN_DPOINTERS_13: !array
     Size: 4
   Offset: 0xCF1F4A
 DOOR_DEST_TABLE_16: !array
+  <<: *DOOR_DEST_TABLE
   Size: 374
   Description: Door Destinations Table (16)
-  Item Type: !struct
-    Entries: *DOORDESTTABLEENTRIES
   Offset: 0xCF1F6C
 UNKNOWN_DPOINTERS_14: !array
   Size: 21
@@ -20611,10 +20596,9 @@ UNKNOWN_DPOINTERS_14: !array
     Size: 4
   Offset: 0xCF20E2
 DOOR_DEST_TABLE_17: !array
+  <<: *DOOR_DEST_TABLE
   Size: 242
   Description: Door Destinations Table (17)
-  Item Type: !struct
-    Entries: *DOORDESTTABLEENTRIES
   Offset: 0xCF20F7
 DUNGEON_MAN_SIGN_POINTERS: !array
   Size: 176
@@ -20623,10 +20607,9 @@ DUNGEON_MAN_SIGN_POINTERS: !array
     Size: 4
   Offset: 0xCF21E9
 DOOR_DEST_TABLE_18: !array
+  <<: *DOOR_DEST_TABLE
   Size: 286
   Description: Door Destinations Table (18)
-  Item Type: !struct
-    Entries: *DOORDESTTABLEENTRIES
   Offset: 0xCF2299
 UNKNOWN_DPOINTERS_15: !array
   Size: 12
@@ -20635,10 +20618,9 @@ UNKNOWN_DPOINTERS_15: !array
     Size: 4
   Offset: 0xCF23B7
 DOOR_DEST_TABLE_19: !array
+  <<: *DOOR_DEST_TABLE
   Size: 484
   Description: Door Destinations Table (19)
-  Item Type: !struct
-    Entries: *DOORDESTTABLEENTRIES
   Offset: 0xCF23C3
 UNKNOWN_DPOINTERS_16: !array
   Size: 24
@@ -20647,10 +20629,9 @@ UNKNOWN_DPOINTERS_16: !array
     Size: 4
   Offset: 0xCF25A7
 DOOR_DEST_TABLE_20: !array
+  <<: *DOOR_DEST_TABLE
   Size: 143
   Description: Door Destinations Table (20)
-  Item Type: !struct
-    Entries: *DOORDESTTABLEENTRIES
   Offset: 0xCF25BF
 UNKNOWN_CF264E: !unknown
   Size: 1
