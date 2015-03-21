@@ -20390,10 +20390,18 @@ SWIRL_POINTER_TABLE: !array
     Size: 2
     Base: 0xCE0000
   Offset: 0xCEDC45
-SWIRL_PRIMARY_TABLE: !unknown
+SWIRL_PRIMARY_TABLE: !array
   Size: 28
   Description: Swirl Animation Primary Table
   Offset: 0xCEDD41
+  Item Type: !struct
+    Entries:
+      SPEED: !int
+        Size: 1
+      FIRSTANIMATION: !int
+        Size: 1
+      NUMANIMATIONS: !int
+        Size: 2
 SOUND_STONE_GFX: !unknown
   Size: 6825
   Description: Sound stone graphics
