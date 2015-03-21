@@ -23473,3 +23473,11 @@ UNKNOWN_EFF5EB: !empty
   Size: 2581
   Offset: 0xEFF5EB
 ...
+---
+#SPC700
+SEQUENCE_POINTER_TABLE: !array
+  Offset: 0x2D4A
+  Size: 0x17E
+  Item Type: !pointer
+    Size: 2
+...
