@@ -13985,7 +13985,7 @@ REDUCE_PP: !assembly
     38: UNKNOWN1
   Size: 45
   Offset: 0xC2721D
-INFLICT_STATUS: !assembly
+INFLICT_STATUS_BATTLE: !assembly
   Description: Inflict status on target
   Arguments:
     A: Target
@@ -14196,6 +14196,9 @@ SWAP_ATTACKER_WITH_TARGET: !assembly
   Offset: 0xC27E8A
 CALC_DAMAGE: !assembly
   Description: Calculate Damage
+  Notes: |-
+    For enemies 0x5D, 0xC0, 0xDA, 0xDB, 0xDD and 0xE5, HP is never reduced
+    0xDB, 0xDC, 0xDD and 0xE5 (giygas stages) all seem to have special behaviour too
   Arguments:
     A: Attacker pointer
     X: Amount of damage
@@ -17530,11 +17533,30 @@ UNKNOWN_C451FA: !assembly
     705: UNKNOWN23
     758: UNKNOWN24
   Offset: 0xC451FA
-UNKNOWN_C454F2: !unknown
-  Size: 325
+BATTLE_TO_TEXT: !script
+  Size: 3
   Offset: 0xC454F2
+BATTLE_FRONT_ROW_TEXT: !script
+  Size: 13
+  Offset: 0xC454F5
+BATTLE_BACK_ROW_TEXT: !script
+  Size: 13
+  Offset: 0xC45502
+1C_01_TABLE: !unknown
+  Size: 288
+  Offset: 0xC4550F
+POWERS_OF_TWO_AGAIN: !array
+  Offset: 0xC4562F
+  Size: 8
+  Item Type: !int
+    Size: 1
 FIND_ITEM_IN_INVENTORY: !assembly
   Size: 76
+  Arguments:
+    A: Character to search
+    X: Item ID
+  Return Values:
+    A: 0 if not found, 1 if found
   Description: Search for item in inventory
   Labels:
     23: UNKNOWN0
@@ -17544,9 +17566,14 @@ FIND_ITEM_IN_INVENTORY: !assembly
     71: UNKNOWN4
     74: UNKNOWN5
   Offset: 0xC45637
-CHECK_FOR_TOWN_MAP: !assembly
+FIND_ITEM_IN_INVENTORY2: !assembly
   Size: 97
-  Description: Checks for town map
+  Arguments:
+    A: Character to search or -1 for all characters
+    X: Item ID
+  Return Values:
+    A: 0 if not found, 1 if found
+  Description: Search for item in one or all inventories
   Labels:
     26: UNKNOWN0
     63: UNKNOWN1
@@ -17559,6 +17586,8 @@ FIND_INVENTORY_SPACE: !assembly
   Description: Find space in character's inventory
   Arguments:
     A: Character ID
+  Return Values:
+    A: Character ID if space available, 0 otherwise
   Labels:
     20: UNKNOWN0
     50: UNKNOWN1
@@ -17567,10 +17596,12 @@ FIND_INVENTORY_SPACE: !assembly
     66: UNKNOWN4
     69: UNKNOWN5
   Offset: 0xC456E4
-FIND_INVENTORY_SPACE_ALL: !assembly
+FIND_INVENTORY_SPACE2: !assembly
   Description: Find first free inventory space
   Arguments:
     A: -1 to search all character inventories, character ID otherwise
+  Return Values:
+    A: First character ID with space available, 0 if none
   Size: 82
   Labels:
     22: UNKNOWN0
@@ -17579,30 +17610,76 @@ FIND_INVENTORY_SPACE_ALL: !assembly
     77: UNKNOWN3
     80: UNKNOWN4
   Offset: 0xC4572B
-UNKNOWN_C4577D: !assembly
+CHANGE_EQUIPPED_WEAPON: !assembly
   Size: 77
-  Description: Change equipped weapon
+  Arguments:
+    A: Character ID
+    X: Inventory index of item
+  Return Values:
+    A: Inventory index of old item
   Offset: 0xC4577D
-UNKNOWN_C457CA: !assembly
+CHANGE_EQUIPPED_BODY: !assembly
   Size: 75
+  Arguments:
+    A: Character ID
+    X: Inventory index of item
+  Return Values:
+    A: Inventory index of old item
   Offset: 0xC457CA
-UNKNOWN_C45815: !assembly
+CHANGE_EQUIPPED_ARMS: !assembly
   Size: 75
+  Arguments:
+    A: Character ID
+    X: Inventory index of item
+  Return Values:
+    A: Inventory index of old item
   Offset: 0xC45815
-UNKNOWN_C45860: !assembly
+CHANGE_EQUIPPED_OTHER: !assembly
   Size: 75
+  Arguments:
+    A: Character ID
+    X: Inventory index of item
+  Return Values:
+    A: Inventory index of old item
   Offset: 0xC45860
-UNKNOWN_C458AB: !unknown
+MORE_POWERS_OF_TWO: !array
   Size: 4
+  Item Type: !int
+    Size: 1
   Offset: 0xC458AB
-UNKNOWN_C458AF: !assembly
+CHECK_STATUS_GROUP: !assembly
   Size: 79
+  Arguments:
+    A: Character ID
+    X: Status group
+  Return Values:
+    A: Appropriate status group affliction, 0 if none
+  Notes: |-
+   [01 02] for Unconscious
+   [01 03] for Diamondized
+   [01 04] for Paralyzed
+   [01 05] for Nauseous
+   [01 06] for Poisoned
+   [01 07] for Sunstroke
+   [01 08] for Sniffling
+   [02 02] for Mushroomized
+   [02 03] for Possessed
+   [03 02] for Asleep
+   [03 03] for Crying
+   [03 04] for Immobilized
+   [03 05] for Solidified
+   [04 02] for Feeling strange
+   [05 02] for Can't concentrate (countdown)
+   [06 02] for Homesick
+   [08 02] for Burnt
+   [08 04] for Skip-Sandwiched
+   08 is read from 0x7E9840 rather than the character's statuses
   Labels:
     30: UNKNOWN0
     74: UNKNOWN1
     77: UNKNOWN2
   Offset: 0xC458AF
-INFLICT_STATUS2: !assembly
+INFLICT_STATUS_NONBATTLE: !assembly
   Description: Give status to character
   Arguments:
     A: Character ID
