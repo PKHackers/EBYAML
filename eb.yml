@@ -1373,7 +1373,7 @@ SAVE_SLOT_1: !struct
         WALLET_BACKUP: !int
           Size: 4
         ESCARGO_EXPRESS_ITEMS: !array
-          Item Type: !int
+          Item Type: &ITEM_REF !int
             Size: 1
           Size: 36
         UNKNOWNC: !unknown
@@ -1457,166 +1457,145 @@ SAVE_SLOT_1: !struct
            3: Strawberry
            4: Banana
            5: Peanut
-    CHARACTERDATA: !struct
+    CHARACTERDATA: !array
       Description: Data for each character in the game
       Size: 0x23A
-      Entries: &CHAR_STRUCT_ENTRIES
-        NAME: !script
-          Size: 5
-          Pretty Name: Character name
-        LEVEL: !int
-          Size: 1
-          Pretty Name: Current Level
-        EXP: !int
-          Size: 4
-          Pretty Name: Experience Points
-        MAXHP: !int
-          Size: 2
-          Pretty Name: Maximum HP
-        MAXPP: !int
-          Size: 2
-          Pretty Name: Maximum PP
-        AFFLICTIONS: !unknown
-          Size: 7
-          Pretty Name: Current Status Effects
-        EQUIPPED_OFFENSE: !int
-          Size: 1
-          Pretty Name: Offense with current equipment
-        EQUIPPED_DEFENSE: !int
-          Size: 1
-          Pretty Name: Defense with current equipment
-        EQUIPPED_SPEED: !int
-          Size: 1
-          Pretty Name: Speed with current equipment
-        EQUIPPED_GUTS: !int
-          Size: 1
-          Pretty Name: Guts with current equipment
-        EQUIPPED_LUCK: !int
-          Size: 1
-          Pretty Name: Luck with current equipment
-        EQUIPPED_VITALITY: !int
-          Size: 1
-          Pretty Name: Vitality with current equipment
-        EQUIPPED_IQ: !int
-          Size: 1
-          Pretty Name: IQ with current equipment
-        OFFENSE: !int
-          Size: 1
-          Pretty Name: Offense without current equipment
-        DEFENSE: !int
-          Size: 1
-          Pretty Name: Defense without current equipment
-        SPEED: !int
-          Size: 1
-          Pretty Name: Speed without current equipment
-        GUTS: !int
-          Size: 1
-          Pretty Name: Guts without current equipment
-        LUCK: !int
-          Size: 1
-          Pretty Name: Luck without current equipment
-        VITALITY: !int
-          Size: 1
-          Pretty Name: Vitality without current equipment
-        IQ: !int
-          Size: 1
-          Pretty Name: IQ without current equipment
-        ITEMS: !array
-          Size: 14
-          Item Type: !int
+      Item Type: !struct
+        Entries: &CHAR_STRUCT_ENTRIES
+          NAME: !script
+            Size: 5
+            Pretty Name: Character name
+          LEVEL: !int
             Size: 1
-          Pretty Name: Current held items
-        EQUIPPED_ITEMS: !array
-          Size: 4
-          Item Type: !int
+            Pretty Name: Current Level
+          EXP: !int
+            Size: 4
+            Pretty Name: Experience Points
+          MAXHP: !int
+            Size: 2
+            Pretty Name: Maximum HP
+          MAXPP: !int
+            Size: 2
+            Pretty Name: Maximum PP
+          AFFLICTIONS: !unknown
+            Size: 7
+            Pretty Name: Current Status Effects
+          EQUIPPED_STATS: !struct
+            Size: 7
+            Pretty Name: Stats after equipment
+            Entries: &ALLSTATS
+              OFFENSE: !int
+                Size: 1
+              DEFENSE: !int
+                Size: 1
+              SPEED: !int
+                Size: 1
+              GUTS: !int
+                Size: 1
+              LUCK: !int
+                Size: 1
+              VITALITY: !int
+                Size: 1
+              IQ: !int
+                Size: 1
+          BASE_STATS: !struct
+            Size: 7
+            Pretty Name: Base Stats
+            Entries: *ALLSTATS
+          ITEMS: !array
+            Size: 14
+            Item Type: *ITEM_REF
+            Pretty Name: Current held items
+          EQUIPPED_ITEMS: !array
+            Size: 4
+            Item Type: *ITEM_REF
+            Pretty Name: Current equipped items
+          UNKNOWN: !unknown
+            Size: 8
+          POSITION_INDEX: !int
+            Size: 2
+            Pretty Name: Position Index
+            Notes: 'TODO: which table was this for again?'
+          UNKNOWN2: !unknown
+            Size: 4
+          UNKNOWN3: !int
+            Size: 2
+          CURRENT_HP: !int
+            Size: 2
+            Pretty Name: Current HP
+          CURRENT_HP_ROLLING: !int
+            Size: 2
+            Pretty Name: Current HP (Rolling)
+          UNKNOWN4: !int
+            Size: 2
+          CURRENT_PP: !int
+            Size: 2
+            Pretty Name: Current PP
+          CURRENT_PP_ROLLING: !int
+            Size: 2
+            Pretty Name: Current PP (Rolling)
+          HP_PP_WINDOW_OPTIONS: !bitfield
+            Size: 2
+            Bit Values:
+              - 1
+              - 2
+              - 3
+              - 4
+              - 5
+              - 6
+              - 7
+              - 8
+              - 9
+              - 10
+              - 11
+              - 12
+              - 13
+              - 14
+              - 15
+              - 16
+            Description: HP/PP Window Options?
+          MISS_RATE: !int
             Size: 1
-          Pretty Name: Current equipped items
-        UNKNOWN: !unknown
-          Size: 8
-        POSITION_INDEX: !int
-          Size: 2
-          Pretty Name: Position Index
-          Notes: 'TODO: which table was this for again?'
-        UNKNOWN2: !unknown
-          Size: 4
-        UNKNOWN3: !int
-          Size: 2
-        CURRENT_HP: !int
-          Size: 2
-          Pretty Name: Current HP
-        CURRENT_HP_ROLLING: !int
-          Size: 2
-          Pretty Name: Current HP (Rolling)
-        UNKNOWN4: !int
-          Size: 2
-        CURRENT_PP: !int
-          Size: 2
-          Pretty Name: Current PP
-        CURRENT_PP_ROLLING: !int
-          Size: 2
-          Pretty Name: Current PP (Rolling)
-        HP_PP_WINDOW_OPTIONS: !bitfield
-          Size: 2
-          Bit Values:
-            - 1
-            - 2
-            - 3
-            - 4
-            - 5
-            - 6
-            - 7
-            - 8
-            - 9
-            - 10
-            - 11
-            - 12
-            - 13
-            - 14
-            - 15
-            - 16
-          Description: HP/PP Window Options?
-        MISS_RATE: !int
-          Size: 1
-          Pretty Name: Miss Rate
-        RESISTANCES: !struct
-          Size: 5
-          Entries:
-            FIRE: !int
-              Size: 1
-              Values: &RESISTANCES
-              - 100%
-              - 70%
-              - 40%
-              - 5%
-            FREEZE: !int
-              Size: 1
-              Values: *RESISTANCES
-            FLASH: !int
-              Size: 1
-              Values: *RESISTANCES
-            PARALYSIS: !int
-              Size: 1
-              Values: *RESISTANCES
-            HYPNOSIS_BRAINSHOCK: !int
-              Size: 1
-              Values: *RESISTANCES
-          Pretty Name: Resistances
-        STAT_BOOSTS: !struct
-          Size: 5
-          Entries:
-            SPEED: !int
-              Size: 1
-            GUTS: !int
-              Size: 1
-            VITALITY: !int
-              Size: 1
-            IQ: !int
-              Size: 1
-            LUCK: !int
-              Size: 1
-          Pretty Name: Current stat boosts
-        UNKNOWN5: !unknown
-          Size: 3
+            Pretty Name: Miss Rate
+          RESISTANCES: !struct
+            Size: 5
+            Entries:
+              FIRE: !int
+                Size: 1
+                Values: &RESISTANCES
+                - 100%
+                - 70%
+                - 40%
+                - 5%
+              FREEZE: !int
+                Size: 1
+                Values: *RESISTANCES
+              FLASH: !int
+                Size: 1
+                Values: *RESISTANCES
+              PARALYSIS: !int
+                Size: 1
+                Values: *RESISTANCES
+              HYPNOSIS_BRAINSHOCK: !int
+                Size: 1
+                Values: *RESISTANCES
+            Pretty Name: Resistances
+          STAT_BOOSTS: !struct
+            Size: 5
+            Entries:
+              SPEED: !int
+                Size: 1
+              GUTS: !int
+                Size: 1
+              VITALITY: !int
+                Size: 1
+              IQ: !int
+                Size: 1
+              LUCK: !int
+                Size: 1
+            Pretty Name: Current stat boosts
+          UNKNOWN5: !unknown
+            Size: 3
     EVENT_FLAGS: !struct
       Size: 0x80
       Description: Event Flags, a list of boolean values used for various purposes
@@ -1922,11 +1901,11 @@ LOADED_SPRITE_MOVEMENT_CODES_TABLE: !array
   Item Type: &30x2 !unknown
     Size: 2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_1: !array
+UNKNOWN_30X2_TABLE_1: !array
   Offset: 0x7E0A9E
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_2: !array
+UNKNOWN_30X2_TABLE_2: !array
   Offset: 0x7E0ADA
   Item Type: *30x2
   Size: 0x3C
@@ -2000,87 +1979,87 @@ SPRITE_DELTA_Z_FRACTION_TABLE: !array
   Description: Z delta fractional component
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_3: !array
+UNKNOWN_30X2_TABLE_3: !array
   Notes: Used by timed events like Escargo Express?
   Item Type: *30x2
   Offset: 0x7E0E5E
   Size: 0x3C
-UNKNOWN_30x2_TABLE_4: !array
+UNKNOWN_30X2_TABLE_4: !array
   Notes: C09AF9 entry 1
   Item Type: *30x2
   Offset: 0x7E0E9A
   Size: 0x3C
-UNKNOWN_30x2_TABLE_5: !array
+UNKNOWN_30X2_TABLE_5: !array
   Notes: C09AF9 entry 2
   Item Type: *30x2
   Offset: 0x7E0ED6
   Size: 0x3C
-UNKNOWN_30x2_TABLE_6: !array
+UNKNOWN_30X2_TABLE_6: !array
   Notes: C09AF9 entry 3
   Item Type: *30x2
   Offset: 0x7E0F12
   Size: 0x3C
-UNKNOWN_30x2_TABLE_7: !array
+UNKNOWN_30X2_TABLE_7: !array
   Notes: C09AF9 entry 4
   Item Type: *30x2
   Offset: 0x7E0F4E
   Size: 0x3C
-UNKNOWN_30x2_TABLE_8: !array
+UNKNOWN_30X2_TABLE_8: !array
   Notes: C09AF9 entry 5
   Item Type: *30x2
   Offset: 0x7E0F8A
   Size: 0x3C
-UNKNOWN_30x2_TABLE_9: !array
+UNKNOWN_30X2_TABLE_9: !array
   Notes: C09AF9 entry 6 - X destination in absolute pixel coordinates
   Item Type: *30x2
   Offset: 0x7E0FC6
   Size: 0x3C
-UNKNOWN_30x2_TABLE_10: !array
+UNKNOWN_30X2_TABLE_10: !array
   Notes: C09AF9 entry 6 - Y destination in absolute pixel coordinates
   Item Type: *30x2
   Offset: 0x7E1002
   Size: 0x3C
-UNKNOWN_30x2_TABLE_11: !array
+UNKNOWN_30X2_TABLE_11: !array
   Notes: Sprite-drawing priority, lower numbers first?
   Item Type: *30x2
   Offset: 0x7E103E
   Size: 0x3C
-UNKNOWN_30x2_TABLE_12: !array
+UNKNOWN_30X2_TABLE_12: !array
   Notes: Low part of a long pointer?
   Item Type: *30x2
   Offset: 0x7E107A
   Size: 0x3C
-UNKNOWN_30x2_TABLE_13: !array
+UNKNOWN_30X2_TABLE_13: !array
   Notes: High part of a long pointer?
   Item Type: *30x2
   Offset: 0x7E10B6
   Size: 0x3C
-UNKNOWN_30x2_TABLE_14: !array
+UNKNOWN_30X2_TABLE_14: !array
   Notes: 'Adjusted by movement codes: 0x26, 0x3C, 0x3D, 0x3E'
   Item Type: *30x2
   Offset: 0x7E10F2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_15: !array
+UNKNOWN_30X2_TABLE_15: !array
   Notes: Low part of a long pointer
   Item Type: *30x2
   Offset: 0x7E112E
   Size: 0x3C
-UNKNOWN_30x2_TABLE_16: !array
+UNKNOWN_30X2_TABLE_16: !array
   Notes: High part of a long pointer
   Item Type: *30x2
   Offset: 0x7E116A
   Size: 0x3C
-UNKNOWN_30x2_TABLE_17: !array
+UNKNOWN_30X2_TABLE_17: !array
   Notes: 'Short assembly pointer (set by movement code 0x23 - callback: recalc screen coords?)'
   Item Type: *30x2
   Offset: 0x7E11A6
   Size: 0x3C
-UNKNOWN_30x2_TABLE_18: !array
+UNKNOWN_30X2_TABLE_18: !array
   Notes: 'Short assembly pointer (set by movement code 0x22 - see C0/A0F6?)'
   Item Type: *30x2
   Offset: 0x7E11E2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_19: !array
+UNKNOWN_30X2_TABLE_19: !array
   Notes: 'Short assembly pointer (set by movement code 0x25 - callback: atomic motion?)'
   Item Type: *30x2
   Offset: 0x7E121E
@@ -2091,28 +2070,28 @@ UNKNOWN_7E125A: !unknown
 UNKNOWN_7E12E6: !unknown
   Size: 0x8C
   Offset: 0x7E12E6
-UNKNOWN_30x2_TABLE_20: !array
+UNKNOWN_30X2_TABLE_20: !array
   Offset: 0x7E1372
   Item Type: *30x2
   Size: 0x3C
 UNKNOWN_7E13AE: !unknown
   Size: 0x50
   Offset: 0x7E13AE
-UNKNOWN_30x2_TABLE_21: !array
+UNKNOWN_30X2_TABLE_21: !array
   Offset: 0x7E13FE
   Item Type: *30x2
   Size: 0x3C
 UNKNOWN_7E143A: !unknown
   Size: 0x50
   Offset: 0x7E143A
-UNKNOWN_30x2_TABLE_22: !array
+UNKNOWN_30X2_TABLE_22: !array
   Offset: 0x7E148A
   Item Type: *30x2
   Size: 0x3C
 UNKNOWN_7E14C6: !unknown
   Size: 0x50
   Offset: 0x7E14C6
-UNKNOWN_30x2_TABLE_23: !array
+UNKNOWN_30X2_TABLE_23: !array
   Offset: 0x7E1516
   Item Type: *30x2
   Size: 0x3C
@@ -2215,79 +2194,79 @@ UNKNOWN_7E27CA: !unknown
 UNKNOWN_7E280A: !unknown
   Size: 2
   Offset: 0x7E280A
-UNKNOWN_30x2_TABLE_23_: !array
+UNKNOWN_30X2_TABLE_23_: !array
   Offset: 0x7E280C
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_24: !array
+UNKNOWN_30X2_TABLE_24: !array
   Offset: 0x7E289E
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_25: !array
+UNKNOWN_30X2_TABLE_25: !array
   Offset: 0x7E28DA
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_26: !array
+UNKNOWN_30X2_TABLE_26: !array
   Offset: 0x7E2916
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_27: !array
+UNKNOWN_30X2_TABLE_27: !array
   Offset: 0x7E2952
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_28: !array
+UNKNOWN_30X2_TABLE_28: !array
   Offset: 0x7E298E
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_29: !array
+UNKNOWN_30X2_TABLE_29: !array
   Offset: 0x7E29CA
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_30: !array
+UNKNOWN_30X2_TABLE_30: !array
   Offset: 0x7E2A06
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_31: !array
+UNKNOWN_30X2_TABLE_31: !array
   Offset: 0x7E2A42
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_32: !array
+UNKNOWN_30X2_TABLE_32: !array
   Offset: 0x7E2A7E
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_33: !array
+UNKNOWN_30X2_TABLE_33: !array
   Offset: 0x7E2ABA
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_34: !array
+UNKNOWN_30X2_TABLE_34: !array
   Offset: 0x7E2AF6
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_35: !array
+UNKNOWN_30X2_TABLE_35: !array
   Offset: 0x7E2B32
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_36: !array
+UNKNOWN_30X2_TABLE_36: !array
   Offset: 0x7E2B6E
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_37: !array
+UNKNOWN_30X2_TABLE_37: !array
   Offset: 0x7E2BAA
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_39: !array
+UNKNOWN_30X2_TABLE_39: !array
   Offset: 0x7E2BCC
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_38: !array
+UNKNOWN_30X2_TABLE_38: !array
   Offset: 0x7E2BE6
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_40: !array
+UNKNOWN_30X2_TABLE_40: !array
   Offset: 0x7E2C22
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_41: !array
+UNKNOWN_30X2_TABLE_41: !array
   Offset: 0x7E2C5E
   Item Type: *30x2
   Size: 0x3C
@@ -2303,23 +2282,23 @@ LOADED_TPT_ENTRIES_SPRITES: !array
   Item Type: *30x2
   Offset: 0x7E2CD6
   Size: 0x3C
-UNKNOWN_30x2_TABLE_42: !array
+UNKNOWN_30X2_TABLE_42: !array
   Offset: 0x7E2D12
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_43: !array
+UNKNOWN_30X2_TABLE_43: !array
   Offset: 0x7E2D4E
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_44: !array
+UNKNOWN_30X2_TABLE_44: !array
   Offset: 0x7E2D8A
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_45: !array
+UNKNOWN_30X2_TABLE_45: !array
   Offset: 0x7E2DC6
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30x2_TABLE_46: !array
+UNKNOWN_30X2_TABLE_46: !array
   Offset: 0x7E2E02
   Item Type: *30x2
   Size: 0x3C
@@ -2327,6 +2306,9 @@ DEBUG: !int
   Offset: 0x7E436C
   Description: Debug Flag
   Size: 2
+  Values: 
+    0: Disabled
+    1: Enabled
 UNKNOWN_7E436E: !unknown
   Size: 2
   Offset: 0x7E436E
@@ -2655,12 +2637,12 @@ UNKNOWN_7E964B: !unknown
   Offset: 0x7E964B
   Notes: SELECTED_TEXT_SPEED * 30?
 BATTLE_MODE_FLAG: !int
+  Size: 2
   Description: Battle Mode Flag
   Values:
   - out of battle
   - in battle
   Offset: 0x7E9643
-  Size: 2
 INPUT_LOCK_FLAG: !int
   Offset: 0x7E9645
   Description: Input Lock Flag
@@ -5440,8 +5422,8 @@ MEMSET24: !assembly
     8 Bit Index: n
   Size: 13
   Labels:
-    3: UNKNOWN0
-    10: UNKNOWN1
+    3: LOOP_BEGIN
+    10: LOOP_EXIT
   Offset: 0xC08F15
 STRLEN: !assembly
   Size: 13
@@ -13093,8 +13075,7 @@ CONSOLATION_ITEM_TABLE: !struct
     ENEMYID: !int
       Size: 1
     ITEMIDS: !array
-      Item Type: !int
-        Size: 1
+      Item Type: *ITEM_REF
       Size: 7
     "NULL": !int
       Size: 1
@@ -20029,7 +20010,7 @@ BG_DISTORTION_TABLE: !array
   Size: 2295
   Item Type: !struct
     Entries:
-      UNKNOWNA: !int
+      UNKNOWNA: !unknown
         Size: 2
       TYPE: !int
         Pretty Name: Type
@@ -20048,9 +20029,9 @@ BG_DISTORTION_TABLE: !array
         Pretty Name: Ripple Amplitude
         Size: 2
         Signed: true
-      UNKNOWNB: !int
+      UNKNOWNB: !unknown
         Size: 1
-      UNKNOWNC: !int
+      UNKNOWNC: !unknown
         Size: 2
       RIPPLEFREQUENCYACCELERATION: !int
         Pretty Name: Ripple Frequency Acceleration
@@ -20063,7 +20044,7 @@ BG_DISTORTION_TABLE: !array
       SPEED: !int
         Pretty Name: Speed
         Size: 1
-      UNKNOWND: !int
+      UNKNOWND: !unknown
         Size: 2
   Offset: 0xCAF708
 UNKNOWN_CAFFFF: !empty
@@ -20889,22 +20870,10 @@ ITEM_CONFIGURATION_TABLE: !array
 STORE_TABLE: !array
   Description: Store Data
   Size: 462
-  Item Type: !struct
-    Entries:
-      ITEM1: !int
-        Size: 1
-      ITEM2: !int
-        Size: 1
-      ITEM3: !int
-        Size: 1
-      ITEM4: !int
-        Size: 1
-      ITEM5: !int
-        Size: 1
-      ITEM6: !int
-        Size: 1
-      ITEM7: !int
-        Size: 1
+  Item Type: !array
+    Size: 7
+    Item Type: !int
+      Size: 1
   Offset: 0xD576B2
 PSI_TELEPORT_DEST_TABLE: !array
   Size: 496
@@ -21211,7 +21180,7 @@ ENEMY_CONFIGURATION_TABLE: !array
         Values:
         - False
         - True
-      ITEMDROPRATE: !int
+      ITEM_DROP_RATE: !int
         Pretty Name: Item Rarity
         Size: 1
         Values:
@@ -21223,10 +21192,8 @@ ENEMY_CONFIGURATION_TABLE: !array
         - 32/128
         - 64/128
         - 128/128
-      ITEMDROPPED: !int
-        Pretty Name: Item Dropped
-        Size: 1
-      INITIALSTATUS: !int
+      ITEM_DROPPED: *ITEM_REF
+      INITIAL_STATUS: !int
         Pretty Name: Initial Status
         Size: 1
         Values:
@@ -21238,7 +21205,7 @@ ENEMY_CONFIGURATION_TABLE: !array
         - Asleep
         - Cannot Concentrate
         - Feeling Strange
-      DEATHTYPE: !int
+      DEATH_TYPE: !int
         Pretty Name: Death Sound
         Size: 1
         Values:
@@ -21247,10 +21214,10 @@ ENEMY_CONFIGURATION_TABLE: !array
       ROW: !int
         Pretty Name: Row
         Size: 1
-      MAXCALLED: !int
+      MAX_CALLED: !int
         Pretty Name: Max Call
         Size: 1
-      MIRRORSUCCESS: !int
+      MIRROR_SUCCESS: !int
         Pretty Name: Mirror Success Rate
         Size: 1
   Offset: 0xD59589
@@ -21355,48 +21322,27 @@ TIMED_ITEM_TRANSFORMATION_TABLE: !array
   Description: Timed Item Transformation Table
   Item Type: !struct
     Entries:
-      ITEMID: !int
-        Pretty Name: Item ID
-        Size: 1
-      SOUNDEFFECT: !int
+      ITEM_ID: *ITEM_REF
+      SOUND_EFFECT: !int
         Pretty Name: Sound Effect
         Size: 1
-      SOUNDFREQUENCY: !int
+      SOUND_FREQUENCY: !int
         Pretty Name: Sound Frequency
         Size: 1
-      TARGETITEM: !int
+      TARGET_ITEM: !int
         Pretty Name: New Item
         Size: 1
-      TRANSFORMDELAY: !int
+      TRANSFORM_DELAY: !int
         Pretty Name: Delay
         Size: 1
   Offset: 0xD5F4BB
 DONT_CARE_NAMES: !array
   Size: 294
   Description: Don't Care Preset Character Names
-  Item Type: !struct
-    Entries:
-      NAME1: !script
-        Pretty Name: Name 1
-        Size: 6
-      NAME2: !script
-        Pretty Name: Name 2
-        Size: 6
-      NAME3: !script
-        Pretty Name: Name 3
-        Size: 6
-      NAME4: !script
-        Pretty Name: Name 4
-        Size: 6
-      NAME5: !script
-        Pretty Name: Name 5
-        Size: 6
-      NAME6: !script
-        Pretty Name: Name 6
-        Size: 6
-      NAME7: !script
-        Pretty Name: Name 7
-        Size: 6
+  Item Type: !array
+    Size: 42
+    Item Type: !script
+      Size: 6
   Offset: 0xD5F4CF
 INITIAL_STATS: !array
   Size: 80
@@ -21416,8 +21362,7 @@ INITIAL_STATS: !array
         Size: 2
       ITEMS: !array
         Pretty Name: Items Possessed
-        Item Type: !int
-          Size: 1
+        Item Type: *ITEM_REF
         Size: 10
   Offset: 0xD5F5F5
 TIMED_DELIVERY_TABLE: !array
@@ -21472,12 +21417,10 @@ MAP_DATA_PER-SECTOR_ATTRIBUTES_TABLE: !array
   Description: 'Map Data: Per-Sector Attributes Table'
   Item Type: !struct
     Entries:
-      BITFIELD: !int
+      FLAGS: !int
         Pretty Name: Bitfield
         Size: 1
-      ITEMID: !int
-        Pretty Name: Item ID
-        Size: 1
+      ITEM_ID: *ITEM_REF
   Offset: 0xD7B200
 MAP_DATA_TILE_ARRANGEMENT_BLOCK_1: !unknown
   Size: 13800
