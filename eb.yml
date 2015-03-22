@@ -5276,7 +5276,7 @@ UNKNOWN_C0888B: !assembly
 UNKNOWN_C088A5: !assembly
   Size: 12
   Offset: 0xC088A5
-UNKNOWN_C088B1: !assembly
+OAM_CLEAR: !assembly
   Size: 616
   Final State:
     8 Bit Accum: false
