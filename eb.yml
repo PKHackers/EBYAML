@@ -11051,6 +11051,7 @@ UNKNOWN_C19437: !assembly
   Offset: 0xC19437
 UNKNOWN_C19441: !assembly
   Size: 238
+  Notes: Used by [1F 90]
   Labels:
     53: UNKNOWN0
     147: UNKNOWN1
@@ -11314,7 +11315,7 @@ RETURN_BATTLE_TARGET_ADDRESS: !assembly
   Offset: 0xC1ACF2
 UNKNOWN_C1ACF8: !assembly
   Size: 10
-  Description: A -> $9D11
+  Description: A -> $7E9D11
   Offset: 0xC1ACF8
 UNKNOWN_C1AD02: !assembly
   Size: 8
@@ -11883,28 +11884,28 @@ UNKNOWN_C1DCCB: !assembly
     26: UNKNOWN0
     101: UNKNOWN1
   Offset: 0xC1DCCB
-REDIRECT_C10A04: !assembly
+REDIRECT_SHOW_HPPP_WINDOWS: !assembly
   Size: 6
-  Description: Redirect to C10A04
+  Description: Redirect to SHOW_HPPP_WINDOWS
   Offset: 0xC1DD3B
-REDIRECT_C10A1D: !assembly
+REDIRECT_HIDE_HPPP_WINDOWS: !assembly
   Size: 6
-  Description: Redirect to C10A1D
+  Description: Redirect to HIDE_HPPP_WINDOWS
   Offset: 0xC1DD41
-REDIRECT_C104EE: !assembly
+REDIRECT_CREATE_WINDOW: !assembly
   Size: 6
-  Description: Redirect to C104EE (CREATE_WINDOW)
+  Description: Redirect to CREATE_WINDOW
   Offset: 0xC1DD47
-REDIRECT_C1007E: !assembly
+REDIRECT_SET_WINDOW_FOCUS: !assembly
   Size: 6
-  Description: Redirect to C1007E (SET_WINDOW_FOCUS)
+  Description: Redirect to SET_WINDOW_FOCUS
   Offset: 0xC1DD4D
 REDIRECT_C10FA3: !assembly
   Size: 6
   Description: Redirect to C10FA3
   Offset: 0xC1DD53
-REDIRECT_C10084: !assembly
-  Description: Redirect to C10084
+REDIRECT_CLOSE_FOCUS_WINDOW: !assembly
+  Description: Redirect to CLOSE_FOCUS_WINDOW
   Final State:
     8 Bit Accum: false
     8 Bit Index: false
@@ -11917,7 +11918,7 @@ REDIRECT_C1AC4A: !assembly
   Size: 6
   Description: Redirect to C1AC4A
   Offset: 0xC1DD70
-UNKNOWN_C1DD76: !assembly
+REDIRECT_C1ACA1: !assembly
   Size: 6
   Offset: 0xC1DD76
 REDIRECT_C1ACF8: !assembly
@@ -11933,9 +11934,9 @@ UNKNOWN_C1DD82: !assembly
 UNKNOWN_C1DD9F: !assembly
   Size: 39
   Offset: 0xC1DD9F
-REDIRECT_C1DDC6: !assembly
+REDIRECT_REMOVE_ITEM_FROM_INVENTORY: !assembly
   Size: 6
-  Description: Redirect to C1DDC6 (REMOVE_ITEM_FROM_INVENTORY)
+  Description: Redirect to REMOVE_ITEM_FROM_INVENTORY
   Offset: 0xC1DDC6
 REDIRECT_C43573: !assembly
   Size: 7
@@ -11955,13 +11956,13 @@ SELECTION_MENU_ITEM_SETUP: !assembly
     $0E: String address
     $12: Unknown
   Offset: 0xC1DDDA
-REDIRECT_C1163C: !assembly
+REDIRECT_PRINT_MENU_ITEMS: !assembly
   Size: 6
-  Description: Redirect to C1163C (PRINT_MENU_ITEMS)
+  Description: Redirect to PRINT_MENU_ITEMS
   Offset: 0xC1DE25
-REDIRECT_C1196A: !assembly
+REDIRECT_SELECTION_MENU: !assembly
   Size: 6
-  Description: Redirect to C1196A (SELECTION_MENU)
+  Description: Redirect to SELECTION_MENU
   Offset: 0xC1DE2B
 REDIRECT_C1CFC6: !assembly
   Size: 6
@@ -11972,9 +11973,9 @@ REDIRECT_C1242E: !assembly
   Description: Redirect to C1242E
   Notes: Appears to be related to targetting
   Offset: 0xC1DE37
-REDIRECT_C1CBCD: !assembly
+REDIRECT_BATTLE_PSI_MENU: !assembly
   Size: 6
-  Description: Redirect to C1CBCD
+  Description: Redirect to BATTLE_PSI_MENU
   Offset: 0xC1DE3D
 BTLACT_SWITCHWEAPONS: !assembly
   Size: 460
