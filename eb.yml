@@ -6115,6 +6115,9 @@ MOVEMENT_CODE_10: !assembly
     21: UNKNOWN0
     26: MOVEMENT_CODE_11
   Offset: 0xC09979
+UNKNOWN_C0999E: !assembly
+  Size: 37
+  Offset: 0xC0999E
 MOVEMENT_CODE_0C: !assembly
   Size: 0x1A
   Initial State:
@@ -8079,8 +8082,8 @@ UNKNOWN_C0F8AA: !assembly
   Labels:
     6: UNKNOWN0
   Offset: 0xC0F8AA
-UNKNOWN_C0F8C2: !empty
-  Size: 1774
+EMPTY_C0F8C2: !empty
+  Size: 1854
   Offset: 0xC0F8C2
 UNKNOWN_C10000: !assembly
   Size: 4
@@ -21242,6 +21245,9 @@ UNKNOWN_C3DFD4: !unknown
   Size: 20
   Offset: 0xC3DFD4
   Notes: Movement? [D4 DF]
+UNKNOWN_C3DFE8: !unknown
+  Size: 324
+  Offset: 0xC3DFE8
 UNKNOWN_C3E12C: !unknown
   Size: 28
   Description: Unknown Table
@@ -21742,10 +21748,16 @@ UNKNOWN_C40B75: !assembly
 FOOTSTEP_SOUND_TABLE: !unknown
   Size: 543
   Offset: 0xC40BD4
+UNKNOWN_C40DF3: !unknown
+  Size: 49
+  Offset: 0xC40DF3
 MOVEMENT_785: !script
   Size: 13
   Offset: 0xC40E24
   Charset: movement
+UNKNOWN_C40E31: !unknown
+  Size: 231
+  Offset: 0xC40E31
 UNKNOWN_C40F18: !unknown
   Size: 45
   Offset: 0xC40F18
@@ -28419,7 +28431,7 @@ NAME_INPUT_WINDOW_SELECTION_LAYOUT_POINTERS: !array
     Base: 16
     Size: 4
 UNKNOWN_EFA6EB: !unknown
-  Size: 34
+  Size: 36
   Offset: 0xEFA6EB
 MAP_DATA_PER-SECTOR_TOWN_MAP_DATA: !array
   Size: 7680
