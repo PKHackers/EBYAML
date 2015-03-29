@@ -1561,27 +1561,45 @@ UNKNOWN_7E0005: !unknown
 UNKNOWN_7E0007: !unknown
   Size: 2
   Offset: 0x7E0007
+UNKNOWN_7E0009: !unknown
+  Size: 1
+  Offset: 0x7E0009
 UNKNOWN_7E000A: !unknown
   Size: 1
   Offset: 0x7E000A
 UNKNOWN_7E000B: !unknown
   Size: 1
   Offset: 0x7E000B
+UNKNOWN_7E000C: !unknown
+  Size: 1
+  Offset: 0x7E000C
 INIDISP_MIRROR: !int
   Size: 1
   Offset: 0x7E000D
 OBSEL_MIRROR: !int
   Size: 1
   Offset: 0x7E000E
+UNKNOWN_7E000F: !unknown
+  Size: 1
+  Offset: 0x7E000F
 MOSAIC_MIRROR: !int
   Size: 1
   Offset: 0x7E0010
+UNKNOWN_7E0011: !unknown
+  Size: 4
+  Offset: 0x7E0011
 BG12NBA_MIRROR: !int
   Size: 1
   Offset: 0x7E0015
+UNKNOWN_7E0016: !unknown
+  Size: 1
+  Offset: 0x7E0016
 UNUSED_WH2_MIRROR: !int
   Size: 1
   Offset: 0x7E0017
+UNKNOWN_7E0018: !unknown
+  Size: 2
+  Offset: 0x7E0018
 TM_MIRROR: !int
   Size: 1
   Offset: 0x7E001A
@@ -1750,24 +1768,23 @@ SPC_DATA_PTR: !pointer
   Size: 4
 CUR_TEXT_PAL: !array
   Size: 0x40
-  Offset: 0x7E0200
   Description: Current Text Palette
   Item Type: !color
     Size: 2
+  Offset: 0x7E0200
 CUR_MAP_PAL: !array
   Size: 0xC0
-  Offset: 0x7E0240
   Description: Current Map Palette
   Item Type: !color
     Size: 2
+  Offset: 0x7E0240
 CUR_PARTY_PAL: !array
   Size: 0x20
-  Offset: 0x7E03A0
   Description: Current Party Palette
   Item Type: !color
     Size: 2
+  Offset: 0x7E03A0
 UNKNOWN_7E0400: !struct
-  Offset: 0x7E0400
   Size: 0x100
   Entries:
     INDEX: !int
@@ -1780,6 +1797,7 @@ UNKNOWN_7E0400: !struct
       Size: 2
     VMADDL: !int
       Size: 2
+  Offset: 0x7E0400
 UNKNOWN_7E0A50: !unknown
   Size: 2
   Offset: 0x7E0A50
@@ -1790,174 +1808,174 @@ MOVEMENT_42_LOADED_PTR: !pointer
   Size: 4
   Offset: 0x7E0A5A
 LOADED_SPRITE_MOVEMENT_CODES_TABLE: !array
-  Offset: 0x7E0A62
   Description: Loaded Sprite Movement Codes Table (Are we sure?)
   Item Type: &30x2 !unknown
     Size: 2
   Size: 0x3C
+  Offset: 0x7E0A62
 UNKNOWN_30X2_TABLE_1: !array
+  Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E0A9E
-  Item Type: *30x2
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_2: !array
-  Offset: 0x7E0ADA
   Item Type: *30x2
   Size: 0x3C
+  Offset: 0x7E0ADA
 SPRITE_SCREEN_X_TABLE: !array
-  Offset: 0x7E0B16
   Description: Sprite X screen position table
   Item Type: *30x2
   Size: 0x3C
+  Offset: 0x7E0B16
 SPRITE_SCREEN_Y_TABLE: !array
-  Offset: 0x7E0B52
   Description: Sprite Y screen position table
   Item Type: *30x2
   Size: 0x3C
+  Offset: 0x7E0B52
 SPRITE_ABS_X_TABLE: !array
-  Offset: 0x7E0B8E
   Description: Sprite X world position table
   Item Type: *30x2
   Size: 0x3C
+  Offset: 0x7E0B8E
 SPRITE_ABS_Y_TABLE: !array
-  Offset: 0x7E0BCA
   Description: Sprite Y world position table
   Item Type: *30x2
   Size: 0x3C
+  Offset: 0x7E0BCA
 SPRITE_ABS_Z_TABLE: !array
-  Offset: 0x7E0C06
   Description: Sprite Z world position table
   Item Type: *30x2
   Size: 0x3C
+  Offset: 0x7E0C06
 SPRITE_ABS_X_FRACTION_TABLE: !array
-  Offset: 0x7E0C42
   Description: X position fractional component
   Item Type: *30x2
   Size: 0x3C
+  Offset: 0x7E0C42
 SPRITE_ABS_Y_FRACTION_TABLE: !array
-  Offset: 0x7E0C7E
   Description: Y position fractional component
   Item Type: *30x2
   Size: 0x3C
+  Offset: 0x7E0C7E
 SPRITE_ABS_Z_FRACTION_TABLE: !array
-  Offset: 0x7E0CBA
   Description: Z position fractional component
   Item Type: *30x2
   Size: 0x3C
+  Offset: 0x7E0CBA
 SPRITE_DELTA_X_TABLE: !array
-  Offset: 0x7E0CF6
   Description: X delta in pixels
   Item Type: *30x2
   Size: 0x3C
+  Offset: 0x7E0CF6
 SPRITE_DELTA_Y_TABLE: !array
-  Offset: 0x7E0D32
   Description: Y delta in pixels
   Item Type: *30x2
   Size: 0x3C
+  Offset: 0x7E0D32
 SPRITE_DELTA_Z_TABLE: !array
-  Offset: 0x7E0D6E
   Description: Z delta in pixels
   Item Type: *30x2
   Size: 0x3C
+  Offset: 0x7E0D6E
 SPRITE_DELTA_X_FRACTION_TABLE: !array
-  Offset: 0x7E0DAA
   Description: X delta fractional component
   Item Type: *30x2
   Size: 0x3C
+  Offset: 0x7E0DAA
 SPRITE_DELTA_Y_FRACTION_TABLE: !array
-  Offset: 0x7E0DE6
   Description: Y delta fractional component
   Item Type: *30x2
   Size: 0x3C
+  Offset: 0x7E0DE6
 SPRITE_DELTA_Z_FRACTION_TABLE: !array
-  Offset: 0x7E0E22
   Description: Z delta fractional component
   Item Type: *30x2
   Size: 0x3C
+  Offset: 0x7E0E22
 UNKNOWN_30X2_TABLE_3: !array
   Notes: Used by timed events like Escargo Express?
   Item Type: *30x2
-  Offset: 0x7E0E5E
   Size: 0x3C
+  Offset: 0x7E0E5E
 UNKNOWN_30X2_TABLE_4: !array
   Notes: C09AF9 entry 1
   Item Type: *30x2
-  Offset: 0x7E0E9A
   Size: 0x3C
+  Offset: 0x7E0E9A
 UNKNOWN_30X2_TABLE_5: !array
   Notes: C09AF9 entry 2
   Item Type: *30x2
-  Offset: 0x7E0ED6
   Size: 0x3C
+  Offset: 0x7E0ED6
 UNKNOWN_30X2_TABLE_6: !array
   Notes: C09AF9 entry 3
   Item Type: *30x2
-  Offset: 0x7E0F12
   Size: 0x3C
+  Offset: 0x7E0F12
 UNKNOWN_30X2_TABLE_7: !array
   Notes: C09AF9 entry 4
   Item Type: *30x2
-  Offset: 0x7E0F4E
   Size: 0x3C
+  Offset: 0x7E0F4E
 UNKNOWN_30X2_TABLE_8: !array
   Notes: C09AF9 entry 5
   Item Type: *30x2
-  Offset: 0x7E0F8A
   Size: 0x3C
+  Offset: 0x7E0F8A
 UNKNOWN_30X2_TABLE_9: !array
   Notes: C09AF9 entry 6 - X destination in absolute pixel coordinates
   Item Type: *30x2
-  Offset: 0x7E0FC6
   Size: 0x3C
+  Offset: 0x7E0FC6
 UNKNOWN_30X2_TABLE_10: !array
   Notes: C09AF9 entry 6 - Y destination in absolute pixel coordinates
   Item Type: *30x2
-  Offset: 0x7E1002
   Size: 0x3C
+  Offset: 0x7E1002
 UNKNOWN_30X2_TABLE_11: !array
   Notes: Sprite-drawing priority, lower numbers first?
   Item Type: *30x2
-  Offset: 0x7E103E
   Size: 0x3C
+  Offset: 0x7E103E
 UNKNOWN_30X2_TABLE_12: !array
   Notes: Low part of a long pointer?
   Item Type: *30x2
-  Offset: 0x7E107A
   Size: 0x3C
+  Offset: 0x7E107A
 UNKNOWN_30X2_TABLE_13: !array
   Notes: High part of a long pointer?
   Item Type: *30x2
-  Offset: 0x7E10B6
   Size: 0x3C
+  Offset: 0x7E10B6
 UNKNOWN_30X2_TABLE_14: !array
   Notes: 'Adjusted by movement codes: 0x26, 0x3C, 0x3D, 0x3E'
   Item Type: *30x2
-  Offset: 0x7E10F2
   Size: 0x3C
+  Offset: 0x7E10F2
 UNKNOWN_30X2_TABLE_15: !array
   Notes: Low part of a long pointer
   Item Type: *30x2
-  Offset: 0x7E112E
   Size: 0x3C
+  Offset: 0x7E112E
 UNKNOWN_30X2_TABLE_16: !array
   Notes: High part of a long pointer
   Item Type: *30x2
-  Offset: 0x7E116A
   Size: 0x3C
+  Offset: 0x7E116A
 UNKNOWN_30X2_TABLE_17: !array
   Notes: 'Short assembly pointer (set by movement code 0x23 - callback: recalc screen coords?)'
   Item Type: *30x2
-  Offset: 0x7E11A6
   Size: 0x3C
+  Offset: 0x7E11A6
 UNKNOWN_30X2_TABLE_18: !array
   Notes: 'Short assembly pointer (set by movement code 0x22 - see C0/A0F6?)'
   Item Type: *30x2
-  Offset: 0x7E11E2
   Size: 0x3C
+  Offset: 0x7E11E2
 UNKNOWN_30X2_TABLE_19: !array
   Notes: 'Short assembly pointer (set by movement code 0x25 - callback: atomic motion?)'
   Item Type: *30x2
-  Offset: 0x7E121E
   Size: 0x3C
+  Offset: 0x7E121E
 UNKNOWN_7E125A: !unknown
   Size: 0x8C
   Offset: 0x7E125A
@@ -1965,30 +1983,30 @@ UNKNOWN_7E12E6: !unknown
   Size: 0x8C
   Offset: 0x7E12E6
 UNKNOWN_30X2_TABLE_20: !array
-  Offset: 0x7E1372
   Item Type: *30x2
   Size: 0x3C
+  Offset: 0x7E1372
 UNKNOWN_7E13AE: !unknown
   Size: 0x50
   Offset: 0x7E13AE
 UNKNOWN_30X2_TABLE_21: !array
-  Offset: 0x7E13FE
   Item Type: *30x2
   Size: 0x3C
+  Offset: 0x7E13FE
 UNKNOWN_7E143A: !unknown
   Size: 0x50
   Offset: 0x7E143A
 UNKNOWN_30X2_TABLE_22: !array
-  Offset: 0x7E148A
   Item Type: *30x2
   Size: 0x3C
+  Offset: 0x7E148A
 UNKNOWN_7E14C6: !unknown
   Size: 0x50
   Offset: 0x7E14C6
 UNKNOWN_30X2_TABLE_23: !array
-  Offset: 0x7E1516
   Item Type: *30x2
   Size: 0x3C
+  Offset: 0x7E1516
 UNKNOWN_7E1B9E: !unknown
   Size: 2
   Offset: 0x7E1B9E
@@ -2018,8 +2036,8 @@ UNKNOWN_7E1BD4: !unknown
   Offset: 0x7E1BD4
 UNKNOWN_7E2402: !unknown
   Size: 2
-  Offset: 0x7E2402
   Notes: Some sort of index? seen at $C08B8E
+  Offset: 0x7E2402
 UNKNOWN_7E2404: !unknown
   Size: 0x40
   Offset: 0x7E2404
@@ -2052,153 +2070,153 @@ UNKNOWN_7E2606: !unknown
   Offset: 0x7E2606
 UNKNOWN_7E2608: !unknown
   Size: 0x40
-  Offset: 0x7E2608
   Notes: Seen at $C08B8E, big table
+  Offset: 0x7E2608
 UNKNOWN_7E2648: !unknown
   Size: 0x40
-  Offset: 0x7E2648
   Notes: Seen at $C08B8E, big table
+  Offset: 0x7E2648
 UNKNOWN_7E2688: !unknown
   Size: 0x40
-  Offset: 0x7E2688
   Notes: Seen at $C08B8E, big table
+  Offset: 0x7E2688
 UNKNOWN_7E26C8: !unknown
   Size: 0x40
-  Offset: 0x7E26C8
   Notes: Seen at $C08B8E, big table
+  Offset: 0x7E26C8
 UNKNOWN_7E2708: !unknown
   Size: 2
   Offset: 0x7E2708
 UNKNOWN_7E270A: !unknown
   Size: 0x40
-  Offset: 0x7E270A
   Notes: Seen at $C08B8E, big table
+  Offset: 0x7E270A
 UNKNOWN_7E274A: !unknown
   Size: 0x40
-  Offset: 0x7E274A
   Notes: Seen at $C08B8E, big table
+  Offset: 0x7E274A
 UNKNOWN_7E278A: !unknown
   Size: 0x40
-  Offset: 0x7E278A
   Notes: Seen at $C08B8E, big table
+  Offset: 0x7E278A
 UNKNOWN_7E27CA: !unknown
   Size: 0x40
-  Offset: 0x7E27CA
   Notes: Seen at $C08B8E, big table
+  Offset: 0x7E27CA
 UNKNOWN_7E280A: !unknown
   Size: 2
   Offset: 0x7E280A
 UNKNOWN_30X2_TABLE_23_: !array
+  Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E280C
-  Item Type: *30x2
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_24: !array
+  Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E289E
-  Item Type: *30x2
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_25: !array
+  Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E28DA
-  Item Type: *30x2
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_26: !array
+  Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E2916
-  Item Type: *30x2
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_27: !array
+  Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E2952
-  Item Type: *30x2
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_28: !array
+  Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E298E
-  Item Type: *30x2
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_29: !array
+  Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E29CA
-  Item Type: *30x2
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_30: !array
+  Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E2A06
-  Item Type: *30x2
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_31: !array
+  Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E2A42
-  Item Type: *30x2
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_32: !array
+  Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E2A7E
-  Item Type: *30x2
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_33: !array
+  Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E2ABA
-  Item Type: *30x2
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_34: !array
+  Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E2AF6
-  Item Type: *30x2
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_35: !array
+  Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E2B32
-  Item Type: *30x2
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_36: !array
+  Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E2B6E
-  Item Type: *30x2
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_37: !array
+  Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E2BAA
-  Item Type: *30x2
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_38: !array
+  Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E2BE6
-  Item Type: *30x2
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_40: !array
+  Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E2C22
-  Item Type: *30x2
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_41: !array
-  Offset: 0x7E2C5E
   Item Type: *30x2
   Size: 0x3C
+  Offset: 0x7E2C5E
 LOADED_TPT_ENTRIES: !array
   Description: Loaded TPT entries?
   Notes: TPT entry (has another meaning for generated enemies) <-- LOOK INTO
   Item Type: *30x2
-  Offset: 0x7E2C9A
   Size: 0x3C
+  Offset: 0x7E2C9A
 LOADED_TPT_ENTRIES_SPRITES: !array
   Description: Sprites for loaded TPT entries
   Notes: Sprite (uses standard out-of-battle sprite listing)
   Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E2CD6
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_42: !array
+  Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E2D12
-  Item Type: *30x2
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_43: !array
+  Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E2D4E
-  Item Type: *30x2
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_44: !array
+  Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E2D8A
-  Item Type: *30x2
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_45: !array
+  Item Type: *30x2
+  Size: 0x3C
   Offset: 0x7E2DC6
-  Item Type: *30x2
-  Size: 0x3C
 UNKNOWN_30X2_TABLE_46: !array
-  Offset: 0x7E2E02
   Item Type: *30x2
   Size: 0x3C
+  Offset: 0x7E2E02
 DEBUG: !int
-  Offset: 0x7E436C
   Description: Debug Flag
   Size: 2
   Values: 
     0: Disabled
     1: Enabled
+  Offset: 0x7E436C
 UNKNOWN_7E436E: !unknown
   Size: 2
   Offset: 0x7E436E
@@ -2210,16 +2228,16 @@ UNKNOWN_7E4372: !unknown
   Offset: 0x7E4372
 UNKNOWN_7E438A: !unknown
   Size: 2
-  Offset: 0x7E438A
   Notes: Seen at C03FA9, set to zero as part of respawning?
+  Offset: 0x7E438A
 UNKNOWN_7E438C: !unknown
   Size: 2
-  Offset: 0x7E438C
   Notes: Seen at C03FA9, set to zero as part of respawning?
+  Offset: 0x7E438C
 CURRENT_SECTOR_ATTRIBUTES: !int
-  Offset: 0x7E438E
   Description: Current Sector Attributes
   Size: 2
+  Offset: 0x7E438E
 UNKNOWN_7E43D0: !unknown
   Size: 2
   Offset: 0x7E43D0
@@ -2254,20 +2272,19 @@ UNKNOWN_7E4474: !unknown
   Size: 2
   Offset: 0x7E4474
 UNKNOWN_7E4676: !unknown
-  Offset: 0x7E4676
   Notes: Seen in the respawn function, set to 1
   Size: 2
+  Offset: 0x7E4676
 UNKNOWN_7E467A:  !unknown
   Description: Sprite Group Height
-  Offset: 0x7E467A
   Size: 2
+  Offset: 0x7E467A
 UNKNOWN_7E467C: !unknown
-  Offset: 0x7E467C
   Description: Sprite Group Width
   Size: 2
+  Offset: 0x7E467C
 SPRITE_TABLE_7E467E: !struct
   Size: 0x380
-  Offset: 0x7E467E
   Description: Table with 5-byte entries, related to drawing of onscreen sprites?
   Entries:
     X: !int
@@ -2297,55 +2314,55 @@ SPRITE_TABLE_7E467E: !struct
     F8 02 7A F8 80 --> E8 02 FA F8 80
     Makes Ness walk around upside down! :D
     Binary toggles: 80 is vertical flip, 40 horizontal... remaining bits unknown.
+  Offset: 0x7E467E
 UNKNOWN_7E4A00: !unknown
   Size: 88
   Offset: 0x7E4A00
 UNKNOWN_7E4A58: !unknown
-  Offset: 0x7E4A58
   Description: Unknown, Prevents TPT entries from loading when zero
   Size: 2
+  Offset: 0x7E4A58
 UNKNOWN_7E4A5C: !unknown
   Size: 2
-  Offset: 0x7E4A5C
   Notes: Seen at C02194
+  Offset: 0x7E4A5C
 MAGIC_BUTTERFLY: !int
-  Offset: 0x7E4A60
   Description: Magic Butterfly Flag
   Size: 2
+  Offset: 0x7E4A60
 SHOW_NPC_FLAG: !int
-  Offset: 0x7E4A66
   Description: People-type TPT appearance Flag
   Size: 2
+  Offset: 0x7E4A66
 UNKNOWN_7E4A68: !unknown
   Size: 2
-  Offset: 0x7E4A68
   Notes: Seen at C02194
+  Offset: 0x7E4A68
 CURRENT_BATTLE_GROUP: !int
   Size: 2
-  Offset: 0x7E4A8C
   Description: Current battle group (see [1F 23] for listing)
+  Offset: 0x7E4A8C
 UNKNOWN_7E4DBA: !unknown
   Size: 2
-  Offset: 0x7E4DBA
   Notes: Used in main loop, skips debug check and pad button check?
+  Offset: 0x7E4DBA
 UNKNOWN_7E4DBC: !unknown
   Size: 2
   Offset: 0x7E4DBC
 BATTLE_DEBUG: !int
   Size: 2
-  Offset: 0x7E4DC2
   Description: Battle Debug Flag?
+  Offset: 0x7E4DC2
 UNKNOWN_7E4DC6: !unknown
-  Offset: 0x7E4DC6
   Notes: Seen in the respawn function, set to GAME_STATE.UNKNOWNC*95+0x99CE
   Size: 2
+  Offset: 0x7E4DC6
 CHOSEN_FOUR_PTRS: !unknown
-  Offset: 0x7E4DC8
   Description: Chosen Four Pointers
   Size: 10
+  Offset: 0x7E4DC8
 PLAYER_POSITION_BUFFER: !array
-  Offset: 0x7E5156
-  Description: Player position buffer
+  Description: X, Y coordinates that the player character has been at recently
   Size: 3072
   Item Type: !struct
     Entries:
@@ -2355,6 +2372,7 @@ PLAYER_POSITION_BUFFER: !array
         Size: 2
       UNKNOWN: !unknown
         Size: 8
+  Offset: 0x7E5156
 MISC_DEBUG_FLAGS: !int
   Offset: 0x7E5D56
   Description: Miscellaneous Debug Flags
@@ -2384,36 +2402,55 @@ MUSHROOMIZED_WALKING_FLAG: !int
   Offset: 0x7E5DA0
   Description: Mushroomized Walking
 UNKNOWN_7E5DBA: !unknown
-  Offset: 0x7E5DBA
   Size: 2
   Notes: 1 while teleporting
+  Offset: 0x7E5DBA
 UNKNOWN_7E5DC0: !unknown
   Size: 2
   Offset: 0x7E5DC0
 UNKNOWN_7E5DD4: !unknown
-  Offset: 0x7E5DD4
   Notes: Seen in the respawn function, set to -1
   Size: 2
-UNKNOWN_7E5DEA: !unknown
+  Offset: 0x7E5DD4
+UNKNOWN_7E5DEA: !array
   Notes: Door-related table, four entries, six bytes each, last four are a long pointer
-  Offset: 0x7E5DEA
+  Item Type: !struct
+    Size: 6
+    Entries:
+      UNKNOWN0: !unknown
+        Size: 2
+      UNKNOWN1: !pointer
+        Size: 4
   Size: 24
+  Offset: 0x7E5DEA
 UNKNOWN_7E5E02: !unknown
   Notes: Door-related
-  Offset: 0x7E5E02
   Size: 2
+  Offset: 0x7E5E02
 UNKNOWN_7E5E04: !unknown
   Notes: Door-related
-  Offset: 0x7E5E04
   Size: 2
+  Offset: 0x7E5E04
 UNKNOWN_7E5E6D: !unknown
   Size: 1
-  Offset: 0x7E5E6D
   Notes: Read at $C43E31. Text-y?
+  Offset: 0x7E5E6D
+UNKNOWN_7E5E6E: !unknown
+  Size: 2
+  Notes: Related to file selection? Used by $C1FF6B
+  Offset: 0x7E5E6E
+UNKNOWN_7E5E71: !unknown
+  Size: 2
+  Notes: used by $C114B1
+  Offset: 0x7E5E71
+UNKNOWN_7E5E73: !unknown
+  Size: 2
+  Notes: used by $C43D95
+  Offset: 0x7E5E73
 UNKNOWN_7E5E75: !unknown
   Size: 1
-  Offset: 0x7E5E75
   Notes: Seen at $C447FB. Set to 1. Text-y?
+  Offset: 0x7E5E75
 UNKNOWN_7E5E76: !unknown
   Size: 1
   Offset: 0x7E5E76
@@ -2424,7 +2461,6 @@ UNKNOWN_7E5E78: !unknown
   Size: 1
   Offset: 0x7E5E78
 WINDOW_STATS_TABLE: !array
-  Offset: 0x7E8650
   Description: Window Statistics Table
   Size: 656
   Item Type: !struct
@@ -2473,6 +2509,7 @@ WINDOW_STATS_TABLE: !array
         Size: 4
       UNKNOWND: !unknown
         Size: 31
+  Offset: 0x7E8650
 UNKNOWN_7E88E0: !unknown
   Size: 2
   Offset: 0x7E88E0
@@ -2481,24 +2518,27 @@ UNKNOWN_7E88E2: !unknown
   Offset: 0x7E88E2
 WINDOW_EXISTENCE_TABLE: !unknown
   Size: 0x74
-  Offset: 0x7E88E4
   Description: Window Existence Table
+  Offset: 0x7E88E4
 CURRENT_FOCUS_WINDOW: !int
   Size: 1
-  Offset: 0x7E8958
   Description: Current window with focus
+  Offset: 0x7E8958
+UNKNOWN_7E895A: !unknown
+  Size: 5
+  Offset: 0x7E895A
+UNKNOWN_7E8960: !unknown
+  Size: 1
+  Offset: 0x7E8960
 PSI_WINDOW_CHARACTER: !int
   Size: 2
-  Offset: 0x7E89CA
   Description: Main menu PSI window character number (Ness = 0x00, Poo = 0x03)
+  Offset: 0x7E89CA
 UNKNOWN_7E89D4: !array
   Size: 0xC4E
+  Item Type: !script
+    Size: 45
   Offset: 0x7E89D4
-  Description: Text slots for 70 strings of 45 bytes each?
-  Item Type: !struct
-    Entries:
-    - !script
-      Size: 45
 UNKNOWN_7E9622: !unknown
   Size: 1
   Notes: Window related?
@@ -2530,17 +2570,17 @@ BATTLE_MODE_FLAG: !int
   - in battle
   Offset: 0x7E9643
 INPUT_LOCK_FLAG: !int
-  Offset: 0x7E9645
   Description: Input Lock Flag
   Size: 2
+  Offset: 0x7E9645
 UNKNOWN_7E964B: !unknown
   Size: 2
-  Offset: 0x7E964B
   Notes: SELECTED_TEXT_SPEED * 30?
+  Offset: 0x7E964B
 BLINKING_TRIANGLE_FLAG: !int
-  Offset: 0x7E964D
   Description: Blinking Prompt Flag
   Size: 2
+  Offset: 0x7E964D
 UNKNOWN_7E964F: !unknown
   Size: 2
   Notes: Seen at C442AC
@@ -2610,13 +2650,36 @@ CURRENT_INTERACTING_EVENT_FLAG: !int
   Description: Event flag of the TPT entry you're currently interacting with
 UNKNOWN_7E9C9F: !unknown
   Size: 1
+  Notes: Save related? used by FILE_SELECT_MENU
   Offset: 0x7E9C9F
 UNKNOWN_7E9CA0: !unknown
   Size: 1
+  Notes: Save related? used by FILE_SELECT_MENU
   Offset: 0x7E9CA0
 UNKNOWN_7E9CA1: !unknown
   Size: 1
+  Notes: Save related? used by FILE_SELECT_MENU
   Offset: 0x7E9CA1
+UNKNOWN_7E9CA2: !unknown
+  Size: 3
+  Notes: Save slot related? used by FILE_SELECT_MENU
+  Offset: 0x7E9CA2
+UNKNOWN_7E9CA5: !unknown
+  Size: 1
+  Notes: Save related? used by FILE_SELECT_MENU
+  Offset: 0x7E9CA5
+UNKNOWN_7E9CAA: !unknown
+  Size: 1
+  Notes: Save related? used by FILE_SELECT_MENU
+  Offset: 0x7E9CAA
+UNKNOWN_7E9CAB: !unknown
+  Size: 1
+  Notes: Save related? used by FILE_SELECT_MENU
+  Offset: 0x7E9CAB
+UNKNOWN_7E9CB0: !unknown
+  Size: 1
+  Notes: Save related? used by FILE_SELECT_MENU
+  Offset: 0x7E9CB0
 RESPAWN_X: !int
   Size: 2
   Description: X coordinate where the party leader will return to after death
@@ -2712,6 +2775,7 @@ ENEMIES_IN_BATTLE: !int
   Description: Number of Enemies in Battle
 UNKNOWN_7E9F8C: !unknown
   Size: 2
+  Notes: Seen in BATTLE_ROUTINE
   Offset: 0x7E9F8C
 BATTLERS_TABLE: !struct
   Size: 2496
@@ -2947,6 +3011,7 @@ TARGET_NAME_ADJUST_SCRATCH: !script
   Notes: eg. 0xAC --> "Ness" for Ness's Nightmare
 UNKNOWN_7EAA0C: !int
   Offset: 0x7EAA0C
+  Notes: Seen in BATTLE_ROUTINE
   Size: 2
 UNKNOWN_7EAA0E: !int
   Size: 2
@@ -2965,12 +3030,15 @@ MIRROR_TURN_TIMER: !int
   Description: Poo mirror turn timer
 UNKNOWN_7EAA70: !int
   Size: 2
+  Notes: Seen in BATTLE_ROUTINE
   Offset: 0x7EAA70
 UNKNOWN_7EAA72: !int
   Size: 2
+  Notes: Seen in BATTLE_ROUTINE
   Offset: 0x7EAA72
 UNKNOWN_7EAA74: !int
   Size: 2
+  Notes: Seen in BATTLE_ROUTINE
   Offset: 0x7EAA74
 UNKNOWN_7EAD8A: !int
   Size: 2
@@ -3049,10 +3117,22 @@ UNKNOWN_7EADD5: !int
 UNKNOWN_7EB37C: !int
   Size: 2
   Offset: 0x7EB37C
+UNKNOWN_7EB49D: !unknown
+  Size: 1
+  Notes: File select related? Used by $C1FF6B
+  Offset: 0x7EB49D
+UNKNOWN_7EB49E: !unknown
+  Size: 3
+  Notes: Valid save slots? See FILE_MENU_LOOP
+  Offset: 0x7EB49E
 CURRENT_SAVE_SLOT: !int
   Offset: 0x7EB4A1
   Description: Current Save Slot
   Size: 1
+UNKNOWN_7EB4A2: !unknown
+  Size: 1
+  Notes: File select related? Used by $C1FF6B
+  Offset: 0x7EB4A2
 UNKNOWN_7EB4A8: !int
   Size: 2
   Offset: 0x7EB4A8
