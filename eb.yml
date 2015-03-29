@@ -5874,8 +5874,6 @@ MOVEMENT_CODE_00: !assembly
     8 Bit Accum: n
     8 Bit Index: n
   Description: End of movement code
-  Initial State:
-    8 Bit Accum: n
   Offset: 0xC095F2
 MOVEMENT_CODE_01: !assembly
   Size: 29
