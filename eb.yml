@@ -1863,9 +1863,6 @@ CUR_MAP_PAL: !array
   Description: Current Map Palette
   Item Type: !color
     Size: 2
-UNKNOWN_7E02A0: !unknown
-  Size: 2
-  Offset: 0x7E02A0
 CUR_PARTY_PAL: !array
   Size: 0x20
   Offset: 0x7E03A0
@@ -2254,10 +2251,10 @@ UNKNOWN_30X2_TABLE_37: !array
   Offset: 0x7E2BAA
   Item Type: *30x2
   Size: 0x3C
-UNKNOWN_30X2_TABLE_39: !array
-  Offset: 0x7E2BCC
-  Item Type: *30x2
-  Size: 0x3C
+#UNKNOWN_30X2_TABLE_39: !array
+#  Offset: 0x7E2BCC
+#  Item Type: *30x2
+#  Size: 0x3C
 UNKNOWN_30X2_TABLE_38: !array
   Offset: 0x7E2BE6
   Item Type: *30x2
@@ -2489,14 +2486,14 @@ UNKNOWN_7E5D9A: !unknown
   Size: 2
   Offset: 0x7E5D9A
   Notes: Used in main loop, pad button check?
-UNKNOWN_7E5DBA: !unknown
-  Offset: 0x7E5DBA
-  Size: 2
-  Notes: 1 while teleporting
 MUSHROOMIZED_WALKING_FLAG: !int
   Size: 2
   Offset: 0x7E5DA0
   Description: Mushroomized Walking
+UNKNOWN_7E5DBA: !unknown
+  Offset: 0x7E5DBA
+  Size: 2
+  Notes: 1 while teleporting
 UNKNOWN_7E5DC0: !unknown
   Size: 2
   Offset: 0x7E5DC0
@@ -2632,10 +2629,6 @@ UNKNOWN_7E9629: !unknown
 UNKNOWN_7E9641: !unknown
   Size: 2
   Offset: 0x7E9641
-UNKNOWN_7E964B: !unknown
-  Size: 2
-  Offset: 0x7E964B
-  Notes: SELECTED_TEXT_SPEED * 30?
 BATTLE_MODE_FLAG: !int
   Size: 2
   Description: Battle Mode Flag
@@ -2647,6 +2640,10 @@ INPUT_LOCK_FLAG: !int
   Offset: 0x7E9645
   Description: Input Lock Flag
   Size: 2
+UNKNOWN_7E964B: !unknown
+  Size: 2
+  Offset: 0x7E964B
+  Notes: SELECTED_TEXT_SPEED * 30?
 BLINKING_TRIANGLE_FLAG: !int
   Offset: 0x7E964D
   Description: Blinking Prompt Flag
@@ -3035,7 +3032,7 @@ BATTLE_EXP_SCRATCH: !int
   Offset: 0x7EA974
   Description: Scratch space for battle-end experience calculations
 BATTLE_MONEY_SCRATCH: !int
-  Size: 4
+  Size: 2
   Offset: 0x7EA978
   Description: Scratch space for battle-end money calculations
 GIYGAS_PHASE: !int
@@ -3234,7 +3231,7 @@ UNKNOWN_7F0000: !unknown
   Size: 0x8000
   Offset: 0x7F0000
 UNKNOWN_7F8000: !unknown
-  Size: 0x8000
+  Size: 0x7800
   Offset: 0x7F8000
 TILE_COLLISION: !unknown
   Description: Tile Collision Data
@@ -3655,6 +3652,7 @@ PARSE_C3FC49_DATA: !assembly
   Offset: 0xC01E49
 UNKNOWN_C020F1: !assembly
   Size: 79
+  Notes: Magic butterflies?
   Labels:
     49: UNKNOWN0
     64: UNKNOWN1
@@ -5820,6 +5818,7 @@ UNKNOWN_C092F5: !assembly
   Offset: 0xC092F5
 UNKNOWN_C0943C: !assembly
   Size: 21
+  Notes: Sets something in all entries of UNKNOWN_30X2_TABLE_13
   Initial State:
     8 Bit Accum: n
     8 Bit Index: n
@@ -5829,6 +5828,7 @@ UNKNOWN_C0943C: !assembly
   Offset: 0xC0943C
 UNKNOWN_C09451: !assembly
   Size: 21
+  Notes: Unsets something in all entries of UNKNOWN_30X2_TABLE_13
   Initial State:
     8 Bit Accum: n
   Labels:
@@ -5925,7 +5925,7 @@ MOVEMENT_CODE_39: !assembly
   Arguments:
     A: Index
 MOVEMENT_CODE_0C: !assembly
-  Size: 0x2A
+  Size: 0x1A
   Offset: 0xC099C3
   Initial State:
     8 Bit Accum: n
@@ -8572,6 +8572,7 @@ UNKNOWN_C12BD5: !assembly
   Offset: 0xC12BD5
 UNKNOWN_C12BF3: !assembly
   Size: 67
+  Notes: Draws SMAAAASH?
   Labels:
     26: UNKNOWN0
     40: UNKNOWN1
@@ -8580,6 +8581,7 @@ UNKNOWN_C12BF3: !assembly
   Offset: 0xC12BF3
 UNKNOWN_C12C36: !assembly
   Size: 150
+  Notes: Draws YOU WON?
   Labels:
     31: UNKNOWN0
     47: UNKNOWN1
@@ -11933,6 +11935,7 @@ UNKNOWN_C1DD82: !assembly
   Offset: 0xC1DD82
 UNKNOWN_C1DD9F: !assembly
   Size: 39
+  Notes: Text related?
   Offset: 0xC1DD9F
 REDIRECT_REMOVE_ITEM_FROM_INVENTORY: !assembly
   Size: 6
@@ -11977,7 +11980,7 @@ REDIRECT_BATTLE_PSI_MENU: !assembly
   Size: 6
   Description: Redirect to BATTLE_PSI_MENU
   Offset: 0xC1DE3D
-BTLACT_SWITCHWEAPONS: !assembly
+BTLACT_SWITCH_WEAPONS: !assembly
   Size: 460
   Labels:
     46: DONTDISPLAYTEXT
@@ -11986,14 +11989,14 @@ BTLACT_SWITCHWEAPONS: !assembly
     373: NOTSHOOT
     455: RETURN
   Offset: 0xC1DE43
-UNKNOWN_C1E00F: !assembly
+BTLACT_SWITCH_ARMOR: !assembly
   Size: 403
   Labels:
     46: UNKNOWN0
     384: UNKNOWN1
     398: UNKNOWN2
   Offset: 0xC1E00F
-UNKNOWN_C1E1A2: !assembly
+NULL_C1E1A2: !assembly
   Size: 3
   Description: Do nothing
   Offset: 0xC1E1A2
@@ -12036,6 +12039,7 @@ ENEMY_SELECT_MODE: !assembly
   Offset: 0xC1E1A5
 UNKNOWN_C1E48D: !assembly
   Size: 49
+  Notes: Don't care names related?
   Offset: 0xC1E48D
 UNKNOWN_C1E4BE: !assembly
   Size: 193
@@ -12115,6 +12119,8 @@ TEXT_INPUT_DIALOG: !assembly
 ENTER_YOUR_NAME_PLEASE: !assembly
   Size: 350
   Description: Display the Name Registry prompt
+  Arguments:
+    A: 0 if first time, 1 if second
   Labels:
     40: UNKNOWN0
     131: UNKNOWN1
@@ -12679,17 +12685,20 @@ UNKNOWN_C213AC: !assembly
     619: UNKNOWN21
     632: UNKNOWN22
   Offset: 0xC213AC
-CHKEVENT: !assembly
-  Description: Check Event Flag, return result
+GET_EVENT_FLAG: !assembly
   Arguments:
     A: Event Flag ID
+  Return Values:
+    A: Event Flag State
   Labels:
     49: UNKNOWN0
     52: UNKNOWN1
   Size: 54
   Offset: 0xC21628
-SETEVENT: !assembly
-  Description: Set Event Flag A state to X
+SET_EVENT_FLAG: !assembly
+  Arguments:
+    A: Event Flag ID
+    X: State
   Labels:
     58: UNKNOWN0
     69: UNKNOWN1
@@ -12697,12 +12706,16 @@ SETEVENT: !assembly
   Offset: 0xC2165E
 UNKNOWN_C216AD: !assembly
   Size: 28
+  Notes: Used by [1F 03]
   Offset: 0xC216AD
-UNKNOWN_C216C9: !assembly
+REDIRECT_STOP_MUSIC: !assembly
   Size: 7
   Offset: 0xC216C9
-UNKNOWN_C216D0: !assembly
+PLAY_SOUND_AND_UNKNOWN: !assembly
+  Notes: Plays sound and...?
   Size: 11
+  Arguments:
+    A: Sound Effect ID
   Offset: 0xC216D0
 UNKNOWN_C216DB: !assembly
   Size: 380
@@ -12946,9 +12959,11 @@ UNKNOWN_C22673: !assembly
   Offset: 0xC22673
 UNKNOWN_C226C5: !assembly
   Size: 33
+  Notes: Used by [1F A0] and [1F A1]
   Offset: 0xC226C5
 UNKNOWN_C226E6: !assembly
   Size: 10
+  Notes: Used by [1F A2]
   Offset: 0xC226E6
 UNKNOWN_C226F0: !assembly
   Size: 63
@@ -13093,9 +13108,11 @@ UNKNOWN_C22F38: !assembly
   Offset: 0xC22F38
 UNKNOWN_C23008: !assembly
   Size: 115
+  Notes: Used by [1F 64]
   Offset: 0xC23008
 UNKNOWN_C2307B: !assembly
   Size: 120
+  Notes: Used by [1F 65]
   Labels: 
     98: UNKNOWN0
   Offset: 0xC2307B
@@ -13303,6 +13320,10 @@ FIND_TARGETTABLE_NPC: !assembly
   Offset: 0xC23F6C
 GET_SHIELD_TARGETTING: !assembly
   Description: Determines if shield PSI is single target
+  Arguments:
+    A: PSI ID
+  Return Values:
+    A: 1 if true, 0 otherwise
   Labels:
     22: SINGLETARGET
     27: MULTITARGET
@@ -13335,6 +13356,7 @@ UNKNOWN_C240A4: !assembly
     196: UNKNOWN9
   Offset: 0xC240A4
 UNKNOWN_C2416F: !assembly
+  Notes: Uses DEAD_TARGETTABLE_ACTIONS data
   Size: 109
   Labels: 
     15: UNKNOWN0
@@ -13382,6 +13404,7 @@ UNKNOWN_C24348: !assembly
   Offset: 0xC24348
 UNKNOWN_C2437E: !assembly
   Size: 182
+  Notes: Checks item permanence and character-specificity?
   Labels: 
     22: UNKNOWN0
     36: UNKNOWN1
@@ -13756,6 +13779,7 @@ INSTANT_WIN_HANDLER: !assembly
   Size: 911
   Offset: 0xC261BD
 UNKNOWN_C2654C: !assembly
+  Notes: Magic butterflies?
   Size: 232
   Labels: 
     22: UNKNOWN0
@@ -13816,12 +13840,16 @@ GET_BATTLE_ACTION_TYPE: !assembly
   Description: Get battle action type
   Arguments:
     A: Battle action id to retrieve
+  Return Values:
+    A: Battle action type
   Size: 29
   Offset: 0xC2698B
 GET_ENEMY_TYPE: !assembly
   Description: Get enemy type
   Arguments:
     A: Enemy ID
+  Return Values:
+    A: Enemy type (0 = Normal, 1 = Insect, 2 = Metal)
   Size: 22
   Offset: 0xC269A8
 UNKNOWN_C269BE: !assembly
@@ -13838,25 +13866,36 @@ UNKNOWN_C269DE: !assembly
   Offset: 0xC269DE
 RAND_LONG: !assembly
   Description: Long redirect to RAND
+  Return Values:
+    A: Random number between 0 and 255
   Final State:
     8 Bit Accum: true
   Size: 9
   Offset: 0xC269EF
-UNKNOWN_C269F8: !assembly
+TRUNCATE_16_TO_8: !assembly
   Final State:
     8 Bit Accum: true
+  Arguments:
+    A: Operand A
+    X: Operand B
+  Return Values:
+    A: A * X / 0x100
   Size: 53
   Offset: 0xC269F8
 RAND_LIMIT: !assembly
-  Description: Random value between 0 and a specified value
+  Description: Random value in range [0, Limit)
   Arguments:
-    A: Upper limit + 1
+    A: Upper limit (exclusive)
+  Return Values:
+    A: Value
   Size: 23
   Offset: 0xC26A2D
 50_PERCENT_VARIANCE: !assembly
   Description: Applies 50% variance to a value
   Arguments:
     A: Value
+  Return Values:
+    A: Value +/- 50%
   Labels:
     56: UNKNOWN0
     58: UNKNOWN1
@@ -13877,6 +13916,10 @@ RAND_LIMIT: !assembly
   Offset: 0xC26A44
 25_PERCENT_VARIANCE: !assembly
   Description: Applies 25% variance to a value
+  Arguments:
+    A: Value
+  Return Values:
+    A: Value +/- 25%
   Labels:
     56: UNKNOWN0
     58: UNKNOWN1
@@ -13899,6 +13942,8 @@ SUCCESS_255: !assembly
   Description: Randomly select true/false (A/255)
   Arguments:
     A: chance/255 of returning true
+  Return Values:
+    A: 0 or 1
   Final State:
     8 Bit Accum: false
   Labels:
@@ -13910,6 +13955,8 @@ SUCCESS_500: !assembly
   Description: Randomly select true/false (A/500)
   Arguments:
     A: chance/500 of returning true
+  Return Values:
+    A: 0 or 1
   Labels:
     27: UNKNOWN0
     30: UNKNOWN1
@@ -14000,7 +14047,10 @@ REMOVE_DEAD_TARGETTING: !assembly
   Size: 66
   Offset: 0xC270E4
 SET_HP: !assembly
-  Description: Set new HP
+  Description: Set new HP (Rolling)
+  Arguments:
+    A: Target
+    X: New HP amount
   Labels:
     33: UNKNOWN0
     75: UNKNOWN1
@@ -14008,7 +14058,11 @@ SET_HP: !assembly
     105: UNKNOWN3
   Size: 107
   Offset: 0xC27126
-UNKNOWN_C27191: !assembly
+SET_PP: !assembly
+  Description: Set new PP (Rolling)
+  Arguments:
+    A: Target
+    X: New PP amount
   Size: 95
   Labels: 
     33: UNKNOWN0
@@ -14045,6 +14099,8 @@ INFLICT_STATUS_BATTLE: !assembly
   Return Values:
     A: 0 if failure, 1 if success
   Notes: |
+    Fails if target is NPC or is already afflicted with status equal or worse than attempted status
+    Use only in battles
     Group 0:
       1: Unconscious
       2: Diamondized
@@ -14100,7 +14156,7 @@ REVIVE_TARGET: !assembly
   Description: Revive target
   Arguments:
     A: Target
-    X: Unknown (Amount of HP to recover?)
+    X: Post-revival HP
   Labels:
     165: UNKNOWN0
     181: UNKNOWN1
@@ -14187,7 +14243,9 @@ KO_TARGET: !assembly
   Size: 1862
   Offset: 0xC27550
 SUCCESS_LUCK80: !assembly
-  Description: Generate Success/Fail (Luck/80 chance)
+  Description: Generate Success/Fail (Luck/80 chance), uses current target luck
+  Return Values:
+    A: 0 if failure, 1 if success
   Labels:
     21: SUCCESS
     24: RETURN
@@ -14195,6 +14253,10 @@ SUCCESS_LUCK80: !assembly
   Offset: 0xC27C96
 SUCCESS_SPEED: !assembly
   Description: Generate Success/Fail ((2 * Target's Speed) - Attacker's Speed) / A
+  Arguments:
+    A: Chance of success
+  Return Values:
+    A: 0 if failure, 1 if success
   Labels:
     51: UNKNOWN0
     56: UNKNOWN1
@@ -14204,6 +14266,9 @@ SUCCESS_SPEED: !assembly
   Offset: 0xC27CAF
 ATK_FAIL_CHK: !assembly
   Description: Attack Failure Check
+  Notes: Also prints failure text
+  Return Values:
+    A: 0 if success, 1 if failure
   Labels:
     38: UNKNOWN0
     41: UNKNOWN1
@@ -14211,6 +14276,8 @@ ATK_FAIL_CHK: !assembly
   Offset: 0xC27CFD
 INCREASE_OFFENSE_16TH: !assembly
   Description: Increase offense by 1/16th
+  Arguments:
+    A: Target
   Labels:
     29: UNKNOWN0
     32: UNKNOWN1
@@ -14219,6 +14286,8 @@ INCREASE_OFFENSE_16TH: !assembly
   Offset: 0xC27D28
 INCREASE_DEFENSE_16TH: !assembly
   Description: Increase defense by 1/16th
+  Arguments:
+    A: Target
   Labels:
     29: UNKNOWN0
     32: UNKNOWN1
@@ -14227,6 +14296,8 @@ INCREASE_DEFENSE_16TH: !assembly
   Offset: 0xC27D82
 HEXADECIMATE_OFFENSE: !assembly
   Description: Reduce offense by 1/16th
+  Arguments:
+    A: Target
   Labels:
     29: UNKNOWN0
     32: UNKNOWN1
@@ -14235,6 +14306,8 @@ HEXADECIMATE_OFFENSE: !assembly
   Offset: 0xC27DDC
 HEXADECIMATE_DEFENSE: !assembly
   Description: Reduce defense by 1/16th
+  Arguments:
+    A: Target
   Labels:
     29: UNKNOWN0
     32: UNKNOWN1
@@ -14243,7 +14316,7 @@ HEXADECIMATE_DEFENSE: !assembly
   Offset: 0xC27E33
 SWAP_ATTACKER_WITH_TARGET: !assembly
   Size: 37
-  Description: Swap the current Attacker and Target
+  Notes: Used for reflecting attacks
   Offset: 0xC27E8A
 CALC_DAMAGE: !assembly
   Description: Calculate Damage
@@ -14287,8 +14360,13 @@ CALC_RESIST_DAMAGE: !assembly
     0x16B:
       8 Bit Index: false
   Arguments:
-    A: Base Damage
-    X: Effectiveness (255 for physical damage?)
+    A: Base Damage (signed)
+    X: Effectiveness/256 (255 is treated as 256)
+  Notes: |
+    Base damage rounded up to 0 if negative
+    Damage halved if shielded
+    Damage halved if defending
+    Minimum 1HP damage
   Labels:
     25: UNKNOWN0
     27: UNKNOWN1
@@ -14315,6 +14393,13 @@ CALC_RESIST_DAMAGE: !assembly
   Offset: 0xC28125
 MISS_CALC: !assembly
   Description: Miss calculation
+  Arguments:
+    A: 'Text to print (0: "Just missed!" 1: "...narrowly missed hitting the target!")'
+  Return Values:
+    A: 0 if no miss, 1 if miss
+  Notes: |
+    For player characters, uses weapon accuracy. If crying or nauseous, rate increases by 1/2.
+    Others use miss rate defined in ENEMY_CONFIGURATION_TABLE. Status effects ignored.
   Labels:
     27: UNKNOWN0
     41: UNKNOWN1
@@ -14331,6 +14416,12 @@ MISS_CALC: !assembly
   Offset: 0xC282F8
 SMAAAASH: !assembly
   Description: SMAAAASH! calculation
+  Return Values:
+    A: 0 if normal, 1 if SMAAAASH
+  Notes: |
+    Probability = Attacker's guts / 500
+    Guts is set to 25 if lower + attacker is ally.
+    Destroys shields, doubles attack strength.
   Labels:
     42: UNKNOWN0
     55: UNKNOWN1
@@ -14343,7 +14434,11 @@ SMAAAASH: !assembly
   Size: 181
   Offset: 0xC283F8
 DETERMINE_DODGE: !assembly
-  Description: Determine if target dodges
+  Return Values:
+    A: 1 if target dodges, 0 otherwise
+  Notes: |
+    Probability is ((2 * Target's Speed) - Attacker's Speed) / 500
+    0% if paralyzed, asleep, immobilized or solidified.
   Labels:
     27: UNKNOWN0
     46: UNKNOWN1
@@ -14357,6 +14452,7 @@ DETERMINE_DODGE: !assembly
   Size: 118
   Offset: 0xC284AD
 BTLACT_LEVEL_2_ATK: !assembly
+  Notes: ((2 * Attacker's Offense) - Target's Defense) +/- 25%
   Description: 'Battle Action: Level 2 Attack'
   Labels:
     34: UNKNOWN0
@@ -14374,6 +14470,7 @@ HEAL_STRANGENESS: !assembly
   Size: 52
   Offset: 0xC2856B
 BTLACT_BASH: !assembly
+  Notes: Level 2 attack, can miss, SMAAAASH, be dodged, cures strangeness.
   Description: 'Battle Action: Bash'
   Labels:
     43: UNKNOWN0
@@ -14381,6 +14478,9 @@ BTLACT_BASH: !assembly
   Size: 59
   Offset: 0xC2859F
 BTLACT_LEVEL_4_ATK: !assembly
+  Notes: |
+    ((4 * Attacker's Offense) - Target's Defense) +/- 25%
+    Can miss, SMAAAASH, be dodged, cures strangeness.
   Description: 'Battle Action: Level 4 Attack'
   Labels:
     62: UNKNOWN0
@@ -14394,6 +14494,9 @@ BTLACT_LEVEL_4_ATK: !assembly
   Size: 119
   Offset: 0xC285DA
 BTLACT_LEVEL_3_ATK: !assembly
+  Notes: |
+    ((3 * Attacker's Offense) - Target's Defense) +/- 25%
+    Can miss, SMAAAASH, be dodged, cures strangeness.
   Description: 'Battle Action: Level 3 Attack'
   Labels:
     65: UNKNOWN0
@@ -14407,6 +14510,9 @@ BTLACT_LEVEL_3_ATK: !assembly
   Size: 122
   Offset: 0xC28651
 BTLACT_LEVEL_1_ATK: !assembly
+  Notes: |
+    ((1 * Attacker's Offense) - Target's Defense) +/- 25%
+    Can miss, SMAAAASH, be dodged, cures strangeness.
   Description: 'Battle Action: Level 1 Attack'
   Labels:
     60: UNKNOWN0
@@ -14420,6 +14526,7 @@ BTLACT_LEVEL_1_ATK: !assembly
   Size: 117
   Offset: 0xC286CB
 BTLACT_SHOOT: !assembly
+  Notes: Level 2 attack, can miss, be dodged.
   Description: 'Battle Action: Shoot'
   Labels:
     32: UNKNOWN0
@@ -14463,6 +14570,7 @@ BTLACT_FREEZETIME: !assembly
   Offset: 0xC288EB
 BTLACT_DIAMONDIZE: !assembly
   Description: 'Battle Action: Inflict Diamondize'
+  Notes: Fails on NPCs, affected by paralysis resistance
   Labels:
     19: UNKNOWN0
     38: UNKNOWN1
@@ -14473,6 +14581,7 @@ BTLACT_DIAMONDIZE: !assembly
   Offset: 0xC289CE
 BTLACT_PARALYZE: !assembly
   Description: 'Battle Action: Inflict Paralysis'
+  Notes: Fails on NPCs, affected by paralysis resistance, affected by luck (80)
   Labels:
     73: UNKNOWN0
     87: UNKNOWN1
@@ -14480,6 +14589,7 @@ BTLACT_PARALYZE: !assembly
   Offset: 0xC28A92
 BTLACT_NAUSEATE: !assembly
   Description: 'Battle Action: Inflict Nausea'
+  Notes: Fails on NPCs
   Labels:
     49: UNKNOWN0
     63: UNKNOWN1
@@ -14487,6 +14597,7 @@ BTLACT_NAUSEATE: !assembly
   Offset: 0xC28AEB
 BTLACT_POISON: !assembly
   Description: 'Battle Action: Inflict Poison'
+  Notes: Fails on NPCs
   Labels:
     49: UNKNOWN0
     63: UNKNOWN1
@@ -14494,6 +14605,7 @@ BTLACT_POISON: !assembly
   Offset: 0xC28B2C
 BTLACT_COLD: !assembly
   Description: 'Battle Action: Inflict Cold'
+  Notes: Fails on NPCs, affected by freeze resistance
   Labels:
     65: UNKNOWN0
     79: UNKNOWN1
@@ -14501,6 +14613,7 @@ BTLACT_COLD: !assembly
   Offset: 0xC28B6D
 BTLACT_MUSHROOMIZE: !assembly
   Description: 'Battle Action: Inflict Mushroomize'
+  Notes: Fails on NPCs
   Labels:
     47: UNKNOWN0
     61: UNKNOWN1
@@ -14508,6 +14621,7 @@ BTLACT_MUSHROOMIZE: !assembly
   Offset: 0xC28BBE
 BTLACT_POSSESS: !assembly
   Description: 'Battle Action: Inflict Possession'
+  Notes: Fails on NPCs and enemies
   Labels:
     90: UNKNOWN0
     104: UNKNOWN1
@@ -14515,6 +14629,7 @@ BTLACT_POSSESS: !assembly
   Offset: 0xC28BFD
 BTLACT_CRYING: !assembly
   Description: 'Battle Action: Inflict Crying'
+  Notes: Fails on NPCs, affected by flash resistance
   Labels:
     63: UNKNOWN0
     77: UNKNOWN1
@@ -14529,17 +14644,20 @@ BTLACT_IMMOBILIZE: !assembly
   Offset: 0xC28CB8
 BTLACT_SOLIDIFY: !assembly
   Description: 'Battle Action: Inflict Solidification'
+  Notes: Fails on NPCs, affected by luck (80)
   Labels:
     57: UNKNOWN0
     71: UNKNOWN1
   Size: 73
   Offset: 0xC28CF1
-REDIRECT_C2A056: !assembly
+REDIRECT_BTLACT_BRAINSHOCK_A: !assembly
   Size: 7
-  Description: Redirect to C2A056
+  Description: Redirect to BTLACT_BRAINSHOCK_A
   Offset: 0xC28D3A
 SUCCESS_LUCK40: !assembly
   Description: Generate Success/Fail (Luck/40 chance)
+  Return Values:
+    A: 0 if failure, 1 if success
   Labels:
     21: UNKNOWN0
     24: UNKNOWN1
@@ -14547,6 +14665,7 @@ SUCCESS_LUCK40: !assembly
   Offset: 0xC28D41
 BTLACT_DISTRACT: !assembly
   Description: 'Battle Action: Inflict inability to concentrate'
+  Notes: Fails on NPCs, affected by paralysis resistance, affected by luck (40)
   Labels:
     81: UNKNOWN0
     95: UNKNOWN1
@@ -14554,6 +14673,7 @@ BTLACT_DISTRACT: !assembly
   Offset: 0xC28D5A
 BTLACT_FEELSTRANGE: !assembly
   Description: 'Battle Action: Inflict feeling strange'
+  Notes: Fails on NPCs
   Labels:
     49: UNKNOWN0
     63: UNKNOWN1
@@ -14561,14 +14681,15 @@ BTLACT_FEELSTRANGE: !assembly
   Offset: 0xC28DBB
 BTLACT_CRYING2: !assembly
   Description: 'Battle Action: Inflict Crying (2)'
+  Notes: Fails on NPCs
   Labels:
     47: UNKNOWN0
     61: UNKNOWN1
   Size: 63
   Offset: 0xC28DFC
-REDIRECT_C29F06: !assembly
+REDIRECT_BTLACT_HYPNOSIS_A: !assembly
   Size: 7
-  Description: Redirect to C29F06
+  Description: Redirect to BTLACT_HYPNOSIS_A
   Offset: 0xC28E3B
 BTLACT_REDUCEPP: !assembly
   Description: 'Battle action: Reduce target''s PP by (1/16 max PP ± 50%)'
@@ -14603,17 +14724,17 @@ BTLACT_DOUBLE_BASH: !assembly
   Size: 11
   Description: 'Battle Action: Two consecutive level 2 attacks'
   Offset: 0xC28FF9
-REDIRECT_C2889B: !assembly
+REDIRECT_BTLACT_NULL: !assembly
   Size: 7
-  Description: Redirect to C2889B
+  Description: Redirect to BTLACT_NULL
   Offset: 0xC29004
 BTLACT_350_FIRE_DAMAGE: !assembly
   Size: 33
   Description: 'Battle action: 350 ± 25% fire damage'
   Offset: 0xC2900B
-REDIRECT_C28651: !assembly
+REDIRECT_BTLACT_LEVEL_3_ATK: !assembly
   Size: 7
-  Description: Redirect to C28651
+  Description: Redirect to BTLACT_LEVEL_3_ATK
   Offset: 0xC2902C
 BTLACT_NULL2: !assembly
   Size: 3
@@ -14722,6 +14843,8 @@ PSI_SHIELD_NULLIFY: !assembly
   Final State:
     8 Bit Accum: false
   Description: PSI Shield Handler
+  Arguments:
+    A: 1 if PSI should be nullified, 0 otherwise
   Labels:
     59: UNKNOWN2
     80: UNKNOWN3
@@ -15022,9 +15145,9 @@ BTLACT_SHIELD_A: !assembly
     52: UNKNOWN1
   Size: 54
   Offset: 0xC29D44
-REDIRECT_C29D44: !assembly
+REDIRECT_BTLACT_SHIELD_A: !assembly
   Size: 7
-  Description: Redirect to C29D44
+  Description: Redirect to BTLACT_SHIELD_A
   Offset: 0xC29D7A
 BTLACT_SHIELD_B: !assembly
   Description: 'Battle action: Shield β'
@@ -15033,9 +15156,9 @@ BTLACT_SHIELD_B: !assembly
     52: UNKNOWN1
   Size: 54
   Offset: 0xC29D81
-REDIRECT_C29D81: !assembly
+REDIRECT_BTLACT_SHIELD_B: !assembly
   Size: 7
-  Description: Redirect to C29D81
+  Description: Redirect to BTLACT_SHIELD_B
   Offset: 0xC29DB7
 BTLACT_PSI_SHIELD_A: !assembly
   Description: 'Battle action: PSI Shield α'
@@ -15044,9 +15167,9 @@ BTLACT_PSI_SHIELD_A: !assembly
     52: UNKNOWN1
   Size: 54
   Offset: 0xC29DBE
-REDIRECT_C29DBE: !assembly
+REDIRECT_BTLACT_PSI_SHIELD_A: !assembly
   Size: 7
-  Description: Redirect to C29DBE
+  Description: Redirect to BTLACT_PSI_SHIELD_A
   Offset: 0xC29DF4
 BTLACT_PSI_SHIELD_B: !assembly
   Description: 'Battle action: PSI Shield β'
@@ -15055,9 +15178,9 @@ BTLACT_PSI_SHIELD_B: !assembly
     52: UNKNOWN1
   Size: 54
   Offset: 0xC29DFB
-REDIRECT_C29DFB: !assembly
+REDIRECT_BTLACT_PSI_SHIELD_B: !assembly
   Size: 7
-  Description: Redirect to C29DFB
+  Description: Redirect to BTLACT_PSI_SHIELD_B
   Offset: 0xC29E31
 BTLACT_OFFENSE_UP_A: !assembly
   Description: 'Battle action: Offense Up α'
@@ -15065,9 +15188,9 @@ BTLACT_OFFENSE_UP_A: !assembly
     69: UNKNOWN0
   Size: 71
   Offset: 0xC29E38
-REDIRECT_C29E38: !assembly
+REDIRECT_BTLACT_OFFENSE_UP_A: !assembly
   Size: 7
-  Description: Redirect to C29E38
+  Description: Redirect to BTLACT_OFFENSE_UP_A
   Offset: 0xC29E7F
 BTLACT_DEFENSE_DOWN_A: !assembly
   Description: 'Battle action: Defense Down α'
@@ -15080,20 +15203,21 @@ BTLACT_DEFENSE_DOWN_A: !assembly
     119: UNKNOWN5
   Size: 121
   Offset: 0xC29E86
-REDIRECT_C29E86: !assembly
+REDIRECT_BTLACT_DEFENSE_DOWN_A: !assembly
   Size: 7
-  Description: Redirect to C29E86
+  Description: Redirect to BTLACT_DEFENSE_DOWN_A
   Offset: 0xC29EFF
 BTLACT_HYPNOSIS_A: !assembly
   Description: 'Battle action: Hypnosis α (Inflict sleep)'
+  Notes: Fails on NPCs, affected by hypnosis resistance
   Labels:
     65: UNKNOWN0
     79: UNKNOWN1
   Size: 81
   Offset: 0xC29F06
-REDIRECT_C29F06_COPY: !assembly
+REDIRECT_BTLACT_HYPNOSIS_A_COPY: !assembly
   Size: 7
-  Description: Redirect to C29F06
+  Description: Redirect to BTLACT_HYPNOSIS_A
   Offset: 0xC29F57
 BTLACT_MAGNET_A: !assembly
   Description: 'Battle action: Magnet α (Steal 2d4 PP)'
@@ -15113,70 +15237,84 @@ BTLACT_MAGNET_O: !assembly
   Offset: 0xC29FE1
 BTLACT_PARALYSIS_A: !assembly
   Description: 'Battle action: Paralysis α (Inflict paralysis)'
+  Notes: Fails on NPCs, affected by paralysis resistance
   Labels:
     65: UNKNOWN0
     79: UNKNOWN1
   Size: 81
   Offset: 0xC29FFE
-REDIRECT_C29FFE: !assembly
+REDIRECT_BTLACT_PARALYSIS_A: !assembly
   Size: 7
-  Description: Redirect to C29FFE
+  Description: Redirect to BTLACT_PARALYSIS_A
   Offset: 0xC2A04F
 BTLACT_BRAINSHOCK_A: !assembly
   Description: 'Battle action: Brainshock α (Inflict feeling strange)'
+  Notes: Fails on NPCs, affected by brainshock resistance
   Labels:
     65: UNKNOWN0
     79: UNKNOWN1
   Size: 81
   Offset: 0xC2A056
-REDIRECT_C2A056_COPY: !assembly
+REDIRECT_BTLACT_BRAINSHOCK_A_COPY: !assembly
   Size: 7
-  Description: Redirect to C2A056
+  Description: Redirect to BTLACT_BRAINSHOCK_A
   Offset: 0xC2A0A7
-UNKNOWN_C2A0AE: !assembly
+BTLACT_HP_RECOVERY_1D4: !assembly
+  Description: 'Battle action: HP recovery (1d4 HP)'
   Size: 17
   Offset: 0xC2A0AE
-UNKNOWN_C2A0BF: !assembly
+BTLACT_HP_RECOVERY_50: !assembly
+  Description: 'Battle action: HP recovery (50 +- 25% HP)'
   Size: 16
   Offset: 0xC2A0BF
-UNKNOWN_C2A0CF: !assembly
+BTLACT_HP_RECOVERY_200: !assembly
+  Description: 'Battle action: HP recovery (200 +- 25% HP)'
   Size: 16
   Offset: 0xC2A0CF
-UNKNOWN_C2A0DF: !assembly
+BTLACT_PP_RECOVERY_20: !assembly
+  Description: 'Battle action: PP recovery (20 +- 25% PP)'
   Size: 16
   Offset: 0xC2A0DF
-UNKNOWN_C2A0EF: !assembly
+BTLACT_PP_RECOVERY_80: !assembly
+  Description: 'Battle action: PP recovery (80 +- 25% PP)'
   Size: 16
   Offset: 0xC2A0EF
-UNKNOWN_C2A0FF: !assembly
+BTLACT_IQ_UP_1D4: !assembly
+  Description: 'Battle action: IQ up (increase by 1d4)'
   Size: 76
   Labels: 
     62: UNKNOWN0
   Offset: 0xC2A0FF
-UNKNOWN_C2A14B: !assembly
+BTLACT_GUTS_UP_1D4: !assembly
+  Description: 'Battle action: Guts up (increase by 1d4)'
   Size: 72
   Labels: 
     58: UNKNOWN0
   Offset: 0xC2A14B
-UNKNOWN_C2A193: !assembly
+BTLACT_SPEED_UP_1D4: !assembly
+  Description: 'Battle action: Speed up (increase by 1d4)'
   Size: 72
   Labels: 
     58: UNKNOWN0
   Offset: 0xC2A193
-UNKNOWN_C2A1DB: !assembly
+BTLACT_VITALITY_UP_1D4: !assembly
+  Description: 'Battle action: Vitality up (increase by 1d4)'
   Size: 76
   Labels: 
     62: UNKNOWN0
   Offset: 0xC2A1DB
-UNKNOWN_C2A227: !assembly
+BTLACT_LUCK_UP_1D4: !assembly
+  Description: 'Battle action: Luck up (increase by 1d4)'
   Size: 72
   Labels: 
     58: UNKNOWN0
   Offset: 0xC2A227
-UNKNOWN_C2A26F: !assembly
+BTLACT_HP_RECOVERY_300: !assembly
+  Description: 'Battle action: HP recovery (300 +- 25% HP)'
   Size: 16
   Offset: 0xC2A26F
-UNKNOWN_C2A27F: !assembly
+BTLACT_RANDOM_STAT_UP_1D4: !assembly
+  Description: 'Battle action: Increase a randomly-selected stat by 1d4'
   Size: 225
   Labels: 
     32: UNKNOWN0
@@ -15195,13 +15333,16 @@ UNKNOWN_C2A27F: !assembly
     219: UNKNOWN13
     223: UNKNOWN14
   Offset: 0xC2A27F
-UNKNOWN_C2A360: !assembly
+BTLACT_HP_RECOVERY_10: !assembly
+  Description: 'Battle action: HP recovery (10 +- 25% HP)'
   Size: 16
   Offset: 0xC2A360
-UNKNOWN_C2A370: !assembly
+BTLACT_HP_RECOVERY_100: !assembly
+  Description: 'Battle action: HP recovery (100 +- 25% HP)'
   Size: 16
   Offset: 0xC2A370
-UNKNOWN_C2A380: !assembly
+BTLACT_HP_RECOVERY_10000: !assembly
+  Description: 'Battle action: HP recovery (10000 HP normally, 1d4 HP for Poo)'
   Size: 29
   Labels: 
     24: UNKNOWN0
@@ -15215,6 +15356,7 @@ HEAL_POISON: !assembly
   Offset: 0xC2A39D
 BTLACT_COUNTER-PSI: !assembly
   Description: 'Battle action: Counter-PSI Unit'
+  Notes: Fails on NPCs, affected by luck (40)
   Labels:
     65: UNKNOWN0
     79: UNKNOWN1
@@ -15228,7 +15370,7 @@ BTLACT_SHIELD-KILLER: !assembly
   Size: 73
   Offset: 0xC2A422
 BTLACT_HP-SUCKER: !assembly
-  Description: 'Battle action: HP-Sucker'
+  Description: 'Battle action: HP-Sucker (1/8 Max HP +/- 50%)'
   Labels:
     19: UNKNOWN0
     51: UNKNOWN1
@@ -15243,6 +15385,7 @@ BTLACT_HUNGRY_HP-SUCKER: !assembly
   Offset: 0xC2A507
 BTLACT_MUMMY_WRAP: !assembly
   Description: 'Battle action: Mummy Wrap'
+  Notes: 400 - defense damage
   Labels:
     49: UNKNOWN0
     51: UNKNOWN1
@@ -15274,6 +15417,7 @@ BTLACT_MULTI_BOTTLE_ROCKET: !assembly
   Offset: 0xC2A5E3
 BTLACT_HANDBAG_STRAP: !assembly
   Description: 'Battle action: Handbag Strap'
+  Notes: 100 - defense damage
   Labels:
     49: UNKNOWN0
     51: UNKNOWN1
@@ -15310,13 +15454,16 @@ BOMB_COMMON: !assembly
 BTLACT_BOMB: !assembly
   Size: 9
   Description: 'Battle action: Bomb'
+  Notes: 90 +/- 50% damage
   Offset: 0xC2A818
 BTLACT_SUPER_BOMB: !assembly
   Size: 9
   Description: 'Battle action: Super bomb'
+  Notes: 270 +/- 50% damage
   Offset: 0xC2A821
-SOLIDIFY: !assembly
+BTLACT_SOLIDIFY: !assembly
   Description: Solidify
+  Notes: Fails on NPCs
   Labels:
     49: UNKNOWN0
     63: UNKNOWN1
@@ -15324,6 +15471,7 @@ SOLIDIFY: !assembly
   Offset: 0xC2A82A
 BTLACT_YOGURT_DISPENSER: !assembly
   Description: 'Battle action: Yogurt Dispenser'
+  Notes: 1d4 damage
   Labels:
     34: UNKNOWN0
     48: UNKNOWN1
@@ -15331,18 +15479,21 @@ BTLACT_YOGURT_DISPENSER: !assembly
   Offset: 0xC2A86B
 BTLACT_SNAKE: !assembly
   Description: 'Battle action: Snake'
+  Notes: 1d4 damage, may poison
   Labels:
     85: UNKNOWN0
     99: UNKNOWN1
   Size: 101
   Offset: 0xC2A89D
-UNKNOWN_C2A902: !assembly
+BTLACT_INFLICT_SOLIDIFICATION: !assembly
   Size: 81
+  Notes: Affected by luck (80), affected by paralysis resistance
   Labels: 
     65: UNKNOWN0
     79: UNKNOWN1
   Offset: 0xC2A902
-UNKNOWN_C2A953: !assembly
+BTLACT_INFLICT_POISON: !assembly
+  Notes: Affected by paralysis resistance
   Size: 73
   Labels: 
     57: UNKNOWN0
@@ -15351,6 +15502,7 @@ UNKNOWN_C2A953: !assembly
 BTLACT_BAG_OF_DRAGONITE: !assembly
   Size: 33
   Description: 'Battle action: Bag of Dragonite'
+  Notes: 800 +/- 25% fire damage
   Offset: 0xC2A99C
   Notes: 800 ± 25% fire damage
 INSECT_SPRAY_COMMON: !assembly
@@ -15388,7 +15540,8 @@ BTLACT_RUST_PROMOTER_DX: !assembly
   Offset: 0xC2AA76
   Notes: 400 ± 50% damage to metal-type enemies
 BTLACT_SUDDEN_GUTS_PILL: !assembly
-  Description: 'Battle action: Sudden Guts Pill (Double current Guts)'
+  Description: 'Battle action: Sudden Guts Pill'
+  Notes: Double current Guts
   Labels:
     31: UNKNOWN0
     69: UNKNOWN1
@@ -15406,6 +15559,8 @@ BTLACT_DEFENSE_SHOWER: !assembly
   Offset: 0xC2AB0D
 BOSS_BATTLE_CHECK: !assembly
   Description: Checks if a boss is currently in the battle
+  Return Values:
+    A: 0 if boss in battle, 1 if no boss
   Labels:
     20: NEXT_ENEMY
     68: NOT_BOSS
@@ -15449,6 +15604,7 @@ BTLACT_PRAY_RAINBOW: !assembly
   Offset: 0xC2AC7B
 BTLACT_PRAY_AROMA: !assembly
   Description: 'Battle action: Pray (Mysterious Aroma)'
+  Notes: Fails on NPCs
   Labels:
     49: UNKNOWN0
     63: UNKNOWN1
@@ -15456,6 +15612,7 @@ BTLACT_PRAY_AROMA: !assembly
   Offset: 0xC2AC99
 BTLACT_PRAY_RENDING_SOUND: !assembly
   Description: 'Battle action: Pray (Heaven-rending Sound)'
+  Notes: Fails on NPCs
   Labels:
     49: UNKNOWN0
     63: UNKNOWN1
@@ -15488,6 +15645,9 @@ BTLACT_PRAY: !assembly
 COPY_MIRROR_DATA: !assembly
   Size: 386
   Description: Copy Mirror data
+  Arguments:
+    $0E: Pointer to Attacker data
+    $12: Pointer to Target data
   Offset: 0xC2AF1F
 BTLACT_MIRROR: !assembly
   Size: 209
@@ -15557,6 +15717,10 @@ EAT_FOOD: !assembly
 CALC_PSI_DMG_MODIFIERS: !assembly
   Size: 49
   Description: Calculate PSI damage modifiers
+  Arguments:
+    A: ??? (0-3)
+  Return Values:
+    A: '0: 0x0D, 1: 0x66, 2: 0xB3, 3: 0xFF'
   Labels:
     24: UNKNOWN0
     30: UNKNOWN1
@@ -15567,6 +15731,10 @@ CALC_PSI_DMG_MODIFIERS: !assembly
 CALC_PSI_RES_MODIFIERS: !assembly
   Size: 49
   Description: Calculate PSI resistance modifiers
+  Arguments:
+    A: ??? (0-3)
+  Return Values:
+    A: '0: 0x00, 1: 0x1A, 2: 0x80, 3: 0xFF'
   Labels:
     24: UNKNOWN0
     30: UNKNOWN1
@@ -15589,7 +15757,7 @@ BATTLE_INIT_ENEMY_STATS: !assembly
   Description: Initializes Enemy stats
   Arguments:
     A: Enemy ID
-    X: Unknown
+    X: Destination Address
   Size: 581
   Labels:
     76: UNKNOWN0
@@ -15604,6 +15772,9 @@ BATTLE_INIT_ENEMY_STATS: !assembly
   Offset: 0xC2B6EB
 BATTLE_INIT_PLAYER_STATS: !assembly
   Size: 405
+  Arguments:
+    A: Character ID
+    X: Destination Address
   Description: Initializes Player stats
   Offset: 0xC2B930
 COUNT_CHARS: !assembly
@@ -15709,7 +15880,7 @@ BTLACT_RAINBOW_OF_COLOURS: !assembly
   Size: 111
   Description: 'Battle action: Rainbow of colours'
   Offset: 0xC2C14E
-UNKNOWN_C2C1BD: !assembly
+BTLACT_FLY_HONEY: !assembly
   Size: 98
   Labels:
     16: UNKNOWN0
@@ -15720,7 +15891,10 @@ UNKNOWN_C2C1BD: !assembly
   Offset: 0xC2C1BD
 UNKNOWN_C2C21F: !assembly
   Size: 269
-  Description: Load Music Track X and Battle Background of Enemy Group A
+  Description: Load Music Track X and Battle Background of Enemy Group A?
+  Arguments:
+    A: Enemy Group
+    X: Music Track
   Labels:
     28: UNKNOWN0
     33: UNKNOWN1
@@ -15746,49 +15920,49 @@ GIYGAS_HURT_PRAYER: !assembly
 UNKNOWN_C2C41F: !assembly
   Size: 161
   Offset: 0xC2C41F
-GIYGAS_ALL-MIGHTY_IDIOT_SPEECH: !assembly
+BTLACT_POKEY_SPEECH: !assembly
   Size: 83
   Description: Pokey's 'All-Mighty Idiot' speech transition
   Offset: 0xC2C4C0
-UNKNOWN_C2C513: !assembly
+BTLACT_NULL12: !assembly
   Size: 3
   Offset: 0xC2C513
-UNKNOWN_C2C516: !assembly
+BTLACT_POKEY_SPEECH_2: !assembly
   Size: 92
   Offset: 0xC2C516
-GIYGAS_PRAYER_1: !assembly
+BTLACT_GIYGAS_PRAYER_1: !assembly
   Size: 95
   Description: 'Battle action: Giygas prayer #1'
   Offset: 0xC2C572
-GIYGAS_PRAYER_2: !assembly
+BTLACT_GIYGAS_PRAYER_2: !assembly
   Size: 41
   Description: 'Battle action: Giygas prayer #2'
   Offset: 0xC2C5D1
-GIYGAS_PRAYER_3: !assembly
+BTLACT_GIYGAS_PRAYER_3: !assembly
   Size: 41
   Description: 'Battle action: Giygas prayer #3'
   Offset: 0xC2C5FA
-GIYGAS_PRAYER_4: !assembly
+BTLACT_GIYGAS_PRAYER_4: !assembly
   Size: 41
   Description: 'Battle action: Giygas prayer #4'
   Offset: 0xC2C623
-GIYGAS_PRAYER_5: !assembly
+BTLACT_GIYGAS_PRAYER_5: !assembly
   Size: 41
   Description: 'Battle action: Giygas prayer #5'
   Offset: 0xC2C64C
-GIYGAS_PRAYER_6: !assembly
+BTLACT_GIYGAS_PRAYER_6: !assembly
   Size: 41
   Description: 'Battle action: Giygas prayer #6'
   Offset: 0xC2C675
-GIYGAS_PRAYER_7: !assembly
+BTLACT_GIYGAS_PRAYER_7: !assembly
   Size: 50
   Description: 'Battle action: Giygas prayer #7'
   Offset: 0xC2C69E
-GIYGAS_PRAYER_8: !assembly
+BTLACT_GIYGAS_PRAYER_8: !assembly
   Size: 32
   Description: 'Battle action: Giygas prayer #8'
   Offset: 0xC2C6D0
-GIYGAS_PRAYER_9: !assembly
+BTLACT_GIYGAS_PRAYER_9: !assembly
   Size: 472
   Description: 'Battle action: Giygas prayer #9'
   Labels:
@@ -16057,7 +16231,7 @@ UNKNOWN_C2E8C4: !assembly
   Offset: 0xC2E8C4
 UNKNOWN_C2E8E0: !assembly
   Size: 232
-  Description: Set Battle Swirl Parameters
+  Description: Set Battle Swirl Parameters?
   Labels:
     42: UNKNOWN0
     56: UNKNOWN1
@@ -16106,6 +16280,7 @@ UNKNOWN_C2EACF: !assembly
   Offset: 0xC2EACF
 UNKNOWN_C2EAEA: !assembly
   Size: 1021
+  Notes: Battle sprites?
   Labels:
     69: UNKNOWN0
     218: UNKNOWN1
@@ -16129,6 +16304,7 @@ UNKNOWN_C2EAEA: !assembly
   Offset: 0xC2EAEA
 UNKNOWN_C2EEE7: !assembly
   Size: 278
+  Notes: Loads in-battle sprites?
   Labels:
     58: UNKNOWN0
     220: UNKNOWN1
@@ -16136,9 +16312,13 @@ UNKNOWN_C2EEE7: !assembly
     252: UNKNOWN3
     255: UNKNOWN4
   Offset: 0xC2EEE7
-BATTLE_SPRITE_WIDTH: !assembly
+GET_BATTLE_SPRITE_WIDTH: !assembly
   Size: 81
   Description: Gets sprite width/spacing?
+  Arguments:
+    A: Sprite ID
+  Return Values:
+    A: Sprite Width
   Labels:
     61: UNKNOWN0
     66: UNKNOWN1
@@ -16146,8 +16326,12 @@ BATTLE_SPRITE_WIDTH: !assembly
     76: UNKNOWN3
     79: UNKNOWN4
   Offset: 0xC2EFFD
-UNKNOWN_C2F04E: !assembly
+GET_BATTLE_SPRITE_HEIGHT: !assembly
   Size: 81
+  Arguments:
+    A: Sprite ID
+  Return Values:
+    A: Sprite Height
   Labels:
     61: UNKNOWN0
     66: UNKNOWN1
@@ -16173,6 +16357,8 @@ UNKNOWN_C2F0D1: !assembly
   Offset: 0xC2F0D1
 UNKNOWN_C2F121: !assembly
   Size: 1539
+  Arguments:
+    A: ???
   Labels: 
     22: UNKNOWN0
     44: UNKNOWN1
@@ -16281,6 +16467,8 @@ UNKNOWN_C2F917: !assembly
   Offset: 0xC2F917
 UNKNOWN_C2FAD2: !assembly
   Size: 6
+  Return Values:
+    A: 1
   Offset: 0xC2FAD2
 UNKNOWN_C2FAD8: !assembly
   Notes: Stores accumulator To $7EB37C. Called from $C2E6B3
@@ -16353,7 +16541,7 @@ UNKNOWN_C2FF9A: !assembly
     28: RETURN
   Notes: Involves mini sprites flag?
   Offset: 0xC2FF9A
-UNKNOWN_C2FFB7: !unknown
+MOVEMENT_0: !unknown
   Size: 73
   Offset: 0xC2FFB7
 SPRITE_GROUP_PALETTES: !array
@@ -16380,13 +16568,4400 @@ NESS_PAJAMA_FLAG: !int
   Size: 2
   Description: Ness's Pajama Flag
   Offset: 0xC30186
-UNKNOWN_C30188: !array
-  Size: 57252
-  Description: Mostly movement data
+UNKNOWN_C30188: !unknown
+  Size: 13
   Offset: 0xC30188
-  Item Type: !script
-    Charset: movement
-    Terminator: 0
+#UNKNOWN_C30195:
+#  Size: 57239
+#  Description: Mostly movement data
+#  Offset: 0xC30195
+#  Item Type: !script
+#    Charset: movement
+#    Terminator: 0
+MOVEMENT_221: !script
+  Size: 160
+  Offset: 0xC30195
+  Charset: movement
+MOVEMENT_222: !script
+  Size: 21
+  Offset: 0xC30235
+  Charset: movement
+MOVEMENT_223: !script
+  Size: 22
+  Offset: 0xC3024A
+  Charset: movement
+MOVEMENT_224: !script
+  Size: 53
+  Offset: 0xC30260
+  Charset: movement
+UNKNOWN_C30295: !unknown
+  Size: 23
+  Offset: 0xC30295
+  Notes: Movement? [95 02]
+MOVEMENT_225_226_227: !script
+  Size: 43
+  Offset: 0xC302AC
+  Charset: movement
+MOVEMENT_228: !script
+  Size: 24
+  Offset: 0xC302D7
+  Charset: movement
+MOVEMENT_229: !script
+  Size: 20
+  Offset: 0xC302EF
+  Charset: movement
+MOVEMENT_230: !script
+  Size: 20
+  Offset: 0xC30303
+  Charset: movement
+MOVEMENT_231: !script
+  Size: 20
+  Offset: 0xC30317
+  Charset: movement
+MOVEMENT_232: !script
+  Size: 20
+  Offset: 0xC3032B
+  Charset: movement
+UNKNOWN_C3033F: !unknown
+  Size: 48
+  Offset: 0xC3033F
+  Notes: Movement? [3F 03]
+MOVEMENT_233_234_235_236_237: !script
+  Size: 37
+  Offset: 0xC3036F
+  Charset: movement
+MOVEMENT_238: !script
+  Size: 44
+  Offset: 0xC30394
+  Charset: movement
+MOVEMENT_239: !script
+  Size: 37
+  Offset: 0xC303C0
+  Charset: movement
+MOVEMENT_240: !script
+  Size: 91
+  Offset: 0xC303E5
+  Charset: movement
+UNKNOWN_C30440: !unknown
+  Size: 39
+  Offset: 0xC30440
+  Notes: Movement? [40 04]
+UNKNOWN_C30467: !unknown
+  Size: 5
+  Offset: 0xC30467
+  Notes: Movement? [67 04]
+UNKNOWN_C3046C: !unknown
+  Size: 12
+  Offset: 0xC3046C
+  Notes: Movement? [6C 04]
+MOVEMENT_241: !script
+  Size: 130
+  Offset: 0xC30478
+  Charset: movement
+MOVEMENT_242_243: !script
+  Size: 38
+  Offset: 0xC304FA
+  Charset: movement
+MOVEMENT_244: !script
+  Size: 26
+  Offset: 0xC30520
+  Charset: movement
+MOVEMENT_245: !script
+  Size: 22
+  Offset: 0xC3053A
+  Charset: movement
+MOVEMENT_246: !script
+  Size: 30
+  Offset: 0xC30550
+  Charset: movement
+MOVEMENT_247_248: !script
+  Size: 34
+  Offset: 0xC3056E
+  Charset: movement
+MOVEMENT_249: !script
+  Size: 95
+  Offset: 0xC30590
+  Charset: movement
+MOVEMENT_250: !script
+  Size: 130
+  Offset: 0xC305EF
+  Charset: movement
+MOVEMENT_251: !script
+  Size: 46
+  Offset: 0xC30671
+  Charset: movement
+MOVEMENT_252: !script
+  Size: 27
+  Offset: 0xC3069F
+  Charset: movement
+MOVEMENT_253: !script
+  Size: 32
+  Offset: 0xC306BA
+  Charset: movement
+MOVEMENT_254: !script
+  Size: 42
+  Offset: 0xC306DA
+  Charset: movement
+MOVEMENT_255: !script
+  Size: 18
+  Offset: 0xC30704
+  Charset: movement
+MOVEMENT_256: !script
+  Size: 96
+  Offset: 0xC30716
+  Charset: movement
+MOVEMENT_257: !script
+  Size: 32
+  Offset: 0xC30776
+  Charset: movement
+MOVEMENT_258: !script
+  Size: 21
+  Offset: 0xC30796
+  Charset: movement
+MOVEMENT_259: !script
+  Size: 135
+  Offset: 0xC307AB
+  Charset: movement
+MOVEMENT_260: !script
+  Size: 55
+  Offset: 0xC30832
+  Charset: movement
+MOVEMENT_261: !script
+  Size: 82
+  Offset: 0xC30869
+  Charset: movement
+MOVEMENT_262: !script
+  Size: 42
+  Offset: 0xC308BB
+  Charset: movement
+MOVEMENT_263: !script
+  Size: 125
+  Offset: 0xC308E5
+  Charset: movement
+MOVEMENT_264: !script
+  Size: 23
+  Offset: 0xC30962
+  Charset: movement
+MOVEMENT_265: !script
+  Size: 18
+  Offset: 0xC30979
+  Charset: movement
+UNKNOWN_C3098B: !unknown
+  Size: 8
+  Offset: 0xC3098B
+  Notes: Movement? [8B 09]
+MOVEMENT_266: !script
+  Size: 29
+  Offset: 0xC30993
+  Charset: movement
+MOVEMENT_267: !script
+  Size: 111
+  Offset: 0xC309B0
+  Charset: movement
+UNKNOWN_C30A1F: !unknown
+  Size: 19
+  Offset: 0xC30A1F
+  Notes: Movement? [1F 0A]
+MOVEMENT_268: !script
+  Size: 68
+  Offset: 0xC30A32
+  Charset: movement
+MOVEMENT_269: !script
+  Size: 27
+  Offset: 0xC30A76
+  Charset: movement
+MOVEMENT_270: !script
+  Size: 58
+  Offset: 0xC30A91
+  Charset: movement
+MOVEMENT_271: !script
+  Size: 45
+  Offset: 0xC30ACB
+  Charset: movement
+MOVEMENT_272: !script
+  Size: 86
+  Offset: 0xC30AF8
+  Charset: movement
+MOVEMENT_273: !script
+  Size: 156
+  Offset: 0xC30B4E
+  Charset: movement
+MOVEMENT_274_275_276: !script
+  Size: 31
+  Offset: 0xC30BEA
+  Charset: movement
+MOVEMENT_277: !script
+  Size: 23
+  Offset: 0xC30C09
+  Charset: movement
+MOVEMENT_278: !script
+  Size: 23
+  Offset: 0xC30C20
+  Charset: movement
+MOVEMENT_279: !script
+  Size: 6
+  Offset: 0xC30C37
+  Charset: movement
+MOVEMENT_280: !script
+  Size: 6
+  Offset: 0xC30C3D
+  Charset: movement
+MOVEMENT_281: !script
+  Size: 6
+  Offset: 0xC30C43
+  Charset: movement
+MOVEMENT_282: !script
+  Size: 6
+  Offset: 0xC30C49
+  Charset: movement
+MOVEMENT_283: !script
+  Size: 6
+  Offset: 0xC30C4F
+  Charset: movement
+UNKNOWN_C30C55: !unknown
+  Size: 18
+  Offset: 0xC30C55
+  Notes: Movement? [55 0C]
+UNKNOWN_C30C67: !unknown
+  Size: 123
+  Offset: 0xC30C67
+  Notes: Movement? [67 0C]
+MOVEMENT_284: !script
+  Size: 60
+  Offset: 0xC30CE2
+  Charset: movement
+MOVEMENT_285: !script
+  Size: 30
+  Offset: 0xC30D1E
+  Charset: movement
+UNKNOWN_C30D3C: !unknown
+  Size: 122
+  Offset: 0xC30D3C
+  Notes: Movement? [3C 0D]
+MOVEMENT_286: !script
+  Size: 23
+  Offset: 0xC30DB6
+  Charset: movement
+MOVEMENT_287: !script
+  Size: 84
+  Offset: 0xC30DCD
+  Charset: movement
+MOVEMENT_288: !script
+  Size: 49
+  Offset: 0xC30E21
+  Charset: movement
+MOVEMENT_289: !script
+  Size: 45
+  Offset: 0xC30E52
+  Charset: movement
+MOVEMENT_290: !script
+  Size: 26
+  Offset: 0xC30E7F
+  Charset: movement
+MOVEMENT_291: !script
+  Size: 32
+  Offset: 0xC30E99
+  Charset: movement
+MOVEMENT_292: !script
+  Size: 103
+  Offset: 0xC30EB9
+  Charset: movement
+MOVEMENT_293: !script
+  Size: 124
+  Offset: 0xC30F20
+  Charset: movement
+MOVEMENT_294: !script
+  Size: 185
+  Offset: 0xC30F9C
+  Charset: movement
+UNKNOWN_C31055: !unknown
+  Size: 19
+  Offset: 0xC31055
+  Notes: Movement? [55 10]
+MOVEMENT_295: !script
+  Size: 73
+  Offset: 0xC31068
+  Charset: movement
+MOVEMENT_296: !script
+  Size: 100
+  Offset: 0xC310B1
+  Charset: movement
+MOVEMENT_297: !script
+  Size: 43
+  Offset: 0xC31115
+  Charset: movement
+MOVEMENT_298: !script
+  Size: 66
+  Offset: 0xC31140
+  Charset: movement
+MOVEMENT_299: !script
+  Size: 50
+  Offset: 0xC31182
+  Charset: movement
+MOVEMENT_300: !script
+  Size: 43
+  Offset: 0xC311B4
+  Charset: movement
+MOVEMENT_301: !script
+  Size: 66
+  Offset: 0xC311DF
+  Charset: movement
+MOVEMENT_302: !script
+  Size: 77
+  Offset: 0xC31221
+  Charset: movement
+MOVEMENT_303: !script
+  Size: 63
+  Offset: 0xC3126E
+  Charset: movement
+MOVEMENT_304: !script
+  Size: 21
+  Offset: 0xC312AD
+  Charset: movement
+MOVEMENT_305: !script
+  Size: 37
+  Offset: 0xC312C2
+  Charset: movement
+MOVEMENT_306: !script
+  Size: 52
+  Offset: 0xC312E7
+  Charset: movement
+MOVEMENT_307: !script
+  Size: 31
+  Offset: 0xC3131B
+  Charset: movement
+MOVEMENT_308: !script
+  Size: 31
+  Offset: 0xC3133A
+  Charset: movement
+MOVEMENT_309: !script
+  Size: 37
+  Offset: 0xC31359
+  Charset: movement
+MOVEMENT_310: !script
+  Size: 11
+  Offset: 0xC3137E
+  Charset: movement
+MOVEMENT_311: !script
+  Size: 32
+  Offset: 0xC31389
+  Charset: movement
+MOVEMENT_312: !script
+  Size: 44
+  Offset: 0xC313A9
+  Charset: movement
+MOVEMENT_314: !script
+  Size: 34
+  Offset: 0xC313D5
+  Charset: movement
+MOVEMENT_313: !script
+  Size: 39
+  Offset: 0xC313F7
+  Charset: movement
+MOVEMENT_315: !script
+  Size: 9
+  Offset: 0xC3141E
+  Charset: movement
+MOVEMENT_316: !script
+  Size: 43
+  Offset: 0xC31427
+  Charset: movement
+MOVEMENT_317: !script
+  Size: 36
+  Offset: 0xC31452
+  Charset: movement
+UNKNOWN_C31476: !unknown
+  Size: 15
+  Offset: 0xC31476
+  Notes: Movement? [76 14]
+MOVEMENT_318: !script
+  Size: 164
+  Offset: 0xC31485
+  Charset: movement
+MOVEMENT_319: !script
+  Size: 45
+  Offset: 0xC31529
+  Charset: movement
+MOVEMENT_320: !script
+  Size: 6
+  Offset: 0xC31556
+  Charset: movement
+MOVEMENT_321: !script
+  Size: 10
+  Offset: 0xC3155C
+  Charset: movement
+UNKNOWN_C31566: !unknown
+  Size: 102
+  Offset: 0xC31566
+  Notes: Movement? [66 15]
+MOVEMENT_322: !script
+  Size: 44
+  Offset: 0xC315CC
+  Charset: movement
+MOVEMENT_323: !script
+  Size: 46
+  Offset: 0xC315F8
+  Charset: movement
+MOVEMENT_324: !script
+  Size: 43
+  Offset: 0xC31626
+  Charset: movement
+MOVEMENT_325: !script
+  Size: 56
+  Offset: 0xC31651
+  Charset: movement
+MOVEMENT_326: !script
+  Size: 51
+  Offset: 0xC31689
+  Charset: movement
+MOVEMENT_327: !script
+  Size: 40
+  Offset: 0xC316BC
+  Charset: movement
+MOVEMENT_328: !script
+  Size: 51
+  Offset: 0xC316E4
+  Charset: movement
+MOVEMENT_329: !script
+  Size: 44
+  Offset: 0xC31717
+  Charset: movement
+MOVEMENT_330: !script
+  Size: 44
+  Offset: 0xC31743
+  Charset: movement
+MOVEMENT_331: !script
+  Size: 44
+  Offset: 0xC3176F
+  Charset: movement
+MOVEMENT_332: !script
+  Size: 44
+  Offset: 0xC3179B
+  Charset: movement
+MOVEMENT_333: !script
+  Size: 53
+  Offset: 0xC317C7
+  Charset: movement
+MOVEMENT_334: !script
+  Size: 53
+  Offset: 0xC317FC
+  Charset: movement
+MOVEMENT_335: !script
+  Size: 56
+  Offset: 0xC31831
+  Charset: movement
+MOVEMENT_336: !script
+  Size: 49
+  Offset: 0xC31869
+  Charset: movement
+MOVEMENT_337: !script
+  Size: 11
+  Offset: 0xC3189A
+  Charset: movement
+MOVEMENT_338: !script
+  Size: 43
+  Offset: 0xC318A5
+  Charset: movement
+MOVEMENT_339: !script
+  Size: 45
+  Offset: 0xC318D0
+  Charset: movement
+MOVEMENT_340: !script
+  Size: 52
+  Offset: 0xC318FD
+  Charset: movement
+UNKNOWN_C31931: !unknown
+  Size: 38
+  Offset: 0xC31931
+  Notes: Movement? [31 19]
+UNKNOWN_C31957: !unknown
+  Size: 71
+  Offset: 0xC31957
+  Notes: Movement? [57 19]
+UNKNOWN_C3199E: !unknown
+  Size: 121
+  Offset: 0xC3199E
+  Notes: Movement? [9E 19]
+UNKNOWN_C31A17: !unknown
+  Size: 43
+  Offset: 0xC31A17
+  Notes: Movement? [17 1A]
+MOVEMENT_341: !script
+  Size: 65
+  Offset: 0xC31A42
+  Charset: movement
+MOVEMENT_342: !script
+  Size: 46
+  Offset: 0xC31A83
+  Charset: movement
+MOVEMENT_343: !script
+  Size: 12
+  Offset: 0xC31AB1
+  Charset: movement
+MOVEMENT_344: !script
+  Size: 87
+  Offset: 0xC31ABD
+  Charset: movement
+MOVEMENT_345: !script
+  Size: 55
+  Offset: 0xC31B14
+  Charset: movement
+MOVEMENT_346: !script
+  Size: 142
+  Offset: 0xC31B4B
+  Charset: movement
+UNKNOWN_C31BD9: !unknown
+  Size: 20
+  Offset: 0xC31BD9
+  Notes: Movement? [D9 1B]
+MOVEMENT_347: !script
+  Size: 16
+  Offset: 0xC31BED
+  Charset: movement
+MOVEMENT_348_349: !script
+  Size: 38
+  Offset: 0xC31BFD
+  Charset: movement
+MOVEMENT_350: !script
+  Size: 38
+  Offset: 0xC31C23
+  Charset: movement
+MOVEMENT_351: !script
+  Size: 71
+  Offset: 0xC31C49
+  Charset: movement
+UNKNOWN_C31C90: !unknown
+  Size: 20
+  Offset: 0xC31C90
+  Notes: Movement? [90 1C]
+MOVEMENT_352: !script
+  Size: 87
+  Offset: 0xC31CA4
+  Charset: movement
+MOVEMENT_353: !script
+  Size: 26
+  Offset: 0xC31CFB
+  Charset: movement
+MOVEMENT_354: !script
+  Size: 24
+  Offset: 0xC31D15
+  Charset: movement
+UNKNOWN_C31D2D: !unknown
+  Size: 29
+  Offset: 0xC31D2D
+  Notes: Movement? [2D 1D]
+UNKNOWN_C31D4A: !unknown
+  Size: 5
+  Offset: 0xC31D4A
+  Notes: Movement? [4A 1D]
+UNKNOWN_C31D4F: !unknown
+  Size: 18
+  Offset: 0xC31D4F
+  Notes: Movement? [4F 1D]
+MOVEMENT_355: !script
+  Size: 9
+  Offset: 0xC31D61
+  Charset: movement
+MOVEMENT_356: !script
+  Size: 31
+  Offset: 0xC31D6A
+  Charset: movement
+MOVEMENT_357: !script
+  Size: 44
+  Offset: 0xC31D89
+  Charset: movement
+MOVEMENT_369: !script
+  Size: 63
+  Offset: 0xC31DB5
+  Charset: movement
+UNKNOWN_C31DF4: !unknown
+  Size: 32
+  Offset: 0xC31DF4
+  Notes: Movement? [F4 1D]
+UNKNOWN_C31E14: !unknown
+  Size: 25
+  Offset: 0xC31E14
+  Notes: Movement? [14 1E]
+UNKNOWN_C31E2D: !unknown
+  Size: 32
+  Offset: 0xC31E2D
+  Notes: Movement? [2D 1E]
+UNKNOWN_C31E4D: !unknown
+  Size: 25
+  Offset: 0xC31E4D
+  Notes: Movement? [4D 1E]
+MOVEMENT_360: !script
+  Size: 19
+  Offset: 0xC31E66
+  Charset: movement
+MOVEMENT_361: !script
+  Size: 16
+  Offset: 0xC31E79
+  Charset: movement
+MOVEMENT_362: !script
+  Size: 9
+  Offset: 0xC31E89
+  Charset: movement
+MOVEMENT_358: !script
+  Size: 20
+  Offset: 0xC31E92
+  Charset: movement
+MOVEMENT_359: !script
+  Size: 9
+  Offset: 0xC31EA6
+  Charset: movement
+MOVEMENT_363: !script
+  Size: 9
+  Offset: 0xC31EAF
+  Charset: movement
+MOVEMENT_364: !script
+  Size: 9
+  Offset: 0xC31EB8
+  Charset: movement
+UNKNOWN_C31EC1: !unknown
+  Size: 23
+  Offset: 0xC31EC1
+  Notes: Movement? [C1 1E]
+UNKNOWN_C31ED8: !unknown
+  Size: 23
+  Offset: 0xC31ED8
+  Notes: Movement? [D8 1E]
+UNKNOWN_C31EEF: !unknown
+  Size: 249
+  Offset: 0xC31EEF
+  Notes: Movement? [EF 1E]
+MOVEMENT_368: !script
+  Size: 336
+  Offset: 0xC31FE8
+  Charset: movement
+UNKNOWN_C32138: !unknown
+  Size: 17
+  Offset: 0xC32138
+  Notes: Movement? [38 21]
+MOVEMENT_365: !script
+  Size: 362
+  Offset: 0xC32149
+  Charset: movement
+MOVEMENT_367: !script
+  Size: 143
+  Offset: 0xC322B3
+  Charset: movement
+MOVEMENT_366: !script
+  Size: 143
+  Offset: 0xC32342
+  Charset: movement
+MOVEMENT_370: !script
+  Size: 57
+  Offset: 0xC323D1
+  Charset: movement
+MOVEMENT_371: !script
+  Size: 74
+  Offset: 0xC3240A
+  Charset: movement
+MOVEMENT_372: !script
+  Size: 50
+  Offset: 0xC32454
+  Charset: movement
+MOVEMENT_400: !script
+  Size: 34
+  Offset: 0xC32486
+  Charset: movement
+MOVEMENT_373: !script
+  Size: 9
+  Offset: 0xC324A8
+  Charset: movement
+MOVEMENT_374: !script
+  Size: 9
+  Offset: 0xC324B1
+  Charset: movement
+MOVEMENT_375_404: !script
+  Size: 20
+  Offset: 0xC324BA
+  Charset: movement
+MOVEMENT_376_405: !script
+  Size: 9
+  Offset: 0xC324CE
+  Charset: movement
+MOVEMENT_377_406: !script
+  Size: 9
+  Offset: 0xC324D7
+  Charset: movement
+MOVEMENT_378_407: !script
+  Size: 9
+  Offset: 0xC324E0
+  Charset: movement
+MOVEMENT_379_408: !script
+  Size: 9
+  Offset: 0xC324E9
+  Charset: movement
+MOVEMENT_380: !script
+  Size: 7
+  Offset: 0xC324F2
+  Charset: movement
+MOVEMENT_381: !script
+  Size: 14
+  Offset: 0xC324F9
+  Charset: movement
+MOVEMENT_382: !script
+  Size: 25
+  Offset: 0xC32507
+  Charset: movement
+MOVEMENT_383: !script
+  Size: 20
+  Offset: 0xC32520
+  Charset: movement
+MOVEMENT_385: !script
+  Size: 630
+  Offset: 0xC32534
+  Charset: movement
+MOVEMENT_397: !script
+  Size: 110
+  Offset: 0xC327AA
+  Charset: movement
+MOVEMENT_387: !script
+  Size: 72
+  Offset: 0xC32818
+  Charset: movement
+MOVEMENT_389_393: !script
+  Size: 24
+  Offset: 0xC32860
+  Charset: movement
+MOVEMENT_391: !script
+  Size: 24
+  Offset: 0xC32878
+  Charset: movement
+MOVEMENT_395: !script
+  Size: 24
+  Offset: 0xC32890
+  Charset: movement
+MOVEMENT_384: !script
+  Size: 9
+  Offset: 0xC328A8
+  Charset: movement
+MOVEMENT_386: !script
+  Size: 746
+  Offset: 0xC328B1
+  Charset: movement
+MOVEMENT_398: !script
+  Size: 171
+  Offset: 0xC32B9B
+  Charset: movement
+MOVEMENT_388: !script
+  Size: 68
+  Offset: 0xC32C46
+  Charset: movement
+MOVEMENT_390_394: !script
+  Size: 24
+  Offset: 0xC32C8A
+  Charset: movement
+MOVEMENT_392: !script
+  Size: 24
+  Offset: 0xC32CA2
+  Charset: movement
+MOVEMENT_396: !script
+  Size: 24
+  Offset: 0xC32CBA
+  Charset: movement
+UNKNOWN_C32CD2: !unknown
+  Size: 30
+  Offset: 0xC32CD2
+  Notes: Movement? [D2 2C]
+MOVEMENT_399: !script
+  Size: 270
+  Offset: 0xC32CF0
+  Charset: movement
+MOVEMENT_401: !script
+  Size: 54
+  Offset: 0xC32DFE
+  Charset: movement
+MOVEMENT_437: !script
+  Size: 34
+  Offset: 0xC32E34
+  Charset: movement
+MOVEMENT_402: !script
+  Size: 9
+  Offset: 0xC32E56
+  Charset: movement
+MOVEMENT_403: !script
+  Size: 9
+  Offset: 0xC32E5F
+  Charset: movement
+MOVEMENT_409: !script
+  Size: 13
+  Offset: 0xC32E68
+  Charset: movement
+MOVEMENT_411: !script
+  Size: 494
+  Offset: 0xC32E75
+  Charset: movement
+MOVEMENT_410: !script
+  Size: 394
+  Offset: 0xC33063
+  Charset: movement
+MOVEMENT_412: !script
+  Size: 24
+  Offset: 0xC331ED
+  Charset: movement
+MOVEMENT_413: !script
+  Size: 9
+  Offset: 0xC33205
+  Charset: movement
+MOVEMENT_414: !script
+  Size: 9
+  Offset: 0xC3320E
+  Charset: movement
+MOVEMENT_415: !script
+  Size: 9
+  Offset: 0xC33217
+  Charset: movement
+MOVEMENT_416: !script
+  Size: 9
+  Offset: 0xC33220
+  Charset: movement
+MOVEMENT_417: !script
+  Size: 9
+  Offset: 0xC33229
+  Charset: movement
+MOVEMENT_418: !script
+  Size: 28
+  Offset: 0xC33232
+  Charset: movement
+MOVEMENT_419: !script
+  Size: 28
+  Offset: 0xC3324E
+  Charset: movement
+MOVEMENT_420: !script
+  Size: 25
+  Offset: 0xC3326A
+  Charset: movement
+MOVEMENT_422: !script
+  Size: 22
+  Offset: 0xC33283
+  Charset: movement
+MOVEMENT_424: !script
+  Size: 40
+  Offset: 0xC33299
+  Charset: movement
+MOVEMENT_426: !script
+  Size: 22
+  Offset: 0xC332C1
+  Charset: movement
+MOVEMENT_428: !script
+  Size: 35
+  Offset: 0xC332D7
+  Charset: movement
+MOVEMENT_421: !script
+  Size: 22
+  Offset: 0xC332FA
+  Charset: movement
+MOVEMENT_423: !script
+  Size: 28
+  Offset: 0xC33310
+  Charset: movement
+MOVEMENT_425: !script
+  Size: 22
+  Offset: 0xC3332C
+  Charset: movement
+MOVEMENT_427: !script
+  Size: 28
+  Offset: 0xC33342
+  Charset: movement
+MOVEMENT_429: !script
+  Size: 31
+  Offset: 0xC3335E
+  Charset: movement
+MOVEMENT_430: !script
+  Size: 18
+  Offset: 0xC3337D
+  Charset: movement
+MOVEMENT_431_432_433_434: !script
+  Size: 10
+  Offset: 0xC3338F
+  Charset: movement
+UNKNOWN_C33399: !unknown
+  Size: 17
+  Offset: 0xC33399
+  Notes: Movement? [99 33]
+UNKNOWN_C333AA: !unknown
+  Size: 17
+  Offset: 0xC333AA
+  Notes: Movement? [AA 33]
+UNKNOWN_C333BB: !unknown
+  Size: 17
+  Offset: 0xC333BB
+  Notes: Movement? [BB 33]
+UNKNOWN_C333CC: !unknown
+  Size: 17
+  Offset: 0xC333CC
+  Notes: Movement? [CC 33]
+UNKNOWN_C333DD: !unknown
+  Size: 71
+  Offset: 0xC333DD
+  Notes: Movement? [DD 33]
+MOVEMENT_435: !script
+  Size: 171
+  Offset: 0xC33424
+  Charset: movement
+MOVEMENT_436: !script
+  Size: 48
+  Offset: 0xC334CF
+  Charset: movement
+MOVEMENT_438: !script
+  Size: 54
+  Offset: 0xC334FF
+  Charset: movement
+MOVEMENT_439: !script
+  Size: 20
+  Offset: 0xC33535
+  Charset: movement
+UNKNOWN_C33549: !unknown
+  Size: 41
+  Offset: 0xC33549
+  Notes: Movement? [49 35]
+MOVEMENT_440: !script
+  Size: 35
+  Offset: 0xC33572
+  Charset: movement
+MOVEMENT_441: !script
+  Size: 32
+  Offset: 0xC33595
+  Charset: movement
+MOVEMENT_442: !script
+  Size: 971
+  Offset: 0xC335B5
+  Charset: movement
+MOVEMENT_443: !script
+  Size: 82
+  Offset: 0xC33980
+  Charset: movement
+MOVEMENT_444: !script
+  Size: 182
+  Offset: 0xC339D2
+  Charset: movement
+MOVEMENT_446: !script
+  Size: 45
+  Offset: 0xC33A88
+  Charset: movement
+MOVEMENT_445: !script
+  Size: 56
+  Offset: 0xC33AB5
+  Charset: movement
+MOVEMENT_447: !script
+  Size: 34
+  Offset: 0xC33AED
+  Charset: movement
+MOVEMENT_448: !script
+  Size: 104
+  Offset: 0xC33B0F
+  Charset: movement
+UNKNOWN_C33B77: !unknown
+  Size: 20
+  Offset: 0xC33B77
+  Notes: Movement? [77 3B]
+MOVEMENT_449: !script
+  Size: 19
+  Offset: 0xC33B8B
+  Charset: movement
+MOVEMENT_450: !script
+  Size: 20
+  Offset: 0xC33B9E
+  Charset: movement
+MOVEMENT_451: !script
+  Size: 5
+  Offset: 0xC33BB2
+  Charset: movement
+MOVEMENT_452: !script
+  Size: 68
+  Offset: 0xC33BB7
+  Charset: movement
+UNKNOWN_C33BFB: !unknown
+  Size: 29
+  Offset: 0xC33BFB
+  Notes: Movement? [FB 3B]
+UNKNOWN_C33C18: !unknown
+  Size: 5
+  Offset: 0xC33C18
+  Notes: Movement? [18 3C]
+UNKNOWN_C33C1D: !unknown
+  Size: 19
+  Offset: 0xC33C1D
+  Notes: Movement? [1D 3C]
+MOVEMENT_467: !script
+  Size: 60
+  Offset: 0xC33C30
+  Charset: movement
+MOVEMENT_465: !script
+  Size: 110
+  Offset: 0xC33C6C
+  Charset: movement
+MOVEMENT_466: !script
+  Size: 228
+  Offset: 0xC33CDA
+  Charset: movement
+UNKNOWN_C33DBE: !unknown
+  Size: 22
+  Offset: 0xC33DBE
+  Notes: Movement? [BE 3D]
+MOVEMENT_479: !script
+  Size: 92
+  Offset: 0xC33DD4
+  Charset: movement
+UNKNOWN_C33E30: !unknown
+  Size: 18
+  Offset: 0xC33E30
+  Notes: Movement? [30 3E]
+MOVEMENT_481: !script
+  Size: 116
+  Offset: 0xC33E42
+  Charset: movement
+UNKNOWN_C33EB6: !unknown
+  Size: 14
+  Offset: 0xC33EB6
+  Notes: Movement? [B6 3E]
+MOVEMENT_482: !script
+  Size: 59
+  Offset: 0xC33EC4
+  Charset: movement
+UNKNOWN_C33EFF: !unknown
+  Size: 13
+  Offset: 0xC33EFF
+  Notes: Movement? [FF 3E]
+MOVEMENT_480: !script
+  Size: 264
+  Offset: 0xC33F0C
+  Charset: movement
+UNKNOWN_C34014: !unknown
+  Size: 21
+  Offset: 0xC34014
+  Notes: Movement? [14 40]
+MOVEMENT_483: !script
+  Size: 110
+  Offset: 0xC34029
+  Charset: movement
+MOVEMENT_484: !script
+  Size: 55
+  Offset: 0xC34097
+  Charset: movement
+MOVEMENT_485: !script
+  Size: 61
+  Offset: 0xC340CE
+  Charset: movement
+MOVEMENT_486: !script
+  Size: 9
+  Offset: 0xC3410B
+  Charset: movement
+MOVEMENT_487: !script
+  Size: 9
+  Offset: 0xC34114
+  Charset: movement
+MOVEMENT_488: !script
+  Size: 9
+  Offset: 0xC3411D
+  Charset: movement
+MOVEMENT_489: !script
+  Size: 9
+  Offset: 0xC34126
+  Charset: movement
+MOVEMENT_490: !script
+  Size: 9
+  Offset: 0xC3412F
+  Charset: movement
+MOVEMENT_491: !script
+  Size: 37
+  Offset: 0xC34138
+  Charset: movement
+MOVEMENT_492: !script
+  Size: 37
+  Offset: 0xC3415D
+  Charset: movement
+MOVEMENT_493: !script
+  Size: 37
+  Offset: 0xC34182
+  Charset: movement
+MOVEMENT_494: !script
+  Size: 37
+  Offset: 0xC341A7
+  Charset: movement
+MOVEMENT_495: !script
+  Size: 29
+  Offset: 0xC341CC
+  Charset: movement
+UNKNOWN_C341E9: !unknown
+  Size: 74
+  Offset: 0xC341E9
+  Notes: Movement? [E9 41]
+UNKNOWN_C34233: !unknown
+  Size: 22
+  Offset: 0xC34233
+  Notes: Movement? [E9 41]
+MOVEMENT_496: !script
+  Size: 37
+  Offset: 0xC34249
+  Charset: movement
+MOVEMENT_497: !script
+  Size: 67
+  Offset: 0xC3426E
+  Charset: movement
+MOVEMENT_498: !script
+  Size: 67
+  Offset: 0xC342B1
+  Charset: movement
+MOVEMENT_501: !script
+  Size: 13
+  Offset: 0xC342F4
+  Charset: movement
+MOVEMENT_531: !script
+  Size: 13
+  Offset: 0xC34301
+  Charset: movement
+UNKNOWN_C3430E: !unknown
+  Size: 95
+  Offset: 0xC3430E
+  Notes: Movement? [0E 43]
+UNKNOWN_C3436D: !unknown
+  Size: 11
+  Offset: 0xC3436D
+  Notes: Movement? [6D 43]
+MOVEMENT_532: !script
+  Size: 13
+  Offset: 0xC34378
+  Charset: movement
+MOVEMENT_533: !script
+  Size: 13
+  Offset: 0xC34385
+  Charset: movement
+UNKNOWN_C34392: !unknown
+  Size: 28
+  Offset: 0xC34392
+  Notes: Movement? [92 43]
+UNKNOWN_C343AE: !unknown
+  Size: 45
+  Offset: 0xC343AE
+  Notes: Movement? [AE 43]
+UNKNOWN_C343DB: !unknown
+  Size: 39
+  Offset: 0xC343DB
+  Notes: Movement? [DB 43]
+MOVEMENT_500: !script
+  Size: 24
+  Offset: 0xC34402
+  Charset: movement
+MOVEMENT_499: !script
+  Size: 36
+  Offset: 0xC3441A
+  Charset: movement
+UNKNOWN_C3443E: !unknown
+  Size: 25
+  Offset: 0xC3443E
+  Notes: Movement? [3E 44]
+UNKNOWN_C34457: !unknown
+  Size: 35
+  Offset: 0xC34457
+  Notes: Movement? [57 44]
+UNKNOWN_C3447A: !unknown
+  Size: 14
+  Offset: 0xC3447A
+  Notes: Movement? [7A 44]
+UNKNOWN_C34488: !unknown
+  Size: 32
+  Offset: 0xC34488
+  Notes: Movement? [88 44]
+UNKNOWN_C344A8: !unknown
+  Size: 42
+  Offset: 0xC344A8
+  Notes: Movement? [A8 44]
+UNKNOWN_C344D2: !unknown
+  Size: 12
+  Offset: 0xC344D2
+  Notes: Movement? [D2 44]
+UNKNOWN_C344DE: !unknown
+  Size: 33
+  Offset: 0xC344DE
+  Notes: Movement? [DE 44]
+UNKNOWN_C344FF: !unknown
+  Size: 9
+  Offset: 0xC344FF
+  Notes: Movement? [FF 44]
+MOVEMENT_547: !script
+  Size: 77
+  Offset: 0xC34508
+  Charset: movement
+UNKNOWN_C34555: !unknown
+  Size: 26
+  Offset: 0xC34555
+  Notes: Movement? [55 45]
+MOVEMENT_550: !script
+  Size: 3
+  Offset: 0xC3456F
+  Charset: movement
+MOVEMENT_548: !script
+  Size: 44
+  Offset: 0xC34572
+  Charset: movement
+MOVEMENT_549: !script
+  Size: 44
+  Offset: 0xC3459E
+  Charset: movement
+MOVEMENT_551: !script
+  Size: 107
+  Offset: 0xC345CA
+  Charset: movement
+MOVEMENT_552: !script
+  Size: 94
+  Offset: 0xC34635
+  Charset: movement
+MOVEMENT_553: !script
+  Size: 94
+  Offset: 0xC34693
+  Charset: movement
+MOVEMENT_554: !script
+  Size: 93
+  Offset: 0xC346F1
+  Charset: movement
+MOVEMENT_555: !script
+  Size: 25
+  Offset: 0xC3474E
+  Charset: movement
+MOVEMENT_559: !script
+  Size: 90
+  Offset: 0xC34767
+  Charset: movement
+MOVEMENT_558: !script
+  Size: 79
+  Offset: 0xC347C1
+  Charset: movement
+MOVEMENT_557: !script
+  Size: 90
+  Offset: 0xC34810
+  Charset: movement
+MOVEMENT_556: !script
+  Size: 90
+  Offset: 0xC3486A
+  Charset: movement
+UNKNOWN_C348C4: !unknown
+  Size: 56
+  Offset: 0xC348C4
+  Notes: Movement? [C4 48]
+MOVEMENT_563: !script
+  Size: 104
+  Offset: 0xC348FC
+  Charset: movement
+UNKNOWN_C34964: !unknown
+  Size: 17
+  Offset: 0xC34964
+  Notes: Movement? [64 49]
+MOVEMENT_562: !script
+  Size: 236
+  Offset: 0xC34975
+  Charset: movement
+UNKNOWN_C34A61: !unknown
+  Size: 11
+  Offset: 0xC34A61
+  Notes: Movement? [61 4A]
+MOVEMENT_561: !script
+  Size: 138
+  Offset: 0xC34A6C
+  Charset: movement
+MOVEMENT_560: !script
+  Size: 108
+  Offset: 0xC34AF6
+  Charset: movement
+UNKNOWN_C34B62: !unknown
+  Size: 73
+  Offset: 0xC34B62
+  Notes: Movement? [62 4B]
+MOVEMENT_564: !script
+  Size: 34
+  Offset: 0xC34BAB
+  Charset: movement
+MOVEMENT_565: !script
+  Size: 42
+  Offset: 0xC34BCD
+  Charset: movement
+MOVEMENT_566: !script
+  Size: 67
+  Offset: 0xC34BF7
+  Charset: movement
+MOVEMENT_567: !script
+  Size: 76
+  Offset: 0xC34C3A
+  Charset: movement
+MOVEMENT_568: !script
+  Size: 90
+  Offset: 0xC34C86
+  Charset: movement
+MOVEMENT_569: !script
+  Size: 89
+  Offset: 0xC34CE0
+  Charset: movement
+UNKNOWN_C34D39: !unknown
+  Size: 35
+  Offset: 0xC34D39
+  Notes: Movement? [39 4D]
+MOVEMENT_570: !script
+  Size: 9
+  Offset: 0xC34D5C
+  Charset: movement
+MOVEMENT_571: !script
+  Size: 9
+  Offset: 0xC34D65
+  Charset: movement
+MOVEMENT_572: !script
+  Size: 9
+  Offset: 0xC34D6E
+  Charset: movement
+MOVEMENT_573: !script
+  Size: 27
+  Offset: 0xC34D77
+  Charset: movement
+MOVEMENT_574: !script
+  Size: 9
+  Offset: 0xC34D92
+  Charset: movement
+MOVEMENT_575: !script
+  Size: 9
+  Offset: 0xC34D9B
+  Charset: movement
+MOVEMENT_576: !script
+  Size: 3
+  Offset: 0xC34DA4
+  Charset: movement
+MOVEMENT_577: !script
+  Size: 9
+  Offset: 0xC34DA7
+  Charset: movement
+MOVEMENT_578: !script
+  Size: 9
+  Offset: 0xC34DB0
+  Charset: movement
+MOVEMENT_579: !script
+  Size: 9
+  Offset: 0xC34DB9
+  Charset: movement
+MOVEMENT_580: !script
+  Size: 9
+  Offset: 0xC34DC2
+  Charset: movement
+MOVEMENT_581: !script
+  Size: 21
+  Offset: 0xC34DCB
+  Charset: movement
+MOVEMENT_582: !script
+  Size: 10
+  Offset: 0xC34DE0
+  Charset: movement
+MOVEMENT_583: !script
+  Size: 124
+  Offset: 0xC34DEA
+  Charset: movement
+UNKNOWN_C34E66: !unknown
+  Size: 13
+  Offset: 0xC34E66
+  Notes: Movement? [66 4E]
+UNKNOWN_C34E73: !unknown
+  Size: 18
+  Offset: 0xC34E73
+  Notes: Movement? [73 4E]
+MOVEMENT_535: !script
+  Size: 67
+  Offset: 0xC34E85
+  Charset: movement
+MOVEMENT_536: !script
+  Size: 105
+  Offset: 0xC34EC8
+  Charset: movement
+MOVEMENT_537: !script
+  Size: 106
+  Offset: 0xC34F31
+  Charset: movement
+MOVEMENT_538: !script
+  Size: 44
+  Offset: 0xC34F9B
+  Charset: movement
+MOVEMENT_539: !script
+  Size: 49
+  Offset: 0xC34FC7
+  Charset: movement
+MOVEMENT_540: !script
+  Size: 22
+  Offset: 0xC34FF8
+  Charset: movement
+MOVEMENT_541: !script
+  Size: 60
+  Offset: 0xC3500E
+  Charset: movement
+UNKNOWN_C3504A: !unknown
+  Size: 12
+  Offset: 0xC3504A
+  Notes: Movement? [4A 50]
+MOVEMENT_542: !script
+  Size: 90
+  Offset: 0xC35056
+  Charset: movement
+MOVEMENT_543: !script
+  Size: 68
+  Offset: 0xC350B0
+  Charset: movement
+MOVEMENT_544: !script
+  Size: 96
+  Offset: 0xC350F4
+  Charset: movement
+MOVEMENT_545: !script
+  Size: 68
+  Offset: 0xC35154
+  Charset: movement
+MOVEMENT_546: !script
+  Size: 101
+  Offset: 0xC35198
+  Charset: movement
+MOVEMENT_799: !script
+  Size: 23
+  Offset: 0xC351FD
+  Charset: movement
+MOVEMENT_800: !script
+  Size: 29
+  Offset: 0xC35214
+  Charset: movement
+UNKNOWN_C35231: !unknown
+  Size: 14
+  Offset: 0xC35231
+  Notes: Movement? [31 52]
+MOVEMENT_801: !script
+  Size: 3404
+  Offset: 0xC3523F
+  Charset: movement
+UNKNOWN_C35F8B: !unknown
+  Size: 43
+  Offset: 0xC35F8B
+  Notes: Movement? [8B 5F]
+UNKNOWN_C35FB6: !unknown
+  Size: 23
+  Offset: 0xC35FB6
+  Notes: Movement? [B6 5F]
+UNKNOWN_C35FCD: !unknown
+  Size: 21
+  Offset: 0xC35FCD
+  Notes: Movement? [CD 5F]
+MOVEMENT_802: !script
+  Size: 15
+  Offset: 0xC35FE2
+  Charset: movement
+MOVEMENT_803: !script
+  Size: 15
+  Offset: 0xC35FF1
+  Charset: movement
+MOVEMENT_809: !script
+  Size: 115
+  Offset: 0xC36000
+  Charset: movement
+MOVEMENT_810: !script
+  Size: 32
+  Offset: 0xC36073
+  Charset: movement
+MOVEMENT_811: !script
+  Size: 32
+  Offset: 0xC36093
+  Charset: movement
+MOVEMENT_812: !script
+  Size: 57
+  Offset: 0xC360B3
+  Charset: movement
+MOVEMENT_813: !script
+  Size: 30
+  Offset: 0xC360EC
+  Charset: movement
+MOVEMENT_814: !script
+  Size: 58
+  Offset: 0xC3610A
+  Charset: movement
+MOVEMENT_815: !script
+  Size: 37
+  Offset: 0xC36144
+  Charset: movement
+MOVEMENT_816: !script
+  Size: 65
+  Offset: 0xC36169
+  Charset: movement
+MOVEMENT_817: !script
+  Size: 17
+  Offset: 0xC361AA
+  Charset: movement
+MOVEMENT_818: !script
+  Size: 17
+  Offset: 0xC361BB
+  Charset: movement
+MOVEMENT_819: !script
+  Size: 15
+  Offset: 0xC361CC
+  Charset: movement
+MOVEMENT_820: !script
+  Size: 32
+  Offset: 0xC361DB
+  Charset: movement
+MOVEMENT_821: !script
+  Size: 30
+  Offset: 0xC361FB
+  Charset: movement
+MOVEMENT_822: !script
+  Size: 32
+  Offset: 0xC36219
+  Charset: movement
+MOVEMENT_823: !script
+  Size: 53
+  Offset: 0xC36239
+  Charset: movement
+MOVEMENT_824: !script
+  Size: 49
+  Offset: 0xC3626E
+  Charset: movement
+MOVEMENT_825: !script
+  Size: 33
+  Offset: 0xC3629F
+  Charset: movement
+UNKNOWN_C362C0: !unknown
+  Size: 33
+  Offset: 0xC362C0
+  Notes: Movement? [C0 62]
+MOVEMENT_826: !script
+  Size: 48
+  Offset: 0xC362E1
+  Charset: movement
+MOVEMENT_827: !script
+  Size: 15
+  Offset: 0xC36311
+  Charset: movement
+MOVEMENT_828: !script
+  Size: 24
+  Offset: 0xC36320
+  Charset: movement
+MOVEMENT_829: !script
+  Size: 30
+  Offset: 0xC36338
+  Charset: movement
+MOVEMENT_804: !script
+  Size: 72
+  Offset: 0xC36356
+  Charset: movement
+MOVEMENT_805: !script
+  Size: 40
+  Offset: 0xC3639E
+  Charset: movement
+MOVEMENT_806: !script
+  Size: 63
+  Offset: 0xC363C6
+  Charset: movement
+MOVEMENT_808: !script
+  Size: 66
+  Offset: 0xC36405
+  Charset: movement
+MOVEMENT_807: !script
+  Size: 45
+  Offset: 0xC36447
+  Charset: movement
+MOVEMENT_836: !script
+  Size: 61
+  Offset: 0xC36474
+  Charset: movement
+MOVEMENT_837: !script
+  Size: 121
+  Offset: 0xC364B1
+  Charset: movement
+MOVEMENT_838: !script
+  Size: 121
+  Offset: 0xC3652A
+  Charset: movement
+MOVEMENT_839: !script
+  Size: 121
+  Offset: 0xC365A3
+  Charset: movement
+MOVEMENT_831: !script
+  Size: 43
+  Offset: 0xC3661C
+  Charset: movement
+MOVEMENT_832: !script
+  Size: 75
+  Offset: 0xC36647
+  Charset: movement
+MOVEMENT_833: !script
+  Size: 45
+  Offset: 0xC36692
+  Charset: movement
+MOVEMENT_830: !script
+  Size: 29
+  Offset: 0xC366BF
+  Charset: movement
+MOVEMENT_834: !script
+  Size: 74
+  Offset: 0xC366DC
+  Charset: movement
+MOVEMENT_835: !script
+  Size: 55
+  Offset: 0xC36726
+  Charset: movement
+MOVEMENT_840: !script
+  Size: 49
+  Offset: 0xC3675D
+  Charset: movement
+MOVEMENT_841: !script
+  Size: 22
+  Offset: 0xC3678E
+  Charset: movement
+MOVEMENT_842: !script
+  Size: 66
+  Offset: 0xC367A4
+  Charset: movement
+MOVEMENT_843: !script
+  Size: 46
+  Offset: 0xC367E6
+  Charset: movement
+MOVEMENT_844: !script
+  Size: 32
+  Offset: 0xC36814
+  Charset: movement
+UNKNOWN_C36834: !unknown
+  Size: 11
+  Offset: 0xC36834
+  Notes: Movement? [34 68]
+MOVEMENT_845: !script
+  Size: 19
+  Offset: 0xC3683F
+  Charset: movement
+MOVEMENT_846: !script
+  Size: 21
+  Offset: 0xC36852
+  Charset: movement
+MOVEMENT_847: !script
+  Size: 21
+  Offset: 0xC36867
+  Charset: movement
+MOVEMENT_848: !script
+  Size: 21
+  Offset: 0xC3687C
+  Charset: movement
+MOVEMENT_849: !script
+  Size: 21
+  Offset: 0xC36891
+  Charset: movement
+MOVEMENT_850: !script
+  Size: 41
+  Offset: 0xC368A6
+  Charset: movement
+MOVEMENT_851: !script
+  Size: 41
+  Offset: 0xC368CF
+  Charset: movement
+MOVEMENT_852: !script
+  Size: 163
+  Offset: 0xC368F8
+  Charset: movement
+MOVEMENT_853: !script
+  Size: 31
+  Offset: 0xC3699B
+  Charset: movement
+MOVEMENT_854: !script
+  Size: 15
+  Offset: 0xC369BA
+  Charset: movement
+MOVEMENT_855: !script
+  Size: 25
+  Offset: 0xC369C9
+  Charset: movement
+MOVEMENT_856: !script
+  Size: 25
+  Offset: 0xC369E2
+  Charset: movement
+MOVEMENT_857: !script
+  Size: 47
+  Offset: 0xC369FB
+  Charset: movement
+MOVEMENT_858: !script
+  Size: 20
+  Offset: 0xC36A2A
+  Charset: movement
+UNKNOWN_C36A3E: !unknown
+  Size: 3
+  Offset: 0xC36A3E
+  Notes: Movement? [3E 6A]
+UNKNOWN_C36A41: !unknown
+  Size: 18
+  Offset: 0xC36A41
+  Notes: Movement? [41 6A]
+MOVEMENT_584: !script
+  Size: 69
+  Offset: 0xC36A53
+  Charset: movement
+MOVEMENT_585: !script
+  Size: 39
+  Offset: 0xC36A98
+  Charset: movement
+MOVEMENT_586: !script
+  Size: 39
+  Offset: 0xC36ABF
+  Charset: movement
+MOVEMENT_587: !script
+  Size: 25
+  Offset: 0xC36AE6
+  Charset: movement
+MOVEMENT_588: !script
+  Size: 25
+  Offset: 0xC36AFF
+  Charset: movement
+MOVEMENT_589: !script
+  Size: 51
+  Offset: 0xC36B18
+  Charset: movement
+MOVEMENT_590: !script
+  Size: 21
+  Offset: 0xC36B4B
+  Charset: movement
+UNKNOWN_C36B60: !unknown
+  Size: 84
+  Offset: 0xC36B60
+  Notes: Movement? [60 6B]
+UNKNOWN_C36BB4: !unknown
+  Size: 18
+  Offset: 0xC36BB4
+  Notes: Movement? [B4 6B]
+MOVEMENT_591: !script
+  Size: 36
+  Offset: 0xC36BC6
+  Charset: movement
+UNKNOWN_C36BEA: !unknown
+  Size: 1
+  Offset: 0xC36BEA
+  Notes: Movement? [EA 6B]
+MOVEMENT_592: !script
+  Size: 21
+  Offset: 0xC36BEB
+  Charset: movement
+MOVEMENT_593: !script
+  Size: 74
+  Offset: 0xC36C00
+  Charset: movement
+MOVEMENT_594: !script
+  Size: 74
+  Offset: 0xC36C4A
+  Charset: movement
+MOVEMENT_595: !script
+  Size: 71
+  Offset: 0xC36C94
+  Charset: movement
+MOVEMENT_596: !script
+  Size: 61
+  Offset: 0xC36CDB
+  Charset: movement
+UNKNOWN_C36D18: !unknown
+  Size: 17
+  Offset: 0xC36D18
+  Notes: Movement? [18 6D]
+MOVEMENT_597: !script
+  Size: 23
+  Offset: 0xC36D29
+  Charset: movement
+MOVEMENT_598: !script
+  Size: 19
+  Offset: 0xC36D40
+  Charset: movement
+MOVEMENT_599: !script
+  Size: 9
+  Offset: 0xC36D53
+  Charset: movement
+MOVEMENT_600: !script
+  Size: 31
+  Offset: 0xC36D5C
+  Charset: movement
+MOVEMENT_601: !script
+  Size: 36
+  Offset: 0xC36D7B
+  Charset: movement
+MOVEMENT_602: !script
+  Size: 31
+  Offset: 0xC36D9F
+  Charset: movement
+MOVEMENT_603: !script
+  Size: 27
+  Offset: 0xC36DBE
+  Charset: movement
+MOVEMENT_604: !script
+  Size: 29
+  Offset: 0xC36DD9
+  Charset: movement
+UNKNOWN_C36DF6: !unknown
+  Size: 35
+  Offset: 0xC36DF6
+  Notes: Movement? [F6 6D]
+MOVEMENT_605: !script
+  Size: 20
+  Offset: 0xC36E19
+  Charset: movement
+MOVEMENT_606: !script
+  Size: 20
+  Offset: 0xC36E2D
+  Charset: movement
+UNKNOWN_C36E41: !unknown
+  Size: 17
+  Offset: 0xC36E41
+  Notes: Movement? [41 6E]
+MOVEMENT_607: !script
+  Size: 12
+  Offset: 0xC36E52
+  Charset: movement
+MOVEMENT_608: !script
+  Size: 12
+  Offset: 0xC36E5E
+  Charset: movement
+MOVEMENT_609: !script
+  Size: 12
+  Offset: 0xC36E6A
+  Charset: movement
+MOVEMENT_610: !script
+  Size: 12
+  Offset: 0xC36E76
+  Charset: movement
+MOVEMENT_611: !script
+  Size: 53
+  Offset: 0xC36E82
+  Charset: movement
+MOVEMENT_612: !script
+  Size: 29
+  Offset: 0xC36EB7
+  Charset: movement
+MOVEMENT_613: !script
+  Size: 52
+  Offset: 0xC36ED4
+  Charset: movement
+MOVEMENT_614: !script
+  Size: 43
+  Offset: 0xC36F08
+  Charset: movement
+MOVEMENT_615: !script
+  Size: 53
+  Offset: 0xC36F33
+  Charset: movement
+MOVEMENT_616: !script
+  Size: 29
+  Offset: 0xC36F68
+  Charset: movement
+MOVEMENT_617: !script
+  Size: 52
+  Offset: 0xC36F85
+  Charset: movement
+MOVEMENT_618: !script
+  Size: 43
+  Offset: 0xC36FB9
+  Charset: movement
+MOVEMENT_619: !script
+  Size: 44
+  Offset: 0xC36FE4
+  Charset: movement
+MOVEMENT_620: !script
+  Size: 136
+  Offset: 0xC37010
+  Charset: movement
+MOVEMENT_621: !script
+  Size: 10
+  Offset: 0xC37098
+  Charset: movement
+UNKNOWN_C370A2: !unknown
+  Size: 91
+  Offset: 0xC370A2
+  Notes: Movement? [A2 70]
+MOVEMENT_622: !script
+  Size: 96
+  Offset: 0xC370FD
+  Charset: movement
+MOVEMENT_623: !script
+  Size: 151
+  Offset: 0xC3715D
+  Charset: movement
+MOVEMENT_624: !script
+  Size: 6
+  Offset: 0xC371F4
+  Charset: movement
+MOVEMENT_625: !script
+  Size: 75
+  Offset: 0xC371FA
+  Charset: movement
+MOVEMENT_626: !script
+  Size: 49
+  Offset: 0xC37245
+  Charset: movement
+MOVEMENT_627: !script
+  Size: 17
+  Offset: 0xC37276
+  Charset: movement
+MOVEMENT_628: !script
+  Size: 41
+  Offset: 0xC37287
+  Charset: movement
+MOVEMENT_629: !script
+  Size: 199
+  Offset: 0xC372B0
+  Charset: movement
+UNKNOWN_C37377: !unknown
+  Size: 75
+  Offset: 0xC37377
+  Notes: Movement? [77 73]
+MOVEMENT_630: !script
+  Size: 71
+  Offset: 0xC373C2
+  Charset: movement
+MOVEMENT_631: !script
+  Size: 6
+  Offset: 0xC37409
+  Charset: movement
+MOVEMENT_632: !script
+  Size: 42
+  Offset: 0xC3740F
+  Charset: movement
+UNKNOWN_C37439: !unknown
+  Size: 29
+  Offset: 0xC37439
+  Notes: Movement? [39 74]
+MOVEMENT_633: !script
+  Size: 35
+  Offset: 0xC37456
+  Charset: movement
+MOVEMENT_634: !script
+  Size: 35
+  Offset: 0xC37479
+  Charset: movement
+MOVEMENT_635: !script
+  Size: 20
+  Offset: 0xC3749C
+  Charset: movement
+MOVEMENT_636: !script
+  Size: 52
+  Offset: 0xC374B0
+  Charset: movement
+MOVEMENT_637: !script
+  Size: 97
+  Offset: 0xC374E4
+  Charset: movement
+UNKNOWN_C37545: !unknown
+  Size: 20
+  Offset: 0xC37545
+  Notes: Movement? [45 75]
+UNKNOWN_C37559: !unknown
+  Size: 20
+  Offset: 0xC37559
+  Notes: Movement? [59 75]
+MOVEMENT_638: !script
+  Size: 41
+  Offset: 0xC3756D
+  Charset: movement
+MOVEMENT_639: !script
+  Size: 47
+  Offset: 0xC37596
+  Charset: movement
+MOVEMENT_640: !script
+  Size: 41
+  Offset: 0xC375C5
+  Charset: movement
+MOVEMENT_641: !script
+  Size: 77
+  Offset: 0xC375EE
+  Charset: movement
+MOVEMENT_642: !script
+  Size: 36
+  Offset: 0xC3763B
+  Charset: movement
+MOVEMENT_643: !script
+  Size: 57
+  Offset: 0xC3765F
+  Charset: movement
+MOVEMENT_644: !script
+  Size: 64
+  Offset: 0xC37698
+  Charset: movement
+MOVEMENT_645: !script
+  Size: 57
+  Offset: 0xC376D8
+  Charset: movement
+MOVEMENT_646: !script
+  Size: 64
+  Offset: 0xC37711
+  Charset: movement
+MOVEMENT_647: !script
+  Size: 39
+  Offset: 0xC37751
+  Charset: movement
+MOVEMENT_648: !script
+  Size: 90
+  Offset: 0xC37778
+  Charset: movement
+MOVEMENT_649: !script
+  Size: 34
+  Offset: 0xC377D2
+  Charset: movement
+MOVEMENT_650: !script
+  Size: 32
+  Offset: 0xC377F4
+  Charset: movement
+MOVEMENT_651: !script
+  Size: 91
+  Offset: 0xC37814
+  Charset: movement
+MOVEMENT_652: !script
+  Size: 34
+  Offset: 0xC3786F
+  Charset: movement
+MOVEMENT_655: !script
+  Size: 37
+  Offset: 0xC37891
+  Charset: movement
+MOVEMENT_653: !script
+  Size: 34
+  Offset: 0xC378B6
+  Charset: movement
+MOVEMENT_656: !script
+  Size: 37
+  Offset: 0xC378D8
+  Charset: movement
+MOVEMENT_654: !script
+  Size: 32
+  Offset: 0xC378FD
+  Charset: movement
+MOVEMENT_657: !script
+  Size: 34
+  Offset: 0xC3791D
+  Charset: movement
+MOVEMENT_658: !script
+  Size: 72
+  Offset: 0xC3793F
+  Charset: movement
+MOVEMENT_660: !script
+  Size: 57
+  Offset: 0xC37987
+  Charset: movement
+MOVEMENT_659: !script
+  Size: 75
+  Offset: 0xC379C0
+  Charset: movement
+MOVEMENT_661: !script
+  Size: 74
+  Offset: 0xC37A0B
+  Charset: movement
+MOVEMENT_662: !script
+  Size: 8
+  Offset: 0xC37A55
+  Charset: movement
+MOVEMENT_663: !script
+  Size: 9
+  Offset: 0xC37A5D
+  Charset: movement
+MOVEMENT_664: !script
+  Size: 22
+  Offset: 0xC37A66
+  Charset: movement
+UNKNOWN_C37A7C: !unknown
+  Size: 14
+  Offset: 0xC37A7C
+  Notes: Movement? [7C 7A]
+MOVEMENT_665: !script
+  Size: 43
+  Offset: 0xC37A8A
+  Charset: movement
+MOVEMENT_666: !script
+  Size: 86
+  Offset: 0xC37AB5
+  Charset: movement
+MOVEMENT_667: !script
+  Size: 79
+  Offset: 0xC37B0B
+  Charset: movement
+MOVEMENT_668: !script
+  Size: 36
+  Offset: 0xC37B5A
+  Charset: movement
+MOVEMENT_669: !script
+  Size: 128
+  Offset: 0xC37B7E
+  Charset: movement
+MOVEMENT_670: !script
+  Size: 218
+  Offset: 0xC37BFE
+  Charset: movement
+UNKNOWN_C37CD8: !unknown
+  Size: 18
+  Offset: 0xC37CD8
+  Notes: Movement? [D8 7C]
+UNKNOWN_C37CEA: !unknown
+  Size: 19
+  Offset: 0xC37CEA
+  Notes: Movement? [EA 7C]
+MOVEMENT_671: !script
+  Size: 54
+  Offset: 0xC37CFD
+  Charset: movement
+MOVEMENT_672: !script
+  Size: 95
+  Offset: 0xC37D33
+  Charset: movement
+MOVEMENT_673: !script
+  Size: 95
+  Offset: 0xC37D92
+  Charset: movement
+MOVEMENT_674: !script
+  Size: 95
+  Offset: 0xC37DF1
+  Charset: movement
+UNKNOWN_C37E50: !unknown
+  Size: 22
+  Offset: 0xC37E50
+  Notes: Movement? [50 7E]
+UNKNOWN_C37E66: !unknown
+  Size: 72
+  Offset: 0xC37E66
+  Notes: Movement? [66 7E]
+UNKNOWN_C37EAE: !unknown
+  Size: 19
+  Offset: 0xC37EAE
+  Notes: Movement? [AE 7E]
+MOVEMENT_675: !script
+  Size: 94
+  Offset: 0xC37EC1
+  Charset: movement
+UNKNOWN_C37F1F: !unknown
+  Size: 70
+  Offset: 0xC37F1F
+  Notes: Movement? [1F 7F]
+MOVEMENT_676: !script
+  Size: 12
+  Offset: 0xC37F65
+  Charset: movement
+MOVEMENT_677: !script
+  Size: 12
+  Offset: 0xC37F71
+  Charset: movement
+MOVEMENT_678: !script
+  Size: 12
+  Offset: 0xC37F7D
+  Charset: movement
+UNKNOWN_C37F89: !unknown
+  Size: 28
+  Offset: 0xC37F89
+  Notes: Movement? [89 7F]
+UNKNOWN_C37FA5: !unknown
+  Size: 40
+  Offset: 0xC37FA5
+  Notes: Movement? [A5 7F]
+MOVEMENT_679: !script
+  Size: 79
+  Offset: 0xC37FCD
+  Charset: movement
+MOVEMENT_680: !script
+  Size: 48
+  Offset: 0xC3801C
+  Charset: movement
+MOVEMENT_681: !script
+  Size: 80
+  Offset: 0xC3804C
+  Charset: movement
+MOVEMENT_682: !script
+  Size: 36
+  Offset: 0xC3809C
+  Charset: movement
+MOVEMENT_683: !script
+  Size: 70
+  Offset: 0xC380C0
+  Charset: movement
+UNKNOWN_C38106: !unknown
+  Size: 20
+  Offset: 0xC38106
+  Notes: Movement? [06 81]
+UNKNOWN_C3811A: !unknown
+  Size: 27
+  Offset: 0xC3811A
+  Notes: Movement? [1A 81]
+UNKNOWN_C38135: !unknown
+  Size: 17
+  Offset: 0xC38135
+  Notes: Movement? [35 81]
+MOVEMENT_684: !script
+  Size: 70
+  Offset: 0xC38146
+  Charset: movement
+UNKNOWN_C3818C: !unknown
+  Size: 27
+  Offset: 0xC3818C
+  Notes: Movement? [8C 81]
+UNKNOWN_C381A7: !unknown
+  Size: 17
+  Offset: 0xC381A7
+  Notes: Movement? [A7 81]
+MOVEMENT_685: !script
+  Size: 40
+  Offset: 0xC381B8
+  Charset: movement
+MOVEMENT_686: !script
+  Size: 40
+  Offset: 0xC381E0
+  Charset: movement
+MOVEMENT_687: !script
+  Size: 40
+  Offset: 0xC38208
+  Charset: movement
+MOVEMENT_688: !script
+  Size: 52
+  Offset: 0xC38230
+  Charset: movement
+MOVEMENT_689: !script
+  Size: 52
+  Offset: 0xC38264
+  Charset: movement
+MOVEMENT_690: !script
+  Size: 52
+  Offset: 0xC38298
+  Charset: movement
+MOVEMENT_691: !script
+  Size: 61
+  Offset: 0xC382CC
+  Charset: movement
+MOVEMENT_692: !script
+  Size: 84
+  Offset: 0xC38309
+  Charset: movement
+UNKNOWN_C3835D: !unknown
+  Size: 19
+  Offset: 0xC3835D
+  Notes: Movement? [5D 83]
+UNKNOWN_C38370: !unknown
+  Size: 19
+  Offset: 0xC38370
+  Notes: Movement? [70 83]
+UNKNOWN_C38383: !unknown
+  Size: 19
+  Offset: 0xC38383
+  Notes: Movement? [83 83]
+UNKNOWN_C38396: !unknown
+  Size: 19
+  Offset: 0xC38396
+  Notes: Movement? [96 83]
+UNKNOWN_C383A9: !unknown
+  Size: 19
+  Offset: 0xC383A9
+  Notes: Movement? [A9 83]
+UNKNOWN_C383BC: !unknown
+  Size: 22
+  Offset: 0xC383BC
+  Notes: Movement? [BC 83]
+MOVEMENT_693: !script
+  Size: 56
+  Offset: 0xC383D2
+  Charset: movement
+MOVEMENT_694: !script
+  Size: 56
+  Offset: 0xC3840A
+  Charset: movement
+MOVEMENT_695: !script
+  Size: 150
+  Offset: 0xC38442
+  Charset: movement
+MOVEMENT_696: !script
+  Size: 11
+  Offset: 0xC384D8
+  Charset: movement
+MOVEMENT_697: !script
+  Size: 11
+  Offset: 0xC384E3
+  Charset: movement
+MOVEMENT_698: !script
+  Size: 11
+  Offset: 0xC384EE
+  Charset: movement
+UNKNOWN_C384F9: !unknown
+  Size: 28
+  Offset: 0xC384F9
+  Notes: Movement? [F9 84]
+MOVEMENT_699: !script
+  Size: 47
+  Offset: 0xC38515
+  Charset: movement
+MOVEMENT_700: !script
+  Size: 147
+  Offset: 0xC38544
+  Charset: movement
+UNKNOWN_C385D7: !unknown
+  Size: 11
+  Offset: 0xC385D7
+  Notes: Movement? [D7 85]
+MOVEMENT_701: !script
+  Size: 150
+  Offset: 0xC385E2
+  Charset: movement
+MOVEMENT_702: !script
+  Size: 23
+  Offset: 0xC38678
+  Charset: movement
+MOVEMENT_703: !script
+  Size: 26
+  Offset: 0xC3868F
+  Charset: movement
+MOVEMENT_704: !script
+  Size: 9
+  Offset: 0xC386A9
+  Charset: movement
+MOVEMENT_705: !script
+  Size: 72
+  Offset: 0xC386B2
+  Charset: movement
+MOVEMENT_706: !script
+  Size: 87
+  Offset: 0xC386FA
+  Charset: movement
+UNKNOWN_C38751: !unknown
+  Size: 32
+  Offset: 0xC38751
+  Notes: Movement? [51 87]
+MOVEMENT_707: !script
+  Size: 9
+  Offset: 0xC38771
+  Charset: movement
+MOVEMENT_708: !script
+  Size: 9
+  Offset: 0xC3877A
+  Charset: movement
+MOVEMENT_709: !script
+  Size: 9
+  Offset: 0xC38783
+  Charset: movement
+MOVEMENT_710: !script
+  Size: 9
+  Offset: 0xC3878C
+  Charset: movement
+UNKNOWN_C38795: !unknown
+  Size: 33
+  Offset: 0xC38795
+  Notes: Movement? [95 87]
+MOVEMENT_712: !script
+  Size: 182
+  Offset: 0xC387B6
+  Charset: movement
+MOVEMENT_711: !script
+  Size: 87
+  Offset: 0xC3886C
+  Charset: movement
+MOVEMENT_713: !script
+  Size: 118
+  Offset: 0xC388C3
+  Charset: movement
+MOVEMENT_714: !script
+  Size: 63
+  Offset: 0xC38939
+  Charset: movement
+UNKNOWN_C38978: !unknown
+  Size: 20
+  Offset: 0xC38978
+  Notes: Movement? [78 89]
+UNKNOWN_C3898C: !unknown
+  Size: 6
+  Offset: 0xC3898C
+  Notes: Movement? [8C 89]
+UNKNOWN_C38992: !unknown
+  Size: 12
+  Offset: 0xC38992
+  Notes: Movement? [92 89]
+UNKNOWN_C3899E: !unknown
+  Size: 31
+  Offset: 0xC3899E
+  Notes: Movement? [9E 89]
+MOVEMENT_715: !script
+  Size: 32
+  Offset: 0xC389BD
+  Charset: movement
+MOVEMENT_716: !script
+  Size: 30
+  Offset: 0xC389DD
+  Charset: movement
+MOVEMENT_717: !script
+  Size: 182
+  Offset: 0xC389FB
+  Charset: movement
+MOVEMENT_718: !script
+  Size: 43
+  Offset: 0xC38AB1
+  Charset: movement
+MOVEMENT_719: !script
+  Size: 77
+  Offset: 0xC38ADC
+  Charset: movement
+UNKNOWN_C38B29: !unknown
+  Size: 17
+  Offset: 0xC38B29
+  Notes: Movement? [29 8B]
+MOVEMENT_720: !script
+  Size: 35
+  Offset: 0xC38B3A
+  Charset: movement
+MOVEMENT_721: !script
+  Size: 34
+  Offset: 0xC38B5D
+  Charset: movement
+MOVEMENT_722: !script
+  Size: 70
+  Offset: 0xC38B7F
+  Charset: movement
+MOVEMENT_723: !script
+  Size: 55
+  Offset: 0xC38BC5
+  Charset: movement
+MOVEMENT_724: !script
+  Size: 128
+  Offset: 0xC38BFC
+  Charset: movement
+MOVEMENT_725: !script
+  Size: 52
+  Offset: 0xC38C7C
+  Charset: movement
+MOVEMENT_726: !script
+  Size: 52
+  Offset: 0xC38CB0
+  Charset: movement
+MOVEMENT_727: !script
+  Size: 52
+  Offset: 0xC38CE4
+  Charset: movement
+MOVEMENT_728: !script
+  Size: 56
+  Offset: 0xC38D18
+  Charset: movement
+MOVEMENT_729: !script
+  Size: 99
+  Offset: 0xC38D50
+  Charset: movement
+MOVEMENT_730: !script
+  Size: 37
+  Offset: 0xC38DB3
+  Charset: movement
+MOVEMENT_731: !script
+  Size: 36
+  Offset: 0xC38DD8
+  Charset: movement
+MOVEMENT_732: !script
+  Size: 54
+  Offset: 0xC38DFC
+  Charset: movement
+MOVEMENT_733: !script
+  Size: 47
+  Offset: 0xC38E32
+  Charset: movement
+MOVEMENT_734: !script
+  Size: 40
+  Offset: 0xC38E61
+  Charset: movement
+MOVEMENT_735: !script
+  Size: 48
+  Offset: 0xC38E89
+  Charset: movement
+MOVEMENT_736: !script
+  Size: 49
+  Offset: 0xC38EB9
+  Charset: movement
+MOVEMENT_737: !script
+  Size: 7
+  Offset: 0xC38EEA
+  Charset: movement
+MOVEMENT_738: !script
+  Size: 7
+  Offset: 0xC38EF1
+  Charset: movement
+MOVEMENT_739: !script
+  Size: 7
+  Offset: 0xC38EF8
+  Charset: movement
+MOVEMENT_740: !script
+  Size: 7
+  Offset: 0xC38EFF
+  Charset: movement
+UNKNOWN_C38F06: !unknown
+  Size: 21
+  Offset: 0xC38F06
+  Notes: Movement? [06 8F]
+MOVEMENT_741: !script
+  Size: 30
+  Offset: 0xC38F1B
+  Charset: movement
+MOVEMENT_742: !script
+  Size: 77
+  Offset: 0xC38F39
+  Charset: movement
+UNKNOWN_C38F86: !unknown
+  Size: 11
+  Offset: 0xC38F86
+  Notes: Movement? [86 8F]
+MOVEMENT_743: !script
+  Size: 61
+  Offset: 0xC38F91
+  Charset: movement
+UNKNOWN_C38FCE: !unknown
+  Size: 17
+  Offset: 0xC38FCE
+  Notes: Movement? [CE 8F]
+MOVEMENT_744: !script
+  Size: 67
+  Offset: 0xC38FDF
+  Charset: movement
+MOVEMENT_745: !script
+  Size: 3
+  Offset: 0xC39022
+  Charset: movement
+MOVEMENT_746: !script
+  Size: 11
+  Offset: 0xC39025
+  Charset: movement
+MOVEMENT_747: !script
+  Size: 35
+  Offset: 0xC39030
+  Charset: movement
+MOVEMENT_749: !script
+  Size: 31
+  Offset: 0xC39053
+  Charset: movement
+MOVEMENT_755: !script
+  Size: 14
+  Offset: 0xC39072
+  Charset: movement
+MOVEMENT_756: !script
+  Size: 51
+  Offset: 0xC39080
+  Charset: movement
+MOVEMENT_748: !script
+  Size: 51
+  Offset: 0xC390B3
+  Charset: movement
+MOVEMENT_750: !script
+  Size: 111
+  Offset: 0xC390E6
+  Charset: movement
+MOVEMENT_751: !script
+  Size: 53
+  Offset: 0xC39155
+  Charset: movement
+MOVEMENT_752: !script
+  Size: 36
+  Offset: 0xC3918A
+  Charset: movement
+MOVEMENT_753: !script
+  Size: 53
+  Offset: 0xC391AE
+  Charset: movement
+MOVEMENT_754: !script
+  Size: 48
+  Offset: 0xC391E3
+  Charset: movement
+MOVEMENT_757: !script
+  Size: 49
+  Offset: 0xC39213
+  Charset: movement
+UNKNOWN_C39244: !unknown
+  Size: 9
+  Offset: 0xC39244
+  Notes: Movement? [44 92]
+MOVEMENT_758: !script
+  Size: 66
+  Offset: 0xC3924D
+  Charset: movement
+MOVEMENT_759: !script
+  Size: 28
+  Offset: 0xC3928F
+  Charset: movement
+MOVEMENT_760: !script
+  Size: 284
+  Offset: 0xC392AB
+  Charset: movement
+MOVEMENT_761: !script
+  Size: 22
+  Offset: 0xC393C7
+  Charset: movement
+MOVEMENT_762: !script
+  Size: 31
+  Offset: 0xC393DD
+  Charset: movement
+MOVEMENT_763: !script
+  Size: 68
+  Offset: 0xC393FC
+  Charset: movement
+MOVEMENT_764: !script
+  Size: 65
+  Offset: 0xC39440
+  Charset: movement
+UNKNOWN_C39481: !unknown
+  Size: 26
+  Offset: 0xC39481
+  Notes: Movement? [81 94]
+MOVEMENT_862: !script
+  Size: 49
+  Offset: 0xC3949B
+  Charset: movement
+MOVEMENT_863: !script
+  Size: 49
+  Offset: 0xC394CC
+  Charset: movement
+MOVEMENT_864: !script
+  Size: 49
+  Offset: 0xC394FD
+  Charset: movement
+MOVEMENT_865: !script
+  Size: 49
+  Offset: 0xC3952E
+  Charset: movement
+MOVEMENT_866: !script
+  Size: 49
+  Offset: 0xC3955F
+  Charset: movement
+MOVEMENT_867: !script
+  Size: 49
+  Offset: 0xC39590
+  Charset: movement
+MOVEMENT_868: !script
+  Size: 49
+  Offset: 0xC395C1
+  Charset: movement
+MOVEMENT_869: !script
+  Size: 49
+  Offset: 0xC395F2
+  Charset: movement
+MOVEMENT_870: !script
+  Size: 49
+  Offset: 0xC39623
+  Charset: movement
+MOVEMENT_871: !script
+  Size: 49
+  Offset: 0xC39654
+  Charset: movement
+MOVEMENT_872: !script
+  Size: 49
+  Offset: 0xC39685
+  Charset: movement
+MOVEMENT_873: !script
+  Size: 49
+  Offset: 0xC396B6
+  Charset: movement
+MOVEMENT_874: !script
+  Size: 49
+  Offset: 0xC396E7
+  Charset: movement
+MOVEMENT_875: !script
+  Size: 49
+  Offset: 0xC39718
+  Charset: movement
+MOVEMENT_876: !script
+  Size: 49
+  Offset: 0xC39749
+  Charset: movement
+MOVEMENT_877: !script
+  Size: 49
+  Offset: 0xC3977A
+  Charset: movement
+MOVEMENT_878: !script
+  Size: 49
+  Offset: 0xC397AB
+  Charset: movement
+MOVEMENT_879: !script
+  Size: 49
+  Offset: 0xC397DC
+  Charset: movement
+MOVEMENT_880: !script
+  Size: 49
+  Offset: 0xC3980D
+  Charset: movement
+MOVEMENT_881: !script
+  Size: 49
+  Offset: 0xC3983E
+  Charset: movement
+MOVEMENT_882: !script
+  Size: 49
+  Offset: 0xC3986F
+  Charset: movement
+MOVEMENT_883: !script
+  Size: 49
+  Offset: 0xC398A0
+  Charset: movement
+MOVEMENT_884: !script
+  Size: 49
+  Offset: 0xC398D1
+  Charset: movement
+MOVEMENT_885: !script
+  Size: 49
+  Offset: 0xC39902
+  Charset: movement
+MOVEMENT_886: !script
+  Size: 49
+  Offset: 0xC39933
+  Charset: movement
+MOVEMENT_887: !script
+  Size: 49
+  Offset: 0xC39964
+  Charset: movement
+MOVEMENT_888: !script
+  Size: 49
+  Offset: 0xC39995
+  Charset: movement
+MOVEMENT_889: !script
+  Size: 49
+  Offset: 0xC399C6
+  Charset: movement
+MOVEMENT_890: !script
+  Size: 49
+  Offset: 0xC399F7
+  Charset: movement
+MOVEMENT_891: !script
+  Size: 49
+  Offset: 0xC39A28
+  Charset: movement
+MOVEMENT_892: !script
+  Size: 49
+  Offset: 0xC39A59
+  Charset: movement
+MOVEMENT_893: !script
+  Size: 49
+  Offset: 0xC39A8A
+  Charset: movement
+UNKNOWN_C39ABB: !unknown
+  Size: 12
+  Offset: 0xC39ABB
+  Notes: Movement? [BB 9A]
+UNKNOWN_C39AC7: !unknown
+  Size: 18
+  Offset: 0xC39AC7
+  Notes: Movement? [C7 9A]
+MOVEMENT_765: !script
+  Size: 33
+  Offset: 0xC39AD9
+  Charset: movement
+MOVEMENT_766: !script
+  Size: 43
+  Offset: 0xC39AFA
+  Charset: movement
+MOVEMENT_767: !script
+  Size: 97
+  Offset: 0xC39B25
+  Charset: movement
+MOVEMENT_768: !script
+  Size: 337
+  Offset: 0xC39B86
+  Charset: movement
+MOVEMENT_769: !script
+  Size: 102
+  Offset: 0xC39CD7
+  Charset: movement
+MOVEMENT_770: !script
+  Size: 72
+  Offset: 0xC39D3D
+  Charset: movement
+MOVEMENT_771: !script
+  Size: 74
+  Offset: 0xC39D85
+  Charset: movement
+MOVEMENT_772: !script
+  Size: 50
+  Offset: 0xC39DCF
+  Charset: movement
+UNKNOWN_C39E01: !unknown
+  Size: 13
+  Offset: 0xC39E01
+  Notes: Movement? [01 9E]
+UNKNOWN_C39E0E: !unknown
+  Size: 5
+  Offset: 0xC39E0E
+  Notes: Movement? [0E 9E]
+MOVEMENT_773: !script
+  Size: 15
+  Offset: 0xC39E13
+  Charset: movement
+MOVEMENT_774: !script
+  Size: 46
+  Offset: 0xC39E22
+  Charset: movement
+MOVEMENT_775: !script
+  Size: 40
+  Offset: 0xC39E50
+  Charset: movement
+UNKNOWN_C39E78: !unknown
+  Size: 3
+  Offset: 0xC39E78
+  Notes: Movement? [78 9E]
+MOVEMENT_777: !script
+  Size: 8
+  Offset: 0xC39E7B
+  Charset: movement
+MOVEMENT_778: !script
+  Size: 8
+  Offset: 0xC39E83
+  Charset: movement
+MOVEMENT_776: !script
+  Size: 43
+  Offset: 0xC39E8B
+  Charset: movement
+MOVEMENT_779: !script
+  Size: 20
+  Offset: 0xC39EB6
+  Charset: movement
+MOVEMENT_780: !script
+  Size: 20
+  Offset: 0xC39ECA
+  Charset: movement
+MOVEMENT_781: !script
+  Size: 20
+  Offset: 0xC39EDE
+  Charset: movement
+MOVEMENT_782: !script
+  Size: 77
+  Offset: 0xC39EF2
+  Charset: movement
+UNKNOWN_C39F3F: !unknown
+  Size: 40
+  Offset: 0xC39F3F
+  Notes: Movement? [3F 9F]
+UNKNOWN_C39F67: !unknown
+  Size: 19
+  Offset: 0xC39F67
+  Notes: Movement? [67 9F]
+UNKNOWN_C39F7A: !unknown
+  Size: 19
+  Offset: 0xC39F7A
+  Notes: Movement? [7A 9F]
+UNKNOWN_C39F8D: !unknown
+  Size: 19
+  Offset: 0xC39F8D
+  Notes: Movement? [8D 9F]
+MOVEMENT_783: !script
+  Size: 26
+  Offset: 0xC39FA0
+  Charset: movement
+MOVEMENT_784: !script
+  Size: 56
+  Offset: 0xC39FBA
+  Charset: movement
+UNKNOWN_C39FF2: !array
+  Size: 30
+  Item Type: !pointer
+    Size: 2
+  Offset: 0xC39FF2
+UNKNOWN_C3A010: !unknown
+  Size: 0x33
+  Offset: 0xC3A010
+MOVEMENT_1: !script
+  Size: 27
+  Offset: 0xC3A043
+  Charset: movement
+MOVEMENT_2: !script
+  Size: 33
+  Offset: 0xC3A05E
+  Charset: movement
+UNKNOWN_C3A07F: !unknown
+  Size: 1
+  Offset: 0xC3A07F
+  Notes: Movement? [7F A0]
+MOVEMENT_3: !script
+  Size: 25
+  Offset: 0xC3A080
+  Charset: movement
+MOVEMENT_894: !script
+  Size: 6
+  Offset: 0xC3A099
+  Charset: movement
+UNKNOWN_C3A09F: !unknown
+  Size: 19
+  Offset: 0xC3A09F
+  Notes: Movement? [9F A0]
+UNKNOWN_C3A0B2: !unknown
+  Size: 19
+  Offset: 0xC3A0B2
+  Notes: Movement? [B2 A0]
+UNKNOWN_C3A0C5: !unknown
+  Size: 19
+  Offset: 0xC3A0C5
+  Notes: Movement? [C5 A0]
+UNKNOWN_C3A0D8: !unknown
+  Size: 86
+  Offset: 0xC3A0D8
+  Notes: Movement? [D8 A0]
+UNKNOWN_C3A12E: !unknown
+  Size: 43
+  Offset: 0xC3A12E
+  Notes: Movement? [2E A1]
+UNKNOWN_C3A159: !unknown
+  Size: 5
+  Offset: 0xC3A159
+  Notes: Movement? [59 A1]
+UNKNOWN_C3A15E: !unknown
+  Size: 29
+  Offset: 0xC3A15E
+  Notes: Movement? [5E A1]
+UNKNOWN_C3A17B: !unknown
+  Size: 20
+  Offset: 0xC3A17B
+  Notes: Movement? [7B A1]
+UNKNOWN_C3A18F: !unknown
+  Size: 20
+  Offset: 0xC3A18F
+  Notes: Movement? [8F A1]
+UNKNOWN_C3A1A3: !unknown
+  Size: 20
+  Offset: 0xC3A1A3
+  Notes: Movement? [A3 A1]
+UNKNOWN_C3A1B7: !unknown
+  Size: 20
+  Offset: 0xC3A1B7
+  Notes: Movement? [B7 A1]
+UNKNOWN_C3A1CB: !unknown
+  Size: 20
+  Offset: 0xC3A1CB
+  Notes: Movement? [CB A1]
+UNKNOWN_C3A1DF: !unknown
+  Size: 20
+  Offset: 0xC3A1DF
+  Notes: Movement? [DF A1]
+UNKNOWN_C3A1F3: !unknown
+  Size: 17
+  Offset: 0xC3A1F3
+  Notes: Movement? [F3 A1]
+MOVEMENT_35: !script
+  Size: 5
+  Offset: 0xC3A204
+  Charset: movement
+UNKNOWN_C3A209: !unknown
+  Size: 5
+  Offset: 0xC3A209
+  Notes: Movement? [09 A2]
+UNKNOWN_C3A20E: !unknown
+  Size: 20
+  Offset: 0xC3A20E
+  Notes: Movement? [0E A2]
+UNKNOWN_C3A222: !unknown
+  Size: 10
+  Offset: 0xC3A222
+  Notes: Movement? [22 A2]
+UNKNOWN_C3A22C: !unknown
+  Size: 17
+  Offset: 0xC3A22C
+  Notes: Movement? [2C A2]
+UNKNOWN_C3A23D: !unknown
+  Size: 17
+  Offset: 0xC3A23D
+  Notes: Movement? [3D A2]
+UNKNOWN_C3A24E: !unknown
+  Size: 17
+  Offset: 0xC3A24E
+  Notes: Movement? [4E A2]
+UNKNOWN_C3A25F: !unknown
+  Size: 3
+  Offset: 0xC3A25F
+  Notes: Movement? [5F A2]
+UNKNOWN_C3A262: !unknown
+  Size: 15
+  Offset: 0xC3A262
+  Notes: Movement? [62 A2]
+UNKNOWN_C3A271: !unknown
+  Size: 1
+  Offset: 0xC3A271
+  Notes: Movement? [71 A2]
+UNKNOWN_C3A272: !unknown
+  Size: 1
+  Offset: 0xC3A272
+  Notes: Movement? [72 A2]
+MOVEMENT_4: !script
+  Size: 20
+  Offset: 0xC3A273
+  Charset: movement
+MOVEMENT_7: !script
+  Size: 18
+  Offset: 0xC3A287
+  Charset: movement
+MOVEMENT_9: !script
+  Size: 17
+  Offset: 0xC3A299
+  Charset: movement
+MOVEMENT_8: !script
+  Size: 28
+  Offset: 0xC3A2AA
+  Charset: movement
+MOVEMENT_861: !script
+  Size: 13
+  Offset: 0xC3A2C6
+  Charset: movement
+MOVEMENT_10_11: !script
+  Size: 17
+  Offset: 0xC3A2D3
+  Charset: movement
+MOVEMENT_6_12: !script
+  Size: 87
+  Offset: 0xC3A2E4
+  Charset: movement
+MOVEMENT_13: !script
+  Size: 14
+  Offset: 0xC3A33B
+  Charset: movement
+MOVEMENT_14: !script
+  Size: 14
+  Offset: 0xC3A349
+  Charset: movement
+MOVEMENT_15: !script
+  Size: 14
+  Offset: 0xC3A357
+  Charset: movement
+MOVEMENT_16: !script
+  Size: 14
+  Offset: 0xC3A365
+  Charset: movement
+MOVEMENT_17: !script
+  Size: 14
+  Offset: 0xC3A373
+  Charset: movement
+MOVEMENT_18: !script
+  Size: 32
+  Offset: 0xC3A381
+  Charset: movement
+UNKNOWN_C3A3A1: !unknown
+  Size: 22
+  Offset: 0xC3A3A1
+  Notes: Movement? [A1 A3]
+UNKNOWN_C3A3B7: !unknown
+  Size: 18
+  Offset: 0xC3A3B7
+  Notes: Movement? [B7 A3]
+UNKNOWN_C3A3C9: !unknown
+  Size: 56
+  Offset: 0xC3A3C9
+  Notes: Movement? [C9 A3]
+UNKNOWN_C3A401: !unknown
+  Size: 37
+  Offset: 0xC3A401
+  Notes: Movement? [01 A4]
+UNKNOWN_C3A426: !unknown
+  Size: 7
+  Offset: 0xC3A426
+  Notes: Movement? [26 A4]
+UNKNOWN_C3A42D: !unknown
+  Size: 7
+  Offset: 0xC3A42D
+  Notes: Movement? [2D A4]
+UNKNOWN_C3A434: !unknown
+  Size: 20
+  Offset: 0xC3A434
+  Notes: Movement? [34 A4]
+UNKNOWN_C3A448: !unknown
+  Size: 20
+  Offset: 0xC3A448
+  Notes: Movement? [48 A4]
+UNKNOWN_C3A45C: !unknown
+  Size: 37
+  Offset: 0xC3A45C
+  Notes: Movement? [5C A4]
+MOVEMENT_5: !script
+  Size: 9
+  Offset: 0xC3A481
+  Charset: movement
+MOVEMENT_19: !script
+  Size: 34
+  Offset: 0xC3A48A
+  Charset: movement
+UNKNOWN_C3A4AC: !unknown
+  Size: 29
+  Offset: 0xC3A4AC
+  Notes: Movement? [AC A4]
+MOVEMENT_20: !script
+  Size: 55
+  Offset: 0xC3A4C9
+  Charset: movement
+UNKNOWN_C3A500: !unknown
+  Size: 40
+  Offset: 0xC3A500
+  Notes: Movement? [00 A5]
+UNKNOWN_C3A528: !unknown
+  Size: 33
+  Offset: 0xC3A528
+  Notes: Movement? [28 A5]
+MOVEMENT_21: !script
+  Size: 73
+  Offset: 0xC3A549
+  Charset: movement
+UNKNOWN_C3A592: !unknown
+  Size: 13
+  Offset: 0xC3A592
+  Notes: Movement? [92 A5]
+UNKNOWN_C3A59F: !unknown
+  Size: 42
+  Offset: 0xC3A59F
+  Notes: Movement? [9F A5]
+MOVEMENT_22: !script
+  Size: 61
+  Offset: 0xC3A5C9
+  Charset: movement
+UNKNOWN_C3A606: !unknown
+  Size: 25
+  Offset: 0xC3A606
+  Notes: Movement? [06 A6]
+UNKNOWN_C3A61F: !unknown
+  Size: 36
+  Offset: 0xC3A61F
+  Notes: Movement? [1F A6]
+MOVEMENT_23: !script
+  Size: 52
+  Offset: 0xC3A643
+  Charset: movement
+UNKNOWN_C3A677: !unknown
+  Size: 22
+  Offset: 0xC3A677
+  Notes: Movement? [77 A6]
+UNKNOWN_C3A68D: !unknown
+  Size: 36
+  Offset: 0xC3A68D
+  Notes: Movement? [8D A6]
+UNKNOWN_C3A6B1: !unknown
+  Size: 19
+  Offset: 0xC3A6B1
+  Notes: Movement? [B1 A6]
+MOVEMENT_24: !script
+  Size: 44
+  Offset: 0xC3A6C4
+  Charset: movement
+UNKNOWN_C3A6F0: !unknown
+  Size: 36
+  Offset: 0xC3A6F0
+  Notes: Movement? [F0 A6]
+MOVEMENT_25: !script
+  Size: 53
+  Offset: 0xC3A714
+  Charset: movement
+UNKNOWN_C3A749: !unknown
+  Size: 36
+  Offset: 0xC3A749
+  Notes: Movement? [49 A7]
+UNKNOWN_C3A76D: !unknown
+  Size: 19
+  Offset: 0xC3A76D
+  Notes: Movement? [6D A7]
+MOVEMENT_26: !script
+  Size: 120
+  Offset: 0xC3A780
+  Charset: movement
+MOVEMENT_27: !script
+  Size: 56
+  Offset: 0xC3A7F8
+  Charset: movement
+UNKNOWN_C3A830: !unknown
+  Size: 13
+  Offset: 0xC3A830
+  Notes: Movement? [30 A8]
+UNKNOWN_C3A83D: !unknown
+  Size: 20
+  Offset: 0xC3A83D
+  Notes: Movement? [3D A8]
+UNKNOWN_C3A851: !unknown
+  Size: 35
+  Offset: 0xC3A851
+  Notes: Movement? [51 A8]
+MOVEMENT_28: !script
+  Size: 56
+  Offset: 0xC3A874
+  Charset: movement
+UNKNOWN_C3A8AC: !unknown
+  Size: 38
+  Offset: 0xC3A8AC
+  Notes: Movement? [AC A8]
+MOVEMENT_29: !script
+  Size: 80
+  Offset: 0xC3A8D2
+  Charset: movement
+UNKNOWN_C3A922: !unknown
+  Size: 9
+  Offset: 0xC3A922
+  Notes: Movement? [22 A9]
+UNKNOWN_C3A92B: !unknown
+  Size: 40
+  Offset: 0xC3A92B
+  Notes: Movement? [2B A9]
+MOVEMENT_30: !script
+  Size: 86
+  Offset: 0xC3A953
+  Charset: movement
+UNKNOWN_C3A9A9: !unknown
+  Size: 49
+  Offset: 0xC3A9A9
+  Notes: Movement? [A9 A9]
+MOVEMENT_31: !script
+  Size: 37
+  Offset: 0xC3A9DA
+  Charset: movement
+UNKNOWN_C3A9FF: !unknown
+  Size: 31
+  Offset: 0xC3A9FF
+  Notes: Movement? [FF A9]
+UNKNOWN_C3AA1E: !unknown
+  Size: 13
+  Offset: 0xC3AA1E
+  Notes: Movement? [1E AA]
+UNKNOWN_C3AA2B: !unknown
+  Size: 13
+  Offset: 0xC3AA2B
+  Notes: Movement? [2B AA]
+UNKNOWN_C3AA38: !unknown
+  Size: 14
+  Offset: 0xC3AA38
+  Notes: Movement? [38 AA]
+UNKNOWN_C3AA46: !unknown
+  Size: 20
+  Offset: 0xC3AA46
+  Notes: Movement? [46 AA]
+UNKNOWN_C3AA5A: !unknown
+  Size: 20
+  Offset: 0xC3AA5A
+  Notes: Movement? [5A AA]
+UNKNOWN_C3AA6E: !unknown
+  Size: 20
+  Offset: 0xC3AA6E
+  Notes: Movement? [6E AA]
+UNKNOWN_C3AA82: !unknown
+  Size: 20
+  Offset: 0xC3AA82
+  Notes: Movement? [82 AA]
+UNKNOWN_C3AA96: !unknown
+  Size: 20
+  Offset: 0xC3AA96
+  Notes: Movement? [96 AA]
+UNKNOWN_C3AAAA: !unknown
+  Size: 14
+  Offset: 0xC3AAAA
+  Notes: Movement? [AA AA]
+UNKNOWN_C3AAB8: !unknown
+  Size: 10
+  Offset: 0xC3AAB8
+  Notes: Movement? [B8 AA]
+UNKNOWN_C3AAC2: !unknown
+  Size: 20
+  Offset: 0xC3AAC2
+  Notes: Movement? [C2 AA]
+UNKNOWN_C3AAD6: !unknown
+  Size: 20
+  Offset: 0xC3AAD6
+  Notes: Movement? [D6 AA]
+UNKNOWN_C3AAEA: !unknown
+  Size: 20
+  Offset: 0xC3AAEA
+  Notes: Movement? [EA AA]
+UNKNOWN_C3AAFE: !unknown
+  Size: 20
+  Offset: 0xC3AAFE
+  Notes: Movement? [FE AA]
+UNKNOWN_C3AB12: !unknown
+  Size: 20
+  Offset: 0xC3AB12
+  Notes: Movement? [12 AB]
+UNKNOWN_C3AB26: !unknown
+  Size: 17
+  Offset: 0xC3AB26
+  Notes: Movement? [26 AB]
+UNKNOWN_C3AB37: !unknown
+  Size: 13
+  Offset: 0xC3AB37
+  Notes: Movement? [37 AB]
+UNKNOWN_C3AB44: !unknown
+  Size: 21
+  Offset: 0xC3AB44
+  Notes: Movement? [44 AB]
+UNKNOWN_C3AB59: !unknown
+  Size: 14
+  Offset: 0xC3AB59
+  Notes: Movement? [59 AB]
+UNKNOWN_C3AB67: !unknown
+  Size: 35
+  Offset: 0xC3AB67
+  Notes: Movement? [67 AB]
+UNKNOWN_C3AB8A: !unknown
+  Size: 10
+  Offset: 0xC3AB8A
+  Notes: Movement? [8A AB]
+UNKNOWN_C3AB94: !unknown
+  Size: 10
+  Offset: 0xC3AB94
+  Notes: Movement? [94 AB]
+UNKNOWN_C3AB9E: !unknown
+  Size: 14
+  Offset: 0xC3AB9E
+  Notes: Movement? [9E AB]
+UNKNOWN_C3ABAC: !unknown
+  Size: 52
+  Offset: 0xC3ABAC
+  Notes: Movement? [AC AB]
+UNKNOWN_C3ABE0: !unknown
+  Size: 13
+  Offset: 0xC3ABE0
+  Notes: Movement? [E0 AB]
+MOVEMENT_476: !script
+  Size: 58
+  Offset: 0xC3ABED
+  Charset: movement
+MOVEMENT_477: !script
+  Size: 58
+  Offset: 0xC3AC27
+  Charset: movement
+MOVEMENT_478: !script
+  Size: 76
+  Offset: 0xC3AC61
+  Charset: movement
+MOVEMENT_36: !script
+  Size: 205
+  Offset: 0xC3ACAD
+  Charset: movement
+MOVEMENT_37: !script
+  Size: 76
+  Offset: 0xC3AD7A
+  Charset: movement
+UNKNOWN_C3ADC6: !unknown
+  Size: 27
+  Offset: 0xC3ADC6
+  Notes: Movement? [C6 AD]
+MOVEMENT_43: !script
+  Size: 33
+  Offset: 0xC3ADE1
+  Charset: movement
+MOVEMENT_42: !script
+  Size: 13
+  Offset: 0xC3AE02
+  Charset: movement
+MOVEMENT_44: !script
+  Size: 15
+  Offset: 0xC3AE0F
+  Charset: movement
+MOVEMENT_38: !script
+  Size: 74
+  Offset: 0xC3AE1E
+  Charset: movement
+UNKNOWN_C3AE68: !unknown
+  Size: 16
+  Offset: 0xC3AE68
+  Notes: Movement? [68 AE]
+MOVEMENT_39: !script
+  Size: 40
+  Offset: 0xC3AE78
+  Charset: movement
+MOVEMENT_40: !script
+  Size: 12
+  Offset: 0xC3AEA0
+  Charset: movement
+MOVEMENT_41: !script
+  Size: 99
+  Offset: 0xC3AEAC
+  Charset: movement
+MOVEMENT_45: !script
+  Size: 63
+  Offset: 0xC3AF0F
+  Charset: movement
+MOVEMENT_46: !script
+  Size: 85
+  Offset: 0xC3AF4E
+  Charset: movement
+UNKNOWN_C3AFA3: !unknown
+  Size: 9
+  Offset: 0xC3AFA3
+  Notes: Movement? [A3 AF]
+MOVEMENT_55: !script
+  Size: 44
+  Offset: 0xC3AFAC
+  Charset: movement
+MOVEMENT_47: !script
+  Size: 34
+  Offset: 0xC3AFD8
+  Charset: movement
+MOVEMENT_48: !script
+  Size: 39
+  Offset: 0xC3AFFA
+  Charset: movement
+MOVEMENT_49: !script
+  Size: 44
+  Offset: 0xC3B021
+  Charset: movement
+MOVEMENT_53: !script
+  Size: 32
+  Offset: 0xC3B04D
+  Charset: movement
+MOVEMENT_51: !script
+  Size: 73
+  Offset: 0xC3B06D
+  Charset: movement
+UNKNOWN_C3B0B6: !unknown
+  Size: 54
+  Offset: 0xC3B0B6
+  Notes: Movement? [B6 B0]
+MOVEMENT_50: !script
+  Size: 73
+  Offset: 0xC3B0EC
+  Charset: movement
+UNKNOWN_C3B135: !unknown
+  Size: 9
+  Offset: 0xC3B135
+  Notes: Movement? [35 B1]
+MOVEMENT_54: !script
+  Size: 104
+  Offset: 0xC3B13E
+  Charset: movement
+MOVEMENT_52: !script
+  Size: 67
+  Offset: 0xC3B1A6
+  Charset: movement
+MOVEMENT_56: !script
+  Size: 31
+  Offset: 0xC3B1E9
+  Charset: movement
+MOVEMENT_57: !script
+  Size: 85
+  Offset: 0xC3B208
+  Charset: movement
+MOVEMENT_58: !script
+  Size: 85
+  Offset: 0xC3B25D
+  Charset: movement
+MOVEMENT_59: !script
+  Size: 72
+  Offset: 0xC3B2B2
+  Charset: movement
+MOVEMENT_60: !script
+  Size: 99
+  Offset: 0xC3B2FA
+  Charset: movement
+MOVEMENT_61: !script
+  Size: 69
+  Offset: 0xC3B35D
+  Charset: movement
+MOVEMENT_62: !script
+  Size: 38
+  Offset: 0xC3B3A2
+  Charset: movement
+MOVEMENT_63: !script
+  Size: 105
+  Offset: 0xC3B3C8
+  Charset: movement
+UNKNOWN_C3B431: !unknown
+  Size: 20
+  Offset: 0xC3B431
+  Notes: Movement? [31 B4]
+MOVEMENT_64: !script
+  Size: 42
+  Offset: 0xC3B445
+  Charset: movement
+MOVEMENT_65: !script
+  Size: 54
+  Offset: 0xC3B46F
+  Charset: movement
+MOVEMENT_66: !script
+  Size: 86
+  Offset: 0xC3B4A5
+  Charset: movement
+MOVEMENT_67: !script
+  Size: 47
+  Offset: 0xC3B4FB
+  Charset: movement
+UNKNOWN_C3B52A: !unknown
+  Size: 14
+  Offset: 0xC3B52A
+  Notes: Movement? [2A B5]
+MOVEMENT_69: !script
+  Size: 158
+  Offset: 0xC3B538
+  Charset: movement
+MOVEMENT_68: !script
+  Size: 93
+  Offset: 0xC3B5D6
+  Charset: movement
+MOVEMENT_70: !script
+  Size: 105
+  Offset: 0xC3B633
+  Charset: movement
+MOVEMENT_71: !script
+  Size: 56
+  Offset: 0xC3B69C
+  Charset: movement
+MOVEMENT_72: !script
+  Size: 56
+  Offset: 0xC3B6D4
+  Charset: movement
+UNKNOWN_C3B70C: !unknown
+  Size: 75
+  Offset: 0xC3B70C
+  Notes: Movement? [0C B7]
+MOVEMENT_73: !script
+  Size: 45
+  Offset: 0xC3B757
+  Charset: movement
+MOVEMENT_74: !script
+  Size: 56
+  Offset: 0xC3B784
+  Charset: movement
+MOVEMENT_75: !script
+  Size: 51
+  Offset: 0xC3B7BC
+  Charset: movement
+MOVEMENT_76: !script
+  Size: 33
+  Offset: 0xC3B7EF
+  Charset: movement
+MOVEMENT_77: !script
+  Size: 92
+  Offset: 0xC3B810
+  Charset: movement
+MOVEMENT_78: !script
+  Size: 57
+  Offset: 0xC3B86C
+  Charset: movement
+MOVEMENT_79: !script
+  Size: 67
+  Offset: 0xC3B8A5
+  Charset: movement
+MOVEMENT_80: !script
+  Size: 26
+  Offset: 0xC3B8E8
+  Charset: movement
+MOVEMENT_81: !script
+  Size: 36
+  Offset: 0xC3B902
+  Charset: movement
+MOVEMENT_82: !script
+  Size: 55
+  Offset: 0xC3B926
+  Charset: movement
+MOVEMENT_83: !script
+  Size: 89
+  Offset: 0xC3B95D
+  Charset: movement
+MOVEMENT_84: !script
+  Size: 30
+  Offset: 0xC3B9B6
+  Charset: movement
+MOVEMENT_85: !script
+  Size: 30
+  Offset: 0xC3B9D4
+  Charset: movement
+MOVEMENT_86: !script
+  Size: 21
+  Offset: 0xC3B9F2
+  Charset: movement
+MOVEMENT_88: !script
+  Size: 21
+  Offset: 0xC3BA07
+  Charset: movement
+MOVEMENT_87: !script
+  Size: 21
+  Offset: 0xC3BA1C
+  Charset: movement
+MOVEMENT_89: !script
+  Size: 30
+  Offset: 0xC3BA31
+  Charset: movement
+MOVEMENT_90: !script
+  Size: 21
+  Offset: 0xC3BA4F
+  Charset: movement
+MOVEMENT_94: !script
+  Size: 3
+  Offset: 0xC3BA64
+  Charset: movement
+MOVEMENT_95: !script
+  Size: 3
+  Offset: 0xC3BA67
+  Charset: movement
+MOVEMENT_96: !script
+  Size: 3
+  Offset: 0xC3BA6A
+  Charset: movement
+MOVEMENT_97: !script
+  Size: 3
+  Offset: 0xC3BA6D
+  Charset: movement
+MOVEMENT_98: !script
+  Size: 44
+  Offset: 0xC3BA70
+  Charset: movement
+UNKNOWN_C3BA9C: !unknown
+  Size: 7
+  Offset: 0xC3BA9C
+  Notes: Movement? [9C BA]
+UNKNOWN_C3BAA3: !unknown
+  Size: 33
+  Offset: 0xC3BAA3
+  Notes: Movement? [A3 BA]
+UNKNOWN_C3BAC4: !unknown
+  Size: 19
+  Offset: 0xC3BAC4
+  Notes: Movement? [C4 BA]
+UNKNOWN_C3BAD7: !unknown
+  Size: 19
+  Offset: 0xC3BAD7
+  Notes: Movement? [D7 BA]
+MOVEMENT_91: !script
+  Size: 28
+  Offset: 0xC3BAEA
+  Charset: movement
+UNKNOWN_C3BB06: !unknown
+  Size: 17
+  Offset: 0xC3BB06
+  Notes: Movement? [06 BB]
+MOVEMENT_92: !script
+  Size: 28
+  Offset: 0xC3BB17
+  Charset: movement
+MOVEMENT_99: !script
+  Size: 25
+  Offset: 0xC3BB33
+  Charset: movement
+MOVEMENT_100: !script
+  Size: 16
+  Offset: 0xC3BB4C
+  Charset: movement
+UNKNOWN_C3BB5C: !unknown
+  Size: 23
+  Offset: 0xC3BB5C
+  Notes: Movement? [5C BB]
+UNKNOWN_C3BB73: !unknown
+  Size: 33
+  Offset: 0xC3BB73
+  Notes: Movement? [73 BB]
+MOVEMENT_93: !script
+  Size: 35
+  Offset: 0xC3BB94
+  Charset: movement
+MOVEMENT_103: !script
+  Size: 83
+  Offset: 0xC3BBB7
+  Charset: movement
+MOVEMENT_104: !script
+  Size: 83
+  Offset: 0xC3BC0A
+  Charset: movement
+MOVEMENT_105: !script
+  Size: 83
+  Offset: 0xC3BC5D
+  Charset: movement
+MOVEMENT_106: !script
+  Size: 83
+  Offset: 0xC3BCB0
+  Charset: movement
+UNKNOWN_C3BD03: !unknown
+  Size: 11
+  Offset: 0xC3BD03
+  Notes: Movement? [03 BD]
+MOVEMENT_102: !script
+  Size: 32
+  Offset: 0xC3BD0E
+  Charset: movement
+MOVEMENT_101: !script
+  Size: 40
+  Offset: 0xC3BD2E
+  Charset: movement
+MOVEMENT_107: !script
+  Size: 42
+  Offset: 0xC3BD56
+  Charset: movement
+MOVEMENT_108: !script
+  Size: 32
+  Offset: 0xC3BD80
+  Charset: movement
+MOVEMENT_109: !script
+  Size: 35
+  Offset: 0xC3BDA0
+  Charset: movement
+MOVEMENT_110: !script
+  Size: 62
+  Offset: 0xC3BDC3
+  Charset: movement
+MOVEMENT_111: !script
+  Size: 43
+  Offset: 0xC3BE01
+  Charset: movement
+MOVEMENT_112: !script
+  Size: 43
+  Offset: 0xC3BE2C
+  Charset: movement
+MOVEMENT_113: !script
+  Size: 41
+  Offset: 0xC3BE57
+  Charset: movement
+MOVEMENT_114: !script
+  Size: 36
+  Offset: 0xC3BE80
+  Charset: movement
+UNKNOWN_C3BEA4: !unknown
+  Size: 48
+  Offset: 0xC3BEA4
+  Notes: Movement? [A4 BE]
+UNKNOWN_C3BED4: !unknown
+  Size: 26
+  Offset: 0xC3BED4
+  Notes: Movement? [D4 BE]
+MOVEMENT_115: !script
+  Size: 96
+  Offset: 0xC3BEEE
+  Charset: movement
+MOVEMENT_116: !script
+  Size: 100
+  Offset: 0xC3BF4E
+  Charset: movement
+MOVEMENT_117: !script
+  Size: 100
+  Offset: 0xC3BFB2
+  Charset: movement
+MOVEMENT_118: !script
+  Size: 102
+  Offset: 0xC3C016
+  Charset: movement
+MOVEMENT_119: !script
+  Size: 104
+  Offset: 0xC3C07C
+  Charset: movement
+UNKNOWN_C3C0E4: !unknown
+  Size: 15
+  Offset: 0xC3C0E4
+  Notes: Movement? [E4 C0]
+MOVEMENT_468: !script
+  Size: 14
+  Offset: 0xC3C0F3
+  Charset: movement
+MOVEMENT_469: !script
+  Size: 15
+  Offset: 0xC3C101
+  Charset: movement
+MOVEMENT_470: !script
+  Size: 15
+  Offset: 0xC3C110
+  Charset: movement
+MOVEMENT_471: !script
+  Size: 15
+  Offset: 0xC3C11F
+  Charset: movement
+MOVEMENT_472: !script
+  Size: 21
+  Offset: 0xC3C12E
+  Charset: movement
+UNKNOWN_C3C143: !unknown
+  Size: 36
+  Offset: 0xC3C143
+  Notes: Movement? [43 C1]
+MOVEMENT_473: !script
+  Size: 19
+  Offset: 0xC3C167
+  Charset: movement
+MOVEMENT_474: !script
+  Size: 46
+  Offset: 0xC3C17A
+  Charset: movement
+MOVEMENT_475: !script
+  Size: 56
+  Offset: 0xC3C1A8
+  Charset: movement
+UNKNOWN_C3C1E0: !unknown
+  Size: 47
+  Offset: 0xC3C1E0
+  Notes: Movement? [E0 C1]
+UNKNOWN_C3C20F: !unknown
+  Size: 24
+  Offset: 0xC3C20F
+  Notes: Movement? [0F C2]
+UNKNOWN_C3C227: !unknown
+  Size: 15
+  Offset: 0xC3C227
+  Notes: Movement? [27 C2]
+MOVEMENT_120: !script
+  Size: 34
+  Offset: 0xC3C236
+  Charset: movement
+MOVEMENT_121: !script
+  Size: 42
+  Offset: 0xC3C258
+  Charset: movement
+MOVEMENT_132: !script
+  Size: 54
+  Offset: 0xC3C282
+  Charset: movement
+MOVEMENT_122: !script
+  Size: 16
+  Offset: 0xC3C2B8
+  Charset: movement
+MOVEMENT_123: !script
+  Size: 9
+  Offset: 0xC3C2C8
+  Charset: movement
+MOVEMENT_124: !script
+  Size: 9
+  Offset: 0xC3C2D1
+  Charset: movement
+MOVEMENT_125: !script
+  Size: 9
+  Offset: 0xC3C2DA
+  Charset: movement
+MOVEMENT_126: !script
+  Size: 12
+  Offset: 0xC3C2E3
+  Charset: movement
+UNKNOWN_C3C2EF: !unknown
+  Size: 55
+  Offset: 0xC3C2EF
+  Notes: Movement? [EF C2]
+MOVEMENT_127: !script
+  Size: 16
+  Offset: 0xC3C326
+  Charset: movement
+MOVEMENT_128: !script
+  Size: 9
+  Offset: 0xC3C336
+  Charset: movement
+MOVEMENT_129: !script
+  Size: 9
+  Offset: 0xC3C33F
+  Charset: movement
+MOVEMENT_130: !script
+  Size: 9
+  Offset: 0xC3C348
+  Charset: movement
+MOVEMENT_131: !script
+  Size: 12
+  Offset: 0xC3C351
+  Charset: movement
+UNKNOWN_C3C35D: !unknown
+  Size: 55
+  Offset: 0xC3C35D
+  Notes: Movement? [5D C3]
+MOVEMENT_133: !script
+  Size: 89
+  Offset: 0xC3C394
+  Charset: movement
+MOVEMENT_134: !script
+  Size: 58
+  Offset: 0xC3C3ED
+  Charset: movement
+MOVEMENT_135: !script
+  Size: 71
+  Offset: 0xC3C427
+  Charset: movement
+MOVEMENT_136: !script
+  Size: 97
+  Offset: 0xC3C46E
+  Charset: movement
+MOVEMENT_137: !script
+  Size: 113
+  Offset: 0xC3C4CF
+  Charset: movement
+MOVEMENT_138: !script
+  Size: 58
+  Offset: 0xC3C540
+  Charset: movement
+MOVEMENT_178: !script
+  Size: 32
+  Offset: 0xC3C57A
+  Charset: movement
+MOVEMENT_139: !script
+  Size: 44
+  Offset: 0xC3C59A
+  Charset: movement
+MOVEMENT_140: !script
+  Size: 31
+  Offset: 0xC3C5C6
+  Charset: movement
+UNKNOWN_C3C5E5: !unknown
+  Size: 11
+  Offset: 0xC3C5E5
+  Notes: Movement? [E5 C5]
+MOVEMENT_141: !script
+  Size: 29
+  Offset: 0xC3C5F0
+  Charset: movement
+MOVEMENT_142: !script
+  Size: 39
+  Offset: 0xC3C60D
+  Charset: movement
+MOVEMENT_143: !script
+  Size: 83
+  Offset: 0xC3C634
+  Charset: movement
+MOVEMENT_144: !script
+  Size: 46
+  Offset: 0xC3C687
+  Charset: movement
+MOVEMENT_145: !script
+  Size: 40
+  Offset: 0xC3C6B5
+  Charset: movement
+MOVEMENT_146: !script
+  Size: 106
+  Offset: 0xC3C6DD
+  Charset: movement
+MOVEMENT_162: !script
+  Size: 103
+  Offset: 0xC3C747
+  Charset: movement
+MOVEMENT_165: !script
+  Size: 98
+  Offset: 0xC3C7AE
+  Charset: movement
+UNKNOWN_C3C810: !unknown
+  Size: 10
+  Offset: 0xC3C810
+  Notes: Movement? [10 C8]
+UNKNOWN_C3C81A: !unknown
+  Size: 10
+  Offset: 0xC3C81A
+  Notes: Movement? [1A C8]
+UNKNOWN_C3C824: !unknown
+  Size: 78
+  Offset: 0xC3C824
+  Notes: Movement? [24 C8]
+UNKNOWN_C3C872: !unknown
+  Size: 49
+  Offset: 0xC3C872
+  Notes: Movement? [72 C8]
+MOVEMENT_147: !script
+  Size: 15
+  Offset: 0xC3C8A3
+  Charset: movement
+MOVEMENT_148: !script
+  Size: 15
+  Offset: 0xC3C8B2
+  Charset: movement
+MOVEMENT_149: !script
+  Size: 15
+  Offset: 0xC3C8C1
+  Charset: movement
+MOVEMENT_150: !script
+  Size: 15
+  Offset: 0xC3C8D0
+  Charset: movement
+MOVEMENT_151: !script
+  Size: 15
+  Offset: 0xC3C8DF
+  Charset: movement
+MOVEMENT_152: !script
+  Size: 15
+  Offset: 0xC3C8EE
+  Charset: movement
+UNKNOWN_C3C8FD: !unknown
+  Size: 15
+  Offset: 0xC3C8FD
+  Notes: Movement? [FD C8]
+UNKNOWN_C3C90C: !unknown
+  Size: 66
+  Offset: 0xC3C90C
+  Notes: Movement? [0C C9]
+UNKNOWN_C3C94E: !unknown
+  Size: 66
+  Offset: 0xC3C94E
+  Notes: Movement? [0C C9]
+MOVEMENT_153: !script
+  Size: 80
+  Offset: 0xC3C990
+  Charset: movement
+MOVEMENT_155: !script
+  Size: 94
+  Offset: 0xC3C9E0
+  Charset: movement
+MOVEMENT_154: !script
+  Size: 80
+  Offset: 0xC3CA3E
+  Charset: movement
+MOVEMENT_156: !script
+  Size: 92
+  Offset: 0xC3CA8E
+  Charset: movement
+MOVEMENT_157: !script
+  Size: 78
+  Offset: 0xC3CAEA
+  Charset: movement
+MOVEMENT_159: !script
+  Size: 79
+  Offset: 0xC3CB38
+  Charset: movement
+MOVEMENT_158: !script
+  Size: 78
+  Offset: 0xC3CB87
+  Charset: movement
+MOVEMENT_160: !script
+  Size: 79
+  Offset: 0xC3CBD5
+  Charset: movement
+UNKNOWN_C3CC24: !unknown
+  Size: 56
+  Offset: 0xC3CC24
+  Notes: Movement? [24 CC]
+UNKNOWN_C3CC5C: !unknown
+  Size: 56
+  Offset: 0xC3CC5C
+  Notes: Movement? [5C CC]
+UNKNOWN_C3CC94: !unknown
+  Size: 20
+  Offset: 0xC3CC94
+  Notes: Movement? [94 CC]
+UNKNOWN_C3CCA8: !unknown
+  Size: 13
+  Offset: 0xC3CCA8
+  Notes: Movement? [A8 CC]
+MOVEMENT_161: !script
+  Size: 315
+  Offset: 0xC3CCB5
+  Charset: movement
+MOVEMENT_164: !script
+  Size: 178
+  Offset: 0xC3CDF0
+  Charset: movement
+UNKNOWN_C3CEA2: !unknown
+  Size: 23
+  Offset: 0xC3CEA2
+  Notes: Movement? [A2 CE]
+UNKNOWN_C3CEB9: !unknown
+  Size: 14
+  Offset: 0xC3CEB9
+  Notes: Movement? [B9 CE]
+MOVEMENT_163: !script
+  Size: 46
+  Offset: 0xC3CEC7
+  Charset: movement
+MOVEMENT_166: !script
+  Size: 38
+  Offset: 0xC3CEF5
+  Charset: movement
+MOVEMENT_167: !script
+  Size: 33
+  Offset: 0xC3CF1B
+  Charset: movement
+MOVEMENT_168: !script
+  Size: 15
+  Offset: 0xC3CF3C
+  Charset: movement
+MOVEMENT_169: !script
+  Size: 43
+  Offset: 0xC3CF4B
+  Charset: movement
+MOVEMENT_170: !script
+  Size: 215
+  Offset: 0xC3CF76
+  Charset: movement
+MOVEMENT_171: !script
+  Size: 87
+  Offset: 0xC3D04D
+  Charset: movement
+UNKNOWN_C3D0A4: !unknown
+  Size: 33
+  Offset: 0xC3D0A4
+  Notes: Movement? [A4 D0]
+MOVEMENT_172: !script
+  Size: 41
+  Offset: 0xC3D0C5
+  Charset: movement
+MOVEMENT_173: !script
+  Size: 32
+  Offset: 0xC3D0EE
+  Charset: movement
+MOVEMENT_174: !script
+  Size: 32
+  Offset: 0xC3D10E
+  Charset: movement
+MOVEMENT_175: !script
+  Size: 43
+  Offset: 0xC3D12E
+  Charset: movement
+MOVEMENT_176: !script
+  Size: 25
+  Offset: 0xC3D159
+  Charset: movement
+MOVEMENT_177: !script
+  Size: 36
+  Offset: 0xC3D172
+  Charset: movement
+MOVEMENT_179: !script
+  Size: 51
+  Offset: 0xC3D196
+  Charset: movement
+MOVEMENT_180: !script
+  Size: 47
+  Offset: 0xC3D1C9
+  Charset: movement
+MOVEMENT_181: !script
+  Size: 49
+  Offset: 0xC3D1F8
+  Charset: movement
+MOVEMENT_182: !script
+  Size: 40
+  Offset: 0xC3D229
+  Charset: movement
+MOVEMENT_183: !script
+  Size: 29
+  Offset: 0xC3D251
+  Charset: movement
+MOVEMENT_184: !script
+  Size: 137
+  Offset: 0xC3D26E
+  Charset: movement
+MOVEMENT_185: !script
+  Size: 38
+  Offset: 0xC3D2F7
+  Charset: movement
+MOVEMENT_186: !script
+  Size: 120
+  Offset: 0xC3D31D
+  Charset: movement
+MOVEMENT_187: !script
+  Size: 51
+  Offset: 0xC3D395
+  Charset: movement
+MOVEMENT_188: !script
+  Size: 53
+  Offset: 0xC3D3C8
+  Charset: movement
+MOVEMENT_189: !script
+  Size: 38
+  Offset: 0xC3D3FD
+  Charset: movement
+MOVEMENT_190: !script
+  Size: 49
+  Offset: 0xC3D423
+  Charset: movement
+MOVEMENT_191: !script
+  Size: 16
+  Offset: 0xC3D454
+  Charset: movement
+MOVEMENT_192: !script
+  Size: 34
+  Offset: 0xC3D464
+  Charset: movement
+MOVEMENT_193: !script
+  Size: 67
+  Offset: 0xC3D486
+  Charset: movement
+MOVEMENT_194: !script
+  Size: 38
+  Offset: 0xC3D4C9
+  Charset: movement
+MOVEMENT_195: !script
+  Size: 38
+  Offset: 0xC3D4EF
+  Charset: movement
+MOVEMENT_196: !script
+  Size: 38
+  Offset: 0xC3D515
+  Charset: movement
+MOVEMENT_197: !script
+  Size: 43
+  Offset: 0xC3D53B
+  Charset: movement
+MOVEMENT_198: !script
+  Size: 38
+  Offset: 0xC3D566
+  Charset: movement
+MOVEMENT_199: !script
+  Size: 38
+  Offset: 0xC3D58C
+  Charset: movement
+MOVEMENT_200: !script
+  Size: 38
+  Offset: 0xC3D5B2
+  Charset: movement
+MOVEMENT_201: !script
+  Size: 155
+  Offset: 0xC3D5D8
+  Charset: movement
+MOVEMENT_202: !script
+  Size: 99
+  Offset: 0xC3D673
+  Charset: movement
+MOVEMENT_203: !script
+  Size: 92
+  Offset: 0xC3D6D6
+  Charset: movement
+MOVEMENT_204: !script
+  Size: 38
+  Offset: 0xC3D732
+  Charset: movement
+MOVEMENT_205: !script
+  Size: 138
+  Offset: 0xC3D758
+  Charset: movement
+MOVEMENT_206: !script
+  Size: 90
+  Offset: 0xC3D7E2
+  Charset: movement
+MOVEMENT_207: !script
+  Size: 92
+  Offset: 0xC3D83C
+  Charset: movement
+MOVEMENT_208: !script
+  Size: 38
+  Offset: 0xC3D898
+  Charset: movement
+MOVEMENT_209: !script
+  Size: 38
+  Offset: 0xC3D8BE
+  Charset: movement
+MOVEMENT_210: !script
+  Size: 47
+  Offset: 0xC3D8E4
+  Charset: movement
+UNKNOWN_C3D913: !unknown
+  Size: 9
+  Offset: 0xC3D913
+  Notes: Movement? [13 D9]
+MOVEMENT_211: !script
+  Size: 74
+  Offset: 0xC3D91C
+  Charset: movement
+MOVEMENT_220: !script
+  Size: 38
+  Offset: 0xC3D966
+  Charset: movement
+MOVEMENT_212: !script
+  Size: 38
+  Offset: 0xC3D98C
+  Charset: movement
+MOVEMENT_213: !script
+  Size: 38
+  Offset: 0xC3D9B2
+  Charset: movement
+MOVEMENT_214: !script
+  Size: 38
+  Offset: 0xC3D9D8
+  Charset: movement
+MOVEMENT_215: !script
+  Size: 75
+  Offset: 0xC3D9FE
+  Charset: movement
+MOVEMENT_216: !script
+  Size: 78
+  Offset: 0xC3DA49
+  Charset: movement
+MOVEMENT_217: !script
+  Size: 97
+  Offset: 0xC3DA97
+  Charset: movement
+MOVEMENT_218: !script
+  Size: 33
+  Offset: 0xC3DAF8
+  Charset: movement
+MOVEMENT_219: !script
+  Size: 97
+  Offset: 0xC3DB19
+  Charset: movement
+UNKNOWN_C3DB7A: !unknown
+  Size: 38
+  Offset: 0xC3DB7A
+  Notes: Movement? [7A DB]
+MOVEMENT_453: !script
+  Size: 44
+  Offset: 0xC3DBA0
+  Charset: movement
+MOVEMENT_454: !script
+  Size: 15
+  Offset: 0xC3DBCC
+  Charset: movement
+UNKNOWN_C3DBDB: !unknown
+  Size: 23
+  Offset: 0xC3DBDB
+  Notes: Movement? [DB DB]
+MOVEMENT_455: !script
+  Size: 101
+  Offset: 0xC3DBF2
+  Charset: movement
+MOVEMENT_456: !script
+  Size: 29
+  Offset: 0xC3DC57
+  Charset: movement
+MOVEMENT_457: !script
+  Size: 29
+  Offset: 0xC3DC74
+  Charset: movement
+MOVEMENT_458: !script
+  Size: 29
+  Offset: 0xC3DC91
+  Charset: movement
+MOVEMENT_459: !script
+  Size: 29
+  Offset: 0xC3DCAE
+  Charset: movement
+MOVEMENT_460: !script
+  Size: 74
+  Offset: 0xC3DCCB
+  Charset: movement
+MOVEMENT_461: !script
+  Size: 29
+  Offset: 0xC3DD15
+  Charset: movement
+MOVEMENT_462: !script
+  Size: 29
+  Offset: 0xC3DD32
+  Charset: movement
+MOVEMENT_463: !script
+  Size: 29
+  Offset: 0xC3DD4F
+  Charset: movement
+MOVEMENT_464: !script
+  Size: 149
+  Offset: 0xC3DD6C
+  Charset: movement
+MOVEMENT_32: !script
+  Size: 49
+  Offset: 0xC3DE01
+  Charset: movement
+UNKNOWN_C3DE32: !unknown
+  Size: 7
+  Offset: 0xC3DE32
+  Notes: Movement? [32 DE]
+UNKNOWN_C3DE39: !unknown
+  Size: 37
+  Offset: 0xC3DE39
+  Notes: Movement? [39 DE]
+UNKNOWN_C3DE5E: !unknown
+  Size: 29
+  Offset: 0xC3DE5E
+  Notes: Movement? [5E DE]
+UNKNOWN_C3DE7B: !unknown
+  Size: 25
+  Offset: 0xC3DE7B
+  Notes: Movement? [7B DE]
+UNKNOWN_C3DE94: !unknown
+  Size: 8
+  Offset: 0xC3DE94
+  Notes: Movement? [94 DE]
+UNKNOWN_C3DE9C: !unknown
+  Size: 28
+  Offset: 0xC3DE9C
+  Notes: Movement? [9C DE]
+UNKNOWN_C3DEB8: !unknown
+  Size: 20
+  Offset: 0xC3DEB8
+  Notes: Movement? [B8 DE]
+UNKNOWN_C3DECC: !unknown
+  Size: 25
+  Offset: 0xC3DECC
+  Notes: Movement? [CC DE]
+UNKNOWN_C3DEE5: !unknown
+  Size: 8
+  Offset: 0xC3DEE5
+  Notes: Movement? [E5 DE]
+UNKNOWN_C3DEED: !unknown
+  Size: 20
+  Offset: 0xC3DEED
+  Notes: Movement? [ED DE]
+UNKNOWN_C3DF01: !unknown
+  Size: 29
+  Offset: 0xC3DF01
+  Notes: Movement? [01 DF]
+MOVEMENT_34: !script
+  Size: 84
+  Offset: 0xC3DF1E
+  Charset: movement
+MOVEMENT_33: !script
+  Size: 30
+  Offset: 0xC3DF72
+  Charset: movement
+UNKNOWN_C3DF90: !unknown
+  Size: 37
+  Offset: 0xC3DF90
+  Notes: Movement? [90 DF]
+UNKNOWN_C3DFB5: !unknown
+  Size: 31
+  Offset: 0xC3DFB5
+  Notes: Movement? [B5 DF]
+UNKNOWN_C3DFD4: !unknown
+  Size: 20
+  Offset: 0xC3DFD4
+  Notes: Movement? [D4 DF]
 UNKNOWN_C3E12C: !unknown
   Size: 28
   Description: Unknown Table
@@ -16433,6 +21008,7 @@ UNKNOWN_C3E3F8: !unknown
   Offset: 0xC3E3F8
 UNKNOWN_C3E450: !assembly
   Size: 122
+  Notes: Text window properties/palettes?
   Labels: 
     57: UNKNOWN0
     93: UNKNOWN1
@@ -16518,10 +21094,21 @@ UNKNOWN_C3E7E3: !assembly
 UNKNOWN_C3E84E: !unknown
   Size: 38
   Offset: 0xC3E84E
-DEBUG_MODE_TEXT: !script
-  Size: 259
+DEBUG_MENU_TEXT: !array
+  Size: 240
+  Item Type: !script
+    Size: 10
   Description: Debug Mode Text
   Offset: 0xC3E874
+DEBUG_MENU_ELEMENT_SPACING_DATA: !unknown
+  Size: 12
+  Offset: 0xC3E964
+DEBUG_ON_TEXT: !script
+  Size: 3
+  Offset: 0xC3E970
+DEBUG_OFF_TEXT: !script
+  Size: 4
+  Offset: 0xC3E973
 UNKNOWN_C3E977: !assembly
   Size: 41
   Description: Inventory Something
@@ -16761,6 +21348,10 @@ UNKNOWN_C3F981: !assembly
   Offset: 0xC3F981
 UNKNOWN_C3FAC9: !assembly
   Size: 64
+  Notes: Used by [1C 13 XX YY]
+  Arguments:
+    A: XX-1
+    X: YY-1
   Labels: 
     33: UNKNOWN0
     55: UNKNOWN1
@@ -16855,7 +21446,7 @@ UNKNOWN_C40085: !assembly
     49: UNKNOWN2
     52: UNKNOWN3
   Offset: 0xC40085
-UNKNOWN_C400D4: !array
+MOVEMENT_PATTERN_POINTERS: !array
   Size: 2685
   Item Type: !pointer
     Size: 3
@@ -16871,9 +21462,261 @@ UNKNOWN_C40B75: !assembly
 FOOTSTEP_SOUND_TABLE: !unknown
   Size: 543
   Offset: 0xC40BD4
-UNKNOWN_C40DF3: !unknown
-  Size: 3243
-  Offset: 0xC40DF3
+MOVEMENT_785: !script
+  Size: 13
+  Offset: 0xC40E24
+  Charset: movement
+UNKNOWN_C40F18: !unknown
+  Size: 45
+  Offset: 0xC40F18
+  Notes: Movement? [18 0F]
+UNKNOWN_C40F45: !unknown
+  Size: 5
+  Offset: 0xC40F45
+  Notes: Movement? [45 0F]
+UNKNOWN_C40F4A: !unknown
+  Size: 15
+  Offset: 0xC40F4A
+  Notes: Movement? [4A 0F]
+UNKNOWN_C40F59: !unknown
+  Size: 15
+  Offset: 0xC40F59
+  Notes: Movement? [59 0F]
+MOVEMENT_502: !script
+  Size: 6
+  Offset: 0xC40F68
+  Charset: movement
+MOVEMENT_503: !script
+  Size: 6
+  Offset: 0xC40F6E
+  Charset: movement
+MOVEMENT_504: !script
+  Size: 6
+  Offset: 0xC40F74
+  Charset: movement
+MOVEMENT_505: !script
+  Size: 6
+  Offset: 0xC40F7A
+  Charset: movement
+MOVEMENT_506: !script
+  Size: 6
+  Offset: 0xC40F80
+  Charset: movement
+MOVEMENT_507: !script
+  Size: 6
+  Offset: 0xC40F86
+  Charset: movement
+MOVEMENT_508: !script
+  Size: 6
+  Offset: 0xC40F8C
+  Charset: movement
+MOVEMENT_509: !script
+  Size: 6
+  Offset: 0xC40F92
+  Charset: movement
+MOVEMENT_510: !script
+  Size: 6
+  Offset: 0xC40F98
+  Charset: movement
+MOVEMENT_511: !script
+  Size: 6
+  Offset: 0xC40F9E
+  Charset: movement
+MOVEMENT_512: !script
+  Size: 6
+  Offset: 0xC40FA4
+  Charset: movement
+MOVEMENT_513: !script
+  Size: 6
+  Offset: 0xC40FAA
+  Charset: movement
+MOVEMENT_514: !script
+  Size: 6
+  Offset: 0xC40FB0
+  Charset: movement
+MOVEMENT_515: !script
+  Size: 6
+  Offset: 0xC40FB6
+  Charset: movement
+MOVEMENT_516: !script
+  Size: 6
+  Offset: 0xC40FBC
+  Charset: movement
+MOVEMENT_517: !script
+  Size: 6
+  Offset: 0xC40FC2
+  Charset: movement
+MOVEMENT_518: !script
+  Size: 6
+  Offset: 0xC40FC8
+  Charset: movement
+MOVEMENT_519: !script
+  Size: 6
+  Offset: 0xC40FCE
+  Charset: movement
+MOVEMENT_520: !script
+  Size: 6
+  Offset: 0xC40FD4
+  Charset: movement
+MOVEMENT_521: !script
+  Size: 6
+  Offset: 0xC40FDA
+  Charset: movement
+MOVEMENT_522: !script
+  Size: 6
+  Offset: 0xC40FE0
+  Charset: movement
+MOVEMENT_523: !script
+  Size: 6
+  Offset: 0xC40FE6
+  Charset: movement
+MOVEMENT_524: !script
+  Size: 8
+  Offset: 0xC40FEC
+  Charset: movement
+MOVEMENT_525: !script
+  Size: 9
+  Offset: 0xC40FF4
+  Charset: movement
+MOVEMENT_526: !script
+  Size: 6
+  Offset: 0xC40FFD
+  Charset: movement
+MOVEMENT_527: !script
+  Size: 9
+  Offset: 0xC41003
+  Charset: movement
+MOVEMENT_528: !script
+  Size: 6
+  Offset: 0xC4100C
+  Charset: movement
+MOVEMENT_529: !script
+  Size: 6
+  Offset: 0xC41012
+  Charset: movement
+MOVEMENT_530: !script
+  Size: 8
+  Offset: 0xC41018
+  Charset: movement
+MOVEMENT_534: !script
+  Size: 22
+  Offset: 0xC41020
+  Charset: movement
+#UNKNOWN_C40DF3: !unknown
+#  Size: 3243
+#  Offset: 0xC40DF3
+UNKNOWN_C41036: !unknown
+  Size: 310
+  Offset: 0xC41036
+  Notes: Movement? [36 10]
+UNKNOWN_C4116C: !unknown
+  Size: 49
+  Offset: 0xC4116C
+  Notes: Movement? [6C 11]
+UNKNOWN_C4119D: !unknown
+  Size: 78
+  Offset: 0xC4119D
+  Notes: Movement? [9D 11]
+UNKNOWN_C411EB: !unknown
+  Size: 52
+  Offset: 0xC411EB
+  Notes: Movement? [EB 11]
+UNKNOWN_C4121F: !unknown
+  Size: 52
+  Offset: 0xC4121F
+  Notes: Movement? [1F 12]
+UNKNOWN_C41253: !unknown
+  Size: 303
+  Offset: 0xC41253
+  Notes: Movement? [53 12]
+UNKNOWN_C41382: !unknown
+  Size: 84
+  Offset: 0xC41382
+  Notes: Movement? [82 13]
+UNKNOWN_C413D6: !unknown
+  Size: 44
+  Offset: 0xC413D6
+  Notes: Movement? [D6 13]
+UNKNOWN_C41402: !unknown
+  Size: 74
+  Offset: 0xC41402
+  Notes: Movement? [02 14]
+UNKNOWN_C4144C: !unknown
+  Size: 222
+  Offset: 0xC4144C
+  Notes: Movement? [4C 14]
+UNKNOWN_C4152A: !unknown
+  Size: 36
+  Offset: 0xC4152A
+  Notes: Movement? [2A 15]
+UNKNOWN_C4154E: !unknown
+  Size: 60
+  Offset: 0xC4154E
+  Notes: Movement? [4E 15]
+UNKNOWN_C4158A: !unknown
+  Size: 48
+  Offset: 0xC4158A
+  Notes: Movement? [8A 15]
+UNKNOWN_C415BA: !unknown
+  Size: 45
+  Offset: 0xC415BA
+  Notes: Movement? [BA 15]
+UNKNOWN_C415E7: !unknown
+  Size: 35
+  Offset: 0xC415E7
+  Notes: Movement? [E7 15]
+UNKNOWN_C4160A: !unknown
+  Size: 53
+  Offset: 0xC4160A
+  Notes: Movement? [0A 16]
+UNKNOWN_C4163F: !unknown
+  Size: 109
+  Offset: 0xC4163F
+  Notes: Movement? [3F 16]
+UNKNOWN_C416AC: !unknown
+  Size: 98
+  Offset: 0xC416AC
+  Notes: Movement? [AC 16]
+UNKNOWN_C4170E: !unknown
+  Size: 276
+  Offset: 0xC4170E
+  Notes: Movement? [0E 17]
+UNKNOWN_C41822: !unknown
+  Size: 222
+  Offset: 0xC41822
+  Notes: Movement? [22 18]
+UNKNOWN_C41900: !unknown
+  Size: 56
+  Offset: 0xC41900
+  Notes: Movement? [00 19]
+UNKNOWN_C41938: !unknown
+  Size: 60
+  Offset: 0xC41938
+  Notes: Movement? [38 19]
+UNKNOWN_C41974: !unknown
+  Size: 25
+  Offset: 0xC41974
+  Notes: Movement? [74 19]
+UNKNOWN_C4198D: !unknown
+  Size: 37
+  Offset: 0xC4198D
+  Notes: Movement? [8D 19]
+UNKNOWN_C419B2: !unknown
+  Size: 13
+  Offset: 0xC419B2
+  Notes: Movement? [B2 19]
+UNKNOWN_C419BF: !unknown
+  Size: 107
+  Offset: 0xC419BF
+  Notes: Movement? [BF 19]
+UNKNOWN_C41A2A: !unknown
+  Size: 83
+  Offset: 0xC41A2A
+  Notes: Movement? [2A 1A]
+UNKNOWN_C41A7D: !unknown
+  Size: 33
+  Offset: 0xC41A7D
+  Notes: Movement? [7D 1A]
 DECOMP: !assembly
   Description: Decompress data
   Initial State:
@@ -16927,8 +21770,20 @@ UNKNOWN_C41DB6: !assembly
     250: UNKNOWN4
   Offset: 0xC41DB6
 UNKNOWN_C41EB9: !unknown
-  Size: 70
+  Size: 16
   Offset: 0xC41EB9
+UNKNOWN_C41EC9: !unknown
+  Size: 16
+  Offset: 0xC41EC9
+UNKNOWN_C41ED9: !unknown
+  Size: 16
+  Offset: 0xC41ED9
+UNKNOWN_C41EE9: !assembly
+  Size: 11
+  Offset: 0xC41EE9
+UNKNOWN_C41EF4: !assembly
+  Size: 11
+  Offset: 0xC41EF4
 UNKNOWN_C41EFF: !assembly
   Size: 198
   Notes: Appears to determine direction of enemy collision?
@@ -16951,12 +21806,12 @@ UNKNOWN_C41EFF: !assembly
     185: UNKNOWN15
     194: UNKNOWN16
   Offset: 0xC41EFF
-UNKNOWN_C41FC5: !assembly
-  Size: 2
+UNKNOWN_C41FC5: !unknown
+  Size: 26
   Offset: 0xC41FC5
-UNKNOWN_C41FC7: !unknown
-  Size: 56
-  Offset: 0xC41FC7
+UNKNOWN_C41FC5: !unknown
+  Size: 32
+  Offset: 0xC41FDF
 UNKNOWN_C41FFF: !assembly
   Size: 94
   Labels:
@@ -16974,9 +21829,62 @@ UNKNOWN_C4205D: !unknown
 UNKNOWN_C42144: !assembly
   Size: 46
   Offset: 0xC42144
-UNKNOWN_C42172: !unknown
-  Size: 618
+MOVEMENT_787: !script
+  Size: 9
   Offset: 0xC42172
+  Charset: movement
+MOVEMENT_860: !script
+  Size: 175
+  Offset: 0xC4217B
+  Charset: movement
+MOVEMENT_789: !script
+  Size: 11
+  Offset: 0xC4222A
+  Charset: movement
+UNKNOWN_C42235: !unknown
+  Size: 91
+  Offset: 0xC42235
+  Notes: Movement? [35 22]
+MOVEMENT_788: !script
+  Size: 89
+  Offset: 0xC42290
+  Charset: movement
+MOVEMENT_790: !script
+  Size: 27
+  Offset: 0xC422E9
+  Charset: movement
+MOVEMENT_791: !script
+  Size: 27
+  Offset: 0xC42304
+  Charset: movement
+MOVEMENT_792: !script
+  Size: 27
+  Offset: 0xC4231F
+  Charset: movement
+MOVEMENT_793: !script
+  Size: 27
+  Offset: 0xC4233A
+  Charset: movement
+MOVEMENT_794: !script
+  Size: 27
+  Offset: 0xC42355
+  Charset: movement
+MOVEMENT_795: !script
+  Size: 27
+  Offset: 0xC42370
+  Charset: movement
+MOVEMENT_796: !script
+  Size: 27
+  Offset: 0xC4238B
+  Charset: movement
+MOVEMENT_797: !script
+  Size: 27
+  Offset: 0xC423A6
+  Charset: movement
+MOVEMENT_798: !script
+  Size: 27
+  Offset: 0xC423C1
+  Charset: movement
 UNKNOWN_C423DC: !assembly
   Size: 46
   Offset: 0xC423DC
@@ -17056,9 +21964,30 @@ UNKNOWN_C426ED: !assembly
     150: UNKNOWN6
     167: UNKNOWN7
   Offset: 0xC426ED
-UNKNOWN_C4279F: !unknown
-  Size: 160
+MOVEMENT_859: !script
+  Size: 2
   Offset: 0xC4279F
+  Charset: movement
+UNKNOWN_C427A1: !unknown
+  Size: 63
+  Offset: 0xC427A1
+  Notes: Movement? [A1 27]
+UNKNOWN_C427E0: !unknown
+  Size: 34
+  Offset: 0xC427E0
+  Notes: Movement? [E0 27]
+UNKNOWN_C42802: !unknown
+  Size: 19
+  Offset: 0xC42802
+  Notes: Movement? [02 28]
+UNKNOWN_C42815: !unknown
+  Size: 19
+  Offset: 0xC42815
+  Notes: Movement? [15 28]
+UNKNOWN_C42828: !unknown
+  Size: 23
+  Offset: 0xC42828
+  Notes: Movement? [28 28]
 UNKNOWN_C4283F: !assembly
   Size: 69
   Labels:
@@ -17185,9 +22114,11 @@ UNKNOWN_C4343E: !assembly
     260: UNKNOWN10
     270: UNKNOWN11
   Offset: 0xC4343E
-ITEM_USE_MENU: !unknown
+ITEM_USE_MENU_STRINGS: !array
   Size: 24
-  Description: Item Use menu
+  Description: Item Use menu strings
+  Item Type: !script
+    Size: 6
   Offset: 0xC43550
 UNKNOWN_C43568: !assembly
   Size: 11
@@ -17250,7 +22181,8 @@ UNKNOWN_C43874: !assembly
 UNKNOWN_C438A5: !assembly
   Size: 12
   Offset: 0xC438A5
-UNKNOWN_C438B1: !assembly
+PRINT_NEWLINE: !assembly
+  Description: Prints newline in window with focus
   Size: 100
   Labels:
     53: UNKNOWN0
@@ -17485,11 +22417,14 @@ UNKNOWN_C44B3A: !assembly
     300: UNKNOWN6
     304: UNKNOWN7
   Offset: 0xC44B3A
-UNKNOWN_C44C6C: !unknown
+POWERS_OF_TWO_AGAIN_AGAIN: !array
   Size: 32
+  Item Type: !int
+    Size: 2
   Offset: 0xC44C6C
 UNKNOWN_C44C8C: !assembly
   Size: 318
+  Notes: Word wrap?
   Labels:
     25: UNKNOWN0
     41: UNKNOWN1
@@ -17799,6 +22734,8 @@ CHECK_IF_PSI_KNOWN: !assembly
   Arguments:
     A: Character ID
     X: PSI ID
+  Return Values:
+    A: 0 if not known, 1 if known
   Labels:
     29: UNKNOWN0
     58: UNKNOWN1
@@ -17994,9 +22931,11 @@ UNKNOWN_C466A8: !assembly
   Offset: 0xC466A8
 UNKNOWN_C466B8: !assembly
   Size: 9
+  Notes: Used by [1F ED]
   Offset: 0xC466B8
 UNKNOWN_C466C1: !assembly
   Size: 47
+  Notes: Photoman?
   Offset: 0xC466C1
 UNKNOWN_C466F0: !assembly
   Size: 34
@@ -18843,13 +23782,14 @@ COFFEETEA_SCENE: !assembly
   Arguments:
     A: 0 = Coffee, 1 = Tea
   Offset: 0xC49D6A
-UNKNOWN_C49EA4: !array
+FLYOVER_TEXT_POINTERS: !array
   Size: 32
   Offset: 0xC49EA4
   Item Type: !pointer
     Size: 4
 UNKNOWN_C49EC4: !assembly
   Size: 285
+  Notes: Uses flyover text pointers
   Labels:
     64: UNKNOWN0
     98: UNKNOWN1
@@ -19032,14 +23972,14 @@ SOUND_STONE_UNKNOWN5: !unknown
 SOUND_STONE_UNKNOWN6: !unknown
   Size: 8
   Offset: 0xC4ACA3
-SOUND_STONE_UNKNOWN7: !unknown
-  Size: 8
-  Offset: 0xC4ACB4
 SOUND_STONE_MUSIC: !array
   Size: 9
   Offset: 0xC4ACAB
   Item Type: !int
     Size: 1
+SOUND_STONE_UNKNOWN7: !unknown
+  Size: 8
+  Offset: 0xC4ACB4
 SOUND_STONE_UNKNOWN8: !unknown
   Size: 10
   Offset: 0xC4ACBC
@@ -19599,6 +24539,7 @@ DISPLAY_ANIMATED_NAMING_SPRITE: !assembly
   Offset: 0xC4D7D9
 UNKNOWN_C4D830: !assembly
   Size: 202
+  Notes: Uses $C3FD49
   Labels:
     14: UNKNOWN0
     18: UNKNOWN1
@@ -19611,6 +24552,7 @@ UNKNOWN_C4D830: !assembly
   Offset: 0xC4D830
 UNKNOWN_C4D8FA: !assembly
   Size: 143
+  Notes: Uses $C3FD65
   Labels:
     15: UNKNOWN0
     129: UNKNOWN1
@@ -19618,6 +24560,7 @@ UNKNOWN_C4D8FA: !assembly
   Offset: 0xC4D8FA
 UNKNOWN_C4D989: !assembly
   Size: 329
+  Notes: Uses $C3FD8D
   Labels:
     82: UNKNOWN0
     88: UNKNOWN1
@@ -19989,6 +24932,8 @@ UNKNOWN_C4FD18: !assembly
   Offset: 0xC4FD18
 SET_BOUNDARY_BEHAVIOR: !assembly
   Size: 6
+  Arguments:
+    A: Value
   Description: A -> $B549 (Sector Boundary Behavior)
   Offset: 0xC4FD45
 UNKNOWN_C4FD4B: !empty
@@ -22825,45 +27770,68 @@ UNKNOWN_EF04DC: !assembly
     137: UNKNOWN7
     150: UNKNOWN8
   Offset: 0xEF04DC
-UNKNOWN_EF0591: !unknown
+SRAM_SIGNATURE: !script
   Size: 21
+  Notes: Hal Laboratory, inc.
+  Charset: ascii
   Offset: 0xEF0591
 UNKNOWN_EF05A6: !unknown
+  Notes: Used for corrupted save detection?
   Size: 3
   Offset: 0xEF05A6
-ERASE_SAVE: !assembly
-  Description: Erases a savefile
+ERASE_SAVE_BLOCK: !assembly
+  Description: Erases a save block
+  Arguments:
+    A: Block ID
   Size: 135
   Offset: 0xEF05A9
-UNKNOWN_EF0630: !assembly
+CHECK_BLOCK_SIGNATURE: !assembly
+  Description: Checks block for signature, erases if not found
   Size: 83
+  Arguments:
+    A: Block ID
   Labels:
     78: UNKNOWN0
     81: UNKNOWN1
   Offset: 0xEF0630
-UNKNOWN_EF0683: !assembly
+CHECK_ALL_BLOCKS_SIGNATURE: !assembly
   Size: 31
   Labels:
     15: UNKNOWN0
     24: UNKNOWN1
   Offset: 0xEF0683
-UNKNOWN_EF06A2: !assembly
+COPY_SAVE_BLOCK: !assembly
+  Arguments:
+    A: Source Block ID
+    X: Destination Block ID
   Size: 146
   Offset: 0xEF06A2
-UNKNOWN_EF0734: !assembly
+CALC_SAVE_BLOCK_ADD_CHECKSUM: !assembly
   Size: 71
+  Arguments:
+    A: Block ID
+  Return Values:
+    A: Checksum
   Labels:
     44: UNKNOWN0
     63: UNKNOWN1
   Offset: 0xEF0734
-UNKNOWN_EF077B: !assembly
+CALC_SAVE_BLOCK_XOR_CHECKSUM: !assembly
   Size: 69
+  Arguments:
+    A: Block ID
+  Return Values:
+    A: Checksum
   Labels:
     44: UNKNOWN0
     61: UNKNOWN1
   Offset: 0xEF077B
-UNKNOWN_EF07C0: !assembly
+VALIDATE_SAVE_BLOCK_CHECKSUMS: !assembly
   Size: 101
+  Arguments:
+    A: Block ID
+  Return Values:
+    A: 0 if OK, 0xFFFF otherwise
   Labels:
     91: UNKNOWN0
     96: UNKNOWN1
@@ -22871,24 +27839,32 @@ UNKNOWN_EF07C0: !assembly
   Offset: 0xEF07C0
 CHECK_SAVE_CORRUPTION: !assembly
   Size: 106
-  Description: Checks if SRAM is corrupt
+  Arguments:
+    A: Save ID
+  Description: Checks if one of the save blocks for a save is corrupt, copies ok block over corrupt one
   Labels:
     67: UNKNOWN0
     74: UNKNOWN1
     102: UNKNOWN2
   Offset: 0xEF0825
-UNKNOWN_EF088F: !assembly
+SAVE_GAME_BLOCK: !assembly
   Size: 446
+  Arguments:
+    A: Block ID
   Labels:
     13: UNKNOWN0
     391: UNKNOWN1
     444: UNKNOWN2
   Offset: 0xEF088F
-UNKNOWN_EF0A4D: !assembly
+SAVE_GAME_SLOT: !assembly
   Size: 27
+  Arguments:
+    A: Save ID
   Offset: 0xEF0A4D
-LOAD_SAVE: !assembly
+LOAD_GAME_SLOT: !assembly
   Size: 310
+  Arguments:
+    A: Save ID
   Description: Loads data from SRAM into memory
   Offset: 0xEF0A68
 CHECK_SRAM_INTEGRITY: !assembly
@@ -22899,11 +27875,16 @@ CHECK_SRAM_INTEGRITY: !assembly
     67: LOOP_BEGINNING
     78: LOOP_ENTRY
   Offset: 0xEF0B9E
-UNKNOWN_EF0BFA: !assembly
+ERASE_SAVE: !assembly
   Size: 27
+  Arguments:
+    A: Save ID
   Offset: 0xEF0BFA
-UNKNOWN_EF0C15: !assembly
+COPY_SAVE: !assembly
   Size: 40
+  Arguments:
+    A: Source Save ID
+    X: Destination Save ID
   Offset: 0xEF0C15
 UNKNOWN_EF0C3D: !assembly
   Size: 74
@@ -23151,12 +28132,6 @@ NAME_INPUT_WINDOW_SELECTION_LAYOUT: !unknown
   Description: Name Input Window Selection Layout
   Size: 627
   Offset: 0xEFA460
-NAME_INPUT_WINDOW_A: !script
-  Size: 0x3B
-  Offset: 0xEFA66C
-NAME_INPUT_WINDOW_B: !script
-  Size: 0x2C
-  Offset: 0xEFA6A7
 NAME_INPUT_WINDOW_SELECTION_LAYOUT_POINTERS: !array
   Size: 24
   Offset: 0xEFA6D3
@@ -23181,12 +28156,9 @@ MAP_DATA_PER-SECTOR_TOWN_MAP_DATA: !array
         Pretty Name: Town Map Y
         Size: 1
   Offset: 0xEFA70F
-UNKNOWN_EFC50F: !unknown
-  Size: 4108
-  Offset: 0xEFC50F
 TOWN_MAP_MAPPING: !unknown
-  Size: 11788
-  Offset: 0xEFA70F
+  Size: 0x100C
+  Offset: 0xEFC50F
 DEBUG_SOUND_MODE_MENU_TEXT: !unknown
   Size: 84
   Description: Programmers' Sound Mode Menu Text
