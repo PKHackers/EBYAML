@@ -2148,10 +2148,6 @@ UNKNOWN_30X2_TABLE_37: !array
   Offset: 0x7E2BAA
   Item Type: *30x2
   Size: 0x3C
-#UNKNOWN_30X2_TABLE_39: !array
-#  Offset: 0x7E2BCC
-#  Item Type: *30x2
-#  Size: 0x3C
 UNKNOWN_30X2_TABLE_38: !array
   Offset: 0x7E2BE6
   Item Type: *30x2
@@ -16854,13 +16850,6 @@ NESS_PAJAMA_FLAG: !int
 UNKNOWN_C30188: !unknown
   Size: 13
   Offset: 0xC30188
-#UNKNOWN_C30195:
-#  Size: 57239
-#  Description: Mostly movement data
-#  Offset: 0xC30195
-#  Item Type: !script
-#    Charset: movement
-#    Terminator: 0
 MOVEMENT_221: !script
   Size: 160
   Offset: 0xC30195
@@ -21894,9 +21883,6 @@ MOVEMENT_534: !script
   Size: 22
   Offset: 0xC41020
   Charset: movement
-#UNKNOWN_C40DF3: !unknown
-#  Size: 3243
-#  Offset: 0xC40DF3
 UNKNOWN_C41036: !unknown
   Size: 310
   Offset: 0xC41036
