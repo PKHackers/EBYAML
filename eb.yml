@@ -6031,7 +6031,7 @@ MOVEMENT_CODE_35: !assembly
     8 Bit Index: n
   Offset: 0xC0984A
 MOVEMENT_CODE_36: !assembly
-  Size: 0x2A
+  Size: 0x2B
   Offset: 0xC09875
   Initial State:
     8 Bit Accum: n
