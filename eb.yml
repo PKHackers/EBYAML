@@ -5875,96 +5875,178 @@ MOVEMENT_CODE_00: !assembly
     8 Bit Accum: n
   Offset: 0xC095F2
 MOVEMENT_CODE_01: !assembly
-  Size: 36
+  Size: 29
   Offset: 0xC09603
+MOVEMENT_CODE_24: !assembly
+  Size: 2
+  Offset: 0xC09620
+UNKNOWN_C09622: !assembly
+  Size: 5
+  Offset: 0xC09622
 MOVEMENT_CODE_02: !assembly
   Size: 34
   Labels:
     28: UNKNOWN0
   Offset: 0xC09627
-UNKNOWN_C09649: !assembly
+MOVEMENT_CODE_19: !assembly
   Size: 4
   Offset: 0xC09649
-UNKNOWN_C0964D: !assembly
+MOVEMENT_CODE_03: !assembly
   Size: 11
   Offset: 0xC0964D
-UNKNOWN_C09658: !assembly
+MOVEMENT_CODE_1A: !assembly
   Size: 23
   Offset: 0xC09658
-#UNKNOWN_C0966F: !assembly
-#  Size: 878
-#  Labels:
-#    12: UNKNOWN0
-#    69: UNKNOWN1
-#    111: UNKNOWN2
-#    189: UNKNOWN3
-#    219: UNKNOWN4
-#    249: UNKNOWN5
-#    283: UNKNOWN6
-#    320: UNKNOWN7
-#    357: UNKNOWN8
-#    432: UNKNOWN9
-#    468: UNKNOWN10
-#    508: UNKNOWN11
-#    551: UNKNOWN12
-#    761: UNKNOWN13
-#    775: UNKNOWN14
-#    799: UNKNOWN15
-#    804: UNKNOWN16
-#    852: UNKNOWN17
-#    875: UNKNOWN18
-#  Offset: 0xC0966F
+MOVEMENT_CODE_1B: !assembly
+  Size: 22
+  Offset: 0xC0966F
+MOVEMENT_CODE_04: !assembly
+  Size: 37
+  Offset: 0xC09685
+MOVEMENT_CODE_05: !assembly
+  Size: 25
+  Offset: 0xC096AA
+MOVEMENT_CODE_06: !assembly
+  Size: 12
+  Offset: 0xC096C3
+MOVEMENT_CODE_3B_45: !assembly
+  Size: 20
+  Offset: 0xC096CF
+MOVEMENT_CODE_28: !assembly
+  Size: 16
+  Offset: 0xC096E3
+MOVEMENT_CODE_29: !assembly
+  Size: 16
+  Offset: 0xC096F3
+MOVEMENT_CODE_2A: !assembly
+  Size: 16
+  Offset: 0xC09703
+MOVEMENT_CODE_3F_49: !assembly
+  Size: 30
+  Offset: 0xC09713
+MOVEMENT_CODE_40_4A: !assembly
+  Size: 30
+  Offset: 0xC09731
+MOVEMENT_CODE_41_4B: !assembly
+  Size: 30
+  Offset: 0xC0974F
+MOVEMENT_CODE_2E: !assembly
+  Size: 37
+  Offset: 0xC0976D
+MOVEMENT_CODE_2F: !assembly
+  Size: 37
+  Offset: 0xC09792
+MOVEMENT_CODE_30: !assembly
+  Size: 37
+  Offset: 0xC097B7
+MOVEMENT_CODE_31: !assembly
+  Size: 19
+  Offset: 0xC097DC
+MOVEMENT_CODE_32: !assembly
+  Size: 19
+  Offset: 0xC097EF
+MOVEMENT_CODE_33: !assembly
+  Size: 36
+  Offset: 0xC09802
+MOVEMENT_CODE_34: !assembly
+  Size: 36
+  Offset: 0xC09826
+MOVEMENT_CODE_35: !assembly
+  Size: 43
+  Offset: 0xC0984A
 MOVEMENT_CODE_36: !assembly
   Size: 0x2A
   Offset: 0xC09875
   Initial State:
     8 Bit Accum: n
+MOVEMENT_CODE_2B: !assembly
+  Size: 14
+  Offset: 0xC098A0
+MOVEMENT_CODE_2C: !assembly
+  Size: 14
+  Offset: 0xC098AE
+MOVEMENT_CODE_2D: !assembly
+  Size: 14
+  Offset: 0xC098BC
+MOVEMENT_CODE_37: !assembly
+  Size: 20
+  Offset: 0xC098CA
+MOVEMENT_CODE_38: !assembly
+  Size: 20
+  Offset: 0xC098DE
 MOVEMENT_CODE_39: !assembly
+  Size: 21
+  Offset: 0xC098F2
+UNKNOWN_C09907: !assembly
   Size: 21
   Offset: 0xC09907
   Arguments:
     A: Index
+MOVEMENT_CODE_3A: !assembly
+  Size: 21
+  Offset: 0xC0991C
+MOVEMENT_CODE_43: !assembly
+  Size: 12
+  Offset: 0xC09931
+MOVEMENT_CODE_42_4C: !assembly
+  Size: 32
+  Offset: 0xC0993D
+MOVEMENT_CODE_0A: !assembly
+  Size: 14
+  Offset: 0xC0995D
+MOVEMENT_CODE_0B: !assembly
+  Size: 14
+  Offset: 0xC0996B
+MOVEMENT_CODE_10: !assembly
+  Size: 37
+  Labels:
+    21: UNKNOWN0
+    26: MOVEMENT_CODE_11
+  Offset: 0xC09979
 MOVEMENT_CODE_0C: !assembly
   Size: 0x1A
   Offset: 0xC099C3
   Initial State:
     8 Bit Accum: n
-UNKNOWN_C099DD: !assembly
+MOVEMENT_CODE_07: !assembly
   Size: 49
   Labels:
     44: UNKNOWN0
   Offset: 0xC099DD
-UNKNOWN_C09A0E: !assembly
+MOVEMENT_CODE_13: !assembly
   Size: 12
   Offset: 0xC09A0E
-UNKNOWN_C09A1A: !assembly
+MOVEMENT_CODE_08: !assembly
   Size: 20
   Offset: 0xC09A1A
-UNKNOWN_C09A2E: !assembly
+MOVEMENT_CODE_09: !assembly
   Size: 10
   Offset: 0xC09A2E
-UNKNOWN_C09A38: !assembly
+MOVEMENT_CODE_3C_46: !assembly
   Size: 6
   Offset: 0xC09A38
-UNKNOWN_C09A3E: !assembly
+MOVEMENT_CODE_3D_47: !assembly
   Size: 6
   Offset: 0xC09A3E
-UNKNOWN_C09A44: !assembly
+MOVEMENT_CODE_3E_48: !assembly
   Size: 24
   Labels:
     16: UNKNOWN0
   Offset: 0xC09A44
-UNKNOWN_C09A5C: !assembly
+MOVEMENT_CODE_18: !assembly
   Size: 43
   Offset: 0xC09A5C
-MOVEMENT_CODE_20: !assembly
-  Size: 69
-  Labels:
-    27: UNKNOWN0
-    28: UNKNOWN1
+MOVEMENT_CODE_14: !assembly
+  Size: 16
   Initial State:
     8 Bit Accum: n
   Offset: 0xC09A87
+MOVEMENT_CODE_27: !assembly
+  Size: 8
+  Offset: 0xC09A97
+MOVEMENT_CODE_0D: !assembly
+  Size: 45
+  Offset: 0xC09A9F
 UNKNOWN_C09ACC: !assembly
   Size: 7
   Offset: 0xC09ACC
@@ -5974,59 +6056,65 @@ UNKNOWN_C09AD3: !assembly
 UNKNOWN_C09ADB: !assembly
   Size: 7
   Offset: 0xC09ADB
-UNKNOWN_C09AE2: !assembly
+MOVEMENT_CODE_0E: !assembly
   Size: 23
   Offset: 0xC09AE2
-UNKNOWN_C09AF9: !assembly
-  Size: 22
+UNKNOWN_C09AF9: !unknown
+  Size: 16
   Offset: 0xC09AF9
-UNKNOWN_C09B0F: !assembly
+MOVEMENT_CODE_0F: !assembly
+  Size: 6
+  Offset: 0xC09B09
+MOVEMENT_CODE_12: !assembly
   Size: 16
   Offset: 0xC09B0F
-UNKNOWN_C09B1F: !assembly
+MOVEMENT_CODE_15: !assembly
   Size: 13
   Offset: 0xC09B1F
-UNKNOWN_C09B2C: !assembly
+MOVEMENT_CODE_16: !assembly
   Size: 24
   Labels:
     21: UNKNOWN0
   Offset: 0xC09B2C
-MOVEMENT_CODE_21: !assembly
-  Size: 29
+MOVEMENT_CODE_17: !assembly
+  Size: 9
   Initial State:
     8 Bit Accum: n
     8 Bit Index: n
   Offset: 0xC09B44
-UNKNOWN_C09B61: !assembly
+MOVEMENT_CODE_1C: !assembly
+  Size: 20
+  Offset: 0xC09B4D
+MOVEMENT_CODE_1D: !assembly
   Size: 10
   Offset: 0xC09B61
-UNKNOWN_C09B6B: !assembly
+MOVEMENT_CODE_1E: !assembly
   Size: 14
   Offset: 0xC09B6B
-UNKNOWN_C09B79: !assembly
+MOVEMENT_CODE_1F: !assembly
   Size: 24
   Offset: 0xC09B79
-UNKNOWN_C09B91: !assembly
+MOVEMENT_CODE_20: !assembly
   Size: 24
   Offset: 0xC09B91
-UNKNOWN_C09BA9: !assembly
+MOVEMENT_CODE_44: !assembly
   Size: 11
   Labels:
     10: UNKNOWN0
   Offset: 0xC09BA9
-UNKNOWN_C09BB4: !assembly
+MOVEMENT_CODE_21: !assembly
   Size: 24
   Offset: 0xC09BB4
-UNKNOWN_C09BCC: !assembly
+MOVEMENT_CODE_26: !assembly
   Size: 24
   Offset: 0xC09BCC
-UNKNOWN_C09BE4: !assembly
+MOVEMENT_CODE_22: !assembly
   Size: 10
   Offset: 0xC09BE4
-UNKNOWN_C09BEE: !assembly
+MOVEMENT_CODE_23: !assembly
   Size: 10
   Offset: 0xC09BEE
-UNKNOWN_C09BF8: !assembly
+MOVEMENT_CODE_25: !assembly
   Size: 10
   Offset: 0xC09BF8
 UNKNOWN_C09C02: !assembly
