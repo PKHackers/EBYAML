@@ -5778,7 +5778,7 @@ ASR16: !assembly
     8 Bit Index: n
   Offset: 0xC0925B
 ASR32: !assembly
-  Size: 22
+  Size: 23
   Notes: Arithmetic shifts $06 to the right Y times. 32-bit
   Arguments:
     $06: Value to shift
