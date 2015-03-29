@@ -5870,89 +5870,167 @@ MOVEMENT_CTRL_CODES_PTR_TABLE: !array
   Offset: 0xC09558
 MOVEMENT_CODE_00: !assembly
   Size: 17
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Description: End of movement code
   Initial State:
     8 Bit Accum: n
   Offset: 0xC095F2
 MOVEMENT_CODE_01: !assembly
   Size: 29
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09603
 MOVEMENT_CODE_24: !assembly
   Size: 2
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09620
 UNKNOWN_C09622: !assembly
   Size: 5
   Offset: 0xC09622
 MOVEMENT_CODE_02: !assembly
   Size: 34
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Labels:
     28: UNKNOWN0
   Offset: 0xC09627
 MOVEMENT_CODE_19: !assembly
   Size: 4
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09649
 MOVEMENT_CODE_03: !assembly
   Size: 11
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC0964D
 MOVEMENT_CODE_1A: !assembly
   Size: 23
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09658
 MOVEMENT_CODE_1B: !assembly
   Size: 22
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC0966F
 MOVEMENT_CODE_04: !assembly
   Size: 37
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09685
 MOVEMENT_CODE_05: !assembly
   Size: 25
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC096AA
 MOVEMENT_CODE_06: !assembly
   Size: 12
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC096C3
 MOVEMENT_CODE_3B_45: !assembly
   Size: 20
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC096CF
 MOVEMENT_CODE_28: !assembly
   Size: 16
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC096E3
 MOVEMENT_CODE_29: !assembly
   Size: 16
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC096F3
 MOVEMENT_CODE_2A: !assembly
   Size: 16
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09703
 MOVEMENT_CODE_3F_49: !assembly
   Size: 30
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09713
 MOVEMENT_CODE_40_4A: !assembly
   Size: 30
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09731
 MOVEMENT_CODE_41_4B: !assembly
   Size: 30
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC0974F
 MOVEMENT_CODE_2E: !assembly
   Size: 37
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC0976D
 MOVEMENT_CODE_2F: !assembly
   Size: 37
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09792
 MOVEMENT_CODE_30: !assembly
   Size: 37
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC097B7
 MOVEMENT_CODE_31: !assembly
   Size: 19
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC097DC
 MOVEMENT_CODE_32: !assembly
   Size: 19
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC097EF
 MOVEMENT_CODE_33: !assembly
   Size: 36
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09802
 MOVEMENT_CODE_34: !assembly
   Size: 36
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09826
 MOVEMENT_CODE_35: !assembly
   Size: 43
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC0984A
 MOVEMENT_CODE_36: !assembly
   Size: 0x2A
@@ -5961,21 +6039,39 @@ MOVEMENT_CODE_36: !assembly
     8 Bit Accum: n
 MOVEMENT_CODE_2B: !assembly
   Size: 14
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC098A0
 MOVEMENT_CODE_2C: !assembly
   Size: 14
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC098AE
 MOVEMENT_CODE_2D: !assembly
   Size: 14
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC098BC
 MOVEMENT_CODE_37: !assembly
   Size: 20
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC098CA
 MOVEMENT_CODE_38: !assembly
   Size: 20
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC098DE
 MOVEMENT_CODE_39: !assembly
   Size: 21
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC098F2
 UNKNOWN_C09907: !assembly
   Size: 21
@@ -5984,68 +6080,118 @@ UNKNOWN_C09907: !assembly
     A: Index
 MOVEMENT_CODE_3A: !assembly
   Size: 21
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC0991C
 MOVEMENT_CODE_43: !assembly
   Size: 12
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09931
 MOVEMENT_CODE_42_4C: !assembly
   Size: 32
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC0993D
 MOVEMENT_CODE_0A: !assembly
   Size: 14
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC0995D
 MOVEMENT_CODE_0B: !assembly
   Size: 14
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC0996B
 MOVEMENT_CODE_10: !assembly
   Size: 37
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Labels:
     21: UNKNOWN0
     26: MOVEMENT_CODE_11
   Offset: 0xC09979
 MOVEMENT_CODE_0C: !assembly
   Size: 0x1A
-  Offset: 0xC099C3
   Initial State:
     8 Bit Accum: n
+    8 Bit Index: n
+  Offset: 0xC099C3
 MOVEMENT_CODE_07: !assembly
   Size: 49
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Labels:
     44: UNKNOWN0
   Offset: 0xC099DD
 MOVEMENT_CODE_13: !assembly
   Size: 12
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09A0E
 MOVEMENT_CODE_08: !assembly
   Size: 20
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09A1A
 MOVEMENT_CODE_09: !assembly
   Size: 10
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09A2E
 MOVEMENT_CODE_3C_46: !assembly
   Size: 6
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09A38
 MOVEMENT_CODE_3D_47: !assembly
   Size: 6
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09A3E
 MOVEMENT_CODE_3E_48: !assembly
   Size: 24
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Labels:
     16: UNKNOWN0
   Offset: 0xC09A44
 MOVEMENT_CODE_18: !assembly
   Size: 43
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09A5C
 MOVEMENT_CODE_14: !assembly
   Size: 16
   Initial State:
     8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09A87
 MOVEMENT_CODE_27: !assembly
   Size: 8
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09A97
 MOVEMENT_CODE_0D: !assembly
   Size: 45
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09A9F
 UNKNOWN_C09ACC: !assembly
   Size: 7
@@ -6058,21 +6204,36 @@ UNKNOWN_C09ADB: !assembly
   Offset: 0xC09ADB
 MOVEMENT_CODE_0E: !assembly
   Size: 23
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09AE2
 UNKNOWN_C09AF9: !unknown
   Size: 16
   Offset: 0xC09AF9
 MOVEMENT_CODE_0F: !assembly
   Size: 6
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09B09
 MOVEMENT_CODE_12: !assembly
   Size: 16
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09B0F
 MOVEMENT_CODE_15: !assembly
   Size: 13
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09B1F
 MOVEMENT_CODE_16: !assembly
   Size: 24
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Labels:
     21: UNKNOWN0
   Offset: 0xC09B2C
@@ -6084,38 +6245,71 @@ MOVEMENT_CODE_17: !assembly
   Offset: 0xC09B44
 MOVEMENT_CODE_1C: !assembly
   Size: 20
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09B4D
 MOVEMENT_CODE_1D: !assembly
   Size: 10
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09B61
 MOVEMENT_CODE_1E: !assembly
   Size: 14
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09B6B
 MOVEMENT_CODE_1F: !assembly
   Size: 24
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09B79
 MOVEMENT_CODE_20: !assembly
   Size: 24
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09B91
 MOVEMENT_CODE_44: !assembly
   Size: 11
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Labels:
     10: UNKNOWN0
   Offset: 0xC09BA9
 MOVEMENT_CODE_21: !assembly
   Size: 24
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09BB4
 MOVEMENT_CODE_26: !assembly
   Size: 24
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09BCC
 MOVEMENT_CODE_22: !assembly
   Size: 10
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09BE4
 MOVEMENT_CODE_23: !assembly
   Size: 10
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09BEE
 MOVEMENT_CODE_25: !assembly
   Size: 10
+  Initial State:
+    8 Bit Accum: n
+    8 Bit Index: n
   Offset: 0xC09BF8
 UNKNOWN_C09C02: !assembly
   Size: 51
