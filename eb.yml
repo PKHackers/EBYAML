@@ -1204,109 +1204,6 @@ Script Tables:
       - spi
 ...
 ---
-SNES_HEADER: !struct
-  Description: Structure describing aspects of the cartridge
-  Offset: 0x00FFB0
-  Size: 0x4F
-  Entries:
-    ID: !script
-      Size: 6
-      Charset: ascii
-    UNKNOWN: !unknown
-      Size: 10
-    TITLE: !script
-      Size: 0x15
-      Charset: ascii
-    ROMLAYOUT: !int
-      Size: 1
-    CARTTYPE: !int
-      Size: 1
-    ROMSIZE: !int
-      Size: 1
-      Values: &__HEADER_SIZES
-        0: None
-        1: 2KiB
-        2: 4KiB
-        3: 8KiB
-        4: 16KiB
-        5: 32KiB
-        6: 64KiB
-        7: 128KiB
-        8: 256KiB
-        9: 512KiB
-        10: 1024KiB
-        11: 2048KiB
-        12: 4096KiB
-        13: 8192KiB
-    RAMSIZE: !int
-      Size: 1
-      Values: *__HEADER_SIZES
-    COUNTRYCODE: !int
-      Size: 1
-      Values:
-        0x00: Japan
-        0x01: North America
-        0x02: Europe
-        0x03: Scandinavia
-        0x06: Europe (French)
-        0x07: Dutch
-        0x08: Spanish
-        0x09: German
-        0x0A: Italian
-        0x0B: Chinese
-        0x0D: Korean
-        0x0E: Common
-        0x0F: Canada
-        0x10: Brazil
-        0x11: Australia
-    LICENSEE: !int
-      Size: 1
-      Values:
-        0x33: Extended
-    REVISION: !int
-      Size: 1
-    CHECKSUM: !int
-      Size: 2
-    CHECKSUMCOMPLEMENT: !int
-      Size: 2
-    NATIVEMODEVECTORS: !struct
-      Size: 0x10
-      Entries:
-        UNUSED: !pointer
-          Size: 2
-        UNUSED2: !pointer
-          Size: 2
-        COP: !pointer
-          Size: 2
-        BRK: !pointer
-          Size: 2
-        ABORT: !pointer
-          Size: 2
-        NMI: !pointer
-          Size: 2
-        UNUSED3: !pointer
-          Size: 2
-        IRQ: !pointer
-          Size: 2
-    EMULATIONMODEVECTORS: !struct
-      Size: 0x10
-      Entries:
-        UNUSED: !pointer
-          Size: 2
-        UNUSED2: !pointer
-          Size: 2
-        COP: !pointer
-          Size: 2
-        UNUSED3: !pointer
-          Size: 2
-        ABORT: !pointer
-          Size: 2
-        NMI: !pointer
-          Size: 2
-        RESET: !pointer
-          Size: 2
-        IRQ: !pointer
-          Size: 2
 SAVE_SLOT_1: !struct
   Offset: 0x206000
   Pretty Name: Save Slot 1
@@ -8083,8 +7980,111 @@ UNKNOWN_C0F8AA: !assembly
     6: UNKNOWN0
   Offset: 0xC0F8AA
 EMPTY_C0F8C2: !empty
-  Size: 1854
+  Size: 1774
   Offset: 0xC0F8C2
+SNES_HEADER: !struct
+  Description: Structure describing aspects of the cartridge
+  Offset: 0xC0FFB0
+  Size: 0x50
+  Entries:
+    ID: !script
+      Size: 6
+      Charset: ascii
+    UNKNOWN: !unknown
+      Size: 10
+    TITLE: !script
+      Size: 0x15
+      Charset: ascii
+    ROMLAYOUT: !int
+      Size: 1
+    CARTTYPE: !int
+      Size: 1
+    ROMSIZE: !int
+      Size: 1
+      Values: &__HEADER_SIZES
+        0: None
+        1: 2KiB
+        2: 4KiB
+        3: 8KiB
+        4: 16KiB
+        5: 32KiB
+        6: 64KiB
+        7: 128KiB
+        8: 256KiB
+        9: 512KiB
+        10: 1024KiB
+        11: 2048KiB
+        12: 4096KiB
+        13: 8192KiB
+    RAMSIZE: !int
+      Size: 1
+      Values: *__HEADER_SIZES
+    COUNTRYCODE: !int
+      Size: 1
+      Values:
+        0x00: Japan
+        0x01: North America
+        0x02: Europe
+        0x03: Scandinavia
+        0x06: Europe (French)
+        0x07: Dutch
+        0x08: Spanish
+        0x09: German
+        0x0A: Italian
+        0x0B: Chinese
+        0x0D: Korean
+        0x0E: Common
+        0x0F: Canada
+        0x10: Brazil
+        0x11: Australia
+    LICENSEE: !int
+      Size: 1
+      Values:
+        0x33: Extended
+    REVISION: !int
+      Size: 1
+    CHECKSUM: !int
+      Size: 2
+    CHECKSUMCOMPLEMENT: !int
+      Size: 2
+    NATIVEMODEVECTORS: !struct
+      Size: 0x10
+      Entries:
+        UNUSED: !pointer
+          Size: 2
+        UNUSED2: !pointer
+          Size: 2
+        COP: !pointer
+          Size: 2
+        BRK: !pointer
+          Size: 2
+        ABORT: !pointer
+          Size: 2
+        NMI: !pointer
+          Size: 2
+        UNUSED3: !pointer
+          Size: 2
+        IRQ: !pointer
+          Size: 2
+    EMULATIONMODEVECTORS: !struct
+      Size: 0x10
+      Entries:
+        UNUSED: !pointer
+          Size: 2
+        UNUSED2: !pointer
+          Size: 2
+        COP: !pointer
+          Size: 2
+        UNUSED3: !pointer
+          Size: 2
+        ABORT: !pointer
+          Size: 2
+        NMI: !pointer
+          Size: 2
+        RESET: !pointer
+          Size: 2
+        IRQ: !pointer
+          Size: 2
 UNKNOWN_C10000: !assembly
   Size: 4
   Description: Redirect to Hide HP/PP Windows
