@@ -15744,7 +15744,7 @@ BTLACT_SUPER_BOMB: !assembly
   Description: 'Battle action: Super bomb'
   Notes: 270 +/- 50% damage
   Offset: 0xC2A821
-BTLACT_SOLIDIFY: !assembly
+BTLACT_SOLIDIFY_2: !assembly
   Description: Solidify
   Notes: Fails on NPCs
   Labels:
@@ -22101,7 +22101,7 @@ UNKNOWN_C41EFF: !assembly
 UNKNOWN_C41FC5: !unknown
   Size: 26
   Offset: 0xC41FC5
-UNKNOWN_C41FC5: !unknown
+UNKNOWN_C41FDF: !unknown
   Size: 32
   Offset: 0xC41FDF
 UNKNOWN_C41FFF: !assembly
@@ -28498,7 +28498,7 @@ UNKNOWN_EFD6D4: !assembly
     459: UNKNOWN28
     479: UNKNOWN29
   Offset: 0xEFD6D4
-DEBUG_MENU_TEXT: !unknown
+DEBUG_MENU_TEXT_2: !unknown
   Description: Programmers' Debug Mode Menu Text
   Size: 169
   Offset: 0xEFD8B5
