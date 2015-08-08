@@ -5,6 +5,7 @@ Platform: snes
 Title: Earthbound
 Country: US
 Series: Mother
+Clean Hash: d67a8ef36ef616bc39306aa1b486e1bd3047815a
 Default Script: standardtext
 Script Tables:
   movement:
