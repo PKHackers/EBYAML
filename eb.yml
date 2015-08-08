@@ -1770,20 +1770,19 @@ SPC_DATA_PTR: !pointer
 CUR_TEXT_PAL: !array
   Size: 0x40
   Description: Current Text Palette
-  Item Type: !color
+  Item Type: !color &SNESCOLOR
     Size: 2
+    Format: BGR555
   Offset: 0x7E0200
 CUR_MAP_PAL: !array
   Size: 0xC0
   Description: Current Map Palette
-  Item Type: !color
-    Size: 2
+  Item Type: *SNESCOLOR
   Offset: 0x7E0240
 CUR_PARTY_PAL: !array
   Size: 0x20
   Description: Current Party Palette
-  Item Type: !color
-    Size: 2
+  Item Type: *SNESCOLOR
   Offset: 0x7E03A0
 UNKNOWN_7E0400: !struct
   Size: 0x100
@@ -16909,8 +16908,7 @@ SPRITE_GROUP_PALETTES: !array
   Description: Sprite Group Palettes Table
   Item Type: !array
     Size: 32
-    Item Type: !color
-      Size: 2
+    Item Type: *SNESCOLOR
   Offset: 0xC30000
 DISPLAY_ANTI-PIRACY_SCREEN: !assembly
   Size: 66
@@ -25232,17 +25230,17 @@ MUSIC_DATASET_TABLE: !array
   Description: Music Dataset Table
   Item Type: !struct
     Entries:
-      SAMPLESET1: !int
+      SAMPLE_SET_1: !int
         Pretty Name: Sample Set 1
         Values:
           255: None
         Size: 1
-      SAMPLESET2: !int
+      SAMPLE_SET_2: !int
         Pretty Name: Sample Set 2
         Values:
           255: None
         Size: 1
-      SEQUENCESET: !int
+      SEQUENCE_SET: !int
         Pretty Name: Sequence Set
         Values:
           255: None
@@ -25728,6 +25726,7 @@ PSI_ANIM_CFG: !array
       ENEMYCOLOUR: !color
         Pretty Name: Enemy colour
         Size: 2
+        Format: BGR555
   Offset: 0xCCF04D
 PSI_ARRANGEMENT_4: !unknown
   Size: 371
@@ -25742,8 +25741,7 @@ PSI_ANIM_PALETTES: !array
   Description: PSI Animation Palettes
   Item Type: !array
     Size: 16
-    Item Type: !color
-      Size: 2
+    Item Type: *SNESCOLOR
   Offset: 0xCCF47F
 PSI_ANIM_POINTERS: !array
   Size: 136
@@ -25774,7 +25772,7 @@ BATTLE_SPRITES_POINTERS: !array
     Entries:
       POINTER: !pointer
         Size: 4
-      SPRITESIZE: !int
+      SPRITE_SIZE: !int
         Size: 1
         Values:
         - 0
@@ -25790,8 +25788,7 @@ BATTLE_SPRITE_PALETTES: !array
   Size: 1024
   Item Type: !array
     Size: 32
-    Item Type: !color
-      Size: 2
+    Item Type: *SNESCOLOR
   Offset: 0xCE6514
 SWIRL_DATA: !unknown
   Size: 29489
@@ -25825,8 +25822,7 @@ SOUND_STONE_PALETTE: !array
   Description: Sound stone palette
   Item Type: !array
     Size: 32
-    Item Type: !color
-      Size: 2
+    Item Type: *SNESCOLOR
   Offset: 0xCEF806
 AUDIO_PACK_102: !unknown
   Size: 1850
@@ -26267,7 +26263,7 @@ OVERWORLD_SPRITES: !array
   Size: 280000
   Item Type: !tile
     Size: 16
-    BPP: 4
+    Format: SNES4BPP
   Offset: 0xD10000
 UNKNOWN_D545C0: !empty
   Size: 2624
@@ -26892,8 +26888,7 @@ ANTI-PIRACY_NOTICE_GRAPHICS: !unknown
 WARNING_PALETTE: !array
   Size: 8
   Description: Palette for Anti-Piracy and Faulty Game Pak Screens
-  Item Type: !color
-    Size: 2
+  Item Type: *SNESCOLOR
   Offset: 0xD8F3BE
 FAULTY_GAME_PAK_ARRANGEMENT: !array
   Size: 510
@@ -26936,8 +26931,7 @@ MAP_DATA_PALETTES: !array
   Size: 32256
   Item Type: !array
     Size: 32
-    Item Type: !color
-      Size: 2
+    Item Type: *SNESCOLOR
   Offset: 0xDA7CA7
 MAP_DATA_UNKNOWN_PALETTE_PTR_TABLE: !array
   Size: 96
@@ -27063,50 +27057,41 @@ TEXT_WINDOW_FLAVOUR_PALETTES: !array
     Entries:
       TEXTPALETTE: !array
         Pretty Name: Text Palette
-        Item Type: !color
-          Size: 2
+        Item Type: *SNESCOLOR
         Size: 8
       CURSORBOXNUMPALETTE: !array
         Pretty Name: Cursor, Box, Number Palette
-        Item Type: !color
-          Size: 2
+        Item Type: *SNESCOLOR
         Size: 8
       UNKNOWNPALETTE: !array
         Pretty Name: Unknown Palette
-        Item Type: !color
-          Size: 2
+        Item Type: *SNESCOLOR
         Size: 8
       SPECIALTEXTPALETTE: !array
         Pretty Name: Special Text Palette
-        Item Type: !color
-          Size: 2
+        Item Type: *SNESCOLOR
         Size: 8
       HPPPPALETTE: !array
         Pretty Name: HP/PP Palette
-        Item Type: !color
-          Size: 2
+        Item Type: *SNESCOLOR
         Size: 8
       DARKENEDPALETTE: !array
         Pretty Name: Darkened Palette
-        Item Type: !color
-          Size: 2
+        Item Type: *SNESCOLOR
         Size: 8
       AUTOAFFLICTIONPALETTE: !array
         Pretty Name: AUTO, affliction Palette
-        Item Type: !color
-          Size: 2
+        Item Type: *SNESCOLOR
         Size: 8
       NONBATTLETEXTPALETTE: !array
         Pretty Name: Non-battle text Palette
-        Item Type: !color
-          Size: 2
+        Item Type: *SNESCOLOR
         Size: 8
   Offset: 0xE01FC8
 MOVEMENT_TEXT_STRING_PALETTE: !array
   Size: 8
   Description: Movement-Referenced Text String Palette
-  Item Type: !color
-    Size: 2
+  Item Type: *SNESCOLOR
   Offset: 0xE02188
 TOWN_MAP_GFX_POINTER_TABLE: !array
   Size: 24
@@ -27135,20 +27120,16 @@ TOWN_MAP_SCARABA: !unknown
   Description: Scaraba Town Map Data
   #Item Type: !struct
   #  Entries:
-  #  - !array
-  #    Name: Palette
-  #    Size: 0x40
-  #  - !array
-  #    Name: Arrangement
-  #    Size: 0x800
-  #  - !struct
-  #    Name: Graphics
-  #    Size: 0x4000
-  #    Entries:
-  #    - !tile
-  #      Name: Tile
-  #      Size: 32
-  #      bpp: 4
+  #    PALETTE: !array
+  #      Size: 0x40
+  #    ARRANGEMENT: !array
+  #      Size: 0x800
+  #    GRAPHICS: !struct
+  #      Size: 0x4000
+  #      Entries:
+  #        TILE: !tile
+  #          Size: 32
+  #          Format: SNES4BPP
   Offset: 0xE0ADB4
 TOWN_MAP_SUMMERS: !unknown
   Size: 9490
@@ -27397,8 +27378,7 @@ STAFF_CREDITS_FONT_PALETTE: !array
   Description: Staff Credits Font Palette
   Item Type: !array
     Size: 8
-    Item Type: !color
-      Size: 2
+    Item Type: *SNESCOLOR
 UNKNOWN_E1E924: !unknown
   Size: 38
   Offset: 0xE1E924
@@ -27415,8 +27395,7 @@ TOWN_MAP_ICON_PALETTE: !array
   Description: Town Map Icon Palette
   Item Type: !array
     Size: 32
-    Item Type: !color
-      Size: 2
+    Item Type: *SNESCOLOR
 UNKNOWN_E1F203: !unknown
   Size: 0x28E
   Offset: 0xE1F203
@@ -28842,7 +28821,7 @@ DEBUG_MENU_FONT: !array
   Size: 1024
   Item Type: !tile
     Size: 16
-    BPP: 2
+    Format: GAMEBOY
   Offset: 0xEFEB70
 UNKNOWN_EFEF70: !unknown
   Size: 71
@@ -28852,7 +28831,7 @@ KIRBY: !array
   Size: 288
   Item Type: !tile
     Size: 32
-    BPP: 4
+    Format: SNES4BPP
   Offset: 0xEFEFB7
 UNKNOWN_EFF0D7: !empty
   Size: 228
@@ -28861,8 +28840,7 @@ UNKNOWN_EFF1BB: !array
   Size: 512
   Item Type: !array
     Size: 32
-    Item Type: !color
-      Size: 2
+    Item Type: *SNESCOLOR
   Offset: 0xEFF1BB
 UNKNOWN_VERSION_STRING: !script
   Size: 32
