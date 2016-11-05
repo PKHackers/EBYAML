@@ -1274,9 +1274,9 @@ SAVE_SLOT_1: !struct
           Item Type: &ITEM_REF !int
             Size: 1
           Size: 36
-        UNKNOWNC: !unknown
+        UNKNOWNC: !undefined
           Size: 6
-        UNKNOWNC2: !unknown
+        UNKNOWNC2: !undefined
           Size: 2
         LEADER_X_COORD: !int
           Size: 2
@@ -1308,22 +1308,22 @@ SAVE_SLOT_1: !struct
             12: Escalator sliding
             13: Stair movement
           Size: 2
-        UNKNOWNF: !unknown
+        UNKNOWNF: !undefined
           Size: 4
         CURRENT_PARTY_MEMBERS: !int
           Size: 2
-        UNKNOWNG: !unknown
+        UNKNOWNG: !undefined
           Size: 6
         PLAYER_CONTROLLED_PARTY_MEMBERS: !int
           Size: 1
           Pretty Name: Player-Controlled Party Members
-        UNKNOWNG2: !unknown
+        UNKNOWNG2: !undefined
           Size: 17
         PARTY_COUNT: !int
           Size: 1
         PLAYER_CONTROLLED_PARTY_COUNT: !int
           Size: 1
-        UNKNOWNH: !unknown
+        UNKNOWNH: !undefined
           Size: 12
         AUTO_FIGHT_ENABLE: !int
           Size: 1
@@ -1342,7 +1342,7 @@ SAVE_SLOT_1: !struct
           Values:
             0: Mono
             1: Stereo
-        UNKNOWNJ: !unknown
+        UNKNOWNJ: !undefined
           Size: 273
         TIMER: !int
           Size: 4
@@ -1375,7 +1375,7 @@ SAVE_SLOT_1: !struct
           MAXPP: !int
             Size: 2
             Pretty Name: Maximum PP
-          AFFLICTIONS: !unknown
+          AFFLICTIONS: !undefined
             Size: 7
             Pretty Name: Current Status Effects
           EQUIPPED_STATS: !struct
@@ -1408,13 +1408,13 @@ SAVE_SLOT_1: !struct
             Size: 4
             Item Type: *ITEM_REF
             Pretty Name: Current equipped items
-          UNKNOWN: !unknown
+          UNKNOWN: !undefined
             Size: 8
           POSITION_INDEX: !int
             Size: 2
             Pretty Name: Position Index
             Notes: 'TODO: which table was this for again?'
-          UNKNOWN2: !unknown
+          UNKNOWN2: !undefined
             Size: 4
           UNKNOWN3: !int
             Size: 2
@@ -1492,7 +1492,7 @@ SAVE_SLOT_1: !struct
               LUCK: !int
                 Size: 1
             Pretty Name: Current stat boosts
-          UNKNOWN5: !unknown
+          UNKNOWN5: !undefined
             Size: 3
     EVENT_FLAGS: !struct
       Size: 0x80
@@ -1543,35 +1543,35 @@ SAVE_NULLSPACE: !empty
 UNKNOWN_SAVE: !int
   Size: 2
   Offset: 0x207FFE
-UNKNOWN_7E0000: !unknown
+UNKNOWN_7E0000: !undefined
   Size: 1
   Offset: 0x7E0000
-UNKNOWN_7E0001: !unknown
+UNKNOWN_7E0001: !undefined
   Size: 1
   Offset: 0x7E0001
-UNKNOWN_7E0002: !unknown
+UNKNOWN_7E0002: !undefined
   Size: 1
   Offset: 0x7E0002
   Notes: Some sort of counter?
-UNKNOWN_7E0003: !unknown
+UNKNOWN_7E0003: !undefined
   Size: 2
   Offset: 0x7E0003
-UNKNOWN_7E0005: !unknown
+UNKNOWN_7E0005: !undefined
   Size: 2
   Offset: 0x7E0005
-UNKNOWN_7E0007: !unknown
+UNKNOWN_7E0007: !undefined
   Size: 2
   Offset: 0x7E0007
-UNKNOWN_7E0009: !unknown
+UNKNOWN_7E0009: !undefined
   Size: 1
   Offset: 0x7E0009
-UNKNOWN_7E000A: !unknown
+UNKNOWN_7E000A: !undefined
   Size: 1
   Offset: 0x7E000A
-UNKNOWN_7E000B: !unknown
+UNKNOWN_7E000B: !undefined
   Size: 1
   Offset: 0x7E000B
-UNKNOWN_7E000C: !unknown
+UNKNOWN_7E000C: !undefined
   Size: 1
   Offset: 0x7E000C
 INIDISP_MIRROR: !int
@@ -1580,25 +1580,25 @@ INIDISP_MIRROR: !int
 OBSEL_MIRROR: !int
   Size: 1
   Offset: 0x7E000E
-UNKNOWN_7E000F: !unknown
+UNKNOWN_7E000F: !undefined
   Size: 1
   Offset: 0x7E000F
 MOSAIC_MIRROR: !int
   Size: 1
   Offset: 0x7E0010
-UNKNOWN_7E0011: !unknown
+UNKNOWN_7E0011: !undefined
   Size: 4
   Offset: 0x7E0011
 BG12NBA_MIRROR: !int
   Size: 1
   Offset: 0x7E0015
-UNKNOWN_7E0016: !unknown
+UNKNOWN_7E0016: !undefined
   Size: 1
   Offset: 0x7E0016
 UNUSED_WH2_MIRROR: !int
   Size: 1
   Offset: 0x7E0017
-UNKNOWN_7E0018: !unknown
+UNKNOWN_7E0018: !undefined
   Size: 2
   Offset: 0x7E0018
 TM_MIRROR: !int
@@ -1607,7 +1607,7 @@ TM_MIRROR: !int
 TD_MIRROR: !int
   Size: 1
   Offset: 0x7E001B
-UNKNOWN_7E001E: !unknown
+UNKNOWN_7E001E: !undefined
   Size: 1
   Offset: 0x7E001E
 HDMAEN_MIRROR: !int
@@ -1621,19 +1621,19 @@ RAND_B: !int
   Size: 2
   Offset: 0x7E0026
   Description: Random number generator state B
-UNKNOWN_7E002B: !unknown
+UNKNOWN_7E002B: !undefined
   Size: 1
   Offset: 0x7E002B
-UNKNOWN_7E002C: !unknown
+UNKNOWN_7E002C: !undefined
   Size: 1
   Offset: 0x7E002C
-UNKNOWN_7E002D: !unknown
+UNKNOWN_7E002D: !undefined
   Size: 1
   Offset: 0x7E002D
-UNKNOWN_7E002E: !unknown
+UNKNOWN_7E002E: !undefined
   Size: 1
   Offset: 0x7E002E
-UNKNOWN_7E002F: !unknown
+UNKNOWN_7E002F: !undefined
   Size: 2
   Offset: 0x7E002F
 BG1_X_POS: !int
@@ -1731,27 +1731,27 @@ PAD_2_PRESS: !int
   Notes: *BUTTONS
   Offset: 0x7E006F
   Size: 2
-UNKNOWN_7E0091: !unknown
+UNKNOWN_7E0091: !undefined
   Notes: "$C085B7?"
   Offset: 0x7E0091
   Size: 1
-UNKNOWN_7E0092: !unknown
+UNKNOWN_7E0092: !undefined
   Notes: "$C085B7?"
   Offset: 0x7E0092
   Size: 2
-UNKNOWN_7E0094: !unknown
+UNKNOWN_7E0094: !undefined
   Notes: "$C085B7? Lower half of an address?"
   Offset: 0x7E0094
   Size: 2
-UNKNOWN_7E0096: !unknown
+UNKNOWN_7E0096: !undefined
   Notes: "$C085B7? Upper half of an address?"
   Offset: 0x7E0096
   Size: 1
-UNKNOWN_7E0097: !unknown
+UNKNOWN_7E0097: !undefined
   Notes: "$C085B7?"
   Offset: 0x7E0097
   Size: 2
-UNKNOWN_7E0099: !unknown
+UNKNOWN_7E0099: !undefined
   Notes: "$C085B7?"
   Offset: 0x7E0099
   Size: 2
@@ -1798,10 +1798,10 @@ UNKNOWN_7E0400: !struct
     VMADDL: !int
       Size: 2
   Offset: 0x7E0400
-UNKNOWN_7E0A50: !unknown
+UNKNOWN_7E0A50: !undefined
   Size: 2
   Offset: 0x7E0A50
-UNKNOWN_7E0A58: !unknown
+UNKNOWN_7E0A58: !undefined
   Size: 2
   Offset: 0x7E0A58
 MOVEMENT_42_LOADED_PTR: !pointer
@@ -1809,7 +1809,7 @@ MOVEMENT_42_LOADED_PTR: !pointer
   Offset: 0x7E0A5A
 LOADED_SPRITE_MOVEMENT_CODES_TABLE: !array
   Description: Loaded Sprite Movement Codes Table (Are we sure?)
-  Item Type: &30x2 !unknown
+  Item Type: &30x2 !undefined
     Size: 2
   Size: 0x3C
   Offset: 0x7E0A62
@@ -1976,134 +1976,134 @@ UNKNOWN_30X2_TABLE_19: !array
   Item Type: *30x2
   Size: 0x3C
   Offset: 0x7E121E
-UNKNOWN_7E125A: !unknown
+UNKNOWN_7E125A: !undefined
   Size: 0x8C
   Offset: 0x7E125A
-UNKNOWN_7E12E6: !unknown
+UNKNOWN_7E12E6: !undefined
   Size: 0x8C
   Offset: 0x7E12E6
 UNKNOWN_30X2_TABLE_20: !array
   Item Type: *30x2
   Size: 0x3C
   Offset: 0x7E1372
-UNKNOWN_7E13AE: !unknown
+UNKNOWN_7E13AE: !undefined
   Size: 0x50
   Offset: 0x7E13AE
 UNKNOWN_30X2_TABLE_21: !array
   Item Type: *30x2
   Size: 0x3C
   Offset: 0x7E13FE
-UNKNOWN_7E143A: !unknown
+UNKNOWN_7E143A: !undefined
   Size: 0x50
   Offset: 0x7E143A
 UNKNOWN_30X2_TABLE_22: !array
   Item Type: *30x2
   Size: 0x3C
   Offset: 0x7E148A
-UNKNOWN_7E14C6: !unknown
+UNKNOWN_7E14C6: !undefined
   Size: 0x50
   Offset: 0x7E14C6
 UNKNOWN_30X2_TABLE_23: !array
   Item Type: *30x2
   Size: 0x3C
   Offset: 0x7E1516
-UNKNOWN_7E1B9E: !unknown
+UNKNOWN_7E1B9E: !undefined
   Size: 2
   Offset: 0x7E1B9E
-UNKNOWN_7E1BA5: !unknown
+UNKNOWN_7E1BA5: !undefined
   Size: 1
   Offset: 0x7E1BA5
-UNKNOWN_7E1BA6: !unknown
+UNKNOWN_7E1BA6: !undefined
   Size: 1
   Offset: 0x7E1BA6
-UNKNOWN_7E1BA7: !unknown
+UNKNOWN_7E1BA7: !undefined
   Size: 1
   Offset: 0x7E1BA7
-UNKNOWN_7E1BA8: !unknown
+UNKNOWN_7E1BA8: !undefined
   Size: 1
   Offset: 0x7E1BA8
-UNKNOWN_7E1BCA: !unknown
+UNKNOWN_7E1BCA: !undefined
   Size: 2
   Offset: 0x7E1BCA
-UNKNOWN_7E1BD0: !unknown
+UNKNOWN_7E1BD0: !undefined
   Size: 1
   Offset: 0x7E1BD0
-UNKNOWN_7E1BD2: !unknown
+UNKNOWN_7E1BD2: !undefined
   Size: 1
   Offset: 0x7E1BD2
-UNKNOWN_7E1BD4: !unknown
+UNKNOWN_7E1BD4: !undefined
   Size: 1
   Offset: 0x7E1BD4
-UNKNOWN_7E2402: !unknown
+UNKNOWN_7E2402: !undefined
   Size: 2
   Notes: Some sort of index? seen at $C08B8E
   Offset: 0x7E2402
-UNKNOWN_7E2404: !unknown
+UNKNOWN_7E2404: !undefined
   Size: 0x40
   Offset: 0x7E2404
-UNKNOWN_7E2444: !unknown
+UNKNOWN_7E2444: !undefined
   Size: 0x40
   Offset: 0x7E2444
-UNKNOWN_7E2484: !unknown
+UNKNOWN_7E2484: !undefined
   Size: 0x40
   Offset: 0x7E2484
-UNKNOWN_7E24C4: !unknown
+UNKNOWN_7E24C4: !undefined
   Size: 0x40
   Offset: 0x7E24C4
-UNKNOWN_7E2504: !unknown
+UNKNOWN_7E2504: !undefined
   Size: 2
   Offset: 0x7E2504
-UNKNOWN_7E2506: !unknown
+UNKNOWN_7E2506: !undefined
   Size: 0x40
   Offset: 0x7E2506
-UNKNOWN_7E2546: !unknown
+UNKNOWN_7E2546: !undefined
   Size: 0x40
   Offset: 0x7E2546
-UNKNOWN_7E2586: !unknown
+UNKNOWN_7E2586: !undefined
   Size: 0x40
   Offset: 0x7E2586
-UNKNOWN_7E25C6: !unknown
+UNKNOWN_7E25C6: !undefined
   Size: 0x40
   Offset: 0x7E25C6
-UNKNOWN_7E2606: !unknown
+UNKNOWN_7E2606: !undefined
   Size: 2
   Offset: 0x7E2606
-UNKNOWN_7E2608: !unknown
+UNKNOWN_7E2608: !undefined
   Size: 0x40
   Notes: Seen at $C08B8E, big table
   Offset: 0x7E2608
-UNKNOWN_7E2648: !unknown
+UNKNOWN_7E2648: !undefined
   Size: 0x40
   Notes: Seen at $C08B8E, big table
   Offset: 0x7E2648
-UNKNOWN_7E2688: !unknown
+UNKNOWN_7E2688: !undefined
   Size: 0x40
   Notes: Seen at $C08B8E, big table
   Offset: 0x7E2688
-UNKNOWN_7E26C8: !unknown
+UNKNOWN_7E26C8: !undefined
   Size: 0x40
   Notes: Seen at $C08B8E, big table
   Offset: 0x7E26C8
-UNKNOWN_7E2708: !unknown
+UNKNOWN_7E2708: !undefined
   Size: 2
   Offset: 0x7E2708
-UNKNOWN_7E270A: !unknown
+UNKNOWN_7E270A: !undefined
   Size: 0x40
   Notes: Seen at $C08B8E, big table
   Offset: 0x7E270A
-UNKNOWN_7E274A: !unknown
+UNKNOWN_7E274A: !undefined
   Size: 0x40
   Notes: Seen at $C08B8E, big table
   Offset: 0x7E274A
-UNKNOWN_7E278A: !unknown
+UNKNOWN_7E278A: !undefined
   Size: 0x40
   Notes: Seen at $C08B8E, big table
   Offset: 0x7E278A
-UNKNOWN_7E27CA: !unknown
+UNKNOWN_7E27CA: !undefined
   Size: 0x40
   Notes: Seen at $C08B8E, big table
   Offset: 0x7E27CA
-UNKNOWN_7E280A: !unknown
+UNKNOWN_7E280A: !undefined
   Size: 2
   Offset: 0x7E280A
 UNKNOWN_30X2_TABLE_23_: !array
@@ -2213,24 +2213,24 @@ UNKNOWN_30X2_TABLE_46: !array
 DEBUG: !int
   Description: Debug Flag
   Size: 2
-  Values: 
+  Values:
     0: Disabled
     1: Enabled
   Offset: 0x7E436C
-UNKNOWN_7E436E: !unknown
+UNKNOWN_7E436E: !undefined
   Size: 2
   Offset: 0x7E436E
-UNKNOWN_7E4370: !unknown
+UNKNOWN_7E4370: !undefined
   Size: 2
   Offset: 0x7E4370
-UNKNOWN_7E4372: !unknown
+UNKNOWN_7E4372: !undefined
   Size: 2
   Offset: 0x7E4372
-UNKNOWN_7E438A: !unknown
+UNKNOWN_7E438A: !undefined
   Size: 2
   Notes: Seen at C03FA9, set to zero as part of respawning?
   Offset: 0x7E438A
-UNKNOWN_7E438C: !unknown
+UNKNOWN_7E438C: !undefined
   Size: 2
   Notes: Seen at C03FA9, set to zero as part of respawning?
   Offset: 0x7E438C
@@ -2238,48 +2238,48 @@ CURRENT_SECTOR_ATTRIBUTES: !int
   Description: Current Sector Attributes
   Size: 2
   Offset: 0x7E438E
-UNKNOWN_7E43D0: !unknown
+UNKNOWN_7E43D0: !undefined
   Size: 2
   Offset: 0x7E43D0
-UNKNOWN_7E43D2: !unknown
+UNKNOWN_7E43D2: !undefined
   Size: 2
   Offset: 0x7E43D2
-UNKNOWN_7E43D4: !unknown
+UNKNOWN_7E43D4: !undefined
   Size: 2
   Offset: 0x7E43D4
-UNKNOWN_7E43D6: !unknown
+UNKNOWN_7E43D6: !undefined
   Size: 2
   Offset: 0x7E43D6
-UNKNOWN_7E43D8: !unknown
+UNKNOWN_7E43D8: !undefined
   Size: 2
   Offset: 0x7E43D8
-UNKNOWN_7E43DA: !unknown
+UNKNOWN_7E43DA: !undefined
   Size: 2
   Offset: 0x7E43DA
-UNKNOWN_7E445C: !unknown
+UNKNOWN_7E445C: !undefined
   Size: 2
   Offset: 0x7E445C
-UNKNOWN_7E445E: !unknown
+UNKNOWN_7E445E: !undefined
   Size: 2
   Offset: 0x7E445E
-UNKNOWN_7E4460: !unknown
+UNKNOWN_7E4460: !undefined
   Size: 2
   Offset: 0x7E4460
-UNKNOWN_7E4472: !unknown
+UNKNOWN_7E4472: !undefined
   Size: 2
   Offset: 0x7E4472
-UNKNOWN_7E4474: !unknown
+UNKNOWN_7E4474: !undefined
   Size: 2
   Offset: 0x7E4474
-UNKNOWN_7E4676: !unknown
+UNKNOWN_7E4676: !undefined
   Notes: Seen in the respawn function, set to 1
   Size: 2
   Offset: 0x7E4676
-UNKNOWN_7E467A:  !unknown
+UNKNOWN_7E467A:  !undefined
   Description: Sprite Group Height
   Size: 2
   Offset: 0x7E467A
-UNKNOWN_7E467C: !unknown
+UNKNOWN_7E467C: !undefined
   Description: Sprite Group Width
   Size: 2
   Offset: 0x7E467C
@@ -2315,14 +2315,14 @@ SPRITE_TABLE_7E467E: !struct
     Makes Ness walk around upside down! :D
     Binary toggles: 80 is vertical flip, 40 horizontal... remaining bits unknown.
   Offset: 0x7E467E
-UNKNOWN_7E4A00: !unknown
+UNKNOWN_7E4A00: !undefined
   Size: 88
   Offset: 0x7E4A00
-UNKNOWN_7E4A58: !unknown
+UNKNOWN_7E4A58: !undefined
   Description: Unknown, Prevents TPT entries from loading when zero
   Size: 2
   Offset: 0x7E4A58
-UNKNOWN_7E4A5C: !unknown
+UNKNOWN_7E4A5C: !undefined
   Size: 2
   Notes: Seen at C02194
   Offset: 0x7E4A5C
@@ -2334,7 +2334,7 @@ SHOW_NPC_FLAG: !int
   Description: People-type TPT appearance Flag
   Size: 2
   Offset: 0x7E4A66
-UNKNOWN_7E4A68: !unknown
+UNKNOWN_7E4A68: !undefined
   Size: 2
   Notes: Seen at C02194
   Offset: 0x7E4A68
@@ -2342,22 +2342,22 @@ CURRENT_BATTLE_GROUP: !int
   Size: 2
   Description: Current battle group (see [1F 23] for listing)
   Offset: 0x7E4A8C
-UNKNOWN_7E4DBA: !unknown
+UNKNOWN_7E4DBA: !undefined
   Size: 2
   Notes: Used in main loop, skips debug check and pad button check?
   Offset: 0x7E4DBA
-UNKNOWN_7E4DBC: !unknown
+UNKNOWN_7E4DBC: !undefined
   Size: 2
   Offset: 0x7E4DBC
 BATTLE_DEBUG: !int
   Size: 2
   Description: Battle Debug Flag?
   Offset: 0x7E4DC2
-UNKNOWN_7E4DC6: !unknown
+UNKNOWN_7E4DC6: !undefined
   Notes: Seen in the respawn function, set to GAME_STATE.UNKNOWNC*95+0x99CE
   Size: 2
   Offset: 0x7E4DC6
-CHOSEN_FOUR_PTRS: !unknown
+CHOSEN_FOUR_PTRS: !undefined
   Description: Chosen Four Pointers
   Size: 10
   Offset: 0x7E4DC8
@@ -2370,14 +2370,14 @@ PLAYER_POSITION_BUFFER: !array
         Size: 2
       'Y': !int
         Size: 2
-      UNKNOWN: !unknown
+      UNKNOWN: !undefined
         Size: 8
   Offset: 0x7E5156
 MISC_DEBUG_FLAGS: !int
   Offset: 0x7E5D56
   Description: Miscellaneous Debug Flags
   Size: 2
-UNKNOWN_7E5D58: !unknown
+UNKNOWN_7E5D58: !undefined
   Size: 2
   Offset: 0x7E5D58
   Notes: Set to zero at the respawn function
@@ -2389,11 +2389,11 @@ CURRENT_TPT_ENTRY: !int
   Offset: 0x7E5D62
   Description: Current TPT entry
   Size: 2
-UNKNOWN_7E5D74: !unknown
+UNKNOWN_7E5D74: !undefined
   Offset: 0x7E5D74
   Description: Related to timers?
   Size: 2
-UNKNOWN_7E5D9A: !unknown
+UNKNOWN_7E5D9A: !undefined
   Size: 2
   Offset: 0x7E5D9A
   Notes: Used in main loop, pad button check?
@@ -2401,14 +2401,14 @@ MUSHROOMIZED_WALKING_FLAG: !int
   Size: 2
   Offset: 0x7E5DA0
   Description: Mushroomized Walking
-UNKNOWN_7E5DBA: !unknown
+UNKNOWN_7E5DBA: !undefined
   Size: 2
   Notes: 1 while teleporting
   Offset: 0x7E5DBA
-UNKNOWN_7E5DC0: !unknown
+UNKNOWN_7E5DC0: !undefined
   Size: 2
   Offset: 0x7E5DC0
-UNKNOWN_7E5DD4: !unknown
+UNKNOWN_7E5DD4: !undefined
   Notes: Seen in the respawn function, set to -1
   Size: 2
   Offset: 0x7E5DD4
@@ -2417,47 +2417,47 @@ UNKNOWN_7E5DEA: !array
   Item Type: !struct
     Size: 6
     Entries:
-      UNKNOWN0: !unknown
+      UNKNOWN0: !undefined
         Size: 2
       UNKNOWN1: !pointer
         Size: 4
   Size: 24
   Offset: 0x7E5DEA
-UNKNOWN_7E5E02: !unknown
+UNKNOWN_7E5E02: !undefined
   Notes: Door-related
   Size: 2
   Offset: 0x7E5E02
-UNKNOWN_7E5E04: !unknown
+UNKNOWN_7E5E04: !undefined
   Notes: Door-related
   Size: 2
   Offset: 0x7E5E04
-UNKNOWN_7E5E6D: !unknown
+UNKNOWN_7E5E6D: !undefined
   Size: 1
   Notes: Read at $C43E31. Text-y?
   Offset: 0x7E5E6D
-UNKNOWN_7E5E6E: !unknown
+UNKNOWN_7E5E6E: !undefined
   Size: 2
   Notes: Related to file selection? Used by $C1FF6B
   Offset: 0x7E5E6E
-UNKNOWN_7E5E71: !unknown
+UNKNOWN_7E5E71: !undefined
   Size: 2
   Notes: used by $C114B1
   Offset: 0x7E5E71
-UNKNOWN_7E5E73: !unknown
+UNKNOWN_7E5E73: !undefined
   Size: 2
   Notes: used by $C43D95
   Offset: 0x7E5E73
-UNKNOWN_7E5E75: !unknown
+UNKNOWN_7E5E75: !undefined
   Size: 1
   Notes: Seen at $C447FB. Set to 1. Text-y?
   Offset: 0x7E5E75
-UNKNOWN_7E5E76: !unknown
+UNKNOWN_7E5E76: !undefined
   Size: 1
   Offset: 0x7E5E76
-UNKNOWN_7E5E77: !unknown
+UNKNOWN_7E5E77: !undefined
   Size: 1
   Offset: 0x7E5E77
-UNKNOWN_7E5E78: !unknown
+UNKNOWN_7E5E78: !undefined
   Size: 1
   Offset: 0x7E5E78
 WINDOW_STATS_TABLE: !array
@@ -2465,7 +2465,7 @@ WINDOW_STATS_TABLE: !array
   Size: 656
   Item Type: !struct
     Entries:
-      UNKNOWN!: !unknown
+      UNKNOWN!: !undefined
         Size: 4
       ID: !int
         Size: 2
@@ -2495,28 +2495,28 @@ WINDOW_STATS_TABLE: !array
         Size: 1
       UNKNOWNC: !int
         Size: 1
-      WORKINGMEMORY: !unknown
+      WORKINGMEMORY: !undefined
         Size: 4
-      ARGUMENTMEMORY: !unknown
+      ARGUMENTMEMORY: !undefined
         Size: 4
-      SECONDARYMEMORY: !unknown
+      SECONDARYMEMORY: !undefined
         Size: 4
-      WORKINGMEMORYSTORAGE: !unknown
+      WORKINGMEMORYSTORAGE: !undefined
         Size: 4
-      ARGUMENTMEMORYSTORAGE: !unknown
+      ARGUMENTMEMORYSTORAGE: !undefined
         Size: 4
-      SECONDARYMEMORYSTORAGE: !unknown
+      SECONDARYMEMORYSTORAGE: !undefined
         Size: 4
-      UNKNOWND: !unknown
+      UNKNOWND: !undefined
         Size: 31
   Offset: 0x7E8650
-UNKNOWN_7E88E0: !unknown
+UNKNOWN_7E88E0: !undefined
   Size: 2
   Offset: 0x7E88E0
-UNKNOWN_7E88E2: !unknown
+UNKNOWN_7E88E2: !undefined
   Size: 2
   Offset: 0x7E88E2
-WINDOW_EXISTENCE_TABLE: !unknown
+WINDOW_EXISTENCE_TABLE: !undefined
   Size: 0x74
   Description: Window Existence Table
   Offset: 0x7E88E4
@@ -2524,10 +2524,10 @@ CURRENT_FOCUS_WINDOW: !int
   Size: 1
   Description: Current window with focus
   Offset: 0x7E8958
-UNKNOWN_7E895A: !unknown
+UNKNOWN_7E895A: !undefined
   Size: 5
   Offset: 0x7E895A
-UNKNOWN_7E8960: !unknown
+UNKNOWN_7E8960: !undefined
   Size: 1
   Offset: 0x7E8960
 PSI_WINDOW_CHARACTER: !int
@@ -2539,11 +2539,11 @@ UNKNOWN_7E89D4: !array
   Item Type: !script
     Size: 45
   Offset: 0x7E89D4
-UNKNOWN_7E9622: !unknown
+UNKNOWN_7E9622: !undefined
   Size: 1
   Notes: Window related?
   Offset: 0x7E9622
-UNKNOWN_7E9623: !unknown
+UNKNOWN_7E9623: !undefined
   Size: 1
   Notes: Seen at C442AC
   Offset: 0x7E9623
@@ -2551,15 +2551,15 @@ SELECTED_TEXT_SPEED: !int
   Size: 2
   Notes: Seen at C442AC
   Offset: 0x7E9625
-UNKNOWN_7E9627: !unknown
+UNKNOWN_7E9627: !undefined
   Size: 2
   Notes: Text speed related?
   Offset: 0x7E9627
-UNKNOWN_7E9629: !unknown
+UNKNOWN_7E9629: !undefined
   Size: 2
   Notes: Text speed related?
   Offset: 0x7E9629
-UNKNOWN_7E9641: !unknown
+UNKNOWN_7E9641: !undefined
   Size: 2
   Offset: 0x7E9641
 BATTLE_MODE_FLAG: !int
@@ -2573,7 +2573,7 @@ INPUT_LOCK_FLAG: !int
   Description: Input Lock Flag
   Size: 2
   Offset: 0x7E9645
-UNKNOWN_7E964B: !unknown
+UNKNOWN_7E964B: !undefined
   Size: 2
   Notes: SELECTED_TEXT_SPEED * 30?
   Offset: 0x7E964B
@@ -2581,40 +2581,40 @@ BLINKING_TRIANGLE_FLAG: !int
   Description: Blinking Prompt Flag
   Size: 2
   Offset: 0x7E964D
-UNKNOWN_7E964F: !unknown
+UNKNOWN_7E964F: !undefined
   Size: 2
   Notes: Seen at C442AC
   Offset: 0x7E964F
-UNKNOWN_7E9652: !unknown
+UNKNOWN_7E9652: !undefined
   Size: 2
   Notes: Seen at C43CAA, window related?
   Offset: 0x7E9652
-UNKNOWN_7E9654: !unknown
+UNKNOWN_7E9654: !undefined
   Size: 2
   Notes: Seen at C43CAA, window related?
   Offset: 0x7E9654
-UNKNOWN_7E9658: !unknown
+UNKNOWN_7E9658: !undefined
   Size: 2
   Notes: Seen at C3E75D
   Offset: 0x7E9658
-UNKNOWN_7E965A: !unknown
+UNKNOWN_7E965A: !undefined
   Size: 2
   Notes: Seen at C3E75D
   Offset: 0x7E965A
-UNKNOWN_7E9662: !unknown
+UNKNOWN_7E9662: !undefined
   Size: 2
   Notes: Seen at C442AC
   Offset: 0x7E9662
-UNKNOWN_7E96AA: !unknown
+UNKNOWN_7E96AA: !undefined
   Notes: Table involved with text subroutines (08 code) somehow. Ten entries
     of 0x1B (27) bytes each, so it runs up to 7E97B7? Text system stack frames?
   Offset: 0x7E96AA
   Size: 0x10E
-UNKNOWN_7E97B8: !unknown
+UNKNOWN_7E97B8: !undefined
   Size: 2
   Offset: 0x7E97B8
   Description: Which entry in the 96AA table to use?
-CC_ARGUMENT_STORAGE: !unknown
+CC_ARGUMENT_STORAGE: !undefined
   Size: 16
   Offset: 0x7E97BA
   Description: CC argument storage
@@ -2622,7 +2622,7 @@ CC_ARGUMENT_GATHERING_LOOP_COUNTER: !int
   Size: 1
   Offset: 0x7E97CA
   Description: CC argument-gathering loop counter
-UNKNOWN_7E97DA: !unknown
+UNKNOWN_7E97DA: !undefined
   Size: 0x1B
   Offset: 0x7E97DA
   Description: Storage for strings loaded with [19]? (How much space?)
@@ -2648,35 +2648,35 @@ CURRENT_INTERACTING_EVENT_FLAG: !int
   Size: 2
   Offset: 0x7E9C88
   Description: Event flag of the TPT entry you're currently interacting with
-UNKNOWN_7E9C9F: !unknown
+UNKNOWN_7E9C9F: !undefined
   Size: 1
   Notes: Save related? used by FILE_SELECT_MENU
   Offset: 0x7E9C9F
-UNKNOWN_7E9CA0: !unknown
+UNKNOWN_7E9CA0: !undefined
   Size: 1
   Notes: Save related? used by FILE_SELECT_MENU
   Offset: 0x7E9CA0
-UNKNOWN_7E9CA1: !unknown
+UNKNOWN_7E9CA1: !undefined
   Size: 1
   Notes: Save related? used by FILE_SELECT_MENU
   Offset: 0x7E9CA1
-UNKNOWN_7E9CA2: !unknown
+UNKNOWN_7E9CA2: !undefined
   Size: 3
   Notes: Save slot related? used by FILE_SELECT_MENU
   Offset: 0x7E9CA2
-UNKNOWN_7E9CA5: !unknown
+UNKNOWN_7E9CA5: !undefined
   Size: 1
   Notes: Save related? used by FILE_SELECT_MENU
   Offset: 0x7E9CA5
-UNKNOWN_7E9CAA: !unknown
+UNKNOWN_7E9CAA: !undefined
   Size: 1
   Notes: Save related? used by FILE_SELECT_MENU
   Offset: 0x7E9CAA
-UNKNOWN_7E9CAB: !unknown
+UNKNOWN_7E9CAB: !undefined
   Size: 1
   Notes: Save related? used by FILE_SELECT_MENU
   Offset: 0x7E9CAB
-UNKNOWN_7E9CB0: !unknown
+UNKNOWN_7E9CB0: !undefined
   Size: 1
   Notes: Save related? used by FILE_SELECT_MENU
   Offset: 0x7E9CB0
@@ -2688,11 +2688,11 @@ RESPAWN_Y: !int
   Size: 2
   Description: Y coordinate where the party leader will return to after death
   Offset: 0x7E9D21
-UNKNOWN_7E9E23: !unknown
+UNKNOWN_7E9E23: !undefined
   Size: 2
   Notes: Seen at C43CAA, window related?
   Offset: 0x7E9E23
-UNKNOWN_7E9E25: !unknown
+UNKNOWN_7E9E25: !undefined
   Size: 2
   Notes: Seen at C43CAA, window related?
   Offset: 0x7E9E25
@@ -2704,7 +2704,7 @@ DAD_PHONE_TIMER: !int
   Size: 2
   Description: Dad Phone Timer
   Offset: 0x7E9E54
-UNKNOWN_7E9E56: !unknown
+UNKNOWN_7E9E56: !undefined
   Size: 2
   Offset: 0x7E9E56
   Notes: Set to zero at the respawn function
@@ -2722,19 +2722,19 @@ TELEPORT_STYLE: !int
   - PSI Teleport β
   - Instant
   - Improved PSI Teleport β
-UNKNOWN_7E9F43: !unknown
+UNKNOWN_7E9F43: !undefined
   Size: 2
   Offset: 0x7E9F43
   Notes: 0 while teleporting normally, 1 while instant-teleporting
-UNKNOWN_7E9F45: !unknown
+UNKNOWN_7E9F45: !undefined
   Size: 2
   Offset: 0x7E9F45
   Notes: 0 while teleporting
-UNKNOWN_7E9F47: !unknown
+UNKNOWN_7E9F47: !undefined
   Size: 2
   Offset: 0x7E9F47
   Notes: 0 while teleporting
-UNKNOWN_7E9F6B: !unknown
+UNKNOWN_7E9F6B: !undefined
   Size: 2
   Offset: 0x7E9F6B
   Notes: Seen at C03FA9, set to -1 as part of respawning?
@@ -2742,38 +2742,38 @@ PAJAMA_FLAG: !int
   Size: 2
   Description: Non-zero if Ness is in Pajamas
   Offset: 0x7E9F71
-UNKNOWN_7E9F75: !unknown
+UNKNOWN_7E9F75: !undefined
   Size: 2
   Offset: 0x7E9F75
-UNKNOWN_7E9F7A: !unknown
+UNKNOWN_7E9F7A: !undefined
   Size: 2
   Offset: 0x7E9F7A
-UNKNOWN_7E9F7C: !unknown
+UNKNOWN_7E9F7C: !undefined
   Size: 2
   Offset: 0x7E9F7C
-UNKNOWN_7E9F7E: !unknown
+UNKNOWN_7E9F7E: !undefined
   Size: 2
   Offset: 0x7E9F7E
-UNKNOWN_7E9F80: !unknown
+UNKNOWN_7E9F80: !undefined
   Size: 2
   Offset: 0x7E9F80
-UNKNOWN_7E9F82: !unknown
+UNKNOWN_7E9F82: !undefined
   Size: 2
   Offset: 0x7E9F82
-UNKNOWN_7E9F84: !unknown
+UNKNOWN_7E9F84: !undefined
   Size: 2
   Offset: 0x7E9F84
-UNKNOWN_7E9F86: !unknown
+UNKNOWN_7E9F86: !undefined
   Size: 2
   Offset: 0x7E9F86
-UNKNOWN_7E9F88: !unknown
+UNKNOWN_7E9F88: !undefined
   Size: 2
   Offset: 0x7E9F88
 ENEMIES_IN_BATTLE: !int
   Size: 2
   Offset: 0x7E9F8A
   Description: Number of Enemies in Battle
-UNKNOWN_7E9F8C: !unknown
+UNKNOWN_7E9F8C: !undefined
   Size: 2
   Notes: Seen in BATTLE_ROUTINE
   Offset: 0x7E9F8C
@@ -2879,7 +2879,7 @@ BATTLERS_TABLE: !struct
           Size: 1
       Pretty Name: Afflictions
     SHIELD: !int
-      Size: 1 
+      Size: 1
       Pretty Name: Shield
     GUARD_FLAG: !int
       Size: 1
@@ -3117,11 +3117,11 @@ UNKNOWN_7EADD5: !int
 UNKNOWN_7EB37C: !int
   Size: 2
   Offset: 0x7EB37C
-UNKNOWN_7EB49D: !unknown
+UNKNOWN_7EB49D: !undefined
   Size: 1
   Notes: File select related? Used by $C1FF6B
   Offset: 0x7EB49D
-UNKNOWN_7EB49E: !unknown
+UNKNOWN_7EB49E: !undefined
   Size: 3
   Notes: Valid save slots? See FILE_MENU_LOOP
   Offset: 0x7EB49E
@@ -3129,7 +3129,7 @@ CURRENT_SAVE_SLOT: !int
   Offset: 0x7EB4A1
   Description: Current Save Slot
   Size: 1
-UNKNOWN_7EB4A2: !unknown
+UNKNOWN_7EB4A2: !undefined
   Size: 1
   Notes: File select related? Used by $C1FF6B
   Offset: 0x7EB4A2
@@ -3200,13 +3200,13 @@ DEBUG_START_POSITION_Y: !int
 DEBUG_UNKNOWN_B565: !int
   Size: 2
   Offset: 0x7EB565
-UNKNOWN_7F0000: !unknown
+UNKNOWN_7F0000: !undefined
   Size: 0x8000
   Offset: 0x7F0000
-UNKNOWN_7F8000: !unknown
+UNKNOWN_7F8000: !undefined
   Size: 0x7800
   Offset: 0x7F8000
-TILE_COLLISION: !unknown
+TILE_COLLISION: !undefined
   Description: Tile Collision Data
   Size: 960
   Offset: 0x7FF800
@@ -4768,7 +4768,7 @@ UNKNOWN_C06BFF: !assembly
     497: UNKNOWN14
     513: UNKNOWN15
   Offset: 0xC06BFF
-UNKNOWN_C06E02: !unknown
+UNKNOWN_C06E02: !undefined
   Size: 24
   Offset: 0xC06E02
 UNKNOWN_C06E1A: !assembly
@@ -5139,7 +5139,7 @@ TRANSFER_TO_VRAM: !assembly
   Offset: 0xC085B7
 UNKNOWN_C08616: !assembly
   Size: 69
-  Labels: 
+  Labels:
     45: UNKNOWN0
   Final State:
     8 Bit Accum: false
@@ -5438,7 +5438,7 @@ UNKNOWN_C08F8B: !assembly
   Labels:
     5: UNKNOWN0
   Offset: 0xC08F8B
-UNKNOWN_C08F98: !unknown
+UNKNOWN_C08F98: !undefined
   Size: 0x18
   Offset: 0xC08F98
 DMA_TABLE: !array
@@ -5454,7 +5454,7 @@ DMA_TABLE: !array
       VMAIN: !int
         Size: 1
         Bit Values: [d,c,b,a,u2,u1,u0,i]
-UNKNOWN_C08FC2: !unknown
+UNKNOWN_C08FC2: !undefined
   Size: 0x26
   Offset: 0xC08FC2
 MULT8: !assembly
@@ -6182,7 +6182,7 @@ MOVEMENT_CODE_0E: !assembly
     8 Bit Accum: n
     8 Bit Index: n
   Offset: 0xC09AE2
-UNKNOWN_C09AF9: !unknown
+UNKNOWN_C09AF9: !undefined
   Size: 16
   Offset: 0xC09AF9
 MOVEMENT_CODE_0F: !assembly
@@ -6515,7 +6515,7 @@ UNKNOWN_C0A156: !assembly
     41: UNKNOWN1
     73: UNKNOWN2
   Offset: 0xC0A156
-UNKNOWN_C0A1AE: !unknown
+UNKNOWN_C0A1AE: !undefined
   Size: 32
   Offset: 0xC0A1AE
 UNKNOWN_C0A1CE: !assembly
@@ -6524,7 +6524,7 @@ UNKNOWN_C0A1CE: !assembly
 UNKNOWN_C0A1F2: !assembly
   Size: 26
   Offset: 0xC0A1F2
-UNKNOWN_C0A20C: !unknown
+UNKNOWN_C0A20C: !undefined
   Size: 16
   Offset: 0xC0A20C
 UNKNOWN_C0A21C: !assembly
@@ -6546,7 +6546,7 @@ UNKNOWN_C0A26B: !assembly
     39: UNKNOWN0
     61: UNKNOWN1
   Offset: 0xC0A26B
-UNKNOWN_C0A2AB: !unknown
+UNKNOWN_C0A2AB: !undefined
   Size: 12
   Offset: 0xC0A2AB
 UNKNOWN_C0A2B7: !assembly
@@ -6563,7 +6563,7 @@ UNKNOWN_C0A2E1: !assembly
     38: UNKNOWN1
     41: UNKNOWN2
   Offset: 0xC0A2E1
-UNKNOWN_C0A30B: !unknown
+UNKNOWN_C0A30B: !undefined
   Size: 12
   Offset: 0xC0A30B
 UNKNOWN_C0A317: !assembly
@@ -6574,7 +6574,7 @@ UNKNOWN_C0A317: !assembly
     55: UNKNOWN2
     56: UNKNOWN3
   Offset: 0xC0A317
-UNKNOWN_C0A350: !unknown
+UNKNOWN_C0A350: !undefined
   Size: 16
   Offset: 0xC0A350
 UNKNOWN_C0A360: !assembly
@@ -6621,7 +6621,7 @@ UNKNOWN_C0A56E: !assembly
     119: UNKNOWN2
     148: UNKNOWN3
   Offset: 0xC0A56E
-UNKNOWN_C0A60B: !unknown
+UNKNOWN_C0A60B: !undefined
   Size: 48
   Offset: 0xC0A60B
 RAND_0-7: !assembly
@@ -6891,9 +6891,9 @@ STEREO_MONO_DATA: !struct
   Size: 14
   Offset: 0xC0AC2C
   Entries:
-    STEREO: !unknown
+    STEREO: !undefined
       Size: 7
-    MONO: !unknown
+    MONO: !undefined
       Size: 7
 UNKNOWN_C0AC3A: !assembly
   Size: 9
@@ -6920,7 +6920,7 @@ UNKNOWN_C0AD56: !assembly
     25: UNKNOWN1
     39: UNKNOWN2
   Offset: 0xC0AD56
-UNKNOWN_C0AD8A: !unknown
+UNKNOWN_C0AD8A: !undefined
   Size: 21
   Offset: 0xC0AD8A
 UNKNOWN_C0AD9F: !assembly
@@ -6934,14 +6934,14 @@ UNKNOWN_C0ADB2: !assembly
     65: UNKNOWN2
     79: UNKNOWN3
   Offset: 0xC0ADB2
-UNKNOWN_C0AE16: !unknown
+UNKNOWN_C0AE16: !undefined
   Size: 30
   Offset: 0xC0AE16
 UNKNOWN_C0AE34: !assembly
   Size: 16
   Description: $1F & $C0AE44 + A
   Offset: 0xC0AE34
-UNKNOWN_C0AE44: !unknown
+UNKNOWN_C0AE44: !undefined
   Size: 22
   Offset: 0xC0AE44
 UNKNOWN_C0AE5A: !assembly
@@ -6968,13 +6968,13 @@ UNKNOWN_C0AFF1: !struct
   Size: 41
   Offset: 0xC0AFF1
   Entries:
-    TM: !unknown
+    TM: !undefined
       Size: 11
-    TD: !unknown
+    TD: !undefined
       Size: 10
-    CGWSEL: !unknown
+    CGWSEL: !undefined
       Size: 10
-    CGADSUB: !unknown
+    CGADSUB: !undefined
       Size: 10
 SET_BATTLE_SWIRL_COLOUR: !assembly
   Size: 31
@@ -6997,7 +6997,7 @@ SET_WINDOW_MASK: !assembly
     62: UNKNOWN2
     90: UNKNOWN3
   Offset: 0xC0B047
-UNKNOWN_C0B0A6: !unknown
+UNKNOWN_C0B0A6: !undefined
   Size: 4
   Offset: 0xC0B0A6
 UNKNOWN_C0B0AA: !assembly
@@ -7051,10 +7051,10 @@ UNKNOWN_C0B149: !assembly
     429: UNKNOWN29
     436: UNKNOWN30
   Offset: 0xC0B149
-UNKNOWN_C0B2FF: !unknown
+UNKNOWN_C0B2FF: !undefined
   Size: 256
   Offset: 0xC0B2FF
-UNKNOWN_C0B3FF: !unknown
+UNKNOWN_C0B3FF: !undefined
   Size: 1
   Offset: 0xC0B3FF
 COSINE: !assembly
@@ -7280,7 +7280,7 @@ UNKNOWN_C0C4AF: !assembly
     28: UNKNOWN1
     31: UNKNOWN2
   Offset: 0xC0C4AF
-UNKNOWN_C0C4CF: !unknown
+UNKNOWN_C0C4CF: !undefined
   Size: 40
   Offset: 0xC0C4CF
 UNKNOWN_C0C4F7: !assembly
@@ -7443,7 +7443,7 @@ UNKNOWN_C0CEBE: !assembly
     120: UNKNOWN6
     150: UNKNOWN7
   Offset: 0xC0CEBE
-UNKNOWN_C0CF58: !unknown
+UNKNOWN_C0CF58: !undefined
   Size: 63
   Offset: 0xC0CF58
 UNKNOWN_C0CF97: !assembly
@@ -8066,7 +8066,7 @@ SNES_HEADER: !struct
     ID: !script
       Size: 6
       Charset: ascii
-    UNKNOWN: !unknown
+    UNKNOWN: !undefined
       Size: 10
     TITLE: !script
       Size: 0x15
@@ -8287,17 +8287,17 @@ TRANSFER_STORAGE_MEM_ACTIVE: !assembly
   Offset: 0xC10380
 GET_ARGUMENT_MEMORY: !assembly
   Size: 36
-  Return Values: 
+  Return Values:
     $06: Arguments
   Offset: 0xC103DC
 GET_SECONDARY_MEMORY: !assembly
   Size: 10
-  Return Values: 
+  Return Values:
     A: Secondary Memory
   Offset: 0xC10400
 GET_WORKING_MEMORY: !assembly
   Size: 36
-  Return Values: 
+  Return Values:
     $06: Working Memory
   Offset: 0xC1040A
 INCREMENT_SECONDARY_MEMORY: !assembly
@@ -8321,7 +8321,7 @@ SET_ARGUMENT_MEMORY: !assembly
   Offset: 0xC10489
 GET_TEXT_X: !assembly
   Size: 35
-  Return Values: 
+  Return Values:
     A: Current X position where text is being drawn
   Labels:
     15: UNKNOWN0
@@ -8329,7 +8329,7 @@ GET_TEXT_X: !assembly
   Offset: 0xC104B5
 GET_TEXT_Y: !assembly
   Size: 22
-  Return Values: 
+  Return Values:
     A: Current Y position where text is being drawn
   Offset: 0xC104D8
 CREATE_WINDOW: !assembly
@@ -12733,12 +12733,12 @@ INFLICT_SUNSTROKE_CHECK: !assembly
     181: UNKNOWN10
   Size: 185
   Offset: 0xC20000
-UNKNOWN_C200B9: !unknown
+UNKNOWN_C200B9: !undefined
   Size: 32
   Offset: 0xC200B9
 UNKNOWN_C200D9: !assembly
   Size: 397
-  Labels: 
+  Labels:
     69: UNKNOWN0
     88: UNKNOWN1
     100: UNKNOWN2
@@ -12756,13 +12756,13 @@ UNKNOWN_C200D9: !assembly
   Offset: 0xC200D9
 UNKNOWN_C20266: !assembly
   Size: 45
-  Labels: 
+  Labels:
     26: UNKNOWN0
     38: UNKNOWN1
   Offset: 0xC20266
 UNKNOWN_C20293: !assembly
   Size: 25
-  Labels: 
+  Labels:
     10: UNKNOWN0
     19: UNKNOWN1
   Final State:
@@ -12771,7 +12771,7 @@ UNKNOWN_C20293: !assembly
   Offset: 0xC20293
 UNKNOWN_C202AC: !assembly
   Size: 127
-  Labels: 
+  Labels:
     50: UNKNOWN0
     71: UNKNOWN1
     78: UNKNOWN2
@@ -12794,7 +12794,7 @@ UNKNOWN_C2038B: !assembly
   Offset: 0xC2038B
 UNKNOWN_C203C3: !assembly
   Size: 954
-  Labels: 
+  Labels:
     106: UNKNOWN0
     130: UNKNOWN1
     144: UNKNOWN2
@@ -12829,7 +12829,7 @@ UNKNOWN_C203C3: !assembly
   Offset: 0xC203C3
 UNKNOWN_C2077D: !assembly
   Size: 57
-  Labels: 
+  Labels:
     20: UNKNOWN0
     30: UNKNOWN1
     42: UNKNOWN2
@@ -12839,7 +12839,7 @@ UNKNOWN_C207B6: !assembly
   Offset: 0xC207B6
 UNKNOWN_C207E1: !assembly
   Size: 155
-  Labels: 
+  Labels:
     51: UNKNOWN0
     56: UNKNOWN1
     129: UNKNOWN2
@@ -12848,19 +12848,19 @@ UNKNOWN_C207E1: !assembly
   Offset: 0xC207E1
 UNKNOWN_C2087C: !assembly
   Size: 60
-  Labels: 
+  Labels:
     19: UNKNOWN0
     32: UNKNOWN1
     58: UNKNOWN2
   Offset: 0xC2087C
 UNKNOWN_C208B8: !assembly
   Size: 90
-  Labels: 
+  Labels:
     80: UNKNOWN0
     85: UNKNOWN1
     88: UNKNOWN2
   Offset: 0xC208B8
-UNKNOWN_C20912: !unknown
+UNKNOWN_C20912: !undefined
   Size: 134
   Offset: 0xC20912
 THETHE: !script
@@ -12869,7 +12869,7 @@ THETHE: !script
   Offset: 0xC20998
 UNKNOWN_C209A0: !assembly
   Size: 128
-  Labels: 
+  Labels:
     53: UNKNOWN0
     64: UNKNOWN1
     81: UNKNOWN2
@@ -12878,20 +12878,20 @@ UNKNOWN_C209A0: !assembly
   Offset: 0xC209A0
 UNKNOWN_C20A20: !assembly
   Size: 156
-  Labels: 
+  Labels:
     30: UNKNOWN0
     154: UNKNOWN1
   Offset: 0xC20A20
 UNKNOWN_C20ABC: !assembly
   Size: 169
-  Labels: 
+  Labels:
     26: UNKNOWN0
     43: UNKNOWN1
     167: UNKNOWN2
   Offset: 0xC20ABC
 UNKNOWN_C20B65: !assembly
   Size: 474
-  Labels: 
+  Labels:
     62: UNKNOWN0
     71: UNKNOWN1
     88: UNKNOWN2
@@ -12928,13 +12928,13 @@ UNKNOWN_C20D3F: !assembly
   Offset: 0xC20D3F
 UNKNOWN_C20D89: !assembly
   Size: 60
-  Labels: 
+  Labels:
     30: UNKNOWN0
     53: UNKNOWN1
   Offset: 0xC20D89
 UNKNOWN_C20DC5: !assembly
   Size: 323
-  Labels: 
+  Labels:
     25: UNKNOWN0
     32: UNKNOWN1
     167: UNKNOWN2
@@ -12951,19 +12951,19 @@ UNKNOWN_C20F08: !assembly
   Offset: 0xC20F08
 UNKNOWN_C20F26: !assembly
   Size: 50
-  Labels: 
+  Labels:
     33: UNKNOWN0
     48: UNKNOWN1
   Offset: 0xC20F26
 UNKNOWN_C20F58: !assembly
   Size: 66
-  Labels: 
+  Labels:
     44: UNKNOWN0
     62: UNKNOWN1
   Offset: 0xC20F58
 UNKNOWN_C20F9A: !assembly
   Size: 154
-  Labels: 
+  Labels:
     15: UNKNOWN0
     58: UNKNOWN1
     90: UNKNOWN2
@@ -12973,13 +12973,13 @@ UNKNOWN_C20F9A: !assembly
   Offset: 0xC20F9A
 UNKNOWN_C21034: !assembly
   Size: 88
-  Labels: 
+  Labels:
     15: UNKNOWN0
     86: UNKNOWN1
   Offset: 0xC21034
 UNKNOWN_C2108C: !assembly
   Size: 19
-  Labels: 
+  Labels:
     16: UNKNOWN0
   Offset: 0xC2108C
 HP_PP_ROLLER: !assembly
@@ -13019,7 +13019,7 @@ HP_PP_ROLLER: !assembly
   Offset: 0xC2109F
 UNKNOWN_C213AC: !assembly
   Size: 636
-  Labels: 
+  Labels:
     19: UNKNOWN0
     43: UNKNOWN1
     57: UNKNOWN2
@@ -13078,7 +13078,7 @@ PLAY_SOUND_AND_UNKNOWN: !assembly
   Offset: 0xC216D0
 UNKNOWN_C216DB: !assembly
   Size: 380
-  Labels: 
+  Labels:
     17: UNKNOWN0
     55: UNKNOWN1
     182: UNKNOWN2
@@ -13225,14 +13225,14 @@ DECREASE_WALLET_BALANCE: !assembly
   Offset: 0xC22272
 UNKNOWN_C222D3: !assembly
   Size: 126
-  Labels: 
+  Labels:
     49: UNKNOWN0
     92: UNKNOWN1
     124: UNKNOWN2
   Offset: 0xC222D3
 UNKNOWN_C22351: !assembly
   Size: 76
-  Labels: 
+  Labels:
     21: UNKNOWN0
     26: UNKNOWN1
     40: UNKNOWN2
@@ -13241,7 +13241,7 @@ UNKNOWN_C22351: !assembly
   Offset: 0xC22351
 UNKNOWN_C2239D: !assembly
   Size: 60
-  Labels: 
+  Labels:
     17: UNKNOWN0
     35: UNKNOWN1
     36: UNKNOWN2
@@ -13251,7 +13251,7 @@ UNKNOWN_C2239D: !assembly
   Offset: 0xC2239D
 UNKNOWN_C223D9: !assembly
   Size: 155
-  Labels: 
+  Labels:
     28: UNKNOWN0
     48: UNKNOWN1
     56: UNKNOWN2
@@ -13263,7 +13263,7 @@ UNKNOWN_C223D9: !assembly
   Offset: 0xC223D9
 UNKNOWN_C22474: !assembly
   Size: 109
-  Labels: 
+  Labels:
     26: UNKNOWN0
     46: UNKNOWN1
     54: UNKNOWN2
@@ -13296,23 +13296,23 @@ GET_ITEM_SUBTYPE_2: !assembly
   Offset: 0xC22524
 UNKNOWN_C22562: !assembly
   Size: 74
-  Labels: 
+  Labels:
     19: UNKNOWN0
   Offset: 0xC22562
 UNKNOWN_C225AC: !assembly
   Size: 97
-  Labels: 
+  Labels:
     46: UNKNOWN0
   Offset: 0xC225AC
 UNKNOWN_C2260D: !assembly
   Size: 102
-  Labels: 
+  Labels:
     55: UNKNOWN0
     56: UNKNOWN1
   Offset: 0xC2260D
 UNKNOWN_C22673: !assembly
   Size: 82
-  Labels: 
+  Labels:
     61: UNKNOWN0
     62: UNKNOWN1
   Offset: 0xC22673
@@ -13326,21 +13326,21 @@ UNKNOWN_C226E6: !assembly
   Offset: 0xC226E6
 UNKNOWN_C226F0: !assembly
   Size: 63
-  Labels: 
+  Labels:
     15: UNKNOWN0
     18: UNKNOWN1
     59: UNKNOWN2
   Offset: 0xC226F0
 UNKNOWN_C2272F: !assembly
   Size: 77
-  Labels: 
+  Labels:
     18: UNKNOWN0
     55: UNKNOWN1
     60: UNKNOWN2
   Offset: 0xC2272F
 UNKNOWN_C2277C: !assembly
   Size: 76
-  Labels: 
+  Labels:
     15: UNKNOWN0
     53: UNKNOWN1
     58: UNKNOWN2
@@ -13348,7 +13348,7 @@ UNKNOWN_C2277C: !assembly
   Offset: 0xC2277C
 LEARN_SPECIAL_PSI: !assembly
   Size: 85
-  Labels: 
+  Labels:
     0x18: LEARN_TELEPORT_ALPHA
     0x27: LEARN_TELEPORT_BETA
     0x36: LEARN_STARSTORM_ALPHA
@@ -13412,7 +13412,7 @@ SAVE_CURRENT_GAME: !assembly
   Description: Saves the game to the currently selected save slot
 UNKNOWN_C22A3A: !assembly
   Size: 1278
-  Labels: 
+  Labels:
     57: UNKNOWN0
     74: UNKNOWN1
     112: UNKNOWN2
@@ -13453,7 +13453,7 @@ UNKNOWN_C22A3A: !assembly
   Offset: 0xC22A3A
 UNKNOWN_C22F38: !assembly
   Size: 208
-  Labels: 
+  Labels:
     52: UNKNOWN0
     68: UNKNOWN1
     87: UNKNOWN2
@@ -13472,7 +13472,7 @@ UNKNOWN_C23008: !assembly
 UNKNOWN_C2307B: !assembly
   Size: 120
   Notes: Used by [1F 65]
-  Labels: 
+  Labels:
     98: UNKNOWN0
   Offset: 0xC2307B
 SET_TELEPORT_BOX_DESTINATION: !assembly
@@ -13649,7 +13649,7 @@ FIX_TARGET_NAME: !assembly
   Offset: 0xC23D05
 UNKNOWN_C23E32: !assembly
   Size: 88
-  Labels: 
+  Labels:
     36: UNKNOWN0
     45: UNKNOWN1
     60: UNKNOWN2
@@ -13658,7 +13658,7 @@ UNKNOWN_C23E32: !assembly
   Offset: 0xC23E32
 UNKNOWN_C23E8A: !assembly
   Size: 226
-  Labels: 
+  Labels:
     58: UNKNOWN0
     68: UNKNOWN1
     154: UNKNOWN2
@@ -13702,7 +13702,7 @@ FEELING_STRANGE_RETARGETTING: !assembly
   Offset: 0xC24009
 UNKNOWN_C240A4: !assembly
   Size: 203
-  Labels: 
+  Labels:
     18: UNKNOWN0
     22: UNKNOWN1
     44: UNKNOWN2
@@ -13717,7 +13717,7 @@ UNKNOWN_C240A4: !assembly
 UNKNOWN_C2416F: !assembly
   Notes: Uses DEAD_TARGETTABLE_ACTIONS data
   Size: 109
-  Labels: 
+  Labels:
     15: UNKNOWN0
     28: UNKNOWN1
     44: UNKNOWN2
@@ -13755,7 +13755,7 @@ SELECT_STEALABLE_ITEM: !assembly
   Offset: 0xC24316
 UNKNOWN_C24348: !assembly
   Size: 54
-  Labels: 
+  Labels:
     24: UNKNOWN0
     40: UNKNOWN1
     45: UNKNOWN2
@@ -13764,7 +13764,7 @@ UNKNOWN_C24348: !assembly
 UNKNOWN_C2437E: !assembly
   Size: 182
   Notes: Checks item permanence and character-specificity?
-  Labels: 
+  Labels:
     22: UNKNOWN0
     36: UNKNOWN1
     58: UNKNOWN2
@@ -13772,7 +13772,7 @@ UNKNOWN_C2437E: !assembly
   Offset: 0xC2437E
 UNKNOWN_C24434: !assembly
   Size: 67
-  Labels: 
+  Labels:
     57: UNKNOWN0
     65: UNKNOWN1
   Offset: 0xC24434
@@ -13811,7 +13811,7 @@ CHOOSE_TARGET: !assembly
   Offset: 0xC24477
 UNKNOWN_C24703: !assembly
   Size: 286
-  Labels: 
+  Labels:
     59: UNKNOWN0
     67: UNKNOWN1
     70: UNKNOWN2
@@ -14100,7 +14100,7 @@ BATTLE_ROUTINE: !assembly
   Offset: 0xC24821
 UNKNOWN_C26189: !assembly
   Size: 52
-  Labels: 
+  Labels:
     20: UNKNOWN0
     34: UNKNOWN1
   Offset: 0xC26189
@@ -14140,7 +14140,7 @@ INSTANT_WIN_HANDLER: !assembly
 UNKNOWN_C2654C: !assembly
   Notes: Magic butterflies?
   Size: 232
-  Labels: 
+  Labels:
     22: UNKNOWN0
     69: UNKNOWN1
     82: UNKNOWN2
@@ -14213,13 +14213,13 @@ GET_ENEMY_TYPE: !assembly
   Offset: 0xC269A8
 UNKNOWN_C269BE: !assembly
   Size: 32
-  Labels: 
+  Labels:
     15: UNKNOWN0
     19: UNKNOWN1
   Offset: 0xC269BE
 UNKNOWN_C269DE: !assembly
   Size: 17
-  Labels: 
+  Labels:
     4: UNKNOWN0
     8: UNKNOWN1
   Offset: 0xC269DE
@@ -14423,7 +14423,7 @@ SET_PP: !assembly
     A: Target
     X: New PP amount
   Size: 95
-  Labels: 
+  Labels:
     33: UNKNOWN0
     75: UNKNOWN1
     85: UNKNOWN2
@@ -15641,31 +15641,31 @@ BTLACT_PP_RECOVERY_80: !assembly
 BTLACT_IQ_UP_1D4: !assembly
   Description: 'Battle action: IQ up (increase by 1d4)'
   Size: 76
-  Labels: 
+  Labels:
     62: UNKNOWN0
   Offset: 0xC2A0FF
 BTLACT_GUTS_UP_1D4: !assembly
   Description: 'Battle action: Guts up (increase by 1d4)'
   Size: 72
-  Labels: 
+  Labels:
     58: UNKNOWN0
   Offset: 0xC2A14B
 BTLACT_SPEED_UP_1D4: !assembly
   Description: 'Battle action: Speed up (increase by 1d4)'
   Size: 72
-  Labels: 
+  Labels:
     58: UNKNOWN0
   Offset: 0xC2A193
 BTLACT_VITALITY_UP_1D4: !assembly
   Description: 'Battle action: Vitality up (increase by 1d4)'
   Size: 76
-  Labels: 
+  Labels:
     62: UNKNOWN0
   Offset: 0xC2A1DB
 BTLACT_LUCK_UP_1D4: !assembly
   Description: 'Battle action: Luck up (increase by 1d4)'
   Size: 72
-  Labels: 
+  Labels:
     58: UNKNOWN0
   Offset: 0xC2A227
 BTLACT_HP_RECOVERY_300: !assembly
@@ -15675,7 +15675,7 @@ BTLACT_HP_RECOVERY_300: !assembly
 BTLACT_RANDOM_STAT_UP_1D4: !assembly
   Description: 'Battle action: Increase a randomly-selected stat by 1d4'
   Size: 225
-  Labels: 
+  Labels:
     32: UNKNOWN0
     40: UNKNOWN1
     48: UNKNOWN2
@@ -15703,7 +15703,7 @@ BTLACT_HP_RECOVERY_100: !assembly
 BTLACT_HP_RECOVERY_10000: !assembly
   Description: 'Battle action: HP recovery (10000 HP normally, 1d4 HP for Poo)'
   Size: 29
-  Labels: 
+  Labels:
     24: UNKNOWN0
     28: UNKNOWN1
   Offset: 0xC2A380
@@ -15847,14 +15847,14 @@ BTLACT_SNAKE: !assembly
 BTLACT_INFLICT_SOLIDIFICATION: !assembly
   Size: 81
   Notes: Affected by luck (80), affected by paralysis resistance
-  Labels: 
+  Labels:
     65: UNKNOWN0
     79: UNKNOWN1
   Offset: 0xC2A902
 BTLACT_INFLICT_POISON: !assembly
   Notes: Affected by paralysis resistance
   Size: 73
-  Labels: 
+  Labels:
     57: UNKNOWN0
     71: UNKNOWN1
   Offset: 0xC2A953
@@ -16718,7 +16718,7 @@ UNKNOWN_C2F121: !assembly
   Size: 1539
   Arguments:
     A: ???
-  Labels: 
+  Labels:
     22: UNKNOWN0
     44: UNKNOWN1
     58: UNKNOWN2
@@ -16783,7 +16783,7 @@ UNKNOWN_C2F121: !assembly
   Offset: 0xC2F121
 UNKNOWN_C2F724: !assembly
   Size: 469
-  Labels: 
+  Labels:
     27: UNKNOWN0
     40: UNKNOWN1
     56: UNKNOWN2
@@ -16804,7 +16804,7 @@ UNKNOWN_C2F8F9: !assembly
   Offset: 0xC2F8F9
 UNKNOWN_C2F917: !assembly
   Size: 443
-  Labels: 
+  Labels:
     21: UNKNOWN0
     72: UNKNOWN1
     75: UNKNOWN2
@@ -16837,13 +16837,13 @@ UNKNOWN_C2FAD8: !assembly
   Offset: 0xC2FAD8
 UNKNOWN_C2FADE: !assembly
   Size: 87
-  Labels: 
+  Labels:
     31: UNKNOWN0
     80: UNKNOWN1
   Offset: 0xC2FADE
 UNKNOWN_C2FB35: !assembly
   Size: 369
-  Labels: 
+  Labels:
     123: UNKNOWN0
     145: UNKNOWN1
     179: UNKNOWN2
@@ -16856,7 +16856,7 @@ UNKNOWN_C2FB35: !assembly
   Offset: 0xC2FB35
 UNKNOWN_C2FCA6: !assembly
   Size: 243
-  Labels: 
+  Labels:
     107: UNKNOWN0
     119: UNKNOWN1
     162: UNKNOWN2
@@ -16866,7 +16866,7 @@ UNKNOWN_C2FCA6: !assembly
   Offset: 0xC2FCA6
 UNKNOWN_C2FD99: !assembly
   Size: 352
-  Labels: 
+  Labels:
     18: UNKNOWN0
     34: UNKNOWN1
     97: UNKNOWN2
@@ -16887,7 +16887,7 @@ UNKNOWN_C2FD99: !assembly
   Offset: 0xC2FD99
 UNKNOWN_C2FEF9: !assembly
   Size: 161
-  Labels: 
+  Labels:
     122: UNKNOWN0
     129: UNKNOWN1
     147: UNKNOWN2
@@ -16895,12 +16895,12 @@ UNKNOWN_C2FEF9: !assembly
   Offset: 0xC2FEF9
 UNKNOWN_C2FF9A: !assembly
   Size: 29
-  Labels: 
+  Labels:
     25: MINISPRITES
     28: RETURN
   Notes: Involves mini sprites flag?
   Offset: 0xC2FF9A
-MOVEMENT_0: !unknown
+MOVEMENT_0: !undefined
   Size: 73
   Offset: 0xC2FFB7
 SPRITE_GROUP_PALETTES: !array
@@ -16926,7 +16926,7 @@ NESS_PAJAMA_FLAG: !int
   Size: 2
   Description: Ness's Pajama Flag
   Offset: 0xC30186
-UNKNOWN_C30188: !unknown
+UNKNOWN_C30188: !undefined
   Size: 13
   Offset: 0xC30188
 MOVEMENT_221: !script
@@ -16945,7 +16945,7 @@ MOVEMENT_224: !script
   Size: 53
   Offset: 0xC30260
   Charset: movement
-UNKNOWN_C30295: !unknown
+UNKNOWN_C30295: !undefined
   Size: 23
   Offset: 0xC30295
   Notes: Movement? [95 02]
@@ -16973,7 +16973,7 @@ MOVEMENT_232: !script
   Size: 20
   Offset: 0xC3032B
   Charset: movement
-UNKNOWN_C3033F: !unknown
+UNKNOWN_C3033F: !undefined
   Size: 48
   Offset: 0xC3033F
   Notes: Movement? [3F 03]
@@ -16993,15 +16993,15 @@ MOVEMENT_240: !script
   Size: 91
   Offset: 0xC303E5
   Charset: movement
-UNKNOWN_C30440: !unknown
+UNKNOWN_C30440: !undefined
   Size: 39
   Offset: 0xC30440
   Notes: Movement? [40 04]
-UNKNOWN_C30467: !unknown
+UNKNOWN_C30467: !undefined
   Size: 5
   Offset: 0xC30467
   Notes: Movement? [67 04]
-UNKNOWN_C3046C: !unknown
+UNKNOWN_C3046C: !undefined
   Size: 12
   Offset: 0xC3046C
   Notes: Movement? [6C 04]
@@ -17097,7 +17097,7 @@ MOVEMENT_265: !script
   Size: 18
   Offset: 0xC30979
   Charset: movement
-UNKNOWN_C3098B: !unknown
+UNKNOWN_C3098B: !undefined
   Size: 8
   Offset: 0xC3098B
   Notes: Movement? [8B 09]
@@ -17109,7 +17109,7 @@ MOVEMENT_267: !script
   Size: 111
   Offset: 0xC309B0
   Charset: movement
-UNKNOWN_C30A1F: !unknown
+UNKNOWN_C30A1F: !undefined
   Size: 19
   Offset: 0xC30A1F
   Notes: Movement? [1F 0A]
@@ -17169,11 +17169,11 @@ MOVEMENT_283: !script
   Size: 6
   Offset: 0xC30C4F
   Charset: movement
-UNKNOWN_C30C55: !unknown
+UNKNOWN_C30C55: !undefined
   Size: 18
   Offset: 0xC30C55
   Notes: Movement? [55 0C]
-UNKNOWN_C30C67: !unknown
+UNKNOWN_C30C67: !undefined
   Size: 123
   Offset: 0xC30C67
   Notes: Movement? [67 0C]
@@ -17185,7 +17185,7 @@ MOVEMENT_285: !script
   Size: 30
   Offset: 0xC30D1E
   Charset: movement
-UNKNOWN_C30D3C: !unknown
+UNKNOWN_C30D3C: !undefined
   Size: 122
   Offset: 0xC30D3C
   Notes: Movement? [3C 0D]
@@ -17225,7 +17225,7 @@ MOVEMENT_294: !script
   Size: 185
   Offset: 0xC30F9C
   Charset: movement
-UNKNOWN_C31055: !unknown
+UNKNOWN_C31055: !undefined
   Size: 19
   Offset: 0xC31055
   Notes: Movement? [55 10]
@@ -17321,7 +17321,7 @@ MOVEMENT_317: !script
   Size: 36
   Offset: 0xC31452
   Charset: movement
-UNKNOWN_C31476: !unknown
+UNKNOWN_C31476: !undefined
   Size: 15
   Offset: 0xC31476
   Notes: Movement? [76 14]
@@ -17341,7 +17341,7 @@ MOVEMENT_321: !script
   Size: 10
   Offset: 0xC3155C
   Charset: movement
-UNKNOWN_C31566: !unknown
+UNKNOWN_C31566: !undefined
   Size: 102
   Offset: 0xC31566
   Notes: Movement? [66 15]
@@ -17421,19 +17421,19 @@ MOVEMENT_340: !script
   Size: 52
   Offset: 0xC318FD
   Charset: movement
-UNKNOWN_C31931: !unknown
+UNKNOWN_C31931: !undefined
   Size: 38
   Offset: 0xC31931
   Notes: Movement? [31 19]
-UNKNOWN_C31957: !unknown
+UNKNOWN_C31957: !undefined
   Size: 71
   Offset: 0xC31957
   Notes: Movement? [57 19]
-UNKNOWN_C3199E: !unknown
+UNKNOWN_C3199E: !undefined
   Size: 121
   Offset: 0xC3199E
   Notes: Movement? [9E 19]
-UNKNOWN_C31A17: !unknown
+UNKNOWN_C31A17: !undefined
   Size: 43
   Offset: 0xC31A17
   Notes: Movement? [17 1A]
@@ -17461,7 +17461,7 @@ MOVEMENT_346: !script
   Size: 142
   Offset: 0xC31B4B
   Charset: movement
-UNKNOWN_C31BD9: !unknown
+UNKNOWN_C31BD9: !undefined
   Size: 20
   Offset: 0xC31BD9
   Notes: Movement? [D9 1B]
@@ -17481,7 +17481,7 @@ MOVEMENT_351: !script
   Size: 71
   Offset: 0xC31C49
   Charset: movement
-UNKNOWN_C31C90: !unknown
+UNKNOWN_C31C90: !undefined
   Size: 20
   Offset: 0xC31C90
   Notes: Movement? [90 1C]
@@ -17497,15 +17497,15 @@ MOVEMENT_354: !script
   Size: 24
   Offset: 0xC31D15
   Charset: movement
-UNKNOWN_C31D2D: !unknown
+UNKNOWN_C31D2D: !undefined
   Size: 29
   Offset: 0xC31D2D
   Notes: Movement? [2D 1D]
-UNKNOWN_C31D4A: !unknown
+UNKNOWN_C31D4A: !undefined
   Size: 5
   Offset: 0xC31D4A
   Notes: Movement? [4A 1D]
-UNKNOWN_C31D4F: !unknown
+UNKNOWN_C31D4F: !undefined
   Size: 18
   Offset: 0xC31D4F
   Notes: Movement? [4F 1D]
@@ -17525,19 +17525,19 @@ MOVEMENT_369: !script
   Size: 63
   Offset: 0xC31DB5
   Charset: movement
-UNKNOWN_C31DF4: !unknown
+UNKNOWN_C31DF4: !undefined
   Size: 32
   Offset: 0xC31DF4
   Notes: Movement? [F4 1D]
-UNKNOWN_C31E14: !unknown
+UNKNOWN_C31E14: !undefined
   Size: 25
   Offset: 0xC31E14
   Notes: Movement? [14 1E]
-UNKNOWN_C31E2D: !unknown
+UNKNOWN_C31E2D: !undefined
   Size: 32
   Offset: 0xC31E2D
   Notes: Movement? [2D 1E]
-UNKNOWN_C31E4D: !unknown
+UNKNOWN_C31E4D: !undefined
   Size: 25
   Offset: 0xC31E4D
   Notes: Movement? [4D 1E]
@@ -17569,15 +17569,15 @@ MOVEMENT_364: !script
   Size: 9
   Offset: 0xC31EB8
   Charset: movement
-UNKNOWN_C31EC1: !unknown
+UNKNOWN_C31EC1: !undefined
   Size: 23
   Offset: 0xC31EC1
   Notes: Movement? [C1 1E]
-UNKNOWN_C31ED8: !unknown
+UNKNOWN_C31ED8: !undefined
   Size: 23
   Offset: 0xC31ED8
   Notes: Movement? [D8 1E]
-UNKNOWN_C31EEF: !unknown
+UNKNOWN_C31EEF: !undefined
   Size: 249
   Offset: 0xC31EEF
   Notes: Movement? [EF 1E]
@@ -17585,7 +17585,7 @@ MOVEMENT_368: !script
   Size: 336
   Offset: 0xC31FE8
   Charset: movement
-UNKNOWN_C32138: !unknown
+UNKNOWN_C32138: !undefined
   Size: 17
   Offset: 0xC32138
   Notes: Movement? [38 21]
@@ -17713,7 +17713,7 @@ MOVEMENT_396: !script
   Size: 24
   Offset: 0xC32CBA
   Charset: movement
-UNKNOWN_C32CD2: !unknown
+UNKNOWN_C32CD2: !undefined
   Size: 30
   Offset: 0xC32CD2
   Notes: Movement? [D2 2C]
@@ -17829,23 +17829,23 @@ MOVEMENT_431_432_433_434: !script
   Size: 10
   Offset: 0xC3338F
   Charset: movement
-UNKNOWN_C33399: !unknown
+UNKNOWN_C33399: !undefined
   Size: 17
   Offset: 0xC33399
   Notes: Movement? [99 33]
-UNKNOWN_C333AA: !unknown
+UNKNOWN_C333AA: !undefined
   Size: 17
   Offset: 0xC333AA
   Notes: Movement? [AA 33]
-UNKNOWN_C333BB: !unknown
+UNKNOWN_C333BB: !undefined
   Size: 17
   Offset: 0xC333BB
   Notes: Movement? [BB 33]
-UNKNOWN_C333CC: !unknown
+UNKNOWN_C333CC: !undefined
   Size: 17
   Offset: 0xC333CC
   Notes: Movement? [CC 33]
-UNKNOWN_C333DD: !unknown
+UNKNOWN_C333DD: !undefined
   Size: 71
   Offset: 0xC333DD
   Notes: Movement? [DD 33]
@@ -17865,7 +17865,7 @@ MOVEMENT_439: !script
   Size: 20
   Offset: 0xC33535
   Charset: movement
-UNKNOWN_C33549: !unknown
+UNKNOWN_C33549: !undefined
   Size: 41
   Offset: 0xC33549
   Notes: Movement? [49 35]
@@ -17905,7 +17905,7 @@ MOVEMENT_448: !script
   Size: 104
   Offset: 0xC33B0F
   Charset: movement
-UNKNOWN_C33B77: !unknown
+UNKNOWN_C33B77: !undefined
   Size: 20
   Offset: 0xC33B77
   Notes: Movement? [77 3B]
@@ -17925,15 +17925,15 @@ MOVEMENT_452: !script
   Size: 68
   Offset: 0xC33BB7
   Charset: movement
-UNKNOWN_C33BFB: !unknown
+UNKNOWN_C33BFB: !undefined
   Size: 29
   Offset: 0xC33BFB
   Notes: Movement? [FB 3B]
-UNKNOWN_C33C18: !unknown
+UNKNOWN_C33C18: !undefined
   Size: 5
   Offset: 0xC33C18
   Notes: Movement? [18 3C]
-UNKNOWN_C33C1D: !unknown
+UNKNOWN_C33C1D: !undefined
   Size: 19
   Offset: 0xC33C1D
   Notes: Movement? [1D 3C]
@@ -17949,7 +17949,7 @@ MOVEMENT_466: !script
   Size: 228
   Offset: 0xC33CDA
   Charset: movement
-UNKNOWN_C33DBE: !unknown
+UNKNOWN_C33DBE: !undefined
   Size: 22
   Offset: 0xC33DBE
   Notes: Movement? [BE 3D]
@@ -17957,7 +17957,7 @@ MOVEMENT_479: !script
   Size: 92
   Offset: 0xC33DD4
   Charset: movement
-UNKNOWN_C33E30: !unknown
+UNKNOWN_C33E30: !undefined
   Size: 18
   Offset: 0xC33E30
   Notes: Movement? [30 3E]
@@ -17965,7 +17965,7 @@ MOVEMENT_481: !script
   Size: 116
   Offset: 0xC33E42
   Charset: movement
-UNKNOWN_C33EB6: !unknown
+UNKNOWN_C33EB6: !undefined
   Size: 14
   Offset: 0xC33EB6
   Notes: Movement? [B6 3E]
@@ -17973,7 +17973,7 @@ MOVEMENT_482: !script
   Size: 59
   Offset: 0xC33EC4
   Charset: movement
-UNKNOWN_C33EFF: !unknown
+UNKNOWN_C33EFF: !undefined
   Size: 13
   Offset: 0xC33EFF
   Notes: Movement? [FF 3E]
@@ -17981,7 +17981,7 @@ MOVEMENT_480: !script
   Size: 264
   Offset: 0xC33F0C
   Charset: movement
-UNKNOWN_C34014: !unknown
+UNKNOWN_C34014: !undefined
   Size: 21
   Offset: 0xC34014
   Notes: Movement? [14 40]
@@ -18037,11 +18037,11 @@ MOVEMENT_495: !script
   Size: 29
   Offset: 0xC341CC
   Charset: movement
-UNKNOWN_C341E9: !unknown
+UNKNOWN_C341E9: !undefined
   Size: 74
   Offset: 0xC341E9
   Notes: Movement? [E9 41]
-UNKNOWN_C34233: !unknown
+UNKNOWN_C34233: !undefined
   Size: 22
   Offset: 0xC34233
   Notes: Movement? [E9 41]
@@ -18065,11 +18065,11 @@ MOVEMENT_531: !script
   Size: 13
   Offset: 0xC34301
   Charset: movement
-UNKNOWN_C3430E: !unknown
+UNKNOWN_C3430E: !undefined
   Size: 95
   Offset: 0xC3430E
   Notes: Movement? [0E 43]
-UNKNOWN_C3436D: !unknown
+UNKNOWN_C3436D: !undefined
   Size: 11
   Offset: 0xC3436D
   Notes: Movement? [6D 43]
@@ -18081,15 +18081,15 @@ MOVEMENT_533: !script
   Size: 13
   Offset: 0xC34385
   Charset: movement
-UNKNOWN_C34392: !unknown
+UNKNOWN_C34392: !undefined
   Size: 28
   Offset: 0xC34392
   Notes: Movement? [92 43]
-UNKNOWN_C343AE: !unknown
+UNKNOWN_C343AE: !undefined
   Size: 45
   Offset: 0xC343AE
   Notes: Movement? [AE 43]
-UNKNOWN_C343DB: !unknown
+UNKNOWN_C343DB: !undefined
   Size: 39
   Offset: 0xC343DB
   Notes: Movement? [DB 43]
@@ -18101,35 +18101,35 @@ MOVEMENT_499: !script
   Size: 36
   Offset: 0xC3441A
   Charset: movement
-UNKNOWN_C3443E: !unknown
+UNKNOWN_C3443E: !undefined
   Size: 25
   Offset: 0xC3443E
   Notes: Movement? [3E 44]
-UNKNOWN_C34457: !unknown
+UNKNOWN_C34457: !undefined
   Size: 35
   Offset: 0xC34457
   Notes: Movement? [57 44]
-UNKNOWN_C3447A: !unknown
+UNKNOWN_C3447A: !undefined
   Size: 14
   Offset: 0xC3447A
   Notes: Movement? [7A 44]
-UNKNOWN_C34488: !unknown
+UNKNOWN_C34488: !undefined
   Size: 32
   Offset: 0xC34488
   Notes: Movement? [88 44]
-UNKNOWN_C344A8: !unknown
+UNKNOWN_C344A8: !undefined
   Size: 42
   Offset: 0xC344A8
   Notes: Movement? [A8 44]
-UNKNOWN_C344D2: !unknown
+UNKNOWN_C344D2: !undefined
   Size: 12
   Offset: 0xC344D2
   Notes: Movement? [D2 44]
-UNKNOWN_C344DE: !unknown
+UNKNOWN_C344DE: !undefined
   Size: 33
   Offset: 0xC344DE
   Notes: Movement? [DE 44]
-UNKNOWN_C344FF: !unknown
+UNKNOWN_C344FF: !undefined
   Size: 9
   Offset: 0xC344FF
   Notes: Movement? [FF 44]
@@ -18137,7 +18137,7 @@ MOVEMENT_547: !script
   Size: 77
   Offset: 0xC34508
   Charset: movement
-UNKNOWN_C34555: !unknown
+UNKNOWN_C34555: !undefined
   Size: 26
   Offset: 0xC34555
   Notes: Movement? [55 45]
@@ -18189,7 +18189,7 @@ MOVEMENT_556: !script
   Size: 90
   Offset: 0xC3486A
   Charset: movement
-UNKNOWN_C348C4: !unknown
+UNKNOWN_C348C4: !undefined
   Size: 56
   Offset: 0xC348C4
   Notes: Movement? [C4 48]
@@ -18197,7 +18197,7 @@ MOVEMENT_563: !script
   Size: 104
   Offset: 0xC348FC
   Charset: movement
-UNKNOWN_C34964: !unknown
+UNKNOWN_C34964: !undefined
   Size: 17
   Offset: 0xC34964
   Notes: Movement? [64 49]
@@ -18205,7 +18205,7 @@ MOVEMENT_562: !script
   Size: 236
   Offset: 0xC34975
   Charset: movement
-UNKNOWN_C34A61: !unknown
+UNKNOWN_C34A61: !undefined
   Size: 11
   Offset: 0xC34A61
   Notes: Movement? [61 4A]
@@ -18217,7 +18217,7 @@ MOVEMENT_560: !script
   Size: 108
   Offset: 0xC34AF6
   Charset: movement
-UNKNOWN_C34B62: !unknown
+UNKNOWN_C34B62: !undefined
   Size: 73
   Offset: 0xC34B62
   Notes: Movement? [62 4B]
@@ -18245,7 +18245,7 @@ MOVEMENT_569: !script
   Size: 89
   Offset: 0xC34CE0
   Charset: movement
-UNKNOWN_C34D39: !unknown
+UNKNOWN_C34D39: !undefined
   Size: 35
   Offset: 0xC34D39
   Notes: Movement? [39 4D]
@@ -18305,11 +18305,11 @@ MOVEMENT_583: !script
   Size: 124
   Offset: 0xC34DEA
   Charset: movement
-UNKNOWN_C34E66: !unknown
+UNKNOWN_C34E66: !undefined
   Size: 13
   Offset: 0xC34E66
   Notes: Movement? [66 4E]
-UNKNOWN_C34E73: !unknown
+UNKNOWN_C34E73: !undefined
   Size: 18
   Offset: 0xC34E73
   Notes: Movement? [73 4E]
@@ -18341,7 +18341,7 @@ MOVEMENT_541: !script
   Size: 60
   Offset: 0xC3500E
   Charset: movement
-UNKNOWN_C3504A: !unknown
+UNKNOWN_C3504A: !undefined
   Size: 12
   Offset: 0xC3504A
   Notes: Movement? [4A 50]
@@ -18373,7 +18373,7 @@ MOVEMENT_800: !script
   Size: 29
   Offset: 0xC35214
   Charset: movement
-UNKNOWN_C35231: !unknown
+UNKNOWN_C35231: !undefined
   Size: 14
   Offset: 0xC35231
   Notes: Movement? [31 52]
@@ -18381,15 +18381,15 @@ MOVEMENT_801: !script
   Size: 3404
   Offset: 0xC3523F
   Charset: movement
-UNKNOWN_C35F8B: !unknown
+UNKNOWN_C35F8B: !undefined
   Size: 43
   Offset: 0xC35F8B
   Notes: Movement? [8B 5F]
-UNKNOWN_C35FB6: !unknown
+UNKNOWN_C35FB6: !undefined
   Size: 23
   Offset: 0xC35FB6
   Notes: Movement? [B6 5F]
-UNKNOWN_C35FCD: !unknown
+UNKNOWN_C35FCD: !undefined
   Size: 21
   Offset: 0xC35FCD
   Notes: Movement? [CD 5F]
@@ -18469,7 +18469,7 @@ MOVEMENT_825: !script
   Size: 33
   Offset: 0xC3629F
   Charset: movement
-UNKNOWN_C362C0: !unknown
+UNKNOWN_C362C0: !undefined
   Size: 33
   Offset: 0xC362C0
   Notes: Movement? [C0 62]
@@ -18569,7 +18569,7 @@ MOVEMENT_844: !script
   Size: 32
   Offset: 0xC36814
   Charset: movement
-UNKNOWN_C36834: !unknown
+UNKNOWN_C36834: !undefined
   Size: 11
   Offset: 0xC36834
   Notes: Movement? [34 68]
@@ -18629,11 +18629,11 @@ MOVEMENT_858: !script
   Size: 20
   Offset: 0xC36A2A
   Charset: movement
-UNKNOWN_C36A3E: !unknown
+UNKNOWN_C36A3E: !undefined
   Size: 3
   Offset: 0xC36A3E
   Notes: Movement? [3E 6A]
-UNKNOWN_C36A41: !unknown
+UNKNOWN_C36A41: !undefined
   Size: 18
   Offset: 0xC36A41
   Notes: Movement? [41 6A]
@@ -18665,11 +18665,11 @@ MOVEMENT_590: !script
   Size: 21
   Offset: 0xC36B4B
   Charset: movement
-UNKNOWN_C36B60: !unknown
+UNKNOWN_C36B60: !undefined
   Size: 84
   Offset: 0xC36B60
   Notes: Movement? [60 6B]
-UNKNOWN_C36BB4: !unknown
+UNKNOWN_C36BB4: !undefined
   Size: 18
   Offset: 0xC36BB4
   Notes: Movement? [B4 6B]
@@ -18677,7 +18677,7 @@ MOVEMENT_591: !script
   Size: 36
   Offset: 0xC36BC6
   Charset: movement
-UNKNOWN_C36BEA: !unknown
+UNKNOWN_C36BEA: !undefined
   Size: 1
   Offset: 0xC36BEA
   Notes: Movement? [EA 6B]
@@ -18701,7 +18701,7 @@ MOVEMENT_596: !script
   Size: 61
   Offset: 0xC36CDB
   Charset: movement
-UNKNOWN_C36D18: !unknown
+UNKNOWN_C36D18: !undefined
   Size: 17
   Offset: 0xC36D18
   Notes: Movement? [18 6D]
@@ -18737,7 +18737,7 @@ MOVEMENT_604: !script
   Size: 29
   Offset: 0xC36DD9
   Charset: movement
-UNKNOWN_C36DF6: !unknown
+UNKNOWN_C36DF6: !undefined
   Size: 35
   Offset: 0xC36DF6
   Notes: Movement? [F6 6D]
@@ -18749,7 +18749,7 @@ MOVEMENT_606: !script
   Size: 20
   Offset: 0xC36E2D
   Charset: movement
-UNKNOWN_C36E41: !unknown
+UNKNOWN_C36E41: !undefined
   Size: 17
   Offset: 0xC36E41
   Notes: Movement? [41 6E]
@@ -18813,7 +18813,7 @@ MOVEMENT_621: !script
   Size: 10
   Offset: 0xC37098
   Charset: movement
-UNKNOWN_C370A2: !unknown
+UNKNOWN_C370A2: !undefined
   Size: 91
   Offset: 0xC370A2
   Notes: Movement? [A2 70]
@@ -18849,7 +18849,7 @@ MOVEMENT_629: !script
   Size: 199
   Offset: 0xC372B0
   Charset: movement
-UNKNOWN_C37377: !unknown
+UNKNOWN_C37377: !undefined
   Size: 75
   Offset: 0xC37377
   Notes: Movement? [77 73]
@@ -18865,7 +18865,7 @@ MOVEMENT_632: !script
   Size: 42
   Offset: 0xC3740F
   Charset: movement
-UNKNOWN_C37439: !unknown
+UNKNOWN_C37439: !undefined
   Size: 29
   Offset: 0xC37439
   Notes: Movement? [39 74]
@@ -18889,11 +18889,11 @@ MOVEMENT_637: !script
   Size: 97
   Offset: 0xC374E4
   Charset: movement
-UNKNOWN_C37545: !unknown
+UNKNOWN_C37545: !undefined
   Size: 20
   Offset: 0xC37545
   Notes: Movement? [45 75]
-UNKNOWN_C37559: !unknown
+UNKNOWN_C37559: !undefined
   Size: 20
   Offset: 0xC37559
   Notes: Movement? [59 75]
@@ -19005,7 +19005,7 @@ MOVEMENT_664: !script
   Size: 22
   Offset: 0xC37A66
   Charset: movement
-UNKNOWN_C37A7C: !unknown
+UNKNOWN_C37A7C: !undefined
   Size: 14
   Offset: 0xC37A7C
   Notes: Movement? [7C 7A]
@@ -19033,11 +19033,11 @@ MOVEMENT_670: !script
   Size: 218
   Offset: 0xC37BFE
   Charset: movement
-UNKNOWN_C37CD8: !unknown
+UNKNOWN_C37CD8: !undefined
   Size: 18
   Offset: 0xC37CD8
   Notes: Movement? [D8 7C]
-UNKNOWN_C37CEA: !unknown
+UNKNOWN_C37CEA: !undefined
   Size: 19
   Offset: 0xC37CEA
   Notes: Movement? [EA 7C]
@@ -19057,15 +19057,15 @@ MOVEMENT_674: !script
   Size: 95
   Offset: 0xC37DF1
   Charset: movement
-UNKNOWN_C37E50: !unknown
+UNKNOWN_C37E50: !undefined
   Size: 22
   Offset: 0xC37E50
   Notes: Movement? [50 7E]
-UNKNOWN_C37E66: !unknown
+UNKNOWN_C37E66: !undefined
   Size: 72
   Offset: 0xC37E66
   Notes: Movement? [66 7E]
-UNKNOWN_C37EAE: !unknown
+UNKNOWN_C37EAE: !undefined
   Size: 19
   Offset: 0xC37EAE
   Notes: Movement? [AE 7E]
@@ -19073,7 +19073,7 @@ MOVEMENT_675: !script
   Size: 94
   Offset: 0xC37EC1
   Charset: movement
-UNKNOWN_C37F1F: !unknown
+UNKNOWN_C37F1F: !undefined
   Size: 70
   Offset: 0xC37F1F
   Notes: Movement? [1F 7F]
@@ -19089,11 +19089,11 @@ MOVEMENT_678: !script
   Size: 12
   Offset: 0xC37F7D
   Charset: movement
-UNKNOWN_C37F89: !unknown
+UNKNOWN_C37F89: !undefined
   Size: 28
   Offset: 0xC37F89
   Notes: Movement? [89 7F]
-UNKNOWN_C37FA5: !unknown
+UNKNOWN_C37FA5: !undefined
   Size: 40
   Offset: 0xC37FA5
   Notes: Movement? [A5 7F]
@@ -19117,15 +19117,15 @@ MOVEMENT_683: !script
   Size: 70
   Offset: 0xC380C0
   Charset: movement
-UNKNOWN_C38106: !unknown
+UNKNOWN_C38106: !undefined
   Size: 20
   Offset: 0xC38106
   Notes: Movement? [06 81]
-UNKNOWN_C3811A: !unknown
+UNKNOWN_C3811A: !undefined
   Size: 27
   Offset: 0xC3811A
   Notes: Movement? [1A 81]
-UNKNOWN_C38135: !unknown
+UNKNOWN_C38135: !undefined
   Size: 17
   Offset: 0xC38135
   Notes: Movement? [35 81]
@@ -19133,11 +19133,11 @@ MOVEMENT_684: !script
   Size: 70
   Offset: 0xC38146
   Charset: movement
-UNKNOWN_C3818C: !unknown
+UNKNOWN_C3818C: !undefined
   Size: 27
   Offset: 0xC3818C
   Notes: Movement? [8C 81]
-UNKNOWN_C381A7: !unknown
+UNKNOWN_C381A7: !undefined
   Size: 17
   Offset: 0xC381A7
   Notes: Movement? [A7 81]
@@ -19173,27 +19173,27 @@ MOVEMENT_692: !script
   Size: 84
   Offset: 0xC38309
   Charset: movement
-UNKNOWN_C3835D: !unknown
+UNKNOWN_C3835D: !undefined
   Size: 19
   Offset: 0xC3835D
   Notes: Movement? [5D 83]
-UNKNOWN_C38370: !unknown
+UNKNOWN_C38370: !undefined
   Size: 19
   Offset: 0xC38370
   Notes: Movement? [70 83]
-UNKNOWN_C38383: !unknown
+UNKNOWN_C38383: !undefined
   Size: 19
   Offset: 0xC38383
   Notes: Movement? [83 83]
-UNKNOWN_C38396: !unknown
+UNKNOWN_C38396: !undefined
   Size: 19
   Offset: 0xC38396
   Notes: Movement? [96 83]
-UNKNOWN_C383A9: !unknown
+UNKNOWN_C383A9: !undefined
   Size: 19
   Offset: 0xC383A9
   Notes: Movement? [A9 83]
-UNKNOWN_C383BC: !unknown
+UNKNOWN_C383BC: !undefined
   Size: 22
   Offset: 0xC383BC
   Notes: Movement? [BC 83]
@@ -19221,7 +19221,7 @@ MOVEMENT_698: !script
   Size: 11
   Offset: 0xC384EE
   Charset: movement
-UNKNOWN_C384F9: !unknown
+UNKNOWN_C384F9: !undefined
   Size: 28
   Offset: 0xC384F9
   Notes: Movement? [F9 84]
@@ -19233,7 +19233,7 @@ MOVEMENT_700: !script
   Size: 147
   Offset: 0xC38544
   Charset: movement
-UNKNOWN_C385D7: !unknown
+UNKNOWN_C385D7: !undefined
   Size: 11
   Offset: 0xC385D7
   Notes: Movement? [D7 85]
@@ -19261,7 +19261,7 @@ MOVEMENT_706: !script
   Size: 87
   Offset: 0xC386FA
   Charset: movement
-UNKNOWN_C38751: !unknown
+UNKNOWN_C38751: !undefined
   Size: 32
   Offset: 0xC38751
   Notes: Movement? [51 87]
@@ -19281,7 +19281,7 @@ MOVEMENT_710: !script
   Size: 9
   Offset: 0xC3878C
   Charset: movement
-UNKNOWN_C38795: !unknown
+UNKNOWN_C38795: !undefined
   Size: 33
   Offset: 0xC38795
   Notes: Movement? [95 87]
@@ -19301,19 +19301,19 @@ MOVEMENT_714: !script
   Size: 63
   Offset: 0xC38939
   Charset: movement
-UNKNOWN_C38978: !unknown
+UNKNOWN_C38978: !undefined
   Size: 20
   Offset: 0xC38978
   Notes: Movement? [78 89]
-UNKNOWN_C3898C: !unknown
+UNKNOWN_C3898C: !undefined
   Size: 6
   Offset: 0xC3898C
   Notes: Movement? [8C 89]
-UNKNOWN_C38992: !unknown
+UNKNOWN_C38992: !undefined
   Size: 12
   Offset: 0xC38992
   Notes: Movement? [92 89]
-UNKNOWN_C3899E: !unknown
+UNKNOWN_C3899E: !undefined
   Size: 31
   Offset: 0xC3899E
   Notes: Movement? [9E 89]
@@ -19337,7 +19337,7 @@ MOVEMENT_719: !script
   Size: 77
   Offset: 0xC38ADC
   Charset: movement
-UNKNOWN_C38B29: !unknown
+UNKNOWN_C38B29: !undefined
   Size: 17
   Offset: 0xC38B29
   Notes: Movement? [29 8B]
@@ -19425,7 +19425,7 @@ MOVEMENT_740: !script
   Size: 7
   Offset: 0xC38EFF
   Charset: movement
-UNKNOWN_C38F06: !unknown
+UNKNOWN_C38F06: !undefined
   Size: 21
   Offset: 0xC38F06
   Notes: Movement? [06 8F]
@@ -19437,7 +19437,7 @@ MOVEMENT_742: !script
   Size: 77
   Offset: 0xC38F39
   Charset: movement
-UNKNOWN_C38F86: !unknown
+UNKNOWN_C38F86: !undefined
   Size: 11
   Offset: 0xC38F86
   Notes: Movement? [86 8F]
@@ -19445,7 +19445,7 @@ MOVEMENT_743: !script
   Size: 61
   Offset: 0xC38F91
   Charset: movement
-UNKNOWN_C38FCE: !unknown
+UNKNOWN_C38FCE: !undefined
   Size: 17
   Offset: 0xC38FCE
   Notes: Movement? [CE 8F]
@@ -19505,7 +19505,7 @@ MOVEMENT_757: !script
   Size: 49
   Offset: 0xC39213
   Charset: movement
-UNKNOWN_C39244: !unknown
+UNKNOWN_C39244: !undefined
   Size: 9
   Offset: 0xC39244
   Notes: Movement? [44 92]
@@ -19537,7 +19537,7 @@ MOVEMENT_764: !script
   Size: 65
   Offset: 0xC39440
   Charset: movement
-UNKNOWN_C39481: !unknown
+UNKNOWN_C39481: !undefined
   Size: 26
   Offset: 0xC39481
   Notes: Movement? [81 94]
@@ -19669,11 +19669,11 @@ MOVEMENT_893: !script
   Size: 49
   Offset: 0xC39A8A
   Charset: movement
-UNKNOWN_C39ABB: !unknown
+UNKNOWN_C39ABB: !undefined
   Size: 12
   Offset: 0xC39ABB
   Notes: Movement? [BB 9A]
-UNKNOWN_C39AC7: !unknown
+UNKNOWN_C39AC7: !undefined
   Size: 18
   Offset: 0xC39AC7
   Notes: Movement? [C7 9A]
@@ -19709,11 +19709,11 @@ MOVEMENT_772: !script
   Size: 50
   Offset: 0xC39DCF
   Charset: movement
-UNKNOWN_C39E01: !unknown
+UNKNOWN_C39E01: !undefined
   Size: 13
   Offset: 0xC39E01
   Notes: Movement? [01 9E]
-UNKNOWN_C39E0E: !unknown
+UNKNOWN_C39E0E: !undefined
   Size: 5
   Offset: 0xC39E0E
   Notes: Movement? [0E 9E]
@@ -19729,7 +19729,7 @@ MOVEMENT_775: !script
   Size: 40
   Offset: 0xC39E50
   Charset: movement
-UNKNOWN_C39E78: !unknown
+UNKNOWN_C39E78: !undefined
   Size: 3
   Offset: 0xC39E78
   Notes: Movement? [78 9E]
@@ -19761,19 +19761,19 @@ MOVEMENT_782: !script
   Size: 77
   Offset: 0xC39EF2
   Charset: movement
-UNKNOWN_C39F3F: !unknown
+UNKNOWN_C39F3F: !undefined
   Size: 40
   Offset: 0xC39F3F
   Notes: Movement? [3F 9F]
-UNKNOWN_C39F67: !unknown
+UNKNOWN_C39F67: !undefined
   Size: 19
   Offset: 0xC39F67
   Notes: Movement? [67 9F]
-UNKNOWN_C39F7A: !unknown
+UNKNOWN_C39F7A: !undefined
   Size: 19
   Offset: 0xC39F7A
   Notes: Movement? [7A 9F]
-UNKNOWN_C39F8D: !unknown
+UNKNOWN_C39F8D: !undefined
   Size: 19
   Offset: 0xC39F8D
   Notes: Movement? [8D 9F]
@@ -19790,7 +19790,7 @@ UNKNOWN_C39FF2: !array
   Item Type: !pointer
     Size: 2
   Offset: 0xC39FF2
-UNKNOWN_C3A010: !unknown
+UNKNOWN_C3A010: !undefined
   Size: 0x33
   Offset: 0xC3A010
 MOVEMENT_1: !script
@@ -19801,7 +19801,7 @@ MOVEMENT_2: !script
   Size: 33
   Offset: 0xC3A05E
   Charset: movement
-UNKNOWN_C3A07F: !unknown
+UNKNOWN_C3A07F: !undefined
   Size: 1
   Offset: 0xC3A07F
   Notes: Movement? [7F A0]
@@ -19813,59 +19813,59 @@ MOVEMENT_894: !script
   Size: 6
   Offset: 0xC3A099
   Charset: movement
-UNKNOWN_C3A09F: !unknown
+UNKNOWN_C3A09F: !undefined
   Size: 19
   Offset: 0xC3A09F
   Notes: Movement? [9F A0]
-UNKNOWN_C3A0B2: !unknown
+UNKNOWN_C3A0B2: !undefined
   Size: 19
   Offset: 0xC3A0B2
   Notes: Movement? [B2 A0]
-UNKNOWN_C3A0C5: !unknown
+UNKNOWN_C3A0C5: !undefined
   Size: 19
   Offset: 0xC3A0C5
   Notes: Movement? [C5 A0]
-UNKNOWN_C3A0D8: !unknown
+UNKNOWN_C3A0D8: !undefined
   Size: 86
   Offset: 0xC3A0D8
   Notes: Movement? [D8 A0]
-UNKNOWN_C3A12E: !unknown
+UNKNOWN_C3A12E: !undefined
   Size: 43
   Offset: 0xC3A12E
   Notes: Movement? [2E A1]
-UNKNOWN_C3A159: !unknown
+UNKNOWN_C3A159: !undefined
   Size: 5
   Offset: 0xC3A159
   Notes: Movement? [59 A1]
-UNKNOWN_C3A15E: !unknown
+UNKNOWN_C3A15E: !undefined
   Size: 29
   Offset: 0xC3A15E
   Notes: Movement? [5E A1]
-UNKNOWN_C3A17B: !unknown
+UNKNOWN_C3A17B: !undefined
   Size: 20
   Offset: 0xC3A17B
   Notes: Movement? [7B A1]
-UNKNOWN_C3A18F: !unknown
+UNKNOWN_C3A18F: !undefined
   Size: 20
   Offset: 0xC3A18F
   Notes: Movement? [8F A1]
-UNKNOWN_C3A1A3: !unknown
+UNKNOWN_C3A1A3: !undefined
   Size: 20
   Offset: 0xC3A1A3
   Notes: Movement? [A3 A1]
-UNKNOWN_C3A1B7: !unknown
+UNKNOWN_C3A1B7: !undefined
   Size: 20
   Offset: 0xC3A1B7
   Notes: Movement? [B7 A1]
-UNKNOWN_C3A1CB: !unknown
+UNKNOWN_C3A1CB: !undefined
   Size: 20
   Offset: 0xC3A1CB
   Notes: Movement? [CB A1]
-UNKNOWN_C3A1DF: !unknown
+UNKNOWN_C3A1DF: !undefined
   Size: 20
   Offset: 0xC3A1DF
   Notes: Movement? [DF A1]
-UNKNOWN_C3A1F3: !unknown
+UNKNOWN_C3A1F3: !undefined
   Size: 17
   Offset: 0xC3A1F3
   Notes: Movement? [F3 A1]
@@ -19873,43 +19873,43 @@ MOVEMENT_35: !script
   Size: 5
   Offset: 0xC3A204
   Charset: movement
-UNKNOWN_C3A209: !unknown
+UNKNOWN_C3A209: !undefined
   Size: 5
   Offset: 0xC3A209
   Notes: Movement? [09 A2]
-UNKNOWN_C3A20E: !unknown
+UNKNOWN_C3A20E: !undefined
   Size: 20
   Offset: 0xC3A20E
   Notes: Movement? [0E A2]
-UNKNOWN_C3A222: !unknown
+UNKNOWN_C3A222: !undefined
   Size: 10
   Offset: 0xC3A222
   Notes: Movement? [22 A2]
-UNKNOWN_C3A22C: !unknown
+UNKNOWN_C3A22C: !undefined
   Size: 17
   Offset: 0xC3A22C
   Notes: Movement? [2C A2]
-UNKNOWN_C3A23D: !unknown
+UNKNOWN_C3A23D: !undefined
   Size: 17
   Offset: 0xC3A23D
   Notes: Movement? [3D A2]
-UNKNOWN_C3A24E: !unknown
+UNKNOWN_C3A24E: !undefined
   Size: 17
   Offset: 0xC3A24E
   Notes: Movement? [4E A2]
-UNKNOWN_C3A25F: !unknown
+UNKNOWN_C3A25F: !undefined
   Size: 3
   Offset: 0xC3A25F
   Notes: Movement? [5F A2]
-UNKNOWN_C3A262: !unknown
+UNKNOWN_C3A262: !undefined
   Size: 15
   Offset: 0xC3A262
   Notes: Movement? [62 A2]
-UNKNOWN_C3A271: !unknown
+UNKNOWN_C3A271: !undefined
   Size: 1
   Offset: 0xC3A271
   Notes: Movement? [71 A2]
-UNKNOWN_C3A272: !unknown
+UNKNOWN_C3A272: !undefined
   Size: 1
   Offset: 0xC3A272
   Notes: Movement? [72 A2]
@@ -19965,39 +19965,39 @@ MOVEMENT_18: !script
   Size: 32
   Offset: 0xC3A381
   Charset: movement
-UNKNOWN_C3A3A1: !unknown
+UNKNOWN_C3A3A1: !undefined
   Size: 22
   Offset: 0xC3A3A1
   Notes: Movement? [A1 A3]
-UNKNOWN_C3A3B7: !unknown
+UNKNOWN_C3A3B7: !undefined
   Size: 18
   Offset: 0xC3A3B7
   Notes: Movement? [B7 A3]
-UNKNOWN_C3A3C9: !unknown
+UNKNOWN_C3A3C9: !undefined
   Size: 56
   Offset: 0xC3A3C9
   Notes: Movement? [C9 A3]
-UNKNOWN_C3A401: !unknown
+UNKNOWN_C3A401: !undefined
   Size: 37
   Offset: 0xC3A401
   Notes: Movement? [01 A4]
-UNKNOWN_C3A426: !unknown
+UNKNOWN_C3A426: !undefined
   Size: 7
   Offset: 0xC3A426
   Notes: Movement? [26 A4]
-UNKNOWN_C3A42D: !unknown
+UNKNOWN_C3A42D: !undefined
   Size: 7
   Offset: 0xC3A42D
   Notes: Movement? [2D A4]
-UNKNOWN_C3A434: !unknown
+UNKNOWN_C3A434: !undefined
   Size: 20
   Offset: 0xC3A434
   Notes: Movement? [34 A4]
-UNKNOWN_C3A448: !unknown
+UNKNOWN_C3A448: !undefined
   Size: 20
   Offset: 0xC3A448
   Notes: Movement? [48 A4]
-UNKNOWN_C3A45C: !unknown
+UNKNOWN_C3A45C: !undefined
   Size: 37
   Offset: 0xC3A45C
   Notes: Movement? [5C A4]
@@ -20009,7 +20009,7 @@ MOVEMENT_19: !script
   Size: 34
   Offset: 0xC3A48A
   Charset: movement
-UNKNOWN_C3A4AC: !unknown
+UNKNOWN_C3A4AC: !undefined
   Size: 29
   Offset: 0xC3A4AC
   Notes: Movement? [AC A4]
@@ -20017,11 +20017,11 @@ MOVEMENT_20: !script
   Size: 55
   Offset: 0xC3A4C9
   Charset: movement
-UNKNOWN_C3A500: !unknown
+UNKNOWN_C3A500: !undefined
   Size: 40
   Offset: 0xC3A500
   Notes: Movement? [00 A5]
-UNKNOWN_C3A528: !unknown
+UNKNOWN_C3A528: !undefined
   Size: 33
   Offset: 0xC3A528
   Notes: Movement? [28 A5]
@@ -20029,11 +20029,11 @@ MOVEMENT_21: !script
   Size: 73
   Offset: 0xC3A549
   Charset: movement
-UNKNOWN_C3A592: !unknown
+UNKNOWN_C3A592: !undefined
   Size: 13
   Offset: 0xC3A592
   Notes: Movement? [92 A5]
-UNKNOWN_C3A59F: !unknown
+UNKNOWN_C3A59F: !undefined
   Size: 42
   Offset: 0xC3A59F
   Notes: Movement? [9F A5]
@@ -20041,11 +20041,11 @@ MOVEMENT_22: !script
   Size: 61
   Offset: 0xC3A5C9
   Charset: movement
-UNKNOWN_C3A606: !unknown
+UNKNOWN_C3A606: !undefined
   Size: 25
   Offset: 0xC3A606
   Notes: Movement? [06 A6]
-UNKNOWN_C3A61F: !unknown
+UNKNOWN_C3A61F: !undefined
   Size: 36
   Offset: 0xC3A61F
   Notes: Movement? [1F A6]
@@ -20053,15 +20053,15 @@ MOVEMENT_23: !script
   Size: 52
   Offset: 0xC3A643
   Charset: movement
-UNKNOWN_C3A677: !unknown
+UNKNOWN_C3A677: !undefined
   Size: 22
   Offset: 0xC3A677
   Notes: Movement? [77 A6]
-UNKNOWN_C3A68D: !unknown
+UNKNOWN_C3A68D: !undefined
   Size: 36
   Offset: 0xC3A68D
   Notes: Movement? [8D A6]
-UNKNOWN_C3A6B1: !unknown
+UNKNOWN_C3A6B1: !undefined
   Size: 19
   Offset: 0xC3A6B1
   Notes: Movement? [B1 A6]
@@ -20069,7 +20069,7 @@ MOVEMENT_24: !script
   Size: 44
   Offset: 0xC3A6C4
   Charset: movement
-UNKNOWN_C3A6F0: !unknown
+UNKNOWN_C3A6F0: !undefined
   Size: 36
   Offset: 0xC3A6F0
   Notes: Movement? [F0 A6]
@@ -20077,11 +20077,11 @@ MOVEMENT_25: !script
   Size: 53
   Offset: 0xC3A714
   Charset: movement
-UNKNOWN_C3A749: !unknown
+UNKNOWN_C3A749: !undefined
   Size: 36
   Offset: 0xC3A749
   Notes: Movement? [49 A7]
-UNKNOWN_C3A76D: !unknown
+UNKNOWN_C3A76D: !undefined
   Size: 19
   Offset: 0xC3A76D
   Notes: Movement? [6D A7]
@@ -20093,15 +20093,15 @@ MOVEMENT_27: !script
   Size: 56
   Offset: 0xC3A7F8
   Charset: movement
-UNKNOWN_C3A830: !unknown
+UNKNOWN_C3A830: !undefined
   Size: 13
   Offset: 0xC3A830
   Notes: Movement? [30 A8]
-UNKNOWN_C3A83D: !unknown
+UNKNOWN_C3A83D: !undefined
   Size: 20
   Offset: 0xC3A83D
   Notes: Movement? [3D A8]
-UNKNOWN_C3A851: !unknown
+UNKNOWN_C3A851: !undefined
   Size: 35
   Offset: 0xC3A851
   Notes: Movement? [51 A8]
@@ -20109,7 +20109,7 @@ MOVEMENT_28: !script
   Size: 56
   Offset: 0xC3A874
   Charset: movement
-UNKNOWN_C3A8AC: !unknown
+UNKNOWN_C3A8AC: !undefined
   Size: 38
   Offset: 0xC3A8AC
   Notes: Movement? [AC A8]
@@ -20117,11 +20117,11 @@ MOVEMENT_29: !script
   Size: 80
   Offset: 0xC3A8D2
   Charset: movement
-UNKNOWN_C3A922: !unknown
+UNKNOWN_C3A922: !undefined
   Size: 9
   Offset: 0xC3A922
   Notes: Movement? [22 A9]
-UNKNOWN_C3A92B: !unknown
+UNKNOWN_C3A92B: !undefined
   Size: 40
   Offset: 0xC3A92B
   Notes: Movement? [2B A9]
@@ -20129,7 +20129,7 @@ MOVEMENT_30: !script
   Size: 86
   Offset: 0xC3A953
   Charset: movement
-UNKNOWN_C3A9A9: !unknown
+UNKNOWN_C3A9A9: !undefined
   Size: 49
   Offset: 0xC3A9A9
   Notes: Movement? [A9 A9]
@@ -20137,107 +20137,107 @@ MOVEMENT_31: !script
   Size: 37
   Offset: 0xC3A9DA
   Charset: movement
-UNKNOWN_C3A9FF: !unknown
+UNKNOWN_C3A9FF: !undefined
   Size: 31
   Offset: 0xC3A9FF
   Notes: Movement? [FF A9]
-UNKNOWN_C3AA1E: !unknown
+UNKNOWN_C3AA1E: !undefined
   Size: 13
   Offset: 0xC3AA1E
   Notes: Movement? [1E AA]
-UNKNOWN_C3AA2B: !unknown
+UNKNOWN_C3AA2B: !undefined
   Size: 13
   Offset: 0xC3AA2B
   Notes: Movement? [2B AA]
-UNKNOWN_C3AA38: !unknown
+UNKNOWN_C3AA38: !undefined
   Size: 14
   Offset: 0xC3AA38
   Notes: Movement? [38 AA]
-UNKNOWN_C3AA46: !unknown
+UNKNOWN_C3AA46: !undefined
   Size: 20
   Offset: 0xC3AA46
   Notes: Movement? [46 AA]
-UNKNOWN_C3AA5A: !unknown
+UNKNOWN_C3AA5A: !undefined
   Size: 20
   Offset: 0xC3AA5A
   Notes: Movement? [5A AA]
-UNKNOWN_C3AA6E: !unknown
+UNKNOWN_C3AA6E: !undefined
   Size: 20
   Offset: 0xC3AA6E
   Notes: Movement? [6E AA]
-UNKNOWN_C3AA82: !unknown
+UNKNOWN_C3AA82: !undefined
   Size: 20
   Offset: 0xC3AA82
   Notes: Movement? [82 AA]
-UNKNOWN_C3AA96: !unknown
+UNKNOWN_C3AA96: !undefined
   Size: 20
   Offset: 0xC3AA96
   Notes: Movement? [96 AA]
-UNKNOWN_C3AAAA: !unknown
+UNKNOWN_C3AAAA: !undefined
   Size: 14
   Offset: 0xC3AAAA
   Notes: Movement? [AA AA]
-UNKNOWN_C3AAB8: !unknown
+UNKNOWN_C3AAB8: !undefined
   Size: 10
   Offset: 0xC3AAB8
   Notes: Movement? [B8 AA]
-UNKNOWN_C3AAC2: !unknown
+UNKNOWN_C3AAC2: !undefined
   Size: 20
   Offset: 0xC3AAC2
   Notes: Movement? [C2 AA]
-UNKNOWN_C3AAD6: !unknown
+UNKNOWN_C3AAD6: !undefined
   Size: 20
   Offset: 0xC3AAD6
   Notes: Movement? [D6 AA]
-UNKNOWN_C3AAEA: !unknown
+UNKNOWN_C3AAEA: !undefined
   Size: 20
   Offset: 0xC3AAEA
   Notes: Movement? [EA AA]
-UNKNOWN_C3AAFE: !unknown
+UNKNOWN_C3AAFE: !undefined
   Size: 20
   Offset: 0xC3AAFE
   Notes: Movement? [FE AA]
-UNKNOWN_C3AB12: !unknown
+UNKNOWN_C3AB12: !undefined
   Size: 20
   Offset: 0xC3AB12
   Notes: Movement? [12 AB]
-UNKNOWN_C3AB26: !unknown
+UNKNOWN_C3AB26: !undefined
   Size: 17
   Offset: 0xC3AB26
   Notes: Movement? [26 AB]
-UNKNOWN_C3AB37: !unknown
+UNKNOWN_C3AB37: !undefined
   Size: 13
   Offset: 0xC3AB37
   Notes: Movement? [37 AB]
-UNKNOWN_C3AB44: !unknown
+UNKNOWN_C3AB44: !undefined
   Size: 21
   Offset: 0xC3AB44
   Notes: Movement? [44 AB]
-UNKNOWN_C3AB59: !unknown
+UNKNOWN_C3AB59: !undefined
   Size: 14
   Offset: 0xC3AB59
   Notes: Movement? [59 AB]
-UNKNOWN_C3AB67: !unknown
+UNKNOWN_C3AB67: !undefined
   Size: 35
   Offset: 0xC3AB67
   Notes: Movement? [67 AB]
-UNKNOWN_C3AB8A: !unknown
+UNKNOWN_C3AB8A: !undefined
   Size: 10
   Offset: 0xC3AB8A
   Notes: Movement? [8A AB]
-UNKNOWN_C3AB94: !unknown
+UNKNOWN_C3AB94: !undefined
   Size: 10
   Offset: 0xC3AB94
   Notes: Movement? [94 AB]
-UNKNOWN_C3AB9E: !unknown
+UNKNOWN_C3AB9E: !undefined
   Size: 14
   Offset: 0xC3AB9E
   Notes: Movement? [9E AB]
-UNKNOWN_C3ABAC: !unknown
+UNKNOWN_C3ABAC: !undefined
   Size: 52
   Offset: 0xC3ABAC
   Notes: Movement? [AC AB]
-UNKNOWN_C3ABE0: !unknown
+UNKNOWN_C3ABE0: !undefined
   Size: 13
   Offset: 0xC3ABE0
   Notes: Movement? [E0 AB]
@@ -20261,7 +20261,7 @@ MOVEMENT_37: !script
   Size: 76
   Offset: 0xC3AD7A
   Charset: movement
-UNKNOWN_C3ADC6: !unknown
+UNKNOWN_C3ADC6: !undefined
   Size: 27
   Offset: 0xC3ADC6
   Notes: Movement? [C6 AD]
@@ -20281,7 +20281,7 @@ MOVEMENT_38: !script
   Size: 74
   Offset: 0xC3AE1E
   Charset: movement
-UNKNOWN_C3AE68: !unknown
+UNKNOWN_C3AE68: !undefined
   Size: 16
   Offset: 0xC3AE68
   Notes: Movement? [68 AE]
@@ -20305,7 +20305,7 @@ MOVEMENT_46: !script
   Size: 85
   Offset: 0xC3AF4E
   Charset: movement
-UNKNOWN_C3AFA3: !unknown
+UNKNOWN_C3AFA3: !undefined
   Size: 9
   Offset: 0xC3AFA3
   Notes: Movement? [A3 AF]
@@ -20333,7 +20333,7 @@ MOVEMENT_51: !script
   Size: 73
   Offset: 0xC3B06D
   Charset: movement
-UNKNOWN_C3B0B6: !unknown
+UNKNOWN_C3B0B6: !undefined
   Size: 54
   Offset: 0xC3B0B6
   Notes: Movement? [B6 B0]
@@ -20341,7 +20341,7 @@ MOVEMENT_50: !script
   Size: 73
   Offset: 0xC3B0EC
   Charset: movement
-UNKNOWN_C3B135: !unknown
+UNKNOWN_C3B135: !undefined
   Size: 9
   Offset: 0xC3B135
   Notes: Movement? [35 B1]
@@ -20385,7 +20385,7 @@ MOVEMENT_63: !script
   Size: 105
   Offset: 0xC3B3C8
   Charset: movement
-UNKNOWN_C3B431: !unknown
+UNKNOWN_C3B431: !undefined
   Size: 20
   Offset: 0xC3B431
   Notes: Movement? [31 B4]
@@ -20405,7 +20405,7 @@ MOVEMENT_67: !script
   Size: 47
   Offset: 0xC3B4FB
   Charset: movement
-UNKNOWN_C3B52A: !unknown
+UNKNOWN_C3B52A: !undefined
   Size: 14
   Offset: 0xC3B52A
   Notes: Movement? [2A B5]
@@ -20429,7 +20429,7 @@ MOVEMENT_72: !script
   Size: 56
   Offset: 0xC3B6D4
   Charset: movement
-UNKNOWN_C3B70C: !unknown
+UNKNOWN_C3B70C: !undefined
   Size: 75
   Offset: 0xC3B70C
   Notes: Movement? [0C B7]
@@ -20525,19 +20525,19 @@ MOVEMENT_98: !script
   Size: 44
   Offset: 0xC3BA70
   Charset: movement
-UNKNOWN_C3BA9C: !unknown
+UNKNOWN_C3BA9C: !undefined
   Size: 7
   Offset: 0xC3BA9C
   Notes: Movement? [9C BA]
-UNKNOWN_C3BAA3: !unknown
+UNKNOWN_C3BAA3: !undefined
   Size: 33
   Offset: 0xC3BAA3
   Notes: Movement? [A3 BA]
-UNKNOWN_C3BAC4: !unknown
+UNKNOWN_C3BAC4: !undefined
   Size: 19
   Offset: 0xC3BAC4
   Notes: Movement? [C4 BA]
-UNKNOWN_C3BAD7: !unknown
+UNKNOWN_C3BAD7: !undefined
   Size: 19
   Offset: 0xC3BAD7
   Notes: Movement? [D7 BA]
@@ -20545,7 +20545,7 @@ MOVEMENT_91: !script
   Size: 28
   Offset: 0xC3BAEA
   Charset: movement
-UNKNOWN_C3BB06: !unknown
+UNKNOWN_C3BB06: !undefined
   Size: 17
   Offset: 0xC3BB06
   Notes: Movement? [06 BB]
@@ -20561,11 +20561,11 @@ MOVEMENT_100: !script
   Size: 16
   Offset: 0xC3BB4C
   Charset: movement
-UNKNOWN_C3BB5C: !unknown
+UNKNOWN_C3BB5C: !undefined
   Size: 23
   Offset: 0xC3BB5C
   Notes: Movement? [5C BB]
-UNKNOWN_C3BB73: !unknown
+UNKNOWN_C3BB73: !undefined
   Size: 33
   Offset: 0xC3BB73
   Notes: Movement? [73 BB]
@@ -20589,7 +20589,7 @@ MOVEMENT_106: !script
   Size: 83
   Offset: 0xC3BCB0
   Charset: movement
-UNKNOWN_C3BD03: !unknown
+UNKNOWN_C3BD03: !undefined
   Size: 11
   Offset: 0xC3BD03
   Notes: Movement? [03 BD]
@@ -20633,11 +20633,11 @@ MOVEMENT_114: !script
   Size: 36
   Offset: 0xC3BE80
   Charset: movement
-UNKNOWN_C3BEA4: !unknown
+UNKNOWN_C3BEA4: !undefined
   Size: 48
   Offset: 0xC3BEA4
   Notes: Movement? [A4 BE]
-UNKNOWN_C3BED4: !unknown
+UNKNOWN_C3BED4: !undefined
   Size: 26
   Offset: 0xC3BED4
   Notes: Movement? [D4 BE]
@@ -20661,7 +20661,7 @@ MOVEMENT_119: !script
   Size: 104
   Offset: 0xC3C07C
   Charset: movement
-UNKNOWN_C3C0E4: !unknown
+UNKNOWN_C3C0E4: !undefined
   Size: 15
   Offset: 0xC3C0E4
   Notes: Movement? [E4 C0]
@@ -20685,7 +20685,7 @@ MOVEMENT_472: !script
   Size: 21
   Offset: 0xC3C12E
   Charset: movement
-UNKNOWN_C3C143: !unknown
+UNKNOWN_C3C143: !undefined
   Size: 36
   Offset: 0xC3C143
   Notes: Movement? [43 C1]
@@ -20701,15 +20701,15 @@ MOVEMENT_475: !script
   Size: 56
   Offset: 0xC3C1A8
   Charset: movement
-UNKNOWN_C3C1E0: !unknown
+UNKNOWN_C3C1E0: !undefined
   Size: 47
   Offset: 0xC3C1E0
   Notes: Movement? [E0 C1]
-UNKNOWN_C3C20F: !unknown
+UNKNOWN_C3C20F: !undefined
   Size: 24
   Offset: 0xC3C20F
   Notes: Movement? [0F C2]
-UNKNOWN_C3C227: !unknown
+UNKNOWN_C3C227: !undefined
   Size: 15
   Offset: 0xC3C227
   Notes: Movement? [27 C2]
@@ -20745,7 +20745,7 @@ MOVEMENT_126: !script
   Size: 12
   Offset: 0xC3C2E3
   Charset: movement
-UNKNOWN_C3C2EF: !unknown
+UNKNOWN_C3C2EF: !undefined
   Size: 55
   Offset: 0xC3C2EF
   Notes: Movement? [EF C2]
@@ -20769,7 +20769,7 @@ MOVEMENT_131: !script
   Size: 12
   Offset: 0xC3C351
   Charset: movement
-UNKNOWN_C3C35D: !unknown
+UNKNOWN_C3C35D: !undefined
   Size: 55
   Offset: 0xC3C35D
   Notes: Movement? [5D C3]
@@ -20809,7 +20809,7 @@ MOVEMENT_140: !script
   Size: 31
   Offset: 0xC3C5C6
   Charset: movement
-UNKNOWN_C3C5E5: !unknown
+UNKNOWN_C3C5E5: !undefined
   Size: 11
   Offset: 0xC3C5E5
   Notes: Movement? [E5 C5]
@@ -20845,19 +20845,19 @@ MOVEMENT_165: !script
   Size: 98
   Offset: 0xC3C7AE
   Charset: movement
-UNKNOWN_C3C810: !unknown
+UNKNOWN_C3C810: !undefined
   Size: 10
   Offset: 0xC3C810
   Notes: Movement? [10 C8]
-UNKNOWN_C3C81A: !unknown
+UNKNOWN_C3C81A: !undefined
   Size: 10
   Offset: 0xC3C81A
   Notes: Movement? [1A C8]
-UNKNOWN_C3C824: !unknown
+UNKNOWN_C3C824: !undefined
   Size: 78
   Offset: 0xC3C824
   Notes: Movement? [24 C8]
-UNKNOWN_C3C872: !unknown
+UNKNOWN_C3C872: !undefined
   Size: 49
   Offset: 0xC3C872
   Notes: Movement? [72 C8]
@@ -20885,15 +20885,15 @@ MOVEMENT_152: !script
   Size: 15
   Offset: 0xC3C8EE
   Charset: movement
-UNKNOWN_C3C8FD: !unknown
+UNKNOWN_C3C8FD: !undefined
   Size: 15
   Offset: 0xC3C8FD
   Notes: Movement? [FD C8]
-UNKNOWN_C3C90C: !unknown
+UNKNOWN_C3C90C: !undefined
   Size: 66
   Offset: 0xC3C90C
   Notes: Movement? [0C C9]
-UNKNOWN_C3C94E: !unknown
+UNKNOWN_C3C94E: !undefined
   Size: 66
   Offset: 0xC3C94E
   Notes: Movement? [0C C9]
@@ -20929,19 +20929,19 @@ MOVEMENT_160: !script
   Size: 79
   Offset: 0xC3CBD5
   Charset: movement
-UNKNOWN_C3CC24: !unknown
+UNKNOWN_C3CC24: !undefined
   Size: 56
   Offset: 0xC3CC24
   Notes: Movement? [24 CC]
-UNKNOWN_C3CC5C: !unknown
+UNKNOWN_C3CC5C: !undefined
   Size: 56
   Offset: 0xC3CC5C
   Notes: Movement? [5C CC]
-UNKNOWN_C3CC94: !unknown
+UNKNOWN_C3CC94: !undefined
   Size: 20
   Offset: 0xC3CC94
   Notes: Movement? [94 CC]
-UNKNOWN_C3CCA8: !unknown
+UNKNOWN_C3CCA8: !undefined
   Size: 13
   Offset: 0xC3CCA8
   Notes: Movement? [A8 CC]
@@ -20953,11 +20953,11 @@ MOVEMENT_164: !script
   Size: 178
   Offset: 0xC3CDF0
   Charset: movement
-UNKNOWN_C3CEA2: !unknown
+UNKNOWN_C3CEA2: !undefined
   Size: 23
   Offset: 0xC3CEA2
   Notes: Movement? [A2 CE]
-UNKNOWN_C3CEB9: !unknown
+UNKNOWN_C3CEB9: !undefined
   Size: 14
   Offset: 0xC3CEB9
   Notes: Movement? [B9 CE]
@@ -20989,7 +20989,7 @@ MOVEMENT_171: !script
   Size: 87
   Offset: 0xC3D04D
   Charset: movement
-UNKNOWN_C3D0A4: !unknown
+UNKNOWN_C3D0A4: !undefined
   Size: 33
   Offset: 0xC3D0A4
   Notes: Movement? [A4 D0]
@@ -21145,7 +21145,7 @@ MOVEMENT_210: !script
   Size: 47
   Offset: 0xC3D8E4
   Charset: movement
-UNKNOWN_C3D913: !unknown
+UNKNOWN_C3D913: !undefined
   Size: 9
   Offset: 0xC3D913
   Notes: Movement? [13 D9]
@@ -21189,7 +21189,7 @@ MOVEMENT_219: !script
   Size: 97
   Offset: 0xC3DB19
   Charset: movement
-UNKNOWN_C3DB7A: !unknown
+UNKNOWN_C3DB7A: !undefined
   Size: 38
   Offset: 0xC3DB7A
   Notes: Movement? [7A DB]
@@ -21201,7 +21201,7 @@ MOVEMENT_454: !script
   Size: 15
   Offset: 0xC3DBCC
   Charset: movement
-UNKNOWN_C3DBDB: !unknown
+UNKNOWN_C3DBDB: !undefined
   Size: 23
   Offset: 0xC3DBDB
   Notes: Movement? [DB DB]
@@ -21249,47 +21249,47 @@ MOVEMENT_32: !script
   Size: 49
   Offset: 0xC3DE01
   Charset: movement
-UNKNOWN_C3DE32: !unknown
+UNKNOWN_C3DE32: !undefined
   Size: 7
   Offset: 0xC3DE32
   Notes: Movement? [32 DE]
-UNKNOWN_C3DE39: !unknown
+UNKNOWN_C3DE39: !undefined
   Size: 37
   Offset: 0xC3DE39
   Notes: Movement? [39 DE]
-UNKNOWN_C3DE5E: !unknown
+UNKNOWN_C3DE5E: !undefined
   Size: 29
   Offset: 0xC3DE5E
   Notes: Movement? [5E DE]
-UNKNOWN_C3DE7B: !unknown
+UNKNOWN_C3DE7B: !undefined
   Size: 25
   Offset: 0xC3DE7B
   Notes: Movement? [7B DE]
-UNKNOWN_C3DE94: !unknown
+UNKNOWN_C3DE94: !undefined
   Size: 8
   Offset: 0xC3DE94
   Notes: Movement? [94 DE]
-UNKNOWN_C3DE9C: !unknown
+UNKNOWN_C3DE9C: !undefined
   Size: 28
   Offset: 0xC3DE9C
   Notes: Movement? [9C DE]
-UNKNOWN_C3DEB8: !unknown
+UNKNOWN_C3DEB8: !undefined
   Size: 20
   Offset: 0xC3DEB8
   Notes: Movement? [B8 DE]
-UNKNOWN_C3DECC: !unknown
+UNKNOWN_C3DECC: !undefined
   Size: 25
   Offset: 0xC3DECC
   Notes: Movement? [CC DE]
-UNKNOWN_C3DEE5: !unknown
+UNKNOWN_C3DEE5: !undefined
   Size: 8
   Offset: 0xC3DEE5
   Notes: Movement? [E5 DE]
-UNKNOWN_C3DEED: !unknown
+UNKNOWN_C3DEED: !undefined
   Size: 20
   Offset: 0xC3DEED
   Notes: Movement? [ED DE]
-UNKNOWN_C3DF01: !unknown
+UNKNOWN_C3DF01: !undefined
   Size: 29
   Offset: 0xC3DF01
   Notes: Movement? [01 DF]
@@ -21301,46 +21301,46 @@ MOVEMENT_33: !script
   Size: 30
   Offset: 0xC3DF72
   Charset: movement
-UNKNOWN_C3DF90: !unknown
+UNKNOWN_C3DF90: !undefined
   Size: 37
   Offset: 0xC3DF90
   Notes: Movement? [90 DF]
-UNKNOWN_C3DFB5: !unknown
+UNKNOWN_C3DFB5: !undefined
   Size: 31
   Offset: 0xC3DFB5
   Notes: Movement? [B5 DF]
-UNKNOWN_C3DFD4: !unknown
+UNKNOWN_C3DFD4: !undefined
   Size: 20
   Offset: 0xC3DFD4
   Notes: Movement? [D4 DF]
-UNKNOWN_C3DFE8: !unknown
+UNKNOWN_C3DFE8: !undefined
   Size: 324
   Offset: 0xC3DFE8
-UNKNOWN_C3E12C: !unknown
+UNKNOWN_C3E12C: !undefined
   Size: 28
   Description: Unknown Table
   Offset: 0xC3E12C
-UNKNOWN_C3E148: !unknown
+UNKNOWN_C3E148: !undefined
   Size: 16
   Description: Unknown Table
   Offset: 0xC3E148
-UNKNOWN_C3E158: !unknown
+UNKNOWN_C3E158: !undefined
   Size: 16
   Description: Unknown Table
   Offset: 0xC3E158
-UNKNOWN_C3E168: !unknown
+UNKNOWN_C3E168: !undefined
   Size: 16
   Description: Unknown Table
   Offset: 0xC3E168
-UNKNOWN_C3E178: !unknown
+UNKNOWN_C3E178: !undefined
   Size: 184
   Description: Unknown
   Offset: 0xC3E178
-UNKNOWN_C3E230: !unknown
+UNKNOWN_C3E230: !undefined
   Size: 16
   Description: Unknown Table
   Offset: 0xC3E230
-UNKNOWN_C3E240: !unknown
+UNKNOWN_C3E240: !undefined
   Description: Unknown Table
   Size: 16
   Offset: 0xC3E240
@@ -21357,13 +21357,13 @@ WINDOW_CONFIGURATION_TABLE: !struct
     HEIGHT: !int
       Size: 2
   Offset: 0xC3E250
-UNKNOWN_C3E3F8: !unknown
+UNKNOWN_C3E3F8: !undefined
   Size: 88
   Offset: 0xC3E3F8
 UNKNOWN_C3E450: !assembly
   Size: 122
   Notes: Text window properties/palettes?
-  Labels: 
+  Labels:
     57: UNKNOWN0
     93: UNKNOWN1
   Offset: 0xC3E450
@@ -21384,7 +21384,7 @@ CALL_C12DD5_WITH_ZERO_9622: !assembly
   Offset: 0xC3E4E0
 UNKNOWN_C3E4EF: !assembly
   Size: 50
-  Labels: 
+  Labels:
     15: UNKNOWN0
     35: UNKNOWN1
     40: UNKNOWN2
@@ -21416,7 +21416,7 @@ CLOSE_WINDOW: !assembly
   Offset: 0xC3E521
 UNKNOWN_C3E6F8: !assembly
   Size: 101
-  Labels: 
+  Labels:
     73: UNKNOWN0
     82: UNKNOWN1
     97: UNKNOWN2
@@ -21440,12 +21440,12 @@ UNKNOWN_C3E75D: !assembly
   Offset: 0xC3E75D
 UNKNOWN_C3E7E3: !assembly
   Size: 107
-  Labels: 
+  Labels:
     54: UNKNOWN0
     82: UNKNOWN1
     105: UNKNOWN2
   Offset: 0xC3E7E3
-UNKNOWN_C3E84E: !unknown
+UNKNOWN_C3E84E: !undefined
   Size: 38
   Offset: 0xC3E84E
 DEBUG_MENU_TEXT: !array
@@ -21454,7 +21454,7 @@ DEBUG_MENU_TEXT: !array
     Size: 10
   Description: Debug Mode Text
   Offset: 0xC3E874
-DEBUG_MENU_ELEMENT_SPACING_DATA: !unknown
+DEBUG_MENU_ELEMENT_SPACING_DATA: !undefined
   Size: 12
   Offset: 0xC3E964
 DEBUG_ON_TEXT: !script
@@ -21469,7 +21469,7 @@ UNKNOWN_C3E977: !assembly
   Offset: 0xC3E977
 UNKNOWN_C3E9A0: !assembly
   Size: 87
-  Labels: 
+  Labels:
     37: UNKNOWN0
     52: UNKNOWN1
     67: UNKNOWN2
@@ -21478,7 +21478,7 @@ UNKNOWN_C3E9A0: !assembly
   Offset: 0xC3E9A0
 UNKNOWN_C3E9F7: !assembly
   Size: 217
-  Labels: 
+  Labels:
     65: UNKNOWN0
     114: UNKNOWN1
     163: UNKNOWN2
@@ -21487,7 +21487,7 @@ UNKNOWN_C3E9F7: !assembly
   Offset: 0xC3E9F7
 UNKNOWN_C3EAD0: !assembly
   Size: 76
-  Labels: 
+  Labels:
     21: UNKNOWN0
     50: UNKNOWN1
     55: UNKNOWN2
@@ -21513,7 +21513,7 @@ UNKNOWN_C3EB1C: !assembly
   Offset: 0xC3EB1C
 UNKNOWN_C3EBCA: !assembly
   Size: 85
-  Labels: 
+  Labels:
     15: UNKNOWN0
     41: UNKNOWN1
     49: UNKNOWN2
@@ -21521,13 +21521,13 @@ UNKNOWN_C3EBCA: !assembly
   Offset: 0xC3EBCA
 UNKNOWN_C3EC1F: !assembly
   Size: 108
-  Labels: 
+  Labels:
     69: UNKNOWN0
     106: UNKNOWN1
   Offset: 0xC3EC1F
 UNKNOWN_C3EC8B: !assembly
   Size: 161
-  Labels: 
+  Labels:
     18: UNKNOWN0
     72: UNKNOWN1
     115: UNKNOWN2
@@ -21535,13 +21535,13 @@ UNKNOWN_C3EC8B: !assembly
   Offset: 0xC3EC8B
 UNKNOWN_C3ED2C: !assembly
   Size: 108
-  Labels: 
+  Labels:
     69: UNKNOWN0
     106: UNKNOWN1
   Offset: 0xC3ED2C
 UNKNOWN_C3ED98: !assembly
   Size: 124
-  Labels: 
+  Labels:
     69: UNKNOWN0
     122: UNKNOWN1
   Offset: 0xC3ED98
@@ -21554,12 +21554,12 @@ UNKNOWN_C3EE14: !assembly
   Offset: 0xC3EE14
 UNKNOWN_C3EE4D: !assembly
   Size: 45
-  Labels: 
+  Labels:
     44: UNKNOWN0
   Offset: 0xC3EE4D
 UNKNOWN_C3EE7A: !assembly
   Size: 169
-  Labels: 
+  Labels:
     72: UNKNOWN0
     97: UNKNOWN1
     116: UNKNOWN2
@@ -21573,7 +21573,7 @@ DO_ABSOLUTELY_NOTHING_3486862: !assembly
     8 Bit Index: false
   Size: 3
   Offset: 0xC3EF23
-UNKNOWN_C3EF26: !unknown
+UNKNOWN_C3EF26: !undefined
   Size: 302
   Description: Has PSI category text in it...
   Offset: 0xC3EF26
@@ -21591,7 +21591,7 @@ FONT_PTR_TABLE: !array
       WIDTH: !int
         Size: 2
   Offset: 0xC3F054
-UNKNOWN_C3F090: !unknown
+UNKNOWN_C3F090: !undefined
   Size: 32
   Offset: 0xC3F090
 PSI_TARGET_TEXT: !script
@@ -21600,7 +21600,7 @@ PSI_TARGET_TEXT: !script
   Offset: 0xC3F0B0
 UNKNOWN_C3F1EC: !assembly
   Size: 197
-  Labels: 
+  Labels:
     30: UNKNOWN0
     38: UNKNOWN1
     116: UNKNOWN2
@@ -21609,7 +21609,7 @@ UNKNOWN_C3F1EC: !assembly
     192: UNKNOWN5
     195: UNKNOWN6
   Offset: 0xC3F1EC
-UNKNOWN_C3F2B1: !unknown
+UNKNOWN_C3F2B1: !undefined
   Size: 4
   Offset: 0xC3F2B1
 PLAYABLE_CHAR_GFX_TABLE: !array
@@ -21649,14 +21649,14 @@ SHOW_TITLE_SCREEN: !assembly
   Offset: 0xC3F3C5
 UNKNOWN_C3F5F9: !assembly
   Size: 132
-  Labels: 
+  Labels:
     28: UNKNOWN0
     113: UNKNOWN1
     123: UNKNOWN2
   Offset: 0xC3F5F9
 UNKNOWN_C3F67D: !assembly
   Size: 136
-  Labels: 
+  Labels:
     21: UNKNOWN0
     116: UNKNOWN1
     125: UNKNOWN2
@@ -21664,7 +21664,7 @@ UNKNOWN_C3F67D: !assembly
   Offset: 0xC3F67D
 UNKNOWN_C3F705: !assembly
   Size: 246
-  Labels: 
+  Labels:
     77: UNKNOWN0
     80: UNKNOWN1
     146: UNKNOWN2
@@ -21673,7 +21673,7 @@ UNKNOWN_C3F705: !assembly
 UNKNOWN_C3F7FB: !assembly
   Size: 30
   Offset: 0xC3F7FB
-UNKNOWN_C3F819: !unknown
+UNKNOWN_C3F819: !undefined
   Size: 312
   Offset: 0xC3F819
 UNKNOWN_C3F951: !array
@@ -21706,14 +21706,14 @@ UNKNOWN_C3FAC9: !assembly
   Arguments:
     A: XX-1
     X: YY-1
-  Labels: 
+  Labels:
     33: UNKNOWN0
     55: UNKNOWN1
     62: UNKNOWN2
   Offset: 0xC3FAC9
 UNKNOWN_C3FB09: !assembly
   Size: 22
-  Labels: 
+  Labels:
     18: UNKNOWN0
     21: UNKNOWN1
   Offset: 0xC3FB09
@@ -21726,11 +21726,11 @@ UNKNOWN_C3FB1F: !array
         Size: 2
       UNKNOWNB: !int
         Size: 2
-UNKNOWN_C3FB2B: !unknown
+UNKNOWN_C3FB2B: !undefined
   Size: 286
   Description: Has Name Registration text at the start...
   Offset: 0xC3FB2B
-UNKNOWN_C3FC49: !unknown
+UNKNOWN_C3FC49: !undefined
   Size: 228
   Offset: 0xC3FC49
   #Entries:
@@ -21738,10 +21738,10 @@ UNKNOWN_C3FC49: !unknown
   #  Terminator: 00
   #  Entries:
   #  - Size: 2
-UNKNOWN_C3FD2D: !unknown
+UNKNOWN_C3FD2D: !undefined
   Size: 56
   Offset: 0xC3FD2D
-UNKNOWN_C3FD65: !unknown
+UNKNOWN_C3FD65: !undefined
   Size: 40
   Offset: 0xC3FD65
 ATTRACT_MODE_TXT: !array
@@ -21750,7 +21750,7 @@ ATTRACT_MODE_TXT: !array
   Item Type: !pointer
     Size: 4
   Offset: 0xC3FD8D
-UNKNOWN_C3FDB5: !unknown
+UNKNOWN_C3FDB5: !undefined
   Size: 8
   Offset: 0xC3FDB5
 UNUSED_FORSALE_SIGN_SPRITE_TABLE: !array
@@ -21813,32 +21813,32 @@ UNKNOWN_C40B75: !assembly
   Labels:
     93: UNKNOWN0
   Offset: 0xC40B75
-FOOTSTEP_SOUND_TABLE: !unknown
+FOOTSTEP_SOUND_TABLE: !undefined
   Size: 543
   Offset: 0xC40BD4
-UNKNOWN_C40DF3: !unknown
+UNKNOWN_C40DF3: !undefined
   Size: 49
   Offset: 0xC40DF3
 MOVEMENT_785: !script
   Size: 13
   Offset: 0xC40E24
   Charset: movement
-UNKNOWN_C40E31: !unknown
+UNKNOWN_C40E31: !undefined
   Size: 231
   Offset: 0xC40E31
-UNKNOWN_C40F18: !unknown
+UNKNOWN_C40F18: !undefined
   Size: 45
   Offset: 0xC40F18
   Notes: Movement? [18 0F]
-UNKNOWN_C40F45: !unknown
+UNKNOWN_C40F45: !undefined
   Size: 5
   Offset: 0xC40F45
   Notes: Movement? [45 0F]
-UNKNOWN_C40F4A: !unknown
+UNKNOWN_C40F4A: !undefined
   Size: 15
   Offset: 0xC40F4A
   Notes: Movement? [4A 0F]
-UNKNOWN_C40F59: !unknown
+UNKNOWN_C40F59: !undefined
   Size: 15
   Offset: 0xC40F59
   Notes: Movement? [59 0F]
@@ -21962,115 +21962,115 @@ MOVEMENT_534: !script
   Size: 22
   Offset: 0xC41020
   Charset: movement
-UNKNOWN_C41036: !unknown
+UNKNOWN_C41036: !undefined
   Size: 310
   Offset: 0xC41036
   Notes: Movement? [36 10]
-UNKNOWN_C4116C: !unknown
+UNKNOWN_C4116C: !undefined
   Size: 49
   Offset: 0xC4116C
   Notes: Movement? [6C 11]
-UNKNOWN_C4119D: !unknown
+UNKNOWN_C4119D: !undefined
   Size: 78
   Offset: 0xC4119D
   Notes: Movement? [9D 11]
-UNKNOWN_C411EB: !unknown
+UNKNOWN_C411EB: !undefined
   Size: 52
   Offset: 0xC411EB
   Notes: Movement? [EB 11]
-UNKNOWN_C4121F: !unknown
+UNKNOWN_C4121F: !undefined
   Size: 52
   Offset: 0xC4121F
   Notes: Movement? [1F 12]
-UNKNOWN_C41253: !unknown
+UNKNOWN_C41253: !undefined
   Size: 303
   Offset: 0xC41253
   Notes: Movement? [53 12]
-UNKNOWN_C41382: !unknown
+UNKNOWN_C41382: !undefined
   Size: 84
   Offset: 0xC41382
   Notes: Movement? [82 13]
-UNKNOWN_C413D6: !unknown
+UNKNOWN_C413D6: !undefined
   Size: 44
   Offset: 0xC413D6
   Notes: Movement? [D6 13]
-UNKNOWN_C41402: !unknown
+UNKNOWN_C41402: !undefined
   Size: 74
   Offset: 0xC41402
   Notes: Movement? [02 14]
-UNKNOWN_C4144C: !unknown
+UNKNOWN_C4144C: !undefined
   Size: 222
   Offset: 0xC4144C
   Notes: Movement? [4C 14]
-UNKNOWN_C4152A: !unknown
+UNKNOWN_C4152A: !undefined
   Size: 36
   Offset: 0xC4152A
   Notes: Movement? [2A 15]
-UNKNOWN_C4154E: !unknown
+UNKNOWN_C4154E: !undefined
   Size: 60
   Offset: 0xC4154E
   Notes: Movement? [4E 15]
-UNKNOWN_C4158A: !unknown
+UNKNOWN_C4158A: !undefined
   Size: 48
   Offset: 0xC4158A
   Notes: Movement? [8A 15]
-UNKNOWN_C415BA: !unknown
+UNKNOWN_C415BA: !undefined
   Size: 45
   Offset: 0xC415BA
   Notes: Movement? [BA 15]
-UNKNOWN_C415E7: !unknown
+UNKNOWN_C415E7: !undefined
   Size: 35
   Offset: 0xC415E7
   Notes: Movement? [E7 15]
-UNKNOWN_C4160A: !unknown
+UNKNOWN_C4160A: !undefined
   Size: 53
   Offset: 0xC4160A
   Notes: Movement? [0A 16]
-UNKNOWN_C4163F: !unknown
+UNKNOWN_C4163F: !undefined
   Size: 109
   Offset: 0xC4163F
   Notes: Movement? [3F 16]
-UNKNOWN_C416AC: !unknown
+UNKNOWN_C416AC: !undefined
   Size: 98
   Offset: 0xC416AC
   Notes: Movement? [AC 16]
-UNKNOWN_C4170E: !unknown
+UNKNOWN_C4170E: !undefined
   Size: 276
   Offset: 0xC4170E
   Notes: Movement? [0E 17]
-UNKNOWN_C41822: !unknown
+UNKNOWN_C41822: !undefined
   Size: 222
   Offset: 0xC41822
   Notes: Movement? [22 18]
-UNKNOWN_C41900: !unknown
+UNKNOWN_C41900: !undefined
   Size: 56
   Offset: 0xC41900
   Notes: Movement? [00 19]
-UNKNOWN_C41938: !unknown
+UNKNOWN_C41938: !undefined
   Size: 60
   Offset: 0xC41938
   Notes: Movement? [38 19]
-UNKNOWN_C41974: !unknown
+UNKNOWN_C41974: !undefined
   Size: 25
   Offset: 0xC41974
   Notes: Movement? [74 19]
-UNKNOWN_C4198D: !unknown
+UNKNOWN_C4198D: !undefined
   Size: 37
   Offset: 0xC4198D
   Notes: Movement? [8D 19]
-UNKNOWN_C419B2: !unknown
+UNKNOWN_C419B2: !undefined
   Size: 13
   Offset: 0xC419B2
   Notes: Movement? [B2 19]
-UNKNOWN_C419BF: !unknown
+UNKNOWN_C419BF: !undefined
   Size: 107
   Offset: 0xC419BF
   Notes: Movement? [BF 19]
-UNKNOWN_C41A2A: !unknown
+UNKNOWN_C41A2A: !undefined
   Size: 83
   Offset: 0xC41A2A
   Notes: Movement? [2A 1A]
-UNKNOWN_C41A7D: !unknown
+UNKNOWN_C41A7D: !undefined
   Size: 33
   Offset: 0xC41A7D
   Notes: Movement? [7D 1A]
@@ -22126,13 +22126,13 @@ UNKNOWN_C41DB6: !assembly
     237: UNKNOWN3
     250: UNKNOWN4
   Offset: 0xC41DB6
-UNKNOWN_C41EB9: !unknown
+UNKNOWN_C41EB9: !undefined
   Size: 16
   Offset: 0xC41EB9
-UNKNOWN_C41EC9: !unknown
+UNKNOWN_C41EC9: !undefined
   Size: 16
   Offset: 0xC41EC9
-UNKNOWN_C41ED9: !unknown
+UNKNOWN_C41ED9: !undefined
   Size: 16
   Offset: 0xC41ED9
 UNKNOWN_C41EE9: !assembly
@@ -22163,10 +22163,10 @@ UNKNOWN_C41EFF: !assembly
     185: UNKNOWN15
     194: UNKNOWN16
   Offset: 0xC41EFF
-UNKNOWN_C41FC5: !unknown
+UNKNOWN_C41FC5: !undefined
   Size: 26
   Offset: 0xC41FC5
-UNKNOWN_C41FDF: !unknown
+UNKNOWN_C41FDF: !undefined
   Size: 32
   Offset: 0xC41FDF
 UNKNOWN_C41FFF: !assembly
@@ -22180,7 +22180,7 @@ UNKNOWN_C41FFF: !assembly
     69: UNKNOWN5
     85: UNKNOWN6
   Offset: 0xC41FFF
-UNKNOWN_C4205D: !unknown
+UNKNOWN_C4205D: !undefined
   Size: 231
   Offset: 0xC4205D
 UNKNOWN_C42144: !assembly
@@ -22198,7 +22198,7 @@ MOVEMENT_789: !script
   Size: 11
   Offset: 0xC4222A
   Charset: movement
-UNKNOWN_C42235: !unknown
+UNKNOWN_C42235: !undefined
   Size: 91
   Offset: 0xC42235
   Notes: Movement? [35 22]
@@ -22325,23 +22325,23 @@ MOVEMENT_859: !script
   Size: 2
   Offset: 0xC4279F
   Charset: movement
-UNKNOWN_C427A1: !unknown
+UNKNOWN_C427A1: !undefined
   Size: 63
   Offset: 0xC427A1
   Notes: Movement? [A1 27]
-UNKNOWN_C427E0: !unknown
+UNKNOWN_C427E0: !undefined
   Size: 34
   Offset: 0xC427E0
   Notes: Movement? [E0 27]
-UNKNOWN_C42802: !unknown
+UNKNOWN_C42802: !undefined
   Size: 19
   Offset: 0xC42802
   Notes: Movement? [02 28]
-UNKNOWN_C42815: !unknown
+UNKNOWN_C42815: !undefined
   Size: 19
   Offset: 0xC42815
   Notes: Movement? [15 28]
-UNKNOWN_C42828: !unknown
+UNKNOWN_C42828: !undefined
   Size: 23
   Offset: 0xC42828
   Notes: Movement? [28 28]
@@ -22368,7 +22368,7 @@ UNKNOWN_C428FC: !assembly
     55: UNKNOWN0
     59: UNKNOWN1
   Offset: 0xC428FC
-UNKNOWN_C42955: !unknown
+UNKNOWN_C42955: !undefined
   Size: 16
   Offset: 0xC42955
 UNKNOWN_C42965: !assembly
@@ -22383,13 +22383,13 @@ UNKNOWN_C429AE: !assembly
 UNKNOWN_C429E8: !assembly
   Size: 55
   Offset: 0xC429E8
-UNKNOWN_C42A1F: !unknown
+UNKNOWN_C42A1F: !undefined
   Size: 34
   Offset: 0xC42A1F
-UNKNOWN_C42A41: !unknown
+UNKNOWN_C42A41: !undefined
   Size: 170
   Offset: 0xC42A41
-UNKNOWN_C42AEB: !unknown
+UNKNOWN_C42AEB: !undefined
   Size: 34
   Offset: 0xC42AEB
 UNKNOWN_C42B0D: !array
@@ -22397,7 +22397,7 @@ UNKNOWN_C42B0D: !array
   Item Type: !pointer
     Size: 4
   Offset: 0xC42B0D
-UNKNOWN_C42B51: !unknown
+UNKNOWN_C42B51: !undefined
   Size: 1012
   Offset: 0xC42B51
 UNKNOWN_C42F45: !assembly
@@ -22412,10 +22412,10 @@ UNKNOWN_C42F45: !assembly
   Labels:
     15: UNKNOWN0
   Offset: 0xC42F45
-UNKNOWN_C42F64: !unknown
+UNKNOWN_C42F64: !undefined
   Size: 40
   Offset: 0xC42F64
-UNKNOWN_C42F8C: !unknown
+UNKNOWN_C42F8C: !undefined
   Size: 352
   Offset: 0xC42F8C
 VELOCITY_STORE: !assembly
@@ -22547,7 +22547,7 @@ PRINT_NEWLINE: !assembly
     92: UNKNOWN2
     98: UNKNOWN3
   Offset: 0xC438B1
-UNKNOWN_C43915: !unknown
+UNKNOWN_C43915: !undefined
   Size: 512
   Offset: 0xC43915
 UNKNOWN_C43B15: !assembly
@@ -22754,7 +22754,7 @@ UNKNOWN_C44963: !assembly
     370: RETURN
   Size: 372
   Offset: 0xC44963
-UNKNOWN_C44AD7: !unknown
+UNKNOWN_C44AD7: !undefined
   Size: 32
   Offset: 0xC44AD7
 UNKNOWN_C44AF7: !assembly
@@ -22886,7 +22886,7 @@ BATTLE_FRONT_ROW_TEXT: !script
 BATTLE_BACK_ROW_TEXT: !script
   Size: 13
   Offset: 0xC45502
-1C_01_TABLE: !unknown
+1C_01_TABLE: !undefined
   Size: 288
   Offset: 0xC4550F
 POWERS_OF_TWO_AGAIN: !array
@@ -23109,7 +23109,7 @@ RAND_MOD: !assembly
   Arguments:
     A: Upper Limit
   Offset: 0xC45F7B
-UNKNOWN_C45F96: !unknown
+UNKNOWN_C45F96: !undefined
   Size: 18
   Offset: 0xC45F96
 UNKNOWN_C45FA8: !assembly
@@ -23374,13 +23374,13 @@ UNKNOWN_C469F1: !assembly
   Labels:
     107: UNKNOWN0
   Offset: 0xC469F1
-UNKNOWN_C46A5E: !unknown
+UNKNOWN_C46A5E: !undefined
   Size: 16
   Offset: 0xC46A5E
 UNKNOWN_C46A6E: !assembly
   Size: 12
   Offset: 0xC46A6E
-UNKNOWN_C46A7A: !unknown
+UNKNOWN_C46A7A: !undefined
   Size: 32
   Offset: 0xC46A7A
 UNKNOWN_C46A9A: !assembly
@@ -23404,7 +23404,7 @@ UNKNOWN_C46B2D: !assembly
 UNKNOWN_C46B37: !assembly
   Size: 10
   Offset: 0xC46B37
-UNKNOWN_C46B41: !unknown
+UNKNOWN_C46B41: !undefined
   Size: 16
   Offset: 0xC46B41
 UNKNOWN_C46B51: !assembly
@@ -23614,7 +23614,7 @@ UNKNOWN_C474A8: !assembly
     69: UNKNOWN6
     72: UNKNOWN7
   Offset: 0xC474A8
-UNKNOWN_C474F6: !unknown
+UNKNOWN_C474F6: !undefined
   Size: 11
   Offset: 0xC474F6
 UNKNOWN_C47501: !assembly
@@ -23859,7 +23859,7 @@ UNKNOWN_C48C2B: !assembly
 UNKNOWN_C48C3E: !assembly
   Size: 27
   Offset: 0xC48C3E
-UNKNOWN_C48C59: !unknown
+UNKNOWN_C48C59: !undefined
   Size: 16
   Offset: 0xC48C59
 UNKNOWN_C48C69: !assembly
@@ -23877,7 +23877,7 @@ UNKNOWN_C48C97: !assembly
     125: UNKNOWN3
     157: UNKNOWN4
   Offset: 0xC48C97
-UNKNOWN_C48D38: !unknown
+UNKNOWN_C48D38: !undefined
   Size: 32
   Offset: 0xC48D38
 UNKNOWN_C48D58: !assembly
@@ -24195,7 +24195,7 @@ AUTOLIFEUP: !assembly
     114: UNKNOWN3
     143: UNKNOWN4
   Offset: 0xC4A15D
-BATTLE_WINDOW_SIZES: !unknown
+BATTLE_WINDOW_SIZES: !undefined
   Size: 3
   Description: Sizes of various battle windows
   Offset: 0xC4A1F2
@@ -24237,7 +24237,7 @@ PRAYER_TEXT_PTRS: !array
   Item Type: !pointer
     Size: 4
   Offset: 0xC4A309
-UNKNOWN_C4A331: !unknown
+UNKNOWN_C4A331: !undefined
   Size: 70
   Offset: 0xC4A331
 UNKNOWN_C4A377: !assembly
@@ -24246,7 +24246,7 @@ UNKNOWN_C4A377: !assembly
     222: UNKNOWN0
     259: UNKNOWN1
   Offset: 0xC4A377
-UNKNOWN_C4A591: !unknown
+UNKNOWN_C4A591: !undefined
   Size: 237
   Offset: 0xC4A591
 UNKNOWN_C4A67E: !assembly
@@ -24305,28 +24305,28 @@ UNKNOWN_C4A7B0: !assembly
     1138: UNKNOWN33
     1187: UNKNOWN34
   Offset: 0xC4A7B0
-UNKNOWN_C4AC57: !unknown
+UNKNOWN_C4AC57: !undefined
   Size: 1
   Offset: 0xC4AC57
-UNKNOWN_C4AC58: !unknown
+UNKNOWN_C4AC58: !undefined
   Size: 35
   Offset: 0xC4AC58
-SOUND_STONE_UNKNOWN: !unknown
+SOUND_STONE_UNKNOWN: !undefined
   Size: 8
   Offset: 0xC4AC7B
-SOUND_STONE_UNKNOWN2: !unknown
+SOUND_STONE_UNKNOWN2: !undefined
   Size: 8
   Offset: 0xC4AC83
-SOUND_STONE_UNKNOWN3: !unknown
+SOUND_STONE_UNKNOWN3: !undefined
   Size: 8
   Offset: 0xC4AC8B
-SOUND_STONE_UNKNOWN4: !unknown
+SOUND_STONE_UNKNOWN4: !undefined
   Size: 8
   Offset: 0xC4AC93
-SOUND_STONE_UNKNOWN5: !unknown
+SOUND_STONE_UNKNOWN5: !undefined
   Size: 8
   Offset: 0xC4AC9B
-SOUND_STONE_UNKNOWN6: !unknown
+SOUND_STONE_UNKNOWN6: !undefined
   Size: 8
   Offset: 0xC4ACA3
 SOUND_STONE_MUSIC: !array
@@ -24334,13 +24334,13 @@ SOUND_STONE_MUSIC: !array
   Offset: 0xC4ACAB
   Item Type: !int
     Size: 1
-SOUND_STONE_UNKNOWN7: !unknown
+SOUND_STONE_UNKNOWN7: !undefined
   Size: 8
   Offset: 0xC4ACB4
-SOUND_STONE_UNKNOWN8: !unknown
+SOUND_STONE_UNKNOWN8: !undefined
   Size: 10
   Offset: 0xC4ACBC
-SOUND_STONE_UNKNOWN9: !unknown
+SOUND_STONE_UNKNOWN9: !undefined
   Size: 8
   Offset: 0xC4ACC6
 USE_SOUND_STONE: !assembly
@@ -24982,7 +24982,7 @@ DECOMP_NINTENDO_PRESENTATION: !assembly
   Size: 168
   Description: Decompress "Presented by Nintendo" screen data
   Offset: 0xC4DDD0
-UNKNOWN_C4DE78: !unknown
+UNKNOWN_C4DE78: !undefined
   Size: 34
   Offset: 0xC4DE78
 UNKNOWN_C4DE9A: !assembly
@@ -25296,7 +25296,7 @@ SET_BOUNDARY_BEHAVIOR: !assembly
 UNKNOWN_C4FD4B: !empty
   Size: 693
   Offset: 0xC4FD4B
-SRE_POINTER_TABLE: !unknown
+SRE_POINTER_TABLE: !undefined
   Size: 6930
   Description: Conditional Pointers for S=re Dialogue
   Offset: 0xC50000
@@ -25327,7 +25327,7 @@ TEXT_DATA_2: !array
 UNKNOWN_C9FF2F: !empty
   Size: 209
   Offset: 0xC9FF2F
-BATTLEBG_PRIMARY_DATA_GROUP: !unknown
+BATTLEBG_PRIMARY_DATA_GROUP: !undefined
   Size: 55201
   Description: 'Battle BGs: Primary Data Group'
   Offset: 0xCA0000
@@ -25441,7 +25441,7 @@ BG_DISTORTION_TABLE: !array
   Size: 2295
   Item Type: !struct
     Entries:
-      UNKNOWNA: !unknown
+      UNKNOWNA: !undefined
         Size: 2
       TYPE: !int
         Pretty Name: Type
@@ -25460,9 +25460,9 @@ BG_DISTORTION_TABLE: !array
         Pretty Name: Ripple Amplitude
         Size: 2
         Signed: true
-      UNKNOWNB: !unknown
+      UNKNOWNB: !undefined
         Size: 1
-      UNKNOWNC: !unknown
+      UNKNOWNC: !undefined
         Size: 2
       RIPPLEFREQUENCYACCELERATION: !int
         Pretty Name: Ripple Frequency Acceleration
@@ -25475,13 +25475,13 @@ BG_DISTORTION_TABLE: !array
       SPEED: !int
         Pretty Name: Speed
         Size: 1
-      UNKNOWND: !unknown
+      UNKNOWND: !undefined
         Size: 2
   Offset: 0xCAF708
 UNKNOWN_CAFFFF: !empty
   Size: 1
   Offset: 0xCAFFFF
-BATTLEBGS_SECONDARY_DATA: !unknown
+BATTLEBGS_SECONDARY_DATA: !undefined
   Size: 55450
   Description: Battle Background Secondary Data Group
   Offset: 0xCB0000
@@ -25504,7 +25504,7 @@ AUDIO_PACK_66: !struct
     BASEADDRESS: !int
       Base: 16
       Size: 2
-    DATA: !unknown
+    DATA: !undefined
       Size: SIZE-4
   Offset: 0xCBE02A
 AUDIO_PACK_59: !struct
@@ -25512,27 +25512,27 @@ AUDIO_PACK_59: !struct
   Description: Audio Block
   Entries: *AUDIO_PACK
   Offset: 0xCBFEE2
-ANIMATIONDATA_CARPAINTER_LIGHTNING_REFLECT: !unknown
+ANIMATIONDATA_CARPAINTER_LIGHTNING_REFLECT: !undefined
   Size: 6091
   Description: 'Animation Data: Carpainter''s Lightning - Reflected'
   Offset: 0xCC0000
-ANIMATIONDATA_CARPAINTER_LIGHTNING_STRIKE: !unknown
+ANIMATIONDATA_CARPAINTER_LIGHTNING_STRIKE: !undefined
   Size: 1937
   Description: 'Animation Data: Carpainter''s Lightning - Strike'
   Offset: 0xCC17CB
-ANIMATIONDATA_STARMAN_JR_TELEPORT: !unknown
+ANIMATIONDATA_STARMAN_JR_TELEPORT: !undefined
   Size: 892
   Description: 'Animation Data: Starman Junior''s Teleport'
   Offset: 0xCC1F5C
-ANIMATIONDATA_BOOM: !unknown
+ANIMATIONDATA_BOOM: !undefined
   Size: 2481
   Description: 'Animation Data: ''BOOM!'''
   Offset: 0xCC22D8
-ANIMATIONDATA_ZOMBIES: !unknown
+ANIMATIONDATA_ZOMBIES: !undefined
   Size: 88
   Description: 'Animation Data: Zombie Attack'
   Offset: 0xCC2C89
-ANIMATIONDATA_THE_END: !unknown
+ANIMATIONDATA_THE_END: !undefined
   Size: 256
   Description: 'Animation Data: ''The End?'''
   Offset: 0xCC2CE1
@@ -25543,150 +25543,150 @@ ANIMATION_SEQUENCE_POINTERS: !array
     Entries:
       POINTER: !pointer
         Size: 4
-      UNKNOWN: !unknown
+      UNKNOWN: !undefined
         Size: 4
   Offset: 0xCC2DE1
-PSI_ARRANGEMENT_20: !unknown
+PSI_ARRANGEMENT_20: !undefined
   Description: PSI Animation Arrangement 20
   Size: 4670
   Offset: 0xCC2E19
-PSI_ARRANGEMENT_31: !unknown
+PSI_ARRANGEMENT_31: !undefined
   Size: 3324
   Description: PSI Animation Arrangement 31
   Offset: 0xCC4057
-PSI_ARRANGEMENT_19: !unknown
+PSI_ARRANGEMENT_19: !undefined
   Size: 3112
   Description: PSI Animation Arrangement 19
   Offset: 0xCC4D53
-PSI_ARRANGEMENT_21: !unknown
+PSI_ARRANGEMENT_21: !undefined
   Size: 2581
   Description: PSI Animation Arrangement 21
   Offset: 0xCC597B
-PSI_ARRANGEMENT_13: !unknown
+PSI_ARRANGEMENT_13: !undefined
   Size: 2535
   Description: PSI Animation Arrangement 13
   Offset: 0xCC6390
-PSI_ARRANGEMENT_23: !unknown
+PSI_ARRANGEMENT_23: !undefined
   Size: 2196
   Description: PSI Animation Arrangement 23
   Offset: 0xCC6D77
-PSI_ARRANGEMENT_18: !unknown
+PSI_ARRANGEMENT_18: !undefined
   Size: 2195
   Description: PSI Animation Arrangement 18
   Offset: 0xCC760B
-PSI_ARRANGEMENT_8: !unknown
+PSI_ARRANGEMENT_8: !undefined
   Size: 1931
   Description: PSI Animation Arrangement 8
   Offset: 0xCC7E9E
-PSI_ARRANGEMENT_30: !unknown
+PSI_ARRANGEMENT_30: !undefined
   Size: 1885
   Description: PSI Animation Arrangement 30
   Offset: 0xCC8629
-PSI_ARRANGEMENT_29: !unknown
+PSI_ARRANGEMENT_29: !undefined
   Size: 1881
   Description: PSI Animation Arrangement 29
   Offset: 0xCC8D86
-PSI_ARRANGEMENT_28: !unknown
+PSI_ARRANGEMENT_28: !undefined
   Size: 1638
   Description: PSI Animation Arrangement 28
   Offset: 0xCC94DF
-PSI_ARRANGEMENT_25: !unknown
+PSI_ARRANGEMENT_25: !undefined
   Size: 1511
   Description: PSI Animation Arrangement 25
   Offset: 0xCC9B45
-PSI_ARRANGEMENT_26: !unknown
+PSI_ARRANGEMENT_26: !undefined
   Size: 1421
   Description: PSI Animation Arrangement 26
   Offset: 0xCCA12C
-PSI_ARRANGEMENT_9: !unknown
+PSI_ARRANGEMENT_9: !undefined
   Size: 1388
   Description: PSI Animation Arrangement 9
   Offset: 0xCCA6B9
-PSI_ANIM_GFX_SET1: !unknown
+PSI_ANIM_GFX_SET1: !undefined
   Description: PSI Animation Graphics Set 1
   Size: 1290
   Offset: 0xCCAC25
-PSI_ARRANGEMENT_5: !unknown
+PSI_ARRANGEMENT_5: !undefined
   Size: 1252
   Description: PSI Animation Arrangement 5
   Offset: 0xCCB12F
-PSI_ANIM_GFX_SET2: !unknown
+PSI_ANIM_GFX_SET2: !undefined
   Size: 1204
   Description: PSI Animation Graphics Set 2
   Offset: 0xCCB613
-PSI_ARRANGEMENT_3: !unknown
+PSI_ARRANGEMENT_3: !undefined
   Size: 1126
   Description: PSI Animation Arrangement 3
   Offset: 0xCCBAC7
-PSI_ARRANGEMENT_7: !unknown
+PSI_ARRANGEMENT_7: !undefined
   Size: 1026
   Description: PSI Animation Arrangement 7
   Offset: 0xCCBF2D
-PSI_ARRANGEMENT_0: !unknown
+PSI_ARRANGEMENT_0: !undefined
   Size: 978
   Description: PSI Animation Arrangement 0
   Offset: 0xCCC32F
-PSI_ARRANGEMENT_6: !unknown
+PSI_ARRANGEMENT_6: !undefined
   Size: 940
   Description: PSI Animation Arrangement 6
   Offset: 0xCCC701
-PSI_ARRANGEMENT_17: !unknown
+PSI_ARRANGEMENT_17: !undefined
   Size: 938
   Description: PSI Animation Arrangement 17
   Offset: 0xCCCAAD
-PSI_ARRANGEMENT_33: !unknown
+PSI_ARRANGEMENT_33: !undefined
   Size: 880
   Description: PSI Animation Arrangement 33
   Offset: 0xCCCE57
-PSI_ARRANGEMENT_22: !unknown
+PSI_ARRANGEMENT_22: !undefined
   Size: 820
   Description: PSI Animation Arrangement 22
   Offset: 0xCCD1C7
-PSI_ARRANGEMENT_12: !unknown
+PSI_ARRANGEMENT_12: !undefined
   Size: 805
   Description: PSI Animation Arrangement 12
   Offset: 0xCCD4FB
-PSI_ARRANGEMENT_2: !unknown
+PSI_ARRANGEMENT_2: !undefined
   Size: 775
   Description: PSI Animation Arrangement 2
   Offset: 0xCCD820
-PSI_ANIM_GFX_SET3: !unknown
+PSI_ANIM_GFX_SET3: !undefined
   Size: 722
   Description: PSI Animation Graphics Set 3
   Offset: 0xCCDB27
-PSI_ARRANGEMENT_1: !unknown
+PSI_ARRANGEMENT_1: !undefined
   Size: 680
   Description: PSI Animation Arrangement 1
   Offset: 0xCCDDF9
-PSI_ARRANGEMENT_24: !unknown
+PSI_ARRANGEMENT_24: !undefined
   Size: 636
   Description: PSI Animation Arrangement 24
   Offset: 0xCCE0A1
-PSI_ANIM_GFX_SET4: !unknown
+PSI_ANIM_GFX_SET4: !undefined
   Size: 592
   Description: PSI Animation Graphics Set 4
   Offset: 0xCCE31D
-PSI_ARRANGEMENT_16: !unknown
+PSI_ARRANGEMENT_16: !undefined
   Size: 542
   Description: PSI Animation Arrangement 16
   Offset: 0xCCE56D
-PSI_ARRANGEMENT_15: !unknown
+PSI_ARRANGEMENT_15: !undefined
   Size: 481
   Description: PSI Animation Arrangement 15
   Offset: 0xCCE78B
-PSI_ARRANGEMENT_11: !unknown
+PSI_ARRANGEMENT_11: !undefined
   Size: 467
   Description: PSI Animation Arrangement 11
   Offset: 0xCCE96C
-PSI_ARRANGEMENT_14: !unknown
+PSI_ARRANGEMENT_14: !undefined
   Size: 463
   Description: PSI Animation Arrangement 14
   Offset: 0xCCEB3F
-PSI_ARRANGEMENT_32: !unknown
+PSI_ARRANGEMENT_32: !undefined
   Size: 422
   Description: PSI Animation Arrangement 32
   Offset: 0xCCED0E
-PSI_ARRANGEMENT_27: !unknown
+PSI_ARRANGEMENT_27: !undefined
   Size: 409
   Description: PSI Animation Arrangement 27
   Offset: 0xCCEEB4
@@ -25705,7 +25705,7 @@ PSI_ANIM_CFG: !array
       PALETTEDURATION: !int
         Pretty Name: Palette duration (1/60th seconds)
         Size: 1
-      UNKNOWN: !unknown
+      UNKNOWN: !undefined
         Size: 2
       FRAMECOUNT: !int
         Size: 1
@@ -25728,11 +25728,11 @@ PSI_ANIM_CFG: !array
         Size: 2
         Format: BGR555
   Offset: 0xCCF04D
-PSI_ARRANGEMENT_4: !unknown
+PSI_ARRANGEMENT_4: !undefined
   Size: 371
   Description: PSI Animation Arrangement 4
   Offset: 0xCCF1E5
-PSI_ARRANGEMENT_10: !unknown
+PSI_ARRANGEMENT_10: !undefined
   Size: 295
   Description: PSI Animation Arrangement 10
   Offset: 0xCCF358
@@ -25761,7 +25761,7 @@ UNKNOWN_PTR_CCFFD5: !pointer
 UNKNOWN_CCFFD9: !empty
   Size: 39
   Offset: 0xCCFFD9
-BATTLE_SPRITES: !unknown
+BATTLE_SPRITES: !undefined
   Description: Enemy Battle Sprites
   Size: 90862
   Offset: 0xCD0000
@@ -25790,7 +25790,7 @@ BATTLE_SPRITE_PALETTES: !array
     Size: 32
     Item Type: *SNESCOLOR
   Offset: 0xCE6514
-SWIRL_DATA: !unknown
+SWIRL_DATA: !undefined
   Size: 29489
   Description: Swirl Animation Data
   Offset: 0xCE6914
@@ -25813,7 +25813,7 @@ SWIRL_PRIMARY_TABLE: !array
         Size: 1
       NUMANIMATIONS: !int
         Size: 2
-SOUND_STONE_GFX: !unknown
+SOUND_STONE_GFX: !undefined
   Size: 6825
   Description: Sound stone graphics
   Offset: 0xCEDD5D
@@ -25824,7 +25824,7 @@ SOUND_STONE_PALETTE: !array
     Size: 32
     Item Type: *SNESCOLOR
   Offset: 0xCEF806
-AUDIO_PACK_102: !unknown
+AUDIO_PACK_102: !undefined
   Size: 1850
   Description: Audio Block
   Offset: 0xCEF8C6
@@ -26073,10 +26073,10 @@ DOOR_DEST_TABLE_20: !array
   Item Type: !struct
     Entries: *DOORDESTTABLEENTRIES
   Offset: 0xCF25BF
-UNKNOWN_CF264E: !unknown
+UNKNOWN_CF264E: !undefined
   Size: 1
   Offset: 0xCF264E
-DOOR_CONFIG_TABLE: !unknown
+DOOR_CONFIG_TABLE: !undefined
   Size: 12960
   Description: Door Configuration Table
   Offset: 0xCF264F
@@ -26087,7 +26087,7 @@ OVERWORLD_EVENT_MUSIC_PTR_TABLE: !array
     Size: 2
     Base: 0xCF0000
   Offset: 0xCF58EF
-OVERWORLD_EVENT_MUSIC_TABLE: !unknown
+OVERWORLD_EVENT_MUSIC_TABLE: !undefined
   Size: 1966
   Description: Overworld Event Music Table
   Offset: 0xCF5A39
@@ -26098,7 +26098,7 @@ SPRITE_PLACEMENT_PTR_TABLE: !array
     Size: 2
     Base: 0xCF0000
   Offset: 0xCF61E7
-SPRITE_PLACEMENT_TABLE: !unknown
+SPRITE_PLACEMENT_TABLE: !undefined
   Size: 7582
   Description: Sprite Placement Entries
   Offset: 0xCF6BE7
@@ -26143,11 +26143,11 @@ NPC_CONFIG_TABLE: !array
       TEXTPOINTER2: !pointer
         Size: 4
   Offset: 0xCF8985
-AUDIO_PACK_94: !unknown
+AUDIO_PACK_94: !undefined
   Description: Audio Block
   Size: 3203
   Offset: 0xCFF2B5
-AUDIO_PACK_96: !unknown
+AUDIO_PACK_96: !undefined
   Size: 200
   Description: Audio Block
   Offset: 0xCFFF38
@@ -26205,7 +26205,7 @@ EVENT_CONTROL_PTR_TABLE: !array
     Size: 2
     Base: 0xD00000
   Offset: 0xD01598
-MAP_TILE_EVENT_CONTROL_TABLE: !unknown
+MAP_TILE_EVENT_CONTROL_TABLE: !undefined
   Description: 'Map Tiles: Event Control Table'
   Size: 704
   Offset: 0xD015C0
@@ -26221,7 +26221,7 @@ ENEMY_PLACEMENT_GROUPS_PTR_TABLE: !array
   Item Type: !pointer
     Size: 4
   Offset: 0xD0B880
-ENEMY_PLACEMENT_GROUPS_TABLE: !unknown
+ENEMY_PLACEMENT_GROUPS_TABLE: !undefined
   Description: Enemy Placement groups data
   Size: 2657
   Offset: 0xD0BBAC
@@ -26247,11 +26247,11 @@ BTL_ENTRY_PTR_TABLE: !array
         Pretty Name: Letterbox Size
         Size: 1
   Offset: 0xD0C60D
-ENEMY_BATTLE_GROUPS_TABLE: !unknown
+ENEMY_BATTLE_GROUPS_TABLE: !undefined
   Description: Enemy Battle Groups Table
   Size: 2695
   Offset: 0xD0D52D
-AUDIO_PACK_139: !unknown
+AUDIO_PACK_139: !undefined
   Description: Audio Block
   Size: 8180
   Offset: 0xD0DFB4
@@ -26297,7 +26297,7 @@ ITEM_CONFIGURATION_TABLE: !array
       ACTION: !int
         Pretty Name: Battle action ID
         Size: 2
-      ARGUMENT: !unknown
+      ARGUMENT: !undefined
         Pretty Name: Argument
         Size: 4
       HELP_PTR: !pointer
@@ -26329,7 +26329,7 @@ PSI_TELEPORT_DEST_TABLE: !array
       "Y": !int
         Size: 2
   Offset: 0xD57880
-UNKNOWN_D57A70: !unknown
+UNKNOWN_D57A70: !undefined
   Size: 62
   Offset: 0xD57A70
 TELEPHONE_CONTACTS_TABLE: !array
@@ -26450,7 +26450,7 @@ PSI_NAME_TABLE: !array
   Item Type: !script
     Size: 25
   Offset: 0xD58D7A
-NPC_AI_TABLE: !unknown
+NPC_AI_TABLE: !undefined
   Description: NPC AI Table
   Size: 38
   Offset: 0xD58F23
@@ -26786,7 +26786,7 @@ INITIAL_STATS: !array
   Description: Starting Statistics
   Item Type: !struct
     Entries:
-      UNKNOWN: !unknown
+      UNKNOWN: !undefined
         Size: 4
       MONEY: !int
         Pretty Name: Money
@@ -26814,7 +26814,7 @@ TIMED_DELIVERY_TABLE: !array
         Pretty Name: Event Flag
         Size: 2
         Base: 16
-      UNKNOWN: !unknown
+      UNKNOWN: !undefined
         Size: 4
       TIMER: !int
         Pretty Name: Timer
@@ -26825,7 +26825,7 @@ TIMED_DELIVERY_TABLE: !array
       DELIVERYFAILTEXTPTR: !pointer
         Pretty Name: Delivery Failure Text Pointer
         Size: 3
-      UNKNOWN2: !unknown
+      UNKNOWN2: !undefined
         Size: 4
   Offset: 0xD5F645
 UNKNOWN_D5F70D: !empty
@@ -26839,7 +26839,7 @@ MAP_DATA_TILE_TABLE: !array
     Item Type: !int
       Size: 1
   Offset: 0xD60000
-MAP_DATA_LOCAL_TILESET_TABLE: !unknown
+MAP_DATA_LOCAL_TILESET_TABLE: !undefined
   Size: 22528
   Description: 'Map Data: Local Tileset Table'
   Offset: 0xD75000
@@ -26859,14 +26859,14 @@ MAP_DATA_PER-SECTOR_ATTRIBUTES_TABLE: !array
         Size: 1
       ITEM_ID: *ITEM_REF
   Offset: 0xD7B200
-MAP_DATA_TILE_ARRANGEMENT_BLOCK_1: !unknown
+MAP_DATA_TILE_ARRANGEMENT_BLOCK_1: !undefined
   Size: 13800
   Description: 'Map Data: Tile Arrangement Block 1'
   Offset: 0xD7C600
 UNKNOWN_D7FBE8: !empty
   Size: 1048
   Offset: 0xD7FBE8
-MAP_DATA_TILE_COLLISION_ARRANGEMENT_TABLE: !unknown
+MAP_DATA_TILE_COLLISION_ARRANGEMENT_TABLE: !undefined
   Size: 36688
   Description: 'Map Data: Tile Collision Arrangement Table'
   Offset: 0xD80000
@@ -26877,11 +26877,11 @@ MAP_DATA_TILE_COLLISION_ARRANGEMENT_POINTER_TABLE: !array
     Size: 2
     Base: 0xD80000
   Offset: 0xD88F50
-ANTI-PIRACY_NOTICE_ARRANGEMENT: !unknown
+ANTI-PIRACY_NOTICE_ARRANGEMENT: !undefined
   Size: 431
   Description: Anti-Piracy Notice Screen Arrangement
   Offset: 0xD8F05E
-ANTI-PIRACY_NOTICE_GRAPHICS: !unknown
+ANTI-PIRACY_NOTICE_GRAPHICS: !undefined
   Size: 433
   Description: Anti-Piracy Notice Screen Graphics
   Offset: 0xD8F20D
@@ -26902,27 +26902,27 @@ FAULTY_GAME_PAK_ARRANGEMENT: !array
         Pretty Name: Misc
         Size: 1
   Offset: 0xD8F3C6
-FAULTY_GAME_PAK_GRAPHICS: !unknown
+FAULTY_GAME_PAK_GRAPHICS: !undefined
   Size: 243
   Description: Faulty Game Pak Notice Screen Graphics
   Offset: 0xD8F5C4
-AUDIO_PACK_61: !unknown
+AUDIO_PACK_61: !undefined
   Size: 2377
   Description: Audio Block
   Offset: 0xD8F6B7
-MAP_DATA_TILE_ARRANGEMENT_BLOCK_2: !unknown
+MAP_DATA_TILE_ARRANGEMENT_BLOCK_2: !undefined
   Size: 52818
   Description: 'Map Data: Tile Arrangement Block 2'
   Offset: 0xD90000
-MAP_DATA_TILE_GRAPHICS_BLOCK_1: !unknown
+MAP_DATA_TILE_GRAPHICS_BLOCK_1: !undefined
   Size: 11718
   Description: 'Map Data: Tile Graphics Block 1'
   Offset: 0xD9CE52
-AUDIO_PACK_45: !unknown
+AUDIO_PACK_45: !undefined
   Size: 1000
   Description: Audio Block
   Offset: 0xD9FC18
-MAP_DATA_TILE_ARRANGEMENT_BLOCK_3: !unknown
+MAP_DATA_TILE_ARRANGEMENT_BLOCK_3: !undefined
   Size: 31911
   Description: 'Map Data: Tile Arrangement Block 3'
   Offset: 0xDA0000
@@ -26939,23 +26939,23 @@ MAP_DATA_UNKNOWN_PALETTE_PTR_TABLE: !array
   Item Type: !pointer
     Size: 3
   Offset: 0xDAFAA7
-AUDIO_PACK_111: !unknown
+AUDIO_PACK_111: !undefined
   Size: 1273
   Description: Audio Block
   Offset: 0xDAFB07
-MAP_DATA_TILE_ARRANGEMENT_BLOCK_4: !unknown
+MAP_DATA_TILE_ARRANGEMENT_BLOCK_4: !undefined
   Description: 'Map Data: Tile Arrangement Block 4'
   Size: 62187
   Offset: 0xDB0000
-AUDIO_PACK_65: !unknown
+AUDIO_PACK_65: !undefined
   Size: 3349
   Description: Audio Block
   Offset: 0xDBF2EB
-MAP_DATA_TILE_ARRANGEMENT_BLOCK_5: !unknown
+MAP_DATA_TILE_ARRANGEMENT_BLOCK_5: !undefined
   Size: 45091
   Description: 'Map Data: Tile Arrangement Block 5'
   Offset: 0xDC0000
-MAP_DATA_TILE_GRAPHICS_BLOCK_2: !unknown
+MAP_DATA_TILE_GRAPHICS_BLOCK_2: !undefined
   Size: 9748
   Description: 'Map Data: Tile Graphics Block 2'
   Offset: 0xDCB023
@@ -26965,39 +26965,39 @@ MAP_DATA_PER-SECTOR_MUSIC: !array
   Item Type: !int
     Size: 1
   Offset: 0xDCD637
-AUDIO_PACK_156: !unknown
+AUDIO_PACK_156: !undefined
   Size: 6280
   Description: Audio Block
   Offset: 0xDCE037
-AUDIO_PACK_79: !unknown
+AUDIO_PACK_79: !undefined
   Size: 1857
   Description: Audio Block
   Offset: 0xDCF8BF
-MAP_DATA_TILE_GRAPHICS_BLOCK_3: !unknown
+MAP_DATA_TILE_GRAPHICS_BLOCK_3: !undefined
   Size: 65230
   Description: 'Map Data: Tile Graphics Block 3'
   Offset: 0xDD0000
-AUDIO_PACK_75: !unknown
+AUDIO_PACK_75: !undefined
   Size: 306
   Description: Audio Block
   Offset: 0xDDFECE
-MAP_DATA_TILE_GRAPHICS_BLOCK_4: !unknown
+MAP_DATA_TILE_GRAPHICS_BLOCK_4: !undefined
   Size: 61671
   Description: 'Map Data: Tile Graphics Block 4'
   Offset: 0xDE0000
-MAP_DATA_ANIMATED_TILE_GFX_BLOCK_1: !unknown
+MAP_DATA_ANIMATED_TILE_GFX_BLOCK_1: !undefined
   Size: 3062
   Description: 'Map Data: Graphics for Animated Tiles Block 1'
   Offset: 0xDEF0E7
-AUDIO_PACK_143: !unknown
+AUDIO_PACK_143: !undefined
   Size: 803
   Description: Audio Block
   Offset: 0xDEFCDD
-MAP_DATA_TILE_GRAPHICS_BLOCK_5: !unknown
+MAP_DATA_TILE_GRAPHICS_BLOCK_5: !undefined
   Size: 49731
   Description: 'Map Data: Tile Graphics Block 5'
   Offset: 0xDF0000
-MAP_DATA_ANIMATED_TILE_GFX_BLOCK_2: !unknown
+MAP_DATA_ANIMATED_TILE_GFX_BLOCK_2: !undefined
   Size: 8862
   Description: 'Map Data: Graphics for Animated Tiles Block 2'
   Offset: 0xDFC243
@@ -27007,11 +27007,11 @@ MAP_DATA_PALETTE_ANIM_POINTER_TABLE: !array
   Item Type: !pointer
     Size: 4
   Offset: 0xDFE4E1
-MAP_DATA_PALETTE_ANIM_SECONDARY_TABLE: !unknown
+MAP_DATA_PALETTE_ANIM_SECONDARY_TABLE: !undefined
   Size: 190
   Description: 'Map Data: Palette Animation Secondary Pointer/Data Table'
   Offset: 0xDFE55D
-MAP_DATA_PALETTE_ANIM_TABLE: !unknown
+MAP_DATA_PALETTE_ANIM_TABLE: !undefined
   Size: 1579
   Description: 'Map Data: Palette Animation Table'
   Offset: 0xDFE61B
@@ -27021,32 +27021,32 @@ AUDIO_PACK_4: !struct
   Terminator: 0
   Entries: *AUDIO_PACK
   Offset: 0xDFEC46
-TEXT_WINDOW_GFX: !unknown
+TEXT_WINDOW_GFX: !undefined
   Size: 1876
   Description: Text Window Graphics
   Offset: 0xE00000
-FLAVOURED_TEXT_GFX: !unknown
+FLAVOURED_TEXT_GFX: !undefined
   Size: 76
   Description: Flavored Text Window Graphics
   Offset: 0xE00754
-MOTHER2_ROMAJI_FONT: !unknown
+MOTHER2_ROMAJI_FONT: !undefined
   Size: 532
   Description: 8x16 (Large) Romaji Font Graphics from MOTHER 2
   Offset: 0xE007A0
-COMPRESSED_SRAM: !unknown
+COMPRESSED_SRAM: !undefined
   Size: 2469
   Description: Compressed SRAM Data
   Charset: standardtext
   Offset: 0xE009B4
-MRSATURN_FONT_DATA: !unknown
+MRSATURN_FONT_DATA: !undefined
   Size: 96
   Description: Mr. Saturn Font Character Data
   Offset: 0xE01359
-MRSATURN_FONT_GFX: !unknown
+MRSATURN_FONT_GFX: !undefined
   Size: 3072
   Description: Mr. Saturn Font Graphics
   Offset: 0xE013B9
-TEXT_WINDOW_PROPERTIES: !unknown
+TEXT_WINDOW_PROPERTIES: !undefined
   Description: Text window properties table
   Size: 15
   Offset: 0xE01FB9
@@ -27099,23 +27099,23 @@ TOWN_MAP_GFX_POINTER_TABLE: !array
   Item Type: !pointer
     Size: 4
   Offset: 0xE02190
-TOWN_MAP_ONETT: !unknown
+TOWN_MAP_ONETT: !undefined
   Size: 10104
   Description: Onett Town Map Data
   Offset: 0xE021A8
-TOWN_MAP_TWOSON: !unknown
+TOWN_MAP_TWOSON: !undefined
   Size: 7681
   Description: Twoson Town Map Data
   Offset: 0xE04920
-TOWN_MAP_THREED: !unknown
+TOWN_MAP_THREED: !undefined
   Size: 7256
   Description: Threed Town Map Data
   Offset: 0xE06721
-TOWN_MAP_FOURSIDE: !unknown
+TOWN_MAP_FOURSIDE: !undefined
   Size: 10811
   Description: Fourside Town Map Data
   Offset: 0xE08379
-TOWN_MAP_SCARABA: !unknown
+TOWN_MAP_SCARABA: !undefined
   Size: 6717
   Description: Scaraba Town Map Data
   #Item Type: !struct
@@ -27131,15 +27131,15 @@ TOWN_MAP_SCARABA: !unknown
   #          Size: 32
   #          Format: SNES4BPP
   Offset: 0xE0ADB4
-TOWN_MAP_SUMMERS: !unknown
+TOWN_MAP_SUMMERS: !undefined
   Size: 9490
   Description: Summers Town Map Data
   Offset: 0xE0C7F1
-AUDIO_PACK_110: !unknown
+AUDIO_PACK_110: !undefined
   Size: 4062
   Description: Audio Block
   Offset: 0xE0ED03
-AUDIO_PACK_6: !unknown
+AUDIO_PACK_6: !undefined
   Size: 799
   Description: Audio Block
   Offset: 0xE0FCE1
@@ -27160,39 +27160,39 @@ MOVEMENT_TEXT_STRINGS: !array
   Item Type: !script
     Charset: flyover
     Terminator: 0x00
-MAIN_FONT_DATA: !unknown
+MAIN_FONT_DATA: !undefined
   Size: 96
   Description: Main Font Character Data
   Offset: 0xE10C7A
-MAIN_FONT_GFX: !unknown
+MAIN_FONT_GFX: !undefined
   Size: 3072
   Description: Main Font Graphics
   Offset: 0xE10CDA
-BATTLE_FONT_DATA: !unknown
+BATTLE_FONT_DATA: !undefined
   Size: 96
   Description: 8x16 (Battle) Font Character Data
   Offset: 0xE118DA
-BATTLE_FONT_GFX: !unknown
+BATTLE_FONT_GFX: !undefined
   Size: 1536
   Description: 8x16 (Battle) Font Graphics
   Offset: 0xE1193A
-TINY_FONT_DATA: !unknown
+TINY_FONT_DATA: !undefined
   Size: 96
   Description: 8x8 (Tiny) Font Character Data
   Offset: 0xE11F3A
-TINY_FONT_GFX: !unknown
+TINY_FONT_GFX: !undefined
   Size: 768
   Description: 8x8 (Tiny) Font Graphics
   Offset: 0xE11F9A
-LARGE_FONT_DATA: !unknown
+LARGE_FONT_DATA: !undefined
   Size: 96
   Description: Large Font Character Data
   Offset: 0xE1229A
-LARGE_FONT_GFX: !unknown
+LARGE_FONT_GFX: !undefined
   Size: 3072
   Description: Large Font Graphics
   Offset: 0xE122FA
-CAST_SEQUENCE_FORMATTING: !unknown
+CAST_SEQUENCE_FORMATTING: !undefined
   Size: 144
   Description: Formatting For Cast Sequence Text
   Offset: 0xE12EFA
@@ -27205,17 +27205,17 @@ PHOTOGRAPHER_CFG_TABLE: !array
         Pretty Name: Event Flag
         Size: 2
         Base: 16
-      UNKNOWNA: !unknown
+      UNKNOWNA: !undefined
         Size: 3
       UNKNOWNB: !int
         Size: 2
       UNKNOWNC: !int
         Size: 1
         Base: 16
-      UNKNOWND: !unknown
+      UNKNOWND: !undefined
         Size: 54
   Offset: 0xE12F8A
-COMPRESSED_PALETTE_UNKNOWN: !unknown
+COMPRESSED_PALETTE_UNKNOWN: !undefined
   Size: 2549
   Description: Compressed Palette Data - Indeterminate Use
   Offset: 0xE1374A
@@ -27248,127 +27248,127 @@ UNKNOWN_E14DE8: !assembly
     208: UNKNOWN16
     215: UNKNOWN17
   Offset: 0xE14DE8
-APE_ARRANGEMENT: !unknown
+APE_ARRANGEMENT: !undefined
   Size: 105
   Description: '"APE" Logo Arrangement'
   Offset: 0xE14EC1
-APE_GRAPHICS: !unknown
+APE_GRAPHICS: !undefined
   Size: 518
   Description: '"APE" Logo Graphics'
   Offset: 0xE14F2A
-APE_PALETTE: !unknown
+APE_PALETTE: !undefined
   Size: 68
   Description: '"APE" Logo Palette'
   Offset: 0xE15130
-HALKEN_ARRANGEMENT: !unknown
+HALKEN_ARRANGEMENT: !undefined
   Size: 116
   Description: '"HALKEN" Logo Arrangement'
   Offset: 0xE15174
-HALKEN_GRAPHICS: !unknown
+HALKEN_GRAPHICS: !undefined
   Size: 464
   Description: '"HALKEN" Logo Graphics'
   Offset: 0xE151E8
-HALKEN_PALETTE: !unknown
+HALKEN_PALETTE: !undefined
   Size: 157
   Description: '"HALKEN" Logo Palette'
   Offset: 0xE153B8
-NINTENDO_ARRANGEMENT: !unknown
+NINTENDO_ARRANGEMENT: !undefined
   Size: 73
   Description: '"Nintendo" Logo Arrangement'
   Offset: 0xE15455
-NINTENDO_GRAPHICS: !unknown
+NINTENDO_GRAPHICS: !undefined
   Size: 241
   Description: '"Nintendo" Logo Graphics'
   Offset: 0xE1549E
-NINTENDO_PALETTE: !unknown
+NINTENDO_PALETTE: !undefined
   Size: 68
   Description: '"Nintendo" Logo Palette'
   Offset: 0xE1558F
-GAS_STATION_ARRANGEMENT: !unknown
+GAS_STATION_ARRANGEMENT: !undefined
   Size: 1376
   Description: Gas Station Intro Arrangement
   Offset: 0xE155D3
-GAS_STATION_GRAPHICS: !unknown
+GAS_STATION_GRAPHICS: !undefined
   Size: 20100
   Description: Gas Station Intro Graphics
   Offset: 0xE15B33
-GAS_STATION_PALETTE: !unknown
+GAS_STATION_PALETTE: !undefined
   Size: 166
   Description: Gas Station Intro Palette
   Offset: 0xE1A9B7
-GAS_STATION_PALETTE2: !unknown
+GAS_STATION_PALETTE2: !undefined
   Size: 130
   Description: Gas Station Intro Palette 2
   Offset: 0xE1AA5D
-PRODUCED_ITOI_ARRANGEMENT: !unknown
+PRODUCED_ITOI_ARRANGEMENT: !undefined
   Size: 108
   Description: Produced By Itoi Arrangement
   Offset: 0xE1AADF
-PRODUCED_ITOI_GRAPHICS: !unknown
+PRODUCED_ITOI_GRAPHICS: !undefined
   Size: 438
   Description: Produced By Itoi Graphics
   Offset: 0xE1AB4B
-NINTENDO_PRESENTATION_PALETTE: !unknown
+NINTENDO_PRESENTATION_PALETTE: !undefined
   Size: 77
   Description: Presented By Nintendo Arrangement
   Offset: 0xE1AD01
-NINTENDO_PRESENTATION_GRAPHICS: !unknown
+NINTENDO_PRESENTATION_GRAPHICS: !undefined
   Size: 289
   Description: Presented By Nintendo Graphics
   Offset: 0xE1AD4E
-NINTENDO_ITOI_PALETTE: !unknown
+NINTENDO_ITOI_PALETTE: !undefined
   Size: 13
   Description: Produced by Itoi / Presented By Nintendo Palette
   Offset: 0xE1AE6F
-UNKNOWN_E1AE7C: !unknown
+UNKNOWN_E1AE7C: !undefined
   Size: 7
   Offset: 0xE1AE7C
-UNKNOWN_E1AE83: !unknown
+UNKNOWN_E1AE83: !undefined
   Size: 122
   Offset: 0xE1AE83
-UNKNOWN_E1AEFD: !unknown
+UNKNOWN_E1AEFD: !undefined
   Size: 127
   Offset: 0xE1AEFD
-TITLE_SCREEN_ARRANGEMENT: !unknown
+TITLE_SCREEN_ARRANGEMENT: !undefined
   Size: 660
   Description: Title screen arrangement
   Offset: 0xE1AF7C
-TITLE_SCREEN_GRAPHICS: !unknown
+TITLE_SCREEN_GRAPHICS: !undefined
   Size: 5332
   Description: Title screen graphics
   Offset: 0xE1B210
-UNKNOWN_E1C6E4: !unknown
+UNKNOWN_E1C6E4: !undefined
   Size: 1789
   Offset: 0xE1C6E4
-TITLE_SCREEN_PALETTE: !unknown
+TITLE_SCREEN_PALETTE: !undefined
   Size: 39
   Description: Title screen palette
   Offset: 0xE1CDE1
-UNKNOWN_E1CE08: !unknown
+UNKNOWN_E1CE08: !undefined
   Size: 423
   Offset: 0xE1CE08
-UNKNOWN_E1CFAF: !unknown
+UNKNOWN_E1CFAF: !undefined
   Size: 1349
   Offset: 0xE1CFAF
-UNKNOWN_E1D4F4: !unknown
+UNKNOWN_E1D4F4: !undefined
   Size: 244
   Offset: 0xE1D4F4
-UNKNOWN_E1D5E8: !unknown
+UNKNOWN_E1D5E8: !undefined
   Size: 249
   Offset: 0xE1D5E8
-UNKNOWN_E1D6E1: !unknown
+UNKNOWN_E1D6E1: !undefined
   Size: 308
   Offset: 0xE1D6E1
-UNKNOWN_E1D815: !unknown
+UNKNOWN_E1D815: !undefined
   Size: 32
   Offset: 0xE1D815
-UNKNOWN_E1D835: !unknown
+UNKNOWN_E1D835: !undefined
   Size: 3250
   Offset: 0xE1D835
-UNKNOWN_E1E4E7: !unknown
+UNKNOWN_E1E4E7: !undefined
   Size: 65
   Offset: 0xE1E4E7
-STAFF_CREDITS_FONT_GRAPHICS: !unknown
+STAFF_CREDITS_FONT_GRAPHICS: !undefined
   Size: 1004
   Offset: 0xE1E528
   Description: Staff Credits Font Graphics
@@ -27379,13 +27379,13 @@ STAFF_CREDITS_FONT_PALETTE: !array
   Item Type: !array
     Size: 8
     Item Type: *SNESCOLOR
-UNKNOWN_E1E924: !unknown
+UNKNOWN_E1E924: !undefined
   Size: 38
   Offset: 0xE1E924
-UNKNOWN_E1E94A: !unknown
+UNKNOWN_E1E94A: !undefined
   Size: 262
   Offset: 0xE1E94A
-TOWN_MAP_LABEL_GFX: !unknown
+TOWN_MAP_LABEL_GFX: !undefined
   Description: Graphics used for labelling town map locations
   Size: 1907
   Offset: 0xE1EA50
@@ -27396,7 +27396,7 @@ TOWN_MAP_ICON_PALETTE: !array
   Item Type: !array
     Size: 32
     Item Type: *SNESCOLOR
-UNKNOWN_E1F203: !unknown
+UNKNOWN_E1F203: !undefined
   Size: 0x28E
   Offset: 0xE1F203
 TOWN_MAP_ICON_PLACEMENT_PTR_TABLE: !array
@@ -27405,83 +27405,83 @@ TOWN_MAP_ICON_PLACEMENT_PTR_TABLE: !array
   Item Type: !pointer
     Size: 4
   Offset: 0xE1F491
-TOWN_MAP_ICON_PLACEMENT_DATA: !unknown
+TOWN_MAP_ICON_PLACEMENT_DATA: !undefined
   Size: 216
   Description: Town Map Icon Placement Data
   Offset: 0xE1F4A9
-AUDIO_PACK_123: !unknown
+AUDIO_PACK_123: !undefined
   Size: 2687
   Description: Audio Block
   Offset: 0xE1F581
-AUDIO_PACK_108: !unknown
+AUDIO_PACK_108: !undefined
   Size: 30704
   Description: Audio Block
   Offset: 0xE20000
-AUDIO_PACK_0: !unknown
+AUDIO_PACK_0: !undefined
   Size: 30012
   Description: Audio Block
   Offset: 0xE277F0
-AUDIO_PACK_36: !unknown
+AUDIO_PACK_36: !undefined
   Size: 3932
   Description: Audio Block
   Offset: 0xE2ED2C
-AUDIO_PACK_18: !unknown
+AUDIO_PACK_18: !undefined
   Size: 888
   Description: Audio Block
   Offset: 0xE2FC88
-AUDIO_PACK_3: !unknown
+AUDIO_PACK_3: !undefined
   Size: 24420
   Description: Audio Block
   Offset: 0xE30000
-AUDIO_PACK_70: !unknown
+AUDIO_PACK_70: !undefined
   Size: 20886
   Description: Audio Block
   Offset: 0xE35F64
-AUDIO_PACK_37: !unknown
+AUDIO_PACK_37: !undefined
   Size: 19666
   Description: Audio Block
   Offset: 0xE3B0FA
-AUDIO_PACK_32: !unknown
+AUDIO_PACK_32: !undefined
   Size: 564
   Description: Audio Block
   Offset: 0xE3FDCC
-AUDIO_PACK_64: !unknown
+AUDIO_PACK_64: !undefined
   Size: 20810
   Description: Audio Block
   Offset: 0xE40000
-AUDIO_PACK_42: !unknown
+AUDIO_PACK_42: !undefined
   Size: 20712
   Description: Audio Block
   Offset: 0xE4514A
-AUDIO_PACK_126: !unknown
+AUDIO_PACK_126: !undefined
   Size: 19614
   Description: Audio Block
   Offset: 0xE4A232
-AUDIO_PACK_125: !unknown
+AUDIO_PACK_125: !undefined
   Size: 3778
   Description: Audio Block
   Offset: 0xE4EED0
-AUDIO_PACK_155: !unknown
+AUDIO_PACK_155: !undefined
   Size: 622
   Description: Audio Block
   Offset: 0xE4FD92
-AUDIO_PACK_50: !unknown
+AUDIO_PACK_50: !undefined
   Size: 19530
   Description: Audio Block
   Offset: 0xE50000
-AUDIO_PACK_92: !unknown
+AUDIO_PACK_92: !undefined
   Size: 18692
   Description: Audio Block
   Offset: 0xE54C4A
-AUDIO_PACK_56: !unknown
+AUDIO_PACK_56: !undefined
   Size: 18404
   Description: Audio Block
   Offset: 0xE5954E
-AUDIO_PACK_122: !unknown
+AUDIO_PACK_122: !undefined
   Size: 8710
   Description: Audio Block
   Offset: 0xE5DD32
-AUDIO_PACK_166: !unknown
+AUDIO_PACK_166: !undefined
   Size: 200
   Description: Audio Block
   Offset: 0xE5FF38
@@ -27491,107 +27491,107 @@ AUDIO_PACK_1: !struct
   Terminator: 0
   Entries: *AUDIO_PACK
   Offset: 0xE60000
-AUDIO_PACK_74: !unknown
+AUDIO_PACK_74: !undefined
   Size: 17858
   Description: Audio Block
   Offset: 0xE645D8
-AUDIO_PACK_76: !unknown
+AUDIO_PACK_76: !undefined
   Size: 17262
   Description: Audio Block
   Offset: 0xE68B9A
-AUDIO_PACK_47: !unknown
+AUDIO_PACK_47: !undefined
   Size: 12304
   Description: Audio Block
   Offset: 0xE6CF08
-AUDIO_PACK_73: !unknown
+AUDIO_PACK_73: !undefined
   Size: 232
   Description: Audio Block
   Offset: 0xE6FF18
-AUDIO_PACK_78: !unknown
+AUDIO_PACK_78: !undefined
   Size: 17172
   Description: Audio Block
   Offset: 0xE70000
-AUDIO_PACK_82: !unknown
+AUDIO_PACK_82: !undefined
   Size: 16776
   Description: Audio Block
   Offset: 0xE74314
-AUDIO_PACK_8: !unknown
+AUDIO_PACK_8: !undefined
   Size: 16684
   Description: Audio Block
   Offset: 0xE7849C
-AUDIO_PACK_24: !unknown
+AUDIO_PACK_24: !undefined
   Size: 14904
   Description: Audio Block
   Offset: 0xE7C5C8
-AUDIO_PACK_84: !unknown
+AUDIO_PACK_84: !undefined
   Size: 16486
   Description: Audio Block
   Offset: 0xE80000
-AUDIO_PACK_60: !unknown
+AUDIO_PACK_60: !undefined
   Size: 15936
   Description: Audio Block
   Offset: 0xE84066
-AUDIO_PACK_153: !unknown
+AUDIO_PACK_153: !undefined
   Size: 15842
   Description: Audio Block
   Offset: 0xE87EA6
-AUDIO_PACK_124: !unknown
+AUDIO_PACK_124: !undefined
   Size: 15338
   Description: Audio Block
   Offset: 0xE8BC88
-AUDIO_PACK_46: !unknown
+AUDIO_PACK_46: !undefined
   Size: 1705
   Description: Audio Block
   Offset: 0xE8F872
-AUDIO_PACK_7: !unknown
+AUDIO_PACK_7: !undefined
   Size: 229
   Description: Audio Block
   Offset: 0xE8FF1B
-AUDIO_PACK_27: !unknown
+AUDIO_PACK_27: !undefined
   Size: 14964
   Description: Audio Block
   Offset: 0xE90000
-AUDIO_PACK_80: !unknown
+AUDIO_PACK_80: !undefined
   Size: 14562
   Description: Audio Block
   Offset: 0xE93A74
-AUDIO_PACK_118: !unknown
+AUDIO_PACK_118: !undefined
   Size: 14544
   Description: Audio Block
   Offset: 0xE97356
-AUDIO_PACK_131: !unknown
+AUDIO_PACK_131: !undefined
   Size: 13406
   Description: Audio Block
   Offset: 0xE9AC26
-AUDIO_PACK_2: !unknown
+AUDIO_PACK_2: !undefined
   Size: 6212
   Description: Audio Block
   Offset: 0xE9E084
-AUDIO_PACK_149: !unknown
+AUDIO_PACK_149: !undefined
   Size: 1848
   Description: Audio Block
   Offset: 0xE9F8C8
-AUDIO_PACK_54: !unknown
+AUDIO_PACK_54: !undefined
   Size: 13178
   Description: Audio Block
   Offset: 0xEA0000
-AUDIO_PACK_52: !unknown
+AUDIO_PACK_52: !undefined
   Size: 12826
   Description: Audio Block
   Offset: 0xEA337A
-AUDIO_PACK_72: !unknown
+AUDIO_PACK_72: !undefined
   Size: 12642
   Description: Audio Block
   Offset: 0xEA6594
-AUDIO_PACK_89: !unknown
+AUDIO_PACK_89: !undefined
   Size: 11930
   Description: Audio Block
   Offset: 0xEA96F6
-AUDIO_PACK_35: !unknown
+AUDIO_PACK_35: !undefined
   Size: 11156
   Description: Audio Block
   Offset: 0xEAC590
-AUDIO_PACK_140: !unknown
+AUDIO_PACK_140: !undefined
   Size: 3431
   Description: Audio Block
   Offset: 0xEAF124
@@ -27603,307 +27603,307 @@ AUDIO_PACK_145: !struct
 UNKNOWN_EAFFDF: !empty
   Size: 33
   Offset: 0xEAFFDF
-AUDIO_PACK_44: !unknown
+AUDIO_PACK_44: !undefined
   Size: 10728
   Description: Audio Block
   Offset: 0xEB0000
-AUDIO_PACK_21: !unknown
+AUDIO_PACK_21: !undefined
   Size: 10276
   Description: Audio Block
   Offset: 0xEB29E8
-AUDIO_PACK_5: !unknown
+AUDIO_PACK_5: !undefined
   Size: 9930
   Description: Audio Block
   Offset: 0xEB520C
-AUDIO_PACK_40: !unknown
+AUDIO_PACK_40: !undefined
   Size: 9912
   Description: Audio Block
   Offset: 0xEB78D6
-AUDIO_PACK_33: !unknown
+AUDIO_PACK_33: !undefined
   Size: 9562
   Description: Audio Block
   Offset: 0xEB9F8E
-AUDIO_PACK_105: !unknown
+AUDIO_PACK_105: !undefined
   Size: 9468
   Description: Audio Block
   Offset: 0xEBC4E8
-AUDIO_PACK_154: !unknown
+AUDIO_PACK_154: !undefined
   Size: 5182
   Description: Audio Block
   Offset: 0xEBE9E4
-AUDIO_PACK_13: !unknown
+AUDIO_PACK_13: !undefined
   Size: 478
   Description: Audio Block
   Offset: 0xEBFE22
-AUDIO_PACK_114: !unknown
+AUDIO_PACK_114: !undefined
   Size: 9196
   Description: Audio Block
   Offset: 0xEC0000
-AUDIO_PACK_109: !unknown
+AUDIO_PACK_109: !undefined
   Size: 8614
   Description: Audio Block
   Offset: 0xEC23EC
-AUDIO_PACK_107: !unknown
+AUDIO_PACK_107: !undefined
   Size: 8558
   Description: Audio Block
   Offset: 0xEC4592
-AUDIO_PACK_98: !unknown
+AUDIO_PACK_98: !undefined
   Size: 8548
   Description: Audio Block
   Offset: 0xEC6700
-AUDIO_PACK_165: !unknown
+AUDIO_PACK_165: !undefined
   Size: 4882
   Description: Audio Block
   Offset: 0xEC8864
-AUDIO_PACK_62: !unknown
+AUDIO_PACK_62: !undefined
   Size: 3170
   Description: Audio Block
   Offset: 0xEC9B76
-AUDIO_PACK_58: !unknown
+AUDIO_PACK_58: !undefined
   Size: 2994
   Description: Audio Block
   Offset: 0xECA7D8
-AUDIO_PACK_133: !unknown
+AUDIO_PACK_133: !undefined
   Size: 2974
   Description: Audio Block
   Offset: 0xECB38A
-AUDIO_PACK_97: !unknown
+AUDIO_PACK_97: !undefined
   Size: 2937
   Description: Audio Block
   Offset: 0xECBF28
-AUDIO_PACK_55: !unknown
+AUDIO_PACK_55: !undefined
   Size: 2871
   Description: Audio Block
   Offset: 0xECCAA1
-AUDIO_PACK_106: !unknown
+AUDIO_PACK_106: !undefined
   Size: 2857
   Description: Audio Block
   Offset: 0xECD5D8
-AUDIO_PACK_25: !unknown
+AUDIO_PACK_25: !undefined
   Size: 2640
   Description: Audio Block
   Offset: 0xECE101
-AUDIO_PACK_15: !unknown
+AUDIO_PACK_15: !undefined
   Size: 2599
   Description: Audio Block
   Offset: 0xECEB51
-AUDIO_PACK_157: !unknown
+AUDIO_PACK_157: !undefined
   Size: 2696
   Description: Audio Block
   Offset: 0xECF578
-AUDIO_PACK_121: !unknown
+AUDIO_PACK_121: !undefined
   Size: 2567
   Description: Audio Block
   Offset: 0xED0000
-AUDIO_PACK_87: !unknown
+AUDIO_PACK_87: !undefined
   Size: 2559
   Description: Audio Block
   Offset: 0xED0A07
-AUDIO_PACK_132: !unknown
+AUDIO_PACK_132: !undefined
   Size: 2553
   Description: Audio Block
   Offset: 0xED1406
-AUDIO_PACK_116: !unknown
+AUDIO_PACK_116: !undefined
   Size: 2552
   Description: Audio Block
   Offset: 0xED1DFF
-AUDIO_PACK_34: !unknown
+AUDIO_PACK_34: !undefined
   Size: 2462
   Description: Audio Block
   Offset: 0xED27F7
-AUDIO_PACK_119: !unknown
+AUDIO_PACK_119: !undefined
   Size: 2311
   Description: Audio Block
   Offset: 0xED3195
-AUDIO_PACK_141: !unknown
+AUDIO_PACK_141: !undefined
   Size: 2255
   Description: Audio Block
   Offset: 0xED3A9C
-AUDIO_PACK_48: !unknown
+AUDIO_PACK_48: !undefined
   Size: 2108
   Description: Audio Block
   Offset: 0xED436B
-AUDIO_PACK_39: !unknown
+AUDIO_PACK_39: !undefined
   Size: 2104
   Description: Audio Block
   Offset: 0xED4BA7
-AUDIO_PACK_150: !unknown
+AUDIO_PACK_150: !undefined
   Size: 2082
   Description: Audio Block
   Offset: 0xED53DF
-AUDIO_PACK_120: !unknown
+AUDIO_PACK_120: !undefined
   Size: 2056
   Description: Audio Block
   Offset: 0xED5C01
-AUDIO_PACK_38: !unknown
+AUDIO_PACK_38: !undefined
   Size: 2045
   Description: Audio Block
   Offset: 0xED6409
-AUDIO_PACK_161: !unknown
+AUDIO_PACK_161: !undefined
   Size: 2012
   Description: Audio Block
   Offset: 0xED6C06
-AUDIO_PACK_68: !unknown
+AUDIO_PACK_68: !undefined
   Size: 2004
   Description: Audio Block
   Offset: 0xED73E2
-AUDIO_PACK_104: !unknown
+AUDIO_PACK_104: !undefined
   Size: 2003
   Description: Audio Block
   Offset: 0xED7BB6
-AUDIO_PACK_90: !unknown
+AUDIO_PACK_90: !undefined
   Size: 1944
   Description: Audio Block
   Offset: 0xED8389
-AUDIO_PACK_86: !unknown
+AUDIO_PACK_86: !undefined
   Size: 1678
   Description: Audio Block
   Offset: 0xED8B21
-AUDIO_PACK_100: !unknown
+AUDIO_PACK_100: !undefined
   Size: 1653
   Description: Audio Block
   Offset: 0xED91AF
-AUDIO_PACK_26: !unknown
+AUDIO_PACK_26: !undefined
   Size: 1647
   Description: Audio Block
   Offset: 0xED9824
-AUDIO_PACK_43: !unknown
+AUDIO_PACK_43: !undefined
   Size: 1604
   Description: Audio Block
   Offset: 0xED9E93
-AUDIO_PACK_162: !unknown
+AUDIO_PACK_162: !undefined
   Size: 1595
   Description: Audio Block
   Offset: 0xEDA4D7
-AUDIO_PACK_85: !unknown
+AUDIO_PACK_85: !undefined
   Size: 1572
   Description: Audio Block
   Offset: 0xEDAB12
-AUDIO_PACK_99: !unknown
+AUDIO_PACK_99: !undefined
   Size: 1565
   Description: Audio Block
   Offset: 0xEDB136
-AUDIO_PACK_28: !unknown
+AUDIO_PACK_28: !undefined
   Size: 1549
   Description: Audio Block
   Offset: 0xEDB753
-AUDIO_PACK_10: !unknown
+AUDIO_PACK_10: !undefined
   Size: 1548
   Description: Audio Block
   Offset: 0xEDBD60
-AUDIO_PACK_117: !unknown
+AUDIO_PACK_117: !undefined
   Size: 1538
   Description: Audio Block
   Offset: 0xEDC36C
-AUDIO_PACK_77: !unknown
+AUDIO_PACK_77: !undefined
   Size: 1511
   Description: Audio Block
   Offset: 0xEDC96E
-AUDIO_PACK_19: !unknown
+AUDIO_PACK_19: !undefined
   Size: 1508
   Description: Audio Block
   Offset: 0xEDCF55
-AUDIO_PACK_57: !unknown
+AUDIO_PACK_57: !undefined
   Size: 1476
   Description: Audio Block
   Offset: 0xEDD539
-AUDIO_PACK_14: !unknown
+AUDIO_PACK_14: !undefined
   Size: 1457
   Description: Audio Block
   Offset: 0xEDDAFD
-AUDIO_PACK_158: !unknown
+AUDIO_PACK_158: !undefined
   Size: 1454
   Description: Audio Block
   Offset: 0xEDE0AE
-AUDIO_PACK_30: !unknown
+AUDIO_PACK_30: !undefined
   Size: 1432
   Description: Audio Block
   Offset: 0xEDE65C
-AUDIO_PACK_134: !unknown
+AUDIO_PACK_134: !undefined
   Size: 1423
   Description: Audio Block
   Offset: 0xEDEBF4
-AUDIO_PACK_113: !unknown
+AUDIO_PACK_113: !undefined
   Size: 1421
   Description: Audio Block
   Offset: 0xEDF183
-AUDIO_PACK_146: !unknown
+AUDIO_PACK_146: !undefined
   Size: 1420
   Description: Audio Block
   Offset: 0xEDF710
-AUDIO_PACK_29: !unknown
+AUDIO_PACK_29: !undefined
   Size: 868
   Description: Audio Block
   Offset: 0xEDFC9C
-AUDIO_PACK_136: !unknown
+AUDIO_PACK_136: !undefined
   Size: 1364
   Description: Audio Block
   Offset: 0xEE0000
-AUDIO_PACK_112: !unknown
+AUDIO_PACK_112: !undefined
   Size: 1335
   Description: Audio Block
   Offset: 0xEE0554
-AUDIO_PACK_163: !unknown
+AUDIO_PACK_163: !undefined
   Size: 1319
   Description: Audio Block
   Offset: 0xEE0A8B
-AUDIO_PACK_115: !unknown
+AUDIO_PACK_115: !undefined
   Size: 1314
   Description: Audio Block
   Offset: 0xEE0FB2
-AUDIO_PACK_53: !unknown
+AUDIO_PACK_53: !undefined
   Size: 1306
   Description: Audio Block
   Offset: 0xEE14D4
-AUDIO_PACK_67: !unknown
+AUDIO_PACK_67: !undefined
   Size: 1296
   Description: Audio Block
   Offset: 0xEE19EE
-AUDIO_PACK_20: !unknown
+AUDIO_PACK_20: !undefined
   Size: 1283
   Description: Audio Block
   Offset: 0xEE1EFE
-AUDIO_PACK_144: !unknown
+AUDIO_PACK_144: !undefined
   Size: 1277
   Description: Audio Block
   Offset: 0xEE2401
-AUDIO_PACK_63: !unknown
+AUDIO_PACK_63: !undefined
   Size: 1231
   Description: Audio Block
   Offset: 0xEE28FE
-AUDIO_PACK_138: !unknown
+AUDIO_PACK_138: !undefined
   Size: 1129
   Description: Audio Block
   Offset: 0xEE2DCD
-AUDIO_PACK_127: !unknown
+AUDIO_PACK_127: !undefined
   Size: 1063
   Description: Audio Block
   Offset: 0xEE3236
-AUDIO_PACK_16: !unknown
+AUDIO_PACK_16: !undefined
   Size: 1056
   Description: Audio Block
   Offset: 0xEE365D
-AUDIO_PACK_148: !unknown
+AUDIO_PACK_148: !undefined
   Size: 1055
   Description: Audio Block
   Offset: 0xEE3A7D
-AUDIO_PACK_23: !unknown
+AUDIO_PACK_23: !undefined
   Size: 1055
   Description: Audio Block
   Offset: 0xEE3E9C
-AUDIO_PACK_11: !unknown
+AUDIO_PACK_11: !undefined
   Size: 1043
   Description: Audio Block
   Offset: 0xEE42BB
-AUDIO_PACK_142: !unknown
+AUDIO_PACK_142: !undefined
   Size: 1041
   Description: Audio Block
   Offset: 0xEE46CE
-AUDIO_PACK_160: !unknown
+AUDIO_PACK_160: !undefined
   Size: 1035
   Description: Audio Block
   Offset: 0xEE4ADF
-AUDIO_PACK_101: !unknown
+AUDIO_PACK_101: !undefined
   Size: 1020
   Description: Audio Block
   Offset: 0xEE4EEA
@@ -27914,111 +27914,111 @@ AUDIO_PACK_103: !struct
   Notes: '"Return to your body", "Boarding School", "Phase distorter"'
   Entries: *AUDIO_PACK
   Offset: 0xEE52E6
-AUDIO_PACK_51: !unknown
+AUDIO_PACK_51: !undefined
   Size: 954
   Description: Audio Block
   Offset: 0xEE56DF
-AUDIO_PACK_93: !unknown
+AUDIO_PACK_93: !undefined
   Size: 865
   Description: Audio Block
   Offset: 0xEE5A99
-AUDIO_PACK_95: !unknown
+AUDIO_PACK_95: !undefined
   Size: 850
   Description: Audio Block
   Offset: 0xEE5DFA
-AUDIO_PACK_164: !unknown
+AUDIO_PACK_164: !undefined
   Size: 832
   Description: Audio Block
   Offset: 0xEE614C
-AUDIO_PACK_151: !unknown
+AUDIO_PACK_151: !undefined
   Size: 811
   Description: Audio Block
   Offset: 0xEE648C
-AUDIO_PACK_12: !unknown
+AUDIO_PACK_12: !undefined
   Size: 718
   Description: Audio Block
   Offset: 0xEE67B7
-AUDIO_PACK_135: !unknown
+AUDIO_PACK_135: !undefined
   Size: 689
   Description: Audio Block
   Offset: 0xEE6A85
-AUDIO_PACK_83: !unknown
+AUDIO_PACK_83: !undefined
   Size: 679
   Description: Audio Block
   Offset: 0xEE6D36
-AUDIO_PACK_88: !unknown
+AUDIO_PACK_88: !undefined
   Size: 663
   Description: Audio Block
   Offset: 0xEE6FDD
-AUDIO_PACK_31: !unknown
+AUDIO_PACK_31: !undefined
   Size: 611
   Description: Audio Block
   Offset: 0xEE7274
-AUDIO_PACK_129: !unknown
+AUDIO_PACK_129: !undefined
   Size: 608
   Description: Audio Block
   Offset: 0xEE74D7
-AUDIO_PACK_22: !unknown
+AUDIO_PACK_22: !undefined
   Size: 599
   Description: Audio Block
   Offset: 0xEE7737
-AUDIO_PACK_17: !unknown
+AUDIO_PACK_17: !undefined
   Size: 593
   Description: Audio Block
   Offset: 0xEE798E
-AUDIO_PACK_91: !unknown
+AUDIO_PACK_91: !undefined
   Size: 586
   Description: Audio Block
   Offset: 0xEE7BDF
-AUDIO_PACK_81: !unknown
+AUDIO_PACK_81: !undefined
   Size: 548
   Description: Audio Block
   Offset: 0xEE7E29
-AUDIO_PACK_147: !unknown
+AUDIO_PACK_147: !undefined
   Size: 543
   Description: Audio Block
   Offset: 0xEE804D
-AUDIO_PACK_152: !unknown
+AUDIO_PACK_152: !undefined
   Size: 506
   Description: Audio Block
   Offset: 0xEE826C
-AUDIO_PACK_128: !unknown
+AUDIO_PACK_128: !undefined
   Size: 466
   Description: Audio Block
   Offset: 0xEE8466
-AUDIO_PACK_159: !unknown
+AUDIO_PACK_159: !undefined
   Size: 403
   Description: Audio Block
   Offset: 0xEE8638
-AUDIO_PACK_49: !unknown
+AUDIO_PACK_49: !undefined
   Size: 388
   Description: Audio Block
   Offset: 0xEE87CB
-AUDIO_PACK_9: !unknown
+AUDIO_PACK_9: !undefined
   Size: 379
   Description: Audio Block
   Offset: 0xEE894F
-AUDIO_PACK_69: !unknown
+AUDIO_PACK_69: !undefined
   Size: 340
   Description: Audio Block
   Offset: 0xEE8ACA
-AUDIO_PACK_167: !unknown
+AUDIO_PACK_167: !undefined
   Size: 327
   Description: Audio Block
   Offset: 0xEE8C1E
-AUDIO_PACK_130: !unknown
+AUDIO_PACK_130: !undefined
   Size: 317
   Description: Audio Block
   Offset: 0xEE8D65
-AUDIO_PACK_168: !unknown
+AUDIO_PACK_168: !undefined
   Size: 308
   Description: Audio Block
   Offset: 0xEE8EA2
-AUDIO_PACK_137: !unknown
+AUDIO_PACK_137: !undefined
   Size: 297
   Description: Audio Block
   Offset: 0xEE8FD6
-AUDIO_PACK_41: !unknown
+AUDIO_PACK_41: !undefined
   Size: 258
   Description: Audio Block
   Offset: 0xEE90FF
@@ -28121,7 +28121,7 @@ SRAM_SIGNATURE: !script
   Notes: Hal Laboratory, inc.
   Charset: ascii
   Offset: 0xEF0591
-UNKNOWN_EF05A6: !unknown
+UNKNOWN_EF05A6: !undefined
   Notes: Used for corrupted save detection?
   Size: 3
   Offset: 0xEF05A6
@@ -28405,7 +28405,7 @@ SPRITE_GROUPING_DATA: !array
       FLAGS: !int
         Pretty Name: Flags
         Size: 1
-      UNKNOWNB: !unknown
+      UNKNOWNB: !undefined
         Size: 4
       BANK: !int
         Pretty Name: Bank
@@ -28470,11 +28470,11 @@ CMD_WINDOW_TEXT: !array
   Item Type: !script
     Size: 10
   Offset: 0xEFA37A
-STATUS_WINDOW_TEXT: !unknown
+STATUS_WINDOW_TEXT: !undefined
   Description: Status Window Text
   Size: 170
   Offset: 0xEFA3B6
-NAME_INPUT_WINDOW_SELECTION_LAYOUT: !unknown
+NAME_INPUT_WINDOW_SELECTION_LAYOUT: !undefined
   Description: Name Input Window Selection Layout
   Size: 627
   Offset: 0xEFA460
@@ -28484,7 +28484,7 @@ NAME_INPUT_WINDOW_SELECTION_LAYOUT_POINTERS: !array
   Item Type: !int
     Base: 16
     Size: 4
-UNKNOWN_EFA6EB: !unknown
+UNKNOWN_EFA6EB: !undefined
   Size: 36
   Offset: 0xEFA6EB
 MAP_DATA_PER-SECTOR_TOWN_MAP_DATA: !array
@@ -28502,10 +28502,10 @@ MAP_DATA_PER-SECTOR_TOWN_MAP_DATA: !array
         Pretty Name: Town Map Y
         Size: 1
   Offset: 0xEFA70F
-TOWN_MAP_MAPPING: !unknown
+TOWN_MAP_MAPPING: !undefined
   Size: 0x100C
   Offset: 0xEFC50F
-DEBUG_SOUND_MODE_MENU_TEXT: !unknown
+DEBUG_SOUND_MODE_MENU_TEXT: !undefined
   Size: 84
   Description: Programmers' Sound Mode Menu Text
   Offset: 0xEFD51B
@@ -28552,7 +28552,7 @@ UNKNOWN_EFD6D4: !assembly
     459: UNKNOWN28
     479: UNKNOWN29
   Offset: 0xEFD6D4
-DEBUG_MENU_TEXT_2: !unknown
+DEBUG_MENU_TEXT_2: !undefined
   Description: Programmers' Debug Mode Menu Text
   Size: 169
   Offset: 0xEFD8B5
@@ -28804,16 +28804,16 @@ UNKNOWN_EFEAA4: !assembly
 UNKNOWN_EFEAC8: !assembly
   Size: 85
   Offset: 0xEFEAC8
-UNKNOWN_EFEB1D: !unknown
+UNKNOWN_EFEB1D: !undefined
   Size: 13
   Offset: 0xEFEB1D
 UNKNOWN_EFEB2A: !assembly
   Size: 19
   Offset: 0xEFEB2A
-UNKNOWN_EFEB3D: !unknown
+UNKNOWN_EFEB3D: !undefined
   Size: 34
   Offset: 0xEFEB3D
-UNKNOWN_EFEB5F: !unknown
+UNKNOWN_EFEB5F: !undefined
   Size: 17
   Offset: 0xEFEB5F
 DEBUG_MENU_FONT: !array
@@ -28823,7 +28823,7 @@ DEBUG_MENU_FONT: !array
     Size: 16
     Format: GAMEBOY
   Offset: 0xEFEB70
-UNKNOWN_EFEF70: !unknown
+UNKNOWN_EFEF70: !undefined
   Size: 71
   Offset: 0xEFEF70
 KIRBY: !array
@@ -28846,16 +28846,16 @@ UNKNOWN_VERSION_STRING: !script
   Size: 32
   Description: Version String
   Offset: 0xEFF3BB
-UNKNOWN_EFF3DB: !unknown
+UNKNOWN_EFF3DB: !undefined
   Size: 310
   Offset: 0xEFF3DB
-UNKNOWN_EFF511: !unknown
+UNKNOWN_EFF511: !undefined
   Size: 42
   Offset: 0xEFF511
 UNKNOWN_EFF53B: !empty
   Size: 128
   Offset: 0xEFF53B
-UNKNOWN_EFF5BB: !unknown
+UNKNOWN_EFF5BB: !undefined
   Size: 48
   Offset: 0xEFF5BB
 UNKNOWN_EFF5EB: !empty
