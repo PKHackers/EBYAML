@@ -1,0 +1,2179 @@
+---
+CPU:
+  Default Databank: 0x7E
+Platform: snes
+Title: Earthbound
+Country: US
+Series: Mother
+SHA256: A8FE2226728002786D68C27DDDDF0B90A894DB52E4DFE268FDF72A68CAE5F02E
+Version: v1.0
+Default Script: standardtext
+Script Tables:
+  movement:
+    - Sequence: [0x00]
+    - Sequence: [0x01, "XX"]
+    - Sequence: [0x02]
+    - Sequence: [0x03, "XX", "XX", "XX"]
+    - Sequence: [0x04, "XX", "XX", "XX"]
+    - Sequence: [0x05]
+    - Sequence: [0x06, "XX"]
+    - Sequence: [0x07, "XX", "XX"]
+    - Sequence: [0x08, "XX", "XX", "XX"]
+    - Sequence: [0x09]
+    - Sequence: [0x0A, "XX", "XX"]
+    - Sequence: [0x0B, "XX", "XX"]
+    - Sequence: [0x0C]
+    - Sequence: [0x0D, "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x0E, "XX", "XX", "XX"]
+    - Sequence: [0x0F]
+    - Sequence: [0x10, "XX", "XX", "XX"]
+    - Sequence: [0x11, "XX", "XX", "XX"]
+    - Sequence: [0x12, "XX", "XX", "XX"]
+    - Sequence: [0x13]
+    - Sequence: [0x14, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x40, "XX", "XX"]
+    - Sequence: [0x41, "XX", "XX"]
+    - Sequence: [0x42, "XX", "XX", "XX"]
+    - Sequence: [0x43, "XX"]
+    - Sequence: [0x44]
+    - Sequence: [0x45, "XX"]
+    - Sequence: [0x46]
+    - Sequence: [0x47]
+    - Sequence: [0x48, "XX"]
+    - Sequence: [0x49, "XX", "XX"]
+    - Sequence: [0x4A, "XX", "XX"]
+    - Sequence: [0x4B, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x4C, "XX", "XX", "XX"]
+  flyover:
+    - Sequence: [0x00]
+      Replacement: ""
+    - Sequence: [0x01, 0x12]
+      Replacement: "\n"
+    - Sequence: [0x01, "XX"]
+    - Sequence: [0x02, "XX", "XX", "XX"]
+    - Sequence: [0x03]
+      Replacement: "\n\n"
+    - Sequence: [0x08, 0x01]
+      Replacement: NESS
+    - Sequence: [0x08, 0x02]
+      Replacement: PAULA
+    - Sequence: [0x08, 0x03]
+      Replacement: JEFF
+    - Sequence: [0x08, 0x04]
+      Replacement: POO
+    - Sequence: [0x09]
+      Replacement: "\n"
+    - Sequence: [0x50]
+      Replacement: ' '
+    - Sequence: [0x51]
+      Replacement: '!'
+    - Sequence: [0x54]
+      Replacement: $
+    - Sequence: [0x57]
+      Replacement: ''''
+    - Sequence: [0x58]
+      Replacement: (
+    - Sequence: [0x59]
+      Replacement: )
+    - Sequence: [0x5A]
+      Replacement: '*'
+    - Sequence: [0x5C]
+      Replacement: ','
+    - Sequence: [0x5D]
+      Replacement: '-'
+    - Sequence: [0x5E]
+      Replacement: .
+    - Sequence: [0x60]
+      Replacement: '0'
+    - Sequence: [0x61]
+      Replacement: '1'
+    - Sequence: [0x62]
+      Replacement: '2'
+    - Sequence: [0x63]
+      Replacement: '3'
+    - Sequence: [0x64]
+      Replacement: '4'
+    - Sequence: [0x65]
+      Replacement: '5'
+    - Sequence: [0x66]
+      Replacement: '6'
+    - Sequence: [0x67]
+      Replacement: '7'
+    - Sequence: [0x68]
+      Replacement: '8'
+    - Sequence: [0x69]
+      Replacement: '9'
+    - Sequence: [0x6C]
+      Replacement: '"'
+    - Sequence: [0x6E]
+      Replacement: '"'
+    - Sequence: [0x6F]
+      Replacement: '?'
+    - Sequence: [0x70]
+      Replacement: '@'
+    - Sequence: [0x71]
+      Replacement: A
+    - Sequence: [0x72]
+      Replacement: B
+    - Sequence: [0x73]
+      Replacement: C
+    - Sequence: [0x74]
+      Replacement: D
+    - Sequence: [0x75]
+      Replacement: E
+    - Sequence: [0x76]
+      Replacement: F
+    - Sequence: [0x77]
+      Replacement: G
+    - Sequence: [0x78]
+      Replacement: H
+    - Sequence: [0x79]
+      Replacement: I
+    - Sequence: [0x7A]
+      Replacement: J
+    - Sequence: [0x7B]
+      Replacement: K
+    - Sequence: [0x7C]
+      Replacement: L
+    - Sequence: [0x7D]
+      Replacement: M
+    - Sequence: [0x7E]
+      Replacement: "N"
+    - Sequence: [0x7F]
+      Replacement: O
+    - Sequence: [0x80]
+      Replacement: P
+    - Sequence: [0x81]
+      Replacement: Q
+    - Sequence: [0x82]
+      Replacement: R
+    - Sequence: [0x83]
+      Replacement: S
+    - Sequence: [0x84]
+      Replacement: T
+    - Sequence: [0x85]
+      Replacement: U
+    - Sequence: [0x86]
+      Replacement: V
+    - Sequence: [0x87]
+      Replacement: W
+    - Sequence: [0x88]
+      Replacement: X
+    - Sequence: [0x89]
+      Replacement: "Y"
+    - Sequence: [0x8A]
+      Replacement: Z
+    - Sequence: [0x8F]
+      Replacement: Ω
+    - Sequence: [0x91]
+      Replacement: a
+    - Sequence: [0x92]
+      Replacement: b
+    - Sequence: [0x93]
+      Replacement: c
+    - Sequence: [0x94]
+      Replacement: d
+    - Sequence: [0x95]
+      Replacement: e
+    - Sequence: [0x96]
+      Replacement: f
+    - Sequence: [0x97]
+      Replacement: g
+    - Sequence: [0x98]
+      Replacement: h
+    - Sequence: [0x99]
+      Replacement: i
+    - Sequence: [0x9A]
+      Replacement: j
+    - Sequence: [0x9B]
+      Replacement: k
+    - Sequence: [0x9C]
+      Replacement: l
+    - Sequence: [0x9D]
+      Replacement: m
+    - Sequence: [0x9E]
+      Replacement: "n"
+    - Sequence: [0x9F]
+      Replacement: o
+    - Sequence: [0xA0]
+      Replacement: p
+    - Sequence: [0xA1]
+      Replacement: q
+    - Sequence: [0xA2]
+      Replacement: r
+    - Sequence: [0xA3]
+      Replacement: s
+    - Sequence: [0xA4]
+      Replacement: t
+    - Sequence: [0xA5]
+      Replacement: u
+    - Sequence: [0xA6]
+      Replacement: v
+    - Sequence: [0xA7]
+      Replacement: w
+    - Sequence: [0xA8]
+      Replacement: x
+    - Sequence: [0xA9]
+      Replacement: "y"
+    - Sequence: [0xAA]
+      Replacement: z
+    - Sequence: [0xAC]
+      Replacement: '[CHAR1]'
+  stafftext:
+    - Sequence: [0x00]
+      Replacement: ""
+    - Sequence: [0x03, "XX"]
+    - Sequence: [0x40]
+      Replacement: ' '
+    - Sequence: [0x42]
+      Replacement: a
+    - Sequence: [0x44]
+      Replacement: c
+    - Sequence: [0x45]
+      Replacement: e
+    - Sequence: [0x46]
+      Replacement: g
+    - Sequence: [0x47]
+      Replacement: ''''
+    - Sequence: [0x48]
+      Replacement: i
+    - Sequence: [0x49]
+      Replacement: k
+    - Sequence: [0x4A]
+      Replacement: m
+    - Sequence: [0x4B]
+      Replacement: o
+    - Sequence: [0x4E]
+      Replacement: .
+    - Sequence: [0x52]
+      Replacement: b
+    - Sequence: [0x54]
+      Replacement: d
+    - Sequence: [0x55]
+      Replacement: f
+    - Sequence: [0x56]
+      Replacement: h
+    - Sequence: [0x59]
+      Replacement: l
+    - Sequence: [0x5A]
+      Replacement: "n"
+    - Sequence: [0x5B]
+      Replacement: p
+    - Sequence: [0x6B]
+      Replacement: s
+    - Sequence: [0x6C]
+      Replacement: u
+    - Sequence: [0x6D]
+      Replacement: w
+    - Sequence: [0x6E]
+      Replacement: "y"
+    - Sequence: [0x6F]
+      Replacement: '?'
+    - Sequence: [0x7A]
+      Replacement: r
+    - Sequence: [0x7B]
+      Replacement: t
+    - Sequence: [0x7C]
+      Replacement: v
+    - Sequence: [0x7D]
+      Replacement: x
+    - Sequence: [0x80]
+      Replacement: '-'
+    - Sequence: [0x81]
+      Replacement: A
+    - Sequence: [0x82]
+      Replacement: B
+    - Sequence: [0x83]
+      Replacement: C
+    - Sequence: [0x84]
+      Replacement: D
+    - Sequence: [0x85]
+      Replacement: E
+    - Sequence: [0x86]
+      Replacement: F
+    - Sequence: [0x87]
+      Replacement: G
+    - Sequence: [0x88]
+      Replacement: H
+    - Sequence: [0x89]
+      Replacement: I
+    - Sequence: [0x8A]
+      Replacement: J
+    - Sequence: [0x8B]
+      Replacement: K
+    - Sequence: [0x8C]
+      Replacement: L
+    - Sequence: [0x8D]
+      Replacement: M
+    - Sequence: [0x8E]
+      Replacement: "N"
+    - Sequence: [0x8F]
+      Replacement: O
+    - Sequence: [0xA0]
+      Replacement: P
+    - Sequence: [0xA1]
+      Replacement: Q
+    - Sequence: [0xA2]
+      Replacement: R
+    - Sequence: [0xA3]
+      Replacement: S
+    - Sequence: [0xA4]
+      Replacement: T
+    - Sequence: [0xA5]
+      Replacement: U
+    - Sequence: [0xA6]
+      Replacement: V
+    - Sequence: [0xA7]
+      Replacement: W
+    - Sequence: [0xA8]
+      Replacement: X
+    - Sequence: [0xA9]
+      Replacement: "Y"
+    - Sequence: [0xAA]
+      Replacement: Z
+    - Sequence: [0xAD]
+      Replacement: .
+  standardtext:
+    - Sequence: [0x00]
+      Replacement: ""
+    - Sequence: [0x03]
+      Replacement: "▾\n"
+    - Sequence: [0x04, "XX", "XX"]
+    - Sequence: [0x05, "XX", "XX"]
+    - Sequence: [0x06, "XX", "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x07, "XX", "XX"]
+    - Sequence: [0x08, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x09, "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x0A, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x0B, "XX"]
+    - Sequence: [0x0C, "XX"]
+    - Sequence: [0x0D, "XX"]
+    - Sequence: [0x0E, "XX"]
+    - Sequence: [0x10, "XX"]
+    - Sequence: [0x15, 0x00]
+      Replacement: '                '
+    - Sequence: [0x15, 0x01]
+      Replacement: ' in the '
+    - Sequence: [0x15, 0x02]
+      Replacement: ' that '
+    - Sequence: [0x15, 0x03]
+      Replacement: '...'
+    - Sequence: [0x15, 0x04]
+      Replacement: ' and '
+    - Sequence: [0x15, 0x05]
+      Replacement: ' this '
+    - Sequence: [0x15, 0x06]
+      Replacement: ' to the '
+    - Sequence: [0x15, 0x07]
+      Replacement: ' about '
+    - Sequence: [0x15, 0x08]
+      Replacement: ' just '
+    - Sequence: [0x15, 0x09]
+      Replacement: ' of the '
+    - Sequence: [0x15, 0x0A]
+      Replacement: ' something '
+    - Sequence: [0x15, 0x0B]
+      Replacement: ' going to '
+    - Sequence: [0x15, 0x0C]
+      Replacement: ' to '
+    - Sequence: [0x15, 0x0D]
+      Replacement: ' you have '
+    - Sequence: [0x15, 0x0E]
+      Replacement: ' your '
+    - Sequence: [0x15, 0x0F]
+      Replacement: ' for '
+    - Sequence: [0x15, 0x10]
+      Replacement: ' you''re '
+    - Sequence: [0x15, 0x11]
+      Replacement: '•You '
+    - Sequence: [0x15, 0x12]
+      Replacement: ' really '
+    - Sequence: [0x15, 0x13]
+      Replacement: ' don''t '
+    - Sequence: [0x15, 0x14]
+      Replacement: '•The '
+    - Sequence: [0x15, 0x15]
+      Replacement: 'e the '
+    - Sequence: [0x15, 0x16]
+      Replacement: 'e you '
+    - Sequence: [0x15, 0x17]
+      Replacement: '... '
+    - Sequence: [0x15, 0x18]
+      Replacement: ' the '
+    - Sequence: [0x15, 0x19]
+      Replacement: ' will '
+    - Sequence: [0x15, 0x1A]
+      Replacement: '   ...Brick Road'
+    - Sequence: [0x15, 0x1B]
+      Replacement: 'ing '
+    - Sequence: [0x15, 0x1C]
+      Replacement: ' some '
+    - Sequence: [0x15, 0x1D]
+      Replacement: '              '
+    - Sequence: [0x15, 0x1E]
+      Replacement: '•Do you want to '
+    - Sequence: [0x15, 0x1F]
+      Replacement: ' like '
+    - Sequence: [0x15, 0x20]
+      Replacement: 'ou don''t have '
+    - Sequence: [0x15, 0x21]
+      Replacement: ' is '
+    - Sequence: [0x15, 0x22]
+      Replacement: ' you '
+    - Sequence: [0x15, 0x23]
+      Replacement: ' you'
+    - Sequence: [0x15, 0x24]
+      Replacement: ' anything else'
+    - Sequence: [0x15, 0x25]
+      Replacement: ' the'
+    - Sequence: [0x15, 0x26]
+      Replacement: ' you want to '
+    - Sequence: [0x15, 0x27]
+      Replacement: ' for the '
+    - Sequence: [0x15, 0x28]
+      Replacement: ' friend'
+    - Sequence: [0x15, 0x29]
+      Replacement: ' at the '
+    - Sequence: [0x15, 0x2A]
+      Replacement: 'ould you like '
+    - Sequence: [0x15, 0x2B]
+      Replacement: ' from '
+    - Sequence: [0x15, 0x2C]
+      Replacement: ' would '
+    - Sequence: [0x15, 0x2D]
+      Replacement: he Runaway Five
+    - Sequence: [0x15, 0x2E]
+      Replacement: ' with '
+    - Sequence: [0x15, 0x2F]
+      Replacement: ' want to '
+    - Sequence: [0x15, 0x30]
+      Replacement: '•If you '
+    - Sequence: [0x15, 0x31]
+      Replacement: ' you don''t '
+    - Sequence: [0x15, 0x32]
+      Replacement: 's the '
+    - Sequence: [0x15, 0x33]
+      Replacement: 'ed to '
+    - Sequence: [0x15, 0x34]
+      Replacement: e...
+    - Sequence: [0x15, 0x35]
+      Replacement: ' something'
+    - Sequence: [0x15, 0x36]
+      Replacement: 't the '
+    - Sequence: [0x15, 0x37]
+      Replacement: '•...'
+    - Sequence: [0x15, 0x38]
+      Replacement: '•Please '
+    - Sequence: [0x15, 0x39]
+      Replacement: '''s '
+    - Sequence: [0x15, 0x3A]
+      Replacement: ' of your '
+    - Sequence: [0x15, 0x3B]
+      Replacement: '•It''s '
+    - Sequence: [0x15, 0x3C]
+      Replacement: '•Thank you '
+    - Sequence: [0x15, 0x3D]
+      Replacement: '•I '
+    - Sequence: [0x15, 0x3E]
+      Replacement: ' here.'
+    - Sequence: [0x15, 0x3F]
+      Replacement: ' in '
+    - Sequence: [0x15, 0x40]
+      Replacement: '•Do you '
+    - Sequence: [0x15, 0x41]
+      Replacement: ' I''ll '
+    - Sequence: [0x15, 0x42]
+      Replacement: ' have '
+    - Sequence: [0x15, 0x43]
+      Replacement: 'e of '
+    - Sequence: [0x15, 0x44]
+      Replacement: 'd you '
+    - Sequence: [0x15, 0x45]
+      Replacement: '•I''m '
+    - Sequence: [0x15, 0x46]
+      Replacement: 'me to '
+    - Sequence: [0x15, 0x47]
+      Replacement: '•I don''t '
+    - Sequence: [0x15, 0x48]
+      Replacement: '•Well, '
+    - Sequence: [0x15, 0x49]
+      Replacement: '•This is '
+    - Sequence: [0x15, 0x4A]
+      Replacement: 'ed the '
+    - Sequence: [0x15, 0x4B]
+      Replacement: '•You''re '
+    - Sequence: [0x15, 0x4C]
+      Replacement: ' for a '
+    - Sequence: [0x15, 0x4D]
+      Replacement: ' anything'
+    - Sequence: [0x15, 0x4E]
+      Replacement: ing
+    - Sequence: [0x15, 0x4F]
+      Replacement: ' of '
+    - Sequence: [0x15, 0x50]
+      Replacement: ' you should '
+    - Sequence: [0x15, 0x51]
+      Replacement: ' I '
+    - Sequence: [0x15, 0x52]
+      Replacement: ' from the '
+    - Sequence: [0x15, 0x53]
+      Replacement: s...
+    - Sequence: [0x15, 0x54]
+      Replacement: ' it''s '
+    - Sequence: [0x15, 0x55]
+      Replacement: ' time'
+    - Sequence: [0x15, 0x56]
+      Replacement: 'e to '
+    - Sequence: [0x15, 0x57]
+      Replacement: 'ed '
+    - Sequence: [0x15, 0x58]
+      Replacement: 'e of the '
+    - Sequence: [0x15, 0x59]
+      Replacement: ' to you'
+    - Sequence: [0x15, 0x5A]
+      Replacement: 'n''t you '
+    - Sequence: [0x15, 0x5B]
+      Replacement: ' again'
+    - Sequence: [0x15, 0x5C]
+      Replacement: ' for you.'
+    - Sequence: [0x15, 0x5D]
+      Replacement: 'other '
+    - Sequence: [0x15, 0x5E]
+      Replacement: ation
+    - Sequence: [0x15, 0x5F]
+      Replacement: ' little '
+    - Sequence: [0x15, 0x60]
+      Replacement: 'ing to '
+    - Sequence: [0x15, 0x61]
+      Replacement: ' can''t '
+    - Sequence: [0x15, 0x62]
+      Replacement: ' much'
+    - Sequence: [0x15, 0x63]
+      Replacement: ' someone '
+    - Sequence: [0x15, 0x64]
+      Replacement: ' on the '
+    - Sequence: [0x15, 0x65]
+      Replacement: ' looks like'
+    - Sequence: [0x15, 0x66]
+      Replacement: ' don''t you '
+    - Sequence: [0x15, 0x67]
+      Replacement: ' very '
+    - Sequence: [0x15, 0x68]
+      Replacement: 'the '
+    - Sequence: [0x15, 0x69]
+      Replacement: ' can '
+    - Sequence: [0x15, 0x6A]
+      Replacement: you
+    - Sequence: [0x15, 0x6B]
+      Replacement: ' that you '
+    - Sequence: [0x15, 0x6C]
+      Replacement: ' it'
+    - Sequence: [0x15, 0x6D]
+      Replacement: ' you want'
+    - Sequence: [0x15, 0x6E]
+      Replacement: 'ou can''t '
+    - Sequence: [0x15, 0x6F]
+      Replacement: ' able to '
+    - Sequence: [0x15, 0x70]
+      Replacement: ' already '
+    - Sequence: [0x15, 0x71]
+      Replacement: ' give you '
+    - Sequence: [0x15, 0x72]
+      Replacement: understand
+    - Sequence: [0x15, 0x73]
+      Replacement: '       '
+    - Sequence: [0x15, 0x74]
+      Replacement: ' my '
+    - Sequence: [0x15, 0x75]
+      Replacement: ' you can '
+    - Sequence: [0x15, 0x76]
+      Replacement: ' that'
+    - Sequence: [0x15, 0x77]
+      Replacement: ' what '
+    - Sequence: [0x15, 0x78]
+      Replacement: 'here''s '
+    - Sequence: [0x15, 0x79]
+      Replacement: ' there '
+    - Sequence: [0x15, 0x7A]
+      Replacement: 'n the '
+    - Sequence: [0x15, 0x7B]
+      Replacement: '•What '
+    - Sequence: [0x15, 0x7C]
+      Replacement: Thank you
+    - Sequence: [0x15, 0x7D]
+      Replacement: ' I can''t '
+    - Sequence: [0x15, 0x7E]
+      Replacement: one
+    - Sequence: [0x15, 0x7F]
+      Replacement: '•The'
+    - Sequence: [0x15, 0x80]
+      Replacement: ' thought'
+    - Sequence: [0x15, 0x81]
+      Replacement: ' not '
+    - Sequence: [0x15, 0x82]
+      Replacement: You should
+    - Sequence: [0x15, 0x83]
+      Replacement: ou know
+    - Sequence: [0x15, 0x84]
+      Replacement: ' has '
+    - Sequence: [0x15, 0x85]
+      Replacement: ' back'
+    - Sequence: [0x15, 0x86]
+      Replacement: ' of'
+    - Sequence: [0x15, 0x87]
+      Replacement: 've been '
+    - Sequence: [0x15, 0x88]
+      Replacement: ' I''m '
+    - Sequence: [0x15, 0x89]
+      Replacement: ' there'
+    - Sequence: [0x15, 0x8A]
+      Replacement: ' with you'
+    - Sequence: [0x15, 0x8B]
+      Replacement: '•I heard '
+    - Sequence: [0x15, 0x8C]
+      Replacement: ' in'
+    - Sequence: [0x15, 0x8D]
+      Replacement: ' here '
+    - Sequence: [0x15, 0x8E]
+      Replacement: ' Fourside'
+    - Sequence: [0x15, 0x8F]
+      Replacement: 'I wonder '
+    - Sequence: [0x15, 0x90]
+      Replacement: ' to'
+    - Sequence: [0x15, 0x91]
+      Replacement: ' could '
+    - Sequence: [0x15, 0x92]
+      Replacement: ' think '
+    - Sequence: [0x15, 0x93]
+      Replacement: ' out'
+    - Sequence: [0x15, 0x94]
+      Replacement: ' good '
+    - Sequence: [0x15, 0x95]
+      Replacement: '  the '
+    - Sequence: [0x15, 0x96]
+      Replacement: '  You '
+    - Sequence: [0x15, 0x97]
+      Replacement: ' too much'
+    - Sequence: [0x15, 0x98]
+      Replacement: ome back
+    - Sequence: [0x15, 0x99]
+      Replacement: t...
+    - Sequence: [0x15, 0x9A]
+      Replacement: ' here'
+    - Sequence: [0x15, 0x9B]
+      Replacement: thing
+    - Sequence: [0x15, 0x9C]
+      Replacement: 'come '
+    - Sequence: [0x15, 0x9D]
+      Replacement: 'ly '
+    - Sequence: [0x15, 0x9E]
+      Replacement: ent
+    - Sequence: [0x15, 0x9F]
+      Replacement: ' strong'
+    - Sequence: [0x15, 0xA0]
+      Replacement: ' money.'
+    - Sequence: [0x15, 0xA1]
+      Replacement: '•I''ll '
+    - Sequence: [0x15, 0xA2]
+      Replacement: 'an '
+    - Sequence: [0x15, 0xA3]
+      Replacement: 'ou must '
+    - Sequence: [0x15, 0xA4]
+      Replacement: ' are you '
+    - Sequence: [0x15, 0xA5]
+      Replacement: ' with the'
+    - Sequence: [0x15, 0xA6]
+      Replacement: ' on your '
+    - Sequence: [0x15, 0xA7]
+      Replacement: 'too many '
+    - Sequence: [0x15, 0xA8]
+      Replacement: ' you.'
+    - Sequence: [0x15, 0xA9]
+      Replacement: know
+    - Sequence: [0x15, 0xAA]
+      Replacement: ' to be '
+    - Sequence: [0x15, 0xAB]
+      Replacement: ' around '
+    - Sequence: [0x15, 0xAC]
+      Replacement: ' if you '
+    - Sequence: [0x15, 0xAD]
+      Replacement: '•Are you '
+    - Sequence: [0x15, 0xAE]
+      Replacement: ome again
+    - Sequence: [0x15, 0xAF]
+      Replacement: 'e and '
+    - Sequence: [0x15, 0xB0]
+      Replacement: ' more '
+    - Sequence: [0x15, 0xB1]
+      Replacement: think
+    - Sequence: [0x15, 0xB2]
+      Replacement: 'e your '
+    - Sequence: [0x15, 0xB3]
+      Replacement: '•Don''t '
+    - Sequence: [0x15, 0xB4]
+      Replacement: 'nd the '
+    - Sequence: [0x15, 0xB5]
+      Replacement: 't to '
+    - Sequence: [0x15, 0xB6]
+      Replacement: rea
+    - Sequence: [0x15, 0xB7]
+      Replacement: ' he'
+    - Sequence: [0x15, 0xB8]
+      Replacement: ' me'
+    - Sequence: [0x15, 0xB9]
+      Replacement: ' strange'
+    - Sequence: [0x15, 0xBA]
+      Replacement: ' for you'
+    - Sequence: [0x15, 0xBB]
+      Replacement: ight
+    - Sequence: [0x15, 0xBC]
+      Replacement: ' a '
+    - Sequence: [0x15, 0xBD]
+      Replacement: ' be'
+    - Sequence: [0x15, 0xBE]
+      Replacement: ther
+    - Sequence: [0x15, 0xBF]
+      Replacement: 'all '
+    - Sequence: [0x15, 0xC0]
+      Replacement: ' cannot '
+    - Sequence: [0x15, 0xC1]
+      Replacement: 'here is '
+    - Sequence: [0x15, 0xC2]
+      Replacement: You have
+    - Sequence: [0x15, 0xC3]
+      Replacement: Monotoli
+    - Sequence: [0x15, 0xC4]
+      Replacement: ' was '
+    - Sequence: [0x15, 0xC5]
+      Replacement: 'll you '
+    - Sequence: [0x15, 0xC6]
+      Replacement: 'hat '
+    - Sequence: [0x15, 0xC7]
+      Replacement: ', but '
+    - Sequence: [0x15, 0xC8]
+      Replacement: ' stuff'
+    - Sequence: [0x15, 0xC9]
+      Replacement: eep
+    - Sequence: [0x15, 0xCA]
+      Replacement: ' it '
+    - Sequence: [0x15, 0xCB]
+      Replacement: ' didn''t '
+    - Sequence: [0x15, 0xCC]
+      Replacement: ' like th'
+    - Sequence: [0x15, 0xCD]
+      Replacement: ll right
+    - Sequence: [0x15, 0xCE]
+      Replacement: ' should'
+    - Sequence: [0x15, 0xCF]
+      Replacement: ' over'
+    - Sequence: [0x15, 0xD0]
+      Replacement: '•Oh, '
+    - Sequence: [0x15, 0xD1]
+      Replacement: ' hear'
+    - Sequence: [0x15, 0xD2]
+      Replacement: ' every'
+    - Sequence: [0x15, 0xD3]
+      Replacement: 'I''m not '
+    - Sequence: [0x15, 0xD4]
+      Replacement: ' about t'
+    - Sequence: [0x15, 0xD5]
+      Replacement: ' zombies'
+    - Sequence: [0x15, 0xD6]
+      Replacement: ' damage'
+    - Sequence: [0x15, 0xD7]
+      Replacement: 'his is '
+    - Sequence: [0x15, 0xD8]
+      Replacement: all
+    - Sequence: [0x15, 0xD9]
+      Replacement: ' some'
+    - Sequence: [0x15, 0xDA]
+      Replacement: '•It '
+    - Sequence: [0x15, 0xDB]
+      Replacement: ' attack'
+    - Sequence: [0x15, 0xDC]
+      Replacement: ' right '
+    - Sequence: [0x15, 0xDD]
+      Replacement: 'ally '
+    - Sequence: [0x15, 0xDE]
+      Replacement: orry
+    - Sequence: [0x15, 0xDF]
+      Replacement: ess
+    - Sequence: [0x15, 0xE0]
+      Replacement: 'er '
+    - Sequence: [0x15, 0xE1]
+      Replacement: '•That''s '
+    - Sequence: [0x15, 0xE2]
+      Replacement: carry it
+    - Sequence: [0x15, 0xE3]
+      Replacement: ake
+    - Sequence: [0x15, 0xE4]
+      Replacement: 't was '
+    - Sequence: [0x15, 0xE5]
+      Replacement: ', the '
+    - Sequence: [0x15, 0xE6]
+      Replacement: 'n you '
+    - Sequence: [0x15, 0xE7]
+      Replacement: 'sn''t '
+    - Sequence: [0x15, 0xE8]
+      Replacement: ' help'
+    - Sequence: [0x15, 0xE9]
+      Replacement: 'king '
+    - Sequence: [0x15, 0xEA]
+      Replacement: ear
+    - Sequence: [0x15, 0xEB]
+      Replacement: ing the
+    - Sequence: [0x15, 0xEC]
+      Replacement: '  It''s '
+    - Sequence: [0x15, 0xED]
+      Replacement: very
+    - Sequence: [0x15, 0xEE]
+      Replacement: ' talking'
+    - Sequence: [0x15, 0xEF]
+      Replacement: 'ou''ve '
+    - Sequence: [0x15, 0xF0]
+      Replacement: 'that''s '
+    - Sequence: [0x15, 0xF1]
+      Replacement: ' to me'
+    - Sequence: [0x15, 0xF2]
+      Replacement: '•Hello'
+    - Sequence: [0x15, 0xF3]
+      Replacement: ' enemy'
+    - Sequence: [0x15, 0xF4]
+      Replacement: ' you are'
+    - Sequence: [0x15, 0xF5]
+      Replacement: ' by '
+    - Sequence: [0x15, 0xF6]
+      Replacement: ' IBNT'
+    - Sequence: [0x15, 0xF7]
+      Replacement: 'ight '
+    - Sequence: [0x15, 0xF8]
+      Replacement: 'on''t '
+    - Sequence: [0x15, 0xF9]
+      Replacement: est
+    - Sequence: [0x15, 0xFA]
+      Replacement: ick
+    - Sequence: [0x15, 0xFB]
+      Replacement: ' power '
+    - Sequence: [0x15, 0xFC]
+      Replacement: 's that '
+    - Sequence: [0x15, 0xFD]
+      Replacement: 's are '
+    - Sequence: [0x15, 0xFE]
+      Replacement: ' call'
+    - Sequence: [0x15, 0xFF]
+      Replacement: 't is '
+    - Sequence: [0x16, 0x00]
+      Replacement: ' is'
+    - Sequence: [0x16, 0x01]
+      Replacement: age
+    - Sequence: [0x16, 0x02]
+      Replacement: ', and '
+    - Sequence: [0x16, 0x03]
+      Replacement: ' great '
+    - Sequence: [0x16, 0x04]
+      Replacement: '•Thanks'
+    - Sequence: [0x16, 0x05]
+      Replacement: ' people'
+    - Sequence: [0x16, 0x06]
+      Replacement: ter
+    - Sequence: [0x16, 0x07]
+      Replacement: not
+    - Sequence: [0x16, 0x08]
+      Replacement: ill
+    - Sequence: [0x16, 0x09]
+      Replacement: ness
+    - Sequence: [0x16, 0x0A]
+      Replacement: '•This '
+    - Sequence: [0x16, 0x0B]
+      Replacement: ' into '
+    - Sequence: [0x16, 0x0C]
+      Replacement: ' ha'
+    - Sequence: [0x16, 0x0D]
+      Replacement: ' I can '
+    - Sequence: [0x16, 0x0E]
+      Replacement: 't your '
+    - Sequence: [0x16, 0x0F]
+      Replacement: ' before'
+    - Sequence: [0x16, 0x10]
+      Replacement: ' things'
+    - Sequence: [0x16, 0x11]
+      Replacement: tion
+    - Sequence: [0x16, 0x12]
+      Replacement: ' for'
+    - Sequence: [0x16, 0x13]
+      Replacement: 'be '
+    - Sequence: [0x16, 0x14]
+      Replacement: ' this'
+    - Sequence: [0x16, 0x15]
+      Replacement: Happy
+    - Sequence: [0x16, 0x16]
+      Replacement: '  You'
+    - Sequence: [0x16, 0x17]
+      Replacement: out
+    - Sequence: [0x16, 0x18]
+      Replacement: enough
+    - Sequence: [0x16, 0x19]
+      Replacement: '  I''m '
+    - Sequence: [0x16, 0x1A]
+      Replacement: '•You'
+    - Sequence: [0x16, 0x1B]
+      Replacement: ' go'
+    - Sequence: [0x16, 0x1C]
+      Replacement: for
+    - Sequence: [0x16, 0x1D]
+      Replacement: ' all th'
+    - Sequence: [0x16, 0x1E]
+      Replacement: ' though'
+    - Sequence: [0x16, 0x1F]
+      Replacement: ing you
+    - Sequence: [0x16, 0x20]
+      Replacement: e you
+    - Sequence: [0x16, 0x21]
+      Replacement: 'ring '
+    - Sequence: [0x16, 0x22]
+      Replacement: 'one '
+    - Sequence: [0x16, 0x23]
+      Replacement: get
+    - Sequence: [0x16, 0x24]
+      Replacement: 't you '
+    - Sequence: [0x16, 0x25]
+      Replacement: '•I''m s'
+    - Sequence: [0x16, 0x26]
+      Replacement: ' the s'
+    - Sequence: [0x16, 0x27]
+      Replacement: 'e''s '
+    - Sequence: [0x16, 0x28]
+      Replacement: port
+    - Sequence: [0x16, 0x29]
+      Replacement: d...
+    - Sequence: [0x16, 0x2A]
+      Replacement: ' out '
+    - Sequence: [0x16, 0x2B]
+      Replacement: '•What'
+    - Sequence: [0x16, 0x2C]
+      Replacement: ' get '
+    - Sequence: [0x16, 0x2D]
+      Replacement: 'I have '
+    - Sequence: [0x16, 0x2E]
+      Replacement: looking
+    - Sequence: [0x16, 0x2F]
+      Replacement: 'n this '
+    - Sequence: [0x16, 0x30]
+      Replacement: ' of my '
+    - Sequence: [0x16, 0x31]
+      Replacement: ' have a'
+    - Sequence: [0x16, 0x32]
+      Replacement: 'ent '
+    - Sequence: [0x16, 0x33]
+      Replacement: ' do'
+    - Sequence: [0x16, 0x34]
+      Replacement: 'd of '
+    - Sequence: [0x16, 0x35]
+      Replacement: ting
+    - Sequence: [0x16, 0x36]
+      Replacement: ncrease
+    - Sequence: [0x16, 0x37]
+      Replacement: ' Twoson'
+    - Sequence: [0x16, 0x38]
+      Replacement: through
+    - Sequence: [0x16, 0x39]
+      Replacement: 's your '
+    - Sequence: [0x16, 0x3A]
+      Replacement: 'ou''ll '
+    - Sequence: [0x16, 0x3B]
+      Replacement: ' place'
+    - Sequence: [0x16, 0x3C]
+      Replacement: ' right'
+    - Sequence: [0x16, 0x3D]
+      Replacement: ' Onett'
+    - Sequence: [0x16, 0x3E]
+      Replacement: '     '
+    - Sequence: [0x16, 0x3F]
+      Replacement: ' our '
+    - Sequence: [0x16, 0x40]
+      Replacement: ' too'
+    - Sequence: [0x16, 0x41]
+      Replacement: ater
+    - Sequence: [0x16, 0x42]
+      Replacement: ' be '
+    - Sequence: [0x16, 0x43]
+      Replacement: ain
+    - Sequence: [0x16, 0x44]
+      Replacement: ing.
+    - Sequence: [0x16, 0x45]
+      Replacement: 'take '
+    - Sequence: [0x16, 0x46]
+      Replacement: 'e is '
+    - Sequence: [0x16, 0x47]
+      Replacement: the
+    - Sequence: [0x16, 0x48]
+      Replacement: ' please'
+    - Sequence: [0x16, 0x49]
+      Replacement: ' do you'
+    - Sequence: [0x16, 0x4A]
+      Replacement: need
+    - Sequence: [0x16, 0x4B]
+      Replacement: use
+    - Sequence: [0x16, 0x4C]
+      Replacement: ' now.'
+    - Sequence: [0x16, 0x4D]
+      Replacement: ' got '
+    - Sequence: [0x16, 0x4E]
+      Replacement: '   '
+    - Sequence: [0x16, 0x4F]
+      Replacement: 'and '
+    - Sequence: [0x16, 0x50]
+      Replacement: ning
+    - Sequence: [0x16, 0x51]
+      Replacement: ' sta'
+    - Sequence: [0x16, 0x52]
+      Replacement: ' the t'
+    - Sequence: [0x16, 0x53]
+      Replacement: 'I was '
+    - Sequence: [0x16, 0x54]
+      Replacement: 'y the '
+    - Sequence: [0x16, 0x55]
+      Replacement: his
+    - Sequence: [0x16, 0x56]
+      Replacement: appe
+    - Sequence: [0x16, 0x57]
+      Replacement: con
+    - Sequence: [0x16, 0x58]
+      Replacement: ' ho'
+    - Sequence: [0x16, 0x59]
+      Replacement: 'hat''s '
+    - Sequence: [0x16, 0x5A]
+      Replacement: Threed
+    - Sequence: [0x16, 0x5B]
+      Replacement: 'get '
+    - Sequence: [0x16, 0x5C]
+      Replacement: 's of '
+    - Sequence: [0x16, 0x5D]
+      Replacement: inter
+    - Sequence: [0x16, 0x5E]
+      Replacement: talk
+    - Sequence: [0x16, 0x5F]
+      Replacement: ' man'
+    - Sequence: [0x16, 0x60]
+      Replacement: day
+    - Sequence: [0x16, 0x61]
+      Replacement: ove
+    - Sequence: [0x16, 0x62]
+      Replacement: ' ha ha'
+    - Sequence: [0x16, 0x63]
+      Replacement: inally
+    - Sequence: [0x16, 0x64]
+      Replacement: monkey
+    - Sequence: [0x16, 0x65]
+      Replacement: 's and '
+    - Sequence: [0x16, 0x66]
+      Replacement: ate
+    - Sequence: [0x16, 0x67]
+      Replacement: see
+    - Sequence: [0x16, 0x68]
+      Replacement: town
+    - Sequence: [0x16, 0x69]
+      Replacement: side
+    - Sequence: [0x16, 0x6A]
+      Replacement: 'y to '
+    - Sequence: [0x16, 0x6B]
+      Replacement: 'ever '
+    - Sequence: [0x16, 0x6C]
+      Replacement: equip
+    - Sequence: [0x16, 0x6D]
+      Replacement: ' than'
+    - Sequence: [0x16, 0x6E]
+      Replacement: ' who'
+    - Sequence: [0x16, 0x6F]
+      Replacement: long
+    - Sequence: [0x16, 0x70]
+      Replacement: care
+    - Sequence: [0x16, 0x71]
+      Replacement: room
+    - Sequence: [0x16, 0x72]
+      Replacement: 'e are '
+    - Sequence: [0x16, 0x73]
+      Replacement: ard
+    - Sequence: [0x16, 0x74]
+      Replacement: end
+    - Sequence: [0x16, 0x75]
+      Replacement: ', you '
+    - Sequence: [0x16, 0x76]
+      Replacement: ' the b'
+    - Sequence: [0x16, 0x77]
+      Replacement: I know
+    - Sequence: [0x16, 0x78]
+      Replacement: 'think '
+    - Sequence: [0x16, 0x79]
+      Replacement: 's you '
+    - Sequence: [0x16, 0x7A]
+      Replacement: time
+    - Sequence: [0x16, 0x7B]
+      Replacement: ment
+    - Sequence: [0x16, 0x7C]
+      Replacement: ' so'
+    - Sequence: [0x16, 0x7D]
+      Replacement: '!  '
+    - Sequence: [0x16, 0x7E]
+      Replacement: 'I''ve '
+    - Sequence: [0x16, 0x7F]
+      Replacement: ell
+    - Sequence: [0x16, 0x80]
+      Replacement: ' wa'
+    - Sequence: [0x16, 0x81]
+      Replacement: ious
+    - Sequence: [0x16, 0x82]
+      Replacement: reat
+    - Sequence: [0x16, 0x83]
+      Replacement: live
+    - Sequence: [0x16, 0x84]
+      Replacement: ange
+    - Sequence: [0x16, 0x85]
+      Replacement: ' we'
+    - Sequence: [0x16, 0x86]
+      Replacement: ble
+    - Sequence: [0x16, 0x87]
+      Replacement: '•.....'
+    - Sequence: [0x16, 0x88]
+      Replacement: ecover
+    - Sequence: [0x16, 0x89]
+      Replacement: ' only '
+    - Sequence: [0x16, 0x8A]
+      Replacement: 'thing '
+    - Sequence: [0x16, 0x8B]
+      Replacement: er...
+    - Sequence: [0x16, 0x8C]
+      Replacement: 'Mr. '
+    - Sequence: [0x16, 0x8D]
+      Replacement: ough
+    - Sequence: [0x16, 0x8E]
+      Replacement: ' now'
+    - Sequence: [0x16, 0x8F]
+      Replacement: '  I'
+    - Sequence: [0x16, 0x90]
+      Replacement: wor
+    - Sequence: [0x16, 0x91]
+      Replacement: 'to '
+    - Sequence: [0x16, 0x92]
+      Replacement: ed.
+    - Sequence: [0x16, 0x93]
+      Replacement: '  I '
+    - Sequence: [0x16, 0x94]
+      Replacement: '''re '
+    - Sequence: [0x16, 0x95]
+      Replacement: ' give '
+    - Sequence: [0x16, 0x96]
+      Replacement: 'ing a '
+    - Sequence: [0x16, 0x97]
+      Replacement: return
+    - Sequence: [0x16, 0x98]
+      Replacement: better
+    - Sequence: [0x16, 0x99]
+      Replacement: 'ince '
+    - Sequence: [0x16, 0x9A]
+      Replacement: ' well'
+    - Sequence: [0x16, 0x9B]
+      Replacement: ' one '
+    - Sequence: [0x16, 0x9C]
+      Replacement: still
+    - Sequence: [0x16, 0x9D]
+      Replacement: 'ying '
+    - Sequence: [0x16, 0x9E]
+      Replacement: me...
+    - Sequence: [0x16, 0x9F]
+      Replacement: sta
+    - Sequence: [0x16, 0xA0]
+      Replacement: 'ust '
+    - Sequence: [0x16, 0xA1]
+      Replacement: per
+    - Sequence: [0x16, 0xA2]
+      Replacement: lease
+    - Sequence: [0x16, 0xA3]
+      Replacement: 'ling '
+    - Sequence: [0x16, 0xA4]
+      Replacement: point
+    - Sequence: [0x16, 0xA5]
+      Replacement: ect
+    - Sequence: [0x16, 0xA6]
+      Replacement: ast
+    - Sequence: [0x16, 0xA7]
+      Replacement: pretty
+    - Sequence: [0x16, 0xA8]
+      Replacement: Giygas
+    - Sequence: [0x16, 0xA9]
+      Replacement: ecause
+    - Sequence: [0x16, 0xAA]
+      Replacement: member
+    - Sequence: [0x16, 0xAB]
+      Replacement: 'carry '
+    - Sequence: [0x16, 0xAC]
+      Replacement: ' used '
+    - Sequence: [0x16, 0xAD]
+      Replacement: elieve
+    - Sequence: [0x16, 0xAE]
+      Replacement: ' money'
+    - Sequence: [0x16, 0xAF]
+      Replacement: pres
+    - Sequence: [0x16, 0xB0]
+      Replacement: way
+    - Sequence: [0x16, 0xB1]
+      Replacement: ' di'
+    - Sequence: [0x16, 0xB2]
+      Replacement: ' even'
+    - Sequence: [0x16, 0xB3]
+      Replacement: 'ound '
+    - Sequence: [0x16, 0xB4]
+      Replacement: 's to '
+    - Sequence: [0x16, 0xB5]
+      Replacement: 'ting '
+    - Sequence: [0x16, 0xB6]
+      Replacement: 'ted '
+    - Sequence: [0x16, 0xB7]
+      Replacement: oing
+    - Sequence: [0x16, 0xB8]
+      Replacement: ' and'
+    - Sequence: [0x16, 0xB9]
+      Replacement: ine
+    - Sequence: [0x16, 0xBA]
+      Replacement: '  T'
+    - Sequence: [0x16, 0xBB]
+      Replacement: sure
+    - Sequence: [0x16, 0xBC]
+      Replacement: ' on '
+    - Sequence: [0x16, 0xBD]
+      Replacement: '•...I'
+    - Sequence: [0x16, 0xBE]
+      Replacement: while
+    - Sequence: [0x16, 0xBF]
+      Replacement: '•but '
+    - Sequence: [0x16, 0xC0]
+      Replacement: '•We'
+    - Sequence: [0x16, 0xC1]
+      Replacement: ice
+    - Sequence: [0x16, 0xC2]
+      Replacement: 'se '
+    - Sequence: [0x16, 0xC3]
+      Replacement: 'ive '
+    - Sequence: [0x16, 0xC4]
+      Replacement: ' rea'
+    - Sequence: [0x16, 0xC5]
+      Replacement: ' com'
+    - Sequence: [0x16, 0xC6]
+      Replacement: 'est '
+    - Sequence: [0x16, 0xC7]
+      Replacement: have
+    - Sequence: [0x16, 0xC8]
+      Replacement: ' but'
+    - Sequence: [0x16, 0xC9]
+      Replacement: away
+    - Sequence: [0x16, 0xCA]
+      Replacement: here
+    - Sequence: [0x16, 0xCB]
+      Replacement: ' must'
+    - Sequence: [0x16, 0xCC]
+      Replacement: ' but '
+    - Sequence: [0x16, 0xCD]
+      Replacement: ' want'
+    - Sequence: [0x16, 0xCE]
+      Replacement: ready
+    - Sequence: [0x16, 0xCF]
+      Replacement: I'm
+    - Sequence: [0x16, 0xD0]
+      Replacement: carr
+    - Sequence: [0x16, 0xD1]
+      Replacement: 'my '
+    - Sequence: [0x16, 0xD2]
+      Replacement: ay...
+    - Sequence: [0x16, 0xD3]
+      Replacement: ' are '
+    - Sequence: [0x16, 0xD4]
+      Replacement: '•Hey,'
+    - Sequence: [0x16, 0xD5]
+      Replacement: world
+    - Sequence: [0x16, 0xD6]
+      Replacement: ing a
+    - Sequence: [0x16, 0xD7]
+      Replacement: ' happ'
+    - Sequence: [0x16, 0xD8]
+      Replacement: ' seem'
+    - Sequence: [0x16, 0xD9]
+      Replacement: ' his '
+    - Sequence: [0x16, 0xDA]
+      Replacement: nder
+    - Sequence: [0x16, 0xDB]
+      Replacement: ' se'
+    - Sequence: [0x16, 0xDC]
+      Replacement: ant
+    - Sequence: [0x16, 0xDD]
+      Replacement: item
+    - Sequence: [0x16, 0xDE]
+      Replacement: '•But'
+    - Sequence: [0x16, 0xDF]
+      Replacement: ' sho'
+    - Sequence: [0x16, 0xE0]
+      Replacement: 'in a '
+    - Sequence: [0x16, 0xE1]
+      Replacement: 'made '
+    - Sequence: [0x16, 0xE2]
+      Replacement: night
+    - Sequence: [0x16, 0xE3]
+      Replacement: 'et''s '
+    - Sequence: [0x16, 0xE4]
+      Replacement: ' like'
+    - Sequence: [0x16, 0xE5]
+      Replacement: '  The'
+    - Sequence: [0x16, 0xE6]
+      Replacement: che
+    - Sequence: [0x16, 0xE7]
+      Replacement: ' de'
+    - Sequence: [0x16, 0xE8]
+      Replacement: ful
+    - Sequence: [0x16, 0xE9]
+      Replacement: hat
+    - Sequence: [0x16, 0xEA]
+      Replacement: and
+    - Sequence: [0x16, 0xEB]
+      Replacement: self
+    - Sequence: [0x16, 0xEC]
+      Replacement: ould
+    - Sequence: [0x16, 0xED]
+      Replacement: '•No'
+    - Sequence: [0x16, 0xEE]
+      Replacement: car
+    - Sequence: [0x16, 0xEF]
+      Replacement: ' tr'
+    - Sequence: [0x16, 0xF0]
+      Replacement: ' good'
+    - Sequence: [0x16, 0xF1]
+      Replacement: ' stor'
+    - Sequence: [0x16, 0xF2]
+      Replacement: ombie
+    - Sequence: [0x16, 0xF3]
+      Replacement: '•Oh'
+    - Sequence: [0x16, 0xF4]
+      Replacement: '•It'
+    - Sequence: [0x16, 0xF5]
+      Replacement: 's a '
+    - Sequence: [0x16, 0xF6]
+      Replacement: vent
+    - Sequence: [0x16, 0xF7]
+      Replacement: 'ant '
+    - Sequence: [0x16, 0xF8]
+      Replacement: ' so '
+    - Sequence: [0x16, 0xF9]
+      Replacement: olla
+    - Sequence: [0x16, 0xFA]
+      Replacement: ree
+    - Sequence: [0x16, 0xFB]
+      Replacement: 'Your '
+    - Sequence: [0x16, 0xFC]
+      Replacement: 'make '
+    - Sequence: [0x16, 0xFD]
+      Replacement: ' work'
+    - Sequence: [0x16, 0xFE]
+      Replacement: power
+    - Sequence: [0x16, 0xFF]
+      Replacement: ' home'
+    - Sequence: [0x17, 0x00]
+      Replacement: also
+    - Sequence: [0x17, 0x01]
+      Replacement: ance
+    - Sequence: [0x17, 0x02]
+      Replacement: '•How'
+    - Sequence: [0x17, 0x03]
+      Replacement: h...
+    - Sequence: [0x17, 0x04]
+      Replacement: '•If'
+    - Sequence: [0x17, 0x05]
+      Replacement: ple
+    - Sequence: [0x17, 0x06]
+      Replacement: buy
+    - Sequence: [0x17, 0x07]
+      Replacement: 'e, '
+    - Sequence: [0x17, 0x08]
+      Replacement: n't
+    - Sequence: [0x17, 0x09]
+      Replacement: oke
+    - Sequence: [0x17, 0x0A]
+      Replacement: 'n''t '
+    - Sequence: [0x17, 0x0B]
+      Replacement: more
+    - Sequence: [0x17, 0x0C]
+      Replacement: Good
+    - Sequence: [0x17, 0x0D]
+      Replacement: 't a '
+    - Sequence: [0x17, 0x0E]
+      Replacement: ' all'
+    - Sequence: [0x17, 0x0F]
+      Replacement: take
+    - Sequence: [0x17, 0x10]
+      Replacement: round
+    - Sequence: [0x17, 0x11]
+      Replacement: ' when'
+    - Sequence: [0x17, 0x12]
+      Replacement: ' name'
+    - Sequence: [0x17, 0x13]
+      Replacement: being
+    - Sequence: [0x17, 0x14]
+      Replacement: attle
+    - Sequence: [0x17, 0x15]
+      Replacement: ite
+    - Sequence: [0x17, 0x16]
+      Replacement: ack
+    - Sequence: [0x17, 0x17]
+      Replacement: y...
+    - Sequence: [0x17, 0x18]
+      Replacement: '•Whe'
+    - Sequence: [0x17, 0x19]
+      Replacement: with
+    - Sequence: [0x17, 0x1A]
+      Replacement: 'al '
+    - Sequence: [0x17, 0x1B]
+      Replacement: 'have '
+    - Sequence: [0x17, 0x1C]
+      Replacement: ' look'
+    - Sequence: [0x17, 0x1D]
+      Replacement: 't of '
+    - Sequence: [0x17, 0x1E]
+      Replacement: aster
+    - Sequence: [0x17, 0x1F]
+      Replacement: ' a lo'
+    - Sequence: [0x17, 0x20]
+      Replacement: ' feel'
+    - Sequence: [0x17, 0x21]
+      Replacement: 'here '
+    - Sequence: [0x17, 0x22]
+      Replacement: count
+    - Sequence: [0x17, 0x23]
+      Replacement: monst
+    - Sequence: [0x17, 0x24]
+      Replacement: now
+    - Sequence: [0x17, 0x25]
+      Replacement: ark
+    - Sequence: [0x17, 0x26]
+      Replacement: ous
+    - Sequence: [0x17, 0x27]
+      Replacement: '''ll'
+    - Sequence: [0x17, 0x28]
+      Replacement: ' bus'
+    - Sequence: [0x17, 0x29]
+      Replacement: head
+    - Sequence: [0x17, 0x2A]
+      Replacement: ' any '
+    - Sequence: [0x17, 0x2B]
+      Replacement: t you
+    - Sequence: [0x17, 0x2C]
+      Replacement: erson
+    - Sequence: [0x17, 0x2D]
+      Replacement: after
+    - Sequence: [0x17, 0x2E]
+      Replacement: ummer
+    - Sequence: [0x17, 0x2F]
+      Replacement: ' hard'
+    - Sequence: [0x17, 0x30]
+      Replacement: 'ful '
+    - Sequence: [0x17, 0x31]
+      Replacement: ever
+    - Sequence: [0x17, 0x32]
+      Replacement: ' kid'
+    - Sequence: [0x17, 0x33]
+      Replacement: ' a b'
+    - Sequence: [0x17, 0x34]
+      Replacement: kay
+    - Sequence: [0x17, 0x35]
+      Replacement: tra
+    - Sequence: [0x17, 0x36]
+      Replacement: pla
+    - Sequence: [0x17, 0x37]
+      Replacement: ook
+    - Sequence: [0x17, 0x38]
+      Replacement: ome
+    - Sequence: [0x17, 0x39]
+      Replacement: eat
+    - Sequence: [0x17, 0x3A]
+      Replacement: '•Wel'
+    - Sequence: [0x17, 0x3B]
+      Replacement: ' off'
+    - Sequence: [0x17, 0x3C]
+      Replacement: turn
+    - Sequence: [0x17, 0x3D]
+      Replacement: I am
+    - Sequence: [0x17, 0x3E]
+      Replacement: oney
+    - Sequence: [0x17, 0x3F]
+      Replacement: ' any'
+    - Sequence: [0x17, 0x40]
+      Replacement: ave
+    - Sequence: [0x17, 0x41]
+      Replacement: 'any '
+    - Sequence: [0x17, 0x42]
+      Replacement: enem
+    - Sequence: [0x17, 0x43]
+      Replacement: ' con'
+    - Sequence: [0x17, 0x44]
+      Replacement: ' me '
+    - Sequence: [0x17, 0x45]
+      Replacement: red
+    - Sequence: [0x17, 0x46]
+      Replacement: 'en '
+    - Sequence: [0x17, 0x47]
+      Replacement: ' bo'
+    - Sequence: [0x17, 0x48]
+      Replacement: ' re'
+    - Sequence: [0x17, 0x49]
+      Replacement: 'ell '
+    - Sequence: [0x17, 0x4A]
+      Replacement: sell
+    - Sequence: [0x17, 0x4B]
+      Replacement: what
+    - Sequence: [0x17, 0x4C]
+      Replacement: next
+    - Sequence: [0x17, 0x4D]
+      Replacement: ure
+    - Sequence: [0x17, 0x4E]
+      Replacement: ' bu'
+    - Sequence: [0x17, 0x4F]
+      Replacement: pro
+    - Sequence: [0x17, 0x50]
+      Replacement: ' on'
+    - Sequence: [0x17, 0x51]
+      Replacement: res
+    - Sequence: [0x17, 0x52]
+      Replacement: 'es '
+    - Sequence: [0x17, 0x53]
+      Replacement: ' lo'
+    - Sequence: [0x17, 0x54]
+      Replacement: our
+    - Sequence: [0x17, 0x55]
+      Replacement: 'use '
+    - Sequence: [0x17, 0x56]
+      Replacement: iste
+    - Sequence: [0x17, 0x57]
+      Replacement: ood
+    - Sequence: [0x17, 0x58]
+      Replacement: ' no'
+    - Sequence: [0x17, 0x59]
+      Replacement: ope
+    - Sequence: [0x17, 0x5A]
+      Replacement: ock
+    - Sequence: [0x17, 0x5B]
+      Replacement: row
+    - Sequence: [0x17, 0x5C]
+      Replacement: '•He'
+    - Sequence: [0x17, 0x5D]
+      Replacement: how
+    - Sequence: [0x17, 0x5E]
+      Replacement: ' may'
+    - Sequence: [0x17, 0x5F]
+      Replacement: ' as '
+    - Sequence: [0x17, 0x60]
+      Replacement: stor
+    - Sequence: [0x17, 0x61]
+      Replacement: ' are'
+    - Sequence: [0x17, 0x62]
+      Replacement: 'ost '
+    - Sequence: [0x17, 0x63]
+      Replacement: mean
+    - Sequence: [0x17, 0x64]
+      Replacement: '  We'
+    - Sequence: [0x17, 0x65]
+      Replacement: '  He'
+    - Sequence: [0x17, 0x66]
+      Replacement: '•An'
+    - Sequence: [0x17, 0x67]
+      Replacement: 'it '
+    - Sequence: [0x17, 0x68]
+      Replacement: 'in '
+    - Sequence: [0x17, 0x69]
+      Replacement: ound
+    - Sequence: [0x17, 0x6A]
+      Replacement: one.
+    - Sequence: [0x17, 0x6B]
+      Replacement: come
+    - Sequence: [0x17, 0x6C]
+      Replacement: blue
+    - Sequence: [0x17, 0x6D]
+      Replacement: way,
+    - Sequence: [0x17, 0x6E]
+      Replacement: ' or '
+    - Sequence: [0x17, 0x6F]
+      Replacement: ' mo'
+    - Sequence: [0x17, 0x70]
+      Replacement: '.  '
+    - Sequence: [0x17, 0x71]
+      Replacement: each
+    - Sequence: [0x17, 0x72]
+      Replacement: some
+    - Sequence: [0x17, 0x73]
+      Replacement: '•(Th'
+    - Sequence: [0x17, 0x74]
+      Replacement: otel
+    - Sequence: [0x17, 0x75]
+      Replacement: hand
+    - Sequence: [0x17, 0x76]
+      Replacement: came
+    - Sequence: [0x17, 0x77]
+      Replacement: ' ca'
+    - Sequence: [0x17, 0x78]
+      Replacement: ame
+    - Sequence: [0x17, 0x79]
+      Replacement: '•Hey'
+    - Sequence: [0x17, 0x7A]
+      Replacement: 'een '
+    - Sequence: [0x17, 0x7B]
+      Replacement: spec
+    - Sequence: [0x17, 0x7C]
+      Replacement: 'red '
+    - Sequence: [0x17, 0x7D]
+      Replacement: ing!
+    - Sequence: [0x17, 0x7E]
+      Replacement: ' ...'
+    - Sequence: [0x17, 0x7F]
+      Replacement: hose
+    - Sequence: [0x17, 0x80]
+      Replacement: 'ind '
+    - Sequence: [0x17, 0x81]
+      Replacement: 'ice '
+    - Sequence: [0x17, 0x82]
+      Replacement: ver
+    - Sequence: [0x17, 0x83]
+      Replacement: '  W'
+    - Sequence: [0x17, 0x84]
+      Replacement: min
+    - Sequence: [0x17, 0x85]
+      Replacement: 'et '
+    - Sequence: [0x17, 0x86]
+      Replacement: 'on '
+    - Sequence: [0x17, 0x87]
+      Replacement: ace
+    - Sequence: [0x17, 0x88]
+      Replacement: er.
+    - Sequence: [0x17, 0x89]
+      Replacement: 'are '
+    - Sequence: [0x17, 0x8A]
+      Replacement: nter
+    - Sequence: [0x17, 0x8B]
+      Replacement: o...
+    - Sequence: [0x17, 0x8C]
+      Replacement: were
+    - Sequence: [0x17, 0x8D]
+      Replacement: help
+    - Sequence: [0x17, 0x8E]
+      Replacement: 'old '
+    - Sequence: [0x17, 0x8F]
+      Replacement: ' it.'
+    - Sequence: [0x17, 0x90]
+      Replacement: hear
+    - Sequence: [0x17, 0x91]
+      Replacement: stop
+    - Sequence: [0x17, 0x92]
+      Replacement: look
+    - Sequence: [0x17, 0x93]
+      Replacement: com
+    - Sequence: [0x17, 0x94]
+      Replacement: '•Do'
+    - Sequence: [0x17, 0x95]
+      Replacement: ' her'
+    - Sequence: [0x17, 0x96]
+      Replacement: ' pro'
+    - Sequence: [0x17, 0x97]
+      Replacement: chin
+    - Sequence: [0x17, 0x98]
+      Replacement: 'ble '
+    - Sequence: [0x17, 0x99]
+      Replacement: 'e a '
+    - Sequence: [0x17, 0x9A]
+      Replacement: girl
+    - Sequence: [0x17, 0x9B]
+      Replacement: luck
+    - Sequence: [0x17, 0x9C]
+      Replacement: '  B'
+    - Sequence: [0x17, 0x9D]
+      Replacement: act
+    - Sequence: [0x17, 0x9E]
+      Replacement: ike
+    - Sequence: [0x17, 0x9F]
+      Replacement: down
+    - Sequence: [0x17, 0xA0]
+      Replacement: part
+    - Sequence: [0x17, 0xA1]
+      Replacement: ' see'
+    - Sequence: [0x17, 0xA2]
+      Replacement: ' use'
+    - Sequence: [0x17, 0xA3]
+      Replacement: 'uch '
+    - Sequence: [0x17, 0xA4]
+      Replacement: from
+    - Sequence: [0x17, 0xA5]
+      Replacement: just
+    - Sequence: [0x17, 0xA6]
+      Replacement: llow
+    - Sequence: [0x17, 0xA7]
+      Replacement: '•Her'
+    - Sequence: [0x17, 0xA8]
+      Replacement: ' at '
+    - Sequence: [0x17, 0xA9]
+      Replacement: '•So,'
+    - Sequence: [0x17, 0xAA]
+      Replacement: ' ye'
+    - Sequence: [0x17, 0xAB]
+      Replacement: ser
+    - Sequence: [0x17, 0xAC]
+      Replacement: ying
+    - Sequence: [0x17, 0xAD]
+      Replacement: ring
+    - Sequence: [0x17, 0xAE]
+      Replacement: eave
+    - Sequence: [0x17, 0xAF]
+      Replacement: 'big '
+    - Sequence: [0x17, 0xB0]
+      Replacement: ried
+    - Sequence: [0x17, 0xB1]
+      Replacement: ' was'
+    - Sequence: [0x17, 0xB2]
+      Replacement: ' say'
+    - Sequence: [0x17, 0xB3]
+      Replacement: ' su'
+    - Sequence: [0x17, 0xB4]
+      Replacement: her
+    - Sequence: [0x17, 0xB5]
+      Replacement: it.
+    - Sequence: [0x17, 0xB6]
+      Replacement: Man
+    - Sequence: [0x17, 0xB7]
+      Replacement: kin
+    - Sequence: [0x17, 0xB8]
+      Replacement: ' up'
+    - Sequence: [0x17, 0xB9]
+      Replacement: ers
+    - Sequence: [0x17, 0xBA]
+      Replacement: '•Why'
+    - Sequence: [0x17, 0xBB]
+      Replacement: p...
+    - Sequence: [0x17, 0xBC]
+      Replacement: cour
+    - Sequence: [0x17, 0xBD]
+      Replacement: ' him'
+    - Sequence: [0x17, 0xBE]
+      Replacement: agic
+    - Sequence: [0x17, 0xBF]
+      Replacement: any
+    - Sequence: [0x17, 0xC0]
+      Replacement: fin
+    - Sequence: [0x17, 0xC1]
+      Replacement: eal
+    - Sequence: [0x17, 0xC2]
+      Replacement: 'he '
+    - Sequence: [0x17, 0xC3]
+      Replacement: ide
+    - Sequence: [0x17, 0xC4]
+      Replacement: oor
+    - Sequence: [0x17, 0xC5]
+      Replacement: ity
+    - Sequence: [0x17, 0xC6]
+      Replacement: got
+    - Sequence: [0x17, 0xC7]
+      Replacement: ens
+    - Sequence: [0x17, 0xC8]
+      Replacement: ish
+    - Sequence: [0x17, 0xC9]
+      Replacement: ive
+    - Sequence: [0x17, 0xCA]
+      Replacement: ' sa'
+    - Sequence: [0x17, 0xCB]
+      Replacement: oon
+    - Sequence: [0x17, 0xCC]
+      Replacement: fee
+    - Sequence: [0x17, 0xCD]
+      Replacement: s a
+    - Sequence: [0x17, 0xCE]
+      Replacement: nce
+    - Sequence: [0x17, 0xCF]
+      Replacement: '  D'
+    - Sequence: [0x17, 0xD0]
+      Replacement: uck
+    - Sequence: [0x17, 0xD1]
+      Replacement: ass
+    - Sequence: [0x17, 0xD2]
+      Replacement: man
+    - Sequence: [0x17, 0xD3]
+      Replacement: a p
+    - Sequence: [0x17, 0xD4]
+      Replacement: '•(I'
+    - Sequence: [0x17, 0xD5]
+      Replacement: '•Wh'
+    - Sequence: [0x17, 0xD6]
+      Replacement: ' gu'
+    - Sequence: [0x17, 0xD7]
+      Replacement: '  ('
+    - Sequence: [0x17, 0xD8]
+      Replacement: bus
+    - Sequence: [0x17, 0xD9]
+      Replacement: los
+    - Sequence: [0x17, 0xDA]
+      Replacement: 'ts '
+    - Sequence: [0x17, 0xDB]
+      Replacement: ' ba'
+    - Sequence: [0x17, 0xDC]
+      Replacement: '  S'
+    - Sequence: [0x17, 0xDD]
+      Replacement: ' if'
+    - Sequence: [0x17, 0xDE]
+      Replacement: '•Ha'
+    - Sequence: [0x17, 0xDF]
+      Replacement: ' ma'
+    - Sequence: [0x17, 0xE0]
+      Replacement: unn
+    - Sequence: [0x17, 0xE1]
+      Replacement: 'ay '
+    - Sequence: [0x17, 0xE2]
+      Replacement: ner
+    - Sequence: [0x17, 0xE3]
+      Replacement: '•A '
+    - Sequence: [0x17, 0xE4]
+      Replacement: 'or '
+    - Sequence: [0x17, 0xE5]
+      Replacement: stu
+    - Sequence: [0x17, 0xE6]
+      Replacement: ust
+    - Sequence: [0x17, 0xE7]
+      Replacement: kya
+    - Sequence: [0x17, 0xE8]
+      Replacement: shi
+    - Sequence: [0x17, 0xE9]
+      Replacement: pos
+    - Sequence: [0x17, 0xEA]
+      Replacement: '  A'
+    - Sequence: [0x17, 0xEB]
+      Replacement: int
+    - Sequence: [0x17, 0xEC]
+      Replacement: ' le'
+    - Sequence: [0x17, 0xED]
+      Replacement: ary
+    - Sequence: [0x17, 0xEE]
+      Replacement: ven
+    - Sequence: [0x17, 0xEF]
+      Replacement: ' ch'
+    - Sequence: [0x17, 0xF0]
+      Replacement: own
+    - Sequence: [0x17, 0xF1]
+      Replacement: ' hu'
+    - Sequence: [0x17, 0xF2]
+      Replacement: '•My'
+    - Sequence: [0x17, 0xF3]
+      Replacement: '•So'
+    - Sequence: [0x17, 0xF4]
+      Replacement: ' sp'
+    - Sequence: [0x17, 0xF5]
+      Replacement: ' sh'
+    - Sequence: [0x17, 0xF6]
+      Replacement: wan
+    - Sequence: [0x17, 0xF7]
+      Replacement: ool
+    - Sequence: [0x17, 0xF8]
+      Replacement: '  Y'
+    - Sequence: [0x17, 0xF9]
+      Replacement: old
+    - Sequence: [0x17, 0xFA]
+      Replacement: eas
+    - Sequence: [0x17, 0xFB]
+      Replacement: ', I'
+    - Sequence: [0x17, 0xFC]
+      Replacement: iki
+    - Sequence: [0x17, 0xFD]
+      Replacement: '•Ky'
+    - Sequence: [0x17, 0xFE]
+      Replacement: '•Ye'
+    - Sequence: [0x17, 0xFF]
+      Replacement: spi
+    - Sequence: [0x18, 0x01, "XX"]
+    - Sequence: [0x18, 0x03, "XX"]
+    - Sequence: [0x18, 0x05, "XX", "XX"]
+    - Sequence: [0x18, 0x07, "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x18, 0x0D, "XX", "XX"]
+    - Sequence: [0x18, "XX"]
+    - Sequence: [0x19, 0x05, "XX", "XX", "XX"]
+    - Sequence: [0x19, 0x10, "XX"]
+    - Sequence: [0x19, 0x11, "XX"]
+    - Sequence: [0x19, 0x16, "XX", "XX"]
+    - Sequence: [0x19, 0x18, "XX"]
+    - Sequence: [0x19, 0x19, "XX", "XX"]
+    - Sequence: [0x19, 0x1A, "XX"]
+    - Sequence: [0x19, 0x1B, "XX"]
+    - Sequence: [0x19, 0x1C, "XX", "XX"]
+    - Sequence: [0x19, 0x1D, "XX", "XX"]
+    - Sequence: [0x19, 0x21, "XX"]
+    - Sequence: [0x19, 0x22, "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x19, 0x23, "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x19, 0x24, "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x19, 0x25, "XX"]
+    - Sequence: [0x19, 0x26, "XX"]
+    - Sequence: [0x19, 0x27, "XX"]
+    - Sequence: [0x19, 0x28, "XX"]
+    - Sequence: [0x19, "XX"]
+    - Sequence: [0x1A, 0x06, "XX"]
+    - Sequence: [0x1A, "XX"]
+    - Sequence: [0x1B, 0x02, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1B, 0x03, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1B, "XX"]
+    - Sequence: [0x1C, 0x04]
+    - Sequence: [0x1C, 0x0A, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1C, 0x0B, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1C, 0x0D]
+    - Sequence: [0x1C, 0x0E]
+    - Sequence: [0x1C, 0x0F]
+    - Sequence: [0x1C, 0x13, "XX", "XX"]
+    - Sequence: [0x1C, "XX", "XX"]
+    - Sequence: [0x1D, 0x00, "XX", "XX"]
+    - Sequence: [0x1D, 0x01, "XX", "XX"]
+    - Sequence: [0x1D, 0x02, "XX"]
+    - Sequence: [0x1D, 0x03, "XX"]
+    - Sequence: [0x1D, 0x04, "XX", "XX"]
+    - Sequence: [0x1D, 0x05, "XX", "XX"]
+    - Sequence: [0x1D, 0x06, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1D, 0x07, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1D, 0x08, "XX", "XX"]
+    - Sequence: [0x1D, 0x09, "XX", "XX"]
+    - Sequence: [0x1D, 0x0E, "XX", "XX"]
+    - Sequence: [0x1D, 0x0F, "XX", "XX"]
+    - Sequence: [0x1D, 0x10, "XX", "XX"]
+    - Sequence: [0x1D, 0x11, "XX", "XX"]
+    - Sequence: [0x1D, 0x12, "XX", "XX"]
+    - Sequence: [0x1D, 0x13, "XX", "XX"]
+    - Sequence: [0x1D, 0x14, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1D, 0x15, "XX", "XX"]
+    - Sequence: [0x1D, 0x17, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1D, 0x18, "XX"]
+    - Sequence: [0x1D, 0x19, "XX"]
+    - Sequence: [0x1D, 0x21, "XX"]
+    - Sequence: [0x1D, 0x23, "XX"]
+    - Sequence: [0x1D, 0x24, "XX"]
+    - Sequence: [0x1D, "XX"]
+    - Sequence: [0x1E, 0x09, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1E, "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0x00, "XX", "XX"]
+    - Sequence: [0x1F, 0x02, "XX"]
+    - Sequence: [0x1F, 0x03]
+    - Sequence: [0x1F, 0x05]
+    - Sequence: [0x1F, 0x06]
+    - Sequence: [0x1F, 0x13, "XX", "XX"]
+    - Sequence: [0x1F, 0x15, "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0x16, "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0x17, "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0x18, "XX", "XX", "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0x19, "XX", "XX", "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0x1A, "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0x1C, "XX", "XX"]
+    - Sequence: [0x1F, 0x1E, "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0x1F, "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0x20, "XX", "XX"]
+    - Sequence: [0x1F, 0x30]
+    - Sequence: [0x1F, 0x31]
+    - Sequence: [0x1F, 0x40, "XX", "XX"]
+    - Sequence: [0x1F, 0x50]
+    - Sequence: [0x1F, 0x51]
+    - Sequence: [0x1F, 0x61]
+    - Sequence: [0x1F, 0x63, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0x64]
+    - Sequence: [0x1F, 0x65]
+    - Sequence: [0x1F, 0x66, "XX", "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0x68]
+    - Sequence: [0x1F, 0x69]
+    - Sequence: [0x1F, 0x71, "XX", "XX"]
+    - Sequence: [0x1F, 0x81, "XX", "XX"]
+    - Sequence: [0x1F, 0x83, "XX", "XX"]
+    - Sequence: [0x1F, 0x90]
+    - Sequence: [0x1F, 0xA0]
+    - Sequence: [0x1F, 0xA1]
+    - Sequence: [0x1F, 0xA2]
+    - Sequence: [0x1F, 0xB0]
+    - Sequence: [0x1F, 0xC0, "XX", "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0xD1]
+    - Sequence: [0x1F, 0xE1, "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0xE4, "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0xE6, "XX", "XX"]
+    - Sequence: [0x1F, 0xE7, "XX", "XX"]
+    - Sequence: [0x1F, 0xE9, "XX", "XX"]
+    - Sequence: [0x1F, 0xEA, "XX", "XX"]
+    - Sequence: [0x1F, 0xEB, "XX", "XX"]
+    - Sequence: [0x1F, 0xEC, "XX", "XX"]
+    - Sequence: [0x1F, 0xED]
+    - Sequence: [0x1F, 0xEE, "XX", "XX"]
+    - Sequence: [0x1F, 0xEF, "XX", "XX"]
+    - Sequence: [0x1F, 0xF1, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0xF2, "XX", "XX", "XX", "XX"]
+    - Sequence: [0x1F, 0xF3, "XX", "XX", "XX"]
+    - Sequence: [0x1F, "XX", "XX"]
+    - Sequence: [0x50]
+      Replacement: ' '
+    - Sequence: [0x51]
+      Replacement: '!'
+    - Sequence: [0x54]
+      Replacement: $
+    - Sequence: [0x55]
+      Replacement: '%'
+    - Sequence: [0x56]
+      Replacement: '00'
+    - Sequence: [0x57]
+      Replacement: ''''
+    - Sequence: [0x58]
+      Replacement: (
+    - Sequence: [0x59]
+      Replacement: )
+    - Sequence: [0x5A]
+      Replacement: '*'
+    - Sequence: [0x5B]
+      Replacement: '+'
+    - Sequence: [0x5C]
+      Replacement: ','
+    - Sequence: [0x5D]
+      Replacement: '-'
+    - Sequence: [0x5E]
+      Replacement: .
+    - Sequence: [0x5F]
+      Replacement: '\'
+    - Sequence: [0x60]
+      Replacement: "0"
+    - Sequence: [0x61]
+      Replacement: "1"
+    - Sequence: [0x62]
+      Replacement: "2"
+    - Sequence: [0x63]
+      Replacement: "3"
+    - Sequence: [0x64]
+      Replacement: "4"
+    - Sequence: [0x65]
+      Replacement: "5"
+    - Sequence: [0x66]
+      Replacement: "6"
+    - Sequence: [0x67]
+      Replacement: "7"
+    - Sequence: [0x68]
+      Replacement: "8"
+    - Sequence: [0x69]
+      Replacement: "9"
+    - Sequence: [0x6C]
+      Replacement: '"'
+    - Sequence: [0x6E]
+      Replacement: '"'
+    - Sequence: [0x6F]
+      Replacement: '?'
+    - Sequence: [0x70]
+      Replacement: •
+    - Sequence: [0x71]
+      Replacement: A
+    - Sequence: [0x72]
+      Replacement: B
+    - Sequence: [0x73]
+      Replacement: C
+    - Sequence: [0x74]
+      Replacement: D
+    - Sequence: [0x75]
+      Replacement: E
+    - Sequence: [0x76]
+      Replacement: F
+    - Sequence: [0x77]
+      Replacement: G
+    - Sequence: [0x78]
+      Replacement: H
+    - Sequence: [0x79]
+      Replacement: I
+    - Sequence: [0x7A]
+      Replacement: J
+    - Sequence: [0x7B]
+      Replacement: K
+    - Sequence: [0x7C]
+      Replacement: L
+    - Sequence: [0x7D]
+      Replacement: M
+    - Sequence: [0x7E]
+      Replacement: "N"
+    - Sequence: [0x7F]
+      Replacement: O
+    - Sequence: [0x80]
+      Replacement: P
+    - Sequence: [0x81]
+      Replacement: Q
+    - Sequence: [0x82]
+      Replacement: R
+    - Sequence: [0x83]
+      Replacement: S
+    - Sequence: [0x84]
+      Replacement: T
+    - Sequence: [0x85]
+      Replacement: U
+    - Sequence: [0x86]
+      Replacement: V
+    - Sequence: [0x87]
+      Replacement: W
+    - Sequence: [0x88]
+      Replacement: X
+    - Sequence: [0x89]
+      Replacement: "Y"
+    - Sequence: [0x8A]
+      Replacement: Z
+    - Sequence: [0x8B]
+      Replacement: α
+    - Sequence: [0x8C]
+      Replacement: β
+    - Sequence: [0x8D]
+      Replacement: γ
+    - Sequence: [0x8E]
+      Replacement: ε
+    - Sequence: [0x8F]
+      Replacement: Ω
+    - Sequence: [0x91]
+      Replacement: a
+    - Sequence: [0x92]
+      Replacement: b
+    - Sequence: [0x93]
+      Replacement: c
+    - Sequence: [0x94]
+      Replacement: d
+    - Sequence: [0x95]
+      Replacement: e
+    - Sequence: [0x96]
+      Replacement: f
+    - Sequence: [0x97]
+      Replacement: g
+    - Sequence: [0x98]
+      Replacement: h
+    - Sequence: [0x99]
+      Replacement: i
+    - Sequence: [0x9A]
+      Replacement: j
+    - Sequence: [0x9B]
+      Replacement: k
+    - Sequence: [0x9C]
+      Replacement: l
+    - Sequence: [0x9D]
+      Replacement: m
+    - Sequence: [0x9E]
+      Replacement: "n"
+    - Sequence: [0x9F]
+      Replacement: o
+    - Sequence: [0xA0]
+      Replacement: p
+    - Sequence: [0xA1]
+      Replacement: q
+    - Sequence: [0xA2]
+      Replacement: r
+    - Sequence: [0xA3]
+      Replacement: s
+    - Sequence: [0xA4]
+      Replacement: t
+    - Sequence: [0xA5]
+      Replacement: u
+    - Sequence: [0xA6]
+      Replacement: v
+    - Sequence: [0xA7]
+      Replacement: w
+    - Sequence: [0xA8]
+      Replacement: x
+    - Sequence: [0xA9]
+      Replacement: "y"
+    - Sequence: [0xAA]
+      Replacement: z
+    - Sequence: [0xAC]
+      Replacement: '[CHAR1]'
+...
