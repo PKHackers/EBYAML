@@ -1,0 +1,10 @@
+---
+SEQUENCE_POINTER_TABLE:
+  Description: "Pointers to sequences. Will be invalid if they are not yet loaded."
+  Type: array
+  Offset: 0x2D4A
+  Size: 0x17E
+  Item Type:
+    Type: pointer
+    Size: 2
+...
